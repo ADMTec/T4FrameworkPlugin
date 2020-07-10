@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.T4Asset.cpp.obj",
+		"Module.T4Asset.gen.1_of_3.cpp.obj",
+		"Module.T4Asset.gen.2_of_3.cpp.obj",
+		"Module.T4Asset.gen.3_of_3.cpp.obj"
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.9",
+	"FriendlyName": "T4FrameworkEditor Plugin",
+	"Description": "Open-world MMO/MMORPG Framework for UE4",
+	"Category": "TECH4 Labs",
+	"CreatedBy": "TECH4 Labs",
+	"CreatedByURL": "https://tech4labs.com",
+	"DocsURL": "https://github.com/Tech4Labs/TECH4Demo/wiki",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/Tech4Labs/TECH4Demo",
+	"EngineVersion": "4.25.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "T4Commandlet",
+			"Type": "Editor",
+			"LoadingPhase": "PostDefault"
+		},
+		{
+			"Name": "T4EditorCommon",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "T4EntityEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "T4ActionEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "T4WorldExplorer",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "T4ContentEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "T4Framework",
+			"Enabled": true
+		}
+	]
+}

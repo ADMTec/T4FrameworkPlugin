@@ -1,0 +1,278 @@
+// Copyright 2019-2020 TECH4 Labs. All Rights Reserved.
+
+#pragma once
+
+#include "T4GameplayMinimal.h"
+#include "T4GamePacketSC.h"
+#include "T4GamePacketSC_Status.generated.h"
+
+/**
+  *
+ */
+ // #T4_ADD_PACKET_TAG_SC
+
+// ET4GamePacketSC::Stance // #73
+// ET4GamePacketSC::Posture // #106
+// ET4GamePacketSC::EquipItem
+// ET4GamePacketSC::UnequipItem
+// ET4GamePacketSC::ExchangeItem
+// ET4GamePacketSC::Die // #76
+// ET4GamePacketSC::Resurrect // #76
+
+USTRUCT()
+struct FT4GamePacketSC_Stance : public FT4GamePacketSC_Base // #73
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FName StanceName; // TODO : Stance Table?
+
+public:
+	FT4GamePacketSC_Stance()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::Stance)
+		, StanceName(NAME_None)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Stance"));
+	}
+};
+
+USTRUCT()
+struct FT4GamePacketSC_Posture : public FT4GamePacketSC_Base // #106
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FName PostureName;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float MoveSpeed; // #140
+
+public:
+	FT4GamePacketSC_Posture()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::Posture)
+		, PostureName(NAME_None)
+		, MoveSpeed(0.0f) // #140
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Posture"));
+	}
+};
+
+USTRUCT()
+struct FT4GamePacketSC_EquipItem : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey WeaponDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bMainWeapon; // #48
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey UnequipWeaponDBKey; // #114, #116 : 이전에 장착한 무기가 있다면 해제 후 장착
+
+public:
+	FT4GamePacketSC_EquipItem()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::EquipItem)
+		, bMainWeapon(false)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Equip"));
+	}
+};
+
+USTRUCT()
+struct FT4GamePacketSC_UnequipItem : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey WeaponDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bMainWeapon; // #48
+
+public:
+	FT4GamePacketSC_UnequipItem()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::UnequipItem)
+		, bMainWeapon(false)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Unequip"));
+	}
+};
+
+USTRUCT()
+struct FT4GamePacketSC_ExchangeItem : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey CostumeDBKey;
+
+public:
+	FT4GamePacketSC_ExchangeItem()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::ExchangeItem)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Exchange"));
+	}
+};
+
+// #76
+USTRUCT()
+struct FT4GamePacketSC_Die : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FName ReactionName;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID AttackerObjectID;
+
+public:
+	FT4GamePacketSC_Die()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::Die)
+		, ReactionName(NAME_None)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Die"));
+	}
+};
+
+// #76
+USTRUCT()
+struct FT4GamePacketSC_Resurrect : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+public:
+	FT4GamePacketSC_Resurrect()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::Resurrect)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:Resurrect"));
+	}
+};

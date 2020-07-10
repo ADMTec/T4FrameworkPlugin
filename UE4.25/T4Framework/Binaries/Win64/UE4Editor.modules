@@ -1,0 +1,11 @@
+{
+	"BuildId": "13144385",
+	"Modules": 
+	{
+		"T4Asset": "UE4Editor-T4Asset.dll",
+		"T4Engine": "UE4Editor-T4Engine.dll",
+		"T4Framework": "UE4Editor-T4Framework.dll",
+		"T4GameData": "UE4Editor-T4GameData.dll",
+		"T4Gameplay": "UE4Editor-T4Gameplay.dll"
+	}
+}

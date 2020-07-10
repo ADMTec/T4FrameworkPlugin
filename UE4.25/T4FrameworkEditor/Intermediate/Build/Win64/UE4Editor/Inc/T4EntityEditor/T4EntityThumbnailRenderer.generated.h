@@ -1,0 +1,470 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef T4ENTITYEDITOR_T4EntityThumbnailRenderer_generated_h
+#error "T4EntityThumbnailRenderer.generated.h already included, missing '#pragma once' in T4EntityThumbnailRenderer.h"
+#endif
+#define T4ENTITYEDITOR_T4EntityThumbnailRenderer_generated_h
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4MapEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4MapEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4MapEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4MapEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4MapEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4MapEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4MapEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4MapEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4MapEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4MapEntityThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4MapEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4MapEntityThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4MapEntityThumbnailRenderer(UT4MapEntityThumbnailRenderer&&); \
+	NO_API UT4MapEntityThumbnailRenderer(const UT4MapEntityThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4MapEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4MapEntityThumbnailRenderer(UT4MapEntityThumbnailRenderer&&); \
+	NO_API UT4MapEntityThumbnailRenderer(const UT4MapEntityThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4MapEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4MapEntityThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4MapEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_13_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_16_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4MapEntityThumbnailRenderer>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4ActorEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4ActorEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4ActorEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4ActorEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4ActorEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4ActorEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4ActorEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4ActorEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4ActorEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4ActorEntityThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4ActorEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4ActorEntityThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4ActorEntityThumbnailRenderer(UT4ActorEntityThumbnailRenderer&&); \
+	NO_API UT4ActorEntityThumbnailRenderer(const UT4ActorEntityThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4ActorEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4ActorEntityThumbnailRenderer(UT4ActorEntityThumbnailRenderer&&); \
+	NO_API UT4ActorEntityThumbnailRenderer(const UT4ActorEntityThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4ActorEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4ActorEntityThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4ActorEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_22_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_25_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4ActorEntityThumbnailRenderer>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4PropEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4PropEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4PropEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4PropEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4PropEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4PropEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4PropEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4PropEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4PropEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4PropEntityThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4PropEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4PropEntityThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4PropEntityThumbnailRenderer(UT4PropEntityThumbnailRenderer&&); \
+	NO_API UT4PropEntityThumbnailRenderer(const UT4PropEntityThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4PropEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4PropEntityThumbnailRenderer(UT4PropEntityThumbnailRenderer&&); \
+	NO_API UT4PropEntityThumbnailRenderer(const UT4PropEntityThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4PropEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4PropEntityThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4PropEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_31_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_34_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4PropEntityThumbnailRenderer>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4WeaponEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4WeaponEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4WeaponEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4WeaponEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4WeaponEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4WeaponEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4WeaponEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4WeaponEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4WeaponEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4WeaponEntityThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4WeaponEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4WeaponEntityThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4WeaponEntityThumbnailRenderer(UT4WeaponEntityThumbnailRenderer&&); \
+	NO_API UT4WeaponEntityThumbnailRenderer(const UT4WeaponEntityThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4WeaponEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4WeaponEntityThumbnailRenderer(UT4WeaponEntityThumbnailRenderer&&); \
+	NO_API UT4WeaponEntityThumbnailRenderer(const UT4WeaponEntityThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4WeaponEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4WeaponEntityThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4WeaponEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_40_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_43_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4WeaponEntityThumbnailRenderer>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4CostumeEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4CostumeEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4CostumeEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4CostumeEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4CostumeEntityThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4CostumeEntityThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4CostumeEntityThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4CostumeEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4CostumeEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4CostumeEntityThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4CostumeEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4CostumeEntityThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4CostumeEntityThumbnailRenderer(UT4CostumeEntityThumbnailRenderer&&); \
+	NO_API UT4CostumeEntityThumbnailRenderer(const UT4CostumeEntityThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4CostumeEntityThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4CostumeEntityThumbnailRenderer(UT4CostumeEntityThumbnailRenderer&&); \
+	NO_API UT4CostumeEntityThumbnailRenderer(const UT4CostumeEntityThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4CostumeEntityThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4CostumeEntityThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4CostumeEntityThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_49_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_52_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4CostumeEntityThumbnailRenderer>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4AnimSetThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4AnimSetThumbnailRenderer_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetThumbnailRenderer); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetThumbnailRenderer(UT4AnimSetThumbnailRenderer&&); \
+	NO_API UT4AnimSetThumbnailRenderer(const UT4AnimSetThumbnailRenderer&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetThumbnailRenderer(UT4AnimSetThumbnailRenderer&&); \
+	NO_API UT4AnimSetThumbnailRenderer(const UT4AnimSetThumbnailRenderer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetThumbnailRenderer)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_58_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h_61_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4AnimSetThumbnailRenderer>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_Utility_T4EntityThumbnailRenderer_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

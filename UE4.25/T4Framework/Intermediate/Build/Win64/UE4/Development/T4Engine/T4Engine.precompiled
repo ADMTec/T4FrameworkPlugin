@@ -1,0 +1,10 @@
+{
+	"OutputFiles": [
+		"Module.T4Engine.1_of_3.cpp.obj",
+		"Module.T4Engine.2_of_3.cpp.obj",
+		"Module.T4Engine.3_of_3.cpp.obj",
+		"Module.T4Engine.gen.1_of_3.cpp.obj",
+		"Module.T4Engine.gen.2_of_3.cpp.obj",
+		"Module.T4Engine.gen.3_of_3.cpp.obj"
+	]
+}

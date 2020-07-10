@@ -1,0 +1,70 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+*.pdb
+
+# Windows
+/desktop.ini
+
+# Resources
+*.fbx
+*.tga
+*_BuiltData.uasset
+
+# Intermediate
+*.exp
+*.txt
+*.bin
+*.log
+*.res
+*.dat
+*.deps
+*.response
+*.uhtmanifest
+*.vcxproj
+*.filters
+*.user
+
+# UnrealEngine
+*.sln
+*.bat
+.vs
+UE4.25/T4Framework/Binaries/*.pdb
+UE4.25/T4Framework/Source/T4Asset/Private
+UE4.25/T4Framework/Source/T4Engine/Private
+UE4.25/T4Framework/Source/T4Framework/Private
+UE4.25/T4Framework/Source/T4GameData/Private
+UE4.25/T4Framework/Source/T4Gameplay/Private
+UE4.25/T4FrameworkEditor/Binaries/*.pdb
+UE4.25/T4FrameworkEditor/Source/T4Commandlet/Private
+UE4.25/T4FrameworkEditor/Source/T4EditorCommon/Private
+UE4.25/T4FrameworkEditor/Source/T4EntityEditor/Private
+UE4.25/T4FrameworkEditor/Source/T4ActionEditor/Private
+UE4.25/T4FrameworkEditor/Source/T4WorldExplorer/Private
+UE4.25/T4FrameworkEditor/Source/T4ContentEditor/Private
