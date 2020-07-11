@@ -16,7 +16,7 @@ enum ET4GameHotKeyType // #116
 	HotKey3_Pressed,
 	HotKey4_Pressed,
 
-	None,
+	HotKey_None,
 };
 
 UENUM()

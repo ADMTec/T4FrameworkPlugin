@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.T4Framework.cppa7.o",
+		"Module.T4Framework.cppa8.o",
+		"Module.T4Framework.gen.cppa7.o",
+		"Module.T4Framework.gen.cppa8.o"
+	]
+}

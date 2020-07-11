@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.T4GameData.cppa7.o",
+		"Module.T4GameData.cppa8.o",
+		"Module.T4GameData.gen.cppa7.o",
+		"Module.T4GameData.gen.cppa8.o"
+	]
+}

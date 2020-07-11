@@ -1,0 +1,12 @@
+{
+	"OutputFiles": [
+		"Module.T4Asset.cppa7.o",
+		"Module.T4Asset.cppa8.o",
+		"Module.T4Asset.gen.1_of_3.cppa7.o",
+		"Module.T4Asset.gen.2_of_3.cppa7.o",
+		"Module.T4Asset.gen.3_of_3.cppa7.o",
+		"Module.T4Asset.gen.1_of_3.cppa8.o",
+		"Module.T4Asset.gen.2_of_3.cppa8.o",
+		"Module.T4Asset.gen.3_of_3.cppa8.o"
+	]
+}
