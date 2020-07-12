@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 1381403521U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2294462672U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -62,8 +62,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::MoveSpeedSync", (int64)ET4GamePacketSC::MoveSpeedSync },
 				{ "ET4GamePacketSC::LockOn", (int64)ET4GamePacketSC::LockOn },
 				{ "ET4GamePacketSC::LockOff", (int64)ET4GamePacketSC::LockOff },
+				{ "ET4GamePacketSC::AnimSet", (int64)ET4GamePacketSC::AnimSet },
 				{ "ET4GamePacketSC::Stance", (int64)ET4GamePacketSC::Stance },
-				{ "ET4GamePacketSC::Posture", (int64)ET4GamePacketSC::Posture },
 				{ "ET4GamePacketSC::EquipItem", (int64)ET4GamePacketSC::EquipItem },
 				{ "ET4GamePacketSC::UnequipItem", (int64)ET4GamePacketSC::UnequipItem },
 				{ "ET4GamePacketSC::ExchangeItem", (int64)ET4GamePacketSC::ExchangeItem },
@@ -81,6 +81,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "AnimSet.Comment", "// #40\n" },
+				{ "AnimSet.Name", "ET4GamePacketSC::AnimSet" },
+				{ "AnimSet.ToolTip", "#40" },
 				{ "Comment", "// #T4_ADD_PACKET_TAG_SC\n" },
 				{ "Die.Comment", "// #135\n" },
 				{ "Die.Name", "ET4GamePacketSC::Die" },
@@ -138,9 +141,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "PCEnter.Name", "ET4GamePacketSC::PCEnter" },
 				{ "PCEnter.ToolTip", "#11, #52" },
 				{ "PCLeave.Name", "ET4GamePacketSC::PCLeave" },
-				{ "Posture.Comment", "// #73\n" },
-				{ "Posture.Name", "ET4GamePacketSC::Posture" },
-				{ "Posture.ToolTip", "#73" },
 				{ "Resurrect.Comment", "// #76\n" },
 				{ "Resurrect.Name", "ET4GamePacketSC::Resurrect" },
 				{ "Resurrect.ToolTip", "#76" },
@@ -154,9 +154,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "SkillTarget.Comment", "// #113, #116\n" },
 				{ "SkillTarget.Name", "ET4GamePacketSC::SkillTarget" },
 				{ "SkillTarget.ToolTip", "#113, #116" },
-				{ "Stance.Comment", "// #40\n" },
+				{ "Stance.Comment", "// #73\n" },
 				{ "Stance.Name", "ET4GamePacketSC::Stance" },
-				{ "Stance.ToolTip", "#40" },
+				{ "Stance.ToolTip", "#73" },
 				{ "Teleport.Comment", "// #40\n" },
 				{ "Teleport.Name", "ET4GamePacketSC::Teleport" },
 				{ "Teleport.ToolTip", "#40" },
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketCS_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketCS(ET4GamePacketCS_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketCS"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 3900159402U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 540450764U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS()
 	{
 #if WITH_HOT_RELOAD
@@ -217,8 +217,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketCS::Rotation", (int64)ET4GamePacketCS::Rotation },
 				{ "ET4GamePacketCS::LockOn", (int64)ET4GamePacketCS::LockOn },
 				{ "ET4GamePacketCS::LockOff", (int64)ET4GamePacketCS::LockOff },
+				{ "ET4GamePacketCS::AnimSet", (int64)ET4GamePacketCS::AnimSet },
 				{ "ET4GamePacketCS::Stance", (int64)ET4GamePacketCS::Stance },
-				{ "ET4GamePacketCS::Posture", (int64)ET4GamePacketCS::Posture },
 				{ "ET4GamePacketCS::EquipItem", (int64)ET4GamePacketCS::EquipItem },
 				{ "ET4GamePacketCS::UnequipItem", (int64)ET4GamePacketCS::UnequipItem },
 				{ "ET4GamePacketCS::ExchangeItem", (int64)ET4GamePacketCS::ExchangeItem },
@@ -240,6 +240,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "AnimSet.Comment", "// #40\n" },
+				{ "AnimSet.Name", "ET4GamePacketCS::AnimSet" },
+				{ "AnimSet.ToolTip", "#40" },
 				{ "CmdBookmark.Name", "ET4GamePacketCS::CmdBookmark" },
 				{ "CmdChangePlayer.Comment", "// #146\n" },
 				{ "CmdChangePlayer.Name", "ET4GamePacketCS::CmdChangePlayer" },
@@ -288,9 +291,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "None.Comment", "// #140\n" },
 				{ "None.Name", "ET4GamePacketCS::None" },
 				{ "None.ToolTip", "#140" },
-				{ "Posture.Comment", "// #73\n" },
-				{ "Posture.Name", "ET4GamePacketCS::Posture" },
-				{ "Posture.ToolTip", "#73" },
 				{ "ReadyToPlay.Name", "ET4GamePacketCS::ReadyToPlay" },
 				{ "Rotation.Name", "ET4GamePacketCS::Rotation" },
 				{ "SkillCancel.Comment", "// #113, #116\n" },
@@ -302,9 +302,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "SkillTarget.Comment", "// #113, #116\n" },
 				{ "SkillTarget.Name", "ET4GamePacketCS::SkillTarget" },
 				{ "SkillTarget.ToolTip", "#113, #116" },
-				{ "Stance.Comment", "// #40\n" },
+				{ "Stance.Comment", "// #73\n" },
 				{ "Stance.Name", "ET4GamePacketCS::Stance" },
-				{ "Stance.ToolTip", "#40" },
+				{ "Stance.ToolTip", "#73" },
 				{ "ToolTip", "// WARN : Packet \xec\xb6\x94\xea\xb0\x80 \xec\x8b\x9c\xeb\x8a\x94 \xec\x95\x84\xeb\x9e\x98 \xed\x85\x8c\xea\xb7\xb8\xeb\xa5\xbc \xec\xb0\xbe\xec\x95\x84 \xec\xb6\x94\xea\xb0\x80\xeb\x90\x9c \xed\x8c\xa8\xed\x82\xb7\xec\x9d\x84 \xeb\xaa\xa8\xeb\x91\x90 \xea\xb5\xac\xed\x98\x84\xed\x95\xb4\xec\xa3\xbc\xec\x96\xb4\xec\x95\xbc \xed\x95\xa8!!\n// #T4_ADD_PACKET_TAG_CS" },
 				{ "UnequipItem.Comment", "// #22\n" },
 				{ "UnequipItem.Name", "ET4GamePacketCS::UnequipItem" },

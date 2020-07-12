@@ -22,12 +22,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4StopActionCommand>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandCommons_h_20_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
 
 
-template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ActionSetActionCommand>();
+template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ActionPakActionCommand>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandCommons_h

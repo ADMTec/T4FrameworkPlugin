@@ -9,7 +9,7 @@
 
 #include "Action/T4ActionKey.h"
 
-#include "T4Asset/Public/ActionSet/T4ActionSetTypes.h"
+#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
 #include "T4Asset/Public/Entity/T4EntityKey.h"
 
 #include "Components/SceneComponent.h"
@@ -63,7 +63,7 @@ class T4ENGINE_API IT4AnimControl
 public:
 	virtual ~IT4AnimControl() {}
 
-	virtual ET4AnimSetTemplate GetUsingTemplate() const = 0; // #134
+	virtual ET4AnimsetTemplate GetUsingTemplate() const = 0; // #134
 
 	// #47
 	virtual const IT4AnimState* GetActiveAnimState() const = 0;
@@ -182,8 +182,8 @@ public:
 	virtual void ClearOwnerID() = 0; // #114
 
 	virtual const FName GetSkinName() const = 0; // #140
-	virtual const FName GetStanceName() const = 0; // #73 : StanceNameTable
-	virtual const FName GetPostureName() const = 0; // #106 : PostureNameTable
+	virtual const FName GetAnimSetName() const = 0; // #73 : AnimSetNameTable
+	virtual const FName GetStanceName() const = 0; // #106 : StanceNameTable
 
 	virtual const FName& GetDBKeyName() const = 0;
 
@@ -198,7 +198,7 @@ public:
 	virtual void OnAnimNotifyMessage(const FT4AnimNotifyMessage* InMessage) = 0; // #111
 
 	virtual bool OnExecuteActionCommand(const FT4ActionCommandBase* InActionCmd, const FT4ActionParameters* InParam) = 0; // #76
-	virtual bool OnExecuteActionData(const FT4ActionDataBase* InActionData, const FT4ActionParameters* InParam) = 0; // #134 : ActionSet 의 Data 를 다른 대상에게 플레이 시킨다.
+	virtual bool OnExecuteActionData(const FT4ActionDataBase* InActionData, const FT4ActionParameters* InParam) = 0; // #134 : ActionPak 의 Data 를 다른 대상에게 플레이 시킨다.
 
 	virtual IT4AnimControl* GetAnimControl() const = 0; // #14
 	virtual IT4ActionControl* GetActionControl() = 0; // #20, #76 : Action Public Manager
@@ -214,7 +214,7 @@ public:
 	virtual bool IsSpecialMoves() const = 0; // #135
 	virtual bool IsLockOn() const = 0; // #33
 
-	virtual bool HasStance(const FName InStanceName) const = 0; // #142
+	virtual bool HasAnimSetByName(const FName InAnimSetName) const = 0; // #142
 	virtual bool HasPlayingAnimState(const FName& InAnimStateName) const = 0; // #47
 
 	virtual bool HasAction(const FT4ActionKey& InActionKey) const = 0; // #102 : 존재만 해도 true 리턴

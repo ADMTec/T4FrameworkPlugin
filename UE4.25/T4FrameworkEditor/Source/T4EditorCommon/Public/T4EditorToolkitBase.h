@@ -12,11 +12,11 @@
 class IT4EditorViewModel;
 class UTexture2D;
 class UT4EditorActionReplayController;
-class T4EDITORCOMMON_API FT4EditorToolKitBase
+class T4EDITORCOMMON_API FT4EditorToolkitBase
 {
 public:
-	FT4EditorToolKitBase();
-	virtual ~FT4EditorToolKitBase();
+	FT4EditorToolkitBase();
+	virtual ~FT4EditorToolkitBase();
 
 	void OnInitialize(
 		const EToolkitMode::Type InMode,

@@ -5,7 +5,7 @@
 #include "T4EngineMinimal.h"
 #include "T4ActionKey.h"
 #include "T4EngineTypes.h"
-#include "T4Asset/Public/ActionSet/T4ActionSetTypes.h"
+#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
 #include "T4ActionParameters.generated.h"
 
 /**
@@ -454,10 +454,10 @@ struct FT4EditorActionCommandContext
 public:
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSet<uint32> InvisibleActionSet; // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어한다.
+	TSet<uint32> InvisibleActionPak; // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어한다.
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSet<uint32> IsolationActionSet; // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어한다.
+	TSet<uint32> IsolationActionPak; // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어한다.
 #endif
 
 public:

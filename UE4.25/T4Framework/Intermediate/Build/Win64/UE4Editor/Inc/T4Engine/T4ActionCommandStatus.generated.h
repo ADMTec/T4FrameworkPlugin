@@ -93,20 +93,20 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4EquipWeaponActionC
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4EquipWeaponEntityData>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandStatus_h_126_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics; \
-	static class UScriptStruct* StaticStruct(); \
-	typedef FT4ActionCommandBase Super;
-
-
-template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4PostureActionCommand>();
-
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandStatus_h_93_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
 
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4StanceActionCommand>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandStatus_h_93_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics; \
+	static class UScriptStruct* StaticStruct(); \
+	typedef FT4ActionCommandBase Super;
+
+
+template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4AnimSetActionCommand>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandStatus_h_64_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4LockOnActionCommand_Statics; \

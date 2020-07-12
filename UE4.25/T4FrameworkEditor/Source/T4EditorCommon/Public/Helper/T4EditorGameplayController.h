@@ -40,7 +40,7 @@ public:
 
 	const FT4EditorSkillDataInfo& GetOverrideSkillDataInfo() const override { return SkillDataInfo; }
 	const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const override { return EffectDataInfo; }
-	const FSoftObjectPath& GetOverrideActionSetPath() const override;
+	const FSoftObjectPath& GetOverrideActionPakPath() const override;
 
 public:
 	void SetLayerType(ET4LayerType InLayerType) { LayerType = InLayerType; } // #60
@@ -103,7 +103,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = Default, Transient)
 	FT4EditorEffectDataInfo EffectDataInfo;
 
-	TSoftObjectPtr<UT4ActionSetAsset> ThisActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> ThisActionPakAsset;
 
 private:
 	ET4LayerType LayerType; // #60

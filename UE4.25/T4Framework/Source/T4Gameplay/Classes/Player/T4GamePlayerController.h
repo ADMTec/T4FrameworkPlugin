@@ -68,10 +68,10 @@ private:
 	void CS_RecvPacket_LockOff(const FT4GamePacketCS_LockOff& InPacket);
 
 	UFUNCTION(Reliable, server, WithValidation)
-	void CS_RecvPacket_Stance(const FT4GamePacketCS_Stance& InPacket); // #73
+	void CS_RecvPacket_AnimSet(const FT4GamePacketCS_AnimSet& InPacket); // #73
 
 	UFUNCTION(Reliable, server, WithValidation)
-	void CS_RecvPacket_Posture(const FT4GamePacketCS_Posture& InPacket); // #106
+	void CS_RecvPacket_Stance(const FT4GamePacketCS_Stance& InPacket); // #106
 
 	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_EquipItem(const FT4GamePacketCS_EquipItem& InPacket);
@@ -186,10 +186,10 @@ private:
 	void SC_RecvPacket_LockOff(const FT4GamePacketSC_LockOff& InPacket);
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_Stance(const FT4GamePacketSC_Stance& InPacket); // #73
+	void SC_RecvPacket_AnimSet(const FT4GamePacketSC_AnimSet& InPacket); // #73
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_Posture(const FT4GamePacketSC_Posture& InPacket); // #106
+	void SC_RecvPacket_Stance(const FT4GamePacketSC_Stance& InPacket); // #106
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_EquipItem(const FT4GamePacketSC_EquipItem& InPacket);

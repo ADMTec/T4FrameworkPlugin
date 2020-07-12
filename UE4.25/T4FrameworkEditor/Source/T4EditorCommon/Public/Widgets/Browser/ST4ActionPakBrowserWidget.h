@@ -20,9 +20,9 @@
 
 class FUICommandList;
 class SMenuAnchor;
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 class FFrontendFilter_Folder;
-class T4EDITORCOMMON_API ST4ActionSetBrowserWidget : public SCompoundWidget
+class T4EDITORCOMMON_API ST4ActionPakBrowserWidget : public SCompoundWidget
 {
 public:
 	DECLARE_DELEGATE_OneParam(FT4OnSelectAsset, UObject* /* InAsset */);
@@ -31,7 +31,7 @@ public:
 	DECLARE_DELEGATE_OneParam(FT4OnPlayAsset, UObject* /* InAsset */); // #134
 
 public:
-	SLATE_BEGIN_ARGS(ST4ActionSetBrowserWidget) {}
+	SLATE_BEGIN_ARGS(ST4ActionPakBrowserWidget) {}
 		SLATE_ARGUMENT(FT4OnSelectAsset, OnSelectAsset)
 		SLATE_ARGUMENT(FT4OnDoubleClicked, OnDoubleClicked) // #71
 		SLATE_ARGUMENT(FT4OnOpenAsset, OnOpenAsset) // #134
@@ -43,11 +43,11 @@ public:
 public:
 	void Construct(const FArguments& InArgs);
 
-	virtual ~ST4ActionSetBrowserWidget();
+	virtual ~ST4ActionPakBrowserWidget();
 
 	virtual FReply OnKeyDown(const FGeometry& MyGeometry, const FKeyEvent& InKeyEvent);
 
-	virtual void SelectAsset(UT4ActionSetAsset* InActionSetAsset);
+	virtual void SelectAsset(UT4ActionPakAsset* InActionPakAsset);
 
 	void SetFilterEntityPath(const FString& InFilterEntityPath);
 

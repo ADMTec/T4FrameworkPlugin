@@ -232,7 +232,7 @@ public:
 #if WITH_EDITOR
 		: PlayerDBKeyName(NAME_None)
 		, WeaponDBKeyName(NAME_None)
-		, PostureName(NAME_None)
+		, StanceName(NAME_None)
 		, SpawnLocation(FVector::ZeroVector)
 		, SpawnRotation(FRotator::ZeroRotator)
 #endif
@@ -247,7 +247,7 @@ public:
 	FName WeaponDBKeyName;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName PostureName;
+	FName StanceName;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FVector SpawnLocation;

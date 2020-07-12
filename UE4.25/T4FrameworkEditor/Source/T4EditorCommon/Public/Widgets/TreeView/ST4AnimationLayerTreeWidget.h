@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Asset/Classes/AnimSet/T4AnimSetAsset.h"
+#include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
 #include "T4Engine/Public/T4EngineConstants.h" // #39
 #include "ST4TreeViewWidget.h"
 
@@ -25,24 +25,24 @@ public:
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimSequenceData>* InSelectArray,
+		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
 		ET4EngineConstantTable InEngineConstantType
 	);
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimSequenceData>* InSelectArray,
-		ET4AnimSetTemplate InAnimSetTemplate
+		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
+		ET4AnimsetTemplate InAnimsetTemplate
 	); // #131
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimSystemData>* InSelectArray
+		const TArray<FT4AnimsetAnimSystemData>* InSelectArray
 	); // #131
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimStateData>* InSelectArray
+		const TArray<FT4AnimsetAnimStateData>* InSelectArray
 	); // #131
 
 	ST4AnimationLayerTreeWidget();
@@ -55,7 +55,7 @@ protected:
 
 private:
 	ET4EngineConstantTable EngineConstantType;
-	const TArray<FT4AnimSetAnimSequenceData>* AnimSequenceArrayRef; // #107
-	const TArray<FT4AnimSetAnimSystemData>* AnimSystemDataArrayRef; // #131
-	const TArray<FT4AnimSetAnimStateData>* AnimStateDataArrayRef; // #131
+	const TArray<FT4AnimsetAnimSequenceData>* AnimSequenceArrayRef; // #107
+	const TArray<FT4AnimsetAnimSystemData>* AnimSystemDataArrayRef; // #131
+	const TArray<FT4AnimsetAnimStateData>* AnimStateDataArrayRef; // #131
 };

@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4ENGINE_T4HumanAnimVariables_generated_h
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Human_T4HumanAnimVariables_h_15_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4HumanPostureAnimVariables_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4HumanStanceAnimVariables_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
-template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4HumanPostureAnimVariables>();
+template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4HumanStanceAnimVariables>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Human_T4HumanAnimVariables_h

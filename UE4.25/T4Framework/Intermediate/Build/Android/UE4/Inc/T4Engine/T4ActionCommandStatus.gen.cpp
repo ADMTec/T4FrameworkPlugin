@@ -30,8 +30,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionCommandStatus() {}
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4EquipWeaponEntityData();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4WeaponEntityAsset_NoRegister();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4PostureActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StanceActionCommand();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4LockOnActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4AimActionCommand();
 // End Cross Module References
@@ -756,15 +756,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4UnequipWeaponAction
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeStanceSync_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeAnimSetSync_MetaData[];
 #endif
-		static void NewProp_bChangeStanceSync_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeStanceSync;
+		static void NewProp_bChangeAnimSetSync_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeAnimSetSync;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeDefaultStance_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeDefaultAnimSet_MetaData[];
 #endif
-		static void NewProp_bChangeDefaultStance_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeDefaultStance;
+		static void NewProp_bChangeDefaultAnimSet_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeDefaultAnimSet;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquipmentActionKey_MetaData[];
 #endif
@@ -784,31 +784,31 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4UnequipWeaponAction
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4UnequipWeaponActionCommand>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #110 : Default Stance \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4.\n" },
+		{ "Comment", "// #110 : Default AnimSet \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#110 : Default Stance \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4." },
+		{ "ToolTip", "#110 : Default AnimSet \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4." },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_SetBit(void* Obj)
 	{
-		((FT4UnequipWeaponActionCommand*)Obj)->bChangeStanceSync = 1;
+		((FT4UnequipWeaponActionCommand*)Obj)->bChangeAnimSetSync = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync = { "bChangeStanceSync", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4UnequipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync = { "bChangeAnimSetSync", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4UnequipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #111 : \xeb\x82\xb4\xeb\xb6\x80\xec\x97\x90\xec\x84\x9c \xec\x95\x84\xec\x9d\xb4\xed\x85\x9c \xea\xb4\x80\xeb\xa6\xac \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa0 Equip \xec\x97\x90\xec\x84\x9c \xeb\x84\xa3\xec\x96\xb4\xec\xa4\x80 ActionKey\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
 		{ "ToolTip", "#111 : \xeb\x82\xb4\xeb\xb6\x80\xec\x97\x90\xec\x84\x9c \xec\x95\x84\xec\x9d\xb4\xed\x85\x9c \xea\xb4\x80\xeb\xa6\xac \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa0 Equip \xec\x97\x90\xec\x84\x9c \xeb\x84\xa3\xec\x96\xb4\xec\xa4\x80 ActionKey" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet_SetBit(void* Obj)
 	{
-		((FT4UnequipWeaponActionCommand*)Obj)->bChangeDefaultStance = 1;
+		((FT4UnequipWeaponActionCommand*)Obj)->bChangeDefaultAnimSet = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance = { "bChangeDefaultStance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4UnequipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet = { "bChangeDefaultAnimSet", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4UnequipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_EquipmentActionKey_MetaData[] = {
 		{ "Category", "Common" },
@@ -817,8 +817,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4UnequipWeaponAction
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_EquipmentActionKey = { "EquipmentActionKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4UnequipWeaponActionCommand, EquipmentActionKey), Z_Construct_UScriptStruct_FT4ActionKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_EquipmentActionKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_EquipmentActionKey_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeStanceSync,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultStance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_bChangeDefaultAnimSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::NewProp_EquipmentActionKey,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Statics::ReturnStructParams = {
@@ -849,7 +849,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4UnequipWeaponAction
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Hash() { return 1865855941U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand_Hash() { return 201992410U; }
 class UScriptStruct* FT4EquipWeaponActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -879,15 +879,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponActionCo
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeStanceSync_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeAnimSetSync_MetaData[];
 #endif
-		static void NewProp_bChangeStanceSync_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeStanceSync;
+		static void NewProp_bChangeAnimSetSync_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeAnimSetSync;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeStanceInEntity_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bChangeAnimSetInEntity_MetaData[];
 #endif
-		static void NewProp_bChangeStanceInEntity_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeStanceInEntity;
+		static void NewProp_bChangeAnimSetInEntity_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bChangeAnimSetInEntity;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SubWeaponDatas_MetaData[];
 #endif
@@ -914,31 +914,31 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponActionCo
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EquipWeaponActionCommand>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #110 : Weapon Entity \xec\x97\x90 \xec\x84\xa4\xec\xa0\x95\xeb\x90\x9c Stance \xeb\x8f\x84 \xed\x95\xa8\xea\xbb\x98 \xec\x84\xa4\xec\xa0\x95\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4.\n" },
+		{ "Comment", "// #110 : Weapon Entity \xec\x97\x90 \xec\x84\xa4\xec\xa0\x95\xeb\x90\x9c AnimSet \xeb\x8f\x84 \xed\x95\xa8\xea\xbb\x98 \xec\x84\xa4\xec\xa0\x95\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#110 : Weapon Entity \xec\x97\x90 \xec\x84\xa4\xec\xa0\x95\xeb\x90\x9c Stance \xeb\x8f\x84 \xed\x95\xa8\xea\xbb\x98 \xec\x84\xa4\xec\xa0\x95\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4." },
+		{ "ToolTip", "#110 : Weapon Entity \xec\x97\x90 \xec\x84\xa4\xec\xa0\x95\xeb\x90\x9c AnimSet \xeb\x8f\x84 \xed\x95\xa8\xea\xbb\x98 \xec\x84\xa4\xec\xa0\x95\xed\x95\xb4\xec\xa4\x80\xeb\x8b\xa4." },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_SetBit(void* Obj)
 	{
-		((FT4EquipWeaponActionCommand*)Obj)->bChangeStanceSync = 1;
+		((FT4EquipWeaponActionCommand*)Obj)->bChangeAnimSetSync = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync = { "bChangeStanceSync", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EquipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync = { "bChangeAnimSetSync", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EquipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #111\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
 		{ "ToolTip", "#111" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity_SetBit(void* Obj)
 	{
-		((FT4EquipWeaponActionCommand*)Obj)->bChangeStanceInEntity = 1;
+		((FT4EquipWeaponActionCommand*)Obj)->bChangeAnimSetInEntity = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity = { "bChangeStanceInEntity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EquipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity = { "bChangeAnimSetInEntity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EquipWeaponActionCommand), &Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_SubWeaponDatas_MetaData[] = {
 		{ "Category", "Common" },
@@ -964,8 +964,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponActionCo
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_EquipmentActionKey = { "EquipmentActionKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EquipWeaponActionCommand, EquipmentActionKey), Z_Construct_UScriptStruct_FT4ActionKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_EquipmentActionKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_EquipmentActionKey_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceSync,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeStanceInEntity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetSync,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_bChangeAnimSetInEntity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_SubWeaponDatas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_SubWeaponDatas_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Statics::NewProp_MainWeaponData,
@@ -999,7 +999,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponActionCo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Hash() { return 292392U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand_Hash() { return 3133811499U; }
 class UScriptStruct* FT4EquipWeaponEntityData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1097,122 +1097,6 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Hash() { return 2495071177U; }
-class UScriptStruct* FT4PostureActionCommand::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4ENGINE_API uint32 Get_Z_Construct_UScriptStruct_FT4PostureActionCommand_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4PostureActionCommand, Z_Construct_UPackage__Script_T4Engine(), TEXT("T4PostureActionCommand"), sizeof(FT4PostureActionCommand), Get_Z_Construct_UScriptStruct_FT4PostureActionCommand_Hash());
-	}
-	return Singleton;
-}
-template<> T4ENGINE_API UScriptStruct* StaticStruct<FT4PostureActionCommand>()
-{
-	return FT4PostureActionCommand::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4PostureActionCommand(FT4PostureActionCommand::StaticStruct, TEXT("/Script/T4Engine"), TEXT("T4PostureActionCommand"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4PostureActionCommand
-{
-	FScriptStruct_T4Engine_StaticRegisterNativesFT4PostureActionCommand()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4PostureActionCommand")),new UScriptStruct::TCppStructOps<FT4PostureActionCommand>);
-	}
-} ScriptStruct_T4Engine_StaticRegisterNativesFT4PostureActionCommand;
-	struct Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bImmediate_MetaData[];
-#endif
-		static void NewProp_bImmediate_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bImmediate;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureName;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #106\n" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#106" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4PostureActionCommand>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #140 : InMoveSpeed per Posture\n" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#140 : InMoveSpeed per Posture" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate_SetBit(void* Obj)
-	{
-		((FT4PostureActionCommand*)Obj)->bImmediate = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate = { "bImmediate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4PostureActionCommand), &Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_MoveSpeed_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PostureActionCommand, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_MoveSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_PostureName_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_PostureName = { "PostureName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PostureActionCommand, PostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_PostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_PostureName_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_bImmediate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_MoveSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::NewProp_PostureName,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
-		Z_Construct_UScriptStruct_FT4ActionCommandBase,
-		&NewStructOps,
-		"T4PostureActionCommand",
-		sizeof(FT4PostureActionCommand),
-		alignof(FT4PostureActionCommand),
-		Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4PostureActionCommand()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4PostureActionCommand_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4PostureActionCommand"), sizeof(FT4PostureActionCommand), Get_Z_Construct_UScriptStruct_FT4PostureActionCommand_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4PostureActionCommand_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PostureActionCommand_Hash() { return 2084763293U; }
 class UScriptStruct* FT4StanceActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1242,15 +1126,14 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOnlyFlush_MetaData[];
-#endif
-		static void NewProp_bOnlyFlush_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOnlyFlush;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bImmediate_MetaData[];
 #endif
 		static void NewProp_bImmediate_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bImmediate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
 #endif
@@ -1260,9 +1143,9 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #73\n" },
+		{ "Comment", "// #106\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#73" },
+		{ "ToolTip", "#106" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewStructOps()
@@ -1270,22 +1153,11 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StanceActionCommand>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #111\n" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
-		{ "ToolTip", "#111" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush_SetBit(void* Obj)
-	{
-		((FT4StanceActionCommand*)Obj)->bOnlyFlush = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush = { "bOnlyFlush", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4StanceActionCommand), &Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #140 : InMoveSpeed per Stance\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+		{ "ToolTip", "#140 : InMoveSpeed per Stance" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate_SetBit(void* Obj)
@@ -1294,6 +1166,13 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate = { "bImmediate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4StanceActionCommand), &Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_MoveSpeed_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StanceActionCommand, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_MoveSpeed_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_StanceName_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
@@ -1301,8 +1180,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StanceActionCommand, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_StanceName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bOnlyFlush,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_bImmediate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::NewProp_StanceName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4StanceActionCommand_Statics::ReturnStructParams = {
@@ -1333,7 +1212,128 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StanceActionCommand
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StanceActionCommand_Hash() { return 65974840U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StanceActionCommand_Hash() { return 2498907780U; }
+class UScriptStruct* FT4AnimSetActionCommand::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ENGINE_API uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4AnimSetActionCommand, Z_Construct_UPackage__Script_T4Engine(), TEXT("T4AnimSetActionCommand"), sizeof(FT4AnimSetActionCommand), Get_Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Hash());
+	}
+	return Singleton;
+}
+template<> T4ENGINE_API UScriptStruct* StaticStruct<FT4AnimSetActionCommand>()
+{
+	return FT4AnimSetActionCommand::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4AnimSetActionCommand(FT4AnimSetActionCommand::StaticStruct, TEXT("/Script/T4Engine"), TEXT("T4AnimSetActionCommand"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4AnimSetActionCommand
+{
+	FScriptStruct_T4Engine_StaticRegisterNativesFT4AnimSetActionCommand()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4AnimSetActionCommand")),new UScriptStruct::TCppStructOps<FT4AnimSetActionCommand>);
+	}
+} ScriptStruct_T4Engine_StaticRegisterNativesFT4AnimSetActionCommand;
+	struct Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOnlyFlush_MetaData[];
+#endif
+		static void NewProp_bOnlyFlush_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOnlyFlush;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bImmediate_MetaData[];
+#endif
+		static void NewProp_bImmediate_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bImmediate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #73\n" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+		{ "ToolTip", "#73" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4AnimSetActionCommand>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #111\n" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+		{ "ToolTip", "#111" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush_SetBit(void* Obj)
+	{
+		((FT4AnimSetActionCommand*)Obj)->bOnlyFlush = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush = { "bOnlyFlush", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetActionCommand), &Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate_SetBit(void* Obj)
+	{
+		((FT4AnimSetActionCommand*)Obj)->bImmediate = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate = { "bImmediate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetActionCommand), &Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_AnimSetName_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionCommandStatus.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimSetActionCommand, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_AnimSetName_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bOnlyFlush,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_bImmediate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::NewProp_AnimSetName,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
+		Z_Construct_UScriptStruct_FT4ActionCommandBase,
+		&NewStructOps,
+		"T4AnimSetActionCommand",
+		sizeof(FT4AnimSetActionCommand),
+		alignof(FT4AnimSetActionCommand),
+		Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetActionCommand()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4AnimSetActionCommand"), sizeof(FT4AnimSetActionCommand), Get_Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetActionCommand_Hash() { return 309146603U; }
 class UScriptStruct* FT4LockOnActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

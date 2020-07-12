@@ -9,12 +9,12 @@
 /**
   * #73
  */
-class UT4AnimSetAsset;
-struct FT4EntityCharacterStanceSetData;
-class T4EDITORCOMMON_API ST4StanceListWidget : public ST4ListViewWidget
+class UT4AnimsetAsset;
+class UT4CharacterEntityAsset;
+class T4EDITORCOMMON_API ST4AnimSetListWidget : public ST4ListViewWidget
 {
 public:
-	SLATE_BEGIN_ARGS(ST4StanceListWidget) {}
+	SLATE_BEGIN_ARGS(ST4AnimSetListWidget) {}
 		SLATE_EVENT(FT4OnSelected, OnSelected)
 		SLATE_EVENT(FT4OnDoubleClicked, OnDoubleClicked)
 		SLATE_EVENT(FT4OnAddItem, OnAddItem) // #124
@@ -23,15 +23,15 @@ public:
 
 	void Construct(
 		const FArguments& InArgs, 
-		const FT4EntityCharacterStanceSetData* InStanceSetData
+		const UT4CharacterEntityAsset* InCharacterEntityAsset
 	);
 
-	ST4StanceListWidget();
-	~ST4StanceListWidget();
+	ST4AnimSetListWidget();
+	~ST4AnimSetListWidget();
 
 protected:
 	void UpdateLists() override;
 
 private:
-	const FT4EntityCharacterStanceSetData* StanceSetData;
+	const UT4CharacterEntityAsset* CharacterEntityAsset;
 };

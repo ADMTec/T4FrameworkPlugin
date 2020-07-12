@@ -21,8 +21,8 @@ struct FT4GamePacketSC_SkillCasting;
 struct FT4GamePacketSC_ExchangeItem;
 struct FT4GamePacketSC_UnequipItem;
 struct FT4GamePacketSC_EquipItem;
-struct FT4GamePacketSC_Posture;
 struct FT4GamePacketSC_Stance;
+struct FT4GamePacketSC_AnimSet;
 struct FT4GamePacketSC_LockOff;
 struct FT4GamePacketSC_LockOn;
 struct FT4GamePacketSC_MoveSpeedSync;
@@ -59,8 +59,8 @@ struct FT4GamePacketCS_SkillCasting;
 struct FT4GamePacketCS_ExchangeItem;
 struct FT4GamePacketCS_UnequipItem;
 struct FT4GamePacketCS_EquipItem;
-struct FT4GamePacketCS_Posture;
 struct FT4GamePacketCS_Stance;
+struct FT4GamePacketCS_AnimSet;
 struct FT4GamePacketCS_LockOff;
 struct FT4GamePacketCS_LockOn;
 struct FT4GamePacketCS_Rotation;
@@ -87,8 +87,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_ExchangeItem_Implementation(FT4GamePacketSC_ExchangeItem const& InPacket); \
 	virtual void SC_RecvPacket_UnequipItem_Implementation(FT4GamePacketSC_UnequipItem const& InPacket); \
 	virtual void SC_RecvPacket_EquipItem_Implementation(FT4GamePacketSC_EquipItem const& InPacket); \
-	virtual void SC_RecvPacket_Posture_Implementation(FT4GamePacketSC_Posture const& InPacket); \
 	virtual void SC_RecvPacket_Stance_Implementation(FT4GamePacketSC_Stance const& InPacket); \
+	virtual void SC_RecvPacket_AnimSet_Implementation(FT4GamePacketSC_AnimSet const& InPacket); \
 	virtual void SC_RecvPacket_LockOff_Implementation(FT4GamePacketSC_LockOff const& InPacket); \
 	virtual void SC_RecvPacket_LockOn_Implementation(FT4GamePacketSC_LockOn const& InPacket); \
 	virtual void SC_RecvPacket_MoveSpeedSync_Implementation(FT4GamePacketSC_MoveSpeedSync const& InPacket); \
@@ -142,10 +142,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_UnequipItem_Implementation(FT4GamePacketCS_UnequipItem const& InPacket); \
 	virtual bool CS_RecvPacket_EquipItem_Validate(FT4GamePacketCS_EquipItem const& ); \
 	virtual void CS_RecvPacket_EquipItem_Implementation(FT4GamePacketCS_EquipItem const& InPacket); \
-	virtual bool CS_RecvPacket_Posture_Validate(FT4GamePacketCS_Posture const& ); \
-	virtual void CS_RecvPacket_Posture_Implementation(FT4GamePacketCS_Posture const& InPacket); \
 	virtual bool CS_RecvPacket_Stance_Validate(FT4GamePacketCS_Stance const& ); \
 	virtual void CS_RecvPacket_Stance_Implementation(FT4GamePacketCS_Stance const& InPacket); \
+	virtual bool CS_RecvPacket_AnimSet_Validate(FT4GamePacketCS_AnimSet const& ); \
+	virtual void CS_RecvPacket_AnimSet_Implementation(FT4GamePacketCS_AnimSet const& InPacket); \
 	virtual bool CS_RecvPacket_LockOff_Validate(FT4GamePacketCS_LockOff const& ); \
 	virtual void CS_RecvPacket_LockOff_Implementation(FT4GamePacketCS_LockOff const& InPacket); \
 	virtual bool CS_RecvPacket_LockOn_Validate(FT4GamePacketCS_LockOn const& ); \
@@ -172,8 +172,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_ExchangeItem); \
 	DECLARE_FUNCTION(execSC_RecvPacket_UnequipItem); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EquipItem); \
-	DECLARE_FUNCTION(execSC_RecvPacket_Posture); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Stance); \
+	DECLARE_FUNCTION(execSC_RecvPacket_AnimSet); \
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveSpeedSync); \
@@ -210,8 +210,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_ExchangeItem); \
 	DECLARE_FUNCTION(execCS_RecvPacket_UnequipItem); \
 	DECLARE_FUNCTION(execCS_RecvPacket_EquipItem); \
-	DECLARE_FUNCTION(execCS_RecvPacket_Posture); \
 	DECLARE_FUNCTION(execCS_RecvPacket_Stance); \
+	DECLARE_FUNCTION(execCS_RecvPacket_AnimSet); \
 	DECLARE_FUNCTION(execCS_RecvPacket_LockOff); \
 	DECLARE_FUNCTION(execCS_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execCS_RecvPacket_Rotation); \
@@ -234,8 +234,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_ExchangeItem_Implementation(FT4GamePacketSC_ExchangeItem const& InPacket); \
 	virtual void SC_RecvPacket_UnequipItem_Implementation(FT4GamePacketSC_UnequipItem const& InPacket); \
 	virtual void SC_RecvPacket_EquipItem_Implementation(FT4GamePacketSC_EquipItem const& InPacket); \
-	virtual void SC_RecvPacket_Posture_Implementation(FT4GamePacketSC_Posture const& InPacket); \
 	virtual void SC_RecvPacket_Stance_Implementation(FT4GamePacketSC_Stance const& InPacket); \
+	virtual void SC_RecvPacket_AnimSet_Implementation(FT4GamePacketSC_AnimSet const& InPacket); \
 	virtual void SC_RecvPacket_LockOff_Implementation(FT4GamePacketSC_LockOff const& InPacket); \
 	virtual void SC_RecvPacket_LockOn_Implementation(FT4GamePacketSC_LockOn const& InPacket); \
 	virtual void SC_RecvPacket_MoveSpeedSync_Implementation(FT4GamePacketSC_MoveSpeedSync const& InPacket); \
@@ -289,10 +289,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_UnequipItem_Implementation(FT4GamePacketCS_UnequipItem const& InPacket); \
 	virtual bool CS_RecvPacket_EquipItem_Validate(FT4GamePacketCS_EquipItem const& ); \
 	virtual void CS_RecvPacket_EquipItem_Implementation(FT4GamePacketCS_EquipItem const& InPacket); \
-	virtual bool CS_RecvPacket_Posture_Validate(FT4GamePacketCS_Posture const& ); \
-	virtual void CS_RecvPacket_Posture_Implementation(FT4GamePacketCS_Posture const& InPacket); \
 	virtual bool CS_RecvPacket_Stance_Validate(FT4GamePacketCS_Stance const& ); \
 	virtual void CS_RecvPacket_Stance_Implementation(FT4GamePacketCS_Stance const& InPacket); \
+	virtual bool CS_RecvPacket_AnimSet_Validate(FT4GamePacketCS_AnimSet const& ); \
+	virtual void CS_RecvPacket_AnimSet_Implementation(FT4GamePacketCS_AnimSet const& InPacket); \
 	virtual bool CS_RecvPacket_LockOff_Validate(FT4GamePacketCS_LockOff const& ); \
 	virtual void CS_RecvPacket_LockOff_Implementation(FT4GamePacketCS_LockOff const& InPacket); \
 	virtual bool CS_RecvPacket_LockOn_Validate(FT4GamePacketCS_LockOn const& ); \
@@ -319,8 +319,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_ExchangeItem); \
 	DECLARE_FUNCTION(execSC_RecvPacket_UnequipItem); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EquipItem); \
-	DECLARE_FUNCTION(execSC_RecvPacket_Posture); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Stance); \
+	DECLARE_FUNCTION(execSC_RecvPacket_AnimSet); \
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveSpeedSync); \
@@ -357,8 +357,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_ExchangeItem); \
 	DECLARE_FUNCTION(execCS_RecvPacket_UnequipItem); \
 	DECLARE_FUNCTION(execCS_RecvPacket_EquipItem); \
-	DECLARE_FUNCTION(execCS_RecvPacket_Posture); \
 	DECLARE_FUNCTION(execCS_RecvPacket_Stance); \
+	DECLARE_FUNCTION(execCS_RecvPacket_AnimSet); \
 	DECLARE_FUNCTION(execCS_RecvPacket_LockOff); \
 	DECLARE_FUNCTION(execCS_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execCS_RecvPacket_Rotation); \
@@ -368,6 +368,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4GamePlayerController_h_27_EVENT_PARMS \
+	struct T4GamePlayerController_eventCS_RecvPacket_AnimSet_Parms \
+	{ \
+		FT4GamePacketCS_AnimSet InPacket; \
+	}; \
 	struct T4GamePlayerController_eventCS_RecvPacket_CmdBookmark_Parms \
 	{ \
 		FT4GamePacketCS_CmdBookmark InPacket; \
@@ -436,10 +440,6 @@ struct FT4GamePacketCS_ReadyToPlay;
 	{ \
 		FT4GamePacketCS_Move InPacket; \
 	}; \
-	struct T4GamePlayerController_eventCS_RecvPacket_Posture_Parms \
-	{ \
-		FT4GamePacketCS_Posture InPacket; \
-	}; \
 	struct T4GamePlayerController_eventCS_RecvPacket_ReadyToPlay_Parms \
 	{ \
 		FT4GamePacketCS_ReadyToPlay InPacket; \
@@ -467,6 +467,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4GamePlayerController_eventCS_RecvPacket_UnequipItem_Parms \
 	{ \
 		FT4GamePacketCS_UnequipItem InPacket; \
+	}; \
+	struct T4GamePlayerController_eventSC_RecvPacket_AnimSet_Parms \
+	{ \
+		FT4GamePacketSC_AnimSet InPacket; \
 	}; \
 	struct T4GamePlayerController_eventSC_RecvPacket_Die_Parms \
 	{ \
@@ -555,10 +559,6 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4GamePlayerController_eventSC_RecvPacket_PCLeave_Parms \
 	{ \
 		FT4GamePacketSC_PCLeave InPacket; \
-	}; \
-	struct T4GamePlayerController_eventSC_RecvPacket_Posture_Parms \
-	{ \
-		FT4GamePacketSC_Posture InPacket; \
 	}; \
 	struct T4GamePlayerController_eventSC_RecvPacket_Resurrect_Parms \
 	{ \

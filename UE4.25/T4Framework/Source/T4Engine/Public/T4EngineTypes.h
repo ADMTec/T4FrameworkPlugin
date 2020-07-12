@@ -88,7 +88,7 @@ enum ET4LoadBalanceType // #143
 	LB_Char_MeshAsyncLoading,
 	LB_Char_PhysicsAsyncLoading,
 	LB_Char_AnimBPClassLoading,
-	LB_Char_StanceDataAsyncLoading,
+	LB_Char_AnimSetDataAsyncLoading,
 
 	LB_Nums,
 };

@@ -64,7 +64,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4HumanParagonAnimInstance); \
 	FORCEINLINE static uint32 __PPO__StateVariables() { return STRUCT_OFFSET(UT4HumanParagonAnimInstance, StateVariables); } \
 	FORCEINLINE static uint32 __PPO__MovementVariables() { return STRUCT_OFFSET(UT4HumanParagonAnimInstance, MovementVariables); } \
 	FORCEINLINE static uint32 __PPO__IKVariables() { return STRUCT_OFFSET(UT4HumanParagonAnimInstance, IKVariables); } \
-	FORCEINLINE static uint32 __PPO__PostureVariables() { return STRUCT_OFFSET(UT4HumanParagonAnimInstance, PostureVariables); }
+	FORCEINLINE static uint32 __PPO__StanceVariables() { return STRUCT_OFFSET(UT4HumanParagonAnimInstance, StanceVariables); }
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Human_Paragon_T4HumanParagonAnimInstance_h_13_PROLOG

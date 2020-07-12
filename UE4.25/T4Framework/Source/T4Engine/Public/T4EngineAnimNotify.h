@@ -20,15 +20,15 @@ struct FT4AnimNotifyEquipment : public FT4AnimNotifyMessage
 {
 	FT4AnimNotifyEquipment()
 		: EquipmentType(ET4EquipmentType::None)
-		, SameStanceName(NAME_None)
+		, SameAnimSetName(NAME_None)
 		, bForced(false)
 	{
 		AnimNotifyType = ET4AnimNotifyType::Equipment;
-		SameStanceName = NAME_None;
+		SameAnimSetName = NAME_None;
 	}
 	ET4EquipmentType EquipmentType;
-	FName SameStanceName;
-	bool bForced; // #111 : 로딩 완료 후 Stance 설정을 무기교체가 기다릴 수 있음으로 강제로 적용
+	FName SameAnimSetName;
+	bool bForced; // #111 : 로딩 완료 후 AnimSet 설정을 무기교체가 기다릴 수 있음으로 강제로 적용
 };
 
 struct FT4AnimNotifyFootstep : public FT4AnimNotifyMessage

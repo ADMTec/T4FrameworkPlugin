@@ -8,7 +8,7 @@
 #include "Entity/T4EntityTypes.h"
 #include "Engine/Scene.h" // #100
 #include "Camera/CameraShake.h" // #101
-#include "T4ActionSetDatas.generated.h"
+#include "T4ActionPakDatas.generated.h"
 
 /**
   *
@@ -30,7 +30,7 @@
 // ET4ActionDataType::PostProcess // #100
 // ET4ActionDataType::Environment // #99
 
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 
 USTRUCT()
 struct T4ASSET_API FT4ActionDataBase : public FT4ActionBase
@@ -117,7 +117,7 @@ public:
 	FName ConditionName;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> ActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> ActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4LoadingPolicy LoadingPolicy;
@@ -140,7 +140,7 @@ public:
 
 	FString ToDisplayText() override
 	{
-		return FString::Printf(TEXT("Branch '%s'"), *(ActionSetAsset.GetAssetName())); // #54
+		return FString::Printf(TEXT("Branch '%s'"), *(ActionPakAsset.GetAssetName())); // #54
 	}
 };
 
@@ -601,13 +601,13 @@ public:
 	FName ActionPoint; // 어딘가에 붙어야 할 경우. 예) 오른손...
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> CastingActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> CastingActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> HeadActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> HeadActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> EndActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> EndActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4LoadingPolicy LoadingPolicy;
@@ -637,7 +637,7 @@ public:
 	bool bEnableBounceOut; // #127 : 명확한 타겟없이 무한대로 발사될 경우 부딪히는 효과 처리 사용 여부
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnableBounceOut"))
-	TSoftObjectPtr<UT4ActionSetAsset> BounceOutActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> BounceOutActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	bool bUseOscillate; // #127 : 흔들림 여부
@@ -652,7 +652,7 @@ public:
 	float ThrowDelayTimeSec; // Play 이후 ActionPoint 에서 떨어지는 시간!
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	float CastingStopDelayTimeSec; // ThrowDelayTimeSec 이후 Casting ActionSet 가 삭제될 시간
+	float CastingStopDelayTimeSec; // ThrowDelayTimeSec 이후 Casting ActionPak 가 삭제될 시간
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -689,7 +689,7 @@ public:
 
 	FString ToDisplayText() override
 	{
-		return FString::Printf(TEXT("Projectile '%s'"), *(HeadActionSetAsset.GetAssetName()));
+		return FString::Printf(TEXT("Projectile '%s'"), *(HeadActionPakAsset.GetAssetName()));
 	}
 };
 

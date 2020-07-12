@@ -139,8 +139,8 @@ private:
 	bool bPendingRefreshWorld; // #86
 	bool bPendingPlayerRespawn;
 	FT4EntityKey PlayerEntityKey; // #83
-	FName PlayerStanceName; // #83
-	FName PlayerPostureName; // #106, #111
+	FName PlayerAnimSetName; // #83
+	FName PlayerStanceName; // #106, #111
 	FVector PlayerLocationCached; // #83
 	FRotator PlayerRotationCached; // #83
 	

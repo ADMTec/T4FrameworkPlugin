@@ -9,7 +9,7 @@
   * #131
  */
 UENUM()
-enum class ET4AnimSetTemplate : uint8 // #131
+enum class ET4AnimsetTemplate : uint8 // #131
 {
 	Basic,
 	Paragon

@@ -24,8 +24,8 @@ enum class ET4GamePacketCS : uint32
 	LockOn, // #40
 	LockOff, // #40
 
-	Stance, // #73
-	Posture, // #106
+	AnimSet, // #73
+	Stance, // #106
 
 	EquipItem, // #22
 	UnequipItem, // #22
@@ -89,8 +89,8 @@ enum class ET4GamePacketSC : uint32
 	LockOn, // #40
 	LockOff, // #40
 
-	Stance, // #73
-	Posture, // #106
+	AnimSet, // #73
+	Stance, // #106
 
 	EquipItem,
 	UnequipItem,

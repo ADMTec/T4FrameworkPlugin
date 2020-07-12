@@ -8,13 +8,13 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-#ifdef T4ASSET_T4ActionSetTypes_generated_h
-#error "T4ActionSetTypes.generated.h already included, missing '#pragma once' in T4ActionSetTypes.h"
+#ifdef T4ASSET_T4ActionPakTypes_generated_h
+#error "T4ActionPakTypes.generated.h already included, missing '#pragma once' in T4ActionPakTypes.h"
 #endif
-#define T4ASSET_T4ActionSetTypes_generated_h
+#define T4ASSET_T4ActionPakTypes_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionSet_T4ActionSetTypes_h
+#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPak_T4ActionPakTypes_h
 
 
 #define FOREACH_ENUM_ET4ACCELERATEDMOTION(op) \

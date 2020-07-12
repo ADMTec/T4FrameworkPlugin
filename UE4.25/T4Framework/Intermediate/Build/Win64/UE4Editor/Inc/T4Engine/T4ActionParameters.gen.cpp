@@ -333,15 +333,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 		static void* NewStructOps();
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsolationActionSet_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsolationActionPak_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSetPropertyParams NewProp_IsolationActionSet;
-		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_IsolationActionSet_ElementProp;
+		static const UE4CodeGen_Private::FSetPropertyParams NewProp_IsolationActionPak;
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_IsolationActionPak_ElementProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InvisibleActionSet_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InvisibleActionPak_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSetPropertyParams NewProp_InvisibleActionSet;
-		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_InvisibleActionSet_ElementProp;
+		static const UE4CodeGen_Private::FSetPropertyParams NewProp_InvisibleActionPak;
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_InvisibleActionPak_ElementProp;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
@@ -359,28 +359,28 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #56 : Action Editor \xec\x97\x90\xec\x84\x9c Invisible or Isolate \xeb\xa1\x9c \xec\xb6\x9c\xeb\xa0\xa5\xec\x9d\x84 \xec\xa0\x9c\xec\x96\xb4\xed\x95\x9c\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
 		{ "ToolTip", "#56 : Action Editor \xec\x97\x90\xec\x84\x9c Invisible or Isolate \xeb\xa1\x9c \xec\xb6\x9c\xeb\xa0\xa5\xec\x9d\x84 \xec\xa0\x9c\xec\x96\xb4\xed\x95\x9c\xeb\x8b\xa4." },
 	};
 #endif
-	const UE4CodeGen_Private::FSetPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet = { "IsolationActionSet", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Set, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommandContext, IsolationActionSet), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet_MetaData)) };
-	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet_ElementProp = { "IsolationActionSet", nullptr, (EPropertyFlags)0x0000000800000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FSetPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak = { "IsolationActionPak", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Set, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommandContext, IsolationActionPak), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak_ElementProp = { "IsolationActionPak", nullptr, (EPropertyFlags)0x0000000800000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSetPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet = { "InvisibleActionSet", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Set, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommandContext, InvisibleActionSet), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet_MetaData)) };
-	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet_ElementProp = { "InvisibleActionSet", nullptr, (EPropertyFlags)0x0000000800000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FSetPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak = { "InvisibleActionPak", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Set, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommandContext, InvisibleActionPak), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak_ElementProp = { "InvisibleActionPak", nullptr, (EPropertyFlags)0x0000000800000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionSet_ElementProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionSet_ElementProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_IsolationActionPak_ElementProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::NewProp_InvisibleActionPak_ElementProp,
 	};
 #endif // WITH_EDITORONLY_DATA
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics::ReturnStructParams = {
@@ -411,7 +411,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Hash() { return 470954658U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Hash() { return 3217776652U; }
 class UScriptStruct* FT4ActionParameters::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

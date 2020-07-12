@@ -4,13 +4,13 @@
 
 #include "T4AssetMinimal.h"
 #include "Common/T4CommonAssetStructs.h" // #100
-#include "ActionSet/T4ActionSetDatas.h"
-#include "T4ActionSetAsset.generated.h"
+#include "ActionPak/T4ActionPakDatas.h"
+#include "T4ActionPakAsset.generated.h"
 
 /**
   * #24
  */
-struct FT4ActionSetCustomVersion
+struct FT4ActionPakCustomVersion
 {
 	enum Type
 	{
@@ -26,7 +26,7 @@ struct FT4ActionSetCustomVersion
 	T4ASSET_API const static FGuid GUID;
 
 private:
-	FT4ActionSetCustomVersion() {}
+	FT4ActionPakCustomVersion() {}
 };
 
 // #24
@@ -188,10 +188,10 @@ public:
 	FName MapEntitySelected; // #87
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName StanceSelected; // #73
+	FName AnimSetSelected; // #73
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName PostureSelected; // #106
+	FName StanceSelected; // #106
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FName WeaponNameID; // #60
@@ -229,8 +229,8 @@ public:
 	FT4ActionTestSettings()
 #if WITH_EDITOR
 		: MapEntitySelected(NAME_None) // #87
-		, StanceSelected(NAME_None) // #73
-		, PostureSelected(NAME_None) // #106
+		, AnimSetSelected(NAME_None) // #73
+		, StanceSelected(NAME_None) // #106
 		, WeaponNameID(NAME_None) // #60
 		, SandbagNameID(NAME_None) // #60
 		, bAISystemDisabled(true) // #60
@@ -250,7 +250,7 @@ class UTexture2D;
 class UT4EntityAsset;
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4ASSET_API UT4ActionSetAsset : public UObject
+class T4ASSET_API UT4ActionPakAsset : public UObject
 {
 	GENERATED_UCLASS_BODY()
 

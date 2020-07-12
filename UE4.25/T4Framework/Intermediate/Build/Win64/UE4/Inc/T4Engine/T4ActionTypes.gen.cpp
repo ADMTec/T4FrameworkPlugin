@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 		return ET4ActionCommandType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionCommandType(ET4ActionCommandType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActionCommandType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActionCommandType_Hash() { return 1867289242U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActionCommandType_Hash() { return 2040019349U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActionCommandType()
 	{
 #if WITH_HOT_RELOAD
@@ -57,8 +57,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "ET4ActionCommandType::Launch", (int64)ET4ActionCommandType::Launch },
 				{ "ET4ActionCommandType::Aim", (int64)ET4ActionCommandType::Aim },
 				{ "ET4ActionCommandType::LockOn", (int64)ET4ActionCommandType::LockOn },
+				{ "ET4ActionCommandType::AnimSet", (int64)ET4ActionCommandType::AnimSet },
 				{ "ET4ActionCommandType::Stance", (int64)ET4ActionCommandType::Stance },
-				{ "ET4ActionCommandType::Posture", (int64)ET4ActionCommandType::Posture },
 				{ "ET4ActionCommandType::EquipWeapon", (int64)ET4ActionCommandType::EquipWeapon },
 				{ "ET4ActionCommandType::UnequipWeapon", (int64)ET4ActionCommandType::UnequipWeapon },
 				{ "ET4ActionCommandType::Costume", (int64)ET4ActionCommandType::Costume },
@@ -68,19 +68,20 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "ET4ActionCommandType::Die", (int64)ET4ActionCommandType::Die },
 				{ "ET4ActionCommandType::Resurrect", (int64)ET4ActionCommandType::Resurrect },
 				{ "ET4ActionCommandType::ReactionStop", (int64)ET4ActionCommandType::ReactionStop },
-				{ "ET4ActionCommandType::ActionSet", (int64)ET4ActionCommandType::ActionSet },
+				{ "ET4ActionCommandType::ActionPak", (int64)ET4ActionCommandType::ActionPak },
 				{ "ET4ActionCommandType::Stop", (int64)ET4ActionCommandType::Stop },
 				{ "ET4ActionCommandType::Editor", (int64)ET4ActionCommandType::Editor },
 				{ "ET4ActionCommandType::None", (int64)ET4ActionCommandType::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "ActionSet.Comment", "// #132\n" },
-				{ "ActionSet.Name", "ET4ActionCommandType::ActionSet" },
-				{ "ActionSet.ToolTip", "#132" },
+				{ "ActionPak.Comment", "// #132\n" },
+				{ "ActionPak.Name", "ET4ActionCommandType::ActionPak" },
+				{ "ActionPak.ToolTip", "#132" },
 				{ "Aim.Comment", "// #63 : Only Projectile\n" },
 				{ "Aim.Name", "ET4ActionCommandType::Aim" },
 				{ "Aim.ToolTip", "#63 : Only Projectile" },
+				{ "AnimSet.Name", "ET4ActionCommandType::AnimSet" },
 				{ "Comment", "/**\n  * #134\n */" },
 				{ "Costume.Comment", "// #48\n" },
 				{ "Costume.Name", "ET4ActionCommandType::Costume" },
@@ -125,9 +126,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "None.Comment", "// #62 : End Code Format\n" },
 				{ "None.Name", "ET4ActionCommandType::None" },
 				{ "None.ToolTip", "#62 : End Code Format" },
-				{ "Posture.Comment", "// #73\n" },
-				{ "Posture.Name", "ET4ActionCommandType::Posture" },
-				{ "Posture.ToolTip", "#73" },
 				{ "ReactionStop.Comment", "// #76\n" },
 				{ "ReactionStop.Name", "ET4ActionCommandType::ReactionStop" },
 				{ "ReactionStop.ToolTip", "#76" },
@@ -138,10 +136,12 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "Skin.Comment", "// #37\n" },
 				{ "Skin.Name", "ET4ActionCommandType::Skin" },
 				{ "Skin.ToolTip", "#37" },
+				{ "Stance.Comment", "// #73\n" },
 				{ "Stance.Name", "ET4ActionCommandType::Stance" },
-				{ "Stop.Comment", "// #24, #127 : ActionSetAsset\n" },
+				{ "Stance.ToolTip", "#73" },
+				{ "Stop.Comment", "// #24, #127 : ActionPakAsset\n" },
 				{ "Stop.Name", "ET4ActionCommandType::Stop" },
-				{ "Stop.ToolTip", "#24, #127 : ActionSetAsset" },
+				{ "Stop.ToolTip", "#24, #127 : ActionPakAsset" },
 				{ "Teleport.Name", "ET4ActionCommandType::Teleport" },
 				{ "ToolTip", "#134" },
 				{ "Turn.Comment", "// #137 : WorldActor \xed\x9a\x8c\xec\xa0\x84 (C/S \xeb\x8f\x99\xea\xb8\xb0\xed\x99\x94!)\n" },

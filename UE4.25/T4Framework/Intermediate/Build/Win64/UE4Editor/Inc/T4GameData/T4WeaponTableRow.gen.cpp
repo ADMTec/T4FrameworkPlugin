@@ -134,18 +134,18 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #50, #106 : Key = Posture\n" },
+		{ "Comment", "// #50, #106 : Key = Stance\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
-		{ "ToolTip", "#50, #106 : Key = Posture" },
+		{ "ToolTip", "#50, #106 : Key = Stance" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey = { "ItemStatDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, ItemStatDBKey), Z_Construct_UScriptStruct_FT4ItemStatDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_CombatSkillSetDBKey_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #50, #106 : Key = Posture\n" },
+		{ "Comment", "// #50, #106 : Key = Stance\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
-		{ "ToolTip", "#50, #106 : Key = Posture" },
+		{ "ToolTip", "#50, #106 : Key = Stance" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_CombatSkillSetDBKey = { "CombatSkillSetDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, CombatSkillSetDBKey), Z_Construct_UScriptStruct_FT4SkillSetDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_CombatSkillSetDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_CombatSkillSetDBKey_MetaData)) };
@@ -223,7 +223,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 1996042100U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 1782010701U; }
 class UScriptStruct* FT4WeaponEntityData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

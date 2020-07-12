@@ -201,14 +201,14 @@ public:
 	FRotator SpawnRotation;
 	
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName StanceName; // #73
+	FName AnimSetName; // #73
 
 public:
 	FT4GamePacketSC_PCEnter()
 		: FT4GamePacketSC_Base(ET4GamePacketSC::PCEnter)
 		, SpawnLocation(FVector::ZeroVector)
 		, SpawnRotation(FRotator::ZeroRotator)
-		, StanceName(NAME_None) // #73
+		, AnimSetName(NAME_None) // #73
 	{
 	}
 

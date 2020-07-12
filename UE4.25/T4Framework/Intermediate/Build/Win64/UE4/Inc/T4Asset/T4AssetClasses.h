@@ -8,8 +8,8 @@
 
 
 #include "T4Asset/Classes/Common/T4CommonAssetStructs.h"
-#include "T4Asset/Classes/ActionSet/T4ActionSetAsset.h"
-#include "T4Asset/Classes/AnimSet/T4AnimSetAsset.h"
+#include "T4Asset/Classes/ActionPak/T4ActionPakAsset.h"
+#include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
 #include "T4Asset/Classes/Entity/T4EntityAsset.h"
 #include "T4Asset/Classes/Entity/T4ActorEntityAsset.h"
 #include "T4Asset/Classes/Entity/T4CharacterEntityAsset.h"

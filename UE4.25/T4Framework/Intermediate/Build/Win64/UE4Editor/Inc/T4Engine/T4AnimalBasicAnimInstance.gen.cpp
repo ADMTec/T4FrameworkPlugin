@@ -92,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimalBasicAnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimalBasicAnimInstance, 1040538768);
+	IMPLEMENT_CLASS(UT4AnimalBasicAnimInstance, 2078775205);
 	template<> T4ENGINE_API UClass* StaticClass<UT4AnimalBasicAnimInstance>()
 	{
 		return UT4AnimalBasicAnimInstance::StaticClass();

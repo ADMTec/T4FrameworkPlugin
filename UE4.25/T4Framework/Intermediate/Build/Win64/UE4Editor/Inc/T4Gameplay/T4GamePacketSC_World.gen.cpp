@@ -556,9 +556,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_PCEn
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnRotation_MetaData[];
 #endif
@@ -588,12 +588,12 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_PCEn
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_PCEnter>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_StanceName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_AnimSetName_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_World.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_PCEnter, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_StanceName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_PCEnter, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_AnimSetName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_SpawnRotation_MetaData[] = {
 		{ "Category", "Default" },
@@ -623,7 +623,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_PCEn
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_EnterObjectID = { "EnterObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_PCEnter, EnterObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_EnterObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_EnterObjectID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_StanceName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_AnimSetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_SpawnRotation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_SpawnLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Statics::NewProp_PlayerDBKey,
@@ -657,7 +657,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_PCEn
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Hash() { return 3776376758U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter_Hash() { return 1882297019U; }
 class UScriptStruct* FT4GamePacketSC_MyPCChange::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

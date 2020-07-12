@@ -16,7 +16,7 @@
   * http://api.unrealengine.com/KOR/Gameplay/DataDriven/
  */
 
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 
 USTRUCT()
 struct FT4SkillShapeData // #108, #114
@@ -124,16 +124,16 @@ public:
 	FT4SkillStatDBKey SkillStatDBKey; // #114 : 기본 Stat
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> DefaultActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> DefaultActionPakAsset;
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionSetAsset> CastingActionSetAsset; // #117 : bAiming
+	TSoftObjectPtr<UT4ActionPakAsset> CastingActionPakAsset; // #117 : bAiming
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionSetAsset> CancelActionSetAsset; // #135
+	TSoftObjectPtr<UT4ActionPakAsset> CancelActionPakAsset; // #135
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionSetAsset> IndicateActionSetAsset; // #117 : bAiming
+	TSoftObjectPtr<UT4ActionPakAsset> IndicateActionPakAsset; // #117 : bAiming
 
 public:
 	FT4SkillTableRow()

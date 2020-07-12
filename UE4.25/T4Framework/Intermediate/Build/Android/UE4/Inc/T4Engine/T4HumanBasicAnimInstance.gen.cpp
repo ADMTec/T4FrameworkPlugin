@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanBasicAnimInstance() {}
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4HumanBasicAnimInstance();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBase();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4HumanPostureAnimVariables();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4HumanStanceAnimVariables();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4IKAnimVariables();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4MovementAnimVariables();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StateAnimVariables();
@@ -37,9 +37,9 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanBasicAnimInstance() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureVariables_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceVariables_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PostureVariables;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StanceVariables;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IKVariables_MetaData[];
 #endif
@@ -70,13 +70,13 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanBasicAnimInstance() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_PostureVariables_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
 		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Basic/T4HumanBasicAnimInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_PostureVariables = { "PostureVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanBasicAnimInstance, PostureVariables), Z_Construct_UScriptStruct_FT4HumanPostureAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_PostureVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_PostureVariables_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StanceVariables = { "StanceVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanBasicAnimInstance, StanceVariables), Z_Construct_UScriptStruct_FT4HumanStanceAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_IKVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
@@ -102,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanBasicAnimInstance() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StateVariables = { "StateVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanBasicAnimInstance, StateVariables), Z_Construct_UScriptStruct_FT4StateAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StateVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StateVariables_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_PostureVariables,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StanceVariables,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_IKVariables,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_MovementVariables,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HumanBasicAnimInstance_Statics::NewProp_StateVariables,
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanBasicAnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4HumanBasicAnimInstance, 1581396554);
+	IMPLEMENT_CLASS(UT4HumanBasicAnimInstance, 2534798985);
 	template<> T4ENGINE_API UClass* StaticClass<UT4HumanBasicAnimInstance>()
 	{
 		return UT4HumanBasicAnimInstance::StaticClass();

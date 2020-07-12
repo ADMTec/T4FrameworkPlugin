@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4Commandlet_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x52CD94BA,
+				0xA774E4D2,
 				0xA7E59374,
 				METADATA_PARAMS(nullptr, 0)
 			};

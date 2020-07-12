@@ -38,8 +38,8 @@ class USkeletalMesh;
 class UAnimBlueprint;
 class UAnimMontage;
 class UBlendSpace;
-class UT4AnimSetAsset; // #39
-class UT4ActionSetAsset; // #74
+class UT4AnimsetAsset; // #39
+class UT4ActionPakAsset; // #74
 class UT4WeaponEntityAsset; // #74
 class UT4CostumeEntityAsset;
 
@@ -218,50 +218,35 @@ public:
 
 // #73
 USTRUCT()
-struct T4ASSET_API FT4EntityCharacterStanceData
+struct T4ASSET_API FT4EntityCharacterAnimSetData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4EntityCharacterStanceData()
-		: StanceName(NAME_None)
+	FT4EntityCharacterAnimSetData()
+		: AnimSetName(NAME_None)
 		, ActivePlayTag(NAME_None)
 	{
 	}
 
 	FORCEINLINE bool operator==(const FName& InKey) const
 	{
-		return (StanceName == InKey) ? true : false;
+		return (AnimSetName == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4EntityCharacterStanceData& InRhs) const
+	FORCEINLINE bool operator==(const FT4EntityCharacterAnimSetData& InRhs) const
 	{
-		return (StanceName == InRhs.StanceName) ? true : false;
+		return (AnimSetName == InRhs.AnimSetName) ? true : false;
 	}
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName StanceName;
+	FName AnimSetName;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4AnimSetAsset> AnimSetAsset; // #39
+	TSoftObjectPtr<UT4AnimsetAsset> AnimsetAsset; // #39
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FName ActivePlayTag; // #74, #73
-};
-
-// #73
-USTRUCT()
-struct T4ASSET_API FT4EntityCharacterStanceSetData
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	FT4EntityCharacterStanceSetData()
-	{
-	}
-
-	UPROPERTY(EditAnywhere, Category = Asset)
-	TArray<FT4EntityCharacterStanceData> StanceDatas; // #39, #73, #124
 };
 
 // #76
@@ -553,8 +538,8 @@ public:
 	UPROPERTY(EditAnywhere, Category=CompositeMesh)
 	FT4EntityCharacterCompositeMeshData CopmpositeMeshData; // #37
 
-	UPROPERTY(EditAnywhere, Category=Stance)
-	FT4EntityCharacterStanceSetData StanceSetData; // #73
+	UPROPERTY(EditAnywhere, Category=AnimSet)
+	TArray<FT4EntityCharacterAnimSetData> AnimSetDatas; // #39, #73, #124;
 
 	UPROPERTY(EditAnywhere, Category=Reaction)
 	FT4EntityCharacterReactionSetData ReactionSetData; // #76

@@ -39,8 +39,8 @@ enum class ET4ActionCommandType : uint32
 	Aim, // #113
 	LockOn,
 
-	Stance, // #73
-	Posture, // #106
+	AnimSet, // #73
+	Stance, // #106
 
 	EquipWeapon, // #22
 	UnequipWeapon, // #48
@@ -54,7 +54,7 @@ enum class ET4ActionCommandType : uint32
 	Resurrect, // #76
 	ReactionStop, // #132
 
-	ActionSet, // #24, #127 : ActionSetAsset
+	ActionPak, // #24, #127 : ActionPakAsset
 
 	Stop,
 

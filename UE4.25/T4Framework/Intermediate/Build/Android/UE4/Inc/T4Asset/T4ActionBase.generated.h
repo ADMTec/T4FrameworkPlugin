@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ASSET_T4ActionBase_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionSet_T4ActionBase_h_15_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPak_T4ActionBase_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ActionBase_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ActionBase>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionSet_T4ActionBase_h
+#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPak_T4ActionBase_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

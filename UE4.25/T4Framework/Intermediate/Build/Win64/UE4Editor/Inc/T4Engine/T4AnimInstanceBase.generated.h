@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimInstanceBase); \
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_T4AnimInstanceBase_h_23_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__AnimSetAsset() { return STRUCT_OFFSET(UT4AnimInstanceBase, AnimSetAsset); } \
+	FORCEINLINE static uint32 __PPO__AnimsetAsset() { return STRUCT_OFFSET(UT4AnimInstanceBase, AnimsetAsset); } \
 	FORCEINLINE static uint32 __PPO__AnimMontages() { return STRUCT_OFFSET(UT4AnimInstanceBase, AnimMontages); } \
 	FORCEINLINE static uint32 __PPO__BlendSpaces() { return STRUCT_OFFSET(UT4AnimInstanceBase, BlendSpaces); } \
 	FORCEINLINE static uint32 __PPO__AnimSequences() { return STRUCT_OFFSET(UT4AnimInstanceBase, AnimSequences); } \

@@ -20,10 +20,10 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPlayTagAttachmentData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPlayTagMaterialData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMaterialData();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionSetAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4WeaponEntityAsset_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityAnimationData();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetAnimSequenceData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimBlueprint_NoRegister();
@@ -290,9 +290,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPlayTagActionD
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionSetAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionPakAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ActionSetAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ActionPakAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTag_MetaData[];
 #endif
@@ -310,12 +310,12 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPlayTagActionD
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityPlayTagActionData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionSetAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionPakAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionSetAsset = { "ActionSetAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPlayTagActionData, ActionSetAsset), Z_Construct_UClass_UT4ActionSetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionSetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionSetAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionPakAsset = { "ActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPlayTagActionData, ActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionPakAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_PlayTag_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -324,7 +324,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPlayTagActionD
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_PlayTag = { "PlayTag", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPlayTagActionData, PlayTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_PlayTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_PlayTag_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionSetAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_ActionPakAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::NewProp_PlayTag,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Statics::ReturnStructParams = {
@@ -355,7 +355,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPlayTagActionD
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Hash() { return 2849735914U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPlayTagActionData_Hash() { return 1519817877U; }
 class UScriptStruct* FT4EntityPlayTagAttachmentData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -544,7 +544,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityAnimationData
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimSequenceArray = { "AnimSequenceArray", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityAnimationData, AnimSequenceArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimSequenceArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimSequenceArray_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimSequenceArray_Inner = { "AnimSequenceArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4AnimSetAnimSequenceData, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimSequenceArray_Inner = { "AnimSequenceArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityAnimationData_Statics::NewProp_AnimMontageAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -645,7 +645,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityAnimationData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityAnimationData_Hash() { return 193245461U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityAnimationData_Hash() { return 1347105530U; }
 class UScriptStruct* FT4EntityIdleAnimSequenceData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

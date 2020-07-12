@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketCS_Status() {}
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ObjectID();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_UnequipItem();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_EquipItem();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Posture();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Stance();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay();
 // End Cross Module References
 class UScriptStruct* FT4GamePacketCS_ExchangeItem::StaticStruct()
@@ -343,103 +343,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Equi
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_EquipItem_Hash() { return 861595741U; }
-class UScriptStruct* FT4GamePacketCS_Posture::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_Posture"), sizeof(FT4GamePacketCS_Posture), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Hash());
-	}
-	return Singleton;
-}
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_Posture>()
-{
-	return FT4GamePacketCS_Posture::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_Posture(FT4GamePacketCS_Posture::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_Posture"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Posture
-{
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Posture()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_Posture")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_Posture>);
-	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Posture;
-	struct Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureName;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SenderID;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #106\n" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
-		{ "ToolTip", "#106" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_Posture>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_PostureName_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_PostureName = { "PostureName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_Posture, PostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_PostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_PostureName_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_SenderID_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_Posture, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_SenderID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_PostureName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::NewProp_SenderID,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
-		Z_Construct_UScriptStruct_FT4GamePacketCS_Base,
-		&NewStructOps,
-		"T4GamePacketCS_Posture",
-		sizeof(FT4GamePacketCS_Posture),
-		alignof(FT4GamePacketCS_Posture),
-		Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Posture()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_Posture"), sizeof(FT4GamePacketCS_Posture), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Posture_Hash() { return 2720088326U; }
 class UScriptStruct* FT4GamePacketCS_Stance::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -481,9 +384,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Stan
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Stance_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #73\n" },
+		{ "Comment", "// #106\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
-		{ "ToolTip", "#73" },
+		{ "ToolTip", "#106" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4GamePacketCS_Stance_Statics::NewStructOps()
@@ -536,7 +439,104 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Stan
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Stance_Hash() { return 209308748U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Stance_Hash() { return 2816231760U; }
+class UScriptStruct* FT4GamePacketCS_AnimSet::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_AnimSet"), sizeof(FT4GamePacketCS_AnimSet), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_AnimSet>()
+{
+	return FT4GamePacketCS_AnimSet::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_AnimSet(FT4GamePacketCS_AnimSet::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_AnimSet"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_AnimSet
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_AnimSet()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_AnimSet")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_AnimSet>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_AnimSet;
+	struct Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SenderID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #73\n" },
+		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
+		{ "ToolTip", "#73" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_AnimSet>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_AnimSetName_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_AnimSet, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_AnimSetName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_SenderID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_AnimSet, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_SenderID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_AnimSetName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::NewProp_SenderID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		Z_Construct_UScriptStruct_FT4GamePacketCS_Base,
+		&NewStructOps,
+		"T4GamePacketCS_AnimSet",
+		sizeof(FT4GamePacketCS_AnimSet),
+		alignof(FT4GamePacketCS_AnimSet),
+		Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_AnimSet"), sizeof(FT4GamePacketCS_AnimSet), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet_Hash() { return 180084089U; }
 class UScriptStruct* FT4GamePacketCS_ReadyToPlay::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -569,9 +569,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Read
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// ET4GamePacketCS::Stance // #73\n// ET4GamePacketCS::Posture // #106\n// ET4GamePacketCS::EquipItem\n// ET4GamePacketCS::UnequipItem\n// ET4GamePacketCS::ExchangeItem\n// #146 : \xed\x81\xb4\xeb\x9d\xbc\xec\x9d\xb4\xec\x96\xb8\xed\x8a\xb8 PC::BeginPlay \xec\x8b\x9c \xec\x84\x9c\xeb\xb2\x84\xeb\xa1\x9c \xec\xa0\x91\xec\x86\x8d \xec\x99\x84\xeb\xa3\x8c \xed\x86\xb5\xeb\xb3\xb4!\n" },
+		{ "Comment", "// ET4GamePacketCS::AnimSet // #73\n// ET4GamePacketCS::Stance // #106\n// ET4GamePacketCS::EquipItem\n// ET4GamePacketCS::UnequipItem\n// ET4GamePacketCS::ExchangeItem\n// #146 : \xed\x81\xb4\xeb\x9d\xbc\xec\x9d\xb4\xec\x96\xb8\xed\x8a\xb8 PC::BeginPlay \xec\x8b\x9c \xec\x84\x9c\xeb\xb2\x84\xeb\xa1\x9c \xec\xa0\x91\xec\x86\x8d \xec\x99\x84\xeb\xa3\x8c \xed\x86\xb5\xeb\xb3\xb4!\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Status.h" },
-		{ "ToolTip", "ET4GamePacketCS::Stance  #73\nET4GamePacketCS::Posture  #106\nET4GamePacketCS::EquipItem\nET4GamePacketCS::UnequipItem\nET4GamePacketCS::ExchangeItem\n#146 : \xed\x81\xb4\xeb\x9d\xbc\xec\x9d\xb4\xec\x96\xb8\xed\x8a\xb8 PC::BeginPlay \xec\x8b\x9c \xec\x84\x9c\xeb\xb2\x84\xeb\xa1\x9c \xec\xa0\x91\xec\x86\x8d \xec\x99\x84\xeb\xa3\x8c \xed\x86\xb5\xeb\xb3\xb4!" },
+		{ "ToolTip", "ET4GamePacketCS::AnimSet  #73\nET4GamePacketCS::Stance  #106\nET4GamePacketCS::EquipItem\nET4GamePacketCS::UnequipItem\nET4GamePacketCS::ExchangeItem\n#146 : \xed\x81\xb4\xeb\x9d\xbc\xec\x9d\xb4\xec\x96\xb8\xed\x8a\xb8 PC::BeginPlay \xec\x8b\x9c \xec\x84\x9c\xeb\xb2\x84\xeb\xa1\x9c \xec\xa0\x91\xec\x86\x8d \xec\x99\x84\xeb\xa3\x8c \xed\x86\xb5\xeb\xb3\xb4!" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay_Statics::NewStructOps()
@@ -606,7 +606,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Read
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay_Hash() { return 583195819U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay_Hash() { return 2303547005U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

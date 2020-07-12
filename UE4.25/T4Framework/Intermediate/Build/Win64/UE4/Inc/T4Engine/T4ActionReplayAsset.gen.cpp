@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionReplayAsset() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StopActionCommand();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionSetActionCommand();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionPakActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ResurrectActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4DieActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4CrowdControlActionCommand();
@@ -27,8 +27,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionReplayAsset() {}
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4CostumeActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4UnequipWeaponActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4PostureActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StanceActionCommand();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4LockOnActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4AimActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4LaunchActionCommand();
@@ -93,10 +93,10 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_StopActions;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StopActions_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SetActions_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PakActions_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_SetActions;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SetActions_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PakActions;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PakActions_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResurrectActions_MetaData[];
 #endif
@@ -138,15 +138,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_EquipWeaponActions;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EquipWeaponActions_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureActions_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PostureActions;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PostureActions_Inner;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceActions_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_StanceActions;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StanceActions_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetActions_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AnimSetActions;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AnimSetActions_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LockOnActions_MetaData[];
 #endif
@@ -267,15 +267,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions = { "StopActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, StopActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions_Inner = { "StopActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4StopActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// T4ActionCommandCommons.h\n" },
 		{ "ModuleRelativePath", "Classes/Replay/T4ActionReplayAsset.h" },
 		{ "ToolTip", "T4ActionCommandCommons.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions = { "SetActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, SetActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions_Inner = { "SetActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4ActionSetActionCommand, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions = { "PakActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, PakActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_Inner = { "PakActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4ActionPakActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_ResurrectActions_MetaData[] = {
 		{ "Category", "Default" },
@@ -351,23 +351,23 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions = { "EquipWeaponActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, EquipWeaponActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions_Inner = { "EquipWeaponActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4EquipWeaponActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #73\n" },
 		{ "ModuleRelativePath", "Classes/Replay/T4ActionReplayAsset.h" },
 		{ "ToolTip", "#73" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions = { "PostureActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, PostureActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions_Inner = { "PostureActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4PostureActionCommand, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions = { "StanceActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, StanceActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_Inner = { "StanceActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4StanceActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Classes/Replay/T4ActionReplayAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions = { "StanceActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, StanceActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_Inner = { "StanceActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4StanceActionCommand, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions = { "AnimSetActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, AnimSetActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions_Inner = { "AnimSetActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4AnimSetActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_LockOnActions_MetaData[] = {
 		{ "Category", "Default" },
@@ -521,8 +521,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StopActions_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_SetActions_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_ResurrectActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_ResurrectActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_DieActions,
@@ -539,10 +539,10 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_UnequipWeaponActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_EquipWeaponActions_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PostureActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_StanceActions_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AnimSetActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_LockOnActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_LockOnActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_AimActions,
@@ -606,7 +606,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionReplayData_Hash() { return 1849788684U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionReplayData_Hash() { return 2443916510U; }
 class UScriptStruct* FT4ActionReplayItem::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

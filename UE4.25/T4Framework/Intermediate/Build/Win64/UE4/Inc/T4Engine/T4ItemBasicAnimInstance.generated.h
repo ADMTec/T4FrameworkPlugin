@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4ENGINE_T4ItemBasicAnimInstance_generated_h
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Item_Basic_T4ItemBasicAnimInstance_h_16_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4ItemPostureAnimVariables_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
-template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ItemPostureAnimVariables>();
+template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ItemStanceAnimVariables>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Item_Basic_T4ItemBasicAnimInstance_h_32_SPARSE_DATA
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Item_Basic_T4ItemBasicAnimInstance_h_32_RPC_WRAPPERS
@@ -69,7 +69,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4ItemBasicAnimInstance); \
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Item_Basic_T4ItemBasicAnimInstance_h_32_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__StateVariables() { return STRUCT_OFFSET(UT4ItemBasicAnimInstance, StateVariables); } \
-	FORCEINLINE static uint32 __PPO__PostureVariables() { return STRUCT_OFFSET(UT4ItemBasicAnimInstance, PostureVariables); }
+	FORCEINLINE static uint32 __PPO__StanceVariables() { return STRUCT_OFFSET(UT4ItemBasicAnimInstance, StanceVariables); }
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Item_Basic_T4ItemBasicAnimInstance_h_29_PROLOG

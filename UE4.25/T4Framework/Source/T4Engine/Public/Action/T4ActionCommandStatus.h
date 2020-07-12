@@ -14,8 +14,8 @@
 
 // ET4ActionCommandType::Aim // #113
 // ET4ActionCommandType::LockOn
-// ET4ActionCommandType::Stance // #73
-// ET4ActionCommandType::Posture // #106
+// ET4ActionCommandType::AnimSet // #73
+// ET4ActionCommandType::Stance // #106
 // ET4ActionCommandType::EquipWeapon
 // ET4ActionCommandType::UnequipWeapon
 // ET4ActionCommandType::Costume // #72
@@ -88,6 +88,39 @@ public:
 
 // #73
 USTRUCT()
+struct T4ENGINE_API FT4AnimSetActionCommand : public FT4ActionCommandBase
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category = Common)
+	FName AnimSetName;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bImmediate; // #111
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bOnlyFlush; // #116 : 스탠스 전환중이면 강제로 Flush 해준다. (이후 필요하다면 별도 Action 으로 뺄 것!)
+
+public:
+	FT4AnimSetActionCommand()
+		: FT4ActionCommandBase(StaticActionType())
+		, AnimSetName(NAME_None)
+		, bImmediate(false) // #111
+		, bOnlyFlush(false) // #116 : 스탠스 전환중이면 강제로 Flush 해준다. (이후 필요하다면 별도 Action 으로 뺄 것!)
+	{
+	}
+
+	static ET4ActionCommandType StaticActionType() { return ET4ActionCommandType::AnimSet; }
+
+	FString ToString() const override
+	{
+		return FString(TEXT("AnimSetAction"));
+	}
+};
+
+// #106
+USTRUCT()
 struct T4ENGINE_API FT4StanceActionCommand : public FT4ActionCommandBase
 {
 	GENERATED_USTRUCT_BODY()
@@ -97,17 +130,17 @@ public:
 	FName StanceName;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bImmediate; // #111
+	float MoveSpeed; // #140 : InMoveSpeed per Stance
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bOnlyFlush; // #116 : 스탠스 전환중이면 강제로 Flush 해준다. (이후 필요하다면 별도 Action 으로 뺄 것!)
+	bool bImmediate; // #111
 
 public:
 	FT4StanceActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
 		, StanceName(NAME_None)
-		, bImmediate(false) // #111
-		, bOnlyFlush(false) // #116 : 스탠스 전환중이면 강제로 Flush 해준다. (이후 필요하다면 별도 Action 으로 뺄 것!)
+		, MoveSpeed(0.0f) // #140 : InMoveSpeed per Stance
+		, bImmediate(false)  // #111
 	{
 	}
 
@@ -116,39 +149,6 @@ public:
 	FString ToString() const override
 	{
 		return FString(TEXT("StanceAction"));
-	}
-};
-
-// #106
-USTRUCT()
-struct T4ENGINE_API FT4PostureActionCommand : public FT4ActionCommandBase
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(EditAnywhere, Category = Common)
-	FName PostureName;
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveSpeed; // #140 : InMoveSpeed per Posture
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bImmediate; // #111
-
-public:
-	FT4PostureActionCommand()
-		: FT4ActionCommandBase(StaticActionType())
-		, PostureName(NAME_None)
-		, MoveSpeed(0.0f) // #140 : InMoveSpeed per Posture
-		, bImmediate(false)  // #111
-	{
-	}
-
-	static ET4ActionCommandType StaticActionType() { return ET4ActionCommandType::Posture; }
-
-	FString ToString() const override
-	{
-		return FString(TEXT("PostureAction"));
 	}
 };
 
@@ -188,16 +188,16 @@ public:
 	TArray<FT4EquipWeaponEntityData> SubWeaponDatas; // #111
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bChangeStanceInEntity; // #110 : Weapon Entity 에 설정된 Stance 도 함께 설정해준다.
+	bool bChangeAnimSetInEntity; // #110 : Weapon Entity 에 설정된 AnimSet 도 함께 설정해준다.
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bChangeStanceSync; // #111 : 스탠스 변경과 동기화한다.
+	bool bChangeAnimSetSync; // #111 : 스탠스 변경과 동기화한다.
 
 public:
 	FT4EquipWeaponActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
-		, bChangeStanceInEntity(false) // #110 : Weapon Entity 에 설정된 Stance 도 함께 설정해준다.
-		, bChangeStanceSync(false) // #111 : 스탠스 변경과 동기화한다.
+		, bChangeAnimSetInEntity(false) // #110 : Weapon Entity 에 설정된 AnimSet 도 함께 설정해준다.
+		, bChangeAnimSetSync(false) // #111 : 스탠스 변경과 동기화한다.
 	{
 	}
 
@@ -229,16 +229,16 @@ struct T4ENGINE_API FT4UnequipWeaponActionCommand : public FT4ActionCommandBase
 	FT4ActionKey EquipmentActionKey; // #111 : 내부에서 아이템 관리 용도로 사용될 Equip 에서 넣어준 ActionKey
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bChangeDefaultStance; // #110 : Default Stance 로 변경해준다.
+	bool bChangeDefaultAnimSet; // #110 : Default AnimSet 로 변경해준다.
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bChangeStanceSync; // #111 : 스탠스 변경과 동기화한다.
+	bool bChangeAnimSetSync; // #111 : 스탠스 변경과 동기화한다.
 
 public:
 	FT4UnequipWeaponActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
-		, bChangeDefaultStance(false) // #110 : Default Stance 로 변경해준다.
-		, bChangeStanceSync(false) // #111 : 스탠스 변경과 동기화한다.
+		, bChangeDefaultAnimSet(false) // #110 : Default AnimSet 로 변경해준다.
+		, bChangeAnimSetSync(false) // #111 : 스탠스 변경과 동기화한다.
 	{
 	}
 

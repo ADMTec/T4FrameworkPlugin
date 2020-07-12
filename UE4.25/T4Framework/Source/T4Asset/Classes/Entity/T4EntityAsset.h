@@ -4,7 +4,7 @@
 
 #include "T4AssetMinimal.h"
 #include "Common/T4CommonAssetStructs.h" // #103
-#include "AnimSet/T4AnimSetAsset.h" // #107
+#include "AnimSet/T4AnimsetAsset.h" // #107
 #include "T4AssetDefinitions.h"
 #include "Entity/T4EntityTypes.h"
 #include "Entity/T4EntityKey.h"
@@ -223,7 +223,7 @@ public:
 	TSoftObjectPtr<UAnimMontage> AnimMontageAsset; // #69
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TArray<FT4AnimSetAnimSequenceData> AnimSequenceArray;
+	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 };
 
 // #74
@@ -250,7 +250,7 @@ public:
 };
 
 // #74
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 USTRUCT()
 struct T4ASSET_API FT4EntityPlayTagActionData
 {
@@ -266,7 +266,7 @@ public:
 	FName PlayTag;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> ActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> ActionPakAsset;
 };
 
 // #80

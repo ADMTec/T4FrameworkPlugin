@@ -122,10 +122,10 @@ public:
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName InitializeStanceName; // #142 : NPC 기본 스탠스 
+	FName InitializeAnimSetName; // #142 : NPC 기본 스탠스 
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName InitializePostureName; // #142 : NPC 기본 스탠스 
+	FName InitializeStanceName; // #142 : NPC 기본 스탠스 
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4NPCSpeedData MoveSpeedData; // #50, #108, #109
@@ -158,8 +158,8 @@ public:
 	FT4NPCTableRow()
 		: Version(0) // #135
 		, RaceName(NAME_None) // #104, #114
+		, InitializeAnimSetName(T4Const_DefaultAnimSetName) // #142
 		, InitializeStanceName(T4Const_DefaultStanceName) // #142
-		, InitializePostureName(T4Const_DefaultPostureName) // #142
 		, InitializeLevel(ET4GameStatLevel::Level_1) // #114
 		, InitializeSkinName(NAME_None) // #135
 	{

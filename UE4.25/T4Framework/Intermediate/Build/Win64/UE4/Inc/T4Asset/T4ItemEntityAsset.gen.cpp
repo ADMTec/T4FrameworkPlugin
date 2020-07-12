@@ -64,13 +64,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EditorTestItemData
 		static void* NewStructOps();
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParentPostureName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ParentPostureName;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParentStanceName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ParentStanceName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParentAnimSetName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ParentAnimSetName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParentEntityAsset_MetaData[];
 #endif
@@ -97,19 +97,19 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EditorTestItemData
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentPostureName_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentPostureName = { "ParentPostureName", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorTestItemData, ParentPostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentPostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentPostureName_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentStanceName_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentStanceName = { "ParentStanceName", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorTestItemData, ParentStanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentStanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentStanceName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentAnimSetName_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentAnimSetName = { "ParentAnimSetName", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorTestItemData, ParentAnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentAnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentAnimSetName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentEntityAsset_MetaData[] = {
 		{ "Category", "Editor" },
@@ -126,8 +126,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EditorTestItemData
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType = { "ItemSpawnType", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorTestItemData, ItemSpawnType), Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentPostureName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentStanceName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentAnimSetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ParentEntityAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorTestItemData_Statics::NewProp_ItemSpawnType_Underlying,
@@ -161,7 +161,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EditorTestItemData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorTestItemData_Hash() { return 3706725268U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorTestItemData_Hash() { return 2605648043U; }
 class UScriptStruct* FT4EntityItemDropMeshData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

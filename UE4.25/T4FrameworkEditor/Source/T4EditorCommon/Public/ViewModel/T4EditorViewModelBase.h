@@ -7,7 +7,7 @@
 
 #include "T4Asset/Public/Entity/T4EntityKey.h"
 #include "T4Asset/Public/Entity/T4EntityTypes.h"
-#include "T4Asset/Public/ActionSet/T4ActionSetTypes.h"
+#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
 
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4Engine/Public/T4EngineStructs.h" // #87
@@ -24,7 +24,7 @@ class FCanvas;
 class UWorld;
 struct FT4ActionParameters;
 class UAnimSequence;
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 class UT4EntityAsset;
 class UT4ContentSpawnAsset;
 class IT4WorldActor;
@@ -174,8 +174,8 @@ public:
 	void ServerDespawnObject(const FT4ObjectID& InObjectID); // #118
 	void ServerDespawnObjectWithEditorOnly(const FT4ObjectID& InObjectID); // #134
 
-	void ServerChangeStance(FName InStanceName); // #73, #114
-	void ServerChangePosture(FName InPostureName); // #106, #114
+	void ServerChangeAnimSet(FName InAnimSetName); // #73, #114
+	void ServerChangeStance(FName InStanceName); // #106, #114
 
 	virtual bool ServerEquipWeapon(const FName& InWeaponDBKey, bool bInUnequip); // #60
 	bool ServerEquipWeapon(ET4LayerType InLayerType, const FName& InWeaponDBKey, bool bInUnequip); // #60
@@ -194,8 +194,8 @@ public:
 		const FT4EntityKey& InEntityKey,
 		const FVector& InLocation,
 		const FRotator& InRotation,
+		const FName InAnimSetName,
 		const FName InStanceName,
-		const FName InPostureName,
 		bool bPlayer
 	); // #83, #106, #111 
 
@@ -215,13 +215,13 @@ public:
 	); // #39
 
 	virtual void ClientPlayAction(
-		UT4ActionSetAsset* InActionSetAsset, 
+		UT4ActionPakAsset* InActionPakAsset, 
 		float InStartTimeSec, 
 		const FT4ActionParameters* InActionParameters
 	); // #39, #56
 
 	void ClientPlayAction(
-		UT4ActionSetAsset* InActionSetAsset, 
+		UT4ActionPakAsset* InActionPakAsset, 
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 
@@ -230,7 +230,7 @@ public:
 
 	void ClientPlayAction(
 		ET4LayerType InLayerType, 
-		UT4ActionSetAsset* InActionSetAsset, 
+		UT4ActionPakAsset* InActionPakAsset, 
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 
@@ -241,16 +241,16 @@ public:
 		const FT4ActionKey& InActionKey,
 		UT4EntityAsset* InWeaponEntity,
 		FName InOverrideEquipPointName,
-		bool bInChangeStanceSync, // #72, #111 : 스탠스 변경과 동기화한다.
-		bool bInChangeStanceInEntity = false // #120 : Weapon 에 설정된 Stance 자동 적용 
+		bool bInChangeAnimSetSync, // #72, #111 : 스탠스 변경과 동기화한다.
+		bool bInChangeAnimSetInEntity = false // #120 : Weapon 에 설정된 AnimSet 자동 적용 
 	);
-	void ClientUnequipWeapon(const FT4ActionKey& InActionKey, FName InOverrideEquipPointName, bool bInChangeStanceSync); // #111 : 스탠스 변경과 동기화한다.
+	void ClientUnequipWeapon(const FT4ActionKey& InActionKey, FName InOverrideEquipPointName, bool bInChangeAnimSetSync); // #111 : 스탠스 변경과 동기화한다.
 
 	void ClientExchangeCostume(UT4EntityAsset* InCostumeEntity, FName InCompositePartName, bool bSet); // #72
 	virtual void ClientExchangeSkin(FName InSkinName); // #130
 
-	virtual void ClientChangeStance(FName InStanceName, bool bInImmediate); // #73
-	virtual void ClientChangePosture(FName InPostureName, bool bInImmediate); // #106
+	virtual void ClientChangeAnimSet(FName InAnimSetName, bool bInImmediate); // #73
+	virtual void ClientChangeStance(FName InStanceName, bool bInImmediate); // #106
 
 	virtual void ClientPlayReaction(FName InReactionName, ET4EntityReactionType InReactionType, const FVector& InShootDirection); // #76
 

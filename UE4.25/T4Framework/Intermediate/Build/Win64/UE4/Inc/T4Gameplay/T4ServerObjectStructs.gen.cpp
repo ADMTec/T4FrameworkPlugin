@@ -64,13 +64,13 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxMoveSpeed;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureName;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -124,26 +124,26 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_MaxMoveSpeed = { "MaxMoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, MaxMoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_MaxMoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_MaxMoveSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_PostureName_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_PostureName = { "PostureName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, PostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_PostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_PostureName_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_StanceName_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_StanceName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_Health_Point,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_MaxMoveSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_PostureName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_StanceName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
@@ -173,7 +173,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 187407236U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 692104128U; }
 class UScriptStruct* FT4GameObjectStat::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

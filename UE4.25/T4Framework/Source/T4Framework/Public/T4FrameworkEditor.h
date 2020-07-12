@@ -63,7 +63,7 @@ enum class ET4EditorFindTarget : uint8 // #117 : 공객 대상을 찾을 경우�
 	None UMETA(Hidden),
 };
 
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 
 
 USTRUCT()
@@ -76,10 +76,10 @@ public:
 	FName InitializeSkinName;
 
 	UPROPERTY(VisibleAnywhere, Category = Common)
-	FName InitializeStanceName; // #142
+	FName InitializeAnimSetName; // #142
 
 	UPROPERTY(VisibleAnywhere, Category = Common)
-	FName InitializePostureName; // #142
+	FName InitializeStanceName; // #142
 };
 
 USTRUCT()
@@ -136,16 +136,16 @@ public:
 	float AimingPitchAngle; // #127
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> DefaultActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> DefaultActionPakAsset;
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionSetAsset> CastingActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> CastingActionPakAsset;
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionSetAsset> CancelActionSetAsset; // #135
+	TSoftObjectPtr<UT4ActionPakAsset> CancelActionPakAsset; // #135
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionSetAsset> IndicateActionSetAsset; // #116
+	TSoftObjectPtr<UT4ActionPakAsset> IndicateActionPakAsset; // #116
 
 public:
 	FT4EditorSkillDataInfo()
@@ -215,7 +215,7 @@ public:
 	FName ChainEffectDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TSoftObjectPtr<UT4ActionSetAsset> ActionSetAsset;
+	TSoftObjectPtr<UT4ActionPakAsset> ActionPakAsset;
 
 public:
 	FT4EditorEffectDataInfo()
@@ -306,7 +306,7 @@ public:
 // #114 : 에디터에서 N종의 게임 컨텐츠 데이터에서 정보를 얻기 위한 인터페이스
 //        컨텐츠 쪽에서 구현해주어야 에디터에서 사용할 수 있음 (T4Gameplay 을 사용하지 않을 경우를 위함)
 class UT4EntityAsset;
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 class T4FRAMEWORK_API IT4EditorGameData // #60
 {
 public:
@@ -317,7 +317,7 @@ public:
 
 	virtual UT4EntityAsset* GetEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0;
 	virtual UT4EntityAsset* GetWeaponEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
-	virtual UT4ActionSetAsset* GetActionSetAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
+	virtual UT4ActionPakAsset* GetActionPakAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
 
 	virtual bool GetNPCDataInfo(const FName& InDataName, FT4EditorNPCDataInfo& OutData) = 0; // #135
 	virtual bool GetSkillDataInfo(const FName& InDataName, FT4EditorSkillDataInfo& OutData) = 0;
@@ -350,7 +350,7 @@ public:
 	virtual const FT4EditorSkillDataInfo& GetOverrideSkillDataInfo() const = 0;
 	virtual const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const = 0;
 
-	virtual const FSoftObjectPath& GetOverrideActionSetPath() const = 0;
+	virtual const FSoftObjectPath& GetOverrideActionPakPath() const = 0;
 };
 
 // #114 : 에디터에서 N종의 게임 로직을 사용하기 위한 인터페이스
@@ -391,8 +391,8 @@ public:
 	) = 0;
 	virtual bool DoDespawnWithEditorOnly(const FT4ObjectID& InObjectID, bool bInClientOnly) = 0;
 
-	virtual bool DoChangeStance(FName InStanceName) = 0;// #73, #114
-	virtual bool DoChangePosture(FName InPostureName) = 0; // #106, #114
+	virtual bool DoChangeAnimSet(FName InAnimSetName) = 0;// #73, #114
+	virtual bool DoChangeStance(FName InStanceName) = 0; // #106, #114
 
 	virtual bool DoEquipWeaponItem(const FName& InWeaponDataNameID, bool bInUnequip) = 0; // #60 : to player
 	virtual bool DoExchangeCostumeItem(const FName& InCostumeDataNameID) = 0; // #60 : to player

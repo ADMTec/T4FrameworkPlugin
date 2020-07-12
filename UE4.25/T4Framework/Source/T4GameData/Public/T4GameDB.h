@@ -150,17 +150,17 @@ struct T4GAMEDATA_API FT4PlayerDBRow : public FT4GameDBRowBase
 	}
 	ET4GameDBType GetType() const override { return ET4GameDBType::Player; } // #48
 
-	float GetMaxMoveSpeed(FName InPostureName) const // #140
+	float GetMaxMoveSpeed(FName InStanceName) const // #140
 	{
-		if (InPostureName == T4Const_CombatPostureName)
+		if (InStanceName == T4Const_CombatStanceName)
 		{
 			return RawData.MoveSpeedData.CombatSpeed;
 		}
-		else if (InPostureName == T4Const_SprintPostureName)
+		else if (InStanceName == T4Const_SprintStanceName)
 		{
 			return RawData.MoveSpeedData.SprintSpeed; // #109
 		}
-		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.PostureName == NAME_None || AIMemory.PostureName == T4Const_DefaultPostureName
+		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.StanceName == NAME_None || AIMemory.StanceName == T4Const_DefaultStanceName
 	}
 
 #if WITH_EDITOR
@@ -183,17 +183,17 @@ struct T4GAMEDATA_API FT4NPCDBRow : public FT4GameDBRowBase
 	}
 	ET4GameDBType GetType() const override { return ET4GameDBType::NPC; } // #48
 
-	float GetMaxMoveSpeed(FName InPostureName) const // #140
+	float GetMaxMoveSpeed(FName InStanceName) const // #140
 	{
-		if (InPostureName == T4Const_CombatPostureName)
+		if (InStanceName == T4Const_CombatStanceName)
 		{
 			return RawData.MoveSpeedData.CombatSpeed;
 		}
-		else if (InPostureName == T4Const_SprintPostureName)
+		else if (InStanceName == T4Const_SprintStanceName)
 		{
 			return RawData.MoveSpeedData.SprintSpeed; // #109
 		}
-		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.PostureName == NAME_None || AIMemory.PostureName == T4Const_DefaultPostureName
+		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.StanceName == NAME_None || AIMemory.StanceName == T4Const_DefaultStanceName
 	}
 
 #if WITH_EDITOR

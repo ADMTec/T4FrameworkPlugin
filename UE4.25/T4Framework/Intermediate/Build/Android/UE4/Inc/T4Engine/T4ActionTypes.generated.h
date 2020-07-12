@@ -33,8 +33,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4ActionCommandType::Launch) \
 	op(ET4ActionCommandType::Aim) \
 	op(ET4ActionCommandType::LockOn) \
+	op(ET4ActionCommandType::AnimSet) \
 	op(ET4ActionCommandType::Stance) \
-	op(ET4ActionCommandType::Posture) \
 	op(ET4ActionCommandType::EquipWeapon) \
 	op(ET4ActionCommandType::UnequipWeapon) \
 	op(ET4ActionCommandType::Costume) \
@@ -44,7 +44,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4ActionCommandType::Die) \
 	op(ET4ActionCommandType::Resurrect) \
 	op(ET4ActionCommandType::ReactionStop) \
-	op(ET4ActionCommandType::ActionSet) \
+	op(ET4ActionCommandType::ActionPak) \
 	op(ET4ActionCommandType::Stop) \
 	op(ET4ActionCommandType::Editor) \
 	op(ET4ActionCommandType::None) 

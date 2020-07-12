@@ -13,8 +13,8 @@
 
 // ET4GamePacketCS::ReadyToPlay // #146 : 클라이언트 PC::BeginPlay 시 서버로 접속 완료 통보!
 
-// ET4GamePacketCS::Stance // #73
-// ET4GamePacketCS::Posture // #106
+// ET4GamePacketCS::AnimSet // #73
+// ET4GamePacketCS::Stance // #106
 // ET4GamePacketCS::EquipItem
 // ET4GamePacketCS::UnequipItem
 // ET4GamePacketCS::ExchangeItem
@@ -37,7 +37,42 @@ public:
 };
 
 USTRUCT()
-struct FT4GamePacketCS_Stance : public FT4GamePacketCS_Base // #73
+struct FT4GamePacketCS_AnimSet : public FT4GamePacketCS_Base // #73
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID SenderID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FName AnimSetName;
+
+public:
+	FT4GamePacketCS_AnimSet()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::AnimSet)
+		, AnimSetName(NAME_None)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!SenderID.IsValid())
+		{
+			OutMsg = TEXT("Invalid Send ObjectID!");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("CS_Packet:AnimSet"));
+	}
+};
+
+USTRUCT()
+struct FT4GamePacketCS_Stance : public FT4GamePacketCS_Base // #106
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -68,41 +103,6 @@ public:
 	FString ToString() const override
 	{
 		return FString(TEXT("CS_Packet:Stance"));
-	}
-};
-
-USTRUCT()
-struct FT4GamePacketCS_Posture : public FT4GamePacketCS_Base // #106
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID SenderID;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName PostureName;
-
-public:
-	FT4GamePacketCS_Posture()
-		: FT4GamePacketCS_Base(ET4GamePacketCS::Posture)
-		, PostureName(NAME_None)
-	{
-	}
-
-	bool Validate(FString& OutMsg) override
-	{
-		if (!SenderID.IsValid())
-		{
-			OutMsg = TEXT("Invalid Send ObjectID!");
-			return false;
-		}
-		return true;
-	}
-
-	FString ToString() const override
-	{
-		return FString(TEXT("CS_Packet:Posture"));
 	}
 };
 

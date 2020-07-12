@@ -7,29 +7,29 @@
 /**
   *
  */
-class UT4AnimSetAsset;
-class T4EDITORCOMMON_API FT4EditorAnimSetAssetSelector
-	: public TSharedFromThis<FT4EditorAnimSetAssetSelector>
+class UT4AnimsetAsset;
+class T4EDITORCOMMON_API FT4EditorAnimsetAssetSelector
+	: public TSharedFromThis<FT4EditorAnimsetAssetSelector>
 {
 public:
-	FT4EditorAnimSetAssetSelector();
-	~FT4EditorAnimSetAssetSelector();
+	FT4EditorAnimsetAssetSelector();
+	~FT4EditorAnimsetAssetSelector();
 
 	void Reset();
 
-	bool HasAnimSetAsset() const { return (nullptr == AnimSetAsset) ? true : false; }
+	bool HasAnimsetAsset() const { return (nullptr == AnimsetAsset) ? true : false; }
 
-	void SetAnimSetAsset(UT4AnimSetAsset* InAnimSetAsset, bool bForceUpdate);
-	UT4AnimSetAsset* GetAnimSetAsset() const { return AnimSetAsset; }
+	void SetAnimsetAsset(UT4AnimsetAsset* InAnimsetAsset, bool bForceUpdate);
+	UT4AnimsetAsset* GetAnimsetAsset() const { return AnimsetAsset; }
 
-	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnAnimSetChanged, UT4AnimSetAsset*, bool);
+	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnAnimsetChanged, UT4AnimsetAsset*, bool);
 
-	FT4OnAnimSetChanged& GetOnAnimSetChanged()
+	FT4OnAnimsetChanged& GetOnAnimsetChanged()
 	{
-		return OnAnimSetChanged;
+		return OnAnimsetChanged;
 	}
 
 private:
-	UT4AnimSetAsset* AnimSetAsset;
-	FT4OnAnimSetChanged OnAnimSetChanged;
+	UT4AnimsetAsset* AnimsetAsset;
+	FT4OnAnimsetChanged OnAnimsetChanged;
 };

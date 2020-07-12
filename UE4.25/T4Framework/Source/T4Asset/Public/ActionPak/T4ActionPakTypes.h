@@ -4,13 +4,13 @@
 
 #include "T4AssetMinimal.h"
 #include "T4AssetCommonTypes.h"
-#include "T4ActionSetTypes.generated.h"
+#include "T4ActionPakTypes.generated.h"
 
 /**
   * http://api.unrealengine.com/KOR/Programming/UnrealArchitecture/Reference/Properties/
  */
 
-static const float T4Const_ActionSetMaxPlayTimeSec = 10.0f; // #56
+static const float T4Const_ActionPakMaxPlayTimeSec = 10.0f; // #56
 static const float T4Const_EmptyYawAngle = TNumericLimits<float>::Max(); // #113
 
 // WARN : Action 추가 시는 아래 테그를 찾아 추가된 액션을 구현해주어야 함!!

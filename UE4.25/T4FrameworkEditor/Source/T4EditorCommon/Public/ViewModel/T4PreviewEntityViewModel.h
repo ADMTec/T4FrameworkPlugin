@@ -18,7 +18,7 @@ static const float T4Editor_PreviewFreezeLeftTimeSec = 5.0f;
  */
 
 class UT4EntityAsset;
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 struct T4EDITORCOMMON_API FT4PreviewEntityViewModelOptions
 {
 	FT4PreviewEntityViewModelOptions();
@@ -61,11 +61,11 @@ public:
 		UObject* InEntityAsset, 
 		FName InGameDBKey,
 		FName InSkinName, 
+		FName InAnimSetName, // #142
 		FName InStanceName, // #142
-		FName InPostureName, // #142
 		float InKeepUpdateTimeSec
 	);
-	void OnSpawnFromAction(UT4ActionSetAsset* InActionSetAsset, float InDurationSec, float InDelayTimeSec);
+	void OnSpawnFromAction(UT4ActionPakAsset* InActionPakAsset, float InDurationSec, float InDelayTimeSec);
 	void OnSpawnFromGameData(ET4EditorDataType InGameDBType, FName InRowName); // #120
 
 	void HandleOnEntityPropertiesChanged();

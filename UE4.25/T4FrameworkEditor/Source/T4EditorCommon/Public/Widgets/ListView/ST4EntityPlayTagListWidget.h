@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Asset/Public/ActionSet/T4ActionSetTypes.h" // #81
+#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h" // #81
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "ST4ListViewWidget.h"
 

@@ -44,7 +44,7 @@ public:
 		, EquipPointName(NAME_None) // #106
 		, RelativeRotation(FRotator::ZeroRotator) // #108
 		, RelativeScale(1.0f)
-		, StanceName(NAME_None) // #106
+		, AnimSetName(NAME_None) // #106
 		, bOverlapEvent(false) // #106
 	{
 	}
@@ -77,7 +77,7 @@ public:
 	float RelativeScale; // #108
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName StanceName; // #106
+	FName AnimSetName; // #106
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bOverlapEvent; // #106

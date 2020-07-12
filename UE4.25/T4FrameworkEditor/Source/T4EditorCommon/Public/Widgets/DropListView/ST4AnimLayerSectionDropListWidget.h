@@ -3,16 +3,16 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Asset/Classes/AnimSet/T4AnimSetAsset.h"
+#include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
 #include "T4Engine/Public/T4EngineConstants.h" // #39
 #include "ST4DropListViewWidget.h"
 
 /**
   * #39 
  */
-class UT4AnimSetAsset;
+class UT4AnimsetAsset;
 class FT4EditorViewTargetSelector;
-class FT4EditorAnimSetAssetSelector;
+class FT4EditorAnimsetAssetSelector;
 class T4EDITORCOMMON_API ST4AnimLayerSectionDropListWidget : public ST4DropListViewWidget
 {
 public:
@@ -38,19 +38,19 @@ public:
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimSequenceData>* InSelectArray,
-		ET4AnimSetTemplate InAnimSetTemplate
+		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
+		ET4AnimsetTemplate InAnimsetTemplate
 	); // #131
 
 	void Construct(
 		const FArguments& InArgs,
-		const TArray<FT4AnimSetAnimSequenceData>* InSelectArray,
+		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
 		ET4EngineConstantTable InEngineConstantType
 	);
 
 	void Construct(
 		const FArguments& InArgs,
-		TSharedRef<FT4EditorAnimSetAssetSelector> InAnimSetAssetSelector
+		TSharedRef<FT4EditorAnimsetAssetSelector> InAnimsetAssetSelector
 	);
 
 	ST4AnimLayerSectionDropListWidget();
@@ -61,9 +61,9 @@ public:
 protected:
 	void UpdateItemLists() override;
 
-	void GetConstantTableSelected(ET4AnimSetTemplate InAnimSetTemplate); // #131
+	void GetConstantTableSelected(ET4AnimsetTemplate InAnimsetTemplate); // #131
 
-	void HandleOnAnimSetChanged(UT4AnimSetAsset* InAnimSetAsset, bool bFullRefresh);
+	void HandleOnAnimsetChanged(UT4AnimsetAsset* InAnimsetAsset, bool bFullRefresh);
 
 private:
 	bool bNoAddExistItem; // #130 : 이미 포함된 Item 은 리스트에서 제외한다.
@@ -73,8 +73,8 @@ private:
 
 	ET4EngineConstantTable EngineConstantType;
 	TWeakPtr<FT4EditorViewTargetSelector> ViewTargetSelector;
-	const TArray<FT4AnimSetAnimSequenceData>* AnimSequenceArrayRef; // #107
+	const TArray<FT4AnimsetAnimSequenceData>* AnimSequenceArrayRef; // #107
 
-	TWeakPtr<FT4EditorAnimSetAssetSelector> AnimSetAssetSelector;
+	TWeakPtr<FT4EditorAnimsetAssetSelector> AnimsetAssetSelector;
 	FDelegateHandle AnimSetSelectDelegate;
 };

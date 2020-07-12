@@ -11,8 +11,8 @@
  */
  // #T4_ADD_PACKET_TAG_SC
 
-// ET4GamePacketSC::Stance // #73
-// ET4GamePacketSC::Posture // #106
+// ET4GamePacketSC::AnimSet // #73
+// ET4GamePacketSC::Stance // #106
 // ET4GamePacketSC::EquipItem
 // ET4GamePacketSC::UnequipItem
 // ET4GamePacketSC::ExchangeItem
@@ -20,7 +20,7 @@
 // ET4GamePacketSC::Resurrect // #76
 
 USTRUCT()
-struct FT4GamePacketSC_Stance : public FT4GamePacketSC_Base // #73
+struct FT4GamePacketSC_AnimSet : public FT4GamePacketSC_Base // #73
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -29,12 +29,12 @@ public:
 	FT4ObjectID ObjectID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName StanceName; // TODO : Stance Table?
+	FName AnimSetName;
 
 public:
-	FT4GamePacketSC_Stance()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::Stance)
-		, StanceName(NAME_None)
+	FT4GamePacketSC_AnimSet()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::AnimSet)
+		, AnimSetName(NAME_None)
 	{
 	}
 
@@ -50,12 +50,12 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("SC_Packet:Stance"));
+		return FString(TEXT("SC_Packet:AnimSet"));
 	}
 };
 
 USTRUCT()
-struct FT4GamePacketSC_Posture : public FT4GamePacketSC_Base // #106
+struct FT4GamePacketSC_Stance : public FT4GamePacketSC_Base // #106
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -64,15 +64,15 @@ public:
 	FT4ObjectID ObjectID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName PostureName;
+	FName StanceName;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	float MoveSpeed; // #140
 
 public:
-	FT4GamePacketSC_Posture()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::Posture)
-		, PostureName(NAME_None)
+	FT4GamePacketSC_Stance()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::Stance)
+		, StanceName(NAME_None)
 		, MoveSpeed(0.0f) // #140
 	{
 	}
@@ -89,7 +89,7 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("SC_Packet:Posture"));
+		return FString(TEXT("SC_Packet:Stance"));
 	}
 };
 

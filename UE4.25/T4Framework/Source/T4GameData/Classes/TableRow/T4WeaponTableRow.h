@@ -48,10 +48,10 @@ public:
 	float MaxAttackRange; // #50
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4SkillSetDBKey DefaultSkillSetDBKey; // #50, #106 : Key = Posture
+	FT4SkillSetDBKey DefaultSkillSetDBKey; // #50, #106 : Key = Stance
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4SkillSetDBKey CombatSkillSetDBKey; // #50, #106 : Key = Posture
+	FT4SkillSetDBKey CombatSkillSetDBKey; // #50, #106 : Key = Stance
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat

@@ -12,7 +12,7 @@
 class ULevel; // #91
 class UWorld;
 class UT4EntityAsset;
-class UT4ActionSetAsset;
+class UT4ActionPakAsset;
 class UAnimSequence;
 struct FT4ActionParameters;
 

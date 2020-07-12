@@ -152,10 +152,10 @@ public:
 	TArray<FT4LockOnActionCommand> LockOnActions;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4StanceActionCommand> StanceActions; // #73
+	TArray<FT4AnimSetActionCommand> AnimSetActions; // #73
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4PostureActionCommand> PostureActions; // #106
+	TArray<FT4StanceActionCommand> StanceActions; // #106
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FT4EquipWeaponActionCommand> EquipWeaponActions;
@@ -185,7 +185,7 @@ public:
 	// T4ActionCommandCommons.h
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4ActionSetActionCommand> SetActions;
+	TArray<FT4ActionPakActionCommand> PakActions;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FT4StopActionCommand> StopActions;

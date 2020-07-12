@@ -64,7 +64,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4HumanBasicAnimInstance); \
 	FORCEINLINE static uint32 __PPO__StateVariables() { return STRUCT_OFFSET(UT4HumanBasicAnimInstance, StateVariables); } \
 	FORCEINLINE static uint32 __PPO__MovementVariables() { return STRUCT_OFFSET(UT4HumanBasicAnimInstance, MovementVariables); } \
 	FORCEINLINE static uint32 __PPO__IKVariables() { return STRUCT_OFFSET(UT4HumanBasicAnimInstance, IKVariables); } \
-	FORCEINLINE static uint32 __PPO__PostureVariables() { return STRUCT_OFFSET(UT4HumanBasicAnimInstance, PostureVariables); }
+	FORCEINLINE static uint32 __PPO__StanceVariables() { return STRUCT_OFFSET(UT4HumanBasicAnimInstance, StanceVariables); }
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_Human_Basic_T4HumanBasicAnimInstance_h_13_PROLOG

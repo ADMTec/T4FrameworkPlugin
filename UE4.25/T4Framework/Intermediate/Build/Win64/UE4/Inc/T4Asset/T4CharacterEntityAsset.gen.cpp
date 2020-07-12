@@ -24,9 +24,8 @@ void EmptyLinkFunctionForGeneratedCodeT4CharacterEntityAsset() {}
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityReactionType();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPlayAnimationData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsBlendData();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterStanceData();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4AnimSetAsset_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4AnimsetAsset_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterCompositeMeshData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterCompositePartMeshData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterModularType();
@@ -876,117 +875,29 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsBlendData_Hash() { return 4210472142U; }
-class UScriptStruct* FT4EntityCharacterStanceSetData::StaticStruct()
+class UScriptStruct* FT4EntityCharacterAnimSetData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityCharacterStanceSetData"), sizeof(FT4EntityCharacterStanceSetData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Hash());
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityCharacterAnimSetData"), sizeof(FT4EntityCharacterAnimSetData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Hash());
 	}
 	return Singleton;
 }
-template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityCharacterStanceSetData>()
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityCharacterAnimSetData>()
 {
-	return FT4EntityCharacterStanceSetData::StaticStruct();
+	return FT4EntityCharacterAnimSetData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityCharacterStanceSetData(FT4EntityCharacterStanceSetData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityCharacterStanceSetData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceSetData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityCharacterAnimSetData(FT4EntityCharacterAnimSetData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityCharacterAnimSetData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterAnimSetData
 {
-	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceSetData()
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterAnimSetData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityCharacterStanceSetData")),new UScriptStruct::TCppStructOps<FT4EntityCharacterStanceSetData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityCharacterAnimSetData")),new UScriptStruct::TCppStructOps<FT4EntityCharacterAnimSetData>);
 	}
-} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceSetData;
-	struct Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceDatas_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_StanceDatas;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StanceDatas_Inner;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #73\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
-		{ "ToolTip", "#73" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityCharacterStanceSetData>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas_MetaData[] = {
-		{ "Category", "Asset" },
-		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas = { "StanceDatas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterStanceSetData, StanceDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas_Inner = { "StanceDatas", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4EntityCharacterStanceData, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::NewProp_StanceDatas_Inner,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
-		nullptr,
-		&NewStructOps,
-		"T4EntityCharacterStanceSetData",
-		sizeof(FT4EntityCharacterStanceSetData),
-		alignof(FT4EntityCharacterStanceSetData),
-		Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityCharacterStanceSetData"), sizeof(FT4EntityCharacterStanceSetData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData_Hash() { return 2845510398U; }
-class UScriptStruct* FT4EntityCharacterStanceData::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityCharacterStanceData"), sizeof(FT4EntityCharacterStanceData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Hash());
-	}
-	return Singleton;
-}
-template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityCharacterStanceData>()
-{
-	return FT4EntityCharacterStanceData::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityCharacterStanceData(FT4EntityCharacterStanceData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityCharacterStanceData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceData
-{
-	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceData()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityCharacterStanceData")),new UScriptStruct::TCppStructOps<FT4EntityCharacterStanceData>);
-	}
-} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanceData;
-	struct Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterAnimSetData;
+	struct Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -997,84 +908,84 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterStanc
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ActivePlayTag;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimsetAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_AnimSetAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_AnimsetAsset;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #73\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 		{ "ToolTip", "#73" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityCharacterStanceData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityCharacterAnimSetData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_ActivePlayTag_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_ActivePlayTag_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #39\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 		{ "ToolTip", "#39" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_ActivePlayTag = { "ActivePlayTag", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterStanceData, ActivePlayTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_ActivePlayTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_ActivePlayTag_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_ActivePlayTag = { "ActivePlayTag", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterAnimSetData, ActivePlayTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_ActivePlayTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_ActivePlayTag_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_AnimSetAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimsetAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_AnimSetAsset = { "AnimSetAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterStanceData, AnimSetAsset), Z_Construct_UClass_UT4AnimSetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_AnimSetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_AnimSetAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimsetAsset = { "AnimsetAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterAnimSetData, AnimsetAsset), Z_Construct_UClass_UT4AnimsetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimsetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimsetAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_StanceName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimSetName_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterStanceData, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_StanceName_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_ActivePlayTag,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_AnimSetAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::NewProp_StanceName,
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterAnimSetData, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimSetName_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_ActivePlayTag,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimsetAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::NewProp_AnimSetName,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 		nullptr,
 		&NewStructOps,
-		"T4EntityCharacterStanceData",
-		sizeof(FT4EntityCharacterStanceData),
-		alignof(FT4EntityCharacterStanceData),
-		Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::PropPointers),
+		"T4EntityCharacterAnimSetData",
+		sizeof(FT4EntityCharacterAnimSetData),
+		alignof(FT4EntityCharacterAnimSetData),
+		Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterStanceData()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityCharacterStanceData"), sizeof(FT4EntityCharacterStanceData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityCharacterAnimSetData"), sizeof(FT4EntityCharacterAnimSetData), Get_Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterStanceData_Hash() { return 353903765U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData_Hash() { return 1878843855U; }
 class UScriptStruct* FT4EntityCharacterCompositeMeshData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1864,9 +1775,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReactionSetData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceSetData_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetDatas_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StanceSetData;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AnimSetDatas;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AnimSetDatas_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CopmpositeMeshData_MetaData[];
 #endif
@@ -1930,21 +1842,22 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData_MetaData[] = {
 		{ "Category", "Reaction" },
-		{ "Comment", "// #73\n" },
+		{ "Comment", "// #39, #73, #124;\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
-		{ "ToolTip", "#73" },
+		{ "ToolTip", "#39, #73, #124;" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData = { "ReactionSetData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, ReactionSetData), Z_Construct_UScriptStruct_FT4EntityCharacterReactionSetData, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_StanceSetData_MetaData[] = {
-		{ "Category", "Stance" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas_MetaData[] = {
+		{ "Category", "AnimSet" },
 		{ "Comment", "// #37\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 		{ "ToolTip", "#37" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_StanceSetData = { "StanceSetData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, StanceSetData), Z_Construct_UScriptStruct_FT4EntityCharacterStanceSetData, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_StanceSetData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_StanceSetData_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas = { "AnimSetDatas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, AnimSetDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas_Inner = { "AnimSetDatas", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4EntityCharacterAnimSetData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_CopmpositeMeshData_MetaData[] = {
 		{ "Category", "CompositeMesh" },
@@ -1988,7 +1901,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Rendering,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Physical,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_StanceSetData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimSetDatas_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_CopmpositeMeshData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_FullBodyMeshData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType,
@@ -2023,7 +1937,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 1552971260);
+	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 599649189);
 	template<> T4ASSET_API UClass* StaticClass<UT4CharacterEntityAsset>()
 	{
 		return UT4CharacterEntityAsset::StaticClass();

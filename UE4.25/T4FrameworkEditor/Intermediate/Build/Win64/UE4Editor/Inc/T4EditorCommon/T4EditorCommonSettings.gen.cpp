@@ -48,13 +48,13 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorCommonSettings() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReactionConstantTable;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureConstantTable_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PostureConstantTable;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceConstantTable_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StanceConstantTable;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetConstantTable_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AnimSetConstantTable;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagActionConstantTable_MetaData[];
 #endif
@@ -167,23 +167,23 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorCommonSettings() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_ReactionConstantTable = { "ReactionConstantTable", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorCommonSettings, ReactionConstantTable), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_ReactionConstantTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_ReactionConstantTable_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PostureConstantTable_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #73\n" },
 		{ "ModuleRelativePath", "Private/T4EditorCommonSettings.h" },
 		{ "ToolTip", "#73" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PostureConstantTable = { "PostureConstantTable", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorCommonSettings, PostureConstantTable), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PostureConstantTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PostureConstantTable_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable = { "StanceConstantTable", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorCommonSettings, StanceConstantTable), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_AnimSetConstantTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #74\n" },
 		{ "ModuleRelativePath", "Private/T4EditorCommonSettings.h" },
 		{ "ToolTip", "#74" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable = { "StanceConstantTable", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorCommonSettings, StanceConstantTable), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_AnimSetConstantTable = { "AnimSetConstantTable", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorCommonSettings, AnimSetConstantTable), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_AnimSetConstantTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_AnimSetConstantTable_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PlayTagActionConstantTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
@@ -327,8 +327,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorCommonSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_bDefaultActionReplayPlayerPossessed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_bDefaultActionReplayRepeat,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_ReactionConstantTable,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PostureConstantTable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_StanceConstantTable,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_AnimSetConstantTable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PlayTagActionConstantTable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PlayTagAttachmentConstantTable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorCommonSettings_Statics::NewProp_PlayTagMaterialConstantTable,
@@ -372,7 +372,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorCommonSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorCommonSettings, 4250503159);
+	IMPLEMENT_CLASS(UT4EditorCommonSettings, 2972304230);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorCommonSettings>()
 	{
 		return UT4EditorCommonSettings::StaticClass();

@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimInstanceBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBlendSpaceBase_NoRegister();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4AnimSetAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4AnimsetAsset_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UT4AnimInstanceBase::execHandleOnAnimMontageEnded)
 	{
@@ -117,9 +117,9 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimInstanceBase() {}
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimMontages_Key_KeyProp;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimMontages_ValueProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimsetAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimSetAsset;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimsetAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -183,11 +183,11 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimInstanceBase() {}
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimMontages_Key_KeyProp = { "AnimMontages_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimMontages_ValueProp = { "AnimMontages", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimSetAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimsetAsset_MetaData[] = {
 		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimInstanceBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimSetAsset = { "AnimSetAsset", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimInstanceBase, AnimSetAsset), Z_Construct_UClass_UT4AnimSetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimSetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimSetAsset_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimsetAsset = { "AnimsetAsset", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimInstanceBase, AnimsetAsset), Z_Construct_UClass_UT4AnimsetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimsetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimsetAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4AnimInstanceBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_StateParameters,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_StateParameters_Key_KeyProp,
@@ -201,7 +201,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimInstanceBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimMontages,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimMontages_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimMontages_ValueProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimSetAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimInstanceBase_Statics::NewProp_AnimsetAsset,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4AnimInstanceBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4AnimInstanceBase>::IsAbstract,
@@ -230,7 +230,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimInstanceBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimInstanceBase, 645134482);
+	IMPLEMENT_CLASS(UT4AnimInstanceBase, 184910388);
 	template<> T4ENGINE_API UClass* StaticClass<UT4AnimInstanceBase>()
 	{
 		return UT4AnimInstanceBase::StaticClass();

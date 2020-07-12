@@ -90,8 +90,8 @@ public:
 	FT4EditorTestItemData()
 #if WITH_EDITOR
 		: ItemSpawnType(ET4EntityEditorViewportItemSpawn::DropMesh)
+		, ParentAnimSetName(NAME_None)
 		, ParentStanceName(NAME_None)
-		, ParentPostureName(NAME_None)
 #endif
 	{
 	}
@@ -104,10 +104,10 @@ public:
 	TSoftObjectPtr<UT4EntityAsset> ParentEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName ParentStanceName;
+	FName ParentAnimSetName;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName ParentPostureName;
+	FName ParentStanceName;
 #endif
 };
 

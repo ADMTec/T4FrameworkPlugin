@@ -37,8 +37,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GamePacketSC::MoveSpeedSync) \
 	op(ET4GamePacketSC::LockOn) \
 	op(ET4GamePacketSC::LockOff) \
+	op(ET4GamePacketSC::AnimSet) \
 	op(ET4GamePacketSC::Stance) \
-	op(ET4GamePacketSC::Posture) \
 	op(ET4GamePacketSC::EquipItem) \
 	op(ET4GamePacketSC::UnequipItem) \
 	op(ET4GamePacketSC::ExchangeItem) \
@@ -64,8 +64,8 @@ template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GamePacketSC>();
 	op(ET4GamePacketCS::Rotation) \
 	op(ET4GamePacketCS::LockOn) \
 	op(ET4GamePacketCS::LockOff) \
+	op(ET4GamePacketCS::AnimSet) \
 	op(ET4GamePacketCS::Stance) \
-	op(ET4GamePacketCS::Posture) \
 	op(ET4GamePacketCS::EquipItem) \
 	op(ET4GamePacketCS::UnequipItem) \
 	op(ET4GamePacketCS::ExchangeItem) \

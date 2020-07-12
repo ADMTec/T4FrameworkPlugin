@@ -951,9 +951,9 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationParamI
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_SectionName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -982,16 +982,16 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationParamI
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_SectionName = { "SectionName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationParamInfo, SectionName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_SectionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_SectionName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_PostureName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_StanceName_MetaData[] = {
 		{ "Category", "T4AnimationParamInfo" },
 		{ "ModuleRelativePath", "Private/Commandlets/MigrationProcessor/Generator/T4ParagonHeroMetadata.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_PostureName = { "PostureName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationParamInfo, PostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_PostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_PostureName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationParamInfo, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_StanceName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_Value,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_SectionName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_PostureName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::NewProp_StanceName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimationParamInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Commandlet,
@@ -1021,7 +1021,7 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationParamI
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimationParamInfo_Hash() { return 2669509637U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimationParamInfo_Hash() { return 3880263056U; }
 class UScriptStruct* FT4AnimationAssetInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1064,9 +1064,9 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_SectionName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -1108,17 +1108,17 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_SectionName = { "SectionName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationAssetInfo, SectionName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_SectionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_SectionName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_PostureName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_StanceName_MetaData[] = {
 		{ "Category", "T4AnimationAssetInfo" },
 		{ "ModuleRelativePath", "Private/Commandlets/MigrationProcessor/Generator/T4ParagonHeroMetadata.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_PostureName = { "PostureName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationAssetInfo, PostureName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_PostureName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_PostureName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_StanceName = { "StanceName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimationAssetInfo, StanceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_StanceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_StanceName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_bPlayEndLoop,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_AssetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_SectionName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_PostureName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::NewProp_StanceName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Commandlet,
@@ -1148,7 +1148,7 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Hash() { return 4059215501U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimationAssetInfo_Hash() { return 442850695U; }
 	DEFINE_FUNCTION(UT4HeroObject::execAddMovementAction)
 	{
 		P_GET_PROPERTY(FNameProperty,Z_Param_InSectionName);
@@ -1246,12 +1246,12 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		P_THIS->AddStateLayerAnimSequence(Z_Param_InSectionName,Z_Param_InAssetName);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UT4HeroObject::execSetPostureName)
+	DEFINE_FUNCTION(UT4HeroObject::execSetStanceName)
 	{
-		P_GET_PROPERTY(FNameProperty,Z_Param_InPostureName);
+		P_GET_PROPERTY(FNameProperty,Z_Param_InStanceName);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SetPostureName(Z_Param_InPostureName);
+		P_THIS->SetStanceName(Z_Param_InStanceName);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UT4HeroObject::execRegister)
@@ -1276,7 +1276,7 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 			{ "AddStateLayerBlendSpace", &UT4HeroObject::execAddStateLayerBlendSpace },
 			{ "AddSystemLayerAnimSequence", &UT4HeroObject::execAddSystemLayerAnimSequence },
 			{ "Register", &UT4HeroObject::execRegister },
-			{ "SetPostureName", &UT4HeroObject::execSetPostureName },
+			{ "SetStanceName", &UT4HeroObject::execSetStanceName },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -1723,35 +1723,35 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics
+	struct Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics
 	{
-		struct T4HeroObject_eventSetPostureName_Parms
+		struct T4HeroObject_eventSetStanceName_Parms
 		{
-			FName InPostureName;
+			FName InStanceName;
 		};
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InPostureName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InStanceName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::NewProp_InPostureName = { "InPostureName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4HeroObject_eventSetPostureName_Parms, InPostureName), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::NewProp_InPostureName,
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::NewProp_InStanceName = { "InStanceName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4HeroObject_eventSetStanceName_Parms, InStanceName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::NewProp_InStanceName,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/Commandlets/MigrationProcessor/Generator/T4ParagonHeroMetadata.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UT4HeroObject, nullptr, "SetPostureName", nullptr, nullptr, sizeof(T4HeroObject_eventSetPostureName_Parms), Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UT4HeroObject_SetPostureName()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UT4HeroObject, nullptr, "SetStanceName", nullptr, nullptr, sizeof(T4HeroObject_eventSetStanceName_Parms), Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UT4HeroObject_SetStanceName()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UT4HeroObject_SetPostureName_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UT4HeroObject_SetStanceName_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1816,15 +1816,15 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_GameDataInfo;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bHasSprintPosture_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bHasSprintStance_MetaData[];
 #endif
-		static void NewProp_bHasSprintPosture_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bHasSprintPosture;
+		static void NewProp_bHasSprintStance_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bHasSprintStance;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bHasNonCombatPosture_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bHasNonCombatStance_MetaData[];
 #endif
-		static void NewProp_bHasNonCombatPosture_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bHasNonCombatPosture;
+		static void NewProp_bHasNonCombatStance_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bHasNonCombatStance;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -1844,7 +1844,7 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		{ &Z_Construct_UFunction_UT4HeroObject_AddStateLayerBlendSpace, "AddStateLayerBlendSpace" }, // 3019066917
 		{ &Z_Construct_UFunction_UT4HeroObject_AddSystemLayerAnimSequence, "AddSystemLayerAnimSequence" }, // 3648542620
 		{ &Z_Construct_UFunction_UT4HeroObject_Register, "Register" }, // 3099595428
-		{ &Z_Construct_UFunction_UT4HeroObject_SetPostureName, "SetPostureName" }, // 1369911179
+		{ &Z_Construct_UFunction_UT4HeroObject_SetStanceName, "SetStanceName" }, // 3880073028
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HeroObject_Statics::Class_MetaDataParams[] = {
@@ -1935,27 +1935,27 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HeroObject_Statics::NewProp_GameDataInfo = { "GameDataInfo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HeroObject, GameDataInfo), Z_Construct_UScriptStruct_FT4GameDataInfo, METADATA_PARAMS(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_GameDataInfo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_GameDataInfo_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance_MetaData[] = {
 		{ "Category", "T4HeroObject" },
 		{ "ModuleRelativePath", "Private/Commandlets/MigrationProcessor/Generator/T4ParagonHeroMetadata.h" },
 	};
 #endif
-	void Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture_SetBit(void* Obj)
+	void Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance_SetBit(void* Obj)
 	{
-		((UT4HeroObject*)Obj)->bHasSprintPosture = 1;
+		((UT4HeroObject*)Obj)->bHasSprintStance = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture = { "bHasSprintPosture", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4HeroObject), &Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance = { "bHasSprintStance", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4HeroObject), &Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance_MetaData[] = {
 		{ "Category", "T4HeroObject" },
 		{ "ModuleRelativePath", "Private/Commandlets/MigrationProcessor/Generator/T4ParagonHeroMetadata.h" },
 	};
 #endif
-	void Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture_SetBit(void* Obj)
+	void Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance_SetBit(void* Obj)
 	{
-		((UT4HeroObject*)Obj)->bHasNonCombatPosture = 1;
+		((UT4HeroObject*)Obj)->bHasNonCombatStance = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture = { "bHasNonCombatPosture", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4HeroObject), &Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance = { "bHasNonCombatStance", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4HeroObject), &Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4HeroObject_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_MovementActionInfos,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_MovementActionInfos_Inner,
@@ -1976,8 +1976,8 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_StateLayerBlendSpaceInfos,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_StateLayerBlendSpaceInfos_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_GameDataInfo,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintPosture,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatPosture,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasSprintStance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4HeroObject_Statics::NewProp_bHasNonCombatStance,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4HeroObject_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4HeroObject>::IsAbstract,
@@ -2006,7 +2006,7 @@ static struct FScriptStruct_T4Commandlet_StaticRegisterNativesFT4AnimationAssetI
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4HeroObject, 1039632722);
+	IMPLEMENT_CLASS(UT4HeroObject, 3692218006);
 	template<> T4COMMANDLET_API UClass* StaticClass<UT4HeroObject>()
 	{
 		return UT4HeroObject::StaticClass();

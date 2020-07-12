@@ -16,7 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EffectTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectTableRow();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionSetAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectShapeData();
@@ -52,9 +52,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultActionSetAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultActionPakAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultActionSetAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultActionPakAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChainEffectDBKey_MetaData[];
 #endif
@@ -84,14 +84,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EffectTableRow>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionSetAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #68\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
 		{ "ToolTip", "#68" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionSetAsset = { "DefaultActionSetAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, DefaultActionSetAsset), Z_Construct_UClass_UT4ActionSetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionSetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionSetAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPakAsset = { "DefaultActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, DefaultActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_ChainEffectDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -127,7 +127,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionSetAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPakAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_ChainEffectDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData,
@@ -161,7 +161,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 814832335U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 3645560140U; }
 class UScriptStruct* FT4EffectShapeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

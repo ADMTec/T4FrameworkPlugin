@@ -5,14 +5,14 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Asset/Classes/ActionSet/T4ActionSetAsset.h"
+#include "T4Asset/Classes/ActionPak/T4ActionPakAsset.h"
 #include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-void EmptyLinkFunctionForGeneratedCodeT4ActionSetAsset() {}
+void EmptyLinkFunctionForGeneratedCodeT4ActionPakAsset() {}
 // Cross Module References
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionTestSettings();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
@@ -34,8 +34,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionSetAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionFolderInfo();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionHeaderInfo();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionSetAsset_NoRegister();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionSetAsset();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorTestAutomationData();
@@ -116,13 +116,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_WeaponNameID;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostureSelected_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PostureSelected;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceSelected_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceSelected;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSetSelected_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetSelected;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MapEntitySelected_MetaData[];
 #endif
@@ -134,7 +134,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -147,7 +147,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_DieReactionNameID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -156,7 +156,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_EffectDataNameID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -165,7 +165,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SkillDataNameID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #68\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#68" },
 	};
 #endif
@@ -174,7 +174,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideEffectData_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#63" },
 	};
 #endif
@@ -187,7 +187,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #76\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#76" },
 	};
 #endif
@@ -200,7 +200,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#63" },
 	};
 #endif
@@ -213,7 +213,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -226,7 +226,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bAISystemDisabled_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -239,7 +239,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SandbagNameID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
@@ -248,34 +248,34 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #106\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#106" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID = { "WeaponNameID", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionTestSettings, WeaponNameID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_PostureSelected_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "Comment", "// #73\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
-		{ "ToolTip", "#73" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_PostureSelected = { "PostureSelected", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionTestSettings, PostureSelected), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_PostureSelected_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_PostureSelected_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "Comment", "// #87\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
-		{ "ToolTip", "#87" },
+		{ "Comment", "// #73\n" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
+		{ "ToolTip", "#73" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected = { "StanceSelected", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionTestSettings, StanceSelected), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_AnimSetSelected_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "Comment", "// #87\n" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
+		{ "ToolTip", "#87" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_AnimSetSelected = { "AnimSetSelected", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionTestSettings, AnimSetSelected), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_AnimSetSelected_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_AnimSetSelected_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_MapEntitySelected_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #T4_ADD_EDITOR_PLAY_TAG\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#T4_ADD_EDITOR_PLAY_TAG" },
 	};
 #endif
@@ -291,8 +291,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bAISystemDisabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SandbagNameID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_PostureSelected,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_AnimSetSelected,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_MapEntitySelected,
 	};
 #endif // WITH_EDITORONLY_DATA
@@ -324,7 +324,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionTestSettings_Hash() { return 1474027693U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionTestSettings_Hash() { return 4051596339U; }
 class UScriptStruct* FT4ActionCompositeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -445,7 +445,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #54\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#54" },
 	};
 #endif
@@ -457,7 +457,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EnvironmentActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #100\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#100" },
 	};
 #endif
@@ -467,7 +467,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_PostProcessActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #101\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#101" },
 	};
 #endif
@@ -477,7 +477,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_CameraShakeActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #58\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#58" },
 	};
 #endif
@@ -487,7 +487,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_CameraWorkActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// ##102\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "##102" },
 	};
 #endif
@@ -497,7 +497,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TimeScaleActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #81\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#81" },
 	};
 #endif
@@ -507,7 +507,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_PlayTagActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #76\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#76" },
 	};
 #endif
@@ -517,7 +517,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ReactionActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#63" },
 	};
 #endif
@@ -527,7 +527,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ProjectileActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #54\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#54" },
 	};
 #endif
@@ -536,7 +536,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions = { "DecalActions", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, DecalActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData)) };
@@ -545,7 +545,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ParticleActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #108\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#108" },
 	};
 #endif
@@ -554,7 +554,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MeshActions_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MeshActions = { "MeshActions", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, MeshActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MeshActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MeshActions_MetaData)) };
@@ -563,7 +563,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_AnimationActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #132\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#132" },
 	};
 #endif
@@ -573,7 +573,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MovementActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #54\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#54" },
 	};
 #endif
@@ -583,7 +583,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_BranchActions_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #T4_ADD_ACTION_TAG_DATA\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#T4_ADD_ACTION_TAG_DATA" },
 	};
 #endif
@@ -593,7 +593,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_FolderInfoMap_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_FolderInfoMap = { "FolderInfoMap", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, FolderInfoMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_FolderInfoMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_FolderInfoMap_MetaData)) };
@@ -603,7 +603,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap = { "HeaderInfoMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, HeaderInfoMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap_MetaData)) };
@@ -675,7 +675,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 3869976974U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 1637229515U; }
 class UScriptStruct* FT4ActionFolderInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -720,7 +720,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionFolderInfo
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #56\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#56" },
 	};
 #endif
@@ -733,7 +733,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionFolderInfo
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::NewProp_SortOrder_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #56 : lower win\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#56 : lower win" },
 	};
 #endif
@@ -741,7 +741,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionFolderInfo
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::NewProp_ParentFolderName_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::NewProp_ParentFolderName = { "ParentFolderName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionFolderInfo, ParentFolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::NewProp_ParentFolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionFolderInfo_Statics::NewProp_ParentFolderName_MetaData)) };
@@ -778,7 +778,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionFolderInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionFolderInfo_Hash() { return 2736310926U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionFolderInfo_Hash() { return 1735397770U; }
 class UScriptStruct* FT4ActionHeaderInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -830,7 +830,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionHeaderInfo
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #24\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#24" },
 	};
 #endif
@@ -842,7 +842,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionHeaderInfo
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_FolderName_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_FolderName = { "FolderName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionHeaderInfo, FolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_FolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_FolderName_MetaData)) };
@@ -850,14 +850,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionHeaderInfo
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionArrayIndex_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionArrayIndex = { "ActionArrayIndex", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionHeaderInfo, ActionArrayIndex), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionArrayIndex_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionArrayIndex_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionDataType_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionDataType = { "ActionDataType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionHeaderInfo, ActionDataType), Z_Construct_UEnum_T4Asset_ET4ActionDataType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionDataType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Statics::NewProp_ActionDataType_MetaData)) };
@@ -898,15 +898,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionHeaderInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Hash() { return 665842976U; }
-	void UT4ActionSetAsset::StaticRegisterNativesUT4ActionSetAsset()
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionHeaderInfo_Hash() { return 538164632U; }
+	void UT4ActionPakAsset::StaticRegisterNativesUT4ActionPakAsset()
 	{
 	}
-	UClass* Z_Construct_UClass_UT4ActionSetAsset_NoRegister()
+	UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister()
 	{
-		return UT4ActionSetAsset::StaticClass();
+		return UT4ActionPakAsset::StaticClass();
 	}
-	struct Z_Construct_UClass_UT4ActionSetAsset_Statics
+	struct Z_Construct_UClass_UT4ActionPakAsset_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
@@ -944,110 +944,110 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionHeaderInfo
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
-	UObject* (*const Z_Construct_UClass_UT4ActionSetAsset_Statics::DependentSingletons[])() = {
+	UObject* (*const Z_Construct_UClass_UT4ActionPakAsset_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UObject,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::Class_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::Class_MetaDataParams[] = {
 		{ "Category", "T4Framework" },
 		{ "ClassGroupNames", "T4Framework" },
-		{ "IncludePath", "ActionSet/T4ActionSetAsset.h" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "IncludePath", "ActionPak/T4ActionPakAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
 		{ "Comment", "// #100\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#100" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestAutomation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestAutomation_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 		{ "ToolTip", "#60" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestAutomation = { "TestAutomation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, TestAutomation), Z_Construct_UScriptStruct_FT4EditorTestAutomationData, METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestAutomation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestAutomation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestAutomation = { "TestAutomation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, TestAutomation), Z_Construct_UScriptStruct_FT4EditorTestAutomationData, METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestAutomation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestAutomation_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestSettings_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestSettings_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestSettings = { "TestSettings", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, TestSettings), Z_Construct_UScriptStruct_FT4ActionTestSettings, METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestSettings_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestSettings = { "TestSettings", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, TestSettings), Z_Construct_UScriptStruct_FT4ActionTestSettings, METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestSettings_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_PreviewEntityAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_PreviewEntityAsset_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_PreviewEntityAsset = { "PreviewEntityAsset", nullptr, (EPropertyFlags)0x0014010800000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, PreviewEntityAsset), Z_Construct_UClass_UT4EntityAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_PreviewEntityAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_PreviewEntityAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_PreviewEntityAsset = { "PreviewEntityAsset", nullptr, (EPropertyFlags)0x0014010800000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, PreviewEntityAsset), Z_Construct_UClass_UT4EntityAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_PreviewEntityAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_PreviewEntityAsset_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TotalPlayTimeSec_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TotalPlayTimeSec_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TotalPlayTimeSec = { "TotalPlayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, TotalPlayTimeSec), METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TotalPlayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TotalPlayTimeSec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TotalPlayTimeSec = { "TotalPlayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, TotalPlayTimeSec), METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TotalPlayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TotalPlayTimeSec_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_CompositeData_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_CompositeData_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/ActionSet/T4ActionSetAsset.h" },
+		{ "ModuleRelativePath", "Classes/ActionPak/T4ActionPakAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_CompositeData = { "CompositeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionSetAsset, CompositeData), Z_Construct_UScriptStruct_FT4ActionCompositeData, METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_CompositeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_CompositeData_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4ActionSetAsset_Statics::PropPointers[] = {
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_CompositeData = { "CompositeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionPakAsset, CompositeData), Z_Construct_UScriptStruct_FT4ActionCompositeData, METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_CompositeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_CompositeData_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4ActionPakAsset_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_ThumbnailImage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestAutomation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TestSettings,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_PreviewEntityAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_ThumbnailImage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestAutomation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TestSettings,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_PreviewEntityAsset,
 #endif // WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_TotalPlayTimeSec,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionSetAsset_Statics::NewProp_CompositeData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_TotalPlayTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionPakAsset_Statics::NewProp_CompositeData,
 	};
-	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ActionSetAsset_Statics::StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<UT4ActionSetAsset>::IsAbstract,
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ActionPakAsset_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UT4ActionPakAsset>::IsAbstract,
 	};
-	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4ActionSetAsset_Statics::ClassParams = {
-		&UT4ActionSetAsset::StaticClass,
+	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4ActionPakAsset_Statics::ClassParams = {
+		&UT4ActionPakAsset::StaticClass,
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_UT4ActionSetAsset_Statics::PropPointers,
+		Z_Construct_UClass_UT4ActionPakAsset_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::PropPointers),
 		0,
 		0x001000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UT4ActionSetAsset_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionSetAsset_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UT4ActionPakAsset_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionPakAsset_Statics::Class_MetaDataParams))
 	};
-	UClass* Z_Construct_UClass_UT4ActionSetAsset()
+	UClass* Z_Construct_UClass_UT4ActionPakAsset()
 	{
 		static UClass* OuterClass = nullptr;
 		if (!OuterClass)
 		{
-			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4ActionSetAsset_Statics::ClassParams);
+			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4ActionPakAsset_Statics::ClassParams);
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ActionSetAsset, 2024438001);
-	template<> T4ASSET_API UClass* StaticClass<UT4ActionSetAsset>()
+	IMPLEMENT_CLASS(UT4ActionPakAsset, 419905183);
+	template<> T4ASSET_API UClass* StaticClass<UT4ActionPakAsset>()
 	{
-		return UT4ActionSetAsset::StaticClass();
+		return UT4ActionPakAsset::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4ActionSetAsset(Z_Construct_UClass_UT4ActionSetAsset, &UT4ActionSetAsset::StaticClass, TEXT("/Script/T4Asset"), TEXT("UT4ActionSetAsset"), false, nullptr, nullptr, nullptr);
-	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4ActionSetAsset);
-	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UT4ActionSetAsset)
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4ActionPakAsset(Z_Construct_UClass_UT4ActionPakAsset, &UT4ActionPakAsset::StaticClass, TEXT("/Script/T4Asset"), TEXT("UT4ActionPakAsset"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4ActionPakAsset);
+	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UT4ActionPakAsset)
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

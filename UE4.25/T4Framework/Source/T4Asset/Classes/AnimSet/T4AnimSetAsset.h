@@ -4,13 +4,13 @@
 
 #include "T4AssetMinimal.h"
 #include "T4AssetDefinitions.h"
-#include "AnimSet/T4AnimSetTypes.h" // #131
-#include "T4AnimSetAsset.generated.h"
+#include "Animset/T4AnimsetTypes.h" // #131
+#include "T4AnimsetAsset.generated.h"
 
 /**
   * #39
  */
-struct FT4AnimSetCustomVersion
+struct FT4AnimsetCustomVersion
 {
 	enum Type
 	{
@@ -20,7 +20,7 @@ struct FT4AnimSetCustomVersion
 		CommonPropertyNameV2Changed, // #126
 
 		SequenceAndStateLayerAdded, // #131
-		PostureNameAdded, // #131
+		StanceNameAdded, // #131
 
 		// -----<new versions can be added above this line>-------------------------------------------------
 		VersionPlusOne,
@@ -30,7 +30,7 @@ struct FT4AnimSetCustomVersion
 	T4ASSET_API const static FGuid GUID;
 
 private:
-	FT4AnimSetCustomVersion() {}
+	FT4AnimsetCustomVersion() {}
 };
 
 class UTexture2D;
@@ -41,12 +41,12 @@ class UBlendSpaceBase;
 class UT4EntityAsset;
 
 USTRUCT()
-struct T4ASSET_API FT4AnimSetAnimSequenceData
+struct T4ASSET_API FT4AnimsetAnimSequenceData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetAnimSequenceData()
+	FT4AnimsetAnimSequenceData()
 		: Name(NAME_None)
 		, bAdditiveAnimType(false) // #138
 		, DurationSec(0.0f)
@@ -61,7 +61,7 @@ public:
 		return (Name == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4AnimSetAnimSequenceData& InRhs) const
+	FORCEINLINE bool operator==(const FT4AnimsetAnimSequenceData& InRhs) const
 	{
 		return (Name == InRhs.Name) ? true : false;
 	}
@@ -85,12 +85,12 @@ public:
 };
 
 USTRUCT()
-struct T4ASSET_API FT4AnimSetBlendSpaceData
+struct T4ASSET_API FT4AnimsetBlendSpaceData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetBlendSpaceData()
+	FT4AnimsetBlendSpaceData()
 		: Name(NAME_None)
 	{
 	}
@@ -100,7 +100,7 @@ public:
 		return (Name == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4AnimSetBlendSpaceData& InRhs) const
+	FORCEINLINE bool operator==(const FT4AnimsetBlendSpaceData& InRhs) const
 	{
 		return (Name == InRhs.Name) ? true : false;
 	}
@@ -114,12 +114,12 @@ public:
 
 // #131
 USTRUCT()
-struct T4ASSET_API FT4AnimSetSkillLayerData
+struct T4ASSET_API FT4AnimsetSkillLayerData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetSkillLayerData()
+	FT4AnimsetSkillLayerData()
 		: bAnimMontageAutoGen(true)
 	{
 	}
@@ -131,18 +131,18 @@ public:
 	TSoftObjectPtr<UAnimMontage> AnimMontageAsset; // #69
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetAnimSequenceData> AnimSequenceArray;
+	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 };
 
 // #131
 USTRUCT()
-struct T4ASSET_API FT4AnimSetAnimSystemData
+struct T4ASSET_API FT4AnimsetAnimSystemData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetAnimSystemData()
-		: PostureName(NAME_None)
+	FT4AnimsetAnimSystemData()
+		: StanceName(NAME_None)
 #if WITH_EDITOR
 		, bEditorShowNotSetProperty(false)
 #endif
@@ -151,21 +151,21 @@ public:
 
 	FORCEINLINE bool operator==(const FName& InKey) const
 	{
-		return (PostureName == InKey) ? true : false;
+		return (StanceName == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4AnimSetAnimSystemData& InRhs) const
+	FORCEINLINE bool operator==(const FT4AnimsetAnimSystemData& InRhs) const
 	{
-		return (PostureName == InRhs.PostureName) ? true : false;
+		return (StanceName == InRhs.StanceName) ? true : false;
 	}
 
-	// FT4StanceDataLoader::ProcessPre() // #111
+	// FT4AnimSetDataLoader::ProcessPre() // #111
 
 	UPROPERTY(VisibleAnywhere, Category = Common)
-	FName PostureName;
+	FName StanceName;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetAnimSequenceData> AnimSequenceArray;
+	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(VisibleAnywhere, Category = Hide)
@@ -175,12 +175,12 @@ public:
 
 // #131
 USTRUCT()
-struct T4ASSET_API FT4AnimSetSystemLayerData
+struct T4ASSET_API FT4AnimsetSystemLayerData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetSystemLayerData()
+	FT4AnimsetSystemLayerData()
 	{
 	}
 
@@ -192,19 +192,19 @@ public:
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetAnimSystemData> AnimSystemDataArray;
+	TArray<FT4AnimsetAnimSystemData> AnimSystemDataArray;
 #endif
 };
 
 // #131
 USTRUCT()
-struct T4ASSET_API FT4AnimSetAnimStateData
+struct T4ASSET_API FT4AnimsetAnimStateData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetAnimStateData()
-		: PostureName(NAME_None)
+	FT4AnimsetAnimStateData()
+		: StanceName(NAME_None)
 #if WITH_EDITOR
 		, bEditorShowNotSetProperty(false)
 #endif
@@ -213,24 +213,24 @@ public:
 
 	FORCEINLINE bool operator==(const FName& InKey) const
 	{
-		return (PostureName == InKey) ? true : false;
+		return (StanceName == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4AnimSetAnimStateData& InRhs) const
+	FORCEINLINE bool operator==(const FT4AnimsetAnimStateData& InRhs) const
 	{
-		return (PostureName == InRhs.PostureName) ? true : false;
+		return (StanceName == InRhs.StanceName) ? true : false;
 	}
 
-	// FT4StanceDataLoader::ProcessPre() // #111
+	// FT4AnimSetDataLoader::ProcessPre() // #111
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName PostureName;
+	FName StanceName;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetAnimSequenceData> AnimSequenceArray;
+	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetBlendSpaceData> BlendSpaceArray;
+	TArray<FT4AnimsetBlendSpaceData> BlendSpaceArray;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TMap<FName, float> StateParameterMap; // #131
@@ -253,18 +253,18 @@ public:
 	}
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TArray<FT4AnimSetAnimStateData> AnimStateDataArray;
+	TArray<FT4AnimsetAnimStateData> AnimStateDataArray;
 };
 
 // #111
 class UT4WeaponEntityAsset;
 USTRUCT()
-struct T4ASSET_API FT4AnimSetTestSettings
+struct T4ASSET_API FT4AnimsetTestSettings
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4AnimSetTestSettings()
+	FT4AnimsetTestSettings()
 	{
 		Reset();
 	}
@@ -289,7 +289,7 @@ public:
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4ASSET_API UT4AnimSetAsset : public UObject
+class T4ASSET_API UT4AnimsetAsset : public UObject
 {
 	GENERATED_UCLASS_BODY()
 
@@ -314,17 +314,17 @@ public:
 	TSoftObjectPtr<USkeleton> SkeletonAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4AnimSetTemplate AnimSetTemplate; // #131
+	ET4AnimsetTemplate AnimsetTemplate; // #131
 
 	// CustomizeSkillLayerDetails
 
 	UPROPERTY(EditAnywhere, Category = SkillLayer)
-	FT4AnimSetSkillLayerData SkillLayerData; // #131
+	FT4AnimsetSkillLayerData SkillLayerData; // #131
 
 	// CustomizeSystemLayerDetails
 
 	UPROPERTY(EditAnywhere, Category = StateLayer)
-	FT4AnimSetSystemLayerData SystemLayerData; // #131
+	FT4AnimsetSystemLayerData SystemLayerData; // #131
 
 	// CustomizeStateLayerDetails
 
@@ -337,7 +337,7 @@ public:
 	UTexture2D* ThumbnailImage; // Internal: The thumbnail image
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FT4AnimSetTestSettings TestSettings; // #111 : 에디터 세팅 옵션
+	FT4AnimsetTestSettings TestSettings; // #111 : 에디터 세팅 옵션
 #endif
 
 private:

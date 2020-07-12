@@ -9,7 +9,7 @@
 /**
   * #73
  */
-class UT4AnimSetAsset;
+class UT4AnimsetAsset;
 struct FT4EntityMaterialData;
 class T4EDITORCOMMON_API ST4OverrideMaterialListWidget : public ST4ListViewWidget
 {

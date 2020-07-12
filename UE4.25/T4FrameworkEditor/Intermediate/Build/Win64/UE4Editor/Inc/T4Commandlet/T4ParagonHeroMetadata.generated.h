@@ -77,7 +77,7 @@ template<> T4COMMANDLET_API UScriptStruct* StaticStruct<struct FT4AnimationAsset
 	DECLARE_FUNCTION(execAddSystemLayerAnimSequence); \
 	DECLARE_FUNCTION(execAddStateLayerBlendSpace); \
 	DECLARE_FUNCTION(execAddStateLayerAnimSequence); \
-	DECLARE_FUNCTION(execSetPostureName); \
+	DECLARE_FUNCTION(execSetStanceName); \
 	DECLARE_FUNCTION(execRegister);
 
 
@@ -92,7 +92,7 @@ template<> T4COMMANDLET_API UScriptStruct* StaticStruct<struct FT4AnimationAsset
 	DECLARE_FUNCTION(execAddSystemLayerAnimSequence); \
 	DECLARE_FUNCTION(execAddStateLayerBlendSpace); \
 	DECLARE_FUNCTION(execAddStateLayerAnimSequence); \
-	DECLARE_FUNCTION(execSetPostureName); \
+	DECLARE_FUNCTION(execSetStanceName); \
 	DECLARE_FUNCTION(execRegister);
 
 

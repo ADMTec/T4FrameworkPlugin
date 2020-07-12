@@ -44,8 +44,8 @@ enum ET4EngineConstantTable
 		PlayTagAttachment, // #74
 		PlayTagAction, // #74
 
-        Stance, // #73
-		Posture, // #106
+        AnimSet, // #73
+		Stance, // #106
 
         Reaction, // #76
 

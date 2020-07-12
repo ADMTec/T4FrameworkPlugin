@@ -41,4 +41,4 @@ static const FName T4Const_WorldTimeTagFallbackName = T4Const_WorldTimeTagDayNam
 
 // #132 : Action Key
 static const FT4ActionKey T4Const_WorldActorRotationPrimaryKey(TEXT("T4ActionOverrideRotationPrimaryKey"), true, true); // #132
-static const FT4ActionKey T4Const_WorldActorStancePlayTagKey(TEXT("T4Const_WorldActorStancePlayTagKey")); // #74
+static const FT4ActionKey T4Const_WorldActorAnimSetPlayTagKey(TEXT("T4Const_WorldActorAnimSetPlayTagKey")); // #74

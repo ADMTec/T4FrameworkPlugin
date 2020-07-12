@@ -54,20 +54,20 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Une
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EquipItem>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Status_h_60_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Posture_Statics; \
-	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
-	typedef FT4GamePacketSC_Base Super;
-
-
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Posture>();
-
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Status_h_25_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Stance_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
 
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Stance>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Status_h_25_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_AnimSet_Statics; \
+	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
+	typedef FT4GamePacketSC_Base Super;
+
+
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_AnimSet>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Status_h

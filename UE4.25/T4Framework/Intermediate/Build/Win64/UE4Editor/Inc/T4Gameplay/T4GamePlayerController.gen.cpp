@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_AT4GamePlayerController();
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4PlayerControllerBase();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdBookmark();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdItemEnter();
@@ -34,7 +35,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_LockOff();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_LockOn();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Move();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Posture();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_ReadyToPlay();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Rotation();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_SkillCancel();
@@ -42,6 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_SkillTarget();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Stance();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_UnequipItem();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_AnimSet();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Die();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectAirborne();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectArea();
@@ -64,7 +65,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_NPCLeave();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_PCLeave();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Posture();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Resurrect();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Rotation();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_SkillCancel();
@@ -181,20 +181,20 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		P_THIS->SC_RecvPacket_EquipItem_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4GamePlayerController::execSC_RecvPacket_Posture)
-	{
-		P_GET_STRUCT(FT4GamePacketSC_Posture,Z_Param_InPacket);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_Posture_Implementation(Z_Param_InPacket);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AT4GamePlayerController::execSC_RecvPacket_Stance)
 	{
 		P_GET_STRUCT(FT4GamePacketSC_Stance,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->SC_RecvPacket_Stance_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AT4GamePlayerController::execSC_RecvPacket_AnimSet)
+	{
+		P_GET_STRUCT(FT4GamePacketSC_AnimSet,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SC_RecvPacket_AnimSet_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4GamePlayerController::execSC_RecvPacket_LockOff)
@@ -570,19 +570,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		P_THIS->CS_RecvPacket_EquipItem_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4GamePlayerController::execCS_RecvPacket_Posture)
-	{
-		P_GET_STRUCT(FT4GamePacketCS_Posture,Z_Param_InPacket);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		if (!P_THIS->CS_RecvPacket_Posture_Validate(Z_Param_InPacket))
-		{
-			RPC_ValidateFailed(TEXT("CS_RecvPacket_Posture_Validate"));
-			return;
-		}
-		P_THIS->CS_RecvPacket_Posture_Implementation(Z_Param_InPacket);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AT4GamePlayerController::execCS_RecvPacket_Stance)
 	{
 		P_GET_STRUCT(FT4GamePacketCS_Stance,Z_Param_InPacket);
@@ -594,6 +581,19 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 			return;
 		}
 		P_THIS->CS_RecvPacket_Stance_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AT4GamePlayerController::execCS_RecvPacket_AnimSet)
+	{
+		P_GET_STRUCT(FT4GamePacketCS_AnimSet,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->CS_RecvPacket_AnimSet_Validate(Z_Param_InPacket))
+		{
+			RPC_ValidateFailed(TEXT("CS_RecvPacket_AnimSet_Validate"));
+			return;
+		}
+		P_THIS->CS_RecvPacket_AnimSet_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4GamePlayerController::execCS_RecvPacket_LockOff)
@@ -673,6 +673,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		}
 		P_THIS->CS_RecvPacket_ReadyToPlay_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
+	}
+	static FName NAME_AT4GamePlayerController_CS_RecvPacket_AnimSet = FName(TEXT("CS_RecvPacket_AnimSet"));
+	void AT4GamePlayerController::CS_RecvPacket_AnimSet(FT4GamePacketCS_AnimSet const& InPacket)
+	{
+		T4GamePlayerController_eventCS_RecvPacket_AnimSet_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_CS_RecvPacket_AnimSet),&Parms);
 	}
 	static FName NAME_AT4GamePlayerController_CS_RecvPacket_CmdBookmark = FName(TEXT("CS_RecvPacket_CmdBookmark"));
 	void AT4GamePlayerController::CS_RecvPacket_CmdBookmark(FT4GamePacketCS_CmdBookmark const& InPacket)
@@ -793,13 +800,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_CS_RecvPacket_Move),&Parms);
 	}
-	static FName NAME_AT4GamePlayerController_CS_RecvPacket_Posture = FName(TEXT("CS_RecvPacket_Posture"));
-	void AT4GamePlayerController::CS_RecvPacket_Posture(FT4GamePacketCS_Posture const& InPacket)
-	{
-		T4GamePlayerController_eventCS_RecvPacket_Posture_Parms Parms;
-		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_CS_RecvPacket_Posture),&Parms);
-	}
 	static FName NAME_AT4GamePlayerController_CS_RecvPacket_ReadyToPlay = FName(TEXT("CS_RecvPacket_ReadyToPlay"));
 	void AT4GamePlayerController::CS_RecvPacket_ReadyToPlay(FT4GamePacketCS_ReadyToPlay const& InPacket)
 	{
@@ -848,6 +848,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		T4GamePlayerController_eventCS_RecvPacket_UnequipItem_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_CS_RecvPacket_UnequipItem),&Parms);
+	}
+	static FName NAME_AT4GamePlayerController_SC_RecvPacket_AnimSet = FName(TEXT("SC_RecvPacket_AnimSet"));
+	void AT4GamePlayerController::SC_RecvPacket_AnimSet(FT4GamePacketSC_AnimSet const& InPacket)
+	{
+		T4GamePlayerController_eventSC_RecvPacket_AnimSet_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_SC_RecvPacket_AnimSet),&Parms);
 	}
 	static FName NAME_AT4GamePlayerController_SC_RecvPacket_Die = FName(TEXT("SC_RecvPacket_Die"));
 	void AT4GamePlayerController::SC_RecvPacket_Die(FT4GamePacketSC_Die const& InPacket)
@@ -1003,13 +1010,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_SC_RecvPacket_PCLeave),&Parms);
 	}
-	static FName NAME_AT4GamePlayerController_SC_RecvPacket_Posture = FName(TEXT("SC_RecvPacket_Posture"));
-	void AT4GamePlayerController::SC_RecvPacket_Posture(FT4GamePacketSC_Posture const& InPacket)
-	{
-		T4GamePlayerController_eventSC_RecvPacket_Posture_Parms Parms;
-		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4GamePlayerController_SC_RecvPacket_Posture),&Parms);
-	}
 	static FName NAME_AT4GamePlayerController_SC_RecvPacket_Resurrect = FName(TEXT("SC_RecvPacket_Resurrect"));
 	void AT4GamePlayerController::SC_RecvPacket_Resurrect(FT4GamePacketSC_Resurrect const& InPacket)
 	{
@@ -1091,6 +1091,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	{
 		UClass* Class = AT4GamePlayerController::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "CS_RecvPacket_AnimSet", &AT4GamePlayerController::execCS_RecvPacket_AnimSet },
 			{ "CS_RecvPacket_CmdBookmark", &AT4GamePlayerController::execCS_RecvPacket_CmdBookmark },
 			{ "CS_RecvPacket_CmdChangePlayer", &AT4GamePlayerController::execCS_RecvPacket_CmdChangePlayer },
 			{ "CS_RecvPacket_CmdItemEnter", &AT4GamePlayerController::execCS_RecvPacket_CmdItemEnter },
@@ -1108,7 +1109,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 			{ "CS_RecvPacket_LockOff", &AT4GamePlayerController::execCS_RecvPacket_LockOff },
 			{ "CS_RecvPacket_LockOn", &AT4GamePlayerController::execCS_RecvPacket_LockOn },
 			{ "CS_RecvPacket_Move", &AT4GamePlayerController::execCS_RecvPacket_Move },
-			{ "CS_RecvPacket_Posture", &AT4GamePlayerController::execCS_RecvPacket_Posture },
 			{ "CS_RecvPacket_ReadyToPlay", &AT4GamePlayerController::execCS_RecvPacket_ReadyToPlay },
 			{ "CS_RecvPacket_Rotation", &AT4GamePlayerController::execCS_RecvPacket_Rotation },
 			{ "CS_RecvPacket_SkillCancel", &AT4GamePlayerController::execCS_RecvPacket_SkillCancel },
@@ -1116,6 +1116,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 			{ "CS_RecvPacket_SkillTarget", &AT4GamePlayerController::execCS_RecvPacket_SkillTarget },
 			{ "CS_RecvPacket_Stance", &AT4GamePlayerController::execCS_RecvPacket_Stance },
 			{ "CS_RecvPacket_UnequipItem", &AT4GamePlayerController::execCS_RecvPacket_UnequipItem },
+			{ "SC_RecvPacket_AnimSet", &AT4GamePlayerController::execSC_RecvPacket_AnimSet },
 			{ "SC_RecvPacket_Die", &AT4GamePlayerController::execSC_RecvPacket_Die },
 			{ "SC_RecvPacket_EffectAirborne", &AT4GamePlayerController::execSC_RecvPacket_EffectAirborne },
 			{ "SC_RecvPacket_EffectArea", &AT4GamePlayerController::execSC_RecvPacket_EffectArea },
@@ -1138,7 +1139,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 			{ "SC_RecvPacket_NPCLeave", &AT4GamePlayerController::execSC_RecvPacket_NPCLeave },
 			{ "SC_RecvPacket_PCEnter", &AT4GamePlayerController::execSC_RecvPacket_PCEnter },
 			{ "SC_RecvPacket_PCLeave", &AT4GamePlayerController::execSC_RecvPacket_PCLeave },
-			{ "SC_RecvPacket_Posture", &AT4GamePlayerController::execSC_RecvPacket_Posture },
 			{ "SC_RecvPacket_Resurrect", &AT4GamePlayerController::execSC_RecvPacket_Resurrect },
 			{ "SC_RecvPacket_Rotation", &AT4GamePlayerController::execSC_RecvPacket_Rotation },
 			{ "SC_RecvPacket_SkillCancel", &AT4GamePlayerController::execSC_RecvPacket_SkillCancel },
@@ -1152,6 +1152,42 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 			{ "SC_RecvPacket_WorldTravel", &AT4GamePlayerController::execSC_RecvPacket_WorldTravel },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GamePlayerController_eventCS_RecvPacket_AnimSet_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "CS_RecvPacket_AnimSet", nullptr, nullptr, sizeof(T4GamePlayerController_eventCS_RecvPacket_AnimSet_Parms), Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_CmdBookmark_Statics
 	{
@@ -1785,44 +1821,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GamePlayerController_eventCS_RecvPacket_Posture_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_Posture, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::NewProp_InPacket,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #73\n" },
-		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
-		{ "ToolTip", "#73" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "CS_RecvPacket_Posture", nullptr, nullptr, sizeof(T4GamePlayerController_eventCS_RecvPacket_Posture_Parms), Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_ReadyToPlay_Statics
 	{
 #if WITH_METADATA
@@ -2034,7 +2032,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #73\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
+		{ "ToolTip", "#73" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "CS_RecvPacket_Stance", nullptr, nullptr, sizeof(T4GamePlayerController_eventCS_RecvPacket_Stance_Parms), Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance_Statics::Function_MetaDataParams)) };
@@ -2080,6 +2080,42 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_UnequipItem_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GamePlayerController_eventSC_RecvPacket_AnimSet_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_AnimSet, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "SC_RecvPacket_AnimSet", nullptr, nullptr, sizeof(T4GamePlayerController_eventSC_RecvPacket_AnimSet_Parms), Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2901,44 +2937,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GamePlayerController_eventSC_RecvPacket_Posture_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_Posture, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::NewProp_InPacket,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #73\n" },
-		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
-		{ "ToolTip", "#73" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "SC_RecvPacket_Posture", nullptr, nullptr, sizeof(T4GamePlayerController_eventSC_RecvPacket_Posture_Parms), Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	struct Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Resurrect_Statics
 	{
 #if WITH_METADATA
@@ -3150,7 +3148,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #73\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4GamePlayerController.h" },
+		{ "ToolTip", "#73" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GamePlayerController, nullptr, "SC_RecvPacket_Stance", nullptr, nullptr, sizeof(T4GamePlayerController_eventSC_RecvPacket_Stance_Parms), Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance_Statics::Function_MetaDataParams)) };
@@ -3368,6 +3368,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AT4GamePlayerController_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_AnimSet, "CS_RecvPacket_AnimSet" }, // 2533288870
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_CmdBookmark, "CS_RecvPacket_CmdBookmark" }, // 1825640233
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_CmdChangePlayer, "CS_RecvPacket_CmdChangePlayer" }, // 648533759
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_CmdItemEnter, "CS_RecvPacket_CmdItemEnter" }, // 3478526435
@@ -3385,14 +3386,14 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_LockOff, "CS_RecvPacket_LockOff" }, // 23291831
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_LockOn, "CS_RecvPacket_LockOn" }, // 1593550443
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Move, "CS_RecvPacket_Move" }, // 1294904586
-		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Posture, "CS_RecvPacket_Posture" }, // 2213920526
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_ReadyToPlay, "CS_RecvPacket_ReadyToPlay" }, // 3447869312
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Rotation, "CS_RecvPacket_Rotation" }, // 2101071080
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_SkillCancel, "CS_RecvPacket_SkillCancel" }, // 2279075200
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_SkillCasting, "CS_RecvPacket_SkillCasting" }, // 3675899357
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_SkillTarget, "CS_RecvPacket_SkillTarget" }, // 1918217656
-		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance, "CS_RecvPacket_Stance" }, // 1971186707
+		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_Stance, "CS_RecvPacket_Stance" }, // 742966106
 		{ &Z_Construct_UFunction_AT4GamePlayerController_CS_RecvPacket_UnequipItem, "CS_RecvPacket_UnequipItem" }, // 2055485635
+		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_AnimSet, "SC_RecvPacket_AnimSet" }, // 308933629
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Die, "SC_RecvPacket_Die" }, // 1441157363
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_EffectAirborne, "SC_RecvPacket_EffectAirborne" }, // 700039068
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_EffectArea, "SC_RecvPacket_EffectArea" }, // 3518877730
@@ -3415,13 +3416,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_NPCLeave, "SC_RecvPacket_NPCLeave" }, // 1987776085
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_PCEnter, "SC_RecvPacket_PCEnter" }, // 2482844857
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_PCLeave, "SC_RecvPacket_PCLeave" }, // 303828783
-		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Posture, "SC_RecvPacket_Posture" }, // 2231847294
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Resurrect, "SC_RecvPacket_Resurrect" }, // 2681998757
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Rotation, "SC_RecvPacket_Rotation" }, // 3116475389
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_SkillCancel, "SC_RecvPacket_SkillCancel" }, // 204967597
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_SkillCasting, "SC_RecvPacket_SkillCasting" }, // 2057813927
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_SkillTarget, "SC_RecvPacket_SkillTarget" }, // 3707615942
-		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance, "SC_RecvPacket_Stance" }, // 2727645593
+		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Stance, "SC_RecvPacket_Stance" }, // 2201825662
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_Teleport, "SC_RecvPacket_Teleport" }, // 1170132472
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_UnequipItem, "SC_RecvPacket_UnequipItem" }, // 2527498192
 		{ &Z_Construct_UFunction_AT4GamePlayerController_SC_RecvPacket_WorldExplore, "SC_RecvPacket_WorldExplore" }, // 3594977949
@@ -3464,7 +3464,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4GamePlayerController, 3967047574);
+	IMPLEMENT_CLASS(AT4GamePlayerController, 260109009);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4GamePlayerController>()
 	{
 		return AT4GamePlayerController::StaticClass();

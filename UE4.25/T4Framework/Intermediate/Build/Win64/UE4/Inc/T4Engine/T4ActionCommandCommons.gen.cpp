@@ -16,9 +16,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionCommandCommons() {}
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StopActionCommand();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionCommandBase();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionSetActionCommand();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionPakActionCommand();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LoadingPolicy();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionSetAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister();
 // End Cross Module References
 class UScriptStruct* FT4StopActionCommand::StaticStruct()
 {
@@ -108,29 +108,29 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StopActionCommand
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4StopActionCommand_Hash() { return 2814539748U; }
-class UScriptStruct* FT4ActionSetActionCommand::StaticStruct()
+class UScriptStruct* FT4ActionPakActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4ENGINE_API uint32 Get_Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ActionSetActionCommand, Z_Construct_UPackage__Script_T4Engine(), TEXT("T4ActionSetActionCommand"), sizeof(FT4ActionSetActionCommand), Get_Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Hash());
+		extern T4ENGINE_API uint32 Get_Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ActionPakActionCommand, Z_Construct_UPackage__Script_T4Engine(), TEXT("T4ActionPakActionCommand"), sizeof(FT4ActionPakActionCommand), Get_Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Hash());
 	}
 	return Singleton;
 }
-template<> T4ENGINE_API UScriptStruct* StaticStruct<FT4ActionSetActionCommand>()
+template<> T4ENGINE_API UScriptStruct* StaticStruct<FT4ActionPakActionCommand>()
 {
-	return FT4ActionSetActionCommand::StaticStruct();
+	return FT4ActionPakActionCommand::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ActionSetActionCommand(FT4ActionSetActionCommand::StaticStruct, TEXT("/Script/T4Engine"), TEXT("T4ActionSetActionCommand"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionSetActionCommand
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ActionPakActionCommand(FT4ActionPakActionCommand::StaticStruct, TEXT("/Script/T4Engine"), TEXT("T4ActionPakActionCommand"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionPakActionCommand
 {
-	FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionSetActionCommand()
+	FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionPakActionCommand()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ActionSetActionCommand")),new UScriptStruct::TCppStructOps<FT4ActionSetActionCommand>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ActionPakActionCommand")),new UScriptStruct::TCppStructOps<FT4ActionPakActionCommand>);
 	}
-} ScriptStruct_T4Engine_StaticRegisterNativesFT4ActionSetActionCommand;
-	struct Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics
+} ScriptStruct_T4Engine_StaticRegisterNativesFT4ActionPakActionCommand;
+	struct Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -142,72 +142,72 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionSetActionComm
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LoadingPolicy;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LoadingPolicy_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionSetAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionPakAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ActionSetAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ActionPakAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// ET4ActionCommandType::ActionSet\n// ET4ActionCommandType::Stop\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// ET4ActionCommandType::ActionPak\n// ET4ActionCommandType::Stop\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandCommons.h" },
-		{ "ToolTip", "ET4ActionCommandType::ActionSet\nET4ActionCommandType::Stop" },
+		{ "ToolTip", "ET4ActionCommandType::ActionPak\nET4ActionCommandType::Stop" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ActionSetActionCommand>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ActionPakActionCommand>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandCommons.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy = { "LoadingPolicy", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionSetActionCommand, LoadingPolicy), Z_Construct_UEnum_T4Asset_ET4LoadingPolicy, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy = { "LoadingPolicy", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionPakActionCommand, LoadingPolicy), Z_Construct_UEnum_T4Asset_ET4LoadingPolicy, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_ActionSetAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_ActionPakAsset_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandCommons.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_ActionSetAsset = { "ActionSetAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionSetActionCommand, ActionSetAsset), Z_Construct_UClass_UT4ActionSetAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_ActionSetAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_ActionSetAsset_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_LoadingPolicy_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::NewProp_ActionSetAsset,
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_ActionPakAsset = { "ActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionPakActionCommand, ActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_ActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_ActionPakAsset_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_LoadingPolicy_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::NewProp_ActionPakAsset,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
 		Z_Construct_UScriptStruct_FT4ActionCommandBase,
 		&NewStructOps,
-		"T4ActionSetActionCommand",
-		sizeof(FT4ActionSetActionCommand),
-		alignof(FT4ActionSetActionCommand),
-		Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::PropPointers),
+		"T4ActionPakActionCommand",
+		sizeof(FT4ActionPakActionCommand),
+		alignof(FT4ActionPakActionCommand),
+		Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4ActionSetActionCommand()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4ActionPakActionCommand()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ActionSetActionCommand"), sizeof(FT4ActionSetActionCommand), Get_Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ActionPakActionCommand"), sizeof(FT4ActionPakActionCommand), Get_Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionSetActionCommand_Hash() { return 2650733218U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionPakActionCommand_Hash() { return 755040839U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -9,7 +9,7 @@
 /**
   * #76
  */
-class UT4AnimSetAsset;
+class UT4AnimsetAsset;
 struct FT4EntityCharacterReactionSetData;
 class T4EDITORCOMMON_API ST4ReactionListWidget : public ST4ListViewWidget
 {

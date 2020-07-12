@@ -20,15 +20,15 @@ static const FName T4Const_DefaultFullBodySkinName = T4Const_DefaultName; // #13
 static const FName T4Const_DefaultPlayTagName = T4Const_DefaultName;
 
 
-// #73, #106 : Stance
+// #73, #106 : AnimSet
+
+static const FName T4Const_DefaultAnimSetName = T4Const_DefaultName;
 
 static const FName T4Const_DefaultStanceName = T4Const_DefaultName;
-
-static const FName T4Const_DefaultPostureName = T4Const_DefaultName;
-static const FName T4Const_CombatPostureName = TEXT("Combat"); // #108
-static const FName T4Const_NonCombatPostureName = TEXT("NonCombat"); // #135
-static const FName T4Const_SprintPostureName = TEXT("Sprint"); // #131
-static const FName T4Const_CrouchPostureName = TEXT("Crouch"); // #142
+static const FName T4Const_CombatStanceName = TEXT("Combat"); // #108
+static const FName T4Const_NonCombatStanceName = TEXT("NonCombat"); // #135
+static const FName T4Const_SprintStanceName = TEXT("Sprint"); // #131
+static const FName T4Const_CrouchStanceName = TEXT("Crouch"); // #142
 
 
 // #78
