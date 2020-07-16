@@ -36,6 +36,15 @@ public:
 	ET4ControlModeType DefaultControlMode;
 
 	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
+	ET4ControlModeType MobileControlMode;
+
+	UPROPERTY(config, EditAnywhere, Category = "Game Mode")
+	FSoftObjectPath LeftVirtualKoysticksPath; // #151
+
+	UPROPERTY(config, EditAnywhere, Category = "Game Mode")
+	FSoftObjectPath DefaultVirtualKoysticksPath; // #151
+
+	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
 	TSoftObjectPtr<UTexture2D> DefaultCrosshairTexturePath; // #121
 
 	UPROPERTY(EditAnywhere, config, Category = "Indicator Outline")
@@ -44,47 +53,56 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Indicator Outline")
 	FLinearColor IndicatorAttackTargetOutlineColor; // #115
 
+	UPROPERTY(EditAnywhere, config, Category = "Game Control")
+	float ControlCameraPitchMinAngle; // #151
+
+	UPROPERTY(EditAnywhere, config, Category = "Game Control")
+	float ControlCameraPitchMaxAngle; // #151
+
+	UPROPERTY(EditAnywhere, config, Category = "Game Control")
+	float ControlCameraYawMaxValue; // #151
+
 	UPROPERTY(EditAnywhere, config, Category = "Player QuickSpawn (ALT + 1 ~ 9)")
-	FName PlayerDataRowName_Key1;
+	FName PlayerDBKeyName_Key1;
 	
 	UPROPERTY(EditAnywhere, config, Category = "Player QuickSpawn (ALT + 1 ~ 9)")
-	FName PlayerDataRowName_Key2;
+	FName PlayerDBKeyName_Key2;
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key0; // #146
+	FName NPCDBKeyName_Key0; // #146
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key1; // #50
+	FName NPCDBKeyName_Key1; // #50
 	
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key2;
+	FName NPCDBKeyName_Key2;
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key3; // #104
+	FName NPCDBKeyName_Key3; // #104
 	
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key4; // #104
+	FName NPCDBKeyName_Key4; // #104
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key5; // #109
+	FName NPCDBKeyName_Key5; // #109
 	
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key6; // #109
+	FName NPCDBKeyName_Key6; // #109
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key7; // #112
+	FName NPCDBKeyName_Key7; // #112
 
 	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDataRowName_Key8; // #112
+	FName NPCDBKeyName_Key8; // #112
 
 	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDataRowName_Key1; // #45
+	FName WeaponDBKeyName_Key1; // #45
 
 	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDataRowName_Key2; // #48
+	FName WeaponDBKeyName_Key2; // #48
 
 	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDataRowName_Key3; // #109
+	FName WeaponDBKeyName_Key3; // #109
 
 	UPROPERTY(EditAnywhere, config, Category = "Gameplay Network")
 	float DefaultNetworkLatencySec; // #52

@@ -4,14 +4,14 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4Framework/Classes/T4GameModeBase.h"
-#include "T4GameplayMode.generated.h"
+#include "T4GameplayGameMode.generated.h"
 
 /**
   * http://api.unrealengine.com/KOR/Gameplay/Framework/GameMode/
  */
 class AController;
 UCLASS()
-class T4GAMEPLAY_API AT4GameplayMode : public AT4GameModeBase
+class T4GAMEPLAY_API AT4GameplayGameMode : public AT4GameModeBase
 {
 	GENERATED_UCLASS_BODY()
 

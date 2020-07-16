@@ -116,7 +116,7 @@ public:
 	void SetCameraZoomMaxScale(float InScale) override { CameraZoomMaxScale = InScale; } // #86
 	void SetCameraPitch(float InAmount) override;
 	void SetCameraYaw(float InAmount) override;
-	void SetCameraYawBlend(float InYawTarget, bool bInImmediate) override; // #126, #139 : UT4EngineSettings::CameraAngleBlendRate
+	void SetCameraBlend(const FRotator& InTargetRotation, bool bInImmediate) override; // #126, #139 : UT4EngineSettings::CameraAngleBlendRate
 
 	void SetFreeCameraMoveDirection(const FVector& InLocation) override;
 	void SetFreeCameraLocationAndRotation(const FVector& InLocation, const FRotator& InRotation) override; // #94, #86
@@ -126,7 +126,9 @@ public:
 
 	bool GetScreenCenterToWorldRay(const FVector2D& InScreenOffset, FRay& OutWorldRay) override; // #121 : Mode 에 따라 마우스 또는 화면 중앙(FPS)의 Ray 를 리턴
 	bool GetScreenPositionToWorldRay(const FVector2D& InScreenPosition, FRay& OutWorldRay) override; // #131
+
 	bool GetMousePositionToWorldRay(FRay& OutWorldRay) override;
+	bool GetTouchPositionToWorldRay(ETouchIndex::Type InFingerIndex, FRay& OutWorldRay) override; // #151 : Only Client
 
 	void SetMouseCursorLock(bool bInLock) override;
 	bool IsMouseCursorLocked() const override { return bMouseCursorLocked; }
@@ -136,6 +138,8 @@ public:
 
 	void SetMouseCursorPosition(const FVector2D& InPosition) override; // #30, #113 : ScreenSpace
 	bool GetMouseCursorPosition(FVector2D& OutLocation) const override; // #30, #113
+
+	bool GetTouchPosition(ETouchIndex::Type InFingerIndex, FVector2D& OutPosition) const override; // #151
 
 #if WITH_EDITOR
 	// see UGameViewportClient::InputKey
@@ -149,12 +153,14 @@ public:
 #endif
 
 protected:
-	virtual TSubclassOf<AT4HUDBase> GetDefaultHUDClass(); // #140
+	virtual void NotifyPostInitializeComponents() {} // #151
 
 	virtual void NotifyAdvance(float InDeltaTime) {} // #49
 	virtual void NotifyBeginPlay() {} // #114
 	virtual void NotifyPossess(IT4WorldActor* InNewWorldActor) {} // #49
 	virtual void NotifyUnPossess(IT4WorldActor* InOldWorldActor) {} // #49
+
+	virtual void NotifySetInputMode(ET4InputMode InMode) {} // #151
 
 	IT4WorldActor* FindWorldActor(const FT4ActorID& InActorID) const; // #49
 
@@ -203,8 +209,8 @@ private:
 	float CameraZoomMaxScale; // #86
 	// ~#40
 
-	bool bCameraYawBlendEnabled; // #139
-	float CameraYawBlendTargetAngle; // #139
+	bool bCameraBlendEnabled; // #139
+	FRotator CameraBlendTargetRotation; // #139
 
 #if WITH_EDITOR
 	bool bFreeCameraModeEnabled; // #133

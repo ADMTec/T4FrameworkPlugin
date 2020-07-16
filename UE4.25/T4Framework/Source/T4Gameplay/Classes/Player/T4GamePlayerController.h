@@ -27,16 +27,19 @@ class T4GAMEPLAY_API AT4GamePlayerController : public AT4PlayerControllerBase
 	GENERATED_UCLASS_BODY()
 
 public:
-	void SetCrosshairTexture(UTexture2D* InTexture); // #121
+	void ShowCrosshair(bool bInShow); // #151
 	void SetCrosshairZoomRatio(float InRatio); // #121
 
 protected:
-	TSubclassOf<AT4HUDBase> GetDefaultHUDClass() override; // #140
+	void NotifyPostInitializeComponents() override; // #151
 
 	void NotifyAdvance(float InDeltaTime) override; // #49
 	void NotifyBeginPlay() override; // #114
+
 	void NotifyPossess(IT4WorldActor* InNewWorldActor) override; // #49
 	void NotifyUnPossess(IT4WorldActor* InOldWorldActor) override; // #49
+
+	void NotifySetInputMode(ET4InputMode InMode) override; // #121, #151
 
 protected:
 	// #27 : Protocol

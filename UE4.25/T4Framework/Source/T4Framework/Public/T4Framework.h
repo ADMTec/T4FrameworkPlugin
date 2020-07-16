@@ -121,7 +121,7 @@ public:
 	virtual void SetCameraZoomMaxScale(float InScale) = 0; // #86
 	virtual void SetCameraPitch(float InAmount) = 0;
 	virtual void SetCameraYaw(float InAmount) = 0;
-	virtual void SetCameraYawBlend(float InYawTarget, bool bInImmediate) = 0; // #126, #139
+	virtual void SetCameraBlend(const FRotator& InTargetRotation, bool bInImmediate) = 0; // #126, #139
 
 	virtual void SetFreeCameraMoveDirection(const FVector& InDirection) = 0;
 	virtual void SetFreeCameraLocationAndRotation(const FVector& InLocation, const FRotator& InRotation) = 0; // #94, #86
@@ -131,7 +131,9 @@ public:
 
 	virtual bool GetScreenCenterToWorldRay(const FVector2D& InScreenOffset, FRay& OutWorldRay) = 0; // #121 : Mode 에 따라 마우스 또는 화면 중앙(FPS)의 Ray 를 리턴
 	virtual bool GetScreenPositionToWorldRay(const FVector2D& InScreenPosition, FRay& OutWorldRay) = 0; // #131
+
 	virtual bool GetMousePositionToWorldRay(FRay& OutWorldRay) = 0;
+	virtual bool GetTouchPositionToWorldRay(ETouchIndex::Type InFingerIndex, FRay& OutWorldRay) = 0; // #151 : Only Client
 
 	virtual void SetMouseCursorLock(bool bInLock) = 0;
 	virtual bool IsMouseCursorLocked() const = 0;
@@ -141,6 +143,8 @@ public:
 
 	virtual void SetMouseCursorPosition(const FVector2D& InPosition) = 0; // #30, #113
 	virtual bool GetMouseCursorPosition(FVector2D& OutPosition) const = 0; // #30, #113
+
+	virtual bool GetTouchPosition(ETouchIndex::Type InFingerIndex, FVector2D& OutPosition) const = 0; // #151
 
 #if WITH_EDITOR
 	virtual bool EditorInputKey(FKey InKey, EInputEvent InEvent, float InAmountDepressed, bool bInGamepad) = 0; // #30
@@ -169,8 +173,6 @@ public:
 
 	virtual void OnProcessPre(float InDeltaTime) = 0;
 	virtual void OnProcessPost(float InDeltaTime) = 0;
-
-	virtual void ChangeControlMode(ET4ControlModeType InControlModeType) = 0; // #40, #126
 
 #if WITH_EDITOR
 	virtual bool AddServerSpawnGroup(const FGuid& InGuid, const FSoftObjectPath& InSpawnAssetPath) = 0; // #118
@@ -228,9 +230,13 @@ public:
 	virtual UT4GameObjectBase* GetPlayerClientObject() const = 0; // #114 : Only Client
 	virtual IT4PlayerController* GetPlayerController() const = 0;
 
+	virtual bool IsGamepadAttached() const = 0; // #151 : FSlateApplication::IsGamepadAttached or FSlateApplication::IsFakingTouchEvents
+
 	virtual bool GetScreenCenterToWorldRay(const FVector2D& InScreenOffset, FRay& OutWorldRay) = 0; // #121 : Mode 에 따라 마우스 또는 화면 중앙(FPS)의 Ray 를 리턴
 	virtual bool GetScreenPositionToWorldRay(const FVector2D& InScreenPosition, FRay& OutWorldRay) = 0; // #131
+
 	virtual bool GetMousePositionToWorldRay(FRay& OutWorldRay) = 0; // #113
+	virtual bool GetTouchPositionToWorldRay(ETouchIndex::Type InFingerIndex, FRay& OutWorldRay) = 0; // #151 : Only Client
 
 	virtual bool GetScreenPositionToWorldLocation(const FVector2D& InScreenPosition, FVector& OutWorldLocation) = 0; // #131
 
@@ -238,6 +244,9 @@ public:
 	virtual IT4WorldActor* GetWorldRayPickingActor(const FRay& InWorldRay, FVector& OutHitLocation) = 0; // #111
 
 	virtual bool GetMousePickingLocation(FVector& OutLocation) = 0;
+	virtual bool GetTouchUnderFingerLocation(ETouchIndex::Type InFingerIndex, FVector& OutLocation) = 0; // #151 : Only Client
+
+	virtual bool GetRandomSpawnLocation(FVector& OutLocation) = 0; // #151
 
 	virtual FViewport* GetViewport() const = 0; // #68
 

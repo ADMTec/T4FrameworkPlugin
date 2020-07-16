@@ -29,17 +29,3 @@ enum class ET4ControllerType : uint8
 
 	Max	UMETA(Hidden)
 };
-
-// #40, #126
-UENUM()
-enum class ET4ControlModeType : uint8
-{
-	TPS,
-	QuarterView, // #139
-	ShoulderView, // #40
-	FPS, // #121
-
-	Free, // #133
-
-	None UMETA(Hidden),
-};

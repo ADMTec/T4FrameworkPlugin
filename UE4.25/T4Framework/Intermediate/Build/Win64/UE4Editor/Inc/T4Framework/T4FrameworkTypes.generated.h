@@ -17,17 +17,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkTypes_h
 
 
-#define FOREACH_ENUM_ET4CONTROLMODETYPE(op) \
-	op(ET4ControlModeType::TPS) \
-	op(ET4ControlModeType::QuarterView) \
-	op(ET4ControlModeType::ShoulderView) \
-	op(ET4ControlModeType::FPS) \
-	op(ET4ControlModeType::Free) \
-	op(ET4ControlModeType::None) 
-
-enum class ET4ControlModeType : uint8;
-template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4ControlModeType>();
-
 #define FOREACH_ENUM_ET4CONTROLLERTYPE(op) \
 	op(ET4ControllerType::Player) \
 	op(ET4ControllerType::NPCAI) \

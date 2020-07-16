@@ -405,13 +405,16 @@ public:
 	virtual const FT4ExperienceDBRow* GetExperienceDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
 #endif
 
+#if !UE_BUILD_SHIPPING
+	virtual bool GetDBKeyRowNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyRowNames) const = 0;
+#endif
+
 #if WITH_EDITOR
 	// #118
 	virtual bool Save(ET4GameDBType InGameDBType, FString& OutErrorMessage) = 0;
 
 	virtual UDataTable* GetDataTable(ET4GameDBType InGameDBType) const = 0;
 
-	virtual bool GetDBKeyRowNames(ET4GameDBType InGameDBType, TArray<FName>& OutGameDBKeyRowNames) const = 0;
 	virtual const TArray<FT4GameDBRowBase*>& GetGameDBRows(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
 	virtual FT4GameDBRowBase* GetGameDBRow(const FT4GameDBKey& InGameDBKey) = 0;
 

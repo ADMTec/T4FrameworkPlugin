@@ -4,14 +4,14 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4Framework/Classes/T4GameInstanceBase.h"
-#include "T4GameplayInstance.generated.h"
+#include "T4GameplayGameInstance.generated.h"
 
 /**
   * http://api.unrealengine.com/KOR/Gameplay/Framework/GameFlow/index.html
  */
 class AGameModeBase;
 UCLASS()
-class T4GAMEPLAY_API UT4GameplayInstance : public UT4GameInstanceBase
+class T4GAMEPLAY_API UT4GameplayGameInstance : public UT4GameInstanceBase
 {
 	GENERATED_UCLASS_BODY()
 };
