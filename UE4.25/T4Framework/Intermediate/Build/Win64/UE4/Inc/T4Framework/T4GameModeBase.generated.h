@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAT4GameModeBase(); \
 	friend struct Z_Construct_UClass_AT4GameModeBase_Statics; \
 public: \
-	DECLARE_CLASS(AT4GameModeBase, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Framework"), NO_API) \
+	DECLARE_CLASS(AT4GameModeBase, AGameMode, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Framework"), NO_API) \
 	DECLARE_SERIALIZER(AT4GameModeBase)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAT4GameModeBase(); \
 	friend struct Z_Construct_UClass_AT4GameModeBase_Statics; \
 public: \
-	DECLARE_CLASS(AT4GameModeBase, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Framework"), NO_API) \
+	DECLARE_CLASS(AT4GameModeBase, AGameMode, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Framework"), NO_API) \
 	DECLARE_SERIALIZER(AT4GameModeBase)
 
 

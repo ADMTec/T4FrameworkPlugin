@@ -16,7 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SkillTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillTableRow();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPakAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPackAsset_NoRegister();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillVisualData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillShapeData();
@@ -53,21 +53,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IndicateActionPakAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IndicateActionPackAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_IndicateActionPakAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_IndicateActionPackAsset;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CancelActionPakAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CancelActionPackAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CancelActionPakAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CancelActionPackAsset;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CastingActionPakAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CastingActionPackAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CastingActionPakAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CastingActionPackAsset;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultActionPakAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultActionPackAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultActionPakAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultActionPackAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillStatDBKey_MetaData[];
 #endif
@@ -97,7 +97,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4SkillTableRow>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPakAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #135\n" },
 		{ "EditCondition", "bCasting" },
@@ -105,9 +105,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		{ "ToolTip", "#135" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPakAsset = { "IndicateActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, IndicateActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPakAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPackAsset = { "IndicateActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, IndicateActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPackAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPakAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #117 : bAiming\n" },
 		{ "EditCondition", "bCasting" },
@@ -115,24 +115,24 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		{ "ToolTip", "#117 : bAiming" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPakAsset = { "CancelActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, CancelActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPakAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPackAsset = { "CancelActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, CancelActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPackAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPakAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bCasting" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPakAsset = { "CastingActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, CastingActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPakAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPackAsset = { "CastingActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, CastingActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPackAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
 		{ "ToolTip", "#114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPakAsset = { "DefaultActionPakAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, DefaultActionPakAsset), Z_Construct_UClass_UT4ActionPakAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPakAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPackAsset = { "DefaultActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, DefaultActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillStatDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -166,10 +166,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPakAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPakAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPakAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPakAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_IndicateActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CancelActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_CastingActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_DefaultActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillVisualData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillShapeData,
@@ -203,7 +203,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SkillTableRow_Hash() { return 1441096689U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SkillTableRow_Hash() { return 964198969U; }
 class UScriptStruct* FT4SkillVisualData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

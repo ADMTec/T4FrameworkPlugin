@@ -22,8 +22,6 @@
 #include "T4Gameplay/Classes/Player/T4GamePlayerController.h"
 #include "T4Gameplay/Classes/T4GameplayGameInstance.h"
 #include "T4Gameplay/Classes/T4GameplayGameMode.h"
-#include "T4Gameplay/Classes/T4GameplayGameState.h"
 #include "T4Gameplay/Classes/Player/UI/T4GameplayHUD.h"
-#include "T4Gameplay/Classes/T4GameplayPlayerState.h"
 #include "T4Gameplay/Classes/AIController/T4NPCAIController.h"
 

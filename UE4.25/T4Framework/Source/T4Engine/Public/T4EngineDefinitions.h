@@ -38,6 +38,14 @@ static const FName T4Const_WorldTimeTagSunriseName = TEXT("Sunrise");	// Hour : 
 
 static const FName T4Const_WorldTimeTagFallbackName = T4Const_WorldTimeTagDayName; // #123 : Day 를 Fallback 으로 사용한다. 별도로 세팅하지 않음
 
+// #97
+static const float T4Const_WorldTimeHoursPerDay = 24.0f;
+
+// #97 : Start Hour / End Hour / Range Hour (24 Hour)
+static const FVector T4Const_WorldTimeDayInfo(9.0f, 18.0f, 9.0f);
+static const FVector T4Const_WorldTimeSunsetInfo(18.0f, 20.0f, 2.0f);
+static const FVector T4Const_WorldTimeNightInfo(20.0f, 7.0f, 11.0f);
+static const FVector T4Const_WorldTimeSunriseInfo(7.0f, 9.0f, 2.0f);
 
 // #132 : Action Key
 static const FT4ActionKey T4Const_WorldActorRotationPrimaryKey(TEXT("T4ActionOverrideRotationPrimaryKey"), true, true); // #132

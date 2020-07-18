@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4GameplayGameMode, 2718015157);
+	IMPLEMENT_CLASS(AT4GameplayGameMode, 3873228289);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4GameplayGameMode>()
 	{
 		return AT4GameplayGameMode::StaticClass();

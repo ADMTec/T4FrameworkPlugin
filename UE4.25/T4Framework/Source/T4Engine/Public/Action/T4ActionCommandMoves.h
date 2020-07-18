@@ -336,7 +336,7 @@ public:
 };
 
 // #63
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 USTRUCT()
 struct T4ENGINE_API FT4LaunchActionCommand : public FT4ActionCommandBase
 {
@@ -397,10 +397,10 @@ public:
 	FT4ActorID OwnerActorID; // #112
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UT4ActionPakAsset> HeadActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> HeadActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UT4ActionPakAsset> EndActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> EndActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4LoadingPolicy LoadingPolicy;
@@ -424,7 +424,7 @@ public:
 	bool bEnableBounceOut; // #127 : 명확한 타겟없이 무한대로 발사될 경우 부딪히는 효과 처리 사용 여부
 
 	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bEnableBounceOut"))
-	TSoftObjectPtr<UT4ActionPakAsset> BounceOutActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> BounceOutActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bUseOscillate; // #127 : 흔들림 여부

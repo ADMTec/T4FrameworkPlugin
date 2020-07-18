@@ -6,7 +6,7 @@
 #include "T4ActionKey.h"
 #include "T4ActionTypes.h"
 #include "T4EngineTypes.h"
-#include "T4Asset/Public/ActionPak/T4ActionBase.h"
+#include "T4Asset/Public/ActionPack/T4ActionBase.h"
 #include "T4ActionCommandBase.generated.h"
 
 /**

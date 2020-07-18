@@ -13,7 +13,7 @@
 /**
   * http://api.unrealengine.com/KOR/Gameplay/DataDriven/
  */
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 
 USTRUCT()
 struct FT4EffectShapeData // #135
@@ -85,7 +85,7 @@ public:
 	FT4EffectDBKey ChainEffectDBKey; // #68
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
-	TSoftObjectPtr<UT4ActionPakAsset> DefaultActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
 
 public:
 	FT4EffectTableRow()

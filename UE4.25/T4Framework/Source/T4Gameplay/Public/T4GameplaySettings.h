@@ -6,6 +6,7 @@
 #include "T4GameplayTypes.h"
 #include "T4Framework/Public/T4FrameworkTypes.h" // #126
 #include "GameFramework/PlayerInput.h" // #104
+#include "Engine/DeveloperSettings.h"
 #include "T4GameplaySettings.generated.h"
 
 /**
@@ -13,13 +14,26 @@
  */
 class UDataTable;
 class UTexture2D;
-UCLASS(config = T4Framework, defaultconfig)
-class T4GAMEPLAY_API UT4GameplaySettings : public UObject
+UCLASS(config = T4Framework, defaultconfig, meta = (DisplayName = "T4Gameplay"))
+class T4GAMEPLAY_API UT4GameplaySettings : public UDeveloperSettings
 {
-	GENERATED_BODY()
-
 public:
-	UT4GameplaySettings();
+	GENERATED_UCLASS_BODY()
+
+	// Begin UDeveloperSettings Interface
+	FName GetCategoryName() const override;
+#if WITH_EDITOR
+	FText GetSectionText() const override;
+#endif
+	// END UDeveloperSettings Interface
+
+#if WITH_EDITOR
+	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent);
+
+	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnGameplaySettingsChanged, const FString&, const UT4GameplaySettings*);
+
+	static FT4OnGameplaySettingsChanged& OnSettingsChanged();
+#endif
 
 public:
 	// Plugins/T4Framework/Config/DefaultT4Framework.ini
@@ -28,9 +42,6 @@ public:
 
 	UPROPERTY(EditAnywhere, config, Category = "Game Data Table")
 	TSoftObjectPtr<UDataTable> GameMasterTablePath; // #48, #135
-
-	UPROPERTY(config, EditAnywhere, Category = "Game Constant Table")
-	FSoftObjectPath RacesConstantTablePath; // #114
 
 	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
 	ET4ControlModeType DefaultControlMode;
@@ -59,51 +70,6 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Game Control")
 	float ControlCameraPitchMaxAngle; // #151
 
-	UPROPERTY(EditAnywhere, config, Category = "Game Control")
-	float ControlCameraYawMaxValue; // #151
-
-	UPROPERTY(EditAnywhere, config, Category = "Player QuickSpawn (ALT + 1 ~ 9)")
-	FName PlayerDBKeyName_Key1;
-	
-	UPROPERTY(EditAnywhere, config, Category = "Player QuickSpawn (ALT + 1 ~ 9)")
-	FName PlayerDBKeyName_Key2;
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key0; // #146
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key1; // #50
-	
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key2;
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key3; // #104
-	
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key4; // #104
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key5; // #109
-	
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key6; // #109
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key7; // #112
-
-	UPROPERTY(EditAnywhere, config, Category = "NPC QuickSpawn (CTRL + 1 ~ 9)")
-	FName NPCDBKeyName_Key8; // #112
-
-	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDBKeyName_Key1; // #45
-
-	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDBKeyName_Key2; // #48
-
-	UPROPERTY(EditAnywhere, config, Category = "Equip Weapon (Player Spawned + 1 ~ 9)")
-	FName WeaponDBKeyName_Key3; // #109
-
 	UPROPERTY(EditAnywhere, config, Category = "Gameplay Network")
 	float DefaultNetworkLatencySec; // #52
 
@@ -113,8 +79,8 @@ public:
 	UPROPERTY(config, EditAnywhere, Category = "Bindings")
 	TArray<FInputAxisKeyMapping> AxisMappings;
 
-private:
+protected:
 #if WITH_EDITOR
-	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent);
+	static FT4OnGameplaySettingsChanged SettingsChangedDelegate;
 #endif
 };

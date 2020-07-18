@@ -11,29 +11,29 @@
  */
 // #T4_ADD_ACTION_TAG_CMD
 
-// ET4ActionCommandType::ActionPak
+// ET4ActionCommandType::ActionPack
 // ET4ActionCommandType::Stop
 
 USTRUCT()
-struct T4ENGINE_API FT4ActionPakActionCommand : public FT4ActionCommandBase
+struct T4ENGINE_API FT4ActionPackActionCommand : public FT4ActionCommandBase
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<class UT4ActionPakAsset> ActionPakAsset;
+	TSoftObjectPtr<class UT4ActionPackAsset> ActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4LoadingPolicy LoadingPolicy;
 
 public:
-	FT4ActionPakActionCommand()
+	FT4ActionPackActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
 		, LoadingPolicy(ET4LoadingPolicy::Default)
 	{
 	}
 
-	static ET4ActionCommandType StaticActionType() { return ET4ActionCommandType::ActionPak; }
+	static ET4ActionCommandType StaticActionType() { return ET4ActionCommandType::ActionPack; }
 
 	FString ToString() const override
 	{

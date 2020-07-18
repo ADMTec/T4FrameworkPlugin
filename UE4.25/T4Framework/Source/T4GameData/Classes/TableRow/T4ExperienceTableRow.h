@@ -12,7 +12,7 @@
 /**
   * #114
  */
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 
 USTRUCT()
 struct FT4ExperienceTableRow : public FT4TableRowBase

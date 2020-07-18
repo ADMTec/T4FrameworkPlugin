@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Minimap/T4MinimapLevelModel.h"
-#include "T4EditorStructs.h"
+#include "T4EditorCommonStructs.h"
 
 #include "Stats/Stats.h"
 #include "Framework/Commands/UICommandList.h"

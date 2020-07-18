@@ -15,10 +15,6 @@ class T4GAMEPLAY_API AT4GameplayGameMode : public AT4GameModeBase
 {
 	GENERATED_UCLASS_BODY()
 
-public:
-	void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
-	void InitGameState() override;
-
 protected:
 	void NotifyStartPlay() override; // #144
 	void NotifyServerTravel(const FString& URL, bool bAbsolute) override; // #144

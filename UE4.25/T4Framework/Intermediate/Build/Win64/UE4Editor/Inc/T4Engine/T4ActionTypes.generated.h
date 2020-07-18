@@ -44,7 +44,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4ActionCommandType::Die) \
 	op(ET4ActionCommandType::Resurrect) \
 	op(ET4ActionCommandType::ReactionStop) \
-	op(ET4ActionCommandType::ActionPak) \
+	op(ET4ActionCommandType::ActionPack) \
 	op(ET4ActionCommandType::Stop) \
 	op(ET4ActionCommandType::Editor) \
 	op(ET4ActionCommandType::None) 

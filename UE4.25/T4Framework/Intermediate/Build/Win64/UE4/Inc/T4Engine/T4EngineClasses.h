@@ -16,5 +16,4 @@
 #include "T4Engine/Classes/World/T4MapZoneVolume.h"
 #include "T4Engine/Classes/Camera/T4PlayerCameraManager.h"
 #include "T4Engine/Classes/Camera/T4SpringArmComponent.h"
-#include "T4Engine/Classes/DataTable/T4ConstantDataTable.h"
 

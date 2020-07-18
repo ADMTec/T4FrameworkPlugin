@@ -9,7 +9,7 @@
 
 #include "Action/T4ActionKey.h"
 
-#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
+#include "T4Asset/Public/ActionPack/T4ActionPackTypes.h"
 #include "T4Asset/Public/Entity/T4EntityKey.h"
 
 #include "Components/SceneComponent.h"
@@ -198,7 +198,7 @@ public:
 	virtual void OnAnimNotifyMessage(const FT4AnimNotifyMessage* InMessage) = 0; // #111
 
 	virtual bool OnExecuteActionCommand(const FT4ActionCommandBase* InActionCmd, const FT4ActionParameters* InParam) = 0; // #76
-	virtual bool OnExecuteActionData(const FT4ActionDataBase* InActionData, const FT4ActionParameters* InParam) = 0; // #134 : ActionPak 의 Data 를 다른 대상에게 플레이 시킨다.
+	virtual bool OnExecuteActionData(const FT4ActionDataBase* InActionData, const FT4ActionParameters* InParam) = 0; // #134 : ActionPack 의 Data 를 다른 대상에게 플레이 시킨다.
 
 	virtual IT4AnimControl* GetAnimControl() const = 0; // #14
 	virtual IT4ActionControl* GetActionControl() = 0; // #20, #76 : Action Public Manager

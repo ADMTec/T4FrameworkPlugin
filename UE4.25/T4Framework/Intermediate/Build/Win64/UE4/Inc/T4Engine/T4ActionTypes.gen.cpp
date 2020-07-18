@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 		return ET4ActionCommandType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionCommandType(ET4ActionCommandType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActionCommandType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActionCommandType_Hash() { return 2040019349U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActionCommandType_Hash() { return 1885604735U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActionCommandType()
 	{
 #if WITH_HOT_RELOAD
@@ -68,16 +68,16 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "ET4ActionCommandType::Die", (int64)ET4ActionCommandType::Die },
 				{ "ET4ActionCommandType::Resurrect", (int64)ET4ActionCommandType::Resurrect },
 				{ "ET4ActionCommandType::ReactionStop", (int64)ET4ActionCommandType::ReactionStop },
-				{ "ET4ActionCommandType::ActionPak", (int64)ET4ActionCommandType::ActionPak },
+				{ "ET4ActionCommandType::ActionPack", (int64)ET4ActionCommandType::ActionPack },
 				{ "ET4ActionCommandType::Stop", (int64)ET4ActionCommandType::Stop },
 				{ "ET4ActionCommandType::Editor", (int64)ET4ActionCommandType::Editor },
 				{ "ET4ActionCommandType::None", (int64)ET4ActionCommandType::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "ActionPak.Comment", "// #132\n" },
-				{ "ActionPak.Name", "ET4ActionCommandType::ActionPak" },
-				{ "ActionPak.ToolTip", "#132" },
+				{ "ActionPack.Comment", "// #132\n" },
+				{ "ActionPack.Name", "ET4ActionCommandType::ActionPack" },
+				{ "ActionPack.ToolTip", "#132" },
 				{ "Aim.Comment", "// #63 : Only Projectile\n" },
 				{ "Aim.Name", "ET4ActionCommandType::Aim" },
 				{ "Aim.ToolTip", "#63 : Only Projectile" },
@@ -139,9 +139,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionTypes() {}
 				{ "Stance.Comment", "// #73\n" },
 				{ "Stance.Name", "ET4ActionCommandType::Stance" },
 				{ "Stance.ToolTip", "#73" },
-				{ "Stop.Comment", "// #24, #127 : ActionPakAsset\n" },
+				{ "Stop.Comment", "// #24, #127 : ActionPackAsset\n" },
 				{ "Stop.Name", "ET4ActionCommandType::Stop" },
-				{ "Stop.ToolTip", "#24, #127 : ActionPakAsset" },
+				{ "Stop.ToolTip", "#24, #127 : ActionPackAsset" },
 				{ "Teleport.Name", "ET4ActionCommandType::Teleport" },
 				{ "ToolTip", "#134" },
 				{ "Turn.Comment", "// #137 : WorldActor \xed\x9a\x8c\xec\xa0\x84 (C/S \xeb\x8f\x99\xea\xb8\xb0\xed\x99\x94!)\n" },

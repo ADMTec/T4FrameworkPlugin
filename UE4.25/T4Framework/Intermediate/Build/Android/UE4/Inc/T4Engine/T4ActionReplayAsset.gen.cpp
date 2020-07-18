@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionReplayAsset() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StopActionCommand();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionPakActionCommand();
+	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionPackActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ResurrectActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4DieActionCommand();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4CrowdControlActionCommand();
@@ -275,7 +275,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions = { "PakActions", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionReplayData, PakActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_Inner = { "PakActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4ActionPakActionCommand, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_PakActions_Inner = { "PakActions", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4ActionPackActionCommand, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionReplayData_Statics::NewProp_ResurrectActions_MetaData[] = {
 		{ "Category", "Default" },
@@ -606,7 +606,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionReplayData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionReplayData_Hash() { return 2443916510U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionReplayData_Hash() { return 1175733302U; }
 class UScriptStruct* FT4ActionReplayItem::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

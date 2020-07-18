@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4EditorCommonConstants.h" // #39
 #include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
-#include "T4Engine/Public/T4EngineConstants.h" // #39
 #include "ST4DropListViewWidget.h"
 
 /**
@@ -33,7 +33,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		TSharedRef<FT4EditorViewTargetSelector> InViewTargetSelector, // #131 : Valid Check
-		ET4EngineConstantTable InEngineConstantType
+		FName InContentTableName
 	);
 
 	void Construct(
@@ -45,7 +45,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
-		ET4EngineConstantTable InEngineConstantType
+		FName InContentTableName
 	);
 
 	void Construct(
@@ -71,7 +71,7 @@ private:
 
 	bool bUseAdditive; // #138
 
-	ET4EngineConstantTable EngineConstantType;
+	FName ContentTableName;
 	TWeakPtr<FT4EditorViewTargetSelector> ViewTargetSelector;
 	const TArray<FT4AnimsetAnimSequenceData>* AnimSequenceArrayRef; // #107
 

@@ -7,12 +7,11 @@
 
 #include "T4Asset/Public/Entity/T4EntityKey.h"
 #include "T4Asset/Public/Entity/T4EntityTypes.h"
-#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
+#include "T4Asset/Public/ActionPack/T4ActionPackTypes.h"
 
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4Engine/Public/T4EngineStructs.h" // #87
 #include "T4Engine/Public/Action/T4ActionKey.h"
-#include "T4Engine/Public/T4EngineConstants.h" // #39
 
 #include "T4Framework/Public/T4FrameworkEditor.h" // #126
 
@@ -24,7 +23,7 @@ class FCanvas;
 class UWorld;
 struct FT4ActionParameters;
 class UAnimSequence;
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 class UT4EntityAsset;
 class UT4ContentSpawnAsset;
 class IT4WorldActor;
@@ -215,13 +214,13 @@ public:
 	); // #39
 
 	virtual void ClientPlayAction(
-		UT4ActionPakAsset* InActionPakAsset, 
+		UT4ActionPackAsset* InActionPackAsset, 
 		float InStartTimeSec, 
 		const FT4ActionParameters* InActionParameters
 	); // #39, #56
 
 	void ClientPlayAction(
-		UT4ActionPakAsset* InActionPakAsset, 
+		UT4ActionPackAsset* InActionPackAsset, 
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 
@@ -230,7 +229,7 @@ public:
 
 	void ClientPlayAction(
 		ET4LayerType InLayerType, 
-		UT4ActionPakAsset* InActionPakAsset, 
+		UT4ActionPackAsset* InActionPackAsset, 
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 

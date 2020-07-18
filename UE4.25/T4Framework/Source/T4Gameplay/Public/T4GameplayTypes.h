@@ -7,9 +7,8 @@
 #include "T4GameplayTypes.generated.h"
 
 /**
-  * #40
+  * #40, #126
  */
- // #40, #126
 UENUM()
 enum class ET4ControlModeType : uint8
 {

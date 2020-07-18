@@ -97,7 +97,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayTypes() {}
 		return ET4ControlModeType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ControlModeType(ET4ControlModeType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4ControlModeType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ControlModeType_Hash() { return 3006848110U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ControlModeType_Hash() { return 2761999169U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4ControlModeType()
 	{
 #if WITH_HOT_RELOAD
@@ -118,7 +118,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayTypes() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Comment", "/**\n  * #40\n */// #40, #126\n" },
+				{ "Comment", "/**\n  * #40, #126\n */" },
 				{ "FPS.Comment", "// #40\n" },
 				{ "FPS.Name", "ET4ControlModeType::FPS" },
 				{ "FPS.ToolTip", "#40" },
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayTypes() {}
 				{ "ShoulderView.Comment", "// #139\n" },
 				{ "ShoulderView.Name", "ET4ControlModeType::ShoulderView" },
 				{ "ShoulderView.ToolTip", "#139" },
-				{ "ToolTip", "#40\n // #40, #126" },
+				{ "ToolTip", "#40, #126" },
 				{ "TPS.Name", "ET4ControlModeType::TPS" },
 			};
 #endif

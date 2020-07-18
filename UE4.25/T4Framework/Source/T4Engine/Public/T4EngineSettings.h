@@ -126,12 +126,6 @@ public:
 	float FPS_RotationSpeed; // #121
 
 	UPROPERTY(config, EditAnywhere, Category=DataTable)
-	FSoftObjectPath MapZoneConstantTablePath; // #92
-
-	UPROPERTY(config, EditAnywhere, Category=DataTable)
-	FSoftObjectPath TimeTagConstantTablePath; // #90
-
-	UPROPERTY(config, EditAnywhere, Category=DataTable)
 	FSoftObjectPath PreviewSceneEnvironmentAssetPath; // #94
 
 	UPROPERTY(config, EditAnywhere, Category=DataTable)

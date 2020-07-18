@@ -8,7 +8,7 @@
 
 
 #include "T4Asset/Classes/Common/T4CommonAssetStructs.h"
-#include "T4Asset/Classes/ActionPak/T4ActionPakAsset.h"
+#include "T4Asset/Classes/ActionPack/T4ActionPackAsset.h"
 #include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
 #include "T4Asset/Classes/Entity/T4EntityAsset.h"
 #include "T4Asset/Classes/Entity/T4ActorEntityAsset.h"

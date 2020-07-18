@@ -54,7 +54,7 @@ enum class ET4ActionCommandType : uint32
 	Resurrect, // #76
 	ReactionStop, // #132
 
-	ActionPak, // #24, #127 : ActionPakAsset
+	ActionPack, // #24, #127 : ActionPackAsset
 
 	Stop,
 

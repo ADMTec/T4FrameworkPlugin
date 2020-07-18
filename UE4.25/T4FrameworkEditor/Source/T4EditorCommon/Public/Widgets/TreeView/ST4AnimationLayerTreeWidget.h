@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4EditorCommonConstants.h" // #39
 #include "T4Asset/Classes/Animset/T4AnimsetAsset.h"
-#include "T4Engine/Public/T4EngineConstants.h" // #39
 #include "ST4TreeViewWidget.h"
 
 /**
@@ -26,7 +26,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
-		ET4EngineConstantTable InEngineConstantType
+		FName InContentTableName
 	);
 
 	void Construct(
@@ -54,7 +54,7 @@ protected:
 	TSharedPtr<SHeaderRow> GenerateHeaderWidget() override;
 
 private:
-	ET4EngineConstantTable EngineConstantType;
+	FName ConstantTableName;
 	const TArray<FT4AnimsetAnimSequenceData>* AnimSequenceArrayRef; // #107
 	const TArray<FT4AnimsetAnimSystemData>* AnimSystemDataArrayRef; // #131
 	const TArray<FT4AnimsetAnimStateData>* AnimStateDataArrayRef; // #131

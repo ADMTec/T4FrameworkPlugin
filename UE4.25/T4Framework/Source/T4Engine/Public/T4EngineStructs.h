@@ -6,7 +6,7 @@
 #include "T4EngineTypes.h"
 #include "T4EngineDefinitions.h"
 
-#include "T4Asset/Public/ActionPak/T4ActionPakTypes.h"
+#include "T4Asset/Public/ActionPack/T4ActionPackTypes.h"
 #include "T4Asset/Public/Entity/T4EntityTypes.h" // #126
 #include "T4Asset/Public/Animset/T4AnimsetTypes.h" // #129
 
@@ -149,7 +149,7 @@ struct FT4AnimParam // #38
 		, BlendInTimeSec(T4Const_DefaultAnimBlendTimeSec)
 		, BlendOutTimeSec(T4Const_DefaultAnimBlendTimeSec)
 		, PlayCutOffTimeSec(0.0f) // #134 : 플레이중인 애니를 짜르고 들어간다. Sequential 에서만 사용됨
-		, MaxLoopPlayTimeSec(0.0f) // #134 : Looping 시간을 지정할 경우, ActionPak Lifecycle = Duration 외에는 사용하지 말것!!
+		, MaxLoopPlayTimeSec(0.0f) // #134 : Looping 시간을 지정할 경우, ActionPack Lifecycle = Duration 외에는 사용하지 말것!!
 	{
 	}
 
@@ -161,7 +161,7 @@ struct FT4AnimParam // #38
 	float BlendInTimeSec;
 	float BlendOutTimeSec;
 	float PlayCutOffTimeSec; // #134 : 플레이중인 애니를 짜르고 들어간다. Sequential 에서만 사용됨
-	float MaxLoopPlayTimeSec; // #134 : Looping 시간을 지정할 경우, ActionPak Lifecycle = Duration 외에는 사용하지 말것!!
+	float MaxLoopPlayTimeSec; // #134 : Looping 시간을 지정할 경우, ActionPack Lifecycle = Duration 외에는 사용하지 말것!!
 };
 
 class IT4WorldActor;

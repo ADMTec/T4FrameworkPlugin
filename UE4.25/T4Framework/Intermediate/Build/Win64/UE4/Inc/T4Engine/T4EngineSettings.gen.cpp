@@ -46,14 +46,6 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PreviewSceneEnvironmentAssetPath;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimeTagConstantTablePath_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TimeTagConstantTablePath;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MapZoneConstantTablePath_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MapZoneConstantTablePath;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FPS_RotationSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FPS_RotationSpeed;
@@ -215,30 +207,12 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData[] = {
 		{ "Category", "DataTable" },
-		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
-		{ "ToolTip", "#90" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath = { "PreviewSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PreviewSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TimeTagConstantTablePath_MetaData[] = {
-		{ "Category", "DataTable" },
-		{ "Comment", "// #92\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
-		{ "ToolTip", "#92" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TimeTagConstantTablePath = { "TimeTagConstantTablePath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, TimeTagConstantTablePath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TimeTagConstantTablePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TimeTagConstantTablePath_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MapZoneConstantTablePath_MetaData[] = {
-		{ "Category", "DataTable" },
 		{ "Comment", "// #121\n" },
 		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MapZoneConstantTablePath = { "MapZoneConstantTablePath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, MapZoneConstantTablePath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MapZoneConstantTablePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MapZoneConstantTablePath_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath = { "PreviewSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PreviewSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
@@ -484,8 +458,6 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TimeTagConstantTablePath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MapZoneConstantTablePath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_ZoomInDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset,
@@ -545,7 +517,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 2886032729);
+	IMPLEMENT_CLASS(UT4EngineSettings, 2419963164);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

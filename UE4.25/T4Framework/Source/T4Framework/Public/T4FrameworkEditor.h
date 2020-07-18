@@ -63,7 +63,7 @@ enum class ET4EditorFindTarget : uint8 // #117 : 공객 대상을 찾을 경우�
 	None UMETA(Hidden),
 };
 
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 
 
 USTRUCT()
@@ -136,16 +136,16 @@ public:
 	float AimingPitchAngle; // #127
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionPakAsset> DefaultActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionPakAsset> CastingActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> CastingActionPackAsset;
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting"))
-	TSoftObjectPtr<UT4ActionPakAsset> CancelActionPakAsset; // #135
+	TSoftObjectPtr<UT4ActionPackAsset> CancelActionPackAsset; // #135
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionPakAsset> IndicateActionPakAsset; // #116
+	TSoftObjectPtr<UT4ActionPackAsset> IndicateActionPackAsset; // #116
 
 public:
 	FT4EditorSkillDataInfo()
@@ -215,7 +215,7 @@ public:
 	FName ChainEffectDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TSoftObjectPtr<UT4ActionPakAsset> ActionPakAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> ActionPackAsset;
 
 public:
 	FT4EditorEffectDataInfo()
@@ -306,7 +306,7 @@ public:
 // #114 : 에디터에서 N종의 게임 컨텐츠 데이터에서 정보를 얻기 위한 인터페이스
 //        컨텐츠 쪽에서 구현해주어야 에디터에서 사용할 수 있음 (T4Gameplay 을 사용하지 않을 경우를 위함)
 class UT4EntityAsset;
-class UT4ActionPakAsset;
+class UT4ActionPackAsset;
 class T4FRAMEWORK_API IT4EditorGameData // #60
 {
 public:
@@ -317,7 +317,7 @@ public:
 
 	virtual UT4EntityAsset* GetEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0;
 	virtual UT4EntityAsset* GetWeaponEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
-	virtual UT4ActionPakAsset* GetActionPakAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
+	virtual UT4ActionPackAsset* GetActionPackAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
 
 	virtual bool GetNPCDataInfo(const FName& InDataName, FT4EditorNPCDataInfo& OutData) = 0; // #135
 	virtual bool GetSkillDataInfo(const FName& InDataName, FT4EditorSkillDataInfo& OutData) = 0;
@@ -350,7 +350,7 @@ public:
 	virtual const FT4EditorSkillDataInfo& GetOverrideSkillDataInfo() const = 0;
 	virtual const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const = 0;
 
-	virtual const FSoftObjectPath& GetOverrideActionPakPath() const = 0;
+	virtual const FSoftObjectPath& GetOverrideActionPackPath() const = 0;
 };
 
 // #114 : 에디터에서 N종의 게임 로직을 사용하기 위한 인터페이스

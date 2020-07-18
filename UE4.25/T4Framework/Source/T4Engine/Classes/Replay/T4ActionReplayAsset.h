@@ -185,7 +185,7 @@ public:
 	// T4ActionCommandCommons.h
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4ActionPakActionCommand> PakActions;
+	TArray<FT4ActionPackActionCommand> PakActions;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FT4StopActionCommand> StopActions;

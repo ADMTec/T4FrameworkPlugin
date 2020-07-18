@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 // Cross Module References
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4GameModeBase_NoRegister();
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4GameModeBase();
-	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
+	ENGINE_API UClass* Z_Construct_UClass_AGameMode();
 	UPackage* Z_Construct_UPackage__Script_T4Framework();
 // End Cross Module References
 	void AT4GameModeBase::StaticRegisterNativesAT4GameModeBase()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AT4GameModeBase_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
+		(UObject* (*)())Z_Construct_UClass_AGameMode,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Framework,
 	};
 #if WITH_METADATA
@@ -75,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4GameModeBase, 769552341);
+	IMPLEMENT_CLASS(AT4GameModeBase, 2048133520);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4GameModeBase>()
 	{
 		return AT4GameModeBase::StaticClass();
