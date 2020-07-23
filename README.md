@@ -23,7 +23,7 @@
 	  - https://docs.unrealengine.com/ko/Engine/Basics/Projects/OpenExisting/index.html
 	- T4FrameworkExample 프로젝트 사용
 	  - https://github.com/Tech4Labs/T4FrameworkExample
-  - 해당 프로젝트에 T4Framework 플러그인 사용을 활성화합니다.
+  - 언리얼 프로젝트에 T4Framework 플러그인 사용을 활성화합니다.
     - .uproject
 	  - T4Framework and T4FrameworkEditor
 	  - "Enabled": true
