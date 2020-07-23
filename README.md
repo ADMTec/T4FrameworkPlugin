@@ -29,6 +29,6 @@
 	  - "Enabled": true
 - **참고**
   - 정식 사용을 위해서는 Subscription license 가 필요합니다.
-  - 유저 프로젝트에 필요한 기능 구현을 대행하고 있습니다.
+  - 프로젝트에 필요한 신규 기능 구현을 대행하고 있습니다.
 - **문의**
   - <niceofer@hotmail.com>
