@@ -42,6 +42,9 @@ public:
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	float MinAttackRange; // #135 : 이 거리 안이면 Approach 에서 뒤로 이동 후 다시 공격하도록 처리하기 위해 추가
 
 	UPROPERTY(EditAnywhere, Category = Common)

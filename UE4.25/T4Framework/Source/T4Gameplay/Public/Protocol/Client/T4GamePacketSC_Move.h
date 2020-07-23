@@ -40,10 +40,10 @@ public:
 	FVector MoveToLocation; // #52 : Velocity * (1.0f / DefaultNetworkLatencySec) / 레이턴시 감안 복원
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	float HeadYawAngle; // #40 : 필요할 때 3D 로 확장. #50 : 이동 방향과 Head 방향이 다를 경우를 대비해 존재
+	float MoveSpeed; // #150
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	bool bForceMaxSpeed; // #52 : MovementComponet::MaxSpeed 를 사용할지에 대한 Flag, 기본값이 false 로 Velocity 에서 Speed 를 얻는다. 동기화 이슈!!
+	float HeadYawAngle; // #40 : 필요할 때 3D 로 확장. #50 : 이동 방향과 Head 방향이 다를 경우를 대비해 존재
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(VisibleAnywhere, Category = Default)
@@ -57,8 +57,8 @@ public:
 	FT4GamePacketSC_Move()
 		: FT4GamePacketSC_Base(ET4GamePacketSC::Move)
 		, MoveToLocation(FVector::ZeroVector)
+		, MoveSpeed(0.0f)
 		, HeadYawAngle(TNumericLimits<float>::Max())
-		, bForceMaxSpeed(false) // #52
 #if WITH_EDITORONLY_DATA
 		, ServerNavPoint(FVector::ZeroVector) // #52
 		, ServerDirection(FVector::ForwardVector) // #52

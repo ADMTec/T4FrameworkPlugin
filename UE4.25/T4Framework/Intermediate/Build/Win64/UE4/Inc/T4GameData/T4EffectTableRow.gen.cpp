@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EffectTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectShapeData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4MoveAngleType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
 // End Cross Module References
@@ -67,6 +68,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EffectShapeData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EffectShapeData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Version_MetaData[];
 #endif
@@ -118,6 +123,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData = { "EffectShapeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, EffectShapeData), Z_Construct_UScriptStruct_FT4EffectShapeData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #T4_ADD_EFFECT_TAG_DATA\n" },
@@ -131,6 +143,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_ChainEffectDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::ReturnStructParams = {
@@ -161,7 +174,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 3127116111U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 2015974338U; }
 class UScriptStruct* FT4EffectShapeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

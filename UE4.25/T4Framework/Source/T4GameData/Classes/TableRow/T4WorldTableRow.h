@@ -4,7 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
-
+#include "T4Engine/Public/T4EngineDefinitions.h"
 #include "T4WorldTableRow.generated.h"
 
 /**
@@ -23,12 +23,23 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category= Common)
+	FName WorldTimeTag;
+
+	UPROPERTY(EditAnywhere, Category= Common, meta = (ClampMin = "0.1", ClampMax = "5000"))
+	float WorldTimeScale;
+
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
 	TSoftObjectPtr<UT4MapEntityAsset> EntityAsset;
 
 public:
 	FT4WorldTableRow()
 		: Version(0) // #135
+		, WorldTimeTag(T4Const_WorldTimeTagDayName)
+		, WorldTimeScale(1.0f)
 	{
 	}
 };

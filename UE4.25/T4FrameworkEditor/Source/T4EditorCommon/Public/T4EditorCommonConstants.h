@@ -30,7 +30,7 @@ static const FName T4Editor_ConstnatTablePlayTagAction = TEXT("PlayTagAction"); 
 static const FName T4Editor_ConstnatTableAnimset = TEXT("Animset");  // #73
 static const FName T4Editor_ConstnatTableStance = TEXT("Stance"); // #106
 
-static const FName T4Editor_ConstnatTableReaction = TEXT("TimeTag"); // #76
+static const FName T4Editor_ConstnatTableReaction = TEXT("Reaction"); // #76
 
 enum ET4EditorConstantValueType // #92
 {

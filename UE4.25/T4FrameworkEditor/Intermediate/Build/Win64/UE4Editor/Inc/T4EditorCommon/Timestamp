@@ -1,8 +1,9 @@
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Classes\ContentTable\T4EditorConstantDataTable.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Helper\T4EditorActionReplayController.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Helper\T4EditorReplaySystemController.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Minimap\T4MinimapTileDetails.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Settings\T4FrameworkEditorUserSettings.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Utility\T4EditorThumbnailRenderer.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Helper\T4EditorEnvironmentTimeObject.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Helper\T4EditorGameplayController.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Utility\T4EditorThumbnailRenderer.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Minimap\T4MinimapTileDetails.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Private\T4EditorCommonSettings.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Private\Assets\Factories\T4ActionReplayAssetFactory.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Public\Settings\T4FrameworkEditorSettings.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4FrameworkEditor\HostProject\Plugins\T4FrameworkEditor\Source\T4EditorCommon\Private\Assets\Factories\T4ReplaySystemAssetFactory.h

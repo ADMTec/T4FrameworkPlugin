@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Framework/Classes/Controller/AI/T4AIDefaultPawnBase.h"
+#include "T4Framework/Classes/NPC/T4AIDefaultPawnBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4AIDefaultPawnBase() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4AIDefaultPawnBase_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  *\n */" },
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "Controller/AI/T4AIDefaultPawnBase.h" },
-		{ "ModuleRelativePath", "Classes/Controller/AI/T4AIDefaultPawnBase.h" },
+		{ "IncludePath", "NPC/T4AIDefaultPawnBase.h" },
+		{ "ModuleRelativePath", "Classes/NPC/T4AIDefaultPawnBase.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4AIDefaultPawnBase_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AIDefaultPawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4AIDefaultPawnBase, 3720617859);
+	IMPLEMENT_CLASS(AT4AIDefaultPawnBase, 3333863562);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4AIDefaultPawnBase>()
 	{
 		return AT4AIDefaultPawnBase::StaticClass();

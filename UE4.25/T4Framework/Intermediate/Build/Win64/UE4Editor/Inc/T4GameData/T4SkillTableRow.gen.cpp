@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SkillTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillVisualData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillShapeData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4MoveAngleType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameAttackType();
@@ -80,6 +81,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillShapeData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkillShapeData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Version_MetaData[];
 #endif
@@ -157,6 +162,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillShapeData = { "SkillShapeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, SkillShapeData), Z_Construct_UScriptStruct_FT4SkillShapeData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillShapeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillShapeData_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_UID_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_UID_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_Version_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #T4_ADD_SKILL_CONTENT_TAG \n" },
@@ -173,6 +185,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillVisualData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_SkillShapeData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::NewProp_Version,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4SkillTableRow_Statics::ReturnStructParams = {
@@ -203,7 +216,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SkillTableRow_Hash() { return 964198969U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SkillTableRow_Hash() { return 2037719163U; }
 class UScriptStruct* FT4SkillVisualData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

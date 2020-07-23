@@ -28,7 +28,7 @@ public:
 	float OffsetTimeSec; // 지정 시간을 건너띄어 플레이
 
 	UPROPERTY(Transient)
-	bool bTransient; // #110 : 예) true 일 경우 Action Replay 녹화에 포함되지 않는다.
+	bool bTransient; // #110 : 예) true 일 경우 Replay 녹화에 포함되지 않는다.
 
 public:
 	FT4ActionCommandBase()

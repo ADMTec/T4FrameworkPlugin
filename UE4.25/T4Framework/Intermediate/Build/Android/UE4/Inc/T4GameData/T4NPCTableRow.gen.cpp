@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCStatDBKey();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatLevel();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCSpeedData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEnemyType();
 // End Cross Module References
 class UScriptStruct* FT4NPCTableRow::StaticStruct()
@@ -103,6 +104,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RaceName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_RaceName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Version_MetaData[];
 #endif
@@ -223,6 +228,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_RaceName = { "RaceName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, RaceName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_RaceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_RaceName_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_UID_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_UID_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_Version_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// FT4NPCDBRowDetails::CustomizeDetails\n" },
@@ -245,6 +257,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeStanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeAnimSetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_RaceName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_Version,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::ReturnStructParams = {
@@ -275,7 +288,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 688369155U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 79442220U; }
 class UScriptStruct* FT4NPCBehaviorData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -441,9 +454,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_EnemyType_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #114\n// FT4NPCAIBehaviorData : AIController (Runtime)\n// FT4NPCBehaviorData : NPC DataTable (Original Set)\n// FT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)\n" },
+		{ "Comment", "// #114\n// FT4BuiltinNPCAIBehaviorData : AIController (Runtime)\n// FT4NPCBehaviorData : NPC DataTable (Original Set)\n// FT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
-		{ "ToolTip", "#114\nFT4NPCAIBehaviorData : AIController (Runtime)\nFT4NPCBehaviorData : NPC DataTable (Original Set)\nFT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)" },
+		{ "ToolTip", "#114\nFT4BuiltinNPCAIBehaviorData : AIController (Runtime)\nFT4NPCBehaviorData : NPC DataTable (Original Set)\nFT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_EnemyType = { "EnemyType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCBehaviorData, EnemyType), Z_Construct_UEnum_T4GameData_ET4GameEnemyType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_EnemyType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_EnemyType_MetaData)) };
@@ -488,7 +501,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4NPCBehaviorData_Hash() { return 3825443981U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4NPCBehaviorData_Hash() { return 3251234730U; }
 class UScriptStruct* FT4NPCSpeedData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

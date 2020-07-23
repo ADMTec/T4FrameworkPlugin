@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4Abnormal.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4Abnormal.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Abnormal() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4Abnormal_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Wait" },
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4Abnormal.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4Abnormal.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4Abnormal.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4Abnormal.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTTask_T4Abnormal_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Abnormal() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4Abnormal, 3985232909);
+	IMPLEMENT_CLASS(UT4BTTask_T4Abnormal, 3599326197);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4Abnormal>()
 	{
 		return UT4BTTask_T4Abnormal::StaticClass();

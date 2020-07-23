@@ -10,7 +10,6 @@
 /**
   * #48
  */
-
 static const FName T4Const_DefaultGameContentName = TEXT("Default"); // #135
 
 // #T4_ADD_GAME_DATATABLE
@@ -35,7 +34,6 @@ enum class ET4GameDBType : uint8
 	Effect,
 
 	Stat, // #114
-	Experience, // #114
 
 	Nums,
 };
@@ -51,13 +49,66 @@ enum class ET4GameDBValidation : uint8
 	Nums UMETA(Hidden),
 };
 
+static const uint32 T4Const_EmptyGameUID = 0;
+
+USTRUCT()
+struct FT4GameUID // #150
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category = Common)
+	uint32 Value;
+
+public:
+	FT4GameUID()
+		: Value(T4Const_EmptyGameUID)
+	{
+	}
+
+	FT4GameUID(uint32 InValue)
+		: Value(InValue)
+	{
+	}
+
+	FORCEINLINE bool IsValid() const
+	{
+		return (T4Const_EmptyGameUID != Value) ? true : false;
+	}
+
+	FORCEINLINE bool operator==(const FT4GameUID& InRhs) const
+	{
+		return (Value == InRhs.Value) ? true : false;
+	}
+
+	FORCEINLINE bool operator!=(const FT4GameUID& InRhs) const
+	{
+		return (Value != InRhs.Value) ? true : false;
+	}
+
+	FORCEINLINE friend uint32 GetTypeHash(const FT4GameUID& InRhs)
+	{
+		return GetTypeHash(InRhs.Value);
+	}
+
+	FORCEINLINE void Empty()
+	{
+		Value = T4Const_EmptyGameUID;
+	}
+
+	FORCEINLINE FString ToString() const
+	{
+		return FString::Printf(TEXT("FT4GameUID:%u"), Value);
+	}
+};
+
 USTRUCT()
 struct FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	UPROPERTY(VisibleAnywhere, Category = Common, meta = (DisplayName = "Data Type"))
+	UPROPERTY(VisibleAnywhere, Category = Common, meta = (DisplayName = "DB Type"))
 	ET4GameDBType Type;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -178,7 +229,6 @@ public:
 			TEXT("EffectSet"), // #135
 			TEXT("Effect"),
 			TEXT("Stat"), // #114
-			TEXT("Experience"), // #114
 			TEXT("None"),
 		};
 		static_assert(UE_ARRAY_COUNT(GT4GameDBTypeStrings) == (uint8)(ET4GameDBType::Nums) + 1, "GameDBType doesn't match!");

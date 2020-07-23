@@ -24,6 +24,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameStatCategory StatCategory; // #114 : 사용처를 명시한다.
 

@@ -23,6 +23,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
 	UPROPERTY(EditAnywhere, Category= Common)
 	ET4GameSkillSetPlayMode PlayMode; // #142
 

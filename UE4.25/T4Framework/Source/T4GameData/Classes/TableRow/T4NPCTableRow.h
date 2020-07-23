@@ -61,7 +61,7 @@ struct FT4NPCBehaviorData // #108
 
 public:
 	// #114
-	// FT4NPCAIBehaviorData : AIController (Runtime)
+	// FT4BuiltinNPCAIBehaviorData : AIController (Runtime)
 	// FT4NPCBehaviorData : NPC DataTable (Original Set)
 	// FT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)
 
@@ -117,6 +117,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName RaceName; // #104, #114

@@ -20,8 +20,8 @@ struct T4EDITORCOMMON_API FT4WorldPreviewViewModelOptions
 
 	UT4MapEntityAsset* MapEntityAsset; // #104
 	ET4ViewModelEditMode EditMode; // #118
-	FString ActionReplayAssetName; // #104
-	FString ActionReplayFolderName; // #104
+	FString ReplaySystemAssetName; // #104
+	FString ReplayFolderName; // #104
 };
 
 class UT4EditorGameplayController; // #60, #104
@@ -55,8 +55,8 @@ public:
 	// FT4EditorViewModelBase
 	ET4ViewModelEditMode GetEditMode() const override { return ViewModelEditMode; }
 
-	void NotifyActionReplayRec() override; // #104
-	void NotifyActionReplayPlay() override; // #104
+	void NotifyReplayRec() override; // #104
+	void NotifyReplayPlay() override; // #104
 
 public:
 	FT4OnSubLevelUpdate& GetOnSubLevelUpdate() { return OnSubLevelUpdate; } // #86
@@ -80,11 +80,6 @@ public:
 	void SetCameraLocation(const FVector2D& InLocation); // #90
 	void SetCameraLocationAndRotation(const FVector& InLocation, const FRotator& InRotation); // #90, #103
 
-	bool GetPlayerViewPoint(
-		FVector& OutCameraLocation,
-		FRotator& OutCameraRotation,
-		FVector& OutPlayerLocation
-	);
 	bool GetWorldActorLocations(TArray<FVector2D>& OutLocations, TArray<FColor>& OutDebugColors); // #104
 
 	const FVector& GetCaptureMouseLocation() const { return CaptureMouseLocation; } // #118
@@ -105,8 +100,8 @@ protected:
 	void NotifyServerMonitoringChanged(bool bInServerMonitoring) override; // #140
 	void NotifySimulationModeChanged(bool bInSimulating) override; // #86, #118
 
-	FString GetActionReplayAssetName() const override { return ActionReplayAssetName; } // #68, #104
-	FString GetActionReplayFolderName() const override { return ActionReplayFolderName; } // #68, #104
+	FString GetReplaySystemAssetName() const override { return ReplaySystemAssetName; } // #68, #104
+	FString GetReplayFolderName() const override { return ReplayFolderName; } // #68, #104
 	
 	void SetSimulationMode(bool bInSimulating); // #86
 
@@ -144,8 +139,8 @@ private:
 	FVector PlayerLocationCached; // #83
 	FRotator PlayerRotationCached; // #83
 	
-	FString ActionReplayAssetName; // #104
-	FString ActionReplayFolderName; // #104
+	FString ReplaySystemAssetName; // #104
+	FString ReplayFolderName; // #104
 
 	float CachedTimeHour; // #104 : RefreshWorld 시 Time 복구
 	float CachedTimeScale; // #104 : RefreshWorld 시 Time 복구

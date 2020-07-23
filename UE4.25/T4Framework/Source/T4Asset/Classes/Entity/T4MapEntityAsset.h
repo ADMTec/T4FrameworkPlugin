@@ -118,11 +118,19 @@ struct T4ASSET_API FT4EntityMapData
 
 public:
 	FT4EntityMapData()
+		: InitializeCameraLocation(FVector::ZeroVector)
+		, InitializeCameraRotation(FRotator::ZeroRotator)
 	{
 	}
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UWorld> LevelAsset;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FVector InitializeCameraLocation; // #150 : MapEntity 에서 Save Camera Info 를 통해 설정
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FRotator InitializeCameraRotation; // #150
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

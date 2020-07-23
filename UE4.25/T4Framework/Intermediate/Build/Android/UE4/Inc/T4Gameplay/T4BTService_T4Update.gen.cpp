@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTServices/T4BTService_T4Update.h"
+#include "T4Gameplay/Classes/NPC/BTServices/T4BTService_T4Update.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTService_T4Update() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTService_T4Update_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "AIController/BTServices/T4BTService_T4Update.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTServices/T4BTService_T4Update.h" },
+		{ "IncludePath", "NPC/BTServices/T4BTService_T4Update.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTServices/T4BTService_T4Update.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTService_T4Update_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTService_T4Update() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTService_T4Update, 2395826671);
+	IMPLEMENT_CLASS(UT4BTService_T4Update, 4018511242);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTService_T4Update>()
 	{
 		return UT4BTService_T4Update::StaticClass();

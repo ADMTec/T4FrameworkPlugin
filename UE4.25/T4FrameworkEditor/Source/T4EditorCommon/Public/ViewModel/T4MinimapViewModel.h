@@ -88,6 +88,6 @@ protected:
 
 	bool bUpdatePreviewLoadedLevels; // #83
 
-	FString ActionReplayAssetName; // #68, #104
-	FString ActionReplayFolderName; // #68, #104
+	FString ReplaySystemAssetName; // #68, #104
+	FString ReplayFolderName; // #68, #104
 };

@@ -57,9 +57,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> StatTableAsset; // #114
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UDataTable> ExperienceTableAsset; // #114
-
 public:
 	FT4MasterTableRow()
 		: Version(0) // #135

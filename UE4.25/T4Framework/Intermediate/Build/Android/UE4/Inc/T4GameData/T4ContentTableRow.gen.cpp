@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentTableRow() {}
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldDBKey();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 class UScriptStruct* FT4ContentTableRow::StaticStruct()
 {
@@ -69,6 +70,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentTableRow
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Guid;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Version_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Version;
@@ -94,6 +99,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_WorldTimeScale_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "ClampMax", "5000" },
+		{ "ClampMin", "0.1" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4ContentTableRow.h" },
 	};
 #endif
@@ -120,6 +127,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentTableRow
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentTableRow, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Guid_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_UID_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4ContentTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_UID_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Version_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// FT4ContentDBRowDetails::CustomizeDetails\n" },
@@ -134,6 +148,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_WorldTimeTag,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_WorldDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Guid,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::NewProp_Version,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ContentTableRow_Statics::ReturnStructParams = {
@@ -164,7 +179,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ContentTableRow_Hash() { return 4201861541U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ContentTableRow_Hash() { return 2219161570U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

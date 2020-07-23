@@ -87,6 +87,6 @@ public:
 	virtual void SetWorldSystemTimeHour(float InHour) = 0; // #93
 	virtual float GetWorldSystemTimeHour() const = 0; // #93
 
-	virtual void NotifyActionReplayRec() = 0; // #104
-	virtual void NotifyActionReplayPlay() = 0; // #104
+	virtual void NotifyReplayRec() = 0; // #104
+	virtual void NotifyReplayPlay() = 0; // #104
 };

@@ -22,6 +22,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat
 

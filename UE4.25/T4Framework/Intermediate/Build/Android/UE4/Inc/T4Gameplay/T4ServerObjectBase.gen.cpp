@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/MainFrame/Server/Object/T4ServerObjectBase.h"
+#include "T4Gameplay/Private/Server/Object/T4ServerObjectBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 		return ET4ServerObjectType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ServerObjectType(ET4ServerObjectType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4ServerObjectType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType_Hash() { return 3796736675U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType_Hash() { return 23174486U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType()
 	{
 #if WITH_HOT_RELOAD
@@ -52,7 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "/**\n  * #114\n */// #142\n" },
-				{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectBase.h" },
+				{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectBase.h" },
 				{ "None.Name", "ET4ServerObjectType::None" },
 				{ "NPC.Name", "ET4ServerObjectType::NPC" },
 				{ "Player.Name", "ET4ServerObjectType::Player" },
@@ -97,8 +97,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ServerObjectBase_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "MainFrame/Server/Object/T4ServerObjectBase.h" },
-		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectBase.h" },
+		{ "IncludePath", "Server/Object/T4ServerObjectBase.h" },
+		{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectBase.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ServerObjectBase_Statics::StaticCppClassTypeInfo = {
@@ -128,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ServerObjectBase, 1281426268);
+	IMPLEMENT_CLASS(UT4ServerObjectBase, 1690018971);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4ServerObjectBase>()
 	{
 		return UT4ServerObjectBase::StaticClass();

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Framework/Classes/Controller/Player/T4PlayerControllerBase.h"
+#include "T4Framework/Classes/Player/T4PlayerControllerBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -52,14 +52,14 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerControllerBase_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
-		{ "IncludePath", "Controller/Player/T4PlayerControllerBase.h" },
-		{ "ModuleRelativePath", "Classes/Controller/Player/T4PlayerControllerBase.h" },
+		{ "IncludePath", "Player/T4PlayerControllerBase.h" },
+		{ "ModuleRelativePath", "Classes/Player/T4PlayerControllerBase.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Classes/Controller/Player/T4PlayerControllerBase.h" },
+		{ "ModuleRelativePath", "Classes/Player/T4PlayerControllerBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent = { "CameraComponent", nullptr, (EPropertyFlags)0x0020080000082008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4PlayerControllerBase, CameraComponent), Z_Construct_UClass_UT4CameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent_MetaData)) };
@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraSpringArmComponent_MetaData[] = {
 		{ "Comment", "// #114\n" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Classes/Controller/Player/T4PlayerControllerBase.h" },
+		{ "ModuleRelativePath", "Classes/Player/T4PlayerControllerBase.h" },
 		{ "ToolTip", "#114" },
 	};
 #endif
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4PlayerControllerBase, 793577026);
+	IMPLEMENT_CLASS(AT4PlayerControllerBase, 967693626);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4PlayerControllerBase>()
 	{
 		return AT4PlayerControllerBase::StaticClass();

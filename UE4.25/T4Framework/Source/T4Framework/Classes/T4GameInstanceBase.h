@@ -21,5 +21,9 @@ public:
 	void Shutdown() override;
 
 protected:
-	IT4Framework* Framework;
+	virtual void NotifyInit() {}
+	virtual void NotifyShutdown() {}
+
+private:
+	IT4Framework* FrameworkOwner;
 };

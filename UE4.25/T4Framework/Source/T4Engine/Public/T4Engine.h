@@ -32,9 +32,9 @@ struct FT4WorldSpawnActionCommand;
 struct FT4ActionParameters; // #28
 
 #if !UE_BUILD_SHIPPING
-class IT4ActionReplayPlayer; // #68
-class IT4ActionReplayRecorder; // #68
-class IT4ActionReplaySystem; // #68
+class IT4ReplayPlayer; // #68
+class IT4ReplayRecorder; // #68
+class IT4ReplaySystem; // #68
 #endif
 
 class UT4EntityAsset;
@@ -468,9 +468,9 @@ public:
 	virtual IT4WorldActor* GetIndicatorActor() = 0; // #117
 
 #if TECH4_REPLAY_SYSTEM_USED
-	virtual IT4ActionReplayPlayer* GetActionReplayPlayer() const = 0; // #68
-	virtual IT4ActionReplayRecorder* GetActionReplayRecorder() const = 0;
-	virtual IT4ActionReplaySystem* GetActionReplaySystem() = 0;
+	virtual IT4ReplayPlayer* GetReplayPlayer() const = 0; // #68
+	virtual IT4ReplayRecorder* GetReplayRecorder() const = 0;
+	virtual IT4ReplaySystem* GetReplaySystem() = 0;
 
 	virtual FT4WorldDebugInfo& GetDebugInfo() = 0; // #76
 #endif
@@ -496,8 +496,8 @@ DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnWorldSystemTimeTransition, IT4WorldSys
 class T4ENGINE_API FT4EngineDelegates
 {
 public:
-	static FT4OnWorldSystemTravel OnWorldSystemTravelPre; // #87 : 월드 이동 ActionReplay 지원
-	static FT4OnWorldSystemTravel OnWorldSystemTravelPost; // #87 : 월드 이동 ActionReplay 지원
+	static FT4OnWorldSystemTravel OnWorldSystemTravelPre; // #87 : 월드 이동 Replay 지원
+	static FT4OnWorldSystemTravel OnWorldSystemTravelPost; // #87 : 월드 이동 Replay 지원
 
 	static FT4OnWorldSystemTimeTransition OnWorldSystemTimeTransition; // #93 : 월드 TimeName 변경 알림
 

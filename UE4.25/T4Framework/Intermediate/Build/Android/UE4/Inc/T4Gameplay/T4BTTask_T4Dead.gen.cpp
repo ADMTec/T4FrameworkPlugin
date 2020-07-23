@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4Dead.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4Dead.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Dead() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4Dead_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4Dead.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4Dead.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4Dead.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4Dead.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTTask_T4Dead_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Dead() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4Dead, 924223027);
+	IMPLEMENT_CLASS(UT4BTTask_T4Dead, 3479351220);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4Dead>()
 	{
 		return UT4BTTask_T4Dead::StaticClass();

@@ -70,13 +70,13 @@ struct T4ENGINE_API FT4MoveSyncActionCommand : public FT4ActionCommandBase
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	FVector MoveVelocity; // #50
+	FVector MoveToLocation; // #50, #150
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MoveSpeed; // #150
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float HeadYawAngle; // #40 : degree, LockOn 일 경우 이동 방향과 달라진다.
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bForceMaxSpeed; // #52 : MovementComponet::MaxSpeed 를 사용할지에 대한 Flag, 기본값이 false 로 Velocity 에서 Speed 를 얻는다. 동기화 이슈!!
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -89,9 +89,9 @@ public:
 public:
 	FT4MoveSyncActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
-		, MoveVelocity(FVector::ZeroVector)
+		, MoveToLocation(FVector::ZeroVector)
+		, MoveSpeed(0.0f) // #150
 		, HeadYawAngle(T4Const_EmptyYawAngle)
-		, bForceMaxSpeed(false) // #52
 #if WITH_EDITORONLY_DATA
 		, ServerNavPoint(FVector::ZeroVector) // #52
 		, ServerDirection(FVector::ForwardVector) // #52
@@ -103,9 +103,9 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
-		if (MoveVelocity.IsNearlyZero())
+		if (MoveToLocation.IsNearlyZero())
 		{
-			OutMsg = TEXT("Invalid MoveVelocity");
+			OutMsg = TEXT("Invalid MoveToLocation");
 			return false;
 		}
 		return true;

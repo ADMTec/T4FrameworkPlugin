@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Public/T4EngineSettings.h"
+#include "T4Engine/Public/Settings/T4EngineSettings.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -181,8 +181,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #40\n */" },
 		{ "DisplayName", "T4Engine" },
-		{ "IncludePath", "T4EngineSettings.h" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "IncludePath", "Settings/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#40" },
 	};
 #endif
@@ -190,7 +190,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath_MetaData[] = {
 		{ "Category", "DataTable" },
 		{ "Comment", "// #97\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData[] = {
 		{ "Category", "DataTable" },
 		{ "Comment", "// #94\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#94" },
 	};
 #endif
@@ -208,7 +208,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData[] = {
 		{ "Category", "DataTable" },
 		{ "Comment", "// #121\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
@@ -217,7 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
 		{ "Comment", "// #121\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
@@ -226,7 +226,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_ZoomInDistance_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
 		{ "Comment", "// #121\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
@@ -234,112 +234,112 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset = { "FPS_SocketOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, FPS_SocketOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_FieldOfViewDegree_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_FieldOfViewDegree = { "FPS_FieldOfViewDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, FPS_FieldOfViewDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_FieldOfViewDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_FieldOfViewDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_SocketOffset_MetaData[] = {
 		{ "Category", "ShoulderViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_SocketOffset = { "SV_SocketOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SV_SocketOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_SocketOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_SocketOffset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MaxZoomDistance_MetaData[] = {
 		{ "Category", "ShoulderViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MaxZoomDistance = { "SV_MaxZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SV_MaxZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MaxZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MaxZoomDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MinZoomDistance_MetaData[] = {
 		{ "Category", "ShoulderViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MinZoomDistance = { "SV_MinZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SV_MinZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MinZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_MinZoomDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_DefaultZoomDistance_MetaData[] = {
 		{ "Category", "ShoulderViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_DefaultZoomDistance = { "SV_DefaultZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SV_DefaultZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_DefaultZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_DefaultZoomDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_FieldOfViewDegree_MetaData[] = {
 		{ "Category", "ShoulderViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_FieldOfViewDegree = { "SV_FieldOfViewDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SV_FieldOfViewDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_FieldOfViewDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SV_FieldOfViewDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_SocketOffset_MetaData[] = {
 		{ "Category", "QuarterViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_SocketOffset = { "QV_SocketOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, QV_SocketOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_SocketOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_SocketOffset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FixedDistance_MetaData[] = {
 		{ "Category", "QuarterViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FixedDistance = { "QV_FixedDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, QV_FixedDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FixedDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FixedDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultYawDegree_MetaData[] = {
 		{ "Category", "QuarterViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultYawDegree = { "QV_DefaultYawDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, QV_DefaultYawDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultYawDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultYawDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultPitchDegree_MetaData[] = {
 		{ "Category", "QuarterViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultPitchDegree = { "QV_DefaultPitchDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, QV_DefaultPitchDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultPitchDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_DefaultPitchDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FieldOfViewDegree_MetaData[] = {
 		{ "Category", "QuarterViewCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FieldOfViewDegree = { "QV_FieldOfViewDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, QV_FieldOfViewDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FieldOfViewDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_QV_FieldOfViewDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultPitchDegree_MetaData[] = {
 		{ "Category", "TPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultPitchDegree = { "TPS_DefaultPitchDegree", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, TPS_DefaultPitchDegree), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultPitchDegree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultPitchDegree_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MaxZoomDistance_MetaData[] = {
 		{ "Category", "TPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MaxZoomDistance = { "TPS_MaxZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, TPS_MaxZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MaxZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MaxZoomDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MinZoomDistance_MetaData[] = {
 		{ "Category", "TPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MinZoomDistance = { "TPS_MinZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, TPS_MinZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MinZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_MinZoomDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultZoomDistance_MetaData[] = {
 		{ "Category", "TPSCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultZoomDistance = { "TPS_DefaultZoomDistance", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, TPS_DefaultZoomDistance), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultZoomDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_DefaultZoomDistance_MetaData)) };
@@ -347,7 +347,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_TPS_FieldOfViewDegree_MetaData[] = {
 		{ "Category", "TPSCameraSettting" },
 		{ "Comment", "// #139\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#139" },
 	};
 #endif
@@ -355,21 +355,21 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraAngleBlendRate_MetaData[] = {
 		{ "Category", "GeneralCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraAngleBlendRate = { "CameraAngleBlendRate", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, CameraAngleBlendRate), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraAngleBlendRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraAngleBlendRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraZoomSpeed_MetaData[] = {
 		{ "Category", "GeneralCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraZoomSpeed = { "CameraZoomSpeed", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, CameraZoomSpeed), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraZoomSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraZoomSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraLagSpeed_MetaData[] = {
 		{ "Category", "GeneralCameraSettting" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraLagSpeed = { "CameraLagSpeed", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, CameraLagSpeed), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraLagSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraLagSpeed_MetaData)) };
@@ -377,7 +377,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraRotateHoldTimeSec_MetaData[] = {
 		{ "Category", "GeneralCameraSettting" },
 		{ "Comment", "// #46\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#46" },
 	};
 #endif
@@ -386,7 +386,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_JumpHoldTimeSec_MetaData[] = {
 		{ "Category", "GeneralControlSettting" },
 		{ "Comment", "// #116 : Skill Block \xec\x9d\xb4\xed\x9b\x84 Pressed \xec\x82\xac\xec\x9a\xa9\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x97\x88\xec\x9a\xa9 \xec\x8b\x9c\xea\xb0\x84\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#116 : Skill Block \xec\x9d\xb4\xed\x9b\x84 Pressed \xec\x82\xac\xec\x9a\xa9\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x97\x88\xec\x9a\xa9 \xec\x8b\x9c\xea\xb0\x84" },
 	};
 #endif
@@ -395,7 +395,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec_MetaData[] = {
 		{ "Category", "GeneralControlSettting" },
 		{ "Comment", "// #45 : Skill \xec\x97\xb0\xec\x86\x8d\xea\xb8\xb0 \xec\x82\xac\xec\x9a\xa9\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x97\x88\xec\x9a\xa9 \xec\x8b\x9c\xea\xb0\x84\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#45 : Skill \xec\x97\xb0\xec\x86\x8d\xea\xb8\xb0 \xec\x82\xac\xec\x9a\xa9\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x97\x88\xec\x9a\xa9 \xec\x8b\x9c\xea\xb0\x84" },
 	};
 #endif
@@ -404,7 +404,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec_MetaData[] = {
 		{ "Category", "GeneralControlSettting" },
 		{ "Comment", "// #93\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#93" },
 	};
 #endif
@@ -413,7 +413,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData[] = {
 		{ "Category", "GeneralWorldSettting" },
 		{ "Comment", "// #78, #108\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#78, #108" },
 	};
 #endif
@@ -422,7 +422,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialParameterOpacityName_MetaData[] = {
 		{ "Category", "GeneralRenderingSettting" },
 		{ "Comment", "// #115\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#115" },
 	};
 #endif
@@ -431,7 +431,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalOutlineColorName_MetaData[] = {
 		{ "Category", "GeneralRenderingSettting" },
 		{ "Comment", "// #115\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#115" },
 	};
 #endif
@@ -440,7 +440,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialPostProcessOutlinerPath_MetaData[] = {
 		{ "Category", "GeneralRenderingSettting" },
 		{ "Comment", "// #115\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#115" },
 	};
 #endif
@@ -449,7 +449,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalPath_MetaData[] = {
 		{ "Category", "GeneralRenderingSettting" },
 		{ "Comment", "// Plugins/T4Framework/Config/DefaultT4Framework.ini\n" },
-		{ "ModuleRelativePath", "Public/T4EngineSettings.h" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "Plugins/T4Framework/Config/DefaultT4Framework.ini" },
 	};
 #endif
@@ -505,7 +505,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::PropPointers),
 		0,
-		0x001000A6u,
+		0x001000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4EngineSettings()
@@ -517,7 +517,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 2419963164);
+	IMPLEMENT_CLASS(UT4EngineSettings, 4112749522);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

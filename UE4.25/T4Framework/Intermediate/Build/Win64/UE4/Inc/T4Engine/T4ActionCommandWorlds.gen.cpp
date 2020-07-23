@@ -355,9 +355,9 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_ActorID_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// SaveActionReplaySnapshot() // #68\n" },
+		{ "Comment", "// SaveReplaySnapshot() // #68\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionCommandWorlds.h" },
-		{ "ToolTip", "SaveActionReplaySnapshot()  #68" },
+		{ "ToolTip", "SaveReplaySnapshot()  #68" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_ActorID = { "ActorID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldSpawnActionCommand, ActorID), Z_Construct_UScriptStruct_FT4ActorID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_ActorID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_ActorID_MetaData)) };
@@ -410,7 +410,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Hash() { return 3734761254U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Hash() { return 505213074U; }
 class UScriptStruct* FT4WorldTimeSyncActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4Roaming.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4Roaming.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Roaming() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4Roaming_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4Roaming.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4Roaming.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4Roaming.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4Roaming.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTTask_T4Roaming_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Roaming() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4Roaming, 284990400);
+	IMPLEMENT_CLASS(UT4BTTask_T4Roaming, 3575733624);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4Roaming>()
 	{
 		return UT4BTTask_T4Roaming::StaticClass();

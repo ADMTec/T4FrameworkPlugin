@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4JumpTo.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4JumpTo.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4JumpTo() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4JumpTo_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Wait" },
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4JumpTo.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4JumpTo.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4JumpTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4JumpTo.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTTask_T4JumpTo_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4JumpTo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4JumpTo, 3975529216);
+	IMPLEMENT_CLASS(UT4BTTask_T4JumpTo, 152352087);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4JumpTo>()
 	{
 		return UT4BTTask_T4JumpTo::StaticClass();

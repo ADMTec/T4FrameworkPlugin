@@ -62,6 +62,9 @@ public:
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)

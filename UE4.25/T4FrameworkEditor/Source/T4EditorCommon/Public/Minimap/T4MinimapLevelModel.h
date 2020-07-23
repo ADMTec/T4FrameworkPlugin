@@ -207,7 +207,7 @@ public:
 	virtual void SetFolderPath(const FName& InFolderPath) {}
 
 	/** Returns true if the level model can be added to hierarchy folders */
-	virtual bool HasFolderSupport() const { return false; }
+	virtual bool IsFolderSupport() const { return false; }
 
 	/**	@return Handles drop operation */
 	virtual void OnDrop(const TSharedPtr<FLevelDragDropOp>& Op);

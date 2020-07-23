@@ -7,7 +7,6 @@
 #include "T4GameDBTypes.h" // #48
 #include "T4GameDataTypes.h" // #148
 
-#include "TableRow/T4MasterTableRow.h" // #118
 #include "TableRow/T4ContentTableRow.h" // #27
 #include "TableRow/T4WorldTableRow.h" // #27
 #include "TableRow/T4PlayerTableRow.h" // #27
@@ -19,7 +18,6 @@
 #include "TableRow/T4EffectSetTableRow.h" // #135
 #include "TableRow/T4EffectTableRow.h" // #25
 #include "TableRow/T4StatTableRow.h" // #114
-#include "TableRow/T4ExperienceTableRow.h" // #114
 
 #if WITH_EDITOR
 #include "UObject/StructOnScope.h" // #118 : Visual Studio Code Link
@@ -29,9 +27,9 @@
   * #118
  */
 class FStructOnScope;
-struct T4GAMEDATA_API FT4GameDBRowBase
+struct T4GAMEDATA_API FT4DBRowBase
 {
-	FT4GameDBRowBase(const FName InRowName)
+	FT4DBRowBase(const FName InRowName)
 		: RowName(InRowName)
 #if WITH_EDITOR
 		, bDirtyed(false)
@@ -39,18 +37,36 @@ struct T4GAMEDATA_API FT4GameDBRowBase
 #endif
 	{
 	}
-	virtual ~FT4GameDBRowBase() {}
+	virtual ~FT4DBRowBase() {}
 
 	virtual ET4GameDBType GetType() const = 0; // #48
+	virtual const FT4GameUID GetUID() const = 0; // #150
+
+	virtual const FT4TableRowBase* GetTableRowBase() const = 0; // #150
+
+	const FT4ContentTableRow* QueryContentTableRow() const;
+	const FT4WorldTableRow* QueryWorldTableRow() const;
+	const FT4PlayerTableRow* QueryPlayerTableRow() const;
+	const FT4NPCTableRow* QueryNPCTableRow() const;
+	const FT4WeaponTableRow* QueryWeaponTableRow() const;
+	const FT4CostumeTableRow* QueryCostumeTableRow() const;
+	const FT4SkillSetTableRow* QuerySkillSetTableRow() const;
+	const FT4SkillTableRow* QuerySkillTableRow() const;
+	const FT4EffectSetTableRow* QueryEffectSetTableRow() const;
+	const FT4EffectTableRow* QueryEffectTableRow() const;
+#if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
+	const FT4StatTableRow* QueryStatTableRow() const;
+#endif
 
 #if WITH_EDITOR
 	// #118
-	virtual TSharedPtr<FStructOnScope> GetRawDataStruct() = 0;
+	virtual TSharedPtr<FStructOnScope> GetStructOnScope() = 0;
 	virtual bool CheckValidationAll() = 0;
 	virtual bool CheckValidationBy(FName InPropertyName) = 0;
 	virtual bool HasError() const = 0;
+
 	virtual bool HasParent() const = 0; // #122
-	virtual bool HasFolder() const = 0; // #122
+	virtual bool IsFolder() const = 0; // #122
 	virtual bool HasPinned() const { return true; } // #142 : bPinned 가 체크되면 편집 대상에서 제외! (ParagonMirgration)
 	virtual FName GetParentRowName() const = 0; // #122
 	virtual void SetParentRowName(FName InParentRowName) = 0; // #122
@@ -69,309 +85,6 @@ struct T4GAMEDATA_API FT4GameDBRowBase
 #endif
 };
 
-#if WITH_EDITOR
-#define DEFINE_GAME_DATA_COMMON_METHOD()															\
-	bool HasParent() const override { return (RawData.ParentRowName != NAME_None) ? true : false; } \
-	bool HasFolder() const override { return (RawData.FolderName != NAME_None) ? true : false; }	\
-	bool HasPinned() const override { return RawData.bPinned; }										\
-	FName GetParentRowName() const { return RawData.ParentRowName; }								\
-	void SetParentRowName(FName InParentRowName) { RawData.ParentRowName = InParentRowName; }		\
-	FName GetFolderName() const { return RawData.FolderName; }										\
-	void SetFolderName(FName InFolderName) { RawData.FolderName = InFolderName; }					\
-	const FString& GetDescription() const override { return RawData.Description; }
-#endif
-
-struct T4GAMEDATA_API FT4MasterDBRow : public FT4GameDBRowBase
-{
-	FT4MasterDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-
-	ET4GameDBType GetType() const override { return ET4GameDBType::Master; } // #118
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4MasterTableRow RawData; // #27
-};
-
-struct T4GAMEDATA_API FT4ContentDBRow : public FT4GameDBRowBase // #146
-{
-	FT4ContentDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Content; }
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4ContentTableRow RawData;
-};
-
-struct T4GAMEDATA_API FT4WorldDBRow : public FT4GameDBRowBase
-{
-	FT4WorldDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::World; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4WorldTableRow RawData; // #27
-};
-
-struct T4GAMEDATA_API FT4PlayerDBRow : public FT4GameDBRowBase
-{
-	FT4PlayerDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Player; } // #48
-
-	float GetMaxMoveSpeed(FName InStanceName) const // #140
-	{
-		if (InStanceName == T4Const_CombatStanceName)
-		{
-			return RawData.MoveSpeedData.CombatSpeed;
-		}
-		else if (InStanceName == T4Const_SprintStanceName)
-		{
-			return RawData.MoveSpeedData.SprintSpeed; // #109
-		}
-		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.StanceName == NAME_None || AIMemory.StanceName == T4Const_DefaultStanceName
-	}
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4PlayerTableRow RawData; // #27
-};
-
-struct T4GAMEDATA_API FT4NPCDBRow : public FT4GameDBRowBase
-{
-	FT4NPCDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::NPC; } // #48
-
-	float GetMaxMoveSpeed(FName InStanceName) const // #140
-	{
-		if (InStanceName == T4Const_CombatStanceName)
-		{
-			return RawData.MoveSpeedData.CombatSpeed;
-		}
-		else if (InStanceName == T4Const_SprintStanceName)
-		{
-			return RawData.MoveSpeedData.SprintSpeed; // #109
-		}
-		return RawData.MoveSpeedData.DefaultSpeed; // AIMemory.StanceName == NAME_None || AIMemory.StanceName == T4Const_DefaultStanceName
-	}
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4NPCTableRow RawData; // #31
-};
-
-struct T4GAMEDATA_API FT4WeaponDBRow : public FT4GameDBRowBase
-{
-	FT4WeaponDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Weapon; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4WeaponTableRow RawData; // #27, #48
-};
-
-struct T4GAMEDATA_API FT4CostumeDBRow : public FT4GameDBRowBase
-{
-	FT4CostumeDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Costume; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4CostumeTableRow RawData; // #27, #48
-};
-
-struct T4GAMEDATA_API FT4SkillSetDBRow : public FT4GameDBRowBase
-{
-	FT4SkillSetDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::SkillSet; } // #50
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4SkillSetTableRow RawData; // #27
-};
-
-struct T4GAMEDATA_API FT4SkillDBRow : public FT4GameDBRowBase
-{
-	FT4SkillDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Skill; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4SkillTableRow RawData; // #27
-};
-
-// #135
-struct T4GAMEDATA_API FT4EffectSetDBRow : public FT4GameDBRowBase
-{
-	FT4EffectSetDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::EffectSet; }
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4EffectSetTableRow RawData;
-};
-
-struct T4GAMEDATA_API FT4EffectDBRow : public FT4GameDBRowBase
-{
-	FT4EffectDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Effect; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override;
-	bool CheckValidationBy(FName InPropertyName) override;
-	bool HasError() const override;
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4EffectTableRow RawData; // #27
-};
-
-#if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
-
-struct T4GAMEDATA_API FT4StatDBRow : public FT4GameDBRowBase // #114
-{
-	FT4StatDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Stat; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4StatTableRow RawData; // #27
-};
-
-struct T4GAMEDATA_API FT4ExperienceDBRow : public FT4GameDBRowBase // #114
-{
-	FT4ExperienceDBRow(const FName InRowName)
-		: FT4GameDBRowBase(InRowName)
-	{
-	}
-	ET4GameDBType GetType() const override { return ET4GameDBType::Experience; } // #48
-
-#if WITH_EDITOR
-	TSharedPtr<FStructOnScope> GetRawDataStruct() override;
-	bool CheckValidationAll() override { return true; }
-	bool CheckValidationBy(FName InPropertyName) override { return true; }
-	bool HasError() const override { return false; }
-
-	DEFINE_GAME_DATA_COMMON_METHOD()
-#endif
-
-	FT4ExperienceTableRow RawData; // #27
-};
-#endif
-
 class UDataTable;
 class T4GAMEDATA_API IT4GameDB
 {
@@ -386,28 +99,28 @@ public:
 	virtual void Reload() = 0; // #125
 	virtual bool Refresh(ET4GameDBType InGameDBType) = 0; // #125
 
-	virtual bool HasRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual bool HasDB(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual bool HasDB(const FT4GameDBKey& InGameDBKey) const = 0;
 
-	virtual const FT4GameDBRowBase* GetDBRowBase(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4GameDBKey GetDBKeyByUID(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual const FT4DBRowBase* GetDBRowBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual const FT4DBRowBase* GetDBRowBase(const FT4GameDBKey& InGameDBKey) const = 0;
 
-	virtual const FT4ContentDBRow* GetContentDBRow(const FT4GameDBKey& InGameDBKey) const = 0; // #146
-	virtual const FT4WorldDBRow* GetWorldDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4PlayerDBRow* GetPlayerDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4NPCDBRow* GetNPCDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4WeaponDBRow* GetWeaponDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4CostumeDBRow* GetCostumeDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4SkillSetDBRow* GetSkillSetDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4SkillDBRow* GetSkillDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4EffectSetDBRow* GetEffectSetDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4EffectDBRow* GetEffectDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4ContentTableRow* GetContentTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4WorldTableRow* GetWorldTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4PlayerTableRow* GetPlayerTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4NPCTableRow* GetNPCTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4WeaponTableRow* GetWeaponTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4CostumeTableRow* GetCostumeTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4SkillSetTableRow* GetSkillSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4SkillTableRow* GetSkillTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4EffectSetTableRow* GetEffectSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4EffectTableRow* GetEffectTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
-	virtual const FT4StatDBRow* GetStatDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4ExperienceDBRow* GetExperienceDBRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4StatTableRow* GetStatTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 #endif
 
-#if !UE_BUILD_SHIPPING
 	virtual bool GetDBKeyRowNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyRowNames) const = 0;
-#endif
 
 #if WITH_EDITOR
 	// #118
@@ -415,8 +128,8 @@ public:
 
 	virtual UDataTable* GetDataTable(ET4GameDBType InGameDBType) const = 0;
 
-	virtual const TArray<FT4GameDBRowBase*>& GetGameDBRows(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
-	virtual FT4GameDBRowBase* GetGameDBRow(const FT4GameDBKey& InGameDBKey) = 0;
+	virtual const TArray<FT4DBRowBase*>& GetGameDBRows(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
+	virtual FT4DBRowBase* GetGameDBRow(const FT4GameDBKey& InGameDBKey) = 0;
 
 	virtual bool DataTableAddFolder(ET4GameDBType InGameDBType, const FName InNewFolderName, const FName InRefRowName) = 0;
 	virtual FT4TableRowBase* DataTableAddRow(ET4GameDBType InGameDBType, const FName InNewRowName, const FName InRefRowName) = 0;
@@ -424,7 +137,7 @@ public:
 	virtual void DataTableRenameRow(ET4GameDBType InGameDBType, const FName InOldRowName, const FName InNewRowName) = 0;
 	virtual FT4TableRowBase* DataTableDuplicateRow(ET4GameDBType InGameDBType, const FName InSourceRowName, const FName InNewRowName) = 0;
 	virtual void DataTableMoveRow(ET4GameDBType InGameDBType, const FName InTargetRowName, const FName InSourceRowName) = 0;
-	virtual void DataTableWriteRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
+	virtual void DataTableOverwriteRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
 
 	virtual void DataTableSetTreeExpansion(ET4GameDBType InGameDBType, const FName InRowName, bool bInExpand) = 0; // #122
 	virtual bool DataTableIsTreeExpanded(ET4GameDBType InGameDBType, const FName InRowName) const = 0; // #122

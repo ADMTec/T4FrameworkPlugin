@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Framework/Classes/Controller/Player/T4PlayerDefaultPawnBase.h"
+#include "T4Framework/Classes/Player/T4PlayerDefaultPawnBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerDefaultPawnBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerDefaultPawnBase_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "Controller/Player/T4PlayerDefaultPawnBase.h" },
-		{ "ModuleRelativePath", "Classes/Controller/Player/T4PlayerDefaultPawnBase.h" },
+		{ "IncludePath", "Player/T4PlayerDefaultPawnBase.h" },
+		{ "ModuleRelativePath", "Classes/Player/T4PlayerDefaultPawnBase.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4PlayerDefaultPawnBase_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerDefaultPawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4PlayerDefaultPawnBase, 1280671917);
+	IMPLEMENT_CLASS(AT4PlayerDefaultPawnBase, 839212783);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4PlayerDefaultPawnBase>()
 	{
 		return AT4PlayerDefaultPawnBase::StaticClass();

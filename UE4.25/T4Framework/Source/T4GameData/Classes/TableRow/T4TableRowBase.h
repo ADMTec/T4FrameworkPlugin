@@ -20,6 +20,12 @@ struct FT4TableRowBase : public FTableRowBase
 
 public:
 #if WITH_EDITORONLY_DATA
+	UPROPERTY(Transient, VisibleAnywhere, Category = Constant)
+	ET4GameDBType DBType;
+
+	UPROPERTY(Transient, VisibleAnywhere, Category = Constant)
+	FName DBKeyName;
+
 	UPROPERTY(EditAnywhere, Category= Editor)
 	FString Description;
 
@@ -36,7 +42,9 @@ public:
 public:
 	FT4TableRowBase()
 #if WITH_EDITORONLY_DATA
-		: bPinned(true) // #142
+		: DBType(ET4GameDBType::Nums)
+		, DBKeyName(NAME_None)
+		, bPinned(true) // #142
 		, ParentRowName(NAME_None) // #122
 		, FolderName(NAME_None) // #122
 #endif

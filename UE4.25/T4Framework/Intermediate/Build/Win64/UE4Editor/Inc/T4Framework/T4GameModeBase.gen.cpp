@@ -40,12 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4GameModeBase_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * http://api.unrealengine.com/KOR/Gameplay/Framework/GameMode/\n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "T4GameModeBase.h" },
 		{ "ModuleRelativePath", "Classes/T4GameModeBase.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
-		{ "ToolTip", "http://api.unrealengine.com/KOR/Gameplay/Framework/GameMode/" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4GameModeBase_Statics::StaticCppClassTypeInfo = {
@@ -75,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4GameModeBase, 2048133520);
+	IMPLEMENT_CLASS(AT4GameModeBase, 1786463809);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4GameModeBase>()
 	{
 		return AT4GameModeBase::StaticClass();

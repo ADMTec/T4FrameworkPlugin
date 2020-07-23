@@ -23,6 +23,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Version;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
 	// #T4_ADD_EFFECT_TAG_DATA
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)

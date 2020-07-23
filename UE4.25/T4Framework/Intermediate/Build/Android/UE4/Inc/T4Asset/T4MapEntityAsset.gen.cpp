@@ -16,6 +16,8 @@ void EmptyLinkFunctionForGeneratedCodeT4MapEntityAsset() {}
 // Cross Module References
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMapData();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UWorld_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMapZoneData();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
@@ -55,6 +57,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMapData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeCameraRotation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeCameraRotation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeCameraLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeCameraLocation;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelAsset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_LevelAsset;
@@ -71,6 +81,22 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMapData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityMapData>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraRotation_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #150 : MapEntity \xec\x97\x90\xec\x84\x9c Save Camera Info \xeb\xa5\xbc \xed\x86\xb5\xed\x95\xb4 \xec\x84\xa4\xec\xa0\x95\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
+		{ "ToolTip", "#150 : MapEntity \xec\x97\x90\xec\x84\x9c Save Camera Info \xeb\xa5\xbc \xed\x86\xb5\xed\x95\xb4 \xec\x84\xa4\xec\xa0\x95" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraRotation = { "InitializeCameraRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityMapData, InitializeCameraRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraRotation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraLocation_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraLocation = { "InitializeCameraLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityMapData, InitializeCameraLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraLocation_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_LevelAsset_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
@@ -78,6 +104,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMapData
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_LevelAsset = { "LevelAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityMapData, LevelAsset), Z_Construct_UClass_UWorld_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_LevelAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_LevelAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityMapData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_InitializeCameraLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityMapData_Statics::NewProp_LevelAsset,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityMapData_Statics::ReturnStructParams = {
@@ -108,7 +136,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMapData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityMapData_Hash() { return 1010921535U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityMapData_Hash() { return 31333974U; }
 class UScriptStruct* FT4EntityMapZoneData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

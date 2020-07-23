@@ -100,13 +100,13 @@ public:
 	virtual bool CheckAuthority() const = 0; // return HasAuthority()
 	virtual void SetObjectIDFromServer(const FT4ObjectID& InObjectID) = 0; // #114 : 서버에서 보내준 ObjectID 를 Controller 에 설정해준다. (Only Client)
 
-	virtual UInputComponent* NewInputComponent() = 0;
-	virtual void SetInputComponent(UInputComponent* InInputComponent) = 0;
 	virtual void OnSetInputMode(ET4InputMode InMode) = 0;
 
 	virtual FViewport* GetViewport() const = 0; // #68
 
 	virtual APawn* GetDefaultPawn() const = 0; // #86
+
+	virtual bool IsActiveVRMode() const = 0; // #153
 
 	virtual FRotator GetViewControlRotation() const = 0;
 
@@ -174,6 +174,9 @@ public:
 	virtual void OnProcessPre(float InDeltaTime) = 0;
 	virtual void OnProcessPost(float InDeltaTime) = 0;
 
+	virtual void ChangePrevControlMode() = 0; // #151
+	virtual void ChangeNextControlMode() = 0; // #151
+
 #if WITH_EDITOR
 	virtual bool AddServerSpawnGroup(const FGuid& InGuid, const FSoftObjectPath& InSpawnAssetPath) = 0; // #118
 	virtual void RemoveServerSpawnGroup(const FGuid& InGuid) = 0; // #118
@@ -230,6 +233,7 @@ public:
 	virtual UT4GameObjectBase* GetPlayerClientObject() const = 0; // #114 : Only Client
 	virtual IT4PlayerController* GetPlayerController() const = 0;
 
+	virtual bool IsActiveVRMode() const = 0; // #153
 	virtual bool IsGamepadAttached() const = 0; // #151 : FSlateApplication::IsGamepadAttached or FSlateApplication::IsFakingTouchEvents
 
 	virtual bool GetScreenCenterToWorldRay(const FVector2D& InScreenOffset, FRay& OutWorldRay) = 0; // #121 : Mode 에 따라 마우스 또는 화면 중앙(FPS)의 Ray 를 리턴

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -92,14 +92,14 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * Move To task node.\n * Moves the AI pawn toward the specified Actor or Location blackboard entry using the navigation system.\n */" },
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4MoveTo.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "Move To task node.\nMoves the AI pawn toward the specified Actor or Location blackboard entry using the navigation system." },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bStopOnOverlapNeedsUpdate_MetaData[] = {
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 	};
 #endif
 	void Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bStopOnOverlapNeedsUpdate_SetBit(void* Obj)
@@ -111,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bStopOnOverlap_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** DEPRECATED, please use combination of bReachTestIncludes*Radius instead */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "DEPRECATED, please use combination of bReachTestIncludes*Radius instead" },
 	};
 #endif
@@ -124,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bReachTestIncludesGoalRadius_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** if set, radius of goal's capsule will be added to threshold between AI and goal location in destination reach test  */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "if set, radius of goal's capsule will be added to threshold between AI and goal location in destination reach test" },
 	};
 #endif
@@ -137,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bReachTestIncludesAgentRadius_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** if set, radius of AI's capsule will be added to threshold between AI and goal location in destination reach test  */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "if set, radius of AI's capsule will be added to threshold between AI and goal location in destination reach test" },
 	};
 #endif
@@ -150,7 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bProjectGoalLocation_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** if set, goal location will be projected on navigation data (navmesh) before using */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "if set, goal location will be projected on navigation data (navmesh) before using" },
 	};
 #endif
@@ -163,7 +163,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bTrackMovingGoal_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** if set, path to goal actor will update itself when actor moves */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "if set, path to goal actor will update itself when actor moves" },
 	};
 #endif
@@ -176,7 +176,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bAllowPartialPath_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** if set, use incomplete path when goal can't be reached */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "if set, use incomplete path when goal can't be reached" },
 	};
 #endif
@@ -188,7 +188,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bAllowStrafe_MetaData[] = {
 		{ "Category", "Node" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 	};
 #endif
 	void Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_bAllowStrafe_SetBit(void* Obj)
@@ -200,7 +200,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4MoveTo_Statics::NewProp_FilterClass_MetaData[] = {
 		{ "Category", "Node" },
 		{ "Comment", "/** \"None\" will result in default filter being used */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "\"None\" will result in default filter being used" },
 	};
 #endif
@@ -210,7 +210,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 		{ "Category", "Node" },
 		{ "ClampMin", "0.0" },
 		{ "Comment", "/** fixed distance added to threshold between AI and goal location in destination reach test */" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4MoveTo.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4MoveTo.h" },
 		{ "ToolTip", "fixed distance added to threshold between AI and goal location in destination reach test" },
 		{ "UIMin", "0.0" },
 	};
@@ -255,7 +255,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4MoveTo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4MoveTo, 387282767);
+	IMPLEMENT_CLASS(UT4BTTask_T4MoveTo, 2504391510);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4MoveTo>()
 	{
 		return UT4BTTask_T4MoveTo::StaticClass();

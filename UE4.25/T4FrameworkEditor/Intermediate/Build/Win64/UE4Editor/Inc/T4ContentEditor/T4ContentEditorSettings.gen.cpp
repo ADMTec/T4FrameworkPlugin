@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/T4ContentEditorSettings.h"
+#include "T4ContentEditor/Private/Settings/T4ContentEditorSettings.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -55,15 +55,15 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  *\n */" },
-		{ "IncludePath", "T4ContentEditorSettings.h" },
-		{ "ModuleRelativePath", "Private/T4ContentEditorSettings.h" },
+		{ "IncludePath", "Settings/T4ContentEditorSettings.h" },
+		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorPropEntityAssetPath_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #114\n" },
-		{ "ModuleRelativePath", "Private/T4ContentEditorSettings.h" },
+		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
 		{ "ToolTip", "#114" },
 	};
 #endif
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorCharacterEntityAssetPath_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #114\n" },
-		{ "ModuleRelativePath", "Private/T4ContentEditorSettings.h" },
+		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
 		{ "ToolTip", "#114" },
 	};
 #endif
@@ -81,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_RacesConstantTablePath_MetaData[] = {
 		{ "Category", "Game Constant Table" },
 		{ "Comment", "// Plugins/T4FrameworkEditor/Config/DefaultT4FrameworkEditor.ini\n" },
-		{ "ModuleRelativePath", "Private/T4ContentEditorSettings.h" },
+		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
 		{ "ToolTip", "Plugins/T4FrameworkEditor/Config/DefaultT4FrameworkEditor.ini" },
 	};
 #endif
@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentEditorSettings_Statics::PropPointers),
 		0,
-		0x000000A6u,
+		0x000000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4ContentEditorSettings_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentEditorSettings_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4ContentEditorSettings()
@@ -118,7 +118,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ContentEditorSettings, 894003849);
+	IMPLEMENT_CLASS(UT4ContentEditorSettings, 4150798989);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4ContentEditorSettings>()
 	{
 		return UT4ContentEditorSettings::StaticClass();

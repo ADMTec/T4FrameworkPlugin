@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/MainFrame/Client/Object/T4GameClientObject.h"
+#include "T4Gameplay/Private/Client/Object/T4GameClientObject.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameClientObject() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameClientObject_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "MainFrame/Client/Object/T4GameClientObject.h" },
-		{ "ModuleRelativePath", "Private/MainFrame/Client/Object/T4GameClientObject.h" },
+		{ "IncludePath", "Client/Object/T4GameClientObject.h" },
+		{ "ModuleRelativePath", "Private/Client/Object/T4GameClientObject.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4GameClientObject_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameClientObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameClientObject, 4133896408);
+	IMPLEMENT_CLASS(UT4GameClientObject, 3317808708);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameClientObject>()
 	{
 		return UT4GameClientObject::StaticClass();

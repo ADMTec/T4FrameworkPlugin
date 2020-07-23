@@ -11,7 +11,7 @@
  */
 class IT4EditorViewModel;
 class UTexture2D;
-class UT4EditorActionReplayController;
+class UT4EditorReplaySystemController;
 class T4EDITORCOMMON_API FT4EditorToolkitBase
 {
 public:
@@ -30,8 +30,8 @@ public:
 
 	virtual IT4EditorViewModel* GetMainViewModelInterface() const { return nullptr; } // #104
 
-	virtual bool HasActionReplaySystem() const { return false; } // #68
-	virtual UT4EditorActionReplayController* GetActionReplaySystem() const { return nullptr; } // #68
+	virtual bool HasReplaySystem() const { return false; } // #68
+	virtual UT4EditorReplaySystemController* GetReplaySystem() const { return nullptr; } // #68
 
 protected:
 	virtual void Initialize(
@@ -56,22 +56,22 @@ private:
 	void HandleOnMapChangedEvent(UWorld* InOldWorld, EMapChangeType InMapChangeType); // #118
 
 	// #68
-	void HandleOnActionReplayRec();
+	void HandleOnReplayRec();
 
-	void HandleOnActionReplayPlay();
-	TSharedRef<SWidget> HandleOnActionReplayPlayMenu();
-	void HandleOnToogleActionReplayRepeatEnable();
-	bool HandleOnIsActionReplayRepeatEnabled() const;
-	void HandleOnToogleActionReplayPlayerPossessed();
-	bool HandleOnIsActionReplayPlayerPossessed() const;
+	void HandleOnReplayPlay();
+	TSharedRef<SWidget> HandleOnReplayPlayMenu();
+	void HandleOnToogleReplayRepeatEnable();
+	bool HandleOnIsReplayRepeatEnabled() const;
+	void HandleOnToogleReplayPlayerPossessed();
+	bool HandleOnIsReplayPlayerPossessed() const;
 
-	void HandleOnActionReplayPause();
-	void HandleOnActionReplayStop();
+	void HandleOnReplayPause();
+	void HandleOnReplayStop();
 
-	bool HandleOnCanExecuteActionReplayRec();
-	bool HandleOnCanExecuteActionReplayPlay();
-	bool HandleOnCanExecuteActionReplayPause();
-	bool HandleOnCanExecuteActionReplayStop();
+	bool HandleOnCanExecuteReplayRec();
+	bool HandleOnCanExecuteReplayPlay();
+	bool HandleOnCanExecuteReplayPause();
+	bool HandleOnCanExecuteReplayStop();
 	// ~#68
 
 private:

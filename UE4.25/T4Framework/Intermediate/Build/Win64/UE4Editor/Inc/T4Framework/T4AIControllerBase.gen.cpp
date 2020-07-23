@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Framework/Classes/Controller/AI/T4AIControllerBase.h"
+#include "T4Framework/Classes/NPC/T4AIControllerBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4AIControllerBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4AIControllerBase_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
-		{ "IncludePath", "Controller/AI/T4AIControllerBase.h" },
-		{ "ModuleRelativePath", "Classes/Controller/AI/T4AIControllerBase.h" },
+		{ "IncludePath", "NPC/T4AIControllerBase.h" },
+		{ "ModuleRelativePath", "Classes/NPC/T4AIControllerBase.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4AIControllerBase_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AIControllerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4AIControllerBase, 3732695434);
+	IMPLEMENT_CLASS(AT4AIControllerBase, 503861339);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4AIControllerBase>()
 	{
 		return AT4AIControllerBase::StaticClass();

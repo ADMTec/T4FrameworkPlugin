@@ -35,7 +35,7 @@ struct T4GAMEDATA_API FT4ContentOverrideBehaviorData // #114
 
 public:
 	// #114
-	// FT4NPCAIBehaviorData : AIController (Runtime)
+	// FT4BuiltinNPCAIBehaviorData : AIController (Runtime)
 	// FT4NPCBehaviorData : NPC DataTable (Original Set)
 	// FT4ContentOverrideBehaviorData : Spawn Asset (Instance Set)
 

@@ -109,7 +109,7 @@ struct T4ENGINE_API FT4WorldSpawnActionCommand : public FT4ActionCommandBase
 	GENERATED_USTRUCT_BODY()
 
 public:
-	// SaveActionReplaySnapshot() // #68
+	// SaveReplaySnapshot() // #68
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4ActorID ActorID;

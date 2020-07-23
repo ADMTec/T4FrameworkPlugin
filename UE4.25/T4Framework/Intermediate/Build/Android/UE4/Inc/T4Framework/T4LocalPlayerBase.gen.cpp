@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Framework/Classes/Controller/Player/T4LocalPlayerBase.h"
+#include "T4Framework/Classes/Player/T4LocalPlayerBase.h"
 #include "Engine/Classes/Engine/Engine.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4LocalPlayerBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4LocalPlayerBase_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #30\n */" },
-		{ "IncludePath", "Controller/Player/T4LocalPlayerBase.h" },
-		{ "ModuleRelativePath", "Classes/Controller/Player/T4LocalPlayerBase.h" },
+		{ "IncludePath", "Player/T4LocalPlayerBase.h" },
+		{ "ModuleRelativePath", "Classes/Player/T4LocalPlayerBase.h" },
 		{ "ToolTip", "#30" },
 	};
 #endif
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4LocalPlayerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4LocalPlayerBase, 748535512);
+	IMPLEMENT_CLASS(UT4LocalPlayerBase, 3055999057);
 	template<> T4FRAMEWORK_API UClass* StaticClass<UT4LocalPlayerBase>()
 	{
 		return UT4LocalPlayerBase::StaticClass();

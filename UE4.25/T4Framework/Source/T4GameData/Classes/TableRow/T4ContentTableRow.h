@@ -24,6 +24,9 @@ public:
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FGuid Guid;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
@@ -32,7 +35,7 @@ public:
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
 	FName WorldTimeTag;
 
-	UPROPERTY(EditAnywhere, Category= ServerOnly)
+	UPROPERTY(EditAnywhere, Category= ServerOnly, meta = (ClampMin = "0.1", ClampMax = "5000"))
 	float WorldTimeScale;
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)

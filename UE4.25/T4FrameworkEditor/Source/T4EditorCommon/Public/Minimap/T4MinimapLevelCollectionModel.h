@@ -112,7 +112,7 @@ public:
 	virtual bool IsTileWorld() const { return false; };
 
 	/** Returns true if this collection model will support folders */
-	virtual bool HasFolderSupport() const { return false; }
+	virtual bool IsFolderSupport() const { return false; }
 
 	/** Rebuilds levels collection */
 	void PopulateLevelsList();

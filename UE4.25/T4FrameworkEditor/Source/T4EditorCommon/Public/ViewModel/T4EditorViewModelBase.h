@@ -32,7 +32,7 @@ class IT4PlayerController;
 class IT4EditorGameplayCommand; // #114
 class IT4Framework;
 class UT4EditorEnvironmentTimeObject; // #94
-class UT4EditorActionReplayController;
+class UT4EditorReplaySystemController;
 struct FT4ActionBase;
 struct FT4HUDDrawInfo;
 struct FPostProcessSettings; // #100
@@ -103,8 +103,8 @@ public:
 	void SetWorldSystemTimeHour(float InHour) override; // #93
 	float GetWorldSystemTimeHour() const override; // #93
 
-	virtual void NotifyActionReplayRec() override {} // #104
-	virtual void NotifyActionReplayPlay() override {} // #104
+	virtual void NotifyReplayRec() override {} // #104
+	virtual void NotifyReplayPlay() override {} // #104
 
 public:
 	void OnCleanup(); // #85
@@ -114,8 +114,8 @@ public:
 	FT4OnEditWidgetTargetChanged& GetOnEditWidgetTargetChanged() { return OnEditWidgetTargetChanged; } // #125
 	FT4OnEditWidgetTargetUpdating& GetOnEditWidgetTargetUpdating() { return OnEditWidgetTargetUpdating; } // #118
 
-	bool HasActionReplaySystem() const { return EditorActionReplaySystemPtr.IsValid(); } // #104
-	UT4EditorActionReplayController* GetActionReplaySystem(); // #60, #68, #104
+	bool HasReplaySystem() const { return EditorReplaySystemPtr.IsValid(); } // #104
+	UT4EditorReplaySystemController* GetReplaySystem(); // #60, #68, #104
 
 	FT4EditorViewportClient* GetViewportClient() const { return ViewportClientRef; }
 
@@ -130,6 +130,7 @@ public:
 
 	// Common
 	bool GetValidSpawnLocation(const FVector& InOriginLocation, float InDistance, int32 InTryCount, FVector& OutSpawnLocation); // #76
+	bool GetValidViewPoint(FVector& OutCameraLocation, FRotator& OutCameraRotation, FVector& OutPlayerLocation);
 
 	void UpdateBookmark(int32 InIndex); // #100, #103
 	void TravelBookmark(int32 InIndex); // #100, #103
@@ -300,8 +301,8 @@ protected:
 	// #99 : SubClass 별로 처리해야 할 기능이 있다면...구현
 	virtual void ViewTargetChanged(IT4WorldActor* InViewTarget) {} // #79, #83, #99
 
-	virtual FString GetActionReplayAssetName() const { return TEXT("ActionReplayAsset"); } // #68, #104
-	virtual FString GetActionReplayFolderName() const { return TEXT("Default"); } // #68, #104
+	virtual FString GetReplaySystemAssetName() const { return TEXT("ReplaySystemAsset"); } // #68, #104
+	virtual FString GetReplayFolderName() const { return TEXT("Default"); } // #68, #104
 
 	IT4WorldActor* GetPlayerActor(ET4LayerType InLayerType) const;
 
@@ -334,7 +335,7 @@ private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관�
 	FT4OnEditWidgetTargetChanged OnEditWidgetTargetChanged; // #125
 	FT4OnEditWidgetTargetUpdating OnEditWidgetTargetUpdating; // #118
 
-	TWeakObjectPtr<UT4EditorActionReplayController> EditorActionReplaySystemPtr; // #68, #104
+	TWeakObjectPtr<UT4EditorReplaySystemController> EditorReplaySystemPtr; // #68, #104
 
 	bool bServerMonitoring; // #140
 	bool bSimulating; // #86

@@ -18,6 +18,8 @@ namespace UnrealBuildTool.Rules
 					"CoreUObject",
 					"Engine",
                     "InputCore",
+					"UMG",
+					"Slate",
 					"SlateCore",
 					"AIModule",
                     "NavigationSystem",

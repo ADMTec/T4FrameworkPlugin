@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/MainFrame/Client/Mode/T4ControlModeHandler.h"
+#include "T4Gameplay/Private/Client/Mode/T4ControlModeHandler.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ControlModeHandler() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ControlModeHandler_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "MainFrame/Client/Mode/T4ControlModeHandler.h" },
-		{ "ModuleRelativePath", "Private/MainFrame/Client/Mode/T4ControlModeHandler.h" },
+		{ "IncludePath", "Client/Mode/T4ControlModeHandler.h" },
+		{ "ModuleRelativePath", "Private/Client/Mode/T4ControlModeHandler.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ControlModeHandler_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ControlModeHandler() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ControlModeHandler, 713321085);
+	IMPLEMENT_CLASS(UT4ControlModeHandler, 4089156842);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4ControlModeHandler>()
 	{
 		return UT4ControlModeHandler::StaticClass();

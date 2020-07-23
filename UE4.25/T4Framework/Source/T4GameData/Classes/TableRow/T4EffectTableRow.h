@@ -76,6 +76,9 @@ public:
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FT4EffectShapeData EffectShapeData; // #135
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)

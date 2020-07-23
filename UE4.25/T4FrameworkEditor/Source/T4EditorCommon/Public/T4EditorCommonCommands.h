@@ -19,10 +19,10 @@ public:
 	TSharedPtr<FUICommandInfo> RespawnPlayer; // #136
 	TSharedPtr<FUICommandInfo> SaveThumbnailImage;
 
-	TSharedPtr<FUICommandInfo> ActionReplayRec; // #68
-	TSharedPtr<FUICommandInfo> ActionReplayPlay;
-	TSharedPtr<FUICommandInfo> ActionReplayPause;
-	TSharedPtr<FUICommandInfo> ActionReplayStop;
+	TSharedPtr<FUICommandInfo> ReplayRec; // #68
+	TSharedPtr<FUICommandInfo> ReplayPlay;
+	TSharedPtr<FUICommandInfo> ReplayPause;
+	TSharedPtr<FUICommandInfo> ReplayStop;
 
 	TSharedPtr<FUICommandInfo> DespawnAll;
 	TSharedPtr<FUICommandInfo> RespawnAll; // #114

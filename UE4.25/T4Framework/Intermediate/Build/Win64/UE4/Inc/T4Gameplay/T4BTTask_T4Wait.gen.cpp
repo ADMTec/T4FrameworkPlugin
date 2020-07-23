@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Classes/AIController/BTTasks/T4BTTask_T4Wait.h"
+#include "T4Gameplay/Classes/NPC/BTTasks/T4BTTask_T4Wait.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Wait() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BTTask_T4Wait_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Wait" },
-		{ "IncludePath", "AIController/BTTasks/T4BTTask_T4Wait.h" },
-		{ "ModuleRelativePath", "Classes/AIController/BTTasks/T4BTTask_T4Wait.h" },
+		{ "IncludePath", "NPC/BTTasks/T4BTTask_T4Wait.h" },
+		{ "ModuleRelativePath", "Classes/NPC/BTTasks/T4BTTask_T4Wait.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BTTask_T4Wait_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BTTask_T4Wait() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BTTask_T4Wait, 2775334580);
+	IMPLEMENT_CLASS(UT4BTTask_T4Wait, 4258031765);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BTTask_T4Wait>()
 	{
 		return UT4BTTask_T4Wait::StaticClass();
