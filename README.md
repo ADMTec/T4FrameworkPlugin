@@ -25,7 +25,8 @@
 	  - https://github.com/Tech4Labs/T4FrameworkExample
   - 해당 프로젝트에 T4Framework 플러그인 사용을 활성화합니다.
     - .uproject
-	  - T4Framework and T4FrameworkEditor : "Enabled": true
+	  - T4Framework and T4FrameworkEditor
+	  - "Enabled": true
 - **참고**
   - 정식 사용을 위해서는 Subscription license 가 필요합니다.
   - 유저 프로젝트에 필요한 기능 구현을 대행하고 있습니다.
