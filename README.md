@@ -9,6 +9,7 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs> (@Tech4Labs)
 - **설치방법**
+  - **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다.
   - 언리얼 엔진을 설치합니다.
     - https://docs.unrealengine.com/ko/GettingStarted/Installation/index.html
   - 언리얼 엔진 버전에 맞는 T4Framework 플러그인을 내려받습니다.
