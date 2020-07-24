@@ -28,8 +28,8 @@ public:
 
 	void ResetCrosshairTexture();
 
-	void SetCrosshairTexture(const FSoftObjectPath& InObjectPath); // #121
-	void SetCrosshairTextureScale(float InScale) { CrosshairScale = InScale; }
+	void SetCrosshairTexture(const FSoftObjectPath& InObjectPath, float InDefaultScale); // #121
+	void SetCrosshairTextureScale(float InScale) { CrosshairUsingScale = InScale; }
 
 protected:
 	virtual void NotifyBeginPlay() override;
@@ -45,5 +45,7 @@ public:
 protected:
 	TSharedPtr<ST4BuiltinHUDWidget> HUDWidgetPtr;
 	bool bShowCrosshair; // #151 : HUD 와 Crosshair 분리!
-	float CrosshairScale;
+	
+	float CrosshairTextureScale;
+	float CrosshairUsingScale;
 };

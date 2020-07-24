@@ -62,6 +62,9 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
 	TSoftObjectPtr<UTexture2D> DefaultCrosshairTexturePath; // #121
 
+	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
+	float DefaultCrosshairTextureScale;
+
 	UPROPERTY(EditAnywhere, config, Category = "Indicator Outline")
 	FLinearColor IndicatorDefaultSelectOutlineColor; // #115
 
