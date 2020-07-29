@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4ParticleSystemComponent.h"
+#include "T4Engine/Classes/Components/T4ParticleSystemComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ParticleSystemComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ParticleSystemComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * http://api.unrealengine.com/KOR/Engine/Rendering/ParticleSystems/\n */" },
 		{ "HideCategories", "Object Physics Collision Mobility VirtualTexture" },
-		{ "IncludePath", "World/Actor/Component/T4ParticleSystemComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4ParticleSystemComponent.h" },
+		{ "IncludePath", "Components/T4ParticleSystemComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4ParticleSystemComponent.h" },
 		{ "ToolTip", "http://api.unrealengine.com/KOR/Engine/Rendering/ParticleSystems/" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ParticleSystemComponent() {}
 		0,
 		0,
 		0,
-		0x00A010A4u,
+		0x00B010A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4ParticleSystemComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ParticleSystemComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4ParticleSystemComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ParticleSystemComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ParticleSystemComponent, 644272470);
+	IMPLEMENT_CLASS(UT4ParticleSystemComponent, 219319682);
 	template<> T4ENGINE_API UClass* StaticClass<UT4ParticleSystemComponent>()
 	{
 		return UT4ParticleSystemComponent::StaticClass();

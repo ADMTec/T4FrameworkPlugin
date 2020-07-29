@@ -1,11 +1,11 @@
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\HUD\T4GameHUDBase.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\NPC\T4AIControllerBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Object\T4GameObjectBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4LocalPlayerBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\T4GameModeBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4PlayerDefaultPawnBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4PlayerControllerBase.h
-D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\T4GameInstanceBase.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\NPC\T4AIDefaultPawnBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4LocalPlayerBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4PlayerControllerBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Player\T4PlayerDefaultPawnBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\T4GameInstanceBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\T4GameModeBase.h
+D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Classes\Object\T4GameObjectBase.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Public\T4FrameworkEditor.h
 D:\Tech4Labs\T4FrameworkPlugin\UE4.25\T4Framework\HostProject\Plugins\T4Framework\Source\T4Framework\Public\T4FrameworkTypes.h

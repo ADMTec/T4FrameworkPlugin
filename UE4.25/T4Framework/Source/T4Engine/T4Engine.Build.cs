@@ -18,6 +18,7 @@ namespace UnrealBuildTool.Rules
 					"CoreUObject",
 					"Engine",
                     "NavigationSystem",
+					"HeadMountedDisplay",
                     "T4Asset"
                 }
             );

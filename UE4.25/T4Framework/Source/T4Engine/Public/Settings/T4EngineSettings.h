@@ -126,13 +126,37 @@ public:
 	UPROPERTY(config, EditAnywhere, Category= FPSCameraSettting)
 	float FPS_RotationSpeed; // #121
 
-	UPROPERTY(config, EditAnywhere, Category=DataTable)
-	FSoftObjectPath PreviewSceneEnvironmentAssetPath; // #94
+	UPROPERTY(config, EditAnywhere, Category=HMD)
+	FVector HMDOriginOffset; // #153
 
-	UPROPERTY(config, EditAnywhere, Category=DataTable)
-	FSoftObjectPath ThumbnailSceneEnvironmentAssetPath; // #97
+	UPROPERTY(config, EditAnywhere, Category=HMD)
+	FVector HMDCameraOffset; // #153
 
-	UPROPERTY(config, EditAnywhere, Category=DataTable)
+	UPROPERTY(config, EditAnywhere, Category=HMD)
+	FSoftObjectPath HMDHandSkeletalMeshPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossBeamStaticMeshPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossEndStaticMeshPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossGoalStaticMeshPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossBeamLeftMaterialPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossBeamRightMaterialPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossArcEndLeftMaterialPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category = HMD)
+	FSoftObjectPath HMDAcrossArcEndRightMaterialPath; // #153
+
+	UPROPERTY(config, EditAnywhere, Category=Common)
 	FSoftObjectPath FallbackErrorEntityAssetPath; // #126
 
 protected:

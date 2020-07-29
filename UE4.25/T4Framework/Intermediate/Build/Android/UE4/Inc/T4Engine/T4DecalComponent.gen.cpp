@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4DecalComponent.h"
+#include "T4Engine/Classes/Components/T4DecalComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4DecalComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4DecalComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * http://api.unrealengine.com/KOR/Resources/ContentExamples/Decals/index.html\n */" },
 		{ "HideCategories", "Collision Object Physics SceneComponent Activation Components|Activation Mobility Trigger PhysicsVolume" },
-		{ "IncludePath", "World/Actor/Component/T4DecalComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4DecalComponent.h" },
+		{ "IncludePath", "Components/T4DecalComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4DecalComponent.h" },
 		{ "ToolTip", "http://api.unrealengine.com/KOR/Resources/ContentExamples/Decals/index.html" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4DecalComponent() {}
 		0,
 		0,
 		0,
-		0x00A000A4u,
+		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4DecalComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4DecalComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4DecalComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4DecalComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4DecalComponent, 572239939);
+	IMPLEMENT_CLASS(UT4DecalComponent, 3390534102);
 	template<> T4ENGINE_API UClass* StaticClass<UT4DecalComponent>()
 	{
 		return UT4DecalComponent::StaticClass();

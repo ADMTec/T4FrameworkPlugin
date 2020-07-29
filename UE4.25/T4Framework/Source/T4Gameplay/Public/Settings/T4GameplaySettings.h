@@ -77,6 +77,9 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Game Control")
 	float ControlCameraPitchMaxAngle; // #151
 
+	UPROPERTY(EditAnywhere, config, Category = "Game Control")
+	float ControlGamepadRightYAttenuation; // #153
+
 	UPROPERTY(EditAnywhere, config, Category = "Gameplay Network")
 	float DefaultNetworkLatencySec; // #52
 

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4TextRenderComponent.h"
+#include "T4Engine/Classes/Components/T4TextRenderComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4TextRenderComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4TextRenderComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #119\n */" },
 		{ "HideCategories", "Object LOD Physics TextureStreaming Activation Components|Activation Collision Mobility VirtualTexture Trigger" },
-		{ "IncludePath", "World/Actor/Component/T4TextRenderComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4TextRenderComponent.h" },
+		{ "IncludePath", "Components/T4TextRenderComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4TextRenderComponent.h" },
 		{ "ToolTip", "#119" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4TextRenderComponent() {}
 		0,
 		0,
 		0,
-		0x00A010A4u,
+		0x00B010A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4TextRenderComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4TextRenderComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4TextRenderComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4TextRenderComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4TextRenderComponent, 1815398604);
+	IMPLEMENT_CLASS(UT4TextRenderComponent, 3685167583);
 	template<> T4ENGINE_API UClass* StaticClass<UT4TextRenderComponent>()
 	{
 		return UT4TextRenderComponent::StaticClass();

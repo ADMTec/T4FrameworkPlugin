@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldCharacterActor() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4SkinnedMeshComponent_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4SkeletalMeshComponent_NoRegister();
-	T4ENGINE_API UClass* Z_Construct_UClass_UT4ActorMovementComponent_NoRegister();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4MovementComponent_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4CapsuleComponent_NoRegister();
 // End Cross Module References
 	void AT4WorldCharacterActor::StaticRegisterNativesAT4WorldCharacterActor()
@@ -92,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldCharacterActor() {}
 		{ "ModuleRelativePath", "Private/World/Actor/T4WorldCharacterActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent = { "ActorMovementComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldCharacterActor, ActorMovementComponent), Z_Construct_UClass_UT4ActorMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent = { "ActorMovementComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldCharacterActor, ActorMovementComponent), Z_Construct_UClass_UT4MovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_ActorMovementComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldCharacterActor_Statics::NewProp_CapsuleComponent_MetaData[] = {
 		{ "Category", "Character" },
@@ -136,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldCharacterActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldCharacterActor, 338239030);
+	IMPLEMENT_CLASS(AT4WorldCharacterActor, 1714159138);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldCharacterActor>()
 	{
 		return AT4WorldCharacterActor::StaticClass();

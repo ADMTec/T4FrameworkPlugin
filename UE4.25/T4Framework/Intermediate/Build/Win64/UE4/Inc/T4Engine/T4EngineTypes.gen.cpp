@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4AnimInstance();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4CollisionChannel();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MoveMode();
+	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MotionControllerType();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4CameraType();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4WorldSource();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4SpawnMode();
@@ -652,6 +653,60 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		}
 		return ReturnEnum;
 	}
+	static UEnum* ET4MotionControllerType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Engine_ET4MotionControllerType, Z_Construct_UPackage__Script_T4Engine(), TEXT("ET4MotionControllerType"));
+		}
+		return Singleton;
+	}
+	template<> T4ENGINE_API UEnum* StaticEnum<ET4MotionControllerType>()
+	{
+		return ET4MotionControllerType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MotionControllerType(ET4MotionControllerType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4MotionControllerType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4MotionControllerType_Hash() { return 526217205U; }
+	UEnum* Z_Construct_UEnum_T4Engine_ET4MotionControllerType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4MotionControllerType"), 0, Get_Z_Construct_UEnum_T4Engine_ET4MotionControllerType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4MotionControllerType::Left", (int64)ET4MotionControllerType::Left },
+				{ "ET4MotionControllerType::Right", (int64)ET4MotionControllerType::Right },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #153\n" },
+				{ "Left.Name", "ET4MotionControllerType::Left" },
+				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+				{ "Right.Name", "ET4MotionControllerType::Right" },
+				{ "ToolTip", "#153" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Engine,
+				nullptr,
+				"ET4MotionControllerType",
+				"ET4MotionControllerType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* ET4CameraType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -863,7 +918,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4ActorType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActorType(ET4ActorType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActorType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 2585006357U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 3295010414U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActorType()
 	{
 #if WITH_HOT_RELOAD
@@ -884,6 +939,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "ET4ActorType::Zone", (int64)ET4ActorType::Zone },
 				{ "ET4ActorType::Projectile", (int64)ET4ActorType::Projectile },
 				{ "ET4ActorType::Indicator", (int64)ET4ActorType::Indicator },
+				{ "ET4ActorType::MotionController", (int64)ET4ActorType::MotionController },
 				{ "ET4ActorType::Default", (int64)ET4ActorType::Default },
 				{ "ET4ActorType::Mirror", (int64)ET4ActorType::Mirror },
 				{ "ET4ActorType::None", (int64)ET4ActorType::None },
@@ -893,9 +949,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Character.Comment", "// entity base\n" },
 				{ "Character.Name", "ET4ActorType::Character" },
 				{ "Character.ToolTip", "entity base" },
-				{ "Default.Comment", "// #117\n" },
+				{ "Default.Comment", "// #153\n" },
 				{ "Default.Name", "ET4ActorType::Default" },
-				{ "Default.ToolTip", "#117" },
+				{ "Default.ToolTip", "#153" },
 				{ "Indicator.Comment", "// #63\n" },
 				{ "Indicator.Name", "ET4ActorType::Indicator" },
 				{ "Indicator.ToolTip", "#63" },
@@ -905,6 +961,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Mirror.Name", "ET4ActorType::Mirror" },
 				{ "Mirror.ToolTip", "#54" },
 				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+				{ "MotionController.Comment", "// #117\n" },
+				{ "MotionController.Name", "ET4ActorType::MotionController" },
+				{ "MotionController.ToolTip", "#117" },
 				{ "None.Comment", "// #140 : \xeb\x8b\xa4\xeb\xa5\xb8 Layer \xec\x9d\x98 Actor \xeb\xa5\xbc \xeb\xaf\xb8\xeb\x9f\xac\xeb\xa7\x81 \xed\x95\x9c\xeb\x8b\xa4.\n" },
 				{ "None.Hidden", "" },
 				{ "None.Name", "ET4ActorType::None" },

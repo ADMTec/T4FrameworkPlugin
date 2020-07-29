@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4EnvironmentZoneComponent.h"
+#include "T4Engine/Classes/Components/T4EnvironmentZoneComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentZoneComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentZoneComponent_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Trigger PhysicsVolume" },
-		{ "IncludePath", "World/Actor/Component/T4EnvironmentZoneComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4EnvironmentZoneComponent.h" },
+		{ "IncludePath", "Components/T4EnvironmentZoneComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4EnvironmentZoneComponent.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EnvironmentZoneComponent_Statics::StaticCppClassTypeInfo = {
@@ -60,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentZoneComponent() {}
 		0,
 		0,
 		0,
-		0x00A000A4u,
+		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4EnvironmentZoneComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EnvironmentZoneComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4EnvironmentZoneComponent()
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentZoneComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EnvironmentZoneComponent, 3999559397);
+	IMPLEMENT_CLASS(UT4EnvironmentZoneComponent, 28352042);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EnvironmentZoneComponent>()
 	{
 		return UT4EnvironmentZoneComponent::StaticClass();

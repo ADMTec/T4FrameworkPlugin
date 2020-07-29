@@ -231,9 +231,6 @@ public:
 	virtual const FVector GetMovementVelocity() const = 0;
 	virtual const float GetMovementSpeed() const = 0;
 
-	virtual bool GetVisible() const = 0; // #117
-	virtual const float GetOpacity() const = 0; // #78
-
 	virtual bool HasReaction(const FName& InReactionName) const = 0; // #73
 	virtual bool HasPlayTag(const FName& InPlayTagName, ET4PlayTagType InPlayTagType) const = 0; // #81
 	virtual bool HasActionPoint(const FName& InActionPoint) const = 0; // #57 : ActionPoint = Socket or Bone or VirtualBone
@@ -244,6 +241,11 @@ public:
 	virtual bool GetSocketScale(const FName& InSocketName, ERelativeTransformSpace InTransformSpace, FVector& OutScale) const = 0; // #54
 	virtual bool GetSocketTransform(const FName& InSocketName, ERelativeTransformSpace InTransformSpace, FTransform& OutTransform) const = 0; // #58
 
+	virtual const float GetOpacity() const = 0; // #78
+	virtual bool IsInvisible() const = 0; // #117
+
+	virtual void SetInvisible(bool bInEnable) = 0; // #153 : SetActorHiddenInGame, 전체
+	virtual void SetNoCollision(bool bInActive) = 0; // #135
 	virtual void SetHeightOffset(float InOffset) = 0; // #18
 	virtual void SetOutline(bool bInUse) = 0; // #115
 	virtual void SetNameplateText(FName InKey, const TCHAR* InText, float InHeightOffset, const FColor& InTextColor, float InScaleXY) = 0; // #119
@@ -414,6 +416,38 @@ public:
 #endif
 };
 
+#if TECH4_ENGINE_HMD_USED // #153
+class APawn;
+class UT4SceneComponent;
+class T4ENGINE_API IT4HeadMountedDisplay
+{
+public:
+	virtual ~IT4HeadMountedDisplay() {}
+
+	virtual bool IsConnected() const = 0;
+	virtual bool IsInstalled() const = 0;
+
+	virtual FName GetDeviceName() const = 0;
+	virtual float GetFOVOverride() const = 0;
+
+	virtual bool OnInstall(APawn* InOwner, UT4SceneComponent* InOriginComponent) = 0;
+	virtual void OnUninstall() = 0;
+
+	virtual FVector GetLocation(ET4MotionControllerType InType) const = 0;
+	virtual FRotator GetRotation(ET4MotionControllerType InType) const = 0;
+
+	virtual bool IsShownAcrossLine(ET4MotionControllerType InType) const = 0;
+	virtual void ShowAcrossLine(ET4MotionControllerType InType, bool bInShow) = 0;
+
+	virtual const FVector& GetGoalLocation(ET4MotionControllerType InType) const = 0;
+	virtual const FRotator& GetGoalRotation(ET4MotionControllerType InType) const = 0;
+	virtual const FVector& GetAcrossDirection(ET4MotionControllerType InType) const = 0;
+
+	virtual void OnMotionControllerAxisX(ET4MotionControllerType InType, float InAxisValue) = 0;
+	virtual void OnMotionControllerAxisY(ET4MotionControllerType InType, float InAxisValue) = 0;
+};
+#endif
+
 class AT4EditorCameraActor; // #58
 class T4ENGINE_API IT4WorldSystem
 {
@@ -453,6 +487,9 @@ public:
 
 	virtual APlayerController* GetPlayerController() const = 0; // #114
 	virtual APlayerCameraManager* GetPlayerCameraManager() const = 0; // #114
+#if TECH4_ENGINE_HMD_USED
+	virtual IT4HeadMountedDisplay* GetHeadMountedDisplay() = 0; // #153
+#endif
 
 	virtual bool HasPlayerActor() const = 0;
 	virtual IT4WorldActor* GetPlayerActor() const = 0; // #133 : Free Camera 일 경우 nullptr 이 리턴됨에 유의!! (FreeCam 은 툴 전용이다)
@@ -467,7 +504,7 @@ public:
 
 	virtual IT4WorldActor* GetIndicatorActor() = 0; // #117
 
-#if TECH4_REPLAY_SYSTEM_USED
+#if TECH4_ENGINE_REPLAY_SYSTEM_USED
 	virtual IT4ReplayPlayer* GetReplayPlayer() const = 0; // #68
 	virtual IT4ReplayRecorder* GetReplayRecorder() const = 0;
 	virtual IT4ReplaySystem* GetReplaySystem() = 0;

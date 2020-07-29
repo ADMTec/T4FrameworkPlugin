@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4SkinnedMeshComponent.h"
+#include "T4Engine/Classes/Components/T4SkinnedMeshComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4SkinnedMeshComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4SkinnedMeshComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * https://docs.unrealengine.com/en-us/Engine/Content/Types/SkeletalMeshes\n */" },
 		{ "HideCategories", "Object Mobility Trigger" },
-		{ "IncludePath", "World/Actor/Component/T4SkinnedMeshComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4SkinnedMeshComponent.h" },
+		{ "IncludePath", "Components/T4SkinnedMeshComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4SkinnedMeshComponent.h" },
 		{ "ToolTip", "https://docs.unrealengine.com/en-us/Engine/Content/Types/SkeletalMeshes" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SkinnedMeshComponent() {}
 		0,
 		0,
 		0,
-		0x00A010A4u,
+		0x00B010A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4SkinnedMeshComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4SkinnedMeshComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4SkinnedMeshComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SkinnedMeshComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4SkinnedMeshComponent, 3244794309);
+	IMPLEMENT_CLASS(UT4SkinnedMeshComponent, 53399380);
 	template<> T4ENGINE_API UClass* StaticClass<UT4SkinnedMeshComponent>()
 	{
 		return UT4SkinnedMeshComponent::StaticClass();

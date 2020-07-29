@@ -16,9 +16,11 @@
   * http://api.unrealengine.com/KOR/Gameplay/Framework/Controller/PlayerController/index.html
  */
 
+class APawn;
 class AT4GameHUDBase;
 class UT4SpringArmComponent;
 class UT4CameraComponent;
+class UT4SceneComponent;
 class IT4WorldActor;
 
 UCLASS()
@@ -56,16 +58,16 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::Player; } // #114
 
-	bool SetControlActor(const FT4ActorID& InNewTargetID) override;
-	void ResetControlActor(bool bInSetDefaultPawn) override;
+	bool SetControlWorldActor(const FT4ActorID& InNewTargetID) override;
+	void ResetControlWorldActor(bool bInSetDefaultPawn) override;
 
-	bool HasControlActor() const override { return ControlActorID.IsValid(); }
-	const FT4ActorID& GetControlActorID() const override { return ControlActorID; }
-	IT4WorldActor* GetControlActor() const override;
+	bool HasControlWorldActor() const override { return ControlWorldActorID.IsValid(); }
+	const FT4ActorID& GetControlWorldActorID() const override { return ControlWorldActorID; }
+	IT4WorldActor* GetControlWorldActor() const override;
 
-	bool HasObserverActor() const override { return ObserverActorID.IsValid(); } // #52
-	bool SetObserverActor(const FT4ActorID& InNewObserverID) override; // #52
-	void ClearObserverActor() override; // #52
+	bool HasObserverWorldActor() const override { return ObserverWorldActorID.IsValid(); } // #52
+	bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) override; // #52
+	void ClearObserverWorldActor() override; // #52
 
 #if WITH_EDITOR
 	bool IsFreeCameraModeEnabled() const override { return bFreeCameraModeEnabled; } // #133
@@ -96,7 +98,8 @@ public:
 
 	APawn* GetDefaultPawn() const override; // #86
 
-	bool IsActiveVRMode() const override; // #153
+	bool IsHMDConnected() const override; // #153
+	bool IsGamepadAttached() const override; // #151
 
 	FRotator GetViewControlRotation() const override;
 	
@@ -168,9 +171,17 @@ protected:
 	IT4EditorGameplayHandler* GetEditorGameplayHandler() const; // #60
 #endif
 
+	virtual void OnInstallPlayerSettings(); // #153
+	virtual void OnUninstallPlayerSettings(); // #153
+
 private:
-	void AttachCameraComponent(APawn* InOuter);
+	void AttachCameraComponent(APawn* InOwner);
 	void DetachCameraComponent();
+
+#if TECH4_ENGINE_HMD_USED
+	void AttachHMDComponent(APawn* InOwner); // #153
+	void DetachHMDComponent(); // #153
+#endif
 
 	APawn* GetTargetPawnSelected(); // #52
 
@@ -184,11 +195,14 @@ protected:
 	UPROPERTY(Transient)
 	UT4CameraComponent* CameraComponent;
 
-private:
-	FT4ActorID ControlActorID;
-	FT4ActorID ObserverActorID; // #52
+	UPROPERTY(Transient)
+	UT4SceneComponent* VROriginComponent; // #153
 
-	TWeakObjectPtr<APawn> CachedDefaultPawn;
+private:
+	FT4ActorID ControlWorldActorID;
+	FT4ActorID ObserverWorldActorID; // #52
+
+	TWeakObjectPtr<APawn> CachedDefaultPawnPtr;
 
 	ET4InputMode InputModeSelected; // #133
 

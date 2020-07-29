@@ -55,6 +55,10 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultNetworkLatencySec;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ControlGamepadRightYAttenuation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ControlGamepadRightYAttenuation;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ControlCameraPitchMaxAngle_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ControlCameraPitchMaxAngle;
@@ -144,12 +148,21 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData[] = {
 		{ "Category", "Gameplay Network" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec = { "DefaultNetworkLatencySec", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultNetworkLatencySec), METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation_MetaData[] = {
+		{ "Category", "Game Control" },
 		{ "Comment", "// #151\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 		{ "ToolTip", "#151" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec = { "DefaultNetworkLatencySec", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultNetworkLatencySec), METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation = { "ControlGamepadRightYAttenuation", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, ControlGamepadRightYAttenuation), METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlCameraPitchMaxAngle_MetaData[] = {
 		{ "Category", "Game Control" },
@@ -267,6 +280,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlCameraPitchMaxAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlCameraPitchMinAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorAttackTargetOutlineColor,
@@ -310,7 +324,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameplaySettings, 1377079184);
+	IMPLEMENT_CLASS(UT4GameplaySettings, 3804857022);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameplaySettings>()
 	{
 		return UT4GameplaySettings::StaticClass();

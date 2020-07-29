@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4PlayerControllerBase();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	UPackage* Z_Construct_UPackage__Script_T4Framework();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4SceneComponent_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4CameraComponent_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4SpringArmComponent_NoRegister();
 // End Cross Module References
@@ -33,6 +34,10 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VROriginComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_VROriginComponent;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraComponent_MetaData[];
 #endif
@@ -57,6 +62,13 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_VROriginComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Classes/Player/T4PlayerControllerBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_VROriginComponent = { "VROriginComponent", nullptr, (EPropertyFlags)0x0020080000082008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4PlayerControllerBase, VROriginComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_VROriginComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_VROriginComponent_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Classes/Player/T4PlayerControllerBase.h" },
@@ -73,6 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraSpringArmComponent = { "CameraSpringArmComponent", nullptr, (EPropertyFlags)0x0020080000082008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4PlayerControllerBase, CameraSpringArmComponent), Z_Construct_UClass_UT4SpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraSpringArmComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraSpringArmComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AT4PlayerControllerBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_VROriginComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4PlayerControllerBase_Statics::NewProp_CameraSpringArmComponent,
 	};
@@ -103,7 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerControllerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4PlayerControllerBase, 967693626);
+	IMPLEMENT_CLASS(AT4PlayerControllerBase, 346598395);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4PlayerControllerBase>()
 	{
 		return AT4PlayerControllerBase::StaticClass();

@@ -42,11 +42,11 @@ public:
 	virtual bool IsEntered() const { return bEntered; } // #134
 
 	virtual IT4ObjectController* GetController() const { return nullptr; } // #114 : Server All, Client Player Only
-	virtual IT4WorldActor* GetControlActor() const;
+	virtual IT4WorldActor* GetControlWorldActor() const;
 
 	bool IsValidControlActorID() const { return ControlActorID.IsValid(); } // #146
-	const FT4ActorID& GetControlActorID() const { return ControlActorID; } // #114 : ActorID 기억! 현재는 ObjectID.Value 와 같다. 이후 교체가 되어야 할 수 있음
-	void SetControlActorID(const FT4ActorID& InControlActorID) { ControlActorID = InControlActorID; } // #131
+	const FT4ActorID& GetControlWorldActorID() const { return ControlActorID; } // #114 : ActorID 기억! 현재는 ObjectID.Value 와 같다. 이후 교체가 되어야 할 수 있음
+	void SetControlWorldActorID(const FT4ActorID& InControlActorID) { ControlActorID = InControlActorID; } // #131
 
 #if WITH_EDITOR
 	virtual const FString GetAIDebugString() const { return FString(); } // #114 : Only ServerObject

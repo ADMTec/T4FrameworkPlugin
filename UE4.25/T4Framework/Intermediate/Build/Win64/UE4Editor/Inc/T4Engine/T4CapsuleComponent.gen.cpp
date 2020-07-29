@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4CapsuleComponent.h"
+#include "T4Engine/Classes/Components/T4CapsuleComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4CapsuleComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CapsuleComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * http://api.unrealengine.com/KOR/Gameplay/Framework/Pawn/Character/index.html\n */" },
 		{ "HideCategories", "Object LOD Lighting TextureStreaming Object LOD Lighting TextureStreaming Activation Components|Activation Trigger VirtualTexture" },
-		{ "IncludePath", "World/Actor/Component/T4CapsuleComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4CapsuleComponent.h" },
+		{ "IncludePath", "Components/T4CapsuleComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4CapsuleComponent.h" },
 		{ "ToolTip", "http://api.unrealengine.com/KOR/Gameplay/Framework/Pawn/Character/index.html" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4CapsuleComponent() {}
 		0,
 		0,
 		0,
-		0x00A010A4u,
+		0x00B010A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4CapsuleComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CapsuleComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4CapsuleComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4CapsuleComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4CapsuleComponent, 4162196254);
+	IMPLEMENT_CLASS(UT4CapsuleComponent, 1946039464);
 	template<> T4ENGINE_API UClass* StaticClass<UT4CapsuleComponent>()
 	{
 		return UT4CapsuleComponent::StaticClass();

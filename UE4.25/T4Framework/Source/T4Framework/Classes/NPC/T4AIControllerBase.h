@@ -58,16 +58,16 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::NPCAI; } // #114
 
-	bool SetControlActor(const FT4ActorID& InNewTargetID) override;
-	void ResetControlActor(bool bInSetDefaultPawn) override;
+	bool SetControlWorldActor(const FT4ActorID& InNewTargetID) override;
+	void ResetControlWorldActor(bool bInSetDefaultPawn) override;
 
-	bool HasControlActor() const override  { return ControlActorID.IsValid(); }
-	const FT4ActorID& GetControlActorID() const override { return ControlActorID; }
-	IT4WorldActor* GetControlActor() const override;
+	bool HasControlWorldActor() const override  { return ControlActorID.IsValid(); }
+	const FT4ActorID& GetControlWorldActorID() const override { return ControlActorID; }
+	IT4WorldActor* GetControlWorldActor() const override;
 
-	bool HasObserverActor() const override { return false; } // #52
-	bool SetObserverActor(const FT4ActorID& InNewObserverID) override { return false; } // #52 : 서버는 필요없다!
-	void ClearObserverActor() override {} // #52 : 서버는 필요없다!
+	bool HasObserverWorldActor() const override { return false; } // #52
+	bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) override { return false; } // #52 : 서버는 필요없다!
+	void ClearObserverWorldActor() override {} // #52 : 서버는 필요없다!
 
 #if WITH_EDITOR
 	bool IsFreeCameraModeEnabled() const override { return false; } // #133

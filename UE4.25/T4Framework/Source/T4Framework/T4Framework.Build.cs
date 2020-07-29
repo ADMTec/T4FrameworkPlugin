@@ -20,7 +20,8 @@ namespace UnrealBuildTool.Rules
                     "InputCore",
                     "AIModule",
                     "NavigationSystem",
-                    "T4Asset",
+					"HeadMountedDisplay",
+					"T4Asset",
                     "T4Engine"
                 }
             );

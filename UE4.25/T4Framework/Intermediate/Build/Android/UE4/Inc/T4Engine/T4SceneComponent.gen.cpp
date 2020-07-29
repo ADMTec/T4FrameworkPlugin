@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4SceneComponent.h"
+#include "T4Engine/Classes/Components/T4SceneComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4SceneComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4SceneComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * https://docs.unrealengine.com/en-us/Engine/Content/Types/SkeletalMeshes\n */" },
 		{ "HideCategories", "Trigger PhysicsVolume" },
-		{ "IncludePath", "World/Actor/Component/T4SceneComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4SceneComponent.h" },
+		{ "IncludePath", "Components/T4SceneComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4SceneComponent.h" },
 		{ "ToolTip", "https://docs.unrealengine.com/en-us/Engine/Content/Types/SkeletalMeshes" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SceneComponent() {}
 		0,
 		0,
 		0,
-		0x00A000A4u,
+		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4SceneComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4SceneComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4SceneComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SceneComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4SceneComponent, 513877794);
+	IMPLEMENT_CLASS(UT4SceneComponent, 2977774707);
 	template<> T4ENGINE_API UClass* StaticClass<UT4SceneComponent>()
 	{
 		return UT4SceneComponent::StaticClass();

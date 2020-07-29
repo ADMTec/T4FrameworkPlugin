@@ -56,16 +56,16 @@ public:
 
 	virtual const FT4ObjectID& GetObjectID() const = 0; // #114 : GameObject and Controller ID (WARN : 서버는 모두, 클라는 Player 만 존재)
 
-	virtual bool SetControlActor(const FT4ActorID& InNewTargetID) = 0;
-	virtual void ResetControlActor(bool bInSetDefaultPawn) = 0;
+	virtual bool SetControlWorldActor(const FT4ActorID& InNewTargetID) = 0;
+	virtual void ResetControlWorldActor(bool bInSetDefaultPawn) = 0;
 
-	virtual bool HasControlActor() const = 0;
-	virtual const FT4ActorID& GetControlActorID() const = 0;
-	virtual IT4WorldActor* GetControlActor() const = 0;
+	virtual bool HasControlWorldActor() const = 0;
+	virtual const FT4ActorID& GetControlWorldActorID() const = 0;
+	virtual IT4WorldActor* GetControlWorldActor() const = 0;
 
-	virtual bool HasObserverActor() const = 0; // #52
-	virtual bool SetObserverActor(const FT4ActorID& InNewObserverID) = 0; // #52
-	virtual void ClearObserverActor() = 0; // #52
+	virtual bool HasObserverWorldActor() const = 0; // #52
+	virtual bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) = 0; // #52
+	virtual void ClearObserverWorldActor() = 0; // #52
 
 #if WITH_EDITOR
 	virtual bool IsFreeCameraModeEnabled() const = 0; // #133
@@ -106,7 +106,8 @@ public:
 
 	virtual APawn* GetDefaultPawn() const = 0; // #86
 
-	virtual bool IsActiveVRMode() const = 0; // #153
+	virtual bool IsHMDConnected() const = 0; // #153
+	virtual bool IsGamepadAttached() const = 0; // #151 : FSlateApplication::IsGamepadAttached or FSlateApplication::IsFakingTouchEvents
 
 	virtual FRotator GetViewControlRotation() const = 0;
 
@@ -233,7 +234,7 @@ public:
 	virtual UT4GameObjectBase* GetPlayerClientObject() const = 0; // #114 : Only Client
 	virtual IT4PlayerController* GetPlayerController() const = 0;
 
-	virtual bool IsActiveVRMode() const = 0; // #153
+	virtual bool IsHMDConnected() const = 0; // #153
 	virtual bool IsGamepadAttached() const = 0; // #151 : FSlateApplication::IsGamepadAttached or FSlateApplication::IsFakingTouchEvents
 
 	virtual bool GetScreenCenterToWorldRay(const FVector2D& InScreenOffset, FRay& OutWorldRay) = 0; // #121 : Mode 에 따라 마우스 또는 화면 중앙(FPS)의 Ray 를 리턴

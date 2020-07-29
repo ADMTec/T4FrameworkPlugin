@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4ProjectileMovementComponent.h"
+#include "T4Engine/Classes/Components/T4ProjectileMovementComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ProjectileMovementComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ProjectileMovementComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #140\n */" },
 		{ "HideCategories", "Trigger PhysicsVolume" },
-		{ "IncludePath", "World/Actor/Component/T4ProjectileMovementComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4ProjectileMovementComponent.h" },
+		{ "IncludePath", "Components/T4ProjectileMovementComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4ProjectileMovementComponent.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ProjectileMovementComponent() {}
 		0,
 		0,
 		0,
-		0x00A000A4u,
+		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4ProjectileMovementComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ProjectileMovementComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4ProjectileMovementComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ProjectileMovementComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ProjectileMovementComponent, 1542039179);
+	IMPLEMENT_CLASS(UT4ProjectileMovementComponent, 1432030101);
 	template<> T4ENGINE_API UClass* StaticClass<UT4ProjectileMovementComponent>()
 	{
 		return UT4ProjectileMovementComponent::StaticClass();

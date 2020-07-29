@@ -38,13 +38,45 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_FallbackErrorEntityAssetPath;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossArcEndRightMaterialPath_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailSceneEnvironmentAssetPath;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossArcEndRightMaterialPath;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PreviewSceneEnvironmentAssetPath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossArcEndLeftMaterialPath_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PreviewSceneEnvironmentAssetPath;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossArcEndLeftMaterialPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossBeamRightMaterialPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossBeamRightMaterialPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossBeamLeftMaterialPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossBeamLeftMaterialPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossGoalStaticMeshPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossGoalStaticMeshPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossEndStaticMeshPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossEndStaticMeshPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDAcrossBeamStaticMeshPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDAcrossBeamStaticMeshPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDHandSkeletalMeshPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDHandSkeletalMeshPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDCameraOffset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDCameraOffset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDOriginOffset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDOriginOffset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FPS_RotationSpeed_MetaData[];
 #endif
@@ -188,31 +220,103 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath_MetaData[] = {
-		{ "Category", "DataTable" },
-		{ "Comment", "// #97\n" },
+		{ "Category", "Common" },
+		{ "Comment", "// #153\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
-		{ "ToolTip", "#97" },
+		{ "ToolTip", "#153" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath = { "FallbackErrorEntityAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, FallbackErrorEntityAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData[] = {
-		{ "Category", "DataTable" },
-		{ "Comment", "// #94\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndRightMaterialPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
-		{ "ToolTip", "#94" },
+		{ "ToolTip", "#153" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath = { "ThumbnailSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, ThumbnailSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndRightMaterialPath = { "HMDAcrossArcEndRightMaterialPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossArcEndRightMaterialPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndRightMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndRightMaterialPath_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData[] = {
-		{ "Category", "DataTable" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndLeftMaterialPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndLeftMaterialPath = { "HMDAcrossArcEndLeftMaterialPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossArcEndLeftMaterialPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndLeftMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndLeftMaterialPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamRightMaterialPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamRightMaterialPath = { "HMDAcrossBeamRightMaterialPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossBeamRightMaterialPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamRightMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamRightMaterialPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamLeftMaterialPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamLeftMaterialPath = { "HMDAcrossBeamLeftMaterialPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossBeamLeftMaterialPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamLeftMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamLeftMaterialPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossGoalStaticMeshPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossGoalStaticMeshPath = { "HMDAcrossGoalStaticMeshPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossGoalStaticMeshPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossGoalStaticMeshPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossGoalStaticMeshPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossEndStaticMeshPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossEndStaticMeshPath = { "HMDAcrossEndStaticMeshPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossEndStaticMeshPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossEndStaticMeshPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossEndStaticMeshPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamStaticMeshPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamStaticMeshPath = { "HMDAcrossBeamStaticMeshPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDAcrossBeamStaticMeshPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamStaticMeshPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamStaticMeshPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath = { "HMDHandSkeletalMeshPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDHandSkeletalMeshPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset_MetaData[] = {
+		{ "Category", "HMD" },
+		{ "Comment", "// #153\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#153" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset = { "HMDCameraOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDCameraOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData[] = {
+		{ "Category", "HMD" },
 		{ "Comment", "// #121\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath = { "PreviewSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PreviewSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset = { "HMDOriginOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDOriginOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
@@ -456,8 +560,16 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalPath = { "MPCGlobalPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, MPCGlobalPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalPath_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EngineSettings_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FallbackErrorEntityAssetPath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndRightMaterialPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossArcEndLeftMaterialPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamRightMaterialPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamLeftMaterialPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossGoalStaticMeshPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossEndStaticMeshPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDAcrossBeamStaticMeshPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_ZoomInDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset,
@@ -517,7 +629,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 4112749522);
+	IMPLEMENT_CLASS(UT4EngineSettings, 691018062);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

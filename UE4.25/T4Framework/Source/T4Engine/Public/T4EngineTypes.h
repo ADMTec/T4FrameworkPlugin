@@ -56,6 +56,8 @@ enum class ET4ActorType : uint8
 	Projectile, // #63
 	Indicator, // #117
 
+	MotionController, // #153
+
 	Default, // #54
 
 	Mirror, // #140 : 다른 Layer 의 Actor 를 미러링 한다.
@@ -116,6 +118,13 @@ enum class ET4CameraType : uint8
 
 	Editor 	UMETA(Hidden),
 	None 	UMETA(Hidden),
+};
+
+UENUM()
+enum class ET4MotionControllerType : uint8 // #153
+{
+	Left,
+	Right,
 };
 
 UENUM()

@@ -7,11 +7,13 @@
   - **Website** : <https://tech4labs.com/>
   - YouTube : <https://www.youtube.com/channel/UCoVNwMxu9CUzc92zGYN4l6A>
   - Facebook : <https://www.facebook.com/tech4labs>
-  - Twitter : <https://twitter.com/Tech4Labs> (@Tech4Labs)
+  - Twitter : <https://twitter.com/Tech4Labs>
 - **설치방법**
   - **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
   - 언리얼 엔진을 설치합니다.
     - https://docs.unrealengine.com/ko/GettingStarted/Installation/index.html
+    - Supported Engine Versions
+      - 4.25 (Release Version : 4.25.3)
   - 언리얼 엔진 버전에 맞는 T4Framework 플러그인을 내려받습니다.
 	- UE4.25/T4Framework
 	- UE4.25/T4FrameworkEditor

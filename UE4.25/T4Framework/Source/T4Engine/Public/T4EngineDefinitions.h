@@ -50,3 +50,7 @@ static const FVector T4Const_WorldTimeSunriseInfo(7.0f, 9.0f, 2.0f);
 // #132 : Action Key
 static const FT4ActionKey T4Const_WorldActorRotationPrimaryKey(TEXT("T4ActionOverrideRotationPrimaryKey"), true, true); // #132
 static const FT4ActionKey T4Const_WorldActorAnimSetPlayTagKey(TEXT("T4Const_WorldActorAnimSetPlayTagKey")); // #74
+
+// #153 : VR Support
+static const FName T4Const_VRDeviceNameOculus = TEXT("OculusHMD");
+static const FName T4Const_VRDeviceNameSteamVR = TEXT("SteamVR");

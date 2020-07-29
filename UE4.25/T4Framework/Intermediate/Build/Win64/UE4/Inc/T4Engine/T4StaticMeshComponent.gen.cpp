@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Component/T4StaticMeshComponent.h"
+#include "T4Engine/Classes/Components/T4StaticMeshComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4StaticMeshComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4StaticMeshComponent_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * https://docs.unrealengine.com/en-us/Engine/Content/Types/StaticMeshes\n */" },
 		{ "HideCategories", "Object Activation Components|Activation Trigger" },
-		{ "IncludePath", "World/Actor/Component/T4StaticMeshComponent.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Component/T4StaticMeshComponent.h" },
+		{ "IncludePath", "Components/T4StaticMeshComponent.h" },
+		{ "ModuleRelativePath", "Classes/Components/T4StaticMeshComponent.h" },
 		{ "ToolTip", "https://docs.unrealengine.com/en-us/Engine/Content/Types/StaticMeshes" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4StaticMeshComponent() {}
 		0,
 		0,
 		0,
-		0x00A010A4u,
+		0x00B010A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4StaticMeshComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4StaticMeshComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4StaticMeshComponent()
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4StaticMeshComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4StaticMeshComponent, 43303995);
+	IMPLEMENT_CLASS(UT4StaticMeshComponent, 3143065748);
 	template<> T4ENGINE_API UClass* StaticClass<UT4StaticMeshComponent>()
 	{
 		return UT4StaticMeshComponent::StaticClass();
