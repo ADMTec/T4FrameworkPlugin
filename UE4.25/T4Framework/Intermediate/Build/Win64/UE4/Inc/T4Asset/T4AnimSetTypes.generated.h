@@ -19,7 +19,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_ET4ANIMSETTEMPLATE(op) \
 	op(ET4AnimsetTemplate::Basic) \
-	op(ET4AnimsetTemplate::Paragon) 
+	op(ET4AnimsetTemplate::Paragon) \
+	op(ET4AnimsetTemplate::None) 
 
 enum class ET4AnimsetTemplate : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4AnimsetTemplate>();

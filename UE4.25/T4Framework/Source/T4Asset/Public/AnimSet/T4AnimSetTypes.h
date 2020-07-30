@@ -12,7 +12,9 @@ UENUM()
 enum class ET4AnimsetTemplate : uint8 // #131
 {
 	Basic,
-	Paragon
+	Paragon,
+
+	None,
 };
 
 enum ET4AnimationLayer // #71

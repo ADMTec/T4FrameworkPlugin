@@ -69,12 +69,7 @@ public:
 	virtual const IT4AnimState* GetActiveAnimState() const = 0;
 	virtual const IT4AnimState* GetPendingAnimState() const = 0;
 
-	virtual bool TryChangeAnimState(
-		const FName& InAnimStateName,
-		bool bInCheckPriorityActiveState,
-		bool bInCheckPriorityPendingActiveState
-	) = 0;
-
+	virtual bool TryChangeAnimState(const FName& InAnimStateName, bool bInCheckActiveState, bool bInCheckPendingState) = 0;
 	virtual void RegisterAnimState(const FName& InAnimStateName, IT4AnimState* InAnimState) = 0;
 	virtual void UnregisterAnimState(const FName& InAnimStateName) = 0;
 	// ~#47
