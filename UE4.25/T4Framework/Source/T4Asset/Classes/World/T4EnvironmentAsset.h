@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4AssetMinimal.h"
-#include "T4AssetCommonTypes.h"
+#include "T4AssetTypes.h"
 #include "Engine/Scene.h" // #98
 #include "Components/ExponentialHeightFogComponent.h" // #90
 #include "Components/SkyLightComponent.h" // #97

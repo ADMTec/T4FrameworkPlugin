@@ -7,7 +7,7 @@
 
 #include "T4GameDataTypes.h" // #68
 
-#include "T4Asset/Public/T4AssetCommonTypes.h" // #135
+#include "T4Asset/Public/T4AssetTypes.h" // #135
 #include "T4Engine/Public/T4EngineTypes.h" // #63
 
 #include "T4SkillTableRow.generated.h"

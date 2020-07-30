@@ -5,10 +5,10 @@
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
 
-#include "T4GameDefinitions.h"
+#include "T4GameDataConstants.h"
 #include "T4GameDataTypes.h" // #104
 
-#include "T4Asset/Public/T4AssetDefinitions.h"
+#include "T4Asset/Public/T4AssetConstants.h"
 
 #include "T4NPCTableRow.generated.h"
 

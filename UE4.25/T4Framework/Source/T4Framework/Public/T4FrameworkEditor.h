@@ -4,7 +4,7 @@
 
 #include "T4FrameworkMinimal.h"
 #include "T4Asset/Public/Entity/T4EntityKey.h" // #114
-#include "T4Asset/Public/T4AssetCommonTypes.h" // #140
+#include "T4Asset/Public/T4AssetTypes.h" // #140
 #include "T4Engine/Public/T4EngineTypes.h" // #63
 
 #if WITH_EDITOR

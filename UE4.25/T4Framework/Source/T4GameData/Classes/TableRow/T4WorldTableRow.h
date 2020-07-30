@@ -4,7 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
-#include "T4Engine/Public/T4EngineDefinitions.h"
+#include "T4Engine/Public/T4EngineConstants.h"
 #include "T4WorldTableRow.generated.h"
 
 /**

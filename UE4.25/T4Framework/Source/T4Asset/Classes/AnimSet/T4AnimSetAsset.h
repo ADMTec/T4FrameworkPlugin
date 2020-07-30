@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4AssetMinimal.h"
-#include "T4AssetDefinitions.h"
+#include "T4AssetConstants.h"
 #include "Animset/T4AnimsetTypes.h" // #131
 #include "T4AnimsetAsset.generated.h"
 

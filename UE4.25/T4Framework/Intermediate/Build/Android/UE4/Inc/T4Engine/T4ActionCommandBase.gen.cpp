@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Public/Action/T4ActionCommandBase.h"
+#include "T4Engine/Public/Action/Command/T4ActionCommandBase.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -71,7 +71,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionCommandBase
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  *\n */" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandBase.h" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionCommandBase.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewStructOps()
@@ -81,7 +81,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionCommandBase
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_bTransient_MetaData[] = {
 		{ "Comment", "// \xec\xa7\x80\xec\xa0\x95 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb1\xb4\xeb\x84\x88\xeb\x9d\x84\xec\x96\xb4 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4\n" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandBase.h" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionCommandBase.h" },
 		{ "ToolTip", "\xec\xa7\x80\xec\xa0\x95 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb1\xb4\xeb\x84\x88\xeb\x9d\x84\xec\x96\xb4 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4" },
 	};
 #endif
@@ -93,21 +93,21 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionCommandBase
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_OffsetTimeSec_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandBase.h" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionCommandBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_OffsetTimeSec = { "OffsetTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCommandBase, OffsetTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_OffsetTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_OffsetTimeSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionKey_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandBase.h" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionCommandBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionKey = { "ActionKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCommandBase, ActionKey), Z_Construct_UScriptStruct_FT4ActionKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionCommandType_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/T4ActionCommandBase.h" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionCommandBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionCommandType = { "ActionCommandType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCommandBase, ActionCommandType), Z_Construct_UEnum_T4Engine_ET4ActionCommandType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionCommandType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics::NewProp_ActionCommandType_MetaData)) };
@@ -147,7 +147,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionCommandBase
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCommandBase_Hash() { return 486159696U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCommandBase_Hash() { return 1793684414U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

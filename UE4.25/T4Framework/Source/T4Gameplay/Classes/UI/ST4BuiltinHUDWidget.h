@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4GameplayMinimal.h"
-#include "T4GameplayDefinitions.h"
+#include "T4GameplayConstants.h"
 #include "T4Engine/Public/T4EngineLayer.h"
 #include "T4GameData/Public/T4GameDBTypes.h"
 #include "Widgets/SCompoundWidget.h"

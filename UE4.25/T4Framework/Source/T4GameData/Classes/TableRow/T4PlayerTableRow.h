@@ -5,7 +5,7 @@
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
 
-#include "T4GameDefinitions.h"
+#include "T4GameDataConstants.h"
 
 #include "T4PlayerTableRow.generated.h"
 

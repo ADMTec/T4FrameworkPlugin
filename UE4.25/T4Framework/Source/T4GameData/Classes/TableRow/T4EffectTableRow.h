@@ -6,7 +6,7 @@
 #include "T4TableRowBase.h"
 #include "T4GameDataTypes.h" // #68
 
-#include "T4Asset/Public/T4AssetCommonTypes.h" // #135
+#include "T4Asset/Public/T4AssetTypes.h" // #135
 
 #include "T4EffectTableRow.generated.h"
 

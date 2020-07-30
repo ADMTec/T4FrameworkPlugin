@@ -3,4 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Framework/Public/T4FrameworkMinimal.h"
+#include "T4GameDataDefines.h"
+
+/**
+  * T4GameData 모듈 내 공통 헤더만 추가
+ */

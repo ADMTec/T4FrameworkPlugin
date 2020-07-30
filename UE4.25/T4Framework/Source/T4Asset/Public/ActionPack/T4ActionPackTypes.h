@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4AssetMinimal.h"
-#include "T4AssetCommonTypes.h"
+#include "T4AssetTypes.h"
 #include "T4ActionPackTypes.generated.h"
 
 /**

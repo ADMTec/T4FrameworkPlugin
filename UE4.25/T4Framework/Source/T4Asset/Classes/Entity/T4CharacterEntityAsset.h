@@ -4,7 +4,7 @@
 
 #include "T4AssetMinimal.h"
 #include "T4ActorEntityAsset.h"
-#include "T4AssetDefinitions.h" // #74
+#include "T4AssetConstants.h" // #74
 #include "T4CharacterEntityAsset.generated.h"
 
 /**

@@ -5,7 +5,7 @@
 #include "T4AssetMinimal.h"
 #include "Common/T4CommonAssetStructs.h" // #103
 #include "AnimSet/T4AnimsetAsset.h" // #107
-#include "T4AssetDefinitions.h"
+#include "T4AssetConstants.h"
 #include "Entity/T4EntityTypes.h"
 #include "Entity/T4EntityKey.h"
 #include "T4EntityAsset.generated.h"

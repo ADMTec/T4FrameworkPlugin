@@ -12,20 +12,26 @@
 class UWorld;
 struct FWorldContext;
 
-namespace T4EngineLayer
+class T4ENGINE_API FT4EngineLayer
 {
-	T4ENGINE_API bool Add(const FWorldContext* InWorldContext); // #30
-	T4ENGINE_API void Remove(const FName& InWorldContextName); // #30
+public:
+	static FT4EngineLayer& Get();
 
-	T4ENGINE_API ET4LayerType Get(const FWorldContext* InWorldContext);
-	T4ENGINE_API ET4LayerType Get(const UWorld* InWorld);
+	FT4EngineLayer();
+	~FT4EngineLayer();
+
+	bool Add(const FWorldContext* InWorldContext); // #30
+	void Remove(const FName& InWorldContextName); // #30
+
+	ET4LayerType Convert(const FWorldContext* InWorldContext);
+	ET4LayerType Convert(const UWorld* InWorld);
 
 	FORCEINLINE bool IsClient(const ET4LayerType InLayerType) // #15
 	{
 		return (ET4LayerType::Client <= InLayerType && ET4LayerType::ClientMax > InLayerType) ? true : false;
 	}
 
-	T4ENGINE_API bool IsServer(const FWorldContext* InWorldContext); // #15
+	bool IsServer(const FWorldContext* InWorldContext); // #15
 
 	FORCEINLINE bool IsServer(const ET4LayerType InLayerType) // #15
 	{
@@ -65,6 +71,6 @@ namespace T4EngineLayer
 		return false;
 	}
 
-	T4ENGINE_API ET4LayerType FromString(const FString& InLayerString);
-	T4ENGINE_API const FString ToString(ET4LayerType InLayerType);
-}
+	ET4LayerType FromString(const FString& InLayerString);
+	const FString ToString(ET4LayerType InLayerType);
+};

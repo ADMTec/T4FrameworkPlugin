@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Framework/Public/T4FrameworkMinimal.h"
+#include "T4GameplayDefines.h"
 
 /**
-  * WARN : 전역 Macro 헤더. 테스트용 define 은 사용후 반드시 제거되어야 함!!
+  * T4Gameplay 모듈 내 공통 헤더만 추가
  */

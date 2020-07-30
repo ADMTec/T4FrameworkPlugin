@@ -4,7 +4,7 @@
 
 #include "T4AssetMinimal.h"
 #include "T4ActionBase.h"
-#include "T4AssetDefinitions.h"
+#include "T4AssetConstants.h"
 #include "Entity/T4EntityTypes.h"
 #include "Engine/Scene.h" // #100
 #include "Camera/CameraShake.h" // #101

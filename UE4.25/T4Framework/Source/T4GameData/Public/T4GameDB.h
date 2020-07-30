@@ -86,10 +86,10 @@ struct T4GAMEDATA_API FT4DBRowBase
 };
 
 class UDataTable;
-class T4GAMEDATA_API IT4GameDB
+class T4GAMEDATA_API IT4GameDBLibrary
 {
 public:
-	virtual ~IT4GameDB() {}
+	virtual ~IT4GameDBLibrary() {}
 
 	virtual bool Initialize(const FSoftObjectPath& InMasterTablePath, const FName InGameContentSelected) = 0; // #135
 	virtual void Finalize() = 0; // #135
@@ -99,8 +99,8 @@ public:
 	virtual void Reload() = 0; // #125
 	virtual bool Refresh(ET4GameDBType InGameDBType) = 0; // #125
 
-	virtual bool HasDB(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
-	virtual bool HasDB(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual bool Contains(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual bool Contains(const FT4GameDBKey& InGameDBKey) const = 0;
 
 	virtual const FT4GameDBKey GetDBKeyByUID(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
 	virtual const FT4DBRowBase* GetDBRowBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
@@ -145,4 +145,4 @@ public:
 #endif
 };
 
-T4GAMEDATA_API IT4GameDB* GetGameDB();
+T4GAMEDATA_API IT4GameDBLibrary* GetGameDBLibrary();

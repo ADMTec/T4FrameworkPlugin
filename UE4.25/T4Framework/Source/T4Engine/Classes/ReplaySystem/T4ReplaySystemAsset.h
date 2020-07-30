@@ -4,12 +4,12 @@
 
 #include "T4EngineMinimal.h"
 
-#include "Action/T4ActionCommandStatus.h"
-#include "Action/T4ActionCommandMoves.h"
-#include "Action/T4ActionCommandCommons.h"
-#include "Action/T4ActionCommandWorlds.h"
+#include "Action/Command/T4ActionStatusCommands.h"
+#include "Action/Command/T4ActionMoveCommands.h"
+#include "Action/Command/T4ActionCommonCommands.h"
+#include "Action/Command/T4ActionWorldCommands.h"
 #if WITH_EDITOR
-#include "Action/T4ActionCommandEditors.h"
+#include "Action/Command/T4ActionEditorCommands.h"
 #endif
 
 #include "Action/T4ActionParameters.h"

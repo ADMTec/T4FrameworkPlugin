@@ -3,10 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4AssetDefines.h"
 
 /**
-  * WARN : 전역 Macro 헤더. 테스트용 define 은 사용후 반드시 제거되어야 함!!
+  * T4Asset 모듈 내 공통 헤더만 추가
  */
-
- // #149 : 해당 옵션이 켜지면 클라이언트에서 T4Framework 의 Single Play 용 서버 코드를 제거한다.
-#define TECH4_CLIENT_ONLY_USED 0

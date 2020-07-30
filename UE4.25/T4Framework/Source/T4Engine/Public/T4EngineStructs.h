@@ -4,7 +4,7 @@
 
 #include "T4EngineMinimal.h"
 #include "T4EngineTypes.h"
-#include "T4EngineDefinitions.h"
+#include "T4EngineConstants.h"
 
 #include "T4Asset/Public/ActionPack/T4ActionPackTypes.h"
 #include "T4Asset/Public/Entity/T4EntityTypes.h" // #126

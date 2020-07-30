@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ENGINE_T4ActionCommandBase_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandBase_h_18_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionCommandBase_h_18_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ActionCommandBase_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionBase Super;
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ActionCommandBase>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionCommandBase_h
+#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionCommandBase_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
