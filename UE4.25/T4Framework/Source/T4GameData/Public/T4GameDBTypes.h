@@ -57,7 +57,7 @@ struct FT4GameUID // #150
 	GENERATED_USTRUCT_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Common, meta = (DisplayName = "UID"))
 	uint32 Value;
 
 public:

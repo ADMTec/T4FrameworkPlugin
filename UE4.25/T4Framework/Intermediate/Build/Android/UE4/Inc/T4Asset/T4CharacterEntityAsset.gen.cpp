@@ -1448,13 +1448,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterTesti
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TestJumpMaxHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestSprintSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestStanceMoveSpeeds_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TestSprintSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestCombatSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TestCombatSpeed;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_TestStanceMoveSpeeds;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_TestStanceMoveSpeeds_Key_KeyProp;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TestStanceMoveSpeeds_ValueProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestDefaultSpeed_MetaData[];
 #endif
@@ -1491,34 +1489,23 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterTesti
 		{ "Category", "Testing" },
 		{ "ClampMax", "5000" },
 		{ "ClampMin", "50.0" },
-		{ "Comment", "// #131\n" },
+		{ "Comment", "// #154 : FName = StanceName\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
-		{ "ToolTip", "#131" },
+		{ "ToolTip", "#154 : FName = StanceName" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestJumpMaxHeight = { "TestJumpMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterTestingData, TestJumpMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestJumpMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestJumpMaxHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestSprintSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_MetaData[] = {
 		{ "Category", "Testing" },
-		{ "ClampMax", "1500" },
-		{ "ClampMin", "10.0" },
-		{ "Comment", "// #109\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
-		{ "ToolTip", "#109" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestSprintSpeed = { "TestSprintSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterTestingData, TestSprintSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestSprintSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestSprintSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestCombatSpeed_MetaData[] = {
-		{ "Category", "Testing" },
-		{ "ClampMax", "1000" },
-		{ "ClampMin", "10.0" },
 		{ "Comment", "// #108\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 		{ "ToolTip", "#108" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestCombatSpeed = { "TestCombatSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterTestingData, TestCombatSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestCombatSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestCombatSpeed_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds = { "TestStanceMoveSpeeds", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterTestingData, TestStanceMoveSpeeds), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_Key_KeyProp = { "TestStanceMoveSpeeds_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_ValueProp = { "TestStanceMoveSpeeds", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestDefaultSpeed_MetaData[] = {
 		{ "Category", "Testing" },
@@ -1542,8 +1529,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterTesti
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestJumpHeightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestJumpMaxHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestSprintSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestCombatSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestStanceMoveSpeeds_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestDefaultSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Statics::NewProp_TestMapEntityAsset,
 	};
@@ -1575,7 +1563,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterTesti
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Hash() { return 716020177U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterTestingData_Hash() { return 2623769045U; }
 class UScriptStruct* FT4EntityCharacterRenderingData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

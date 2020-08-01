@@ -5,9 +5,9 @@
 #include "T4GameplayMinimal.h"
 
 #include "T4GameplayTypes.h"
-#include "T4GameDBTypes.h" // #48
 
 #include "T4Framework/Classes/NPC/T4AIControllerBase.h"
+#include "T4GameData/Public/T4GameDBTypes.h"
 #include "T4BuiltinNPCAIController.generated.h"
 
 /**

@@ -1258,6 +1258,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameUID
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameUID_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "Common" },
+		{ "DisplayName", "UID" },
 		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
 	};
 #endif
@@ -1293,7 +1294,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameUID
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameUID_Hash() { return 2930310458U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameUID_Hash() { return 1686935818U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

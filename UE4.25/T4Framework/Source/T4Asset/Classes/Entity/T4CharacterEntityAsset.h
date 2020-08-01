@@ -87,8 +87,6 @@ struct T4ASSET_API FT4EntityCharacterTestingData
 public:
 	FT4EntityCharacterTestingData()
 		: TestDefaultSpeed(500.0f) // #108
-		, TestCombatSpeed(500.0f) // #109
-		, TestSprintSpeed(1000.0f) // #131
 		, TestJumpMaxHeight(200.0f) // #140
 		, TestJumpHeightSpeed(500.0f) // #140
 	{
@@ -102,11 +100,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Testing, meta = (ClampMin = "10.0", ClampMax = "1000"))
 	float TestDefaultSpeed; // #108
 
-	UPROPERTY(EditAnywhere, Category = Testing, meta = (ClampMin = "10.0", ClampMax = "1000"))
-	float TestCombatSpeed; // #109
-
-	UPROPERTY(EditAnywhere, Category = Testing, meta = (ClampMin = "10.0", ClampMax = "1500"))
-	float TestSprintSpeed; // #131
+	UPROPERTY(EditAnywhere, Category = Testing)
+	TMap<FName, float> TestStanceMoveSpeeds; // #154 : FName = StanceName
 
 	UPROPERTY(EditAnywhere, Category = Testing, meta = (ClampMin = "50.0", ClampMax = "5000"))
 	float TestJumpMaxHeight; // #140

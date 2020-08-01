@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerStatDBKey();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatLevel();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerSpeedData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerLocomotionData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 class UScriptStruct* FT4PlayerTableRow::StaticStruct()
@@ -74,9 +74,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InitializeLevel;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InitializeLevel_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeedData_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocomotionData_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MoveSpeedData;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LocomotionData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RaceName_MetaData[];
 #endif
@@ -148,14 +148,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel = { "InitializeLevel", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, InitializeLevel), Z_Construct_UEnum_T4GameData_ET4GameStatLevel, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_MoveSpeedData_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #104, #114\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#104, #114" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_MoveSpeedData = { "MoveSpeedData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, MoveSpeedData), Z_Construct_UScriptStruct_FT4PlayerSpeedData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_MoveSpeedData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_MoveSpeedData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData = { "LocomotionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, LocomotionData), Z_Construct_UScriptStruct_FT4PlayerLocomotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_RaceName_MetaData[] = {
 		{ "Category", "Common" },
@@ -186,7 +186,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializePlayerStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeLevel_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_MoveSpeedData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_RaceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_Version,
@@ -219,30 +219,30 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 318331935U; }
-class UScriptStruct* FT4PlayerSpeedData::StaticStruct()
+	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 551715103U; }
+class UScriptStruct* FT4PlayerLocomotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4PlayerSpeedData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4PlayerSpeedData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4PlayerSpeedData"), sizeof(FT4PlayerSpeedData), Get_Z_Construct_UScriptStruct_FT4PlayerSpeedData_Hash());
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4PlayerLocomotionData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4PlayerLocomotionData"), sizeof(FT4PlayerLocomotionData), Get_Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4PlayerSpeedData>()
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4PlayerLocomotionData>()
 {
-	return FT4PlayerSpeedData::StaticStruct();
+	return FT4PlayerLocomotionData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4PlayerSpeedData(FT4PlayerSpeedData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4PlayerSpeedData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerSpeedData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4PlayerLocomotionData(FT4PlayerLocomotionData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4PlayerLocomotionData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerLocomotionData
 {
-	FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerSpeedData()
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerLocomotionData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4PlayerSpeedData")),new UScriptStruct::TCppStructOps<FT4PlayerSpeedData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4PlayerLocomotionData")),new UScriptStruct::TCppStructOps<FT4PlayerLocomotionData>);
 	}
-} ScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerSpeedData;
-	struct Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerLocomotionData;
+	struct Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -261,120 +261,112 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerSpeedData
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_JumpMaxHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceMoveSpeeds_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_StanceMoveSpeeds;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceMoveSpeeds_Key_KeyProp;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StanceMoveSpeeds_ValueProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CombatSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultMoveSpeed_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CombatSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultSpeed;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultMoveSpeed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #108\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#108" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4PlayerSpeedData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4PlayerLocomotionData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_InPlaceRotationRate_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_InPlaceRotationRate_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #140\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_InPlaceRotationRate = { "InPlaceRotationRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, InPlaceRotationRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_InPlaceRotationRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_InPlaceRotationRate_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_InPlaceRotationRate = { "InPlaceRotationRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerLocomotionData, InPlaceRotationRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_InPlaceRotationRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_InPlaceRotationRate_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpHeightSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpHeightSpeed_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #140\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpHeightSpeed = { "JumpHeightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, JumpHeightSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpHeightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpHeightSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpHeightSpeed = { "JumpHeightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerLocomotionData, JumpHeightSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpHeightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpHeightSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpMaxHeight_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpMaxHeight_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #109\n" },
+		{ "Comment", "// #154 : FName = StanceName\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
-		{ "ToolTip", "#109" },
+		{ "ToolTip", "#154 : FName = StanceName" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpMaxHeight = { "JumpMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, JumpMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpMaxHeight_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpMaxHeight = { "JumpMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerLocomotionData, JumpMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpMaxHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_SprintSpeed_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #109\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
-		{ "ToolTip", "#109" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, SprintSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_SprintSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_SprintSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_CombatSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #50, #108\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#50, #108" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_CombatSpeed = { "CombatSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, CombatSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_CombatSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_CombatSpeed_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds = { "StanceMoveSpeeds", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerLocomotionData, StanceMoveSpeeds), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_Key_KeyProp = { "StanceMoveSpeeds_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_ValueProp = { "StanceMoveSpeeds", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_DefaultSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_DefaultMoveSpeed_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_DefaultSpeed = { "DefaultSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerSpeedData, DefaultSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_DefaultSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_DefaultSpeed_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_InPlaceRotationRate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpHeightSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_JumpMaxHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_SprintSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_CombatSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::NewProp_DefaultSpeed,
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_DefaultMoveSpeed = { "DefaultMoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerLocomotionData, DefaultMoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_DefaultMoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_DefaultMoveSpeed_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_InPlaceRotationRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpHeightSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_JumpMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_StanceMoveSpeeds_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::NewProp_DefaultMoveSpeed,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
 		nullptr,
 		&NewStructOps,
-		"T4PlayerSpeedData",
-		sizeof(FT4PlayerSpeedData),
-		alignof(FT4PlayerSpeedData),
-		Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::PropPointers),
+		"T4PlayerLocomotionData",
+		sizeof(FT4PlayerLocomotionData),
+		alignof(FT4PlayerLocomotionData),
+		Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerSpeedData()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerLocomotionData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4PlayerSpeedData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4PlayerSpeedData"), sizeof(FT4PlayerSpeedData), Get_Z_Construct_UScriptStruct_FT4PlayerSpeedData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4PlayerLocomotionData"), sizeof(FT4PlayerLocomotionData), Get_Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4PlayerSpeedData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerSpeedData_Hash() { return 1251629676U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Hash() { return 3605499816U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -48,10 +48,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 		static void* NewStructOps();
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FolderName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_FolderName;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParentRowName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ParentRowName;
@@ -73,7 +69,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_DBType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_DBType_Underlying;
+#endif // WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FolderName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_FolderName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_EDITORONLY_DATA
 #endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -89,15 +91,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TableRowBase>();
 	}
 #if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData[] = {
-		{ "Category", "Hide" },
-		{ "Comment", "// #122\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4TableRowBase.h" },
-		{ "ToolTip", "#122" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName = { "FolderName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TableRowBase, FolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_ParentRowName_MetaData[] = {
 		{ "Category", "Hide" },
@@ -140,16 +133,25 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType = { "DBType", nullptr, (EPropertyFlags)0x0010000800022001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TableRowBase, DBType), Z_Construct_UEnum_T4GameData_ET4GameDBType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#endif // WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData[] = {
+		{ "Category", "Hide" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4TableRowBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName = { "FolderName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TableRowBase, FolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4TableRowBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName,
+#if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_ParentRowName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_bPinned,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_Description,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBKeyName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_DBType_Underlying,
-	};
 #endif // WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TableRowBase_Statics::NewProp_FolderName,
+	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4TableRowBase_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
 		Z_Construct_UScriptStruct_FTableRowBase,
@@ -157,8 +159,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 		"T4TableRowBase",
 		sizeof(FT4TableRowBase),
 		alignof(FT4TableRowBase),
-		IF_WITH_EDITORONLY_DATA(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::PropPointers, nullptr),
-		IF_WITH_EDITORONLY_DATA(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::PropPointers), 0),
+		Z_Construct_UScriptStruct_FT4TableRowBase_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
 		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TableRowBase_Statics::Struct_MetaDataParams))
@@ -178,7 +180,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TableRowBase
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4TableRowBase_Hash() { return 4173519247U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4TableRowBase_Hash() { return 2197288825U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

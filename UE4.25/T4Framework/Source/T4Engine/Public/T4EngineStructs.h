@@ -55,8 +55,7 @@ struct FT4WorldActorProperty // #34
 
 #if WITH_EDITOR // #140
 		TestDefaultMoveSpeed = 0.0f;
-		TestCombatMoveSpeed = 0.0f;
-		TestSprintMoveSpeed = 0.0f;
+		TestStanceMoveSpeeds.Empty();
 		TestJumpMaxHeight = 0.0f; // #140
 		TestJumpHeightSpeed = 0.0f; // #140
 #endif
@@ -91,8 +90,7 @@ struct FT4WorldActorProperty // #34
 
 #if WITH_EDITOR // #140
 	float TestDefaultMoveSpeed;
-	float TestCombatMoveSpeed;
-	float TestSprintMoveSpeed;
+	TMap<FName, float> TestStanceMoveSpeeds; // #154 : FName = StanceName
 	float TestJumpMaxHeight;
 	float TestJumpHeightSpeed;
 #endif // ~#140

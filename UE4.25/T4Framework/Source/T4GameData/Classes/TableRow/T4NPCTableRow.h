@@ -19,19 +19,16 @@ class UBehaviorTree;
 class UT4ActorEntityAsset;
 
 USTRUCT()
-struct FT4NPCSpeedData // #108
+struct FT4NPCLocomotionData // #108
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	float DefaultSpeed; // #50, #108
+	float DefaultMoveSpeed; // #50, #108
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float CombatSpeed; // #109
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float SprintSpeed; // #109
+	TMap<FName, float> StanceMoveSpeeds; // #154 : FName = StanceName
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float JumpMaxHeight; // #140
@@ -43,10 +40,8 @@ public:
 	float InPlaceRotationRate; // #135
 
 public:
-	FT4NPCSpeedData()
-		: DefaultSpeed(500.0f)
-		, CombatSpeed(400.0f)
-		, SprintSpeed(800.0f)
+	FT4NPCLocomotionData()
+		: DefaultMoveSpeed(500.0f)
 		, JumpMaxHeight(200.0f)
 		, JumpHeightSpeed(500.0f)
 		, InPlaceRotationRate(300.0f)
@@ -131,7 +126,7 @@ public:
 	FName InitializeStanceName; // #142 : NPC 기본 스탠스 
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4NPCSpeedData MoveSpeedData; // #50, #108, #109
+	FT4NPCLocomotionData LocomotionData; // #50, #108, #109
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameStatLevel InitializeLevel; // #114 : Stat 레벨

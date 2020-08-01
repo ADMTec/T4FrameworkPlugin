@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4GameDBTypes.h"
+#include "T4GameData/Public/T4GameDBTypes.h"
 #include "Widgets/DropListView/ST4DropListViewWidget.h"
 
 /**

@@ -10,7 +10,7 @@
 
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4Framework/Public/T4FrameworkTypes.h" // #114
-#include "T4Gameplay/Public/T4GameplayTypes.h" // #104
+#include "T4GameData/Public/T4GameDBTypes.h"
 
 #include "T4GamePacketSC.generated.h"
 

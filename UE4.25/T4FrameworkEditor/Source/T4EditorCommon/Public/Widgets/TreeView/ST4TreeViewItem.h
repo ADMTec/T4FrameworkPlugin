@@ -66,6 +66,7 @@ public:
 
 	/** Broadcasts whenever a rename is requested */
 	FOnRenameRequest RenameRequestEvent;
+	TSharedPtr<SInlineEditableTextBlock> RenameTextBlockPtr;
 
 public:
 	FT4TreeViewNodePtr ParentNodePtr;
@@ -112,6 +113,7 @@ protected:
 
 	FText HandleOnGetDisplayText() const;
 	bool HandleOnVerifyItemLabelChanged(const FText& InLabel, FText& OutErrorMessage);
+	void HandleOnBeginTextEdit(const FText& InLabel);
 	void HandleOnLabelCommitted(const FText& InLabel, ETextCommit::Type InCommitInfo);
 
 	TSharedPtr<FDragDropOperation> CreateDragDropOperation(TSharedPtr<ST4TreeViewRow> InRow);

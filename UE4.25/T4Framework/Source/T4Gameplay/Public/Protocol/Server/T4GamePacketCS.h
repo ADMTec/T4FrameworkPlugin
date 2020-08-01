@@ -6,11 +6,10 @@
 #include "Protocol/T4GamePacketTypes.h"
 
 #include "T4GameplayTypes.h"
-#include "T4GameDBTypes.h" // #48
 
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4Framework/Public/T4FrameworkTypes.h" // #114
-#include "T4Gameplay/Public/T4GameplayTypes.h" // #112
+#include "T4GameData/Public/T4GameDBTypes.h"
 
 #include "T4GamePacketCS.generated.h"
 

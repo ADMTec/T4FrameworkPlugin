@@ -4,6 +4,7 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4GameplayTypes.h"
+#include "T4GameplayStructs.h"
 
 #include "T4Asset/Public/Entity/T4EntityKey.h" // #114
 #include "T4Engine/Public/T4EngineTypes.h"
@@ -30,6 +31,9 @@ public:
 	ET4ControlModeType GetControlModeType(const TCHAR* InControlModeName);
 
 	float GeMaxMoveSpeedByStance(const FT4GameDBKey& InDBKey, FName InStanceName);
+	bool GetJumpProperties(const FT4GameDBKey& InDBKey, float& OutJumpMaxHeight, float& OutJumpHeightSpeed);
+	bool GetSkillSetInfo(const FT4SkillSetDBKey& InDBKey, FT4GameplaySkillSetInfo& OutSkillSetInfo);
+	bool GetEffectSetInfo(const FT4EffectSetDBKey& InDBKey, FT4GameplayEffectSetInfo& OutEffectSetInfo);
 
 #if !UE_BUILD_SHIPPING
 	void ResetTestHotKes(); // #150

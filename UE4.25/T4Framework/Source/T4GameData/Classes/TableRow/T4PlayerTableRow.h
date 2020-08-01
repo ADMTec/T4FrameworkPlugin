@@ -15,19 +15,16 @@
 class UT4CharacterEntityAsset;
 
 USTRUCT()
-struct FT4PlayerSpeedData // #108
+struct FT4PlayerLocomotionData // #108
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	float DefaultSpeed; // #50, #108
+	float DefaultMoveSpeed; // #50, #108
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float CombatSpeed; // #109
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float SprintSpeed; // #109
+	TMap<FName, float> StanceMoveSpeeds; // #154 : FName = StanceName
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float JumpMaxHeight; // #140
@@ -39,10 +36,8 @@ public:
 	float InPlaceRotationRate; // #135
 
 public:
-	FT4PlayerSpeedData()
-		: DefaultSpeed(500.0f)
-		, CombatSpeed(400.0f)
-		, SprintSpeed(800.0f)
+	FT4PlayerLocomotionData()
+		: DefaultMoveSpeed(500.0f)
 		, JumpMaxHeight(200.0f)
 		, JumpHeightSpeed(500.0f)
 		, InPlaceRotationRate(300.0f)
@@ -68,7 +63,7 @@ public:
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4PlayerSpeedData MoveSpeedData; // #114
+	FT4PlayerLocomotionData LocomotionData; // #114
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameStatLevel InitializeLevel; // #114 : Stat 레벨

@@ -19,6 +19,9 @@ struct FT4TableRowBase : public FTableRowBase
 	GENERATED_USTRUCT_BODY()
 
 public:
+	UPROPERTY(VisibleAnywhere, Category = Hide)
+	FName FolderName; // #122
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(Transient, VisibleAnywhere, Category = Constant)
 	ET4GameDBType DBType;
@@ -34,19 +37,16 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Hide)
 	FName ParentRowName; // #122
-
-	UPROPERTY(VisibleAnywhere, Category = Hide)
-	FName FolderName; // #122
 #endif
 
 public:
 	FT4TableRowBase()
+		: FolderName(NAME_None) // #122
 #if WITH_EDITORONLY_DATA
-		: DBType(ET4GameDBType::Nums)
+		, DBType(ET4GameDBType::Nums)
 		, DBKeyName(NAME_None)
 		, bPinned(true) // #142
 		, ParentRowName(NAME_None) // #122
-		, FolderName(NAME_None) // #122
 #endif
 	{
 	}
