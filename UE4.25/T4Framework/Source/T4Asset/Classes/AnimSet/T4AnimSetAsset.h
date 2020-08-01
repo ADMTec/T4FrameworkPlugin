@@ -51,6 +51,7 @@ public:
 		, bAdditiveAnimType(false) // #138
 		, DurationSec(0.0f)
 #if WITH_EDITORONLY_DATA
+		, TagName(NAME_None) // #154 : 색인을 위한 프로퍼티 (SystemLayer 의 StanceToStance Transform 에서 사용함)
 		, bUseEndLoop(false) // #135 : System 의 Death 류 사용, End Looping 추가 (시퀀스 끝에 루핑 Section 을 추가해준다.)
 #endif
 	{
@@ -79,6 +80,9 @@ public:
 	TSoftObjectPtr<UAnimSequence> AnimSequenceAsset;
 
 #if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Editor)
+	FName TagName; // #154 : 색인을 위한 프로퍼티 (SystemLayer 의 StanceToStance Transform 에서 사용함)
+
 	UPROPERTY(EditAnywhere, Category = Editor)
 	bool bUseEndLoop; // #135 : System 의 Death 류 사용, End Looping 추가 (시퀀스 끝에 루핑 Section 을 추가해준다.)
 #endif

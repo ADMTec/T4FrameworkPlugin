@@ -13,8 +13,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4AnimSetBasicSystemTemplate() {}
 // Cross Module References
-	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemDeathData();
+	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData();
 	UPackage* Z_Construct_UPackage__Script_T4EntityEditor();
+	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemDeathData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemCrowdControlData();
 	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemHitData();
@@ -26,6 +27,111 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimSetBasicSystemTemplate() {}
 	T4ENTITYEDITOR_API UClass* Z_Construct_UClass_UT4AnimSetBasicSystemTemplate();
 	T4ENTITYEDITOR_API UClass* Z_Construct_UClass_UT4AnimSetLayerTemplateBase();
 // End Cross Module References
+class UScriptStruct* FT4AnimSetBasicSystemEndLoopData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ENTITYEDITOR_API uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData, Z_Construct_UPackage__Script_T4EntityEditor(), TEXT("T4AnimSetBasicSystemEndLoopData"), sizeof(FT4AnimSetBasicSystemEndLoopData), Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Hash());
+	}
+	return Singleton;
+}
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<FT4AnimSetBasicSystemEndLoopData>()
+{
+	return FT4AnimSetBasicSystemEndLoopData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData(FT4AnimSetBasicSystemEndLoopData::StaticStruct, TEXT("/Script/T4EntityEditor"), TEXT("T4AnimSetBasicSystemEndLoopData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicSystemEndLoopData
+{
+	FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicSystemEndLoopData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4AnimSetBasicSystemEndLoopData")),new UScriptStruct::TCppStructOps<FT4AnimSetBasicSystemEndLoopData>);
+	}
+} ScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicSystemEndLoopData;
+	struct Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMakeEndLoopDeathB_MetaData[];
+#endif
+		static void NewProp_bMakeEndLoopDeathB_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMakeEndLoopDeathB;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMakeEndLoopDeathA_MetaData[];
+#endif
+		static void NewProp_bMakeEndLoopDeathA_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMakeEndLoopDeathA;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4AnimSetBasicSystemEndLoopData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_SetBit(void* Obj)
+	{
+		((FT4AnimSetBasicSystemEndLoopData*)Obj)->bMakeEndLoopDeathB = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB = { "bMakeEndLoopDeathB", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetBasicSystemEndLoopData), &Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_SetBit(void* Obj)
+	{
+		((FT4AnimSetBasicSystemEndLoopData*)Obj)->bMakeEndLoopDeathA = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA = { "bMakeEndLoopDeathA", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetBasicSystemEndLoopData), &Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4EntityEditor,
+		nullptr,
+		&NewStructOps,
+		"T4AnimSetBasicSystemEndLoopData",
+		sizeof(FT4AnimSetBasicSystemEndLoopData),
+		alignof(FT4AnimSetBasicSystemEndLoopData),
+		Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4EntityEditor();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4AnimSetBasicSystemEndLoopData"), sizeof(FT4AnimSetBasicSystemEndLoopData), Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData_Hash() { return 951155037U; }
 class UScriptStruct* FT4AnimSetBasicSystemDeathData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -741,14 +847,6 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CombatToDefault_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CombatToDefault;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultToCombat_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultToCombat;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TransitionIdle_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_TransitionIdle;
@@ -765,20 +863,6 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4AnimSetBasicSystemTransitionData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_CombatToDefault_MetaData[] = {
-		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_CombatToDefault = { "CombatToDefault", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimSetBasicSystemTransitionData, CombatToDefault), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_CombatToDefault_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_CombatToDefault_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_DefaultToCombat_MetaData[] = {
-		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_DefaultToCombat = { "DefaultToCombat", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimSetBasicSystemTransitionData, DefaultToCombat), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_DefaultToCombat_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_DefaultToCombat_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_TransitionIdle_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "//bool UT4AnimSetBasicSystemTemplate::CopyTo\n" },
@@ -788,8 +872,6 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_TransitionIdle = { "TransitionIdle", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimSetBasicSystemTransitionData, TransitionIdle), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_TransitionIdle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_TransitionIdle_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_CombatToDefault,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_DefaultToCombat,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::NewProp_TransitionIdle,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Statics::ReturnStructParams = {
@@ -820,7 +902,7 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Hash() { return 1995610043U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData_Hash() { return 1319522295U; }
 	void UT4AnimSetBasicSystemTemplate::StaticRegisterNativesUT4AnimSetBasicSystemTemplate()
 	{
 	}
@@ -834,6 +916,10 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndLoopData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndLoopData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathData_MetaData[];
 #endif
@@ -859,6 +945,12 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EquipmentData;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceTransforms_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_StanceTransforms;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceTransforms_Key_KeyProp;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_StanceTransforms_ValueProp;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TransitionData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TransitionData;
@@ -876,6 +968,13 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EndLoopData_MetaData[] = {
+		{ "Category", "EndLoop" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EndLoopData = { "EndLoopData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetBasicSystemTemplate, EndLoopData), Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEndLoopData, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EndLoopData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EndLoopData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_DeathData_MetaData[] = {
 		{ "Category", "Death" },
@@ -919,6 +1018,15 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EquipmentData = { "EquipmentData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetBasicSystemTemplate, EquipmentData), Z_Construct_UScriptStruct_FT4AnimSetBasicSystemEquipmentData, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EquipmentData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EquipmentData_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_MetaData[] = {
+		{ "Category", "Transform" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Basic/T4AnimSetBasicSystemTemplate.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms = { "StanceTransforms", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetBasicSystemTemplate, StanceTransforms), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_Key_KeyProp = { "StanceTransforms_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_ValueProp = { "StanceTransforms", nullptr, (EPropertyFlags)0x0004000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TransitionData_MetaData[] = {
 		{ "Category", "Transition" },
 		{ "Comment", "// bool UT4AnimSetBasicSystemTemplate::CopyFrom\n// bool UT4AnimSetBasicSystemTemplate::CopyTo\n" },
@@ -928,12 +1036,16 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TransitionData = { "TransitionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetBasicSystemTemplate, TransitionData), Z_Construct_UScriptStruct_FT4AnimSetBasicSystemTransitionData, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TransitionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TransitionData_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EndLoopData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_DeathData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_CrowdControlData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_HitData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_JumpData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TurnData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_EquipmentData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_StanceTransforms_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::NewProp_TransitionData,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4AnimSetBasicSystemTemplate_Statics::StaticCppClassTypeInfo = {
@@ -963,7 +1075,7 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetBasicS
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimSetBasicSystemTemplate, 1234428571);
+	IMPLEMENT_CLASS(UT4AnimSetBasicSystemTemplate, 2229200951);
 	template<> T4ENTITYEDITOR_API UClass* StaticClass<UT4AnimSetBasicSystemTemplate>()
 	{
 		return UT4AnimSetBasicSystemTemplate::StaticClass();

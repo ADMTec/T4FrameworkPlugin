@@ -54,7 +54,7 @@ public:
 	FT4SkillSetDBKey DefaultSkillSetDBKey; // #50, #106 : Key = Stance
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4SkillSetDBKey CombatSkillSetDBKey; // #50, #106 : Key = Stance
+	TMap<FName, FT4SkillSetDBKey> StanceSkillSetDBKey; // #50, #106, #154 : Key = Stance
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat

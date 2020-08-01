@@ -13,8 +13,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4AnimSetParagonSystemTemplate() {}
 // Cross Module References
-	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemDeathData();
+	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData();
 	UPackage* Z_Construct_UPackage__Script_T4EntityEditor();
+	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemDeathData();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemCrowdControlData();
 	T4ENTITYEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemHitData();
@@ -25,6 +26,111 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimSetParagonSystemTemplate() {}
 	T4ENTITYEDITOR_API UClass* Z_Construct_UClass_UT4AnimSetParagonSystemTemplate();
 	T4ENTITYEDITOR_API UClass* Z_Construct_UClass_UT4AnimSetLayerTemplateBase();
 // End Cross Module References
+class UScriptStruct* FT4AnimSetParagonSystemEndLoopData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ENTITYEDITOR_API uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData, Z_Construct_UPackage__Script_T4EntityEditor(), TEXT("T4AnimSetParagonSystemEndLoopData"), sizeof(FT4AnimSetParagonSystemEndLoopData), Get_Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Hash());
+	}
+	return Singleton;
+}
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<FT4AnimSetParagonSystemEndLoopData>()
+{
+	return FT4AnimSetParagonSystemEndLoopData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData(FT4AnimSetParagonSystemEndLoopData::StaticStruct, TEXT("/Script/T4EntityEditor"), TEXT("T4AnimSetParagonSystemEndLoopData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParagonSystemEndLoopData
+{
+	FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParagonSystemEndLoopData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4AnimSetParagonSystemEndLoopData")),new UScriptStruct::TCppStructOps<FT4AnimSetParagonSystemEndLoopData>);
+	}
+} ScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParagonSystemEndLoopData;
+	struct Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMakeEndLoopDeathB_MetaData[];
+#endif
+		static void NewProp_bMakeEndLoopDeathB_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMakeEndLoopDeathB;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMakeEndLoopDeathA_MetaData[];
+#endif
+		static void NewProp_bMakeEndLoopDeathA_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMakeEndLoopDeathA;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/AnimTemplate/Paragon/T4AnimSetParagonSystemTemplate.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4AnimSetParagonSystemEndLoopData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Paragon/T4AnimSetParagonSystemTemplate.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_SetBit(void* Obj)
+	{
+		((FT4AnimSetParagonSystemEndLoopData*)Obj)->bMakeEndLoopDeathB = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB = { "bMakeEndLoopDeathB", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetParagonSystemEndLoopData), &Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Paragon/T4AnimSetParagonSystemTemplate.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_SetBit(void* Obj)
+	{
+		((FT4AnimSetParagonSystemEndLoopData*)Obj)->bMakeEndLoopDeathA = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA = { "bMakeEndLoopDeathA", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimSetParagonSystemEndLoopData), &Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathB,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::NewProp_bMakeEndLoopDeathA,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4EntityEditor,
+		nullptr,
+		&NewStructOps,
+		"T4AnimSetParagonSystemEndLoopData",
+		sizeof(FT4AnimSetParagonSystemEndLoopData),
+		alignof(FT4AnimSetParagonSystemEndLoopData),
+		Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4EntityEditor();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4AnimSetParagonSystemEndLoopData"), sizeof(FT4AnimSetParagonSystemEndLoopData), Get_Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData_Hash() { return 1164674924U; }
 class UScriptStruct* FT4AnimSetParagonSystemDeathData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -789,6 +895,10 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParago
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndLoopData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EndLoopData;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DeathData;
@@ -826,6 +936,13 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParago
 		{ "ModuleRelativePath", "Private/AnimTemplate/Paragon/T4AnimSetParagonSystemTemplate.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_EndLoopData_MetaData[] = {
+		{ "Category", "EndLoop" },
+		{ "ModuleRelativePath", "Private/AnimTemplate/Paragon/T4AnimSetParagonSystemTemplate.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_EndLoopData = { "EndLoopData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetParagonSystemTemplate, EndLoopData), Z_Construct_UScriptStruct_FT4AnimSetParagonSystemEndLoopData, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_EndLoopData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_EndLoopData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_DeathData_MetaData[] = {
 		{ "Category", "Death" },
@@ -871,6 +988,7 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParago
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_TransitionData = { "TransitionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimSetParagonSystemTemplate, TransitionData), Z_Construct_UScriptStruct_FT4AnimSetParagonSystemTransitionData, METADATA_PARAMS(Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_TransitionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_TransitionData_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_EndLoopData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_DeathData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_CrowdControlData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4AnimSetParagonSystemTemplate_Statics::NewProp_HitData,
@@ -905,7 +1023,7 @@ static struct FScriptStruct_T4EntityEditor_StaticRegisterNativesFT4AnimSetParago
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimSetParagonSystemTemplate, 3566367985);
+	IMPLEMENT_CLASS(UT4AnimSetParagonSystemTemplate, 2617421945);
 	template<> T4ENTITYEDITOR_API UClass* StaticClass<UT4AnimSetParagonSystemTemplate>()
 	{
 		return UT4AnimSetParagonSystemTemplate::StaticClass();

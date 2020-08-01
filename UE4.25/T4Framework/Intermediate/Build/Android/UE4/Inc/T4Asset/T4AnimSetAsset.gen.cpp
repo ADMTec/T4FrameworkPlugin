@@ -900,6 +900,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSequenceD
 #endif
 		static void NewProp_bUseEndLoop_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseEndLoop;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TagName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_TagName;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSequenceAsset_MetaData[];
@@ -936,7 +940,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSequenceD
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop_MetaData[] = {
 		{ "Category", "Editor" },
+		{ "Comment", "// #154 : \xec\x83\x89\xec\x9d\xb8\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 (SystemLayer \xec\x9d\x98 StanceToStance Transform \xec\x97\x90\xec\x84\x9c \xec\x82\xac\xec\x9a\xa9\xed\x95\xa8)\n" },
 		{ "ModuleRelativePath", "Classes/Animset/T4AnimsetAsset.h" },
+		{ "ToolTip", "#154 : \xec\x83\x89\xec\x9d\xb8\xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 (SystemLayer \xec\x9d\x98 StanceToStance Transform \xec\x97\x90\xec\x84\x9c \xec\x82\xac\xec\x9a\xa9\xed\x95\xa8)" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop_SetBit(void* Obj)
@@ -944,6 +950,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSequenceD
 		((FT4AnimsetAnimSequenceData*)Obj)->bUseEndLoop = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop = { "bUseEndLoop", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimsetAnimSequenceData), &Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_TagName_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "ModuleRelativePath", "Classes/Animset/T4AnimsetAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_TagName = { "TagName", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimsetAnimSequenceData, TagName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_TagName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_TagName_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_AnimSequenceAsset_MetaData[] = {
@@ -982,6 +995,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSequenceD
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_bUseEndLoop,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_TagName,
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_AnimSequenceAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Statics::NewProp_DurationSec,
@@ -1016,7 +1030,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSequenceD
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Hash() { return 3762638845U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetAnimSequenceData_Hash() { return 1749666127U; }
 	void UT4AnimsetAsset::StaticRegisterNativesUT4AnimsetAsset()
 	{
 	}

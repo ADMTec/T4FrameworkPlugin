@@ -59,6 +59,8 @@ struct T4GAMEDATA_API FT4DBRowBase
 #endif
 
 #if WITH_EDITOR
+	ET4GameDBValidation GetResultValidation(const FT4GameDBKey& InDBKey);
+
 	// #118
 	virtual TSharedPtr<FStructOnScope> GetStructOnScope() = 0;
 	virtual bool CheckValidationAll() = 0;
@@ -130,6 +132,7 @@ public:
 
 	virtual const TArray<FT4DBRowBase*>& GetGameDBRows(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
 	virtual FT4DBRowBase* GetGameDBRow(const FT4GameDBKey& InGameDBKey) = 0;
+	virtual FT4WeaponTableRow* GetWeaponDBRow(const FT4GameDBKey& InGameDBKey) = 0; // #154 : StanceSkillSet Add 를 위한 처리. const 외에는 인터페이스가 없다.
 
 	virtual bool DataTableAddFolder(ET4GameDBType InGameDBType, const FName InNewFolderName, const FName InRefRowName) = 0;
 	virtual FT4TableRowBase* DataTableAddRow(ET4GameDBType InGameDBType, const FName InNewRowName, const FName InRefRowName) = 0;
