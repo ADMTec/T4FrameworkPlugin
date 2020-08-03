@@ -35,17 +35,13 @@
 	  - T4Framework and T4FrameworkEditor
 	  - "Enabled": true
 - **튜토리얼(임시)**
-  - T4Framework 튜토리얼 (임시) #1
-    - 간단한 툴 소개
+  - #1 : 간단한 툴 소개
     - https://youtu.be/r29O3YdeV7E
-  - T4Framework 튜토리얼 (임시) #2
-    - Entity Editor 소개 및 기본적인 캐릭터 설정
+  - #2 : Entity Editor 소개 및 기본적인 캐릭터 설정
     - https://youtu.be/dGmG2QWp_wo
-  - T4Framework 튜토리얼 (임시) #3
-    - 간략한 애니메이션 시스템 설명 및 기본 애니메이션 세트 설정
+  - #3 : 간략한 애니메이션 시스템 설명 및 기본 애니메이션 세트 설정
     - https://youtu.be/nS3N1X3Dh1o
-  - T4Framework 튜토리얼 (임시) #4
-    - 스탠스 및 스킬 애니메이션 설정 
+  - #4 : 스탠스 및 스킬 애니메이션 설정 
     - https://youtu.be/XaPErl6Zypg
 - **참고**
   - 정식 사용을 위해서는 Subscription license 가 필요합니다.
