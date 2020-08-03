@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4Gameplay_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x2B36DE37,
+				0xA17C8701,
 				0x0B84A391,
 				METADATA_PARAMS(nullptr, 0)
 			};

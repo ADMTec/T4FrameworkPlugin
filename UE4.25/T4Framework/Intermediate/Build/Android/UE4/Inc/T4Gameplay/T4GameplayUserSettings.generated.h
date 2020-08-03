@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesUT4GameplayUserSettings(); \
 	friend struct Z_Construct_UClass_UT4GameplayUserSettings_Statics; \
 public: \
-	DECLARE_CLASS(UT4GameplayUserSettings, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
+	DECLARE_CLASS(UT4GameplayUserSettings, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
 	DECLARE_SERIALIZER(UT4GameplayUserSettings) \
 	static const TCHAR* StaticConfigName() {return TEXT("T4Framework");} \
 
@@ -32,7 +32,7 @@ private: \
 	static void StaticRegisterNativesUT4GameplayUserSettings(); \
 	friend struct Z_Construct_UClass_UT4GameplayUserSettings_Statics; \
 public: \
-	DECLARE_CLASS(UT4GameplayUserSettings, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
+	DECLARE_CLASS(UT4GameplayUserSettings, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
 	DECLARE_SERIALIZER(UT4GameplayUserSettings) \
 	static const TCHAR* StaticConfigName() {return TEXT("T4Framework");} \
 

@@ -9,6 +9,8 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
+  - **v0.9.2 (Enhancement : 1)**
+    - #148 [기능개선] 뷰포트 QuickHotKey 지정을 T4GameplayUserSettings 에서 설정하도록 기능 개선
   - v0.9.1 (Bug fix : 2)
     - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
     - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
