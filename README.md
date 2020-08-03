@@ -8,6 +8,10 @@
   - YouTube : <https://www.youtube.com/channel/UCoVNwMxu9CUzc92zGYN4l6A>
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
+- **업데이트**
+  - v0.9.1 (Bug fix : 2)
+    - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
+    - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
 - **설치방법**
   - **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
   - 언리얼 엔진을 설치합니다.
@@ -30,10 +34,6 @@
     - .uproject
 	  - T4Framework and T4FrameworkEditor
 	  - "Enabled": true
-- **업데이트**
-  - v0.9.1 (Bug fix : 2)
-    - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
-    - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
 - **참고**
   - 정식 사용을 위해서는 Subscription license 가 필요합니다.
   - 프로젝트에 필요한 신규 기능 구현을 대행하고 있습니다.
