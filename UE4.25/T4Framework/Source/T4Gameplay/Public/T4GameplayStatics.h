@@ -38,8 +38,8 @@ public:
 #if !UE_BUILD_SHIPPING
 	void ResetTestHotKes(); // #150
 
-	void AddTestHotKeyValue(FName InHotKeyName, FName InValue); // #150
-	FName GetTestHotKeyValue(FName InHotKeyName); // #150
+	void AddQuickHotKeyValue(FName InHotKeyName, FName InValue); // #150
+	FName GetQuickHotKeyValue(FName InHotKeyName); // #150
 #endif
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
