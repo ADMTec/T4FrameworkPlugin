@@ -1,4 +1,4 @@
-# T4Framework (v0.9.2)
+# T4Framework (v0.9.3)
 ### Open-world MMO/MMORPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -9,7 +9,10 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
-  - **v0.9.2 (Enhancement : 1)**
+  - **v0.9.3** (Enhancement : 1, Bug fix : 1)
+    - #154 [기능개선] Aim BlendSpace 가 없을 경우에 대한 In-Place Aiming 처리를 Bone Transform 지원
+    - #154 [버그수정] LockOn 이동 시 간헐적으로 캐릭터의 T포즈가 발생하는 문제 수정
+  - v0.9.2 (Enhancement : 1)
     - #148 [기능개선] 뷰포트 QuickHotKey 지정을 T4GameplayUserSettings 에서 설정하도록 기능 개선
   - v0.9.1 (Bug fix : 2)
     - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
