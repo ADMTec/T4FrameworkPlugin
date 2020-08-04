@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/System/Context/Preview/T4WorldPreviewGameMode.h"
+#include "T4Engine/Private/WorldSystem/System/Context/Preview/T4WorldPreviewGameMode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPreviewGameMode() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPreviewGameMode_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #79\n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
-		{ "IncludePath", "World/System/Context/Preview/T4WorldPreviewGameMode.h" },
-		{ "ModuleRelativePath", "Private/World/System/Context/Preview/T4WorldPreviewGameMode.h" },
+		{ "IncludePath", "WorldSystem/System/Context/Preview/T4WorldPreviewGameMode.h" },
+		{ "ModuleRelativePath", "Private/WorldSystem/System/Context/Preview/T4WorldPreviewGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 		{ "ToolTip", "#79" },
 	};
@@ -75,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPreviewGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPreviewGameMode, 2543809359);
+	IMPLEMENT_CLASS(AT4WorldPreviewGameMode, 2034927055);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPreviewGameMode>()
 	{
 		return AT4WorldPreviewGameMode::StaticClass();

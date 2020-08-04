@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldProjectileActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldProjectileActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -53,8 +53,8 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldProjectileActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldProjectileActor_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "// #127\n" },
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldProjectileActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldProjectileActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldProjectileActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldProjectileActor.h" },
 		{ "ToolTip", "#127" },
 	};
 #endif
@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldProjectileActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_ProjectileComponent_MetaData[] = {
 		{ "Category", "World" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldProjectileActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldProjectileActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_ProjectileComponent = { "ProjectileComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldProjectileActor, ProjectileComponent), Z_Construct_UClass_UT4ProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_ProjectileComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_ProjectileComponent_MetaData)) };
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldProjectileActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_CollisionComponent_MetaData[] = {
 		{ "Category", "World" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldProjectileActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldProjectileActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_CollisionComponent = { "CollisionComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldProjectileActor, CollisionComponent), Z_Construct_UClass_UT4SphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_CollisionComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldProjectileActor_Statics::NewProp_CollisionComponent_MetaData)) };
@@ -105,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldProjectileActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldProjectileActor, 3866207778);
+	IMPLEMENT_CLASS(AT4WorldProjectileActor, 578375329);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldProjectileActor>()
 	{
 		return AT4WorldProjectileActor::StaticClass();

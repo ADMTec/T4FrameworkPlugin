@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldPropSkeletalActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldPropSkeletalActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -52,15 +52,15 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldPropSkeletalActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldPropSkeletalActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldPropSkeletalActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldPropSkeletalActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent_MetaData[] = {
 		{ "Category", "Prop" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldPropSkeletalActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldPropSkeletalActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent = { "SkeletalMeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropSkeletalActor, SkeletalMeshComponent), Z_Construct_UClass_UT4SkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent_MetaData)) };
@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "Prop" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldPropSkeletalActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldPropSkeletalActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropSkeletalActor, SceneComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData)) };
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 723351720);
+	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 1038648964);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPropSkeletalActor>()
 	{
 		return AT4WorldPropSkeletalActor::StaticClass();

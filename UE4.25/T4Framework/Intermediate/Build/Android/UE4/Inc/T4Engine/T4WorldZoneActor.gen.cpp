@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldZoneActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldZoneActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -47,15 +47,15 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldZoneActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldZoneActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldZoneActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldZoneActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldZoneActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldZoneActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldZoneActor_Statics::NewProp_EnvironmentZoneComponent_MetaData[] = {
 		{ "Category", "Zone" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldZoneActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldZoneActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldZoneActor_Statics::NewProp_EnvironmentZoneComponent = { "EnvironmentZoneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldZoneActor, EnvironmentZoneComponent), Z_Construct_UClass_UT4EnvironmentZoneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldZoneActor_Statics::NewProp_EnvironmentZoneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldZoneActor_Statics::NewProp_EnvironmentZoneComponent_MetaData)) };
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldZoneActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldZoneActor, 4157886704);
+	IMPLEMENT_CLASS(AT4WorldZoneActor, 1948001034);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldZoneActor>()
 	{
 		return AT4WorldZoneActor::StaticClass();

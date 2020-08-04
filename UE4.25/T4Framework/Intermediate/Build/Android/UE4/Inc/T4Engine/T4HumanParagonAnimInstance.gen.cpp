@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h"
+#include "T4Engine/Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h"
 #include "Engine/Classes/Components/SkeletalMeshComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -64,8 +64,8 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #131\n */" },
 		{ "HideCategories", "AnimInstance" },
-		{ "IncludePath", "World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "IncludePath", "WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
 		{ "ToolTip", "#131" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StanceVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StanceVariables = { "StanceVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanParagonAnimInstance, StanceVariables), Z_Construct_UScriptStruct_FT4HumanStanceAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StanceVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StanceVariables_MetaData)) };
@@ -81,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_IKVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_IKVariables = { "IKVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanParagonAnimInstance, IKVariables), Z_Construct_UScriptStruct_FT4IKAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_IKVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_IKVariables_MetaData)) };
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_MovementVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_MovementVariables = { "MovementVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanParagonAnimInstance, MovementVariables), Z_Construct_UScriptStruct_FT4MovementAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_MovementVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_MovementVariables_MetaData)) };
@@ -97,7 +97,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StateVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Human/Paragon/T4HumanParagonAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StateVariables = { "StateVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4HumanParagonAnimInstance, StateVariables), Z_Construct_UScriptStruct_FT4StateAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StateVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::NewProp_StateVariables_MetaData)) };
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4HumanParagonAnimInstance, 2044054153);
+	IMPLEMENT_CLASS(UT4HumanParagonAnimInstance, 1487320994);
 	template<> T4ENGINE_API UClass* StaticClass<UT4HumanParagonAnimInstance>()
 	{
 		return UT4HumanParagonAnimInstance::StaticClass();

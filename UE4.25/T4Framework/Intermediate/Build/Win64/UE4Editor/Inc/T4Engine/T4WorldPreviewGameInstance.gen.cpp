@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/System/Context/Preview/T4WorldPreviewGameInstance.h"
+#include "T4Engine/Private/WorldSystem/System/Context/Preview/T4WorldPreviewGameInstance.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPreviewGameInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4WorldPreviewGameInstance_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "World/System/Context/Preview/T4WorldPreviewGameInstance.h" },
-		{ "ModuleRelativePath", "Private/World/System/Context/Preview/T4WorldPreviewGameInstance.h" },
+		{ "IncludePath", "WorldSystem/System/Context/Preview/T4WorldPreviewGameInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldSystem/System/Context/Preview/T4WorldPreviewGameInstance.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4WorldPreviewGameInstance_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPreviewGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4WorldPreviewGameInstance, 2711174692);
+	IMPLEMENT_CLASS(UT4WorldPreviewGameInstance, 2821453434);
 	template<> T4ENGINE_API UClass* StaticClass<UT4WorldPreviewGameInstance>()
 	{
 		return UT4WorldPreviewGameInstance::StaticClass();

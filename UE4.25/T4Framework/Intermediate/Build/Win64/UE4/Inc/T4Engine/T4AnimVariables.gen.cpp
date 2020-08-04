@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Animation/T4AnimVariables.h"
+#include "T4Engine/Private/WorldActor/Animation/T4AnimVariables.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -79,7 +79,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "Category", "T4Engine" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewStructOps()
@@ -90,7 +90,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_COMOffset_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_COMOffset = { "COMOffset", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4IKAnimVariables, COMOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_COMOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_COMOffset_MetaData)) };
@@ -98,7 +98,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootJointTarget_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootJointTarget = { "RightFootJointTarget", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4IKAnimVariables, RightFootJointTarget), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootJointTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootJointTarget_MetaData)) };
@@ -106,7 +106,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootJointTarget_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootJointTarget = { "LeftFootJointTarget", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4IKAnimVariables, LeftFootJointTarget), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootJointTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootJointTarget_MetaData)) };
@@ -114,7 +114,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootOffset_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootOffset = { "RightFootOffset", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4IKAnimVariables, RightFootOffset), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_RightFootOffset_MetaData)) };
@@ -122,7 +122,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootOffset_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootOffset = { "LeftFootOffset", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4IKAnimVariables, LeftFootOffset), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_LeftFootOffset_MetaData)) };
@@ -130,7 +130,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_bUsedFootIK_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "IK" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics::NewProp_bUsedFootIK_SetBit(void* Obj)
@@ -174,7 +174,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4IKAnimVariables
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4IKAnimVariables_Hash() { return 2680498733U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4IKAnimVariables_Hash() { return 2086902402U; }
 class UScriptStruct* FT4MovementAnimVariables::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -235,7 +235,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		{ "BlueprintType", "true" },
 		{ "Category", "T4Engine" },
 		{ "Comment", "// #38\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#38" },
 	};
 #endif
@@ -248,7 +248,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
 		{ "Comment", "// #113 : -45 ~ 45\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#113 : -45 ~ 45" },
 	};
 #endif
@@ -258,7 +258,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
 		{ "Comment", "// #131 : Run \xec\xa0\x84\xec\x9a\xa9, \xec\x83\x81/\xed\x95\x98 \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84 -20 ~ 20 (Paragon \xec\xb0\xb8\xec\xa1\xb0)\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#131 : Run \xec\xa0\x84\xec\x9a\xa9, \xec\x83\x81/\xed\x95\x98 \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84 -20 ~ 20 (Paragon \xec\xb0\xb8\xec\xa1\xb0)" },
 	};
 #endif
@@ -268,7 +268,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
 		{ "Comment", "// #131 : Run \xec\xa0\x84\xec\x9a\xa9, \xec\xa2\x8c/\xec\x9a\xb0 \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84 -90 ~ 90 (Paragon \xec\xb0\xb8\xec\xa1\xb0)\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#131 : Run \xec\xa0\x84\xec\x9a\xa9, \xec\xa2\x8c/\xec\x9a\xb0 \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84 -90 ~ 90 (Paragon \xec\xb0\xb8\xec\xa1\xb0)" },
 	};
 #endif
@@ -278,7 +278,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
 		{ "Comment", "// #38, #106 : \xec\x9d\xb4\xec\x86\x8d\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#38, #106 : \xec\x9d\xb4\xec\x86\x8d" },
 	};
 #endif
@@ -287,7 +287,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MovementAnimVariables, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_MoveSpeed_MetaData)) };
@@ -295,7 +295,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_YawAngle_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "MovementVar" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_YawAngle = { "YawAngle", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MovementAnimVariables, YawAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_YawAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics::NewProp_YawAngle_MetaData)) };
@@ -335,7 +335,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MovementAnimVariabl
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4MovementAnimVariables_Hash() { return 2618493589U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4MovementAnimVariables_Hash() { return 1306475585U; }
 class UScriptStruct* FT4StateAnimVariables::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -380,6 +380,11 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		static void NewProp_bIsFalling_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsFalling;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAimWithBone_MetaData[];
+#endif
+		static void NewProp_bIsAimWithBone_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAimWithBone;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAiming_MetaData[];
 #endif
 		static void NewProp_bIsAiming_SetBit(void* Obj);
@@ -407,7 +412,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		{ "BlueprintType", "true" },
 		{ "Category", "T4Engine" },
 		{ "Comment", "/**\n  * https://docs.unrealengine.com/ko-kr/Engine/Animation\n */// #107\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "https://docs.unrealengine.com/ko-kr/Engine/Animation\n // #107" },
 	};
 #endif
@@ -420,7 +425,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
 		{ "Comment", "// #142 : \xed\x9a\x8c\xec\xa0\x84\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 \xec\x9d\xb4\xeb\x8f\x99 \xeb\xaa\xa8\xec\x85\x98 \xec\xa0\x9c\xec\x96\xb4 (Ex. RunStop)\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#142 : \xed\x9a\x8c\xec\xa0\x84\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 \xec\x9d\xb4\xeb\x8f\x99 \xeb\xaa\xa8\xec\x85\x98 \xec\xa0\x9c\xec\x96\xb4 (Ex. RunStop)" },
 	};
 #endif
@@ -433,7 +438,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsTurning_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsTurning_SetBit(void* Obj)
@@ -445,9 +450,9 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
-		{ "Comment", "// #113\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
-		{ "ToolTip", "#113" },
+		{ "Comment", "// #154 : \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91 Aim \xec\x82\xac\xec\x9a\xa9 \xeb\x98\x90\xeb\x8a\x94 Aim BS \xeb\xaf\xb8\xec\x84\xa4\xec\xa0\x95\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 BoneTransform \xec\x97\x90 \xec\x9d\x98\xed\x95\x9c Aim \xec\xb2\x98\xeb\xa6\xac \xec\x82\xac\xec\x9a\xa9 \xec\x97\xac\xeb\xb6\x80\n" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
+		{ "ToolTip", "#154 : \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91 Aim \xec\x82\xac\xec\x9a\xa9 \xeb\x98\x90\xeb\x8a\x94 Aim BS \xeb\xaf\xb8\xec\x84\xa4\xec\xa0\x95\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 BoneTransform \xec\x97\x90 \xec\x9d\x98\xed\x95\x9c Aim \xec\xb2\x98\xeb\xa6\xac \xec\x82\xac\xec\x9a\xa9 \xec\x97\xac\xeb\xb6\x80" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling_SetBit(void* Obj)
@@ -456,11 +461,25 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling = { "bIsFalling", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4StateAnimVariables), &Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "StateVar" },
+		{ "Comment", "// #113\n" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
+		{ "ToolTip", "#113" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone_SetBit(void* Obj)
+	{
+		((FT4StateAnimVariables*)Obj)->bIsAimWithBone = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone = { "bIsAimWithBone", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4StateAnimVariables), &Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAiming_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
 		{ "Comment", "// #131\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#131" },
 	};
 #endif
@@ -474,7 +493,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
 		{ "Comment", "// #131\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#131" },
 	};
 #endif
@@ -488,7 +507,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
 		{ "Comment", "// #142 : 0 < MoveSpeed\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 		{ "ToolTip", "#142 : 0 < MoveSpeed" },
 	};
 #endif
@@ -501,7 +520,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsMoving_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/T4AnimVariables.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/T4AnimVariables.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsMoving_SetBit(void* Obj)
@@ -513,6 +532,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsLockOn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsTurning,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsFalling,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAimWithBone,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAiming,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsDeceleration,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics::NewProp_bIsAcceleration,
@@ -546,7 +566,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4StateAnimVariables
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StateAnimVariables_Hash() { return 1860722945U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StateAnimVariables_Hash() { return 34914897U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

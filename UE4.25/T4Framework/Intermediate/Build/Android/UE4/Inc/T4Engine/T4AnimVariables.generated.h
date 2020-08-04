@@ -13,21 +13,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ENGINE_T4AnimVariables_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_T4AnimVariables_h_93_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_WorldActor_Animation_T4AnimVariables_h_97_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4IKAnimVariables_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4IKAnimVariables>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_T4AnimVariables_h_57_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_WorldActor_Animation_T4AnimVariables_h_61_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4MovementAnimVariables_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MovementAnimVariables>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_T4AnimVariables_h_16_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Private_WorldActor_Animation_T4AnimVariables_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4StateAnimVariables_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
@@ -35,7 +35,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MovementAnimVariab
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4StateAnimVariables>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Private_World_Actor_Animation_T4AnimVariables_h
+#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Engine_Private_WorldActor_Animation_T4AnimVariables_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

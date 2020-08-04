@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldIndicatorActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldIndicatorActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -47,15 +47,15 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldIndicatorActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldIndicatorActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldIndicatorActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldIndicatorActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldIndicatorActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldIndicatorActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldIndicatorActor_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "World" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldIndicatorActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldIndicatorActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldIndicatorActor_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldIndicatorActor, SceneComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldIndicatorActor_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldIndicatorActor_Statics::NewProp_SceneComponent_MetaData)) };
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldIndicatorActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldIndicatorActor, 2432499997);
+	IMPLEMENT_CLASS(AT4WorldIndicatorActor, 2178199227);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldIndicatorActor>()
 	{
 		return AT4WorldIndicatorActor::StaticClass();

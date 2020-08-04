@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -112,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "// #110\n// ~#68\n" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldActor.h" },
 		{ "ToolTip", "#110\n~#68" },
 	};
 #endif
@@ -151,19 +151,19 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AT4WorldActor_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer, "HandleOnHitOverlapOnlyServer" }, // 3606320976
+		{ &Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer, "HandleOnHitOverlapOnlyServer" }, // 1976977888
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldActor_Statics::NewProp_MaterialDynamicInstances_MetaData[] = {
 		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AT4WorldActor_Statics::NewProp_MaterialDynamicInstances = { "MaterialDynamicInstances", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldActor, MaterialDynamicInstances), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AT4WorldActor_Statics::NewProp_MaterialDynamicInstances_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldActor_Statics::NewProp_MaterialDynamicInstances_MetaData)) };
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldActor, 655508664);
+	IMPLEMENT_CLASS(AT4WorldActor, 4262660277);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldActor>()
 	{
 		return AT4WorldActor::StaticClass();

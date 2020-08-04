@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h"
+#include "T4Engine/Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h"
 #include "Engine/Classes/Components/SkeletalMeshComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -61,7 +61,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 		{ "BlueprintType", "true" },
 		{ "Category", "T4Engine" },
 		{ "Comment", "/**\n  * https://docs.unrealengine.com/ko-kr/Engine/Animation\n */" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
 		{ "ToolTip", "https://docs.unrealengine.com/ko-kr/Engine/Animation" },
 	};
 #endif
@@ -73,7 +73,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Statics::NewProp_IdleSelected_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "StateVar" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Statics::NewProp_IdleSelected = { "IdleSelected", nullptr, (EPropertyFlags)0x0010000000000815, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ItemStanceAnimVariables, IdleSelected), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Statics::NewProp_IdleSelected_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Statics::NewProp_IdleSelected_MetaData)) };
@@ -108,7 +108,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Hash() { return 2047333235U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables_Hash() { return 174278812U; }
 	void UT4ItemBasicAnimInstance::StaticRegisterNativesUT4ItemBasicAnimInstance()
 	{
 	}
@@ -141,15 +141,15 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "AnimInstance" },
-		{ "IncludePath", "World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "IncludePath", "WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StanceVariables = { "StanceVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ItemBasicAnimInstance, StanceVariables), Z_Construct_UScriptStruct_FT4ItemStanceAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StanceVariables_MetaData)) };
@@ -157,7 +157,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StateVariables_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Variable" },
-		{ "ModuleRelativePath", "Private/World/Actor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/Animation/Item/Basic/T4ItemBasicAnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StateVariables = { "StateVariables", nullptr, (EPropertyFlags)0x0020080000000815, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ItemBasicAnimInstance, StateVariables), Z_Construct_UScriptStruct_FT4StateAnimVariables, METADATA_PARAMS(Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StateVariables_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ItemBasicAnimInstance_Statics::NewProp_StateVariables_MetaData)) };
@@ -192,7 +192,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ItemStanceAnimVaria
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ItemBasicAnimInstance, 3234028541);
+	IMPLEMENT_CLASS(UT4ItemBasicAnimInstance, 389962968);
 	template<> T4ENGINE_API UClass* StaticClass<UT4ItemBasicAnimInstance>()
 	{
 		return UT4ItemBasicAnimInstance::StaticClass();

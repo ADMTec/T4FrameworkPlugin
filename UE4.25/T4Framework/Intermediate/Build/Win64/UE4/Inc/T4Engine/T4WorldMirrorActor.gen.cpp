@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldMirrorActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldMirrorActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -47,15 +47,15 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldMirrorActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldMirrorActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldMirrorActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldMirrorActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldMirrorActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldMirrorActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldMirrorActor_Statics::NewProp_CapsuleComponent_MetaData[] = {
 		{ "Category", "Collision" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldMirrorActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldMirrorActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldMirrorActor_Statics::NewProp_CapsuleComponent = { "CapsuleComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldMirrorActor, CapsuleComponent), Z_Construct_UClass_UT4CapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldMirrorActor_Statics::NewProp_CapsuleComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldMirrorActor_Statics::NewProp_CapsuleComponent_MetaData)) };
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldMirrorActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldMirrorActor, 739065164);
+	IMPLEMENT_CLASS(AT4WorldMirrorActor, 3963984471);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldMirrorActor>()
 	{
 		return AT4WorldMirrorActor::StaticClass();

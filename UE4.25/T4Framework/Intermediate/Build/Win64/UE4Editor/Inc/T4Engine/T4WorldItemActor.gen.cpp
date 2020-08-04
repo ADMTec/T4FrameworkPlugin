@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Private/World/Actor/T4WorldItemActor.h"
+#include "T4Engine/Private/WorldActor/T4WorldItemActor.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -62,15 +62,15 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldItemActor() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldItemActor_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "World/Actor/T4WorldItemActor.h" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldItemActor.h" },
+		{ "IncludePath", "WorldActor/T4WorldItemActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldItemActor.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_ParticleSystemComponent_MetaData[] = {
 		{ "Category", "Item" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldItemActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldItemActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_ParticleSystemComponent = { "ParticleSystemComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldItemActor, ParticleSystemComponent), Z_Construct_UClass_UT4ParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_ParticleSystemComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_ParticleSystemComponent_MetaData)) };
@@ -78,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldItemActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SkeletalMeshComponent_MetaData[] = {
 		{ "Category", "Item" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldItemActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldItemActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SkeletalMeshComponent = { "SkeletalMeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldItemActor, SkeletalMeshComponent), Z_Construct_UClass_UT4SkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SkeletalMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SkeletalMeshComponent_MetaData)) };
@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldItemActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_StaticMeshComponent_MetaData[] = {
 		{ "Category", "Item" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldItemActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldItemActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_StaticMeshComponent = { "StaticMeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldItemActor, StaticMeshComponent), Z_Construct_UClass_UT4StaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_StaticMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_StaticMeshComponent_MetaData)) };
@@ -94,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldItemActor() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "Item" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/World/Actor/T4WorldItemActor.h" },
+		{ "ModuleRelativePath", "Private/WorldActor/T4WorldItemActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldItemActor, SceneComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldItemActor_Statics::NewProp_SceneComponent_MetaData)) };
@@ -131,7 +131,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldItemActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldItemActor, 4224923495);
+	IMPLEMENT_CLASS(AT4WorldItemActor, 642299872);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldItemActor>()
 	{
 		return AT4WorldItemActor::StaticClass();
