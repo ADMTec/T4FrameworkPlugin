@@ -1,4 +1,4 @@
-# T4Framework (v0.9.3)
+# T4Framework (v0.9.4)
 ### Open-world MMO/MMORPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -9,8 +9,11 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
-  - **v0.9.3** (Enhancement : 1, Bug fix : 1)
-    - #154 [기능개선] Aim BlendSpace 가 없을 경우에 대한 In-Place Aiming 처리를 Bone Transform 지원
+  - **v0.9.4 (Enhancement : 1, Bug fix : 1)**
+    - #148 [기능개선] T4Framrwork 에서 사용하는 기본 Content 배포 추가 (Content/T4Framework/*.*)
+    - #154 [버그수정] 간헐적으로 NPC AI 의 Aim Casting 이 Clear 되지 않던 문제 수정
+  - v0.9.3 (Enhancement : 1, Bug fix : 1)
+    - #154 [기능개선] Aim BlendSpace 가 없을 경우에 대한 In-Place Aiming 의 Bone Transform 처리 지원
     - #154 [버그수정] LockOn 이동 시 간헐적으로 캐릭터의 T포즈가 발생하는 문제 수정
   - v0.9.2 (Enhancement : 1)
     - #148 [기능개선] 뷰포트 QuickHotKey 지정을 T4GameplayUserSettings 에서 설정하도록 기능 개선
@@ -23,11 +26,13 @@
     - https://docs.unrealengine.com/ko/GettingStarted/Installation/index.html
     - Supported Engine Versions
       - 4.25 (Release Version : 4.25.3)
-  - 언리얼 엔진 버전에 맞는 T4Framework 플러그인을 내려받습니다.
-	- UE4.25/T4Framework
-	- UE4.25/T4FrameworkEditor
-  - T4Framework 플러그인들을 언리얼 엔진 플러그인 폴더로 복사합니다.
+  - 언리얼 엔진 버전에 맞는 T4Framework 플러그인을 내려받아 엔진 플러그인 폴더로 복사합니다.
     - [언리얼설치엔진경로]/Engine/Plugins/TECH4Labs/
+	  - UE4.25/T4Framework
+	  - UE4.25/T4FrameworkEditor
+  - T4Framework 플러그인의 기본 Content 를 해당 프로젝트 폴더로 복사합니다.
+    - [MyProject]/Content/T4Framework/
+	  - UE4.25/Content/T4Framework/*.*
   - 언리얼 프로젝트를 생성합니다.
     - 신규 프로젝트 만들기
       - https://docs.unrealengine.com/ko/Engine/Basics/Projects/Browser/index.html
