@@ -3,7 +3,7 @@
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
 
->> **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
+> **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
 
 - **기본정보**
   - **Website** : <https://tech4labs.com/>
@@ -27,7 +27,7 @@
       - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
       - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
 - **설치방법**
-  - [link text](Documentation/플러그인 설치.md)
+  - [#1 플러그인 설치와 사용](./Documentation/플러그인%20설치.md)
 - **튜토리얼(임시)**
   - #1 : 간단한 툴 소개
     - https://youtu.be/r29O3YdeV7E
