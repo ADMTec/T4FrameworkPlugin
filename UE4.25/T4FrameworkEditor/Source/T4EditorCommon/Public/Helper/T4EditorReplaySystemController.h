@@ -16,8 +16,10 @@ class T4EDITORCOMMON_API UT4EditorReplaySystemController : public UObject
 	GENERATED_UCLASS_BODY()
 
 public:
+#if WITH_EDITOR
 	// UObject
 	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 
 public:
 	void Set(ET4LayerType InLayerType, const FString& InAssetName, const FString& InFolderName);

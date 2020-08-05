@@ -113,7 +113,7 @@ public:
 	FT4ObjectID SenderID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ActorID ChangeActorID;
+	FT4ObjectID ChangeObjectID;
 
 public:
 	FT4GamePacketCS_CmdChangePlayer()
@@ -126,6 +126,11 @@ public:
 		if (!SenderID.IsValid())
 		{
 			OutMsg = TEXT("Invalid Send ObjectID!");
+			return false;
+		}
+		if (!ChangeObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid Change ObjectID!");
 			return false;
 		}
 		return true;

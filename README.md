@@ -1,4 +1,4 @@
-# T4Framework (v0.9.5)
+# T4Framework (v0.9.6)
 ### Open-world MMO/MMORPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -11,10 +11,13 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
-  - **v0.9.5 (Enhancement : 1, Bug fix : 1)**
-    - #149 [기능개선] 레벨에디터 T4Framework 모드에서 Content Spawn 을 테스트 해볼 수 있도록 기능 추가
-    - #149 [버그수정] 레벨에디터 T4Framework 모드 선택시 발생하던 크래시 수정
+  - **v0.9.6 (Enhancement : 1, Bug fix : 1)**
+    - #149 [기능개선] 레벨에디터 T4Framework 모드에서 스폰된 액터의 월드 아웃라이너 노출 제거
+    - #149 [버그수정] 캐릭터 + CTRL + 마우스 좌클릭 으로 캐릭터 변경이 안되던 문제 수정
   - Previous
+    - v0.9.5 (Enhancement : 1, Bug fix : 1)
+      - #149 [기능개선] 레벨에디터 T4Framework 모드에서 Content Spawn 을 테스트 해볼 수 있도록 기능 추가
+      - #149 [버그수정] 레벨에디터 T4Framework 모드 선택시 발생하던 크래시 수정
     - v0.9.4 (Enhancement : 1, Bug fix : 1)
       - #148 [기능개선] T4Framrwork 에서 사용하는 기본 Content 배포 추가 (Content/T4Framework/*.*)
       - #154 [버그수정] 간헐적으로 NPC AI 의 Aim Casting 이 Clear 되지 않던 문제 수정

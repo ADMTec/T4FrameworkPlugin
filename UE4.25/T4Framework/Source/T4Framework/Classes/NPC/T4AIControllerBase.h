@@ -58,16 +58,16 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::NPCAI; } // #114
 
-	bool SetControlWorldActor(const FT4ActorID& InNewTargetID) override;
-	void ResetControlWorldActor(bool bInSetDefaultPawn) override;
+	bool SetPossessActor(const FT4ActorID& InNewTargetID) override;
+	void ResetPossessActor(bool bInSetDefaultPawn) override;
 
-	bool HasControlWorldActor() const override  { return ControlActorID.IsValid(); }
-	const FT4ActorID& GetControlWorldActorID() const override { return ControlActorID; }
-	IT4WorldActor* GetControlWorldActor() const override;
+	bool HasPossessActor() const override  { return ControlActorID.IsValid(); }
+	const FT4ActorID& GetPossessActorID() const override { return ControlActorID; }
+	IT4WorldActor* GetPossessActor() const override;
 
-	bool HasObserverWorldActor() const override { return false; } // #52
-	bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) override { return false; } // #52 : 서버는 필요없다!
-	void ClearObserverWorldActor() override {} // #52 : 서버는 필요없다!
+	bool HasObserverActor() const override { return false; } // #52
+	bool SetObserverActor(const FT4ActorID& InNewObserverID) override { return false; } // #52 : 서버는 필요없다!
+	void ClearObserverActor() override {} // #52 : 서버는 필요없다!
 
 #if WITH_EDITOR
 	bool IsFreeCameraModeEnabled() const override { return false; } // #133
@@ -85,13 +85,12 @@ public:
 
 public:
 	// IT4AIControllerBase
-	const FT4ObjectID& GetObjectID() const override { return ObjectID; }
+	const FT4ObjectID& GetGameObjectID() const override { return GameObjectID; }
+	void SetGameObjectID(const FT4ObjectID& InObjectID) override { check(InObjectID.IsValid()); GameObjectID = InObjectID; }
 
 	virtual AAIController* GetAIController() override; // #104
 
 public:
-	void SetObjectID(const FT4ObjectID& InObjectID) { ObjectID = InObjectID;}
-
 	IT4WorldActor* FindWorldActor(const FT4ActorID& InActorID) const; // #104
 
 protected:
@@ -107,6 +106,6 @@ protected:
 protected:
 	ET4LayerType LayerType;
 
-	FT4ObjectID ObjectID; // #15
+	FT4ObjectID GameObjectID; // #15
 	FT4ActorID ControlActorID;
 };

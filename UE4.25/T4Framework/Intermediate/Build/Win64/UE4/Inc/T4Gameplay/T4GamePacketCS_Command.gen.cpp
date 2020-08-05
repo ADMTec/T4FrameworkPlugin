@@ -28,7 +28,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketCS_Command() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdPCEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer();
-	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActorID();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTimeSync();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTravel();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdPlayContent();
@@ -836,9 +835,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChangeActorID_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChangeObjectID_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ChangeActorID;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ChangeObjectID;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
 #endif
@@ -858,12 +857,12 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdChangePlayer>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeActorID_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeObjectID_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeActorID = { "ChangeActorID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdChangePlayer, ChangeActorID), Z_Construct_UScriptStruct_FT4ActorID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeActorID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeActorID_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeObjectID = { "ChangeObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdChangePlayer, ChangeObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeObjectID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_SenderID_MetaData[] = {
 		{ "Category", "Default" },
@@ -872,7 +871,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdChangePlayer, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_SenderID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeActorID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_ChangeObjectID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::NewProp_SenderID,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Statics::ReturnStructParams = {
@@ -903,7 +902,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Hash() { return 2894073272U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer_Hash() { return 1808492296U; }
 class UScriptStruct* FT4GamePacketCS_CmdWorldTimeSync::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

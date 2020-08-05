@@ -54,7 +54,6 @@ namespace UnrealBuildTool.Rules
                     "T4Engine",
                     "T4Framework",
 					"T4GameData",
-					"T4Gameplay",
                 }
             );
         }

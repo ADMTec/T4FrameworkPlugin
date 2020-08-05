@@ -58,16 +58,16 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::Player; } // #114
 
-	bool SetControlWorldActor(const FT4ActorID& InNewTargetID) override;
-	void ResetControlWorldActor(bool bInSetDefaultPawn) override;
+	bool SetPossessActor(const FT4ActorID& InNewTargetID) override;
+	void ResetPossessActor(bool bInSetDefaultPawn) override;
 
-	bool HasControlWorldActor() const override { return ControlWorldActorID.IsValid(); }
-	const FT4ActorID& GetControlWorldActorID() const override { return ControlWorldActorID; }
-	IT4WorldActor* GetControlWorldActor() const override;
+	bool HasPossessActor() const override { return PossessActorID.IsValid(); }
+	const FT4ActorID& GetPossessActorID() const override { return PossessActorID; }
+	IT4WorldActor* GetPossessActor() const override;
 
-	bool HasObserverWorldActor() const override { return ObserverWorldActorID.IsValid(); } // #52
-	bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) override; // #52
-	void ClearObserverWorldActor() override; // #52
+	bool HasObserverActor() const override { return ObserverActorID.IsValid(); } // #52
+	bool SetObserverActor(const FT4ActorID& InNewObserverID) override; // #52
+	void ClearObserverActor() override; // #52
 
 #if WITH_EDITOR
 	bool IsFreeCameraModeEnabled() const override { return bFreeCameraModeEnabled; } // #133
@@ -84,13 +84,11 @@ public:
 	UT4GameObjectBase* GetGameObjectBase() const override; // #114
 
 public:
-	void SetObjectID(const FT4ObjectID& InObjectID) { ObjectID = InObjectID; }
-
 	// IT4PlayerController
-	const FT4ObjectID& GetObjectID() const override { return ObjectID; }
+	const FT4ObjectID& GetGameObjectID() const override { return GameObjectID; }
+	void SetGameObjectID(const FT4ObjectID& InObjectID) override { check(InObjectID.IsValid()); GameObjectID = InObjectID; } // #114
 
 	bool CheckAuthority() const override { return HasAuthority(); }
-	void SetObjectIDFromServer(const FT4ObjectID& InObjectID) override; // #114 : 서버에서 보내준 ObjectID 를 Controller 에 설정해준다. (Only Client)
 
 	void OnSetInputMode(ET4InputMode InMode) override;
 
@@ -187,7 +185,7 @@ private:
 
 protected:
 	ET4LayerType LayerType;
-	FT4ObjectID ObjectID; // #114
+	FT4ObjectID GameObjectID; // #114
 
 	UPROPERTY(Transient)
 	UT4SpringArmComponent* CameraSpringArmComponent;
@@ -199,8 +197,8 @@ protected:
 	UT4SceneComponent* VROriginComponent; // #153
 
 private:
-	FT4ActorID ControlWorldActorID;
-	FT4ActorID ObserverWorldActorID; // #52
+	FT4ActorID PossessActorID;
+	FT4ActorID ObserverActorID; // #52
 
 	TWeakObjectPtr<APawn> CachedDefaultPawnPtr;
 

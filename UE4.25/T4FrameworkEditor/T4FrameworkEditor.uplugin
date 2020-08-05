@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "0.9.5",
+	"VersionName": "0.9.6",
 	"FriendlyName": "T4FrameworkEditor Plugin",
 	"Description": "Open-world MMO/MMORPG Framework for UE4",
 	"Category": "TECH4 Labs",
@@ -21,6 +21,11 @@
 		},
 		{
 			"Name": "T4EditorCommon",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "T4LevelEditorMode",
 			"Type": "Editor",
 			"LoadingPhase": "PostEngineInit"
 		},

@@ -54,18 +54,19 @@ public:
 	virtual ET4LayerType GetLayerType() const = 0;
 	virtual ET4ControllerType GetType() const = 0; // #114
 
-	virtual const FT4ObjectID& GetObjectID() const = 0; // #114 : GameObject and Controller ID (WARN : 서버는 모두, 클라는 Player 만 존재)
+	virtual const FT4ObjectID& GetGameObjectID() const = 0; // #114 : GameObject and Controller ID (WARN : 서버는 모두, 클라는 Player 만 존재)
+	virtual void SetGameObjectID(const FT4ObjectID& InObjectID) = 0; // #114
 
-	virtual bool SetControlWorldActor(const FT4ActorID& InNewTargetID) = 0;
-	virtual void ResetControlWorldActor(bool bInSetDefaultPawn) = 0;
+	virtual bool SetPossessActor(const FT4ActorID& InNewTargetID) = 0;
+	virtual void ResetPossessActor(bool bInSetDefaultPawn) = 0;
 
-	virtual bool HasControlWorldActor() const = 0;
-	virtual const FT4ActorID& GetControlWorldActorID() const = 0;
-	virtual IT4WorldActor* GetControlWorldActor() const = 0;
+	virtual bool HasPossessActor() const = 0;
+	virtual const FT4ActorID& GetPossessActorID() const = 0;
+	virtual IT4WorldActor* GetPossessActor() const = 0;
 
-	virtual bool HasObserverWorldActor() const = 0; // #52
-	virtual bool SetObserverWorldActor(const FT4ActorID& InNewObserverID) = 0; // #52
-	virtual void ClearObserverWorldActor() = 0; // #52
+	virtual bool HasObserverActor() const = 0; // #52
+	virtual bool SetObserverActor(const FT4ActorID& InNewObserverID) = 0; // #52
+	virtual void ClearObserverActor() = 0; // #52
 
 #if WITH_EDITOR
 	virtual bool IsFreeCameraModeEnabled() const = 0; // #133
@@ -98,7 +99,6 @@ public:
 	// #15 : Editor 환경에서 HasAuthority 를 명시적으로 구분하기 위해 도입
 	//       동일 프로세스에서 Player 의 Role 이 바뀌며 C/S Player 로 바뀌기 때문에 혼란스러운 점이 있기 때문
 	virtual bool CheckAuthority() const = 0; // return HasAuthority()
-	virtual void SetObjectIDFromServer(const FT4ObjectID& InObjectID) = 0; // #114 : 서버에서 보내준 ObjectID 를 Controller 에 설정해준다. (Only Client)
 
 	virtual void OnSetInputMode(ET4InputMode InMode) = 0;
 

@@ -172,9 +172,9 @@ public:
 	virtual const FT4EntityKey& GetEntityKey() const = 0; // #35
 	virtual const UT4EntityAsset* GetEntityAsset() = 0; // #39
 
-	virtual const FT4ObjectID& GetOwnerID() const = 0; // #114 : GameObject ID
-	virtual void SetOwnerID(const FT4ObjectID& InObjectID) = 0; // #114
-	virtual void ClearOwnerID() = 0; // #114
+	virtual const FT4ObjectID& GetGameObjectID() const = 0; // #114 : GameObject ID
+	virtual void SetGameObjectID(const FT4ObjectID& InObjectID) = 0; // #114
+	virtual void ClearGameObjectID() = 0; // #114
 
 	virtual const FName GetSkinName() const = 0; // #140
 	virtual const FName GetAnimSetName() const = 0; // #73 : AnimSetNameTable

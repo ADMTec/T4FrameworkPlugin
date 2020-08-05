@@ -7,6 +7,7 @@
 		"T4ContentEditor": "UE4Editor-T4ContentEditor.dll",
 		"T4EditorCommon": "UE4Editor-T4EditorCommon.dll",
 		"T4EntityEditor": "UE4Editor-T4EntityEditor.dll",
+		"T4LevelEditorMode": "UE4Editor-T4LevelEditorMode.dll",
 		"T4WorldExplorer": "UE4Editor-T4WorldExplorer.dll"
 	}
 }

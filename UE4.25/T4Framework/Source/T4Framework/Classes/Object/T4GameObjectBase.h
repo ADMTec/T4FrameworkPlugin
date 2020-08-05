@@ -31,7 +31,8 @@ public:
 	void OnProcessPost(float InDeltaTime);
 
 	ET4LayerType GetLayerType() const { return LayerType; }
-	const FT4ObjectID& GetObjectID() const { return ObjectID; } // #114
+
+	const FT4ObjectID& GetGameObjectID() const { return GameObjectID; } // #114
 
 	virtual FName GetTeamName() const { return NAME_None; } // #142 : Temp => RaceName
 	virtual FName GetNameID() const { return NAME_None; } // #142 : Temp => DBKey.RowName
@@ -42,11 +43,11 @@ public:
 	virtual bool IsEntered() const { return bEntered; } // #134
 
 	virtual IT4ObjectController* GetController() const { return nullptr; } // #114 : Server All, Client Player Only
-	virtual IT4WorldActor* GetControlWorldActor() const;
+	virtual IT4WorldActor* GetPossessActor() const;
 
 	bool IsValidControlActorID() const { return ControlActorID.IsValid(); } // #146
-	const FT4ActorID& GetControlWorldActorID() const { return ControlActorID; } // #114 : ActorID 기억! 현재는 ObjectID.Value 와 같다. 이후 교체가 되어야 할 수 있음
-	void SetControlWorldActorID(const FT4ActorID& InControlActorID) { ControlActorID = InControlActorID; } // #131
+	const FT4ActorID& GetPossessActorID() const { return ControlActorID; } // #114 : ActorID 기억! 현재는 ObjectID.Value 와 같다. 이후 교체가 되어야 할 수 있음
+	void SetPossessActorID(const FT4ActorID& InControlActorID) { ControlActorID = InControlActorID; } // #131
 
 #if WITH_EDITOR
 	virtual const FString GetAIDebugString() const { return FString(); } // #114 : Only ServerObject
@@ -74,7 +75,7 @@ protected:
 
 private:
 	ET4LayerType LayerType;
-	FT4ObjectID ObjectID;
+	FT4ObjectID GameObjectID;
 
 protected:
 	bool bEntered;

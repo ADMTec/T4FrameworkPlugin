@@ -168,7 +168,7 @@ public:
 	FT4ObjectID ObjectID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ActorID ChangeActorID;
+	FT4ObjectID ChangeObjectID;
 
 public:
 	FT4GamePacketSC_MyPCChange()

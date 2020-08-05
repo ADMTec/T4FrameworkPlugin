@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GamePacketCS_Command_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_359_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_364_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdBookmark_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdBookmark>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_315_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_320_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdTeleport_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -29,7 +29,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Cmd
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdTeleport>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_284_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_289_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdLeave_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -37,7 +37,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Cmd
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdLeave>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_252_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_257_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdRespawn_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -45,7 +45,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Cmd
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdRespawn>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_222_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_227_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdItemEnter_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -53,7 +53,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Cmd
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdItemEnter>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_177_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_182_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdNPCEnter_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -61,7 +61,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Cmd
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_CmdNPCEnter>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_143_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Command_h_148_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdPCEnter_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;

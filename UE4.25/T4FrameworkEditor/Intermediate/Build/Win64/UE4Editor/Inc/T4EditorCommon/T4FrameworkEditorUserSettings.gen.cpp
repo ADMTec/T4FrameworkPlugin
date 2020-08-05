@@ -121,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkEditorUserSettings() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UT4FrameworkEditorUserSettings_Statics::PropPointers),
 		0,
-		0x000000A4u,
+		0x001000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4FrameworkEditorUserSettings_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4FrameworkEditorUserSettings_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4FrameworkEditorUserSettings()
@@ -133,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkEditorUserSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4FrameworkEditorUserSettings, 3833419998);
+	IMPLEMENT_CLASS(UT4FrameworkEditorUserSettings, 224535295);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4FrameworkEditorUserSettings>()
 	{
 		return UT4FrameworkEditorUserSettings::StaticClass();

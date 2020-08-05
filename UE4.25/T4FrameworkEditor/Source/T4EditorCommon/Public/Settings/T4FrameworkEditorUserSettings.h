@@ -10,7 +10,7 @@
  */
 
 UCLASS(config = T4FrameworkEditor)
-class UT4FrameworkEditorUserSettings : public UObject
+class T4EDITORCOMMON_API UT4FrameworkEditorUserSettings : public UObject
 {
 	GENERATED_BODY()
 
