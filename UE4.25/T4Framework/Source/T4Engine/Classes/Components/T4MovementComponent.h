@@ -30,6 +30,8 @@ public:
 		FActorComponentTickFunction* ThisTickFunction
 	) override;
 
+	void OnRegister() override; // #149
+
 	float GetMaxSpeed() const override;
 	void StopActiveMovement() override;
 

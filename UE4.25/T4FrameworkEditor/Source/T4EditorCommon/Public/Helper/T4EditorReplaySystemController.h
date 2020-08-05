@@ -20,11 +20,7 @@ public:
 	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
 
 public:
-	void Set(
-		ET4LayerType InLayerType,
-		const FString& InAssetName,
-		const FString& InFolderName
-	);
+	void Set(ET4LayerType InLayerType, const FString& InAssetName, const FString& InFolderName);
 
 	bool IsPlayed(); // #104
 
@@ -44,13 +40,13 @@ public:
 	void TooglePlayerPossessed();
 
 public:
-	UPROPERTY(EditAnywhere, Transient, Category = Replay)
+	UPROPERTY(EditAnywhere, Transient, Category = ReplaySystem)
 	TSoftObjectPtr<UT4ReplaySystemAsset> SelectReplaySystemAsset;
 
-	UPROPERTY(EditAnywhere, Transient, Category = Replay)
+	UPROPERTY(EditAnywhere, Transient, Category = ReplaySystem)
 	bool bPlayRepeat;
 
-	UPROPERTY(EditAnywhere, Transient, Category = Replay)
+	UPROPERTY(EditAnywhere, Transient, Category = ReplaySystem)
 	bool bPlayerPossessed;
 
 private:

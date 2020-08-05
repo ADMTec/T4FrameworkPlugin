@@ -65,13 +65,13 @@ public:
 	); // #60
 
 #if WITH_EDITOR
-	bool DoSpawnByContentSpawn(
+	bool DoSpawnFromSpawnAsset(
 		ET4LayerType InLayerType,
 		UT4ContentSpawnAsset* InSpawnAsset,
 		const FName& InSpawnActorID,
 		const FT4ObjectID& InReservedObjectID
 	); // #126
-	bool DoSpawnByContentSpawn(ET4LayerType InLayerType, UT4ContentSpawnAsset* InSpawnAsset); // #126
+	bool DoSpawnFromSpawnAsset(ET4LayerType InLayerType, UT4ContentSpawnAsset* InSpawnAsset); // #126
 #endif
 
 	bool DoDespawn(ET4LayerType InLayerType, const FT4ObjectID& InObjectID); // #114

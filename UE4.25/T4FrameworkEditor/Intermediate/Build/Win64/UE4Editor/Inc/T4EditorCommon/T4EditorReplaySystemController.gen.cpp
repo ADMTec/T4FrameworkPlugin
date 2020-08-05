@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorReplaySystemController() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayerPossessed_MetaData[] = {
-		{ "Category", "Replay" },
+		{ "Category", "ReplaySystem" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorReplaySystemController.h" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorReplaySystemController() {}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayerPossessed = { "bPlayerPossessed", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorReplaySystemController), &Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayerPossessed_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayerPossessed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayerPossessed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayRepeat_MetaData[] = {
-		{ "Category", "Replay" },
+		{ "Category", "ReplaySystem" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorReplaySystemController.h" },
 	};
 #endif
@@ -84,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorReplaySystemController() {}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayRepeat = { "bPlayRepeat", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorReplaySystemController), &Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayRepeat_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayRepeat_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_bPlayRepeat_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorReplaySystemController_Statics::NewProp_SelectReplaySystemAsset_MetaData[] = {
-		{ "Category", "Replay" },
+		{ "Category", "ReplaySystem" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorReplaySystemController.h" },
 	};
 #endif
@@ -121,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorReplaySystemController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorReplaySystemController, 3872899806);
+	IMPLEMENT_CLASS(UT4EditorReplaySystemController, 2348240307);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorReplaySystemController>()
 	{
 		return UT4EditorReplaySystemController::StaticClass();

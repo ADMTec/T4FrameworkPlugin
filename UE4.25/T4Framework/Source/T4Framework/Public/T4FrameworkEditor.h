@@ -371,12 +371,12 @@ public:
 		const FT4ObjectID& InReservedObjectID
 	) = 0; // #60 : to player
 
-	virtual bool DoSpawnByContentSpawn(
+	virtual bool DoSpawnFromSpawnAsset(
 		UT4ContentSpawnAsset* InSpawnAsset, 
 		const FName& InSpawnActorID, 
 		const FT4ObjectID& InReservedObjectID
 	) = 0; // #126
-	virtual bool DoSpawnByContentSpawn(UT4ContentSpawnAsset* InSpawnAsset) = 0; // #126
+	virtual bool DoSpawnFromSpawnAsset(UT4ContentSpawnAsset* InSpawnAsset) = 0; // #126
 
 	virtual bool DoDespawn(const FT4ObjectID& InObjectID) = 0; // #114
 	virtual bool DoDespawnAll(bool bClearPlayerActor) = 0; // #68

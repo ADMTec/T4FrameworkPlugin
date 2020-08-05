@@ -322,8 +322,8 @@ public:
 	virtual bool IsChangePlayerDisabled() const = 0;
 	virtual void SetDisableChangePlayer(bool bInDisable) = 0; // #72
 
-	virtual bool IsEditorAISystemPaused() const = 0;
-	virtual void SetEditorPauseAISystem(bool bInPause) = 0; // #52
+	virtual bool IsNPCAIDisabled() const = 0;
+	virtual void SetDisableNPCAI(bool bInDisable) = 0; // #52
 #endif
 };
 

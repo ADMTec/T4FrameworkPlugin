@@ -1,7 +1,9 @@
-# T4Framework (v0.9.4)
+# T4Framework (v0.9.5)
 ### Open-world MMO/MMORPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
+
+>> **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
 
 - **기본정보**
   - **Website** : <https://tech4labs.com/>
@@ -9,41 +11,23 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
-  - **v0.9.4 (Enhancement : 1, Bug fix : 1)**
-    - #148 [기능개선] T4Framrwork 에서 사용하는 기본 Content 배포 추가 (Content/T4Framework/*.*)
-    - #154 [버그수정] 간헐적으로 NPC AI 의 Aim Casting 이 Clear 되지 않던 문제 수정
-  - v0.9.3 (Enhancement : 1, Bug fix : 1)
-    - #154 [기능개선] Aim BlendSpace 가 없을 경우에 대한 In-Place Aiming 의 Bone Transform 처리 지원
-    - #154 [버그수정] LockOn 이동 시 간헐적으로 캐릭터의 T포즈가 발생하는 문제 수정
-  - v0.9.2 (Enhancement : 1)
-    - #148 [기능개선] 뷰포트 QuickHotKey 지정을 T4GameplayUserSettings 에서 설정하도록 기능 개선
-  - v0.9.1 (Bug fix : 2)
-    - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
-    - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
+  - **v0.9.5 (Enhancement : 1, Bug fix : 1)**
+    - #149 [기능개선] 레벨에디터 T4Framework 모드에서 Content Spawn 을 테스트 해볼 수 있도록 기능 추가
+    - #149 [버그수정] 레벨에디터 T4Framework 모드 선택시 발생하던 크래시 수정
+  - Previous
+    - v0.9.4 (Enhancement : 1, Bug fix : 1)
+      - #148 [기능개선] T4Framrwork 에서 사용하는 기본 Content 배포 추가 (Content/T4Framework/*.*)
+      - #154 [버그수정] 간헐적으로 NPC AI 의 Aim Casting 이 Clear 되지 않던 문제 수정
+    - v0.9.3 (Enhancement : 1, Bug fix : 1)
+      - #154 [기능개선] Aim BlendSpace 가 없을 경우에 대한 In-Place Aiming 의 Bone Transform 처리 지원
+      - #154 [버그수정] LockOn 이동 시 간헐적으로 캐릭터의 T포즈가 발생하는 문제 수정
+    - v0.9.2 (Enhancement : 1)
+      - #148 [기능개선] 뷰포트 QuickHotKey 지정을 T4GameplayUserSettings 에서 설정하도록 기능 개선
+    - v0.9.1 (Bug fix : 2)
+      - #148 [버그수정] 신규 프로젝트 설정 후 T4Framework 플로그인을 활성화 할 경우에 발생하는 크래시 수정
+      - #148 [버그수정] 프로젝트의 UserSettings 가 에디터 개인설정에 노출되지 않던 문제 수정
 - **설치방법**
-  - **!!!** M7 마일스톤 기간(~8/26)에는 데일리로 플러그인 업데이트가 발생할 수 있습니다. **!!!**
-  - 언리얼 엔진을 설치합니다.
-    - https://docs.unrealengine.com/ko/GettingStarted/Installation/index.html
-    - Supported Engine Versions
-      - 4.25 (Release Version : 4.25.3)
-  - 언리얼 엔진 버전에 맞는 T4Framework 플러그인을 내려받아 엔진 플러그인 폴더로 복사합니다.
-    - [언리얼설치엔진경로]/Engine/Plugins/TECH4Labs/
-	  - UE4.25/T4Framework
-	  - UE4.25/T4FrameworkEditor
-  - T4Framework 플러그인의 기본 Content 를 해당 프로젝트 폴더로 복사합니다.
-    - [MyProject]/Content/T4Framework/
-	  - UE4.25/Content/T4Framework/*.*
-  - 언리얼 프로젝트를 생성합니다.
-    - 신규 프로젝트 만들기
-      - https://docs.unrealengine.com/ko/Engine/Basics/Projects/Browser/index.html
-	- 기존 프로젝트 열기
-	  - https://docs.unrealengine.com/ko/Engine/Basics/Projects/OpenExisting/index.html
-	- T4FrameworkExample 프로젝트 사용
-	  - https://github.com/Tech4Labs/T4FrameworkExample
-  - 언리얼 프로젝트에 T4Framework 플러그인 사용을 활성화합니다.
-    - .uproject
-	  - T4Framework and T4FrameworkEditor
-	  - "Enabled": true
+  - [link text](Documentation/플러그인 설치.md)
 - **튜토리얼(임시)**
   - #1 : 간단한 툴 소개
     - https://youtu.be/r29O3YdeV7E
