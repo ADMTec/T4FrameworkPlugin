@@ -1,5 +1,5 @@
 # T4Framework (v0.9.6)
-### Open-world MMO/MMORPG Framework for UE4
+### Efficient Real-Time 3D Development Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
 
