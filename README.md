@@ -1,4 +1,4 @@
-# T4Framework (v0.9.7)
+# T4Framework (v0.9.8)
 ### Efficient Real-Time 3D Development Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
