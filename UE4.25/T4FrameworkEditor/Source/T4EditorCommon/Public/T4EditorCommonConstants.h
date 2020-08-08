@@ -8,6 +8,8 @@
   * #39, #90
  */
 
+static const TCHAR* T4Editor_EditorVersionName = TEXT("v0.9.8");
+
 static const FName T4Editor_ConstnatTableMapZone = TEXT("MapZone"); // #92 : Int Value
 static const FName T4Editor_ConstnatTableTimeTag = TEXT("TimeTag"); // #90 : Float Value
 
@@ -31,6 +33,28 @@ static const FName T4Editor_ConstnatTableAnimset = TEXT("Animset");  // #73
 static const FName T4Editor_ConstnatTableStance = TEXT("Stance"); // #106
 
 static const FName T4Editor_ConstnatTableReaction = TEXT("Reaction"); // #76
+
+static const FName T4Editor_DefaultAssetTypeCategory = FName(TEXT("T4Framework"));
+
+static const FName PersistentLevelName = TEXT("PersistentLevel"); // #91
+
+// #124
+static const FName T4Editor_PropertyCategoryConstant = TEXT("Constant"); // #150
+static const FName T4Editor_PropertyCategoryCommon = TEXT("Common");
+static const FName T4Editor_PropertyCategoryServerOnly = TEXT("ServerOnly");
+static const FName T4Editor_PropertyCategoryClientOnly = TEXT("ClientOnly");
+static const FName T4Editor_PropertyCategoryEditor = TEXT("Editor");
+static const FName T4Editor_PropertyCategoryHide = TEXT("Hide");
+
+static const FName T4Editor_SubDetailCategorySortNames[] = {
+	T4Editor_PropertyCategoryConstant,
+	T4Editor_PropertyCategoryCommon,
+	T4Editor_PropertyCategoryServerOnly,
+	T4Editor_PropertyCategoryClientOnly,
+	T4Editor_PropertyCategoryEditor,
+	T4Editor_PropertyCategoryHide
+};
+// #124
 
 enum ET4EditorConstantValueType // #92
 {

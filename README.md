@@ -11,9 +11,12 @@
   - Facebook : <https://www.facebook.com/tech4labs>
   - Twitter : <https://twitter.com/Tech4Labs>
 - **업데이트**
-  - **v0.9.7 (Bug fix : 1)**
-    - #149 [버그수정] World Explorer, TOD 가 설정된 월드 오픈 시 발생하던 크래시 수정
+  - **v0.9.8 (Enhancement : 1, Bug fix : 1)**
+    - #148 [기능개선] T4Framework 에디터 탭 툴팁에 에디터 이름과 플러그인 버전을 함께 표시하도록 개선
+    - #148 [버그수정] AnimBP 에셋이 로컬에 없을 경우 캐릭터 로딩 과정에서 발생하는 크래시 수정
   - Previous
+    - v0.9.7 (Bug fix : 1)
+      - #149 [버그수정] World Explorer, TOD 가 설정된 월드 오픈 시 발생하던 크래시 수정
     - v0.9.6 (Enhancement : 1, Bug fix : 1)
       - #149 [기능개선] 레벨에디터 T4Framework 모드에서 스폰된 액터의 월드 아웃라이너 노출 제거
       - #149 [버그수정] 캐릭터 + CTRL + 마우스 좌클릭 으로 캐릭터 변경이 안되던 문제 수정
