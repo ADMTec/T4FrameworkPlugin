@@ -45,8 +45,4 @@
   - 프로젝트에 필요한 신규 기능 구현을 대행하고 있습니다.
 - **문의**
   - SoonBo Noh : <niceofer@hotmail.com>
-  - Website : <https://tech4labs.com/>
-  - YouTube : <https://www.youtube.com/channel/UCoVNwMxu9CUzc92zGYN4l6A>
-  - Facebook : <https://www.facebook.com/tech4labs>
-  - Twitter : <https://twitter.com/Tech4Labs>
-  
+  - <https://tech4labs.com>
