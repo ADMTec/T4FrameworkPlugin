@@ -51,7 +51,7 @@ public:
 	virtual void OnPlayerReload() = 0; // #87, #107, #130
 	virtual void OnPlayerRespawn() = 0; // #136
 
-	virtual IT4Framework* CreateGameFrame() = 0; // #87
+	virtual IT4Framework* CreateFramework() = 0; // #87
 	virtual IT4Framework* GetFramework() const = 0; // #79
 	virtual IT4WorldSystem* GetWorldSystem() const = 0; // #93
 

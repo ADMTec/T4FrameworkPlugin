@@ -3,13 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4Framework/Public/T4FrameworkVersion.h"
 
 /**
   * #39, #90
  */
-
-static const TCHAR* T4Editor_EditorVersionName = TEXT("v0.9.9");
-
 static const FName T4Editor_ConstnatTableMapZone = TEXT("MapZone"); // #92 : Int Value
 static const FName T4Editor_ConstnatTableTimeTag = TEXT("TimeTag"); // #90 : Float Value
 

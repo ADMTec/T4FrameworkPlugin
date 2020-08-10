@@ -66,8 +66,8 @@ public:
 	void OnPlayerReload() override; // #87, #107, #130 : 모든 ViewModel 의 Player Respawn/Reload 는 이 메소드를 호출하는 것으로 정리할 것!
 	void OnPlayerRespawn() override; // #136
 
-	IT4Framework* CreateGameFrame() override; // #87
-	IT4Framework* GetFramework() const override { return GameFrameOwner; } // #79
+	IT4Framework* CreateFramework() override; // #87
+	IT4Framework* GetFramework() const override { return FrameworkOwner; } // #79
 	IT4WorldSystem* GetWorldSystem() const override; // #93
 	IT4WorldActor* GetPlayerActor() const; // #58
 	IT4PlayerController* GetPlayerController() const;
@@ -325,7 +325,7 @@ private:
 
 private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관리를 위하 private 로 변경함
 	ET4LayerType LayerType;
-	IT4Framework* GameFrameOwner;
+	IT4Framework* FrameworkOwner;
 	FT4EditorViewportClient* ViewportClientRef;
 
 	FDelegateHandle ViewportClientResetHandle;

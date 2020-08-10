@@ -18,12 +18,7 @@ public:
 	FT4EditorToolkitBase();
 	virtual ~FT4EditorToolkitBase();
 
-	void OnInitialize(
-		const EToolkitMode::Type InMode,
-		const TSharedPtr<IToolkitHost>& InInitToolkitHost,
-		UObject* InAsset
-	); // #118
-
+	void OnInitialize(const EToolkitMode::Type InMode, const TSharedPtr<IToolkitHost>& InInitToolkitHost, UObject* InAsset); // #118
 	void OnFinialize(); // #118
 
 	virtual ET4LayerType GetLayerType() const { return ET4LayerType::Max; }

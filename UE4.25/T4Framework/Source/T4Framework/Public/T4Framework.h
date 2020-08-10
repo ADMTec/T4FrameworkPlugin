@@ -357,4 +357,6 @@ namespace T4Framework
 
 	T4FRAMEWORK_API bool HasFramework(ET4LayerType InLayerType);
 	T4FRAMEWORK_API IT4Framework* GetFramework(ET4LayerType InLayerType);
+
+	T4FRAMEWORK_API void NotifyFrameworkLaunch(const TCHAR* InName); // #148
 }
