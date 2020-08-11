@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.11)
+# T4FrameworkPlugin (v0.9.12)
 ### Efficient Real-Time 3D Development Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -8,10 +8,12 @@
 - **설치방법**
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
-  - **v0.9.11**
-    - #155 [기능개선] Content Editor, SpawnObject 의 PrefabID 미설정 시의 출력 모델 개선 (물음표)
-    - #155 [버그수정] Content Editor, Spawn Object Tab 이동 시 첫번째 Item 자동 선택 오류 수정 
+  - **v0.9.12**
+    - #155 [버그수정] Entity Editor, Prop Entity 에 Mesh 설정 이후 카메라 회전, 줌 동작 오류 수정 
   - Update History
+    - **v0.9.11**
+      - #155 [기능개선] Content Editor, SpawnObject 의 PrefabID 미설정 시의 출력 모델 개선 (물음표)
+      - #155 [버그수정] Content Editor, Spawn Object Tab 이동 시 첫번째 Item 자동 선택 오류 수정 
     - v0.9.10
       - #148 [버그수정] Action Editor 사용 시 비정상적으로 발생하던 크래시 수정
     - v0.9.9

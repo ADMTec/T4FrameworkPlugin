@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropStaticActor() {}
 	T4ENGINE_API UClass* Z_Construct_UClass_AT4WorldActor();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4StaticMeshComponent_NoRegister();
-	T4ENGINE_API UClass* Z_Construct_UClass_UT4SceneComponent_NoRegister();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4CapsuleComponent_NoRegister();
 // End Cross Module References
 	void AT4WorldPropStaticActor::StaticRegisterNativesAT4WorldPropStaticActor()
 	{
@@ -38,9 +38,9 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropStaticActor() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComponent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SceneComponent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CapsuleComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SceneComponent;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CapsuleComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -65,16 +65,16 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropStaticActor() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_StaticMeshComponent = { "StaticMeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropStaticActor, StaticMeshComponent), Z_Construct_UClass_UT4StaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_StaticMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_StaticMeshComponent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_SceneComponent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_CapsuleComponent_MetaData[] = {
 		{ "Category", "Prop" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/WorldActor/T4WorldPropStaticActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropStaticActor, SceneComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_SceneComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_CapsuleComponent = { "CapsuleComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropStaticActor, CapsuleComponent), Z_Construct_UClass_UT4CapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_CapsuleComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_CapsuleComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AT4WorldPropStaticActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_StaticMeshComponent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_SceneComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropStaticActor_Statics::NewProp_CapsuleComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4WorldPropStaticActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AT4WorldPropStaticActor>::IsAbstract,
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropStaticActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPropStaticActor, 3243436923);
+	IMPLEMENT_CLASS(AT4WorldPropStaticActor, 3948433177);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPropStaticActor>()
 	{
 		return AT4WorldPropStaticActor::StaticClass();

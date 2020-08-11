@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 	T4ENGINE_API UClass* Z_Construct_UClass_AT4WorldActor();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4SkeletalMeshComponent_NoRegister();
-	T4ENGINE_API UClass* Z_Construct_UClass_UT4SceneComponent_NoRegister();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4CapsuleComponent_NoRegister();
 // End Cross Module References
 	void AT4WorldPropSkeletalActor::StaticRegisterNativesAT4WorldPropSkeletalActor()
 	{
@@ -38,9 +38,9 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SkeletalMeshComponent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SceneComponent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CapsuleComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SceneComponent;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CapsuleComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -65,16 +65,16 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent = { "SkeletalMeshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropSkeletalActor, SkeletalMeshComponent), Z_Construct_UClass_UT4SkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_CapsuleComponent_MetaData[] = {
 		{ "Category", "Prop" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/WorldActor/T4WorldPropSkeletalActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent = { "SceneComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropSkeletalActor, SceneComponent), Z_Construct_UClass_UT4SceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_CapsuleComponent = { "CapsuleComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4WorldPropSkeletalActor, CapsuleComponent), Z_Construct_UClass_UT4CapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_CapsuleComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_CapsuleComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SkeletalMeshComponent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_SceneComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::NewProp_CapsuleComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4WorldPropSkeletalActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AT4WorldPropSkeletalActor>::IsAbstract,
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 1038648964);
+	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 3428592491);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPropSkeletalActor>()
 	{
 		return AT4WorldPropSkeletalActor::StaticClass();
