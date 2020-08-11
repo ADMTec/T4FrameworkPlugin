@@ -20,5 +20,6 @@
 #include "T4Asset/Classes/Entity/T4MapEntityAsset.h"
 #include "T4Asset/Classes/World/T4EnvironmentAsset.h"
 #include "T4Asset/Classes/Entity/T4ZoneEntityAsset.h"
+#include "T4Asset/Classes/Data/T4PathSegmentData.h"
 #include "T4Asset/Classes/World/T4WorldExploreAsset.h"
 

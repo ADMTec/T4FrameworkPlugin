@@ -8,6 +8,8 @@
 
 
 #include "T4GameData/Classes/Content/T4ContentBuildAsset.h"
+#include "T4GameData/Classes/Content/T4ContentSpawnPrefabStructs.h"
+#include "T4GameData/Classes/Content/T4ContentSpawnObjectStructs.h"
 #include "T4GameData/Classes/Content/T4ContentSpawnAsset.h"
 #include "T4GameData/Classes/TableRow/T4TableRowBase.h"
 #include "T4GameData/Classes/TableRow/T4ContentTableRow.h"

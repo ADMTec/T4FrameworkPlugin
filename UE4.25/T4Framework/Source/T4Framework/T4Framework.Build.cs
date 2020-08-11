@@ -18,9 +18,6 @@ namespace UnrealBuildTool.Rules
 					"CoreUObject",
 					"Engine",
                     "InputCore",
-					"Json",
-					"Sockets",
-					"Http",
 					"AIModule",
                     "NavigationSystem",
 					"HeadMountedDisplay",
@@ -35,7 +32,11 @@ namespace UnrealBuildTool.Rules
 				PrivateDependencyModuleNames.Add("SlateCore");
 				PrivateDependencyModuleNames.Add("EditorStyle");
 				PrivateDependencyModuleNames.Add("UnrealEd");
-            }
+				PrivateDependencyModuleNames.Add("Http");
+				PrivateDependencyModuleNames.Add("Json");
+				PrivateDependencyModuleNames.Add("Sockets");
+				PrivateDependencyModuleNames.Add("InternationalizationSettings");
+			}
         }
 	}
 }

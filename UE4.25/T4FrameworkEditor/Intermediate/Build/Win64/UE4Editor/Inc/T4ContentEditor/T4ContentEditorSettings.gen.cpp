@@ -33,6 +33,10 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ContentAnchorNoneEntityAssetPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ContentAnchorNoneEntityAssetPath;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ContentAnchorPropEntityAssetPath_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ContentAnchorPropEntityAssetPath;
@@ -59,6 +63,15 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorNoneEntityAssetPath_MetaData[] = {
+		{ "Category", "ConstantTable" },
+		{ "Comment", "// #126\n" },
+		{ "ModuleRelativePath", "Private/Settings/T4ContentEditorSettings.h" },
+		{ "ToolTip", "#126" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorNoneEntityAssetPath = { "ContentAnchorNoneEntityAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ContentEditorSettings, ContentAnchorNoneEntityAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorNoneEntityAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorNoneEntityAssetPath_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorPropEntityAssetPath_MetaData[] = {
 		{ "Category", "ConstantTable" },
@@ -87,6 +100,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_RacesConstantTablePath = { "RacesConstantTablePath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ContentEditorSettings, RacesConstantTablePath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_RacesConstantTablePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_RacesConstantTablePath_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4ContentEditorSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorNoneEntityAssetPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorPropEntityAssetPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_ContentAnchorCharacterEntityAssetPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ContentEditorSettings_Statics::NewProp_RacesConstantTablePath,
@@ -118,7 +132,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentEditorSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ContentEditorSettings, 4150798989);
+	IMPLEMENT_CLASS(UT4ContentEditorSettings, 2437826751);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4ContentEditorSettings>()
 	{
 		return UT4ContentEditorSettings::StaticClass();
