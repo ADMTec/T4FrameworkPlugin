@@ -105,7 +105,8 @@ public:
 
 	bool IsEditWidgetFocusing() const override; // #142
 	bool IsEditWidgetModeEnabled() const override { return bEditWidgetModeEnabled; } // #94, #118
-	void SetEnableEditWidgetMode(bool bInEnable) override; // #94, #118
+	void SetEditWidgetModeEnable(bool bInEnable) override; // #94, #118
+	void SetEditWidgetModeActiveAxisMode(bool bInLocationOnly) override { bEditWidgetAxisLocationOnly = bInLocationOnly; } // #125 : Zone Entity
 
 	bool IsKeyDeleteClicked() const override { return bKeyDeleteClicked; } // #142
 	bool IsKeyEndClicked() const override { return bKeyEndClicked; } // #142
@@ -152,6 +153,7 @@ private:
 
 	bool bEditWidgetModeInitialized; // #94, #118
 	bool bEditWidgetModeEnabled; // #94, #118
+	bool bEditWidgetAxisLocationOnly; // #125
 	FWidget::EWidgetMode EditWidgetModeCached;
 
 	bool bKeyDeleteClicked; // #142

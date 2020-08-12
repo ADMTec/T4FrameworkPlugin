@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4ContentSpawnPrefabStructs_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_Content_T4ContentSpawnPrefabStructs_h_109_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_Content_T4ContentSpawnPrefabStructs_h_108_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ContentSpawnPrefabData_Statics; \
 	static class UScriptStruct* StaticStruct();
 

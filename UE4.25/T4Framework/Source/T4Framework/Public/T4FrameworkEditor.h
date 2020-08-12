@@ -287,7 +287,8 @@ public:
 
 	virtual bool IsEditWidgetFocusing() const = 0; // #142
 	virtual bool IsEditWidgetModeEnabled() const = 0; // #94, #118
-	virtual void SetEnableEditWidgetMode(bool bInEnable) = 0; // #94, #118
+	virtual void SetEditWidgetModeEnable(bool bInEnable) = 0; // #94, #118
+	virtual void SetEditWidgetModeActiveAxisMode(bool bInLocationOnly) = 0; // #125 : Zone entity
 
 	virtual bool IsKeyDeleteClicked() const = 0; // #142
 	virtual bool IsKeyEndClicked() const = 0; // #142

@@ -31,7 +31,8 @@ class IT4WorldSystem; // #93
 class IT4PlayerController;
 class IT4EditorGameplayCommand; // #114
 class IT4Framework;
-class UT4EditorEnvironmentTimeObject; // #94
+class UT4EditorEnvironmentController; // #94
+class UT4EditorPathSegmentController; // #155
 class UT4EditorReplaySystemController;
 struct FT4ActionBase;
 struct FT4HUDDrawInfo;
@@ -77,9 +78,6 @@ public:
 	virtual void NotifyEditWidgetTargetChanged(bool bInStart) override; // #125
 	virtual void NotifyEditWidgetTargetUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
 
-	virtual UT4EditorEnvironmentTimeObject* GetEditorEnvironmentTimeObject() override { return nullptr; } // #90, #94
-	virtual UT4EditorEnvironmentTimeObject* GetBackupEditorEnvironmentTimeObject() override { return nullptr; } // #147
-
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) override {} // #94
 
 	void SetViewportOptionShowActorBound(bool bShow) override; // #76
@@ -113,6 +111,11 @@ public:
 
 	FT4OnEditWidgetTargetChanged& GetOnEditWidgetTargetChanged() { return OnEditWidgetTargetChanged; } // #125
 	FT4OnEditWidgetTargetUpdating& GetOnEditWidgetTargetUpdating() { return OnEditWidgetTargetUpdating; } // #118
+
+	virtual UT4EditorEnvironmentController* GetEditorEnvironmentController() const { return nullptr; } // #90, #94
+	virtual UT4EditorEnvironmentController* GetEditorBackupEnvironmentController() const { return nullptr; } // #147
+
+	virtual UT4EditorPathSegmentController* GetEditorPathSegmentController() const { return nullptr; } // #155
 
 	bool HasReplaySystem() const { return EditorReplaySystemPtr.IsValid(); } // #104
 	UT4EditorReplaySystemController* GetReplaySystem(); // #60, #68, #104

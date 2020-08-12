@@ -31,7 +31,7 @@ struct FT4HUDDrawInfo;
 class IT4WorldSystem;
 class IT4Framework;
 class FT4EditorViewportClient;
-class UT4EditorEnvironmentTimeObject; // #94
+class UT4EditorEnvironmentController; // #94
 class T4EDITORCOMMON_API IT4EditorViewModel {
 public:
 	virtual ~IT4EditorViewModel() {}
@@ -58,11 +58,6 @@ public:
 	virtual AActor* GetEditWidgetModeTarget() const = 0; // #94
 	virtual void NotifyEditWidgetTargetChanged(bool bInStart) = 0; // #125
 	virtual void NotifyEditWidgetTargetUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) = 0; // #118 : PRS (rot or loc or scale)
-
-	// TODO : Remove
-	virtual UT4EditorEnvironmentTimeObject* GetEditorEnvironmentTimeObject() = 0; // #90, #94 
-	virtual UT4EditorEnvironmentTimeObject* GetBackupEditorEnvironmentTimeObject() = 0; // #147
-	// ~TODO : Remove
 
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) = 0; // #94
 

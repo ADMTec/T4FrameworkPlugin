@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4GameDataMinimal.h"
-#include "T4Asset/Classes/Data/T4PathSegmentData.h" // #155
+#include "T4ContentSpawnCommonStructs.h" // #155
 #include "T4ContentSpawnObjectStructs.generated.h"
 
 /**
@@ -49,6 +49,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FTransform Transform;
+
+	//UPROPERTY(EditAnywhere, Category = ServerOnly)
+	//FT4SpawnWaypointData WaypointData;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)

@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "T4Asset/Classes/World/T4EnvironmentAsset.h"
-#include "T4EditorEnvironmentTimeObject.generated.h"
+#include "T4EditorEnvironmentController.generated.h"
 
 /**
   * #90
  */
 UCLASS()
-class T4EDITORCOMMON_API UT4EditorEnvironmentTimeObject : public UObject
+class T4EDITORCOMMON_API UT4EditorEnvironmentController : public UObject
 {
 	GENERATED_UCLASS_BODY()
 

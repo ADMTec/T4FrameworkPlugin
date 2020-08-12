@@ -13,12 +13,13 @@
  */
 class IDetailsView;
 class ST4TimeTagListWidget; // #90
-class IT4EditorViewModel;
+class FT4EditorViewModelBase;
 class UT4EnvironmentAsset;
+class UT4EditorEnvironmentController;
 class T4EDITORCOMMON_API FT4EnvironmentDetails : public FEditorUndoClient, public TSharedFromThis<FT4EnvironmentDetails>
 {
 public:
-	FT4EnvironmentDetails(IT4EditorViewModel* InViewModel);
+	FT4EnvironmentDetails(FT4EditorViewModelBase* InViewModelBase);
 	~FT4EnvironmentDetails();
 
 	//~ FEditorUndoClient interface
@@ -52,7 +53,7 @@ private:
 	FReply HandleOnTimeTagOverrideSourceSettings(); // #147 : 에디터 초기화시 저장한 UWorld 의 원본 TimeTagData 를 덮어씌운다.
 
 private:
-	IT4EditorViewModel* ViewModelRef;
+	FT4EditorViewModelBase* ViewModelBaseRef;
 	TWeakObjectPtr<UT4EnvironmentAsset> EnvironmentAssetPtr;
 
 	TSharedPtr<ST4TimeTagListWidget> TimeTagListWidgetPtr; // #90

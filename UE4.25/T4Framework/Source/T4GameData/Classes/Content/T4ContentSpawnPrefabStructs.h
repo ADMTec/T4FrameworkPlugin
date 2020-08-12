@@ -4,7 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4GameDBTypes.h"
-#include "T4Asset/Classes/Data/T4PathSegmentData.h" // #155
+#include "T4ContentSpawnCommonStructs.h" // #155
 #include "T4ContentSpawnPrefabStructs.generated.h"
 
 /**
@@ -18,6 +18,28 @@ struct T4GAMEDATA_API FT4SpawnOverrideBehaviorData // #114
 	GENERATED_USTRUCT_BODY()
 
 public:
+	FT4SpawnOverrideBehaviorData()
+		: bOverride_EnemyType(false)
+		, bOverride_Aggressive(false)
+		, bOverride_ActiveOrKeepAggroTimeSec(false)
+		, bOverride_AgentRadius(false)
+		, bOverride_SensoryRange(false)
+		, bOverride_RomaingRange(false)
+		, bOverride_RoamingRate(false)
+		, bOverride_JumpRate(false) // #140
+		, bOverride_IdleWaitTimeSec(false)
+		, EnemyType(ET4GameEnemyType::None) // #104
+		, bAggressive(false)
+		, ActiveOrKeepAggroTimeSec(0.0f)
+		, AgentRadius(0.0f) // #114 : Agent 크기 및 Attack/Stop Distance 에서 겹치지 않기 위한 값으로 사용 (WorldActor = BoundRadius)
+		, SensoryRange(0.0f)
+		, RomaingRange(0.0f)
+		, RoamingRate(0.0f)
+		, JumpRate(0.0f)
+		, IdleWaitTimeSec(5.0f)
+	{
+	}
+
 	// #114
 	// FT4BuiltinNPCAIBehaviorData : AIController (Runtime)
 	// FT4NPCBehaviorData : NPC DataTable (Original Set)
@@ -78,29 +100,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (editcondition = "bOverride_JumpRate", ClampMin = "0.0", ClampMax = "10.0"))
 	float IdleWaitTimeSec; // #140
-
-public:
-	FT4SpawnOverrideBehaviorData()
-		: bOverride_EnemyType(false)
-		, bOverride_Aggressive(false)
-		, bOverride_ActiveOrKeepAggroTimeSec(false)
-		, bOverride_AgentRadius(false)
-		, bOverride_SensoryRange(false)
-		, bOverride_RomaingRange(false)
-		, bOverride_RoamingRate(false)
-		, bOverride_JumpRate(false) // #140
-		, bOverride_IdleWaitTimeSec(false)
-		, EnemyType(ET4GameEnemyType::None) // #104
-		, bAggressive(false)
-		, ActiveOrKeepAggroTimeSec(0.0f)
-		, AgentRadius(0.0f) // #114 : Agent 크기 및 Attack/Stop Distance 에서 겹치지 않기 위한 값으로 사용 (WorldActor = BoundRadius)
-		, SensoryRange(0.0f)
-		, RomaingRange(0.0f)
-		, RoamingRate(0.0f)
-		, JumpRate(0.0f)
-		, IdleWaitTimeSec(5.0f)
-	{
-	}
 };
 
 USTRUCT()
