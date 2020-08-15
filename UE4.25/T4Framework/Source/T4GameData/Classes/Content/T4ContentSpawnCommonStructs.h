@@ -16,17 +16,31 @@ struct T4GAMEDATA_API FT4SpawnWaypointData
 
 public:
 	FT4SpawnWaypointData()
+		: WaypointName(NAME_None)
 #if WITH_EDITORONLY_DATA
-		: DebugColor(FColorList::White)
+		, LineColor(FColorList::Red)
 #endif
 	{
 	}
+
+	FORCEINLINE bool operator==(const FName& InKey) const
+	{
+		return (WaypointName == InKey) ? true : false;
+	}
+
+	FORCEINLINE bool operator==(const FT4SpawnWaypointData& InRhs) const
+	{
+		return (WaypointName == InRhs.WaypointName) ? true : false;
+	}
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FName WaypointName;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	TSoftObjectPtr<UT4PathSegmentData> PathSegmentData;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FColor DebugColor;
+	FColor LineColor;
 #endif
 };

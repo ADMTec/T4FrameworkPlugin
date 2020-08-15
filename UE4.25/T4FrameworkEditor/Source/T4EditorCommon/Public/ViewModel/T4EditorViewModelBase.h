@@ -44,8 +44,9 @@ class T4EDITORCOMMON_API FT4EditorViewModelBase : public IT4EditorViewModel
 public:
 	DECLARE_MULTICAST_DELEGATE(FT4OnViewModelChanged); // #77, #85
 
-	DECLARE_MULTICAST_DELEGATE_OneParam(FT4OnEditWidgetTargetChanged, bool); // #125
-	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnEditWidgetTargetUpdating, ET4EditWidgetUpdateType, const FVector&); // #118: PRS (rot or loc or scale)
+	DECLARE_MULTICAST_DELEGATE_OneParam(FT4OnManipulatorStartTracking, AActor*); // #125
+	DECLARE_MULTICAST_DELEGATE(FT4OnManipulatorEndTracking); // #125
+	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnManipulatorUpdating, ET4EditWidgetUpdateType, const FVector&); // #118: PRS (rot or loc or scale)
 
 public:
 	FT4EditorViewModelBase();
@@ -73,10 +74,11 @@ public:
 	IT4WorldActor* GetPlayerActor() const; // #58
 	IT4PlayerController* GetPlayerController() const;
 
-	virtual AActor* GetEditWidgetModeTarget() const override; // #94
+	virtual AActor* GetManipulatorTarget() const override; // #94
 
-	virtual void NotifyEditWidgetTargetChanged(bool bInStart) override; // #125
-	virtual void NotifyEditWidgetTargetUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
+	virtual void NotifyManipulatorStartTracking(AActor* InSelectedActor) override; // #125
+	virtual void NotifyManipulatorEndTracking() override; // #125 : 미반영 복구
+	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
 
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) override {} // #94
 
@@ -109,8 +111,9 @@ public:
 
 	FT4OnViewModelChanged& GetOnViewModelChanged() { return OnViewModelChanged; } // #77, #85
 
-	FT4OnEditWidgetTargetChanged& GetOnEditWidgetTargetChanged() { return OnEditWidgetTargetChanged; } // #125
-	FT4OnEditWidgetTargetUpdating& GetOnEditWidgetTargetUpdating() { return OnEditWidgetTargetUpdating; } // #118
+	FT4OnManipulatorStartTracking& GetOnManipulatorStartTracking() { return OnManipulatorStartTracking; } // #125
+	FT4OnManipulatorEndTracking& GetOnManipulatorEndTracking() { return OnManipulatorEndTracking; } // #125
+	FT4OnManipulatorUpdating& GetOnManipulatorUpdating() { return OnManipulatorUpdating; } // #118
 
 	virtual UT4EditorEnvironmentController* GetEditorEnvironmentController() const { return nullptr; } // #90, #94
 	virtual UT4EditorEnvironmentController* GetEditorBackupEnvironmentController() const { return nullptr; } // #147
@@ -140,39 +143,39 @@ public:
 	int32 AddBookmark(); // #100, #103
 	void RemoveBookmark(int32 InIndex); // #100, #103
 
-	void SetEditWidgetTargetActorID(const FT4ActorID& InActorID); // #94, #118
-	void ClearEditWidgetTargetActorID(); // #94, #118
-	const FT4ActorID& GetEditWidgetTargetActorID() const; // #118
+	bool CompareManipulatorActorID(const FT4ActorID& InActorID) const { return (InActorID == ManipulatorActorID) ? true : false; }
+	void SetManipulatorActorID(const FT4ActorID& InActorID); // #94, #118
+	void ClearManipulatorActorID(); // #94, #118
 
 public:
 
 	// Server => Client
 	virtual void ServerDespawnAll(bool bClearPlayerActor); // #68
-	virtual bool ServerSpawnObjectByDataID(
+	virtual bool ServerSpawnObjectFromGameDB(
 		ET4EditorDataType InGameDBType, // #126
 		const FName& InGameDBKey, 
 		float InSpawnDistance = 0.0f
 	); // #60
-	bool ServerSpawnObjectByDataIDEx(
+	bool ServerSpawnObjectFromGameDBEx(
 		ET4EditorDataType InGameDBType, // #126
 		const FName& InGameDBKey, 
 		const FVector& InLocation, 
 		const FRotator& InRotation, 
 		const FT4ObjectID& InReservedObjectID
 	); // #118
-	bool ServerSpawnObjectByEntityKey(
+	bool ServerSpawnObjectFromEntityAsset(
 		const FT4ObjectID& InReservedObjectID, // #134 : GetPlayerController()->GetObjectID() 로 비교해 Player 를 판단한다.
 		const FT4EntityKey& InEntityKey,
 		const FVector& InLocation,
 		const FRotator& InRotation
 	); // #114
 	
-	bool ServerSpawnObjectByContentSpawnEx(
+	bool ServerSpawnObjectFromSpawnAssetEx(
 		UT4ContentSpawnAsset* InSpawnAsset,
-		const FName& InSpawnActorID,
+		const FName& InSpawnObjectID,
 		const FT4ObjectID& InReservedObjectID
 	); // #126
-	bool ServerSpawnObjectByContentSpawn(UT4ContentSpawnAsset* InSpawnAsset); // #126
+	bool ServerSpawnObjectFromSpawnAsset(UT4ContentSpawnAsset* InSpawnAsset); // #126
 
 	void ServerDespawnObject(const FT4ObjectID& InObjectID); // #118
 	void ServerDespawnObjectWithEditorOnly(const FT4ObjectID& InObjectID); // #134
@@ -335,8 +338,9 @@ private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관�
 
 	FT4OnViewModelChanged OnViewModelChanged; // #77, #85
 
-	FT4OnEditWidgetTargetChanged OnEditWidgetTargetChanged; // #125
-	FT4OnEditWidgetTargetUpdating OnEditWidgetTargetUpdating; // #118
+	FT4OnManipulatorStartTracking OnManipulatorStartTracking; // #125
+	FT4OnManipulatorEndTracking OnManipulatorEndTracking; // #125
+	FT4OnManipulatorUpdating OnManipulatorUpdating; // #118
 
 	TWeakObjectPtr<UT4EditorReplaySystemController> EditorReplaySystemPtr; // #68, #104
 
@@ -344,9 +348,9 @@ private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관�
 	bool bSimulating; // #86
 	bool bVerifying; // #129 : Entity 에디터에서 데이터 검증
 
-	FT4ActorID EditWidgetTargetActorID; // #94
-
 protected:
+	FT4ActorID ManipulatorActorID; // #94
+
 	// #87
 	bool bCachedPlayerSettingsSaved;
 	float CachedCameraZoomDistance;

@@ -56,6 +56,8 @@ enum class ET4ActorType : uint8
 	Projectile, // #63
 	Indicator, // #117
 
+	Anchor, // #155
+
 	MotionController, // #153
 
 	Default, // #54

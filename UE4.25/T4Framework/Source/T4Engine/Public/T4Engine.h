@@ -255,6 +255,7 @@ public:
 
 #if !UE_BUILD_SHIPPING
 	virtual void SetDebugPause(bool bInPause) = 0; // #102
+	virtual void SetDebugColor(const FColor& InColor) = 0; // #155
 #endif
 
 #if WITH_EDITOR
@@ -301,7 +302,7 @@ public:
 		const FVector& InScale
 	) = 0; // #68 : 소멸 조건이 되면 스스로 소멸한다.
 
-	virtual IT4WorldActor* CreateWorldExtraActor(
+	virtual IT4WorldActor* CreateExtraActor(
 		ET4ActorType InWorldActorType, // #63 : Only World Object
 		const FName& InName,
 		const FVector& InLocation,
@@ -510,7 +511,6 @@ public:
 };
 #endif
 
-class AT4EditorCameraActor; // #58
 class T4ENGINE_API IT4WorldSystem
 {
 public:
@@ -578,8 +578,13 @@ public:
 	virtual bool IsMirroringEnabled() const = 0; // Editor && Server only
 	virtual void SetEnableMirroring(bool bInEnable, ET4LayerType InTargetLayer) = 0; // #140 : 서버 Actor 정보를 TargetLayer 로 미러링 한다. (MirrorActor)
 
-	virtual AT4EditorCameraActor* FindOrCreateEditorCameraActor(uint32 InKey, bool bInCreate, bool bInEmulMode) = 0; // #58 : Only Client
-	virtual void DestroyEditorCameraActor(uint32 InKey) = 0; // #58 : Only Client
+	virtual IT4WorldActor* CreateAnchorActor(
+		const FT4ActorID& InActorID, 
+		const FVector& InLocation, 
+		const FSoftObjectPath& InStaticMeshPath
+	) = 0; // #155 : Only Client
+	virtual void DestroyAnchorActor(const FT4ActorID& InActorID) = 0; // #155 : Only Client
+	virtual void DestroyAnchorActors() = 0; // #155 : Only Client
 
 	virtual bool IsDisabledLevelStreaming() const = 0; // #86, #104
 	virtual void SetDisableLevelStreaming(bool bInDisable) = 0; // #86 : World 의 UpdateStreamingState 를 제어하기 위한 옵션 처리

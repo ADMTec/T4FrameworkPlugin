@@ -42,7 +42,7 @@ public:
 protected:
 	void UpdateLists() override;
 
-	void OnItemSelected(TSharedPtr<FT4ListViewItem> InSelectedItem) override; // #74
+	void OnItemSelected(TSharedPtr<FT4ListViewItem> InSelectedItem, bool bForced) override; // #74
 	void OnItemDoubleClicked(TSharedPtr<FT4ListViewItem> InSelectedItem) override; // #81
 
 private:

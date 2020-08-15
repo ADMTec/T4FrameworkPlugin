@@ -374,7 +374,7 @@ public:
 
 	virtual bool DoSpawnFromSpawnAsset(
 		UT4ContentSpawnAsset* InSpawnAsset, 
-		const FName& InSpawnActorID, 
+		const FName& InSpawnObjectID, 
 		const FT4ObjectID& InReservedObjectID
 	) = 0; // #126
 	virtual bool DoSpawnFromSpawnAsset(UT4ContentSpawnAsset* InSpawnAsset) = 0; // #126

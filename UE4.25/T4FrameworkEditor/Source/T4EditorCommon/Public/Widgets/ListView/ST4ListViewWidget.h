@@ -76,7 +76,7 @@ protected:
 	virtual void UpdateLists() {}
 	virtual void AddExtensionMenuBuilder(FMenuBuilder& InMenuBuilder) {} // #120
 
-	virtual void OnItemSelected(TSharedPtr<FT4ListViewItem> InSelectedItem); // #74
+	virtual void OnItemSelected(TSharedPtr<FT4ListViewItem> InSelectedItem, bool bForced); // #74
 	virtual void OnItemDoubleClicked(TSharedPtr<FT4ListViewItem> InSelectedItem); // #81
 
 	virtual void OnItemAdd(); // #134

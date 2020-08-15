@@ -50,8 +50,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FTransform Transform;
 
-	//UPROPERTY(EditAnywhere, Category = ServerOnly)
-	//FT4SpawnWaypointData WaypointData;
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	TArray<FT4SpawnWaypointData> WaypointDatas;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)

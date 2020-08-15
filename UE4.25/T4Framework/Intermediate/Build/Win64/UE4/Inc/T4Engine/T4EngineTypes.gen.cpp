@@ -918,7 +918,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4ActorType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActorType(ET4ActorType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActorType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 3295010414U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 2547710050U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActorType()
 	{
 #if WITH_HOT_RELOAD
@@ -939,6 +939,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "ET4ActorType::Zone", (int64)ET4ActorType::Zone },
 				{ "ET4ActorType::Projectile", (int64)ET4ActorType::Projectile },
 				{ "ET4ActorType::Indicator", (int64)ET4ActorType::Indicator },
+				{ "ET4ActorType::Anchor", (int64)ET4ActorType::Anchor },
 				{ "ET4ActorType::MotionController", (int64)ET4ActorType::MotionController },
 				{ "ET4ActorType::Default", (int64)ET4ActorType::Default },
 				{ "ET4ActorType::Mirror", (int64)ET4ActorType::Mirror },
@@ -946,6 +947,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Anchor.Comment", "// #117\n" },
+				{ "Anchor.Name", "ET4ActorType::Anchor" },
+				{ "Anchor.ToolTip", "#117" },
 				{ "Character.Comment", "// entity base\n" },
 				{ "Character.Name", "ET4ActorType::Character" },
 				{ "Character.ToolTip", "entity base" },
@@ -961,9 +965,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Mirror.Name", "ET4ActorType::Mirror" },
 				{ "Mirror.ToolTip", "#54" },
 				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
-				{ "MotionController.Comment", "// #117\n" },
+				{ "MotionController.Comment", "// #155\n" },
 				{ "MotionController.Name", "ET4ActorType::MotionController" },
-				{ "MotionController.ToolTip", "#117" },
+				{ "MotionController.ToolTip", "#155" },
 				{ "None.Comment", "// #140 : \xeb\x8b\xa4\xeb\xa5\xb8 Layer \xec\x9d\x98 Actor \xeb\xa5\xbc \xeb\xaf\xb8\xeb\x9f\xac\xeb\xa7\x81 \xed\x95\x9c\xeb\x8b\xa4.\n" },
 				{ "None.Hidden", "" },
 				{ "None.Name", "ET4ActorType::None" },

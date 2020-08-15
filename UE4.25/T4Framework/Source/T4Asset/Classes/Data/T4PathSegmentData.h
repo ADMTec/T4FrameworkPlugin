@@ -26,12 +26,12 @@ private:
 };
 
 USTRUCT()
-struct T4ASSET_API FT4PathSegment
+struct T4ASSET_API FT4PathSegmentPoint
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4PathSegment()
+	FT4PathSegmentPoint()
 		: Location(FVector::ZeroVector)
 	{
 	}
@@ -62,7 +62,16 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	TArray<FT4PathSegment> PathSegments;
+	bool bUseRelative;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	TArray<FT4PathSegmentPoint> PathSegmentPoints;
+
+	UPROPERTY(EditAnywhere, Category = Hidden)
+	FVector PivotLocation;
+
+	UPROPERTY(EditAnywhere, Category = Hidden)
+	FRotator PivotRotation;
 
 private:
 #if WITH_EDITOR

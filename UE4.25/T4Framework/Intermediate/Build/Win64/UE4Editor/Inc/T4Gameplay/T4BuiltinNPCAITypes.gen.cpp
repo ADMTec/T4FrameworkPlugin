@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 		return ET4BuiltinAITaskState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4BuiltinAITaskState(ET4BuiltinAITaskState_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4BuiltinAITaskState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskState_Hash() { return 1230135116U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskState_Hash() { return 2903091639U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskState()
 	{
 #if WITH_HOT_RELOAD
@@ -45,32 +45,34 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4BuiltinAITaskState::None", (int64)ET4BuiltinAITaskState::None },
 				{ "ET4BuiltinAITaskState::Dead", (int64)ET4BuiltinAITaskState::Dead },
-				{ "ET4BuiltinAITaskState::Abnormal", (int64)ET4BuiltinAITaskState::Abnormal },
+				{ "ET4BuiltinAITaskState::Entering", (int64)ET4BuiltinAITaskState::Entering },
+				{ "ET4BuiltinAITaskState::AbnormalStatus", (int64)ET4BuiltinAITaskState::AbnormalStatus },
 				{ "ET4BuiltinAITaskState::FindNearestEnemy", (int64)ET4BuiltinAITaskState::FindNearestEnemy },
-				{ "ET4BuiltinAITaskState::Approach", (int64)ET4BuiltinAITaskState::Approach },
-				{ "ET4BuiltinAITaskState::Attack", (int64)ET4BuiltinAITaskState::Attack },
+				{ "ET4BuiltinAITaskState::Approaching", (int64)ET4BuiltinAITaskState::Approaching },
+				{ "ET4BuiltinAITaskState::Attacking", (int64)ET4BuiltinAITaskState::Attacking },
 				{ "ET4BuiltinAITaskState::Roaming", (int64)ET4BuiltinAITaskState::Roaming },
-				{ "ET4BuiltinAITaskState::Jump", (int64)ET4BuiltinAITaskState::Jump },
-				{ "ET4BuiltinAITaskState::Wait", (int64)ET4BuiltinAITaskState::Wait },
+				{ "ET4BuiltinAITaskState::Jumping", (int64)ET4BuiltinAITaskState::Jumping },
+				{ "ET4BuiltinAITaskState::Waiting", (int64)ET4BuiltinAITaskState::Waiting },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Abnormal.Name", "ET4BuiltinAITaskState::Abnormal" },
-				{ "Approach.Name", "ET4BuiltinAITaskState::Approach" },
-				{ "Attack.Name", "ET4BuiltinAITaskState::Attack" },
+				{ "AbnormalStatus.Name", "ET4BuiltinAITaskState::AbnormalStatus" },
+				{ "Approaching.Name", "ET4BuiltinAITaskState::Approaching" },
+				{ "Attacking.Name", "ET4BuiltinAITaskState::Attacking" },
 				{ "Comment", "// #114\n" },
 				{ "Dead.Name", "ET4BuiltinAITaskState::Dead" },
+				{ "Entering.Name", "ET4BuiltinAITaskState::Entering" },
 				{ "FindNearestEnemy.Comment", "// #135\n" },
 				{ "FindNearestEnemy.Name", "ET4BuiltinAITaskState::FindNearestEnemy" },
 				{ "FindNearestEnemy.ToolTip", "#135" },
-				{ "Jump.Name", "ET4BuiltinAITaskState::Jump" },
+				{ "Jumping.Name", "ET4BuiltinAITaskState::Jumping" },
 				{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAITypes.h" },
 				{ "None.Name", "ET4BuiltinAITaskState::None" },
 				{ "Roaming.Name", "ET4BuiltinAITaskState::Roaming" },
 				{ "ToolTip", "#114" },
-				{ "Wait.Comment", "// #140\n" },
-				{ "Wait.Name", "ET4BuiltinAITaskState::Wait" },
-				{ "Wait.ToolTip", "#140" },
+				{ "Waiting.Comment", "// #140\n" },
+				{ "Waiting.Name", "ET4BuiltinAITaskState::Waiting" },
+				{ "Waiting.ToolTip", "#140" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

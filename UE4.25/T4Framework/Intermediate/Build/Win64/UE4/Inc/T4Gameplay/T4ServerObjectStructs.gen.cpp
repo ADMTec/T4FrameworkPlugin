@@ -51,6 +51,11 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 		static void NewProp_bAbnormalStatus_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bAbnormalStatus;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bEntered_MetaData[];
+#endif
+		static void NewProp_bEntered_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bEntered;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDead_MetaData[];
 #endif
 		static void NewProp_bDead_SetBit(void* Obj);
@@ -88,7 +93,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// #155\n" },
 		{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#155" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_SetBit(void* Obj)
@@ -96,6 +103,17 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 		((FT4GameObjectStatus*)Obj)->bAbnormalStatus = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus = { "bAbnormalStatus", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GameObjectStatus), &Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered_SetBit(void* Obj)
+	{
+		((FT4GameObjectStatus*)Obj)->bEntered = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered = { "bEntered", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GameObjectStatus), &Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bDead_MetaData[] = {
 		{ "Category", "Default" },
@@ -139,6 +157,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_Health_Point,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_MaxMoveSpeed,
@@ -173,7 +192,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 1808936781U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 938832809U; }
 class UScriptStruct* FT4GameObjectStat::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -33,31 +33,31 @@ public:
 
 public:
 	// #T4_ADD_TOD_TAG
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FName Name; // #123
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4BuiltInEasing TimeBlendCurve; // #123
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvDirectionalData DirectionalData; // #93
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvDirectionalLightData DirectionalLightData; // #90
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvBPSkySphereData BPSkySphereData; // #97
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvSkyLightData SkyLightData; // #90
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvAtmosphericFogData AtmosphericFogData; // #90
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvExponentialHeightFogData ExponentialHeightFogData; // #90
 
-	UPROPERTY(EditAnywhere, Category = "ClientOnly")
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvPostProcessData PostProcessData; // #98
 
 private:

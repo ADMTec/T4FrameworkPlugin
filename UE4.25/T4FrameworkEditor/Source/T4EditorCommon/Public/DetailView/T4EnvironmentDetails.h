@@ -12,7 +12,7 @@
   * #94
  */
 class IDetailsView;
-class ST4TimeTagListWidget; // #90
+class ST4EnvTimeTagListWidget; // #90
 class FT4EditorViewModelBase;
 class UT4EnvironmentAsset;
 class UT4EditorEnvironmentController;
@@ -44,9 +44,9 @@ private:
 
 	void HandleOnTimeTagDetailsPropertiesChanged(const FPropertyChangedEvent& InChangedEvent); // #95
 
-	void HandleOnTimeTagSelected(const FName InName); // #90
-	void HandleOnTimeTagAdd(); // #90
-	void HandleOnTimeTagRemove(const FName InName); // #90
+	void HandleOnEnvTimeTagSelected(const FName InName); // #90
+	void HandleOnEnvTimeTagAdd(); // #90
+	void HandleOnEnvTimeTagRemove(const FName InName); // #90
 	FReply HandleOnTimeTagCopyClipboardSelected(); // #104
 	FReply HandleOnTimeTagPasteClipboardSelected(); // #104
 	FReply HandleOnTimeTagGetEnvronmentSettings(); // #90 : 현재 에디터 레벨의 정보로 TimeTagData 를 채운다.
@@ -56,6 +56,6 @@ private:
 	FT4EditorViewModelBase* ViewModelBaseRef;
 	TWeakObjectPtr<UT4EnvironmentAsset> EnvironmentAssetPtr;
 
-	TSharedPtr<ST4TimeTagListWidget> TimeTagListWidgetPtr; // #90
-	TSharedPtr<IDetailsView> EnvironmentDetailsPtr; // #90
+	TSharedPtr<ST4EnvTimeTagListWidget> EnvTimeTagListWidgetPtr; // #90
+	TSharedPtr<IDetailsView> EnvTimeTagDetailsPtr; // #90
 };

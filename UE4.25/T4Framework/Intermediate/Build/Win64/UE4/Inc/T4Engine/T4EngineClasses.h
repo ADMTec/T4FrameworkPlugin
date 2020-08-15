@@ -14,7 +14,6 @@
 #include "T4Engine/Classes/Camera/T4CameraModifier.h"
 #include "T4Engine/Classes/Components/T4CapsuleComponent.h"
 #include "T4Engine/Classes/Components/T4DecalComponent.h"
-#include "T4Engine/Classes/Camera/T4EditorCameraActor.h"
 #include "T4Engine/Classes/Components/T4EnvironmentZoneComponent.h"
 #include "T4Engine/Classes/World/T4MapZoneVolume.h"
 #include "T4Engine/Classes/Components/T4MotionControllerComponent.h"

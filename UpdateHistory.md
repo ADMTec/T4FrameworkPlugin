@@ -2,6 +2,9 @@
 ### Efficient Real-Time 3D Development Framework for UE4
 
 > **Update History**
+- v0.9.13
+  - #125 [버그수정] Action Editor, CameraWork 설정을 위한 EditWidgetMode 동작 오류 수정
+  - #125 [버그수정] Entity Editor, Zone Entity 테스트를 위한 EditWidgetMode 동작 오류 수정
 - v0.9.12
   - #155 [버그수정] Entity Editor, Prop Entity 에 Mesh 설정 이후 카메라 회전, 줌 동작 오류 수정 
 - v0.9.11

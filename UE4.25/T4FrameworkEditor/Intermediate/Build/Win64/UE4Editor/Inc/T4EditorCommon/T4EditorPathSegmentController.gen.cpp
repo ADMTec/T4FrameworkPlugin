@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 	T4EDITORCOMMON_API UClass* Z_Construct_UClass_UT4EditorPathSegmentController();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_T4EditorCommon();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	void UT4EditorPathSegmentController::StaticRegisterNativesUT4EditorPathSegmentController()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Location_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Location;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		{ "ToolTip", "#155" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Public/Helper/T4EditorPathSegmentController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorPathSegmentController, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EditorPathSegmentController_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EditorPathSegmentController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4EditorPathSegmentController>::IsAbstract,
 	};
@@ -55,11 +71,11 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UT4EditorPathSegmentController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::PropPointers),
 		0,
 		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::Class_MetaDataParams))
@@ -73,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 2153281570);
+	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 1536326963);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorPathSegmentController>()
 	{
 		return UT4EditorPathSegmentController::StaticClass();

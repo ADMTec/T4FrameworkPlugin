@@ -20,13 +20,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FOREACH_ENUM_ET4BUILTINAITASKSTATE(op) \
 	op(ET4BuiltinAITaskState::None) \
 	op(ET4BuiltinAITaskState::Dead) \
-	op(ET4BuiltinAITaskState::Abnormal) \
+	op(ET4BuiltinAITaskState::Entering) \
+	op(ET4BuiltinAITaskState::AbnormalStatus) \
 	op(ET4BuiltinAITaskState::FindNearestEnemy) \
-	op(ET4BuiltinAITaskState::Approach) \
-	op(ET4BuiltinAITaskState::Attack) \
+	op(ET4BuiltinAITaskState::Approaching) \
+	op(ET4BuiltinAITaskState::Attacking) \
 	op(ET4BuiltinAITaskState::Roaming) \
-	op(ET4BuiltinAITaskState::Jump) \
-	op(ET4BuiltinAITaskState::Wait) 
+	op(ET4BuiltinAITaskState::Jumping) \
+	op(ET4BuiltinAITaskState::Waiting) 
 
 enum class ET4BuiltinAITaskState : uint8;
 template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4BuiltinAITaskState>();

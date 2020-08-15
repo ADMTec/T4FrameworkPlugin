@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4ASSET_T4PathSegmentData_generated_h
 
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Data_T4PathSegmentData_h_31_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4PathSegment_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
-template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PathSegment>();
+template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PathSegmentPoint>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Data_T4PathSegmentData_h_46_SPARSE_DATA
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Data_T4PathSegmentData_h_46_RPC_WRAPPERS

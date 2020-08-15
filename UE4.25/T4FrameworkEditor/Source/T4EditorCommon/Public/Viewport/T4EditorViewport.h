@@ -25,6 +25,7 @@ public:
 	DECLARE_DELEGATE_TwoParams(FT4OnThumbnailCaptured, UObject*, UTexture2D*);
 
 public:
+	// #155 : TODO Button 을 Callback 이 아닌 다른 형식으로 제공할 수 있도록 지원 필요
 	SLATE_BEGIN_ARGS(ST4EditorViewport)
 		: _ViewModel(nullptr)
 		, _OnDragDrop(nullptr) // #140
@@ -34,6 +35,7 @@ public:
 		, _OnSimulationButtonClicked(nullptr) // #86
 		, _OnVerificationButtonClicked(nullptr) // #129 : Entity 에디터에서 데이터 검증
 		, _OnNPCAIButtonClicked(nullptr) // #114
+		, _OnWaypointEditingButtonClicked(nullptr) // #155 
 		, _OnEditModeButtonClicked(nullptr) // #118
 		, _OnUpdateThumbnailClicked(nullptr) // #105
 		, _OnHotKeyJumpToPlay(nullptr) // #99
@@ -48,6 +50,7 @@ public:
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnSimulationButtonClicked) // #86
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnVerificationButtonClicked) // #129 : Entity 에디터에서 데이터 검증
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnNPCAIButtonClicked) // #114
+		SLATE_EVENT(FT4OnOverlayButtonClick, OnWaypointEditingButtonClicked) // #155 
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnEditModeButtonClicked) // #118
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnUpdateThumbnailClicked) // #105
 		SLATE_EVENT(FT4OnOverlayButtonClick, OnHotKeyJumpToPlay) // #99
@@ -119,6 +122,7 @@ protected:
 	FReply HandleOnSimulationButtonClicked(); // #83
 	FReply HandleOnVerificationButtonClicked(); // #129 : Entity 에디터에서 데이터 검증
 	FReply HandleOnNPCAIButtonClicked(); // #114
+	FReply HandleOnWaypointEditingButtonClicked(); // #155
 	FReply HandleOnEditModeButtonClicked(); // #118
 
 	FReply HandleOnUpdataThumbnailClicked(); // #105
@@ -164,6 +168,7 @@ private:
 	FT4OnOverlayButtonClick OnSimulationButtonClicked; // #86
 	FT4OnOverlayButtonClick OnVerificationButtonClicked; // #129 : Entity 에디터에서 데이터 검증
 	FT4OnOverlayButtonClick OnNPCAIButtonClicked; // #114
+	FT4OnOverlayButtonClick OnWaypointEditingButtonClicked; // #155
 	FT4OnOverlayButtonClick OnEditModeButtonClicked; // #118
 	FT4OnOverlayButtonClick OnUpdateThumbnailClicked; // #105
 

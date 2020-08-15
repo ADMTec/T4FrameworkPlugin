@@ -16,8 +16,5 @@ class UT4BTTask_T4Approach : public UBTTaskNode
 	GENERATED_UCLASS_BODY()
 
 public:
-	EBTNodeResult::Type ExecuteTask(
-		UBehaviorTreeComponent& InOwnerComp,
-		uint8* InNodeMemory
-	) override;
+	EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& InOwnerComp, uint8* InNodeMemory) override;
 };

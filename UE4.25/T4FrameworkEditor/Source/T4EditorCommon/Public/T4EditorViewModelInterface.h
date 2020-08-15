@@ -55,9 +55,11 @@ public:
 	virtual IT4Framework* GetFramework() const = 0; // #79
 	virtual IT4WorldSystem* GetWorldSystem() const = 0; // #93
 
-	virtual AActor* GetEditWidgetModeTarget() const = 0; // #94
-	virtual void NotifyEditWidgetTargetChanged(bool bInStart) = 0; // #125
-	virtual void NotifyEditWidgetTargetUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) = 0; // #118 : PRS (rot or loc or scale)
+	virtual AActor* GetManipulatorTarget() const = 0; // #94
+
+	virtual void NotifyManipulatorStartTracking(AActor* InSelectedActor) = 0; // #125
+	virtual void NotifyManipulatorEndTracking() = 0; // #125 : 미반영 복구
+	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) = 0; // #118 : PRS (rot or loc or scale)
 
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) = 0; // #94
 

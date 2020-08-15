@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.13)
+# T4FrameworkPlugin (v0.9.14)
 ### Efficient Real-Time 3D Development Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -8,9 +8,9 @@
 - **설치방법**
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
-  - **v0.9.13**
-    - #125 [버그수정] Action Editor, CameraWork 설정을 위한 EditWidgetMode 동작 오류 수정
-    - #125 [버그수정] Entity Editor, Zone Entity 테스트를 위한 EditWidgetMode 동작 오류 수정
+  - **v0.9.14**
+    - #155 [기능추가] Content Editor, NPC AI Waypoint 설정 및 동작 기능 추가
+	  - Warning : 플러그인 업데이트 시 Content 폴더도 반드시 업데이트 되어야 함
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**
