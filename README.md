@@ -11,6 +11,7 @@
   - **v0.9.14**
     - #155 [기능추가] Content Editor, NPC AI Waypoint 설정 및 동작 기능 추가
 	  - Warning : 플러그인 업데이트 시 Content 폴더도 반드시 업데이트 되어야 함
+	  - DevClip : https://youtu.be/KH7ACsBdJjM
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**
