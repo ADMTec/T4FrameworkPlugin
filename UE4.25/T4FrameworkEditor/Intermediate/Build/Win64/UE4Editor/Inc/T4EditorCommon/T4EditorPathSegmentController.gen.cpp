@@ -46,10 +46,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorPathSegmentController_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #155\n */" },
 		{ "IncludePath", "Helper/T4EditorPathSegmentController.h" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorPathSegmentController.h" },
-		{ "ToolTip", "#155" },
 	};
 #endif
 #if WITH_METADATA
@@ -89,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 1536326963);
+	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 4159203404);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorPathSegmentController>()
 	{
 		return UT4EditorPathSegmentController::StaticClass();

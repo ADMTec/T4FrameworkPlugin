@@ -4,11 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "T4Asset/Classes/Data/T4PathSegmentData.h"
+#include "T4Engine/Public/T4EngineTypes.h"
 #include "T4EditorPathSegmentController.generated.h"
 
 /**
   * #155
  */
+class UT4PathSegmentData;
 UCLASS()
 class T4EDITORCOMMON_API UT4EditorPathSegmentController : public UObject
 {
@@ -16,18 +18,33 @@ class T4EDITORCOMMON_API UT4EditorPathSegmentController : public UObject
 
 public:
 	DECLARE_MULTICAST_DELEGATE(FT4OnItemRefresh);
-	FT4OnItemRefresh& OnItemRefresh() { return OnItemRefreshDelegate; } // #155 : ViewModel 에서 호출
-
 	DECLARE_MULTICAST_DELEGATE(FT4OnItemChanged);
-	FT4OnItemChanged& OnItemChanged() { return OnItemChangedDelegate; } // #155 : PathSegmentDetails 에서 호출
-
 	DECLARE_MULTICAST_DELEGATE(FT4OnSelectionChanged);
+
+	FT4OnItemRefresh& OnItemRefresh() { return OnItemRefreshDelegate; } // #155 : ViewModel 에서 호출
+	FT4OnItemChanged& OnItemChanged() { return OnItemChangedDelegate; } // #155 : PathSegmentDetails 에서 호출
 	FT4OnSelectionChanged& OnSelectionChanged() { return OnSelectionChangedDelegate; }  // #155 : PathSegmentDetails 에서 호출
 
-	int32 GetPathSegmentPointSelected() const { return SegmentIndex; }
-	void SelectPathSegmentPoint(int32 InSegmentIndex) { SegmentIndex = InSegmentIndex; }
+	void Reset();
 
-public:
+	void SetPathSegmentData(UT4PathSegmentData* InPathSegmentData);
+
+	const FT4ActorID& GetOwnerActorID() const { return OwnerActorID; }
+	void SetOwnerActorID(const FT4ActorID& InActorID) { OwnerActorID = InActorID; }
+
+	int32 GetSelected() const { return PathSegmentIndex; }
+	void Select(int32 InPathSegmentIndex) { PathSegmentIndex = InPathSegmentIndex; }
+
+	uint32 NumPoints() const;
+
+	int32 Insert(); // Success != INDEX_NONE
+	int32 AddTail(); // Success != INDEX_NONE
+
+	bool Duplicate(const TArray<int32>& InSourceIndices, TArray<int32>& OutNewIndices);
+
+	int32 Remove(int32 InRemoveIndex); // Success != INDEX_NONE
+	bool Remove(const TArray<int32>& InRemoveIndices);
+
 	bool CopyTo(FT4PathSegmentPoint& OutData);
 	bool CopyFrom(const FT4PathSegmentPoint& InData);
 
@@ -36,7 +53,9 @@ public:
 	FVector Location;
 
 private:
-	int32 SegmentIndex;
+	TWeakObjectPtr<UT4PathSegmentData> PathSegmentDataPtr;
+	FT4ActorID OwnerActorID;
+	int32 PathSegmentIndex;
 	FT4OnItemRefresh OnItemRefreshDelegate;
 	FT4OnItemChanged OnItemChangedDelegate;
 	FT4OnSelectionChanged OnSelectionChangedDelegate;

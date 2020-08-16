@@ -2,6 +2,10 @@
 ### Efficient Real-Time 3D Development Framework for UE4
 
 > **Update History**
+- v0.9.14
+  - #155 [기능추가] Content Editor, NPC AI Waypoint 설정 및 동작 기능 추가
+	- Warning : 플러그인 업데이트 시 Content 폴더도 반드시 업데이트 되어야 함
+	- DevClip : https://youtu.be/KH7ACsBdJjM
 - v0.9.13
   - #125 [버그수정] Action Editor, CameraWork 설정을 위한 EditWidgetMode 동작 오류 수정
   - #125 [버그수정] Entity Editor, Zone Entity 테스트를 위한 EditWidgetMode 동작 오류 수정

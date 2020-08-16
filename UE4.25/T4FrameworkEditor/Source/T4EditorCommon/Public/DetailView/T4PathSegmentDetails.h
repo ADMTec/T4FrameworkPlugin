@@ -43,7 +43,7 @@ private:
 	void HandleOnPathSegmentPointSelected(const FName InName);
 	
 	FReply HandleOnPathSegmentPointInsert();
-	FReply HandleOnPathSegmentPointAddToEnd();
+	FReply HandleOnPathSegmentPointAddTail();
 	FReply HandleOnPathSegmentPointRemove();
 
 	void HandleOnPathSegmentPointDetailsPropertiesChanged(const FPropertyChangedEvent& InChangedEvent);
