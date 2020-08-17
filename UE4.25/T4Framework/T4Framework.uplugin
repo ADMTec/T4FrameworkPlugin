@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "0.9.15",
+	"VersionName": "0.9.16",
 	"FriendlyName": "T4Framework Plugin",
 	"Description": "Efficient Real-Time 3D Development Framework for UE4",
 	"Category": "TECH4 Labs",

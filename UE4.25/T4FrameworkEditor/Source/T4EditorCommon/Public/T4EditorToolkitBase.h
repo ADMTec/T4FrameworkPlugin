@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Viewport/T4EditorViewportDelegates.h"
 
 #include "T4Engine/Public/T4EngineTypes.h"
 
@@ -69,6 +70,9 @@ private:
 	bool HandleOnCanExecuteReplayStop();
 	// ~#68
 
-private:
+protected:
+	FT4EditorViewportDelegates PreviewViewportDelegates; // #155
+	FT4EditorViewportDelegates MainViewportDelegates; // #155
+
 	FDelegateHandle OnMapChangedEventHandle; // #118
 };

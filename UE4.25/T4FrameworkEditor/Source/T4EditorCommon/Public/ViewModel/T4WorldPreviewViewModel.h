@@ -73,8 +73,8 @@ public:
 
 	void ToggleMouseStatus() { bMouseStatus = !bMouseStatus; } // #118
 
-	bool IsNpcAIModeEnabled() const { return bNPCAIDisabled; } // #142
-	void ToggleNPCAIMode(); // #114
+	bool IsNPCAIEnabled() const { return bNPCAIDisabled; } // #142
+	void ToggleNPCAI(); // #114
 
 	void SetMapEntityAsset(UT4MapEntityAsset* InMapEntityAsset) { MapEntityAsset = InMapEntityAsset; } // #104
 

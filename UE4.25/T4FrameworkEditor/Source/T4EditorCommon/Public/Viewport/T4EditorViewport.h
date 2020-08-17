@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4EditorViewportDelegates.h"
 
 #include "SlateFwd.h"
 #include "UObject/GCObject.h"
@@ -19,43 +20,17 @@ class FT4EditorViewportClient;
 class T4EDITORCOMMON_API ST4EditorViewport : public SEditorViewport, public FGCObject
 {
 public:
-	DECLARE_DELEGATE(FT4OnOverlayButtonClick); // #83
-	DECLARE_DELEGATE_OneParam(FT4OnOverlayButtonOneParamCallback, bool); // #132
 	DECLARE_DELEGATE_TwoParams(FT4OnDragDrop, const FVector2D&, TSharedPtr<FDragDropOperation>); // #140
-	DECLARE_DELEGATE_TwoParams(FT4OnThumbnailCaptured, UObject*, UTexture2D*);
 
 public:
-	// #155 : TODO Button 을 Callback 이 아닌 다른 형식으로 제공할 수 있도록 지원 필요
 	SLATE_BEGIN_ARGS(ST4EditorViewport)
 		: _ViewModel(nullptr)
+		, _ViewportDelegates(nullptr)
 		, _OnDragDrop(nullptr) // #140
-		, _OnThumbnailCaptured(nullptr)
-		, _OnRefreshButtonClicked(nullptr) // #86
-		, _OnServerMonitoringButtonClicked(nullptr) // #140
-		, _OnSimulationButtonClicked(nullptr) // #86
-		, _OnVerificationButtonClicked(nullptr) // #129 : Entity 에디터에서 데이터 검증
-		, _OnNPCAIButtonClicked(nullptr) // #114
-		, _OnWaypointEditingButtonClicked(nullptr) // #155 
-		, _OnEditModeButtonClicked(nullptr) // #118
-		, _OnUpdateThumbnailClicked(nullptr) // #105
-		, _OnHotKeyJumpToPlay(nullptr) // #99
-		, _OnHotKeyJumpToEnd(nullptr) // #99
-		, _OnHotKeyTogglePlay(nullptr) // #99
 		{}
 		SLATE_ARGUMENT(IT4EditorViewModel*, ViewModel)
+		SLATE_ARGUMENT(FT4EditorViewportDelegates*, ViewportDelegates)
 		SLATE_EVENT(FT4OnDragDrop, OnDragDrop) // #140
-		SLATE_EVENT(FT4OnThumbnailCaptured, OnThumbnailCaptured)
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnRefreshButtonClicked) // #86
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnServerMonitoringButtonClicked) // #140
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnSimulationButtonClicked) // #86
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnVerificationButtonClicked) // #129 : Entity 에디터에서 데이터 검증
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnNPCAIButtonClicked) // #114
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnWaypointEditingButtonClicked) // #155 
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnEditModeButtonClicked) // #118
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnUpdateThumbnailClicked) // #105
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnHotKeyJumpToPlay) // #99
-		SLATE_EVENT(FT4OnOverlayButtonClick, OnHotKeyJumpToEnd) // #99
-		SLATE_EVENT(FT4OnOverlayButtonOneParamCallback, OnHotKeyTogglePlay) // #99
 	SLATE_END_ARGS()
 
 	void Construct(const FArguments& InArgs);
@@ -117,13 +92,40 @@ protected:
 	void HandleOnSetCamSpeedScalarBoxValue(float NewValue);
 	// ~#83
 
-	FReply HandleOnRefreshButtonClicked(); // #83
-	FReply HandleOnServerMonitoringButtonClicked(); // #140
-	FReply HandleOnSimulationButtonClicked(); // #83
-	FReply HandleOnVerificationButtonClicked(); // #129 : Entity 에디터에서 데이터 검증
-	FReply HandleOnNPCAIButtonClicked(); // #114
-	FReply HandleOnWaypointEditingButtonClicked(); // #155
-	FReply HandleOnEditModeButtonClicked(); // #118
+	FText HandleOnGetExtensionLabel() const; // #155
+	TSharedRef<SWidget> HandleOnFillExtensionMenu(); // #155
+
+	void HandleOnRefreshButtonClicked(); // #83
+
+	EVisibility HandleOnIsServerMonitoringEnabled() const; // #140
+	bool HandleOnIsServerMonitoringDisabled() const; // #140
+	void HandleOnToggleServerMonitoring(); // #140
+	FReply HandleOnToggleServerMonitoringClicked(); // #140
+
+	EVisibility HandleOnIsSimulationEnabled() const; // ##83
+	bool HandleOnIsSimulationDisabled() const; // #83
+	void HandleOnToggleSimulation(); // #83
+	FReply HandleOnToggleSimulationClicked(); // #83
+
+	EVisibility HandleOnIsVerificationEnabled() const; // #129
+	bool HandleOnIsVerificationDisabled() const; // #129
+	void HandleOnToggleVerification(); // #129
+	FReply HandleOnToggleVerificationClicked(); // #129 : Entity 에디터에서 데이터 검증
+	
+	bool HandleOnIsNPCAIEnabled() const; // #114
+	EVisibility HandleOnIsNPCAIDisabled() const; // #114
+	void HandleOnToggleNPCAI(); // #114
+	FReply HandleOnToggleNPCAIClicked(); // #114
+
+	EVisibility HandleOnIsWaypointEditingEnabled() const; // #155
+	bool HandleOnIsWaypointEditingDisabled() const; // #155
+	void HandleOnToggleWaypointEditing(); // #155
+	FReply HandleOnToggleWaypointEditingClicked(); // #155
+	
+	EVisibility HandleOnIsEditModeEnabled() const; // #118
+	bool HandleOnIsEditModeDisabled() const; // #118
+	void HandleOnToggleEditMode(); // #118
+	FReply HandleOnToggleEditModeClicked(); // #118
 
 	FReply HandleOnUpdataThumbnailClicked(); // #105
 
@@ -156,25 +158,11 @@ private:
 	TSharedPtr<FT4EditorViewportClient> ViewportClientPtr;
 
 	IT4EditorViewModel* ViewModelRef;
+	FT4EditorViewportDelegates* ViewportDelegatesRef; // #155
 
 	bool bAlwaysTickViewport; // #76
 
 	FT4OnDragDrop OnDragDrop; // #140
-
-	FT4OnThumbnailCaptured OnThumbnailCaptured;
-
-	FT4OnOverlayButtonClick OnRefreshButtonClicked; // #86
-	FT4OnOverlayButtonClick OnServerMonitoringButtonClicked; // #140
-	FT4OnOverlayButtonClick OnSimulationButtonClicked; // #86
-	FT4OnOverlayButtonClick OnVerificationButtonClicked; // #129 : Entity 에디터에서 데이터 검증
-	FT4OnOverlayButtonClick OnNPCAIButtonClicked; // #114
-	FT4OnOverlayButtonClick OnWaypointEditingButtonClicked; // #155
-	FT4OnOverlayButtonClick OnEditModeButtonClicked; // #118
-	FT4OnOverlayButtonClick OnUpdateThumbnailClicked; // #105
-
-	FT4OnOverlayButtonClick OnHotKeyJumpToPlay; // #99
-	FT4OnOverlayButtonClick OnHotKeyJumpToEnd; // #99
-	FT4OnOverlayButtonOneParamCallback OnHotKeyTogglePlay; // #99, #132
 
 	// #83
 	/** Reference to the camera slider used to display current camera speed */
