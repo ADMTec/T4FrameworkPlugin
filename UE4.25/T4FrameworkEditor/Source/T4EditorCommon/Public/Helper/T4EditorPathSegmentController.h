@@ -27,10 +27,7 @@ public:
 
 	void Reset();
 
-	void SetPathSegmentData(UT4PathSegmentData* InPathSegmentData);
-
-	const FT4ActorID& GetOwnerActorID() const { return OwnerActorID; }
-	void SetOwnerActorID(const FT4ActorID& InActorID) { OwnerActorID = InActorID; }
+	void SetData(UT4PathSegmentData* InPathSegmentData);
 
 	int32 GetSelected() const { return PathSegmentIndex; }
 	void Select(int32 InPathSegmentIndex) { PathSegmentIndex = InPathSegmentIndex; }
@@ -54,7 +51,6 @@ public:
 
 private:
 	TWeakObjectPtr<UT4PathSegmentData> PathSegmentDataPtr;
-	FT4ActorID OwnerActorID;
 	int32 PathSegmentIndex;
 	FT4OnItemRefresh OnItemRefreshDelegate;
 	FT4OnItemChanged OnItemChangedDelegate;

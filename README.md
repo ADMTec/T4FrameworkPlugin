@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.17)
+# T4FrameworkPlugin (v0.9.18)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -8,9 +8,11 @@
 - **설치방법**
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
-  - **v0.9.17**
-    - #156 [기능개선] Content Editor, Waypoint 의 수가 많아질 경우 편집이 느려지던 문제 개선
-    - #155 [버그수정] Content Editor, 에디터 뷰포트에서 SpawnObject 와 Waypoint 선택이 안되던 문제 수정
+  - **v0.9.18**
+    - #156 [기능추가] Content Editor, SpawnObject 의 Waypoint 를 사용한 NPC AI Patrol 기능 추가
+    - #156 [기능개선] Content Editor, Waypoint Data 복제 시 소스 위치 그대로 설정되도록 수정
+    - #156 [버그수정] Content Editor, Waypoint Data Add 가 정상적으로 동작하지 않던 문제 수정
+    - #156 [버그수정] Content Editor, Waypoint Data 편집중 간헐적으로 에디터가 행이되는 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

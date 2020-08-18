@@ -46,6 +46,11 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUsePatrol_MetaData[];
+#endif
+		static void NewProp_bUsePatrol_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUsePatrol;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bAbnormalStatus_MetaData[];
 #endif
 		static void NewProp_bAbnormalStatus_SetBit(void* Obj);
@@ -90,6 +95,19 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GameObjectStatus>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol_MetaData[] = {
+		{ "Category", "Default" },
+		{ "Comment", "// #135\n" },
+		{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#135" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol_SetBit(void* Obj)
+	{
+		((FT4GameObjectStatus*)Obj)->bUsePatrol = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol = { "bUsePatrol", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GameObjectStatus), &Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus_MetaData[] = {
 		{ "Category", "Default" },
@@ -156,6 +174,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameObjectStatus, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_AnimSetName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bUsePatrol,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bAbnormalStatus,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bEntered,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics::NewProp_bDead,
@@ -192,7 +211,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GameObjectStatus
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 938832809U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameObjectStatus_Hash() { return 2332756275U; }
 class UScriptStruct* FT4GameObjectStat::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

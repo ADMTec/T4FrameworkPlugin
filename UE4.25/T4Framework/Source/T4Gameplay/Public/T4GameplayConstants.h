@@ -12,3 +12,4 @@ static const TCHAR* T4Const_DefaultQuickReplayAssetName = TEXT("Transient"); // 
 static const TCHAR* T4Const_DefaultQuickReplayFolderName = TEXT("Client"); // #150
 
 static const FName T4Game_EnterWaypointName = TEXT("Enter"); // #155
+static const FName T4Game_PatrolWaypointName = TEXT("Patrol"); // #156

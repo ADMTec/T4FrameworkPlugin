@@ -2,6 +2,9 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.17
+  - #156 [기능개선] Content Editor, Waypoint 의 수가 많아질 경우 편집이 느려지던 문제 개선
+  - #155 [버그수정] Content Editor, 에디터 뷰포트에서 SpawnObject 와 Waypoint 선택이 안되던 문제 수정
 - v0.9.16
   - #155 [기능개선] Editor Viewport 의 버튼형 메뉴 정리 및 알림 메세지 처리 개선
 - v0.9.15
