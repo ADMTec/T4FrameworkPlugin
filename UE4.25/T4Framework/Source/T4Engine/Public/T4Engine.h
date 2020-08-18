@@ -88,17 +88,9 @@ public:
 	virtual bool Stop(const FName& InAnimMontageName, float InBlendOutTimeSec) = 0; // #38
 	virtual bool Stop(FT4AnimInstanceID InPlayInstanceID, float InBlendOutTimeSec) = 0; // #47
 
-	virtual FT4AnimSequentialID AllocSequentialParams(
-		ET4AnimationLayer InAnimationLayer, 
-		uint32 InNumAlloc,
-		TArray<FT4AnimParam*>& OutParams
-	) = 0; // #131
+	virtual FT4AnimSequentialID AllocSequentialParams(ET4AnimationLayer InAnimationLayer, uint32 InNumAlloc, TArray<FT4AnimParam*>& OutParams) = 0; // #131
 
-	virtual bool PlaySequential(
-		ET4AnimationLayer InAnimationLayer, 
-		FT4AnimSequentialID InAnimSequentialID,
-		float InOffsetTimeSec // #132
-	) = 0; // #131
+	virtual bool PlaySequential(ET4AnimationLayer InAnimationLayer, FT4AnimSequentialID InAnimSequentialID, float InOffsetTimeSec) = 0; // #131, #132
 	virtual void StopSequential(ET4AnimationLayer InAnimationLayer, FT4AnimSequentialID InAnimSequentialID) = 0; // #131
 	virtual void StopAllSequential(ET4AnimationLayer InAnimationLayer) = 0; // #135 : Die, Knockback 등의 CC 발동시 동작중인 스킬 애니메이션 강제 정지 처리
 
@@ -256,6 +248,11 @@ public:
 #if !UE_BUILD_SHIPPING
 	virtual void SetDebugPause(bool bInPause) = 0; // #102
 	virtual void SetDebugColor(const FColor& InColor) = 0; // #155
+
+	// #156 : 디버깅용 엑터에서만 사용, 게임은 무조건 리플레이를 위해 Teleport Action 등을 사용해야 함!
+	virtual void SetDebugActorLocation(const FVector& InLocation) = 0;
+	virtual void SetDebugActorRotation(const FRotator& InRotation) = 0;
+	virtual void SetDebugActorScale(const FVector& InScale) = 0;
 #endif
 
 #if WITH_EDITOR
@@ -578,11 +575,7 @@ public:
 	virtual bool IsMirroringEnabled() const = 0; // Editor && Server only
 	virtual void SetEnableMirroring(bool bInEnable, ET4LayerType InTargetLayer) = 0; // #140 : 서버 Actor 정보를 TargetLayer 로 미러링 한다. (MirrorActor)
 
-	virtual IT4WorldActor* CreateAnchorActor(
-		const FT4ActorID& InActorID, 
-		const FVector& InLocation, 
-		const FSoftObjectPath& InStaticMeshPath
-	) = 0; // #155 : Only Client
+	virtual IT4WorldActor* CreateAnchorActor(const FT4ActorID& InActorID, const FVector& InLocation, const FSoftObjectPath& InStaticMeshPath) = 0; // #155 : Only Client
 	virtual void DestroyAnchorActor(const FT4ActorID& InActorID) = 0; // #155 : Only Client
 	virtual void DestroyAnchorActors() = 0; // #155 : Only Client
 

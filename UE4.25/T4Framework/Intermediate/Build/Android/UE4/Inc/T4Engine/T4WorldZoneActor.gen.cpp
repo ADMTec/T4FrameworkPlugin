@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldZoneActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldZoneActor, 1948001034);
+	IMPLEMENT_CLASS(AT4WorldZoneActor, 1142259671);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldZoneActor>()
 	{
 		return AT4WorldZoneActor::StaticClass();

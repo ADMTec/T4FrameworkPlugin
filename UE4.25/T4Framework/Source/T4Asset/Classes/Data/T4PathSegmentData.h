@@ -62,16 +62,7 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bUseRelative;
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	TArray<FT4PathSegmentPoint> PathSegmentPoints;
-
-	UPROPERTY(EditAnywhere, Category = Hidden)
-	FVector PivotLocation;
-
-	UPROPERTY(EditAnywhere, Category = Hidden)
-	FRotator PivotRotation;
 
 private:
 #if WITH_EDITOR

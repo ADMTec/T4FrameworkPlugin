@@ -20,7 +20,6 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentData() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentData_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentData();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 // End Cross Module References
 class UScriptStruct* FT4PathSegmentPoint::StaticStruct()
 {
@@ -119,23 +118,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PivotRotation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PivotRotation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PivotLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PivotLocation;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PathSegmentPoints_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PathSegmentPoints;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PathSegmentPoints_Inner;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseRelative_MetaData[];
-#endif
-		static void NewProp_bUseRelative_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseRelative;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -153,20 +139,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotRotation_MetaData[] = {
-		{ "Category", "Hidden" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotRotation = { "PivotRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4PathSegmentData, PivotRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotRotation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotLocation_MetaData[] = {
-		{ "Category", "Hidden" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotLocation = { "PivotLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4PathSegmentData, PivotLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotLocation_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
@@ -174,23 +146,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4PathSegmentData, PathSegmentPoints), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_Inner = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4PathSegmentPoint, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
-	};
-#endif
-	void Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative_SetBit(void* Obj)
-	{
-		((UT4PathSegmentData*)Obj)->bUseRelative = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative = { "bUseRelative", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4PathSegmentData), &Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4PathSegmentData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotRotation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PivotLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_bUseRelative,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4PathSegmentData_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4PathSegmentData>::IsAbstract,
@@ -219,7 +177,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PathSegmentData, 390392581);
+	IMPLEMENT_CLASS(UT4PathSegmentData, 4063750177);
 	template<> T4ASSET_API UClass* StaticClass<UT4PathSegmentData>()
 	{
 		return UT4PathSegmentData::StaticClass();

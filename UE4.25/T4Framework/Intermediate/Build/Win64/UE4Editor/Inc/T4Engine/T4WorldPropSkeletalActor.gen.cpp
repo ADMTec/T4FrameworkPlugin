@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropSkeletalActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 3428592491);
+	IMPLEMENT_CLASS(AT4WorldPropSkeletalActor, 397925356);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPropSkeletalActor>()
 	{
 		return AT4WorldPropSkeletalActor::StaticClass();

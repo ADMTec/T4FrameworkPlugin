@@ -35,9 +35,6 @@ public:
 private:
 	TSharedRef<IDetailCustomization> MakePathSegmentPointDetailInstance();
 
-	ECheckBoxState HandleIsRelativeUsed() const;
-	void HandleOnUseRelativeChanged(ECheckBoxState InCheckState);
-
 	void HandleOnItemRefresh(); // #155 : ViewModel 에서 호출
 
 	void HandleOnPathSegmentPointSelected(const FName InName);

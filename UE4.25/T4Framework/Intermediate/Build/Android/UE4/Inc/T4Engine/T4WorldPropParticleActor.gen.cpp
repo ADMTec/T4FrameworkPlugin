@@ -196,7 +196,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldPropParticleActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldPropParticleActor, 2538036978);
+	IMPLEMENT_CLASS(AT4WorldPropParticleActor, 1114561147);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldPropParticleActor>()
 	{
 		return AT4WorldPropParticleActor::StaticClass();

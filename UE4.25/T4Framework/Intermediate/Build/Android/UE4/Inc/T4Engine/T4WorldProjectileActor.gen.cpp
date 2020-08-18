@@ -105,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldProjectileActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldProjectileActor, 578375329);
+	IMPLEMENT_CLASS(AT4WorldProjectileActor, 2651415107);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldProjectileActor>()
 	{
 		return AT4WorldProjectileActor::StaticClass();

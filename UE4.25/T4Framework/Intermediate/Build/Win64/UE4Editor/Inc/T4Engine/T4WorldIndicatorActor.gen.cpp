@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldIndicatorActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldIndicatorActor, 2178199227);
+	IMPLEMENT_CLASS(AT4WorldIndicatorActor, 4055878765);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldIndicatorActor>()
 	{
 		return AT4WorldIndicatorActor::StaticClass();
