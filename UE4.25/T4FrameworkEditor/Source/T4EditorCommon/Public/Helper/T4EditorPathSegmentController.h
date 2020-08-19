@@ -45,6 +45,9 @@ public:
 	bool CopyTo(FT4PathSegmentPoint& OutData);
 	bool CopyFrom(const FT4PathSegmentPoint& InData);
 
+private:
+	void GeneratePathSegmentPoint(int32 InSourceIndex, FT4PathSegmentPoint& OutNewPoint);
+
 public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FVector Location;
