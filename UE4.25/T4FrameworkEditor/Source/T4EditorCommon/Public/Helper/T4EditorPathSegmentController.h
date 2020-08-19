@@ -20,10 +20,12 @@ public:
 	DECLARE_MULTICAST_DELEGATE(FT4OnItemRefresh);
 	DECLARE_MULTICAST_DELEGATE(FT4OnItemChanged);
 	DECLARE_MULTICAST_DELEGATE(FT4OnSelectionChanged);
+	DECLARE_MULTICAST_DELEGATE(FT4OnFocusChanged);
 
 	FT4OnItemRefresh& OnItemRefresh() { return OnItemRefreshDelegate; } // #155 : ViewModel 에서 호출
 	FT4OnItemChanged& OnItemChanged() { return OnItemChangedDelegate; } // #155 : PathSegmentDetails 에서 호출
 	FT4OnSelectionChanged& OnSelectionChanged() { return OnSelectionChangedDelegate; }  // #155 : PathSegmentDetails 에서 호출
+	FT4OnFocusChanged& OnFocusChanged() { return OnFocusChangedDelegate; }  // #155 : PathSegmentDetails 에서 호출
 
 	void Reset();
 
@@ -58,4 +60,5 @@ private:
 	FT4OnItemRefresh OnItemRefreshDelegate;
 	FT4OnItemChanged OnItemChangedDelegate;
 	FT4OnSelectionChanged OnSelectionChangedDelegate;
+	FT4OnFocusChanged OnFocusChangedDelegate;
 };

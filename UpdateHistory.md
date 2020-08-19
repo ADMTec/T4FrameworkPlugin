@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.19
+  - #156 [기능개선] Content Editor, Waypoint Insert/AddTail/Duplicate 시 NewPoint 생성 알고리즘 개선
+  - #156 [버그수정] Content Editor, Waypoint Data 복제 시 Manipulator 가 변경되던 문제 수정
+  - #156 [버그수정] Content Editor, SpawnObject 편집 (Waypoint 포함) 후 Undo (CTRL+Z) 동작 오류 수정
 - v0.9.18
   - #156 [기능추가] Content Editor, SpawnObject 의 Waypoint 를 사용한 NPC AI Patrol 기능 추가
   - #156 [기능개선] Content Editor, Waypoint Data 복제 시 소스 위치 그대로 설정되도록 수정

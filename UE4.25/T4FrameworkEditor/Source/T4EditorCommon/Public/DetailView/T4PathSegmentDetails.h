@@ -38,6 +38,7 @@ private:
 	void HandleOnItemRefresh(); // #155 : ViewModel 에서 호출
 
 	void HandleOnPathSegmentPointSelected(const FName InName);
+	void HandleOnPathSegmentPointDoubleClicked(const FName InName); // 카메라 At 이동
 	
 	FReply HandleOnPathSegmentPointInsert();
 	FReply HandleOnPathSegmentPointAddTail();
