@@ -9,7 +9,7 @@
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
   - **v0.9.21**
-    - #156 [버그수정] Content Editor, 신구 SpawnObject 스폰 생성 후 편집이 불가능하던 문제 수정
+    - #156 [버그수정] Content Editor, 신규 SpawnObject 스폰 생성 후 편집이 불가능하던 문제 수정
     - #156 [버그수정] Content Editor, SpawnObject 리스트의 Item 선택이 정상적으로 반영되지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
