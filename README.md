@@ -9,6 +9,7 @@
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
   - **v0.9.20**
+    - #156 [버그수정] Content Editor, GameDBBrowser 오픈 시 발생하던 크래시 수정 (HOTFIX)
     - #156 [기능개선] Content Editor, Waypoint 의 Item 더블클릭 시 카메라 이동 처리 추가
     - #156 [기능개선] Content Editor, Waypoint 디버깅 라인 표시 강화
   - 이전 업데이트
