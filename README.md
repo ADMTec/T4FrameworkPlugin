@@ -30,6 +30,12 @@
       - https://youtu.be/W3XC4lnz6Og
     - #3 : GameDB 소개
       - https://youtu.be/JzJgi4McRWQ
+    - #4 : Spawn 기본
+      - https://youtu.be/sonSG9Qsaws
+    - #5 : Spawn 오브젝트
+      - https://youtu.be/M1OQyaR1Ors
+    - #6 : Spawn Waypoints
+      - https://youtu.be/cbDLHxQRolI
 - **참고**
   - 정식 사용을 위해서는 Subscription license 가 필요합니다.
   - 프로젝트에 필요한 신규 기능 구현을 대행하고 있습니다.
