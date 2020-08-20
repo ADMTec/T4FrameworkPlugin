@@ -25,6 +25,16 @@ private:
 	FT4PathSegmentDataCustomVersion() {}
 };
 
+UENUM(BlueprintType)
+enum class ET4PathMovementType : uint8 // #156
+{
+	Run,
+	Walk,
+	Jump,
+
+	Idle,
+};
+
 USTRUCT()
 struct T4ASSET_API FT4PathSegmentPoint
 {
@@ -38,6 +48,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FVector Location;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	ET4PathMovementType MovementType; // #156
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

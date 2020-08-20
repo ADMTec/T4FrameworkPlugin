@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.20
+  - #156 [버그수정] Content Editor, GameDBBrowser 오픈 시 발생하던 크래시 수정 (HOTFIX)
+  - #156 [기능개선] Content Editor, Waypoint 의 Item 더블클릭 시 카메라 이동 처리 추가
+  - #156 [기능개선] Content Editor, Waypoint 디버깅 라인 표시 강화
 - v0.9.19
   - #156 [기능개선] Content Editor, Waypoint Insert/AddTail/Duplicate 시 NewPoint 생성 알고리즘 개선
   - #156 [버그수정] Content Editor, Waypoint Data 복제 시 Manipulator 가 변경되던 문제 수정
