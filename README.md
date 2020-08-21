@@ -3,7 +3,7 @@
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
 
-> **!!!** M7 마일스톤 기간(~10/02)에는 데일리로 업데이트가 발생할 수 있습니다. **!!!**
+> **!!!** M7 마일스톤 기간(~10/08)에는 데일리로 업데이트가 발생할 수 있습니다. **!!!**
 
 - **지원정보**
   - Supported Engine Versions
