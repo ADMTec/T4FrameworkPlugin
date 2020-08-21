@@ -126,6 +126,13 @@ public:
 #if WITH_EDITOR
 	virtual bool IsSpawnable() override // #131
 	{
+		if (ET4EntityEditorViewportItemSpawn::EquipOrExchange == EditorTestItemData.ItemSpawnType) // #158
+		{
+			if (!EditorTestItemData.ParentEntityAsset.IsNull())
+			{
+				return true;
+			}
+		}
 		if (ET4EntityMeshType::None == DropMeshData.MeshType)
 		{
 			return false;

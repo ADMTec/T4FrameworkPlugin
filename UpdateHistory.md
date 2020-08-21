@@ -2,6 +2,12 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.22
+  - #156 [기능개선] T4FrameworkEditor, Simulation 옵션 사용시에만 시간이 흘러가도록 처리
+  - #156 [기능개선] T4FrameworkEditor 뷰포트 내 출력 메세지 포멧 통일 및 위치 정리
+  - #156 [기능개선] Content Editor, WorldTimeTag 의 Default 값을 "Default Settings" 으로 변경
+  - #156 [버그수정] Content Editor, SpawnLayer 에서 SpawnAsset 설정 후 SpawnDetails 업데이트 오류 수정
+  - #156 [버그수정] Content Editor, Enable EditMode 에서 SpawnObject 스폰시 Manipulator 미출력 문제 수정
 - v0.9.21
   - #156 [버그수정] Content Editor, 신규 SpawnObject 스폰 생성 후 편집이 불가능하던 문제 수정
   - #156 [버그수정] Content Editor, SpawnObject 리스트의 Item 선택이 정상적으로 반영되지 않던 문제 수정
@@ -15,6 +21,8 @@
   - #156 [버그수정] Content Editor, SpawnObject 편집 (Waypoint 포함) 후 Undo (CTRL+Z) 동작 오류 수정
 - v0.9.18
   - #156 [기능추가] Content Editor, SpawnObject 의 Waypoint 를 사용한 NPC AI Patrol 기능 추가
+	- Warning : 플러그인 업데이트 시 Content 폴더도 반드시 업데이트 되어야 함
+	- DevClip : https://youtu.be/koHMunY8wkU
   - #156 [기능개선] Content Editor, Waypoint Data 복제 시 소스 위치 그대로 설정되도록 수정
   - #156 [버그수정] Content Editor, Waypoint Data Add 가 정상적으로 동작하지 않던 문제 수정
   - #156 [버그수정] Content Editor, Waypoint Data 편집중 간헐적으로 에디터가 행이되는 문제 수정
