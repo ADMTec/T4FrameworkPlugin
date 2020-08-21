@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.21)
+# T4FrameworkPlugin (v0.9.22)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -8,9 +8,12 @@
 - **설치방법**
   - [플러그인 설치와 사용 (Install and Run)](https://tech4labs.com/Tutorials/1_InstallAndRun/)
 - **업데이트**
-  - **v0.9.21**
-    - #156 [버그수정] Content Editor, 신규 SpawnObject 스폰 생성 후 편집이 불가능하던 문제 수정
-    - #156 [버그수정] Content Editor, SpawnObject 리스트의 Item 선택이 정상적으로 반영되지 않던 문제 수정
+  - **v0.9.22**
+    - #156 [기능개선] T4FrameworkEditor, Simulation 옵션 사용시에만 시간이 흘러가도록 처리
+    - #156 [기능개선] T4FrameworkEditor 뷰포트 내 출력 메세지 포멧 통일 및 위치 정리
+    - #156 [기능개선] Content Editor, WorldTimeTag 의 Default 값을 "Default Settings" 으로 변경
+    - #156 [버그수정] Content Editor, SpawnLayer 에서 SpawnAsset 설정 후 SpawnDetails 업데이트 오류 수정
+    - #156 [버그수정] Content Editor, Enable EditMode 에서 SpawnObject 스폰시 Manipulator 미출력 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

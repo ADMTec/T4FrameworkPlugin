@@ -284,7 +284,7 @@ protected:
 	virtual void StartPlay() {} // #86
 	virtual void RestartPlay() {} // #94 : 월드 이동후 호출
 
-	virtual void DrawHUD(FViewport* InViewport, FCanvas* InCanvas, FT4HUDDrawInfo* InOutDrawInfo) {} // #59, #83
+	virtual void DrawHUD(FViewport* InViewport, FCanvas* InCanvas, FT4HUDDrawInfo* InOutDrawInfo); // #59, #83
 
 	virtual void PlayerReload() {} // #130
 	virtual void PlayerRespawn() {} // #136
@@ -317,6 +317,8 @@ protected:
 	bool IsPreviewSpawnable(ET4EntityType InType) const { return (ET4EntityType::Map != InType && ET4EntityType::Zone != InType) ? true : false; } // #94
 	bool IsSpawnable(ET4EntityType InType) const { return (ET4EntityType::Map != InType) ? true : false; } // #94
 	bool IsControllable(ET4EntityType InType) const { return (ET4EntityType::Map != InType && ET4EntityType::Zone != InType) ? true : false; } // #94
+
+	void SetSimulationMode(bool bInSimulating); // #156
 
 	void SavePlayerSettingsInfo(); // #87
 	void RestorePlayerSettingsInfo(); // #87

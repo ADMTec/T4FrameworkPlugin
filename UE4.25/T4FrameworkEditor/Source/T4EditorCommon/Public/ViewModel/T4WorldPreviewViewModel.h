@@ -105,8 +105,6 @@ protected:
 
 	FString GetReplaySystemAssetName() const override { return ReplaySystemAssetName; } // #68, #104
 	FString GetReplayFolderName() const override { return ReplayFolderName; } // #68, #104
-	
-	void SetSimulationMode(bool bInSimulating); // #86
 
 private:
 	void UpdateManualLevelStreaming(UWorld* InPersistentWorld, float InDeltaTime); // #86

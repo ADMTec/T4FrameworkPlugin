@@ -2,6 +2,9 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.21
+  - #156 [버그수정] Content Editor, 신규 SpawnObject 스폰 생성 후 편집이 불가능하던 문제 수정
+  - #156 [버그수정] Content Editor, SpawnObject 리스트의 Item 선택이 정상적으로 반영되지 않던 문제 수정
 - v0.9.20
   - #156 [버그수정] Content Editor, GameDBBrowser 오픈 시 발생하던 크래시 수정 (HOTFIX)
   - #156 [기능개선] Content Editor, Waypoint 의 Item 더블클릭 시 카메라 이동 처리 추가
