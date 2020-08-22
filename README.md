@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.24)
+# T4FrameworkPlugin (v0.9.25)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,11 +18,10 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.24**
-    - #158 [버그수정] Entity Editor, Costume Entity 편집 시 Target Part Name 지정 프로퍼티가 UI에 노출되지 않던 문제 수정
-	- #158 [버그수정] Entity Editor, Costume Entity 편집에서 Override Material 리로드 시 Material 설정이 적용되지 않던 문제 수정
-    - #158 [버그수정] Entity Editor, Costume Entity 에서 Get Material Slots 를 클릭할 경우 발생하던 크래시 수정
-    - #158 [버그수정] Entity Editor, Costume Entity 편집 시 Skeleton Asset 설정 후 Skeletal Mesh Asset 설정이 불가능하던 문제 수정
+  - **v0.9.25**
+    - #158 [기능개선] 리플레이 플레이 중 에디터 툴바의 "Reload, Respawn, Despawn" 등의 실행 제어 처리 추가
+    - #158 [기능개선] Entity Editor, Weapon/Costume Details 메뉴 사용성 개선
+    - #158 [버그수정] Entity Editor 에서 리플레이 녹화 후 재생 시 이동이 동작하지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

@@ -33,14 +33,18 @@ public:
 	FT4ObjectID SenderID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bMoveStop; // #158 : 좌클릭 지속 이동 Reset 시 true 가 처리됨 (현재는 리플레이에서 PC 의 MoveStop 처리를 위해 사용)
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FVector MoveToLocation; // #52 : Normal + (MoveSpeed * DefaultNetworkLatencySec) / 레이턴시 감안 거리
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	float HeadYawAngle; // #40 : 필요하다면 3D 로 확장. 이동 패킷은 량이 많음을 고려.
-
+		
 public:
 	FT4GamePacketCS_Move()
 		: FT4GamePacketCS_Base(ET4GamePacketCS::Move)
+		, bMoveStop(false) // #158 : 좌클릭 지속 이동 Reset 시 true 가 처리됨 (현재는 리플레이에서 PC 의 MoveStop 처리를 위해 사용)
 		, MoveToLocation(FVector::ZeroVector)
 		, HeadYawAngle(TNumericLimits<float>::Max()) // #40
 	{

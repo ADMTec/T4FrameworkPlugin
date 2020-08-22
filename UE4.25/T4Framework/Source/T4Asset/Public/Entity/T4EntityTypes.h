@@ -102,7 +102,7 @@ UENUM()
 enum class ET4EntityEditorViewportItemSpawn : uint8 // #107
 {
 	DropMesh,
-	EquipOrExchange,
+	EquipOrExchange		UMETA(DisplayName = "ItemMesh"),
 
 	None UMETA(Hidden)
 };

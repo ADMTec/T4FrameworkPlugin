@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityEditorViewportItemSpawn_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityEditorViewportItemSpawn(ET4EntityEditorViewportItemSpawn_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityEditorViewportItemSpawn"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn_Hash() { return 1607705665U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn_Hash() { return 4149222448U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn()
 	{
 #if WITH_HOT_RELOAD
@@ -58,6 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "// #107\n" },
 				{ "DropMesh.Name", "ET4EntityEditorViewportItemSpawn::DropMesh" },
+				{ "EquipOrExchange.DisplayName", "ItemMesh" },
 				{ "EquipOrExchange.Name", "ET4EntityEditorViewportItemSpawn::EquipOrExchange" },
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
 				{ "None.Hidden", "" },

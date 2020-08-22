@@ -442,6 +442,11 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Move
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MoveToLocation;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMoveStop_MetaData[];
+#endif
+		static void NewProp_bMoveStop_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMoveStop;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SenderID;
@@ -471,10 +476,23 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Move
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_MoveToLocation_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// #158 : \xec\xa2\x8c\xed\x81\xb4\xeb\xa6\xad \xec\xa7\x80\xec\x86\x8d \xec\x9d\xb4\xeb\x8f\x99 Reset \xec\x8b\x9c true \xea\xb0\x80 \xec\xb2\x98\xeb\xa6\xac\xeb\x90\xa8 (\xed\x98\x84\xec\x9e\xac\xeb\x8a\x94 \xeb\xa6\xac\xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4\xec\x97\x90\xec\x84\x9c PC \xec\x9d\x98 MoveStop \xec\xb2\x98\xeb\xa6\xac\xeb\xa5\xbc \xec\x9c\x84\xed\x95\xb4 \xec\x82\xac\xec\x9a\xa9)\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Move.h" },
+		{ "ToolTip", "#158 : \xec\xa2\x8c\xed\x81\xb4\xeb\xa6\xad \xec\xa7\x80\xec\x86\x8d \xec\x9d\xb4\xeb\x8f\x99 Reset \xec\x8b\x9c true \xea\xb0\x80 \xec\xb2\x98\xeb\xa6\xac\xeb\x90\xa8 (\xed\x98\x84\xec\x9e\xac\xeb\x8a\x94 \xeb\xa6\xac\xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4\xec\x97\x90\xec\x84\x9c PC \xec\x9d\x98 MoveStop \xec\xb2\x98\xeb\xa6\xac\xeb\xa5\xbc \xec\x9c\x84\xed\x95\xb4 \xec\x82\xac\xec\x9a\xa9)" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_MoveToLocation = { "MoveToLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_Move, MoveToLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_MoveToLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_MoveToLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Move.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop_SetBit(void* Obj)
+	{
+		((FT4GamePacketCS_Move*)Obj)->bMoveStop = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop = { "bMoveStop", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketCS_Move), &Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_SenderID_MetaData[] = {
 		{ "Category", "Default" },
@@ -485,6 +503,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Move
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_HeadYawAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_MoveToLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_bMoveStop,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::NewProp_SenderID,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Statics::ReturnStructParams = {
@@ -515,7 +534,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_Move
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Hash() { return 3377545669U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_Move_Hash() { return 3155297731U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)
