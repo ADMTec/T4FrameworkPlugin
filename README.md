@@ -10,7 +10,7 @@
     - 4.25 (Release Version : 4.25.3)
   - Windows, Android (Oculus Quest)
 - **라이선스**
-  - 베타 테스트 버전(v0.9.xx)을 배포중이며 무료로 사용하실 수 있습니다. (10/02일 까지...)
+  - 베타 테스트 버전(v0.9.xx)을 배포중이며 무료로 사용하실 수 있습니다. (10/08일 까지...)
   - 정식 버전 v1.0 의 경우는 Subscription license 가 필요합니다.
 - **실행준비**
   - Download : [GitHub/Tech4Labs/T4FrameworkPlugin](https://github.com/Tech4Labs/T4FrameworkPlugin)
