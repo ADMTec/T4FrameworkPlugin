@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.23)
+# T4FrameworkPlugin (v0.9.24)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,10 +18,11 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.23**
-    - #158 [기능개선] Entity Editor, Item Entity Details 의 Testing 을 메뉴 상단으로 올리고 Test Spawn 으로 메뉴 이름 변경
-    - #158 [버그수정] Entity Editor, Weapon Entity 설정에서 Mesh 와 DropMesh 설정 변경 후 카메라가 프리카메라로 고정되던 문제 수정
-    - #158 [버그수정] Entity Edtior, Weapon Entity 의 Weapon Mesh 설정 후 TestSpawn 의 ParentEntityAsset 설정에도 캐릭터가 스폰되지 않던 문제 수정
+  - **v0.9.24**
+    - #158 [버그수정] Entity Editor, Costume Entity 편집 시 Target Part Name 지정 프로퍼티가 UI에 노출되지 않던 문제 수정
+	- #158 [버그수정] Entity Editor, Costume Entity 편집에서 Override Material 리로드 시 Material 설정이 적용되지 않던 문제 수정
+    - #158 [버그수정] Entity Editor, Costume Entity 에서 Get Material Slots 를 클릭할 경우 발생하던 크래시 수정
+    - #158 [버그수정] Entity Editor, Costume Entity 편집 시 Skeleton Asset 설정 후 Skeletal Mesh Asset 설정이 불가능하던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

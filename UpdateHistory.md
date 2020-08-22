@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.23
+  - #158 [기능개선] Entity Editor, Item Entity Details 의 Testing 을 메뉴 상단으로 올리고 Test Spawn 으로 메뉴 이름 변경
+  - #158 [버그수정] Entity Editor, Weapon Entity 설정에서 Mesh 와 DropMesh 설정 변경 후 카메라가 프리카메라로 고정되던 문제 수정
+  - #158 [버그수정] Entity Edtior, Weapon Entity 의 Weapon Mesh 설정 후 TestSpawn 의 ParentEntityAsset 설정에도 캐릭터가 스폰되지 않던 문제 수정
 - v0.9.22
   - #156 [기능개선] T4FrameworkEditor, Simulation 옵션 사용시에만 시간이 흘러가도록 처리
   - #156 [기능개선] T4FrameworkEditor 뷰포트 내 출력 메세지 포멧 통일 및 위치 정리
