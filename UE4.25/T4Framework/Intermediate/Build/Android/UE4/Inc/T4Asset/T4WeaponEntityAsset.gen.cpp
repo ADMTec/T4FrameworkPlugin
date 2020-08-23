@@ -18,8 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WeaponEntityAsset() {}
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityAnimationData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMaterialData();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
@@ -137,17 +136,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_UseAnimSetName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeScale_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeTransform_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RelativeScale;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeRotation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeRotation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeLocation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeTransform;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquipPointName_MetaData[];
 #endif
@@ -212,32 +203,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName = { "UseAnimSetName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, UseAnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeScale_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #108\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4WeaponEntityAsset.h" },
-		{ "ToolTip", "#108" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeScale = { "RelativeScale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, RelativeScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeScale_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeRotation_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #154\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4WeaponEntityAsset.h" },
-		{ "ToolTip", "#154" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeRotation = { "RelativeRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, RelativeRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeRotation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeLocation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #106\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4WeaponEntityAsset.h" },
 		{ "ToolTip", "#106" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeLocation = { "RelativeLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, RelativeLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform = { "RelativeTransform", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, RelativeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_EquipPointName_MetaData[] = {
 		{ "Category", "Common" },
@@ -297,9 +270,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bOverlapEvent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeScale,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeRotation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_EquipPointName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_ParticleSystemAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_SkeletalMeshOverrideMaterialData,
@@ -337,7 +308,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Hash() { return 4158108965U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Hash() { return 1954170265U; }
 	void UT4WeaponEntityAsset::StaticRegisterNativesUT4WeaponEntityAsset()
 	{
 	}

@@ -5,6 +5,7 @@
 #include "T4AssetMinimal.h"
 #include "T4ActionBase.h"
 #include "T4AssetConstants.h"
+#include "Animset/T4AnimsetTypes.h" // #158
 #include "Entity/T4EntityTypes.h"
 #include "Engine/Scene.h" // #100
 #include "Camera/CameraShake.h" // #101
@@ -324,6 +325,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TArray<FT4ActionAnimSequenceData> AnimSequenceDatas; // #134
 
+	// #158 : 코드레벨에서만 사용. Skill Layer 외 System Layer 의 시퀀스 플레이 (Weapon Item)
+	ET4AnimationLayer UseAnimationLayer;
+
+public:
 	void AddAnimSequenceData(
 		FName InSectionName, 
 		ET4PlayCount InPlayCount,
@@ -341,6 +346,7 @@ public:
 public:
 	FT4AnimationActionData()
 		: FT4ActionDataBase(StaticActionType())
+		, UseAnimationLayer(ET4AnimationLayer::Skill) // #158 : 코드레벨에서만 사용. Skill Layer 외 System Layer 의 시퀀스 플레이 (Weapon Item)
 	{
 	}
 

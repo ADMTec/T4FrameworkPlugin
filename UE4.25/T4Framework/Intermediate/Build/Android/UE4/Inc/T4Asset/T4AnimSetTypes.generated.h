@@ -17,6 +17,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_Animset_T4AnimsetTypes_h
 
 
+#define FOREACH_ENUM_ET4ANIMATIONLAYER(op) \
+	op(ET4AnimationLayer::Additive) \
+	op(ET4AnimationLayer::Skill) \
+	op(ET4AnimationLayer::System) \
+	op(ET4AnimationLayer::State) \
+	op(ET4AnimationLayer::Nums) 
+
+enum class ET4AnimationLayer : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4AnimationLayer>();
+
 #define FOREACH_ENUM_ET4ANIMSETTEMPLATE(op) \
 	op(ET4AnimsetTemplate::Basic) \
 	op(ET4AnimsetTemplate::Paragon) \

@@ -39,8 +39,9 @@ public:
 	void OnRefresh() { Refresh(); }
 
 	const FName GetItemValueSelected() const; // #90
+	const FName GetItemOldValueSelected() const { return OldSelectionValue; } // #158
 
-	void SetInitializeValue(FName InValue) { InitializeValue = InValue; } // #88
+	void SetInitializeValue(FName InValue) { InitializeValue = InValue; OldSelectionValue = InValue; } // #88
 	void SetNoNameDescription(const TCHAR* InNoNameDescription) { NoNameDescription = InNoNameDescription; } // #58 : None 대신 출력할 Description
 
 protected:
@@ -85,6 +86,7 @@ protected:
 	
 	FText CurrentSearchString;
 	FName InitializeValue; // #90
+	FName OldSelectionValue; // #158
 	FString NoNameDescription; // #58 : None 대신 출력할 Description
 
 	bool bItemSorting; // #92

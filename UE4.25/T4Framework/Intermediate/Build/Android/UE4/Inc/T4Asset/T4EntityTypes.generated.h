@@ -55,7 +55,6 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4EntityReactionType>();
 
 #define FOREACH_ENUM_ET4ENTITYCHARACTERMODULARTYPE(op) \
 	op(ET4EntityCharacterModularType::MasterPose) \
-	op(ET4EntityCharacterModularType::MeshMerge) \
 	op(ET4EntityCharacterModularType::None) 
 
 enum class ET4EntityCharacterModularType : uint8;

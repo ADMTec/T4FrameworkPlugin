@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityEditorViewportItemSpawn_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityEditorViewportItemSpawn(ET4EntityEditorViewportItemSpawn_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityEditorViewportItemSpawn"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn_Hash() { return 4149222448U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn_Hash() { return 3350034123U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn()
 	{
 #if WITH_HOT_RELOAD
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "// #107\n" },
 				{ "DropMesh.Name", "ET4EntityEditorViewportItemSpawn::DropMesh" },
-				{ "EquipOrExchange.DisplayName", "ItemMesh" },
+				{ "EquipOrExchange.DisplayName", "Item Mesh" },
 				{ "EquipOrExchange.Name", "ET4EntityEditorViewportItemSpawn::EquipOrExchange" },
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
 				{ "None.Hidden", "" },
@@ -280,7 +280,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityCharacterModularType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityCharacterModularType(ET4EntityCharacterModularType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityCharacterModularType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterModularType_Hash() { return 2180368324U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterModularType_Hash() { return 3676282763U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterModularType()
 	{
 #if WITH_HOT_RELOAD
@@ -293,7 +293,6 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4EntityCharacterModularType::MasterPose", (int64)ET4EntityCharacterModularType::MasterPose },
-				{ "ET4EntityCharacterModularType::MeshMerge", (int64)ET4EntityCharacterModularType::MeshMerge },
 				{ "ET4EntityCharacterModularType::None", (int64)ET4EntityCharacterModularType::None },
 			};
 #if WITH_METADATA
@@ -301,10 +300,11 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				{ "Comment", "// #72\n" },
 				{ "MasterPose.DisplayName", "MasterPose : Physics(X), Morph Target(O)" },
 				{ "MasterPose.Name", "ET4EntityCharacterModularType::MasterPose" },
-				{ "MeshMerge.DisplayName", "MeshMerge : Physics(O), Morph Target(X)" },
-				{ "MeshMerge.Name", "ET4EntityCharacterModularType::MeshMerge" },
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
+				{ "None.Comment", "//\x09MeshMerge UMETA(DisplayName = \"MeshMerge : Physics(O), Morph Target(X)\"),\n" },
+				{ "None.Hidden", "" },
 				{ "None.Name", "ET4EntityCharacterModularType::None" },
+				{ "None.ToolTip", "MeshMerge UMETA(DisplayName = \"MeshMerge : Physics(O), Morph Target(X)\")," },
 				{ "ToolTip", "#72" },
 			};
 #endif
@@ -338,7 +338,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityCharacterMeshType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityCharacterMeshType(ET4EntityCharacterMeshType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityCharacterMeshType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType_Hash() { return 3003496016U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType_Hash() { return 708790749U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType()
 	{
 #if WITH_HOT_RELOAD
@@ -360,6 +360,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				{ "FullBody.Name", "ET4EntityCharacterMeshType::FullBody" },
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
 				{ "None.Comment", "// TODO : #37\n" },
+				{ "None.Hidden", "" },
 				{ "None.Name", "ET4EntityCharacterMeshType::None" },
 				{ "None.ToolTip", "TODO : #37" },
 			};
@@ -394,7 +395,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityMeshType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityMeshType(ET4EntityMeshType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityMeshType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityMeshType_Hash() { return 2921056225U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityMeshType_Hash() { return 3287601200U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityMeshType()
 	{
 #if WITH_HOT_RELOAD
@@ -414,6 +415,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
+				{ "None.Hidden", "" },
 				{ "None.Name", "ET4EntityMeshType::None" },
 				{ "ParticleSystem.Name", "ET4EntityMeshType::ParticleSystem" },
 				{ "SkeletalMesh.Name", "ET4EntityMeshType::SkeletalMesh" },

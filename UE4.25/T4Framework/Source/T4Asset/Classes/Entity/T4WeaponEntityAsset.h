@@ -42,9 +42,6 @@ public:
 	FT4EntityItemWeaponMeshData()
 		: MeshType(ET4EntityMeshType::StaticMesh)
 		, EquipPointName(NAME_None) // #106
-		, RelativeLocation(FVector::ZeroVector) // #154
-		, RelativeRotation(FRotator::ZeroRotator) // #108
-		, RelativeScale(1.0f)
 		, UseAnimSetName(NAME_None) // #106
 		, bOverlapEvent(false) // #106
 	{
@@ -72,13 +69,7 @@ public:
 	FName EquipPointName; // #106
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FVector RelativeLocation; // #154
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	FRotator RelativeRotation; // #108
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float RelativeScale; // #108
+	FTransform RelativeTransform; // #108
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName UseAnimSetName; // #106

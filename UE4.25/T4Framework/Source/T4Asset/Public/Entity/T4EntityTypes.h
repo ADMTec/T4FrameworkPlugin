@@ -44,7 +44,7 @@ enum class ET4EntityMeshType : uint8
 	SkeletalMesh,
 	ParticleSystem,
 
-	None
+	None UMETA(Hidden)
 };
 
 UENUM()
@@ -53,16 +53,16 @@ enum class ET4EntityCharacterMeshType : uint8
 	FullBody,
 	Composite, // TODO : #37
 
-	None
+	None UMETA(Hidden)
 };
 
 UENUM()
 enum class ET4EntityCharacterModularType : uint8 // #72
 {
 	MasterPose UMETA(DisplayName = "MasterPose : Physics(X), Morph Target(O)"),
-	MeshMerge UMETA(DisplayName = "MeshMerge : Physics(O), Morph Target(X)"),
+//	MeshMerge UMETA(DisplayName = "MeshMerge : Physics(O), Morph Target(X)"),
 
-	None
+	None UMETA(Hidden)
 };
 
 UENUM()
@@ -102,7 +102,7 @@ UENUM()
 enum class ET4EntityEditorViewportItemSpawn : uint8 // #107
 {
 	DropMesh,
-	EquipOrExchange		UMETA(DisplayName = "ItemMesh"),
+	EquipOrExchange		UMETA(DisplayName = "Item Mesh"),
 
 	None UMETA(Hidden)
 };

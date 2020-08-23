@@ -105,6 +105,7 @@ public:
 		float InBlendInTimeSec = T4Const_DefaultAnimBlendTimeSec,
 		float InBlendOutTimeSec = T4Const_DefaultAnimBlendTimeSec
 	) = 0; // #111
+	virtual void EditorBroadcastAnimation(const FT4AnimParam& InAnimParam) = 0; // #107, #158 : 에디터용, 아이템 애니메이션 전달...
 #endif
 };
 

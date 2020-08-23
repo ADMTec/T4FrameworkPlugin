@@ -19,8 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ItemEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset_NoRegister();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityEditorViewportItemSpawn();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityItemDropMeshData();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMaterialData();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
@@ -191,13 +190,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemDropMeshDa
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeRotation_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeTransform_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeRotation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeLocation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeTransform;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParticleSystemAsset_MetaData[];
 #endif
@@ -236,21 +231,12 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemDropMeshDa
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityItemDropMeshData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeRotation_MetaData[] = {
-		{ "Category", "ClientOnly" },
-		{ "Comment", "// #106\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
-		{ "ToolTip", "#106" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeRotation = { "RelativeRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemDropMeshData, RelativeRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeRotation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeLocation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeTransform_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeLocation = { "RelativeLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemDropMeshData, RelativeLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeTransform = { "RelativeTransform", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemDropMeshData, RelativeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeTransform_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeTransform_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_ParticleSystemAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -301,8 +287,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemDropMeshDa
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemDropMeshData, MeshType), Z_Construct_UEnum_T4Asset_ET4EntityMeshType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_MeshType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_MeshType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_MeshType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeRotation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_RelativeTransform,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_ParticleSystemAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_SkeletalMeshOverrideMaterialData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Statics::NewProp_SkeletalMeshAsset,
@@ -339,7 +324,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemDropMeshDa
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Hash() { return 3906542807U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemDropMeshData_Hash() { return 2106029440U; }
 class UScriptStruct* FT4EntityItemRenderingData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

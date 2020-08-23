@@ -179,13 +179,10 @@ public:
 	}
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TSoftObjectPtr<UAnimSequence> DefaultIdleAsset; // #142 : BS 에서 AnimSequence 로 변경
+	TSoftObjectPtr<UAnimSequence> DefaultIdleSequenceAsset; // #142, #154 : FName = StanceName
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TSoftObjectPtr<UAnimSequence> CombatIdleAsset;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TSoftObjectPtr<UAnimSequence> CrouchIdleAsset;
+	TMap<FName, TSoftObjectPtr<UAnimSequence>> StanceIdleAnimSequnceAssets; // #142, #154 : FName = StanceName
 };
 
 // #126

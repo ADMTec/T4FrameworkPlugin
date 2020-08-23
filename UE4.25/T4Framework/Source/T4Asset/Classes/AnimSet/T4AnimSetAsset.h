@@ -51,8 +51,8 @@ public:
 		, bAdditiveAnimType(false) // #138
 		, DurationSec(0.0f)
 #if WITH_EDITORONLY_DATA
-		, TagName(NAME_None) // #154 : 색인을 위한 프로퍼티 (SystemLayer 의 StanceToStance Transform 에서 사용함)
 		, bUseEndLoop(false) // #135 : System 의 Death 류 사용, End Looping 추가 (시퀀스 끝에 루핑 Section 을 추가해준다.)
+		, TagName(NAME_None) // #154 : SystemLayer 의 StanceToStance Transform 에서 사용하고 일반적으로는 사용하지 않음. Hide 로 툴에서는 감춤
 #endif
 	{
 	}
@@ -81,10 +81,10 @@ public:
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FName TagName; // #154 : 색인을 위한 프로퍼티 (SystemLayer 의 StanceToStance Transform 에서 사용함)
-
-	UPROPERTY(EditAnywhere, Category = Editor)
 	bool bUseEndLoop; // #135 : System 의 Death 류 사용, End Looping 추가 (시퀀스 끝에 루핑 Section 을 추가해준다.)
+
+	UPROPERTY(EditAnywhere, Category = Hide)
+	FName TagName; // #154 : SystemLayer 의 StanceToStance Transform 에서 사용하고 일반적으로는 사용하지 않음. Hide 로 툴에서는 감춤
 #endif
 };
 

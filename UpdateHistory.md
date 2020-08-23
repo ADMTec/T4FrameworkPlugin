@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.25
+  - #158 [기능개선] 리플레이 플레이 중 에디터 툴바의 "Reload, Respawn, Despawn" 등의 실행 제어 처리 추가
+  - #158 [기능개선] Entity Editor, Weapon/Costume Details 메뉴 사용성 개선
+  - #158 [버그수정] Entity Editor 에서 리플레이 녹화 후 재생 시 이동이 동작하지 않던 문제 수정
 - v0.9.24
   - #158 [버그수정] Entity Editor, Costume Entity 편집 시 Target Part Name 지정 프로퍼티가 UI에 노출되지 않던 문제 수정
   - #158 [버그수정] Entity Editor, Costume Entity 편집에서 Override Material 리로드 시 Material 설정이 적용되지 않던 문제 수정

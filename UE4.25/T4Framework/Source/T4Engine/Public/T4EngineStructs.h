@@ -139,7 +139,7 @@ struct FT4HitOverlapDelegates // #49
 struct FT4AnimParam // #38
 {
 	FT4AnimParam()
-		: AnimationLayer(AnimLayer_Skill)
+		: AnimationLayer(ET4AnimationLayer::Skill)
 		, SectionName(NAME_None)
 		, PlayCount(ET4PlayCount::OneShot) // #134
 		, PlayRate(1.0f)

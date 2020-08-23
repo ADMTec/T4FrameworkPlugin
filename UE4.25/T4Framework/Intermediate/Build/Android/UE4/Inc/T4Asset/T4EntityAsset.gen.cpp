@@ -675,17 +675,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityIdleAnimSequen
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CrouchIdleAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceIdleAnimSequnceAssets_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CrouchIdleAsset;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_StanceIdleAnimSequnceAssets;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceIdleAnimSequnceAssets_Key_KeyProp;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_StanceIdleAnimSequnceAssets_ValueProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CombatIdleAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultIdleSequenceAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_CombatIdleAsset;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultIdleAsset_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultIdleAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultIdleSequenceAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -699,35 +697,30 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityIdleAnimSequen
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityIdleAnimSequenceData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CrouchIdleAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_MetaData[] = {
 		{ "Category", "ClientOnly" },
+		{ "Comment", "// #142, #154 : FName = StanceName\n" },
 		{ "EditCondition", "bUseAnimation" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
+		{ "ToolTip", "#142, #154 : FName = StanceName" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CrouchIdleAsset = { "CrouchIdleAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityIdleAnimSequenceData, CrouchIdleAsset), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CrouchIdleAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CrouchIdleAsset_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets = { "StanceIdleAnimSequnceAssets", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityIdleAnimSequenceData, StanceIdleAnimSequnceAssets), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_Key_KeyProp = { "StanceIdleAnimSequnceAssets_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_ValueProp = { "StanceIdleAnimSequnceAssets", nullptr, (EPropertyFlags)0x0004000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CombatIdleAsset_MetaData[] = {
-		{ "Category", "ClientOnly" },
-		{ "Comment", "// #142 : BS \xec\x97\x90\xec\x84\x9c AnimSequence \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\n" },
-		{ "EditCondition", "bUseAnimation" },
-		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
-		{ "ToolTip", "#142 : BS \xec\x97\x90\xec\x84\x9c AnimSequence \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd" },
-	};
-#endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CombatIdleAsset = { "CombatIdleAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityIdleAnimSequenceData, CombatIdleAsset), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CombatIdleAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CombatIdleAsset_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleSequenceAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bUseAnimation" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleAsset = { "DefaultIdleAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityIdleAnimSequenceData, DefaultIdleAsset), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleSequenceAsset = { "DefaultIdleSequenceAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityIdleAnimSequenceData, DefaultIdleSequenceAsset), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleSequenceAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleSequenceAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CrouchIdleAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_CombatIdleAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_StanceIdleAnimSequnceAssets_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::NewProp_DefaultIdleSequenceAsset,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
@@ -757,7 +750,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityIdleAnimSequen
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Hash() { return 3598291170U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityIdleAnimSequenceData_Hash() { return 283462201U; }
 class UScriptStruct* FT4EntityPlayAnimationData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

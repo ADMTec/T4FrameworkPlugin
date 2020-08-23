@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.25)
+# T4FrameworkPlugin (v0.9.26)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,10 +18,13 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.25**
-    - #158 [기능개선] 리플레이 플레이 중 에디터 툴바의 "Reload, Respawn, Despawn" 등의 실행 제어 처리 추가
-    - #158 [기능개선] Entity Editor, Weapon/Costume Details 메뉴 사용성 개선
-    - #158 [버그수정] Entity Editor 에서 리플레이 녹화 후 재생 시 이동이 동작하지 않던 문제 수정
+  - **v0.9.26**
+    - #158 [기능개선] Weapon Entity 의 Idle Animation 을 N개의 Stance Idle 을 설정할 수 있도록 기능 개선
+    - #158 [버그수정] Entity Editor, Weapon Entity 에 설정된 Animation 을 더블클릭으로 테스트 플레이 할 수 없던 문제 수정
+    - #158 [버그수정] Entity Editor, Weapon Details 에서 EquipPoint 변경 시 이전 위치에 장착한 아이템이 Unequip 되지 않던 문제 수정
+    - #158 [버그수정] Entity Editor, Drop Mesh or Weapon Mesh 에서 사용하지 않는 편집전 에셋이 패키징에 포함되던 문제 수정
+    - #158 [버그수정] Entity Editor, DropMesh Type 변경이 뷰포트에 즉시 반영되도록 수정
+    - #158 [버그수정] Entity Editor, AnimSet Asset 으로 툴을 오픈할 경우 캐릭터가 T포즈인 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**
