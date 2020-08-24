@@ -46,6 +46,10 @@
       - https://youtu.be/R1mB9WCzAto
     - #7 : 웨폰 아이템 Animation 설정
       - https://youtu.be/ajs6sW0QK_s
+    - #8 : 코스튬 아이템 Drop/Item Mesh 설정
+      - https://youtu.be/vZ4OO3M2OTY
+    - #9 : 코스튬 아이템 Override Material 설정
+      - https://youtu.be/LRRBrXH0b8k
   - **콘텐츠 제작 가이드**
     - #1 : 준비
       - https://youtu.be/LFErpgcwbnc
