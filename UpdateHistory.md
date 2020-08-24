@@ -2,6 +2,11 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.27
+  - #158 [기능개선] T4FrameworkPlugin 을 언리얼 엔진 설치 폴더로 복사를 위한 배치파일 추가
+    - T4FrameworkPlugin_UE4_25_Updating.bat
+    - 단, Content 폴더는 프로젝트 Content 폴더로 직접 복사해야 합니다.
+  - #158 [버그수정] Entity Editor, Character 및 Costume Entity 의 Composite Parts 변경이 뷰포트 모델에 적용되지 않던 문제 수정
 - v0.9.26
   - #158 [기능개선] Weapon Entity 의 Idle Animation 을 N개의 Stance Idle 을 설정할 수 있도록 기능 개선
   - #158 [버그수정] Entity Editor, Weapon Entity 에 설정된 Animation 을 더블클릭으로 테스트 플레이 할 수 없던 문제 수정

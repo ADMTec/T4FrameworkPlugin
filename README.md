@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.27)
+# T4FrameworkPlugin (v0.9.28)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,10 +18,11 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.27**
-    - #158 [기능개선] T4FrameworkPlugin 을 언리얼 엔진 설치 폴더로 복사를 위한 배치파일 추가 (T4FrameworkPlugin_UE4_25_Updating.bat)
-	  - 단, Content 폴더는 프로젝트 Content 폴더로 직접 복사해야 합니다.
-    - #158 [버그수정] Entity Editor, Character 및 Costume Entity 의 Composite Parts 변경이 뷰포트 모델에 적용되지 않던 문제 수정
+  - **v0.9.28**
+    - #158 [버그수정] Entity Editor, Entity Browser 에서 Costume Entity 의 우클릭 SubMenu Execute 가 비정상적으로 노출되던 문제 수정
+    - #158 [버그수정] Character Composite Parts 교환이 간헐적으로 적용되지 않고, 투명 또는 잘못된 Material 이 적용되던 문제 수정
+    - #158 [버그수정] T4FrameworkEditor, 툴바의 ReloadPlayer 사용 시 간헐적으로 카메라 위치가 변경되던 문제 수정
+    - #158 [버그수정] Entity Editor, Costume Entity 에서 테스트 캐릭터를 불러도 설정중인 Costume 이 적용되지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**
