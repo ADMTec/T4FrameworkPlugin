@@ -34,22 +34,23 @@
   - **튜토리얼 제작**
     - #1 : 간단한 툴 소개
       - https://youtu.be/r29O3YdeV7E
-    - #2 : Entity Editor 소개 및 기본적인 캐릭터 설정
-      - https://youtu.be/dGmG2QWp_wo
-    - #3 : 캐릭터 애니메이션 시스템 설정
-      - https://youtu.be/nS3N1X3Dh1o
-    - #4 : 캐릭터 스탠스 및 스킬 애니메이션 설정 
-      - https://youtu.be/XaPErl6Zypg
-    - #5 : 아이템 엔티티 소개 (Weapon/Costume)
-      - https://youtu.be/lX8tb-azEQQ
-    - #6 : 웨폰 아이템 Drop/Item Mesh 설정
-      - https://youtu.be/R1mB9WCzAto
-    - #7 : 웨폰 아이템 Animation 설정
-      - https://youtu.be/ajs6sW0QK_s
-    - #8 : 코스튬 아이템 Drop/Item Mesh 설정
-      - https://youtu.be/vZ4OO3M2OTY
-    - #9 : 코스튬 아이템 Override Material 설정
-      - https://youtu.be/LRRBrXH0b8k
+	- Entity Editor
+      - #2 : Entity Editor 소개 및 기본적인 캐릭터 설정
+        - https://youtu.be/dGmG2QWp_wo
+      - #3 : 캐릭터 애니메이션 시스템 설정
+        - https://youtu.be/nS3N1X3Dh1o
+      - #4 : 캐릭터 스탠스 및 스킬 애니메이션 설정 
+        - https://youtu.be/XaPErl6Zypg
+      - #5 : 아이템 엔티티 소개 (Weapon/Costume)
+        - https://youtu.be/lX8tb-azEQQ
+      - #6 : 웨폰 아이템 Drop/Item Mesh 설정
+        - https://youtu.be/R1mB9WCzAto
+      - #7 : 웨폰 아이템 Animation 설정
+        - https://youtu.be/ajs6sW0QK_s
+      - #8 : 코스튬 아이템 Drop/Item Mesh 설정
+        - https://youtu.be/vZ4OO3M2OTY
+      - #9 : 코스튬 아이템 Override Material 설정
+        - https://youtu.be/LRRBrXH0b8k
   - **콘텐츠 제작 가이드**
     - #1 : 준비
       - https://youtu.be/LFErpgcwbnc
