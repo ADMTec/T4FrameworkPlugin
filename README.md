@@ -34,7 +34,7 @@
   - **튜토리얼 제작**
     - #1 : 간단한 툴 소개
       - https://youtu.be/r29O3YdeV7E
-	- Entity Editor
+	- 엔티티 에디터 (Entity Editor)
       - #2 : Entity Editor 소개 및 기본적인 캐릭터 설정
         - https://youtu.be/dGmG2QWp_wo
       - #3 : 캐릭터 애니메이션 시스템 설정
