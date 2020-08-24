@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.28)
+# T4FrameworkPlugin (v0.9.29)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,11 +18,10 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.28**
-    - #158 [버그수정] Entity Editor, Entity Browser 에서 Costume Entity 의 우클릭 SubMenu Execute 가 비정상적으로 노출되던 문제 수정
-    - #158 [버그수정] Character Composite Parts 교환이 간헐적으로 적용되지 않고, 투명 또는 잘못된 Material 이 적용되던 문제 수정
-    - #158 [버그수정] T4FrameworkEditor, 툴바의 ReloadPlayer 사용 시 간헐적으로 카메라 위치가 변경되던 문제 수정
-    - #158 [버그수정] Entity Editor, Costume Entity 에서 테스트 캐릭터를 불러도 설정중인 Costume 이 적용되지 않던 문제 수정
+  - **v0.9.29**
+    - #158 [버그수정] Android 패키징 오류 수정
+      - UE4.25/Content 폴더 내 파일 삭제 후 재복사 필요 (T4DefaultExperienceTable.uasset 삭제)
+	- #158 [버그수정] 언리얼 에디터 초기화 시 발생하는 일부 T4FrameworkEditor icon 관련 에러 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

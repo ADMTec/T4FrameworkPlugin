@@ -43,6 +43,7 @@ struct T4ASSET_API FT4PathSegmentPoint
 public:
 	FT4PathSegmentPoint()
 		: Location(FVector::ZeroVector)
+		, MovementType(ET4PathMovementType::Run)
 	{
 	}
 
