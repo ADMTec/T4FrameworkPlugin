@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.30)
+# T4FrameworkPlugin (v0.9.31)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,12 +18,10 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.30**
-    - #158 [기능개선] Entity Editor, 편집 중인 EntityAsset 외 캐릭터의 뷰포트 컨트롤 캐릭터 변경 시 UI를 편집 불가 상태가 되도록 개선
-    - #158 [버그수정] Costume 변경 후 이전 Costume 의 Override Material 이 계속 적용되던 문제 수정
-    - #158 [버그수정] Entity Editor, 뷰포트에서 일부 컨트롤 캐릭터로의 변경이 되지 않던 문제 수정 
-	- #158 [버그수정] Entity Editor, Entity Browser 에서 Weapon/Costume Entity 를 뷰포트로 DragDrop 시 ItemSpawnType 옵션이 적용되던 문제 수정
-	- #158 [버그수정] Entity Editor, 일부 Costume Entity 의 Property 변경 시 발생하는 크래시 수정
+  - **v0.9.31**
+    - #158 [버그수정] Entity Editor, Weapon/Costume Entity 오픈 시 초기 카메라 위치가 원점에서 생성되던 문제 수정
+    - #158 [버그수정] Entity Editor, 캐릭터 <=> 프리 카메라 교체 시 카메라 위치가 초기화되던 문제 수정
+    - #158 [버그수정] Entity Editor, Composite Part 수정 후 Part 선택이 Reset 되던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

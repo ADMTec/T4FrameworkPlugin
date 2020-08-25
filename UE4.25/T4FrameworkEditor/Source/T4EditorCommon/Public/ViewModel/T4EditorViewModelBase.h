@@ -360,6 +360,9 @@ protected:
 	FRotator CachedPlayerRotation;
 	FVector CachedPlayerLocation; // #116
 
+	FVector CachedFreeCameraLocation; // #158
+	FRotator CachedFreeCameraRotation; // #158
+
 	bool bTestAutomation; // #100, #103
 	float TestAutomationWorldTimeHour; // #100, #103
 	FVector TestAutomationSpawnLocation; // #100, #103
