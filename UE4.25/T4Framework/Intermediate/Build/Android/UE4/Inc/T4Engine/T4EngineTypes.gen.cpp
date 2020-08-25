@@ -918,7 +918,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4ActorType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActorType(ET4ActorType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActorType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 2547710050U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 2507742639U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActorType()
 	{
 #if WITH_HOT_RELOAD
@@ -934,8 +934,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "ET4ActorType::PropStatic", (int64)ET4ActorType::PropStatic },
 				{ "ET4ActorType::PropSkeletal", (int64)ET4ActorType::PropSkeletal },
 				{ "ET4ActorType::PropParticle", (int64)ET4ActorType::PropParticle },
-				{ "ET4ActorType::ItemStatic", (int64)ET4ActorType::ItemStatic },
-				{ "ET4ActorType::ItemSkeletal", (int64)ET4ActorType::ItemSkeletal },
+				{ "ET4ActorType::Item", (int64)ET4ActorType::Item },
 				{ "ET4ActorType::Zone", (int64)ET4ActorType::Zone },
 				{ "ET4ActorType::Projectile", (int64)ET4ActorType::Projectile },
 				{ "ET4ActorType::Indicator", (int64)ET4ActorType::Indicator },
@@ -959,8 +958,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Indicator.Comment", "// #63\n" },
 				{ "Indicator.Name", "ET4ActorType::Indicator" },
 				{ "Indicator.ToolTip", "#63" },
-				{ "ItemSkeletal.Name", "ET4ActorType::ItemSkeletal" },
-				{ "ItemStatic.Name", "ET4ActorType::ItemStatic" },
+				{ "Item.Name", "ET4ActorType::Item" },
 				{ "Mirror.Comment", "// #54\n" },
 				{ "Mirror.Name", "ET4ActorType::Mirror" },
 				{ "Mirror.ToolTip", "#54" },

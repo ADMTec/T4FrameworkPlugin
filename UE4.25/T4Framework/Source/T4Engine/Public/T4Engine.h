@@ -259,6 +259,9 @@ public:
 #if WITH_EDITOR
 	virtual FT4WorldActorDebugInfo& GetDebugInfo() = 0; // #118, #140
 
+	virtual UObject* EditorGetOwner() const = 0; // #158 : 에디터에서 작업을 위해 스폰한 객체 확인 (Entity Player 교체에서 사용)
+	virtual void EditorSetOwner(UObject* InOwner) = 0; // #158 : 에디터에서 작업을 위해 스폰한 객체 확인 (Entity Player 교체에서 사용)
+
 	virtual void EditorSetAimTarget(bool bEnable, const FVector& InAimTarget) = 0; // #111
 	virtual bool EditorPlay(
 		UAnimSequence* InPlayAnimSequence,

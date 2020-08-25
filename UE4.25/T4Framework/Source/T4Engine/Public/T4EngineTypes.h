@@ -48,8 +48,7 @@ enum class ET4ActorType : uint8
 	PropStatic,
 	PropSkeletal,
 	PropParticle,
-	ItemStatic,
-	ItemSkeletal,
+	Item,
 	Zone, // #94
 
 	// code base
