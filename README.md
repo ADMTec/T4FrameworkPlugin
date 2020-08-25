@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.29)
+# T4FrameworkPlugin (v0.9.29_HOTFIX)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
