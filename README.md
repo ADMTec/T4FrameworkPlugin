@@ -54,6 +54,8 @@
         - https://youtu.be/LRRBrXH0b8k
 	  - #10 : 조합형(Modular) 캐릭터 설정
 	    - https://youtu.be/JYd_X66RD2c
+	  - #11 : 엔티티 브라우저(Entity Browser) 소개
+	    - https://youtu.be/-aVTZihDUHo
   - **콘텐츠 제작 가이드**
     - #1 : 준비
       - https://youtu.be/LFErpgcwbnc
