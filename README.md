@@ -18,8 +18,9 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.29**
+  - **v0.9.29 (HOTFIX)**
     - #158 [버그수정] Android 패키징 오류 수정
+      - Android Shipping 을 위한 누락된 오브젝트 파일 추가
       - UE4.25/Content 폴더 내 파일 삭제 후 재복사 필요 (T4DefaultExperienceTable.uasset 삭제)
 	- #158 [버그수정] 언리얼 에디터 초기화 시 발생하는 일부 T4FrameworkEditor icon 관련 에러 수정
   - 이전 업데이트
