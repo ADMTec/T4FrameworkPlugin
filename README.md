@@ -52,6 +52,8 @@
         - https://youtu.be/vZ4OO3M2OTY
       - #9 : 코스튬 아이템 Override Material 설정
         - https://youtu.be/LRRBrXH0b8k
+	  - #10 : 조합형(Modular) 캐릭터 설정
+	    - https://youtu.be/JYd_X66RD2c
   - **콘텐츠 제작 가이드**
     - #1 : 준비
       - https://youtu.be/LFErpgcwbnc
