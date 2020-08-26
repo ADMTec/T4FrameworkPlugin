@@ -329,6 +329,8 @@ private:
 	void RegisterPlayerViewTargetChanged();
 
 	void HandleOnDestroyViewportClient(); // #79
+
+	void HandleOnViewTargetPreChanged(); // #162
 	void HandleOnViewTargetChanged(IT4WorldActor* InViewTarget); // #79, #83
 
 private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관리를 위하 private 로 변경함
@@ -360,6 +362,7 @@ protected:
 	FRotator CachedPlayerRotation;
 	FVector CachedPlayerLocation; // #116
 
+	bool bCachedFreeCameraEnabled; // #162
 	FVector CachedFreeCameraLocation; // #158
 	FRotator CachedFreeCameraRotation; // #158
 

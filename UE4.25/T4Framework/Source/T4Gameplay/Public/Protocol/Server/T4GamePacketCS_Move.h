@@ -57,11 +57,6 @@ public:
 			OutMsg = TEXT("Invalid Send ObjectID!");
 			return false;
 		}
-		if (MoveToLocation.IsNearlyZero())
-		{
-			OutMsg = TEXT("Invalid MoveToLocation!");
-			return false;
-		}
 		return true;
 	}
 

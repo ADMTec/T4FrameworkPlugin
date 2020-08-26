@@ -104,6 +104,7 @@ template<> T4ENGINE_API UEnum* StaticEnum<ET4TargetType>();
 	op(ET4AnimInstance::Human_Basic) \
 	op(ET4AnimInstance::Human_Paragon) \
 	op(ET4AnimInstance::Animal_Basic) \
+	op(ET4AnimInstance::Prop_Basic) \
 	op(ET4AnimInstance::Item_Basic) \
 	op(ET4AnimInstance::None) 
 
@@ -170,9 +171,7 @@ template<> T4ENGINE_API UEnum* StaticEnum<ET4SpawnMode>();
 
 #define FOREACH_ENUM_ET4ACTORTYPE(op) \
 	op(ET4ActorType::Character) \
-	op(ET4ActorType::PropStatic) \
-	op(ET4ActorType::PropSkeletal) \
-	op(ET4ActorType::PropParticle) \
+	op(ET4ActorType::Prop) \
 	op(ET4ActorType::Item) \
 	op(ET4ActorType::Zone) \
 	op(ET4ActorType::Projectile) \

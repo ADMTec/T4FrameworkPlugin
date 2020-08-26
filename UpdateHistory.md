@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.32
+  - #158 [버그수정] Entity Editor, Weapon/Costume Entity 오픈 시 초기 카메라 위치가 원점에서 생성되던 문제 수정
+  - #158 [버그수정] Entity Editor, 캐릭터 <=> 프리 카메라 교체 시 카메라 위치가 초기화되던 문제 수정
+  - #158 [버그수정] Entity Editor, Composite Part 수정 후 Part 선택이 Reset 되던 문제 수정
 - v0.9.30
   - #158 [기능개선] Entity Editor, 편집 중인 EntityAsset 외 캐릭터의 뷰포트 컨트롤 캐릭터 변경 시 UI를 편집 불가 상태가 되도록 개선
   - #158 [버그수정] Costume 변경 후 이전 Costume 의 Override Material 이 계속 적용되던 문제 수정

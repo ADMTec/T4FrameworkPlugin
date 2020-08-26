@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GamePacketCS_Move_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_182_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_177_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_LockOff_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_LockOff>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_147_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_142_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_LockOn_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -29,7 +29,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Loc
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_LockOn>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_112_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_107_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_Rotation_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;
@@ -37,7 +37,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Loc
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketCS_Rotation>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_77_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Server_T4GamePacketCS_Move_h_72_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketCS_Jump_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketCS_Base Super;

@@ -40,6 +40,7 @@ class IT4Framework;
 class IT4WorldActor;
 
 #if WITH_EDITOR
+DECLARE_MULTICAST_DELEGATE(FT4OnViewTargetPreChanged); // #162
 DECLARE_MULTICAST_DELEGATE_OneParam(FT4OnViewTargetChanged, IT4WorldActor*);
 #endif
 
@@ -153,6 +154,7 @@ public:
 
 	virtual void EditorSetViewportClient(IT4EditorViewportClient* InEditorViewportClient) = 0;
 
+	virtual FT4OnViewTargetPreChanged& GetOnViewTargetPreChanged() = 0; // #162
 	virtual FT4OnViewTargetChanged& GetOnViewTargetChanged() = 0;
 #endif
 };

@@ -35,6 +35,7 @@ struct FT4WorldActorProperty // #34
 	void Reset()
 	{
 		bIsLockOn = false;
+		bUseOverlapEvents = false; // #158
 
 		// #33
 		MoveSpeed[(uint8)ET4MoveMode::Sync] = 0.0f;
@@ -52,7 +53,7 @@ struct FT4WorldActorProperty // #34
 		RelativeLocation = FVector::ZeroVector; // #126
 		RelativeRotation = FRotator::ZeroRotator;
 		RelativeScale3D = FVector::OneVector; // #37
-
+		
 #if WITH_EDITOR // #140
 		TestDefaultMoveSpeed = 0.0f;
 		TestStanceMoveSpeeds.Empty();
@@ -72,6 +73,7 @@ struct FT4WorldActorProperty // #34
 	}
 
 	bool bIsLockOn;
+	bool bUseOverlapEvents; // #158
 
 	float MoveSpeed[(uint8)ET4MoveMode::Count]; // #33
 	float MoveAccelerationScale; // #38, #52 (0.1 ~ 1)

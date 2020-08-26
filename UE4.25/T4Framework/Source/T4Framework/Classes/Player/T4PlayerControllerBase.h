@@ -150,6 +150,7 @@ public:
 	bool EditorInputAxis(FKey InKey, float InDelta, float InDeltaTime, int32 InNumSamples, bool bInGamepad) override; // #30
 	void EditorSetViewportClient(IT4EditorViewportClient* InEditorViewportClient) override;
 
+	FT4OnViewTargetPreChanged& GetOnViewTargetPreChanged() override { return OnViewTargetPreChanged; } // #162
 	FT4OnViewTargetChanged& GetOnViewTargetChanged() override { return OnViewTargetChanged; } // #39
 #endif
 
@@ -228,6 +229,7 @@ private:
 	bool bFreeCameraModeEnabled; // #133
 	ET4CameraType PrevCameraTypeSelected; // #133
 	IT4EditorViewportClient* EditorViewportClient; // #30
+	FT4OnViewTargetPreChanged OnViewTargetPreChanged; // #162
 	FT4OnViewTargetChanged OnViewTargetChanged; // #39
 #endif
 };

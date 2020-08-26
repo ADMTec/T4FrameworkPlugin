@@ -45,9 +45,7 @@ enum class ET4ActorType : uint8
 {
 	// entity base
 	Character,
-	PropStatic,
-	PropSkeletal,
-	PropParticle,
+	Prop,
 	Item,
 	Zone, // #94
 
@@ -156,6 +154,8 @@ enum class ET4AnimInstance : uint8
 	Human_Paragon, // #131
 
 	Animal_Basic,
+
+	Prop_Basic, // #162
 
 	Item_Basic, // #107
 

@@ -18,8 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PropEntityAsset() {}
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityAnimationData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPropMeshData();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMaterialData();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
@@ -132,18 +131,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPropMeshData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOverlapEvent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseOverlapEvent_MetaData[];
 #endif
-		static void NewProp_bOverlapEvent_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverlapEvent;
+		static void NewProp_bUseOverlapEvent_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeRotation_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeTransform_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeRotation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RelativeLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeLocation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RelativeTransform;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParticleSystemAsset_MetaData[];
 #endif
@@ -182,34 +177,25 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPropMeshData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityPropMeshData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #108\n" },
+		{ "Comment", "// #106\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4PropEntityAsset.h" },
-		{ "ToolTip", "#108" },
+		{ "ToolTip", "#106" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent_SetBit(void* Obj)
 	{
-		((FT4EntityPropMeshData*)Obj)->bOverlapEvent = 1;
+		((FT4EntityPropMeshData*)Obj)->bUseOverlapEvent = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent = { "bOverlapEvent", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityPropMeshData), &Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent = { "bUseOverlapEvent", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityPropMeshData), &Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeRotation_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #126\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4PropEntityAsset.h" },
-		{ "ToolTip", "#126" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeRotation = { "RelativeRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPropMeshData, RelativeRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeRotation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeLocation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeTransform_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/Entity/T4PropEntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeLocation = { "RelativeLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPropMeshData, RelativeLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeTransform = { "RelativeTransform", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPropMeshData, RelativeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeTransform_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeTransform_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_ParticleSystemAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -260,9 +246,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPropMeshData
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPropMeshData, MeshType), Z_Construct_UEnum_T4Asset_ET4EntityMeshType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_MeshType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_MeshType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_MeshType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bOverlapEvent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeRotation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_bUseOverlapEvent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_RelativeTransform,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_ParticleSystemAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_SkeletalMeshOverrideMaterialData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPropMeshData_Statics::NewProp_SkeletalMeshAsset,
@@ -299,7 +284,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPropMeshData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPropMeshData_Hash() { return 1532434274U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPropMeshData_Hash() { return 3177019719U; }
 class UScriptStruct* FT4EntityPropRenderingData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

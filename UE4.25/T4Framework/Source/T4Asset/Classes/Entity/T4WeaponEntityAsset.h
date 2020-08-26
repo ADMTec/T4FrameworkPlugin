@@ -43,7 +43,7 @@ public:
 		: MeshType(ET4EntityMeshType::StaticMesh)
 		, EquipPointName(NAME_None) // #106
 		, UseAnimSetName(NAME_None) // #106
-		, bOverlapEvent(false) // #106
+		, bUseOverlapEvent(false) // #106
 	{
 	}
 
@@ -75,7 +75,7 @@ public:
 	FName UseAnimSetName; // #106
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bOverlapEvent; // #106
+	bool bUseOverlapEvent; // #106
 };
 
 // #107

@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.31)
+# T4FrameworkPlugin (v0.9.32)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,10 +18,12 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.31**
-    - #158 [버그수정] Entity Editor, Weapon/Costume Entity 오픈 시 초기 카메라 위치가 원점에서 생성되던 문제 수정
-    - #158 [버그수정] Entity Editor, 캐릭터 <=> 프리 카메라 교체 시 카메라 위치가 초기화되던 문제 수정
-    - #158 [버그수정] Entity Editor, Composite Part 수정 후 Part 선택이 Reset 되던 문제 수정
+  - **v0.9.32**
+    - #162 [기능추가] Entity Editor, Prop Entity 의 Animation 설정 및 플레이 처리 추가
+    - #162 [버그수정] Entity Editor, Prop Entity Details 에서 Property 수정 시 카메라가 리셋되는 문제 수정
+    - #162 [버그수정] Entity Editor, Prop Entity 에서 MeshType 변경 시 발생하던 크래시 수정
+    - #158 [버그수정] T4Framework Content 내 EnvironmentAsset 에서 잘못된 경로를 가르키던 HDR 에셋 정리
+	  - UE4.25/Content 폴더 재복사 필요
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

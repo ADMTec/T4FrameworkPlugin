@@ -484,7 +484,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4AnimInstance_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4AnimInstance(ET4AnimInstance_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4AnimInstance"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4AnimInstance_Hash() { return 1689945295U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4AnimInstance_Hash() { return 22423706U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4AnimInstance()
 	{
 #if WITH_HOT_RELOAD
@@ -499,6 +499,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "ET4AnimInstance::Human_Basic", (int64)ET4AnimInstance::Human_Basic },
 				{ "ET4AnimInstance::Human_Paragon", (int64)ET4AnimInstance::Human_Paragon },
 				{ "ET4AnimInstance::Animal_Basic", (int64)ET4AnimInstance::Animal_Basic },
+				{ "ET4AnimInstance::Prop_Basic", (int64)ET4AnimInstance::Prop_Basic },
 				{ "ET4AnimInstance::Item_Basic", (int64)ET4AnimInstance::Item_Basic },
 				{ "ET4AnimInstance::None", (int64)ET4AnimInstance::None },
 			};
@@ -511,11 +512,14 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Human_Paragon.Comment", "// #38\n" },
 				{ "Human_Paragon.Name", "ET4AnimInstance::Human_Paragon" },
 				{ "Human_Paragon.ToolTip", "#38" },
+				{ "Item_Basic.Comment", "// #162\n" },
 				{ "Item_Basic.Name", "ET4AnimInstance::Item_Basic" },
+				{ "Item_Basic.ToolTip", "#162" },
 				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
 				{ "None.Comment", "// #107\n" },
 				{ "None.Name", "ET4AnimInstance::None" },
 				{ "None.ToolTip", "#107" },
+				{ "Prop_Basic.Name", "ET4AnimInstance::Prop_Basic" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -918,7 +922,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4ActorType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActorType(ET4ActorType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4ActorType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 2507742639U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4ActorType_Hash() { return 3637125203U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4ActorType()
 	{
 #if WITH_HOT_RELOAD
@@ -931,9 +935,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4ActorType::Character", (int64)ET4ActorType::Character },
-				{ "ET4ActorType::PropStatic", (int64)ET4ActorType::PropStatic },
-				{ "ET4ActorType::PropSkeletal", (int64)ET4ActorType::PropSkeletal },
-				{ "ET4ActorType::PropParticle", (int64)ET4ActorType::PropParticle },
+				{ "ET4ActorType::Prop", (int64)ET4ActorType::Prop },
 				{ "ET4ActorType::Item", (int64)ET4ActorType::Item },
 				{ "ET4ActorType::Zone", (int64)ET4ActorType::Zone },
 				{ "ET4ActorType::Projectile", (int64)ET4ActorType::Projectile },
@@ -973,9 +975,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Projectile.Comment", "// code base\n" },
 				{ "Projectile.Name", "ET4ActorType::Projectile" },
 				{ "Projectile.ToolTip", "code base" },
-				{ "PropParticle.Name", "ET4ActorType::PropParticle" },
-				{ "PropSkeletal.Name", "ET4ActorType::PropSkeletal" },
-				{ "PropStatic.Name", "ET4ActorType::PropStatic" },
+				{ "Prop.Name", "ET4ActorType::Prop" },
 				{ "Zone.Name", "ET4ActorType::Zone" },
 			};
 #endif

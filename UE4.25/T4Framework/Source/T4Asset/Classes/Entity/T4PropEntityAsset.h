@@ -71,9 +71,7 @@ struct T4ASSET_API FT4EntityPropMeshData
 public:
 	FT4EntityPropMeshData()
 		: MeshType(ET4EntityMeshType::StaticMesh)
-		, RelativeLocation(FVector::ZeroVector) // #126
-		, RelativeRotation(FRotator::ZeroRotator) // #108
-		, bOverlapEvent(false) // #106
+		, bUseOverlapEvent(false) // #106
 	{
 	}
 
@@ -96,13 +94,10 @@ public:
 	TSoftObjectPtr<UParticleSystem> ParticleSystemAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FVector RelativeLocation; // #126
+	FTransform RelativeTransform; // #106
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FRotator RelativeRotation; // #108
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bOverlapEvent; // #106
+	bool bUseOverlapEvent; // #106
 };
 
 // #126
