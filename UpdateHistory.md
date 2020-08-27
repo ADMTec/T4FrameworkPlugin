@@ -3,6 +3,12 @@
 
 > **Update History**
 - v0.9.32
+  - #162 [기능추가] Entity Editor, Prop Entity 의 Animation 설정 및 플레이 처리 추가
+  - #162 [버그수정] Entity Editor, Prop Entity Details 에서 Property 수정 시 카메라가 리셋되는 문제 수정
+  - #162 [버그수정] Entity Editor, Prop Entity 에서 MeshType 변경 시 발생하던 크래시 수정
+  - #158 [버그수정] T4Framework Content 내 EnvironmentAsset 에서 잘못된 경로를 가르키던 HDR 에셋 정리
+	- UE4.25/Content 폴더 재복사 필요
+- v0.9.31
   - #158 [버그수정] Entity Editor, Weapon/Costume Entity 오픈 시 초기 카메라 위치가 원점에서 생성되던 문제 수정
   - #158 [버그수정] Entity Editor, 캐릭터 <=> 프리 카메라 교체 시 카메라 위치가 초기화되던 문제 수정
   - #158 [버그수정] Entity Editor, Composite Part 수정 후 Part 선택이 Reset 되던 문제 수정

@@ -36,17 +36,12 @@ protected:
 	FReply HandleOnQuickChangeCombatStance();
 	FReply HandleOnQuickChangeDefaultStance();
 
-	FReply HandleOnQuickPlayContent_100001();
-	FReply HandleOnQuickPlayContent_100002();
-	
-	FReply HandleOnQuickWorldTravel_11();
-	FReply HandleOnQuickWorldTravel_12();
+	FReply HandleOnQuickPlayContent(uint32 InUID);
+	FReply HandleOnQuickWorldTravel(uint32 InUID);
+	FReply HandleOnQuickPCSpawn(uint32 InUID);
+	FReply HandleOnQuickNPCSpawn(uint32 InUID);
 
 	FReply HandleOnQuickDespawnAll();
-
-	FReply HandleOnQuickSpawnPlayer_1001();
-
-	FReply HandleOnQuickSpawnNPC_10001();
 	FReply HandleOnQuickSpawnNPC_Random();
 
 	FReply HandleOnQuickReplayRec();

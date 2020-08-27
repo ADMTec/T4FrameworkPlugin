@@ -36,9 +36,9 @@ public:
 	bool GetEffectSetInfo(const FT4EffectSetDBKey& InDBKey, FT4GameplayEffectSetInfo& OutEffectSetInfo);
 
 #if !UE_BUILD_SHIPPING
-	FName GetPlayerQuickHotKeyValue(FName InHotKeyName); // #150
-	FName GetNPCQuickHotKeyValue(FName InHotKeyName); // #150
-	FName GetWeaponQuickHotKeyValue(FName InHotKeyName); // #150
+	FName GetPlayerQuickHotKeyValue(int32 InHotKeyIndex); // #150
+	FName GetNPCQuickHotKeyValue(int32 InHotKeyIndex); // #150
+	FName GetWeaponQuickHotKeyValue(int32 InHotKeyIndex); // #150
 #endif
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
