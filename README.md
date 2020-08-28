@@ -33,7 +33,7 @@
   - **튜토리얼 제작**
     - [#1 : 간단한 툴 소개](https://youtu.be/r29O3YdeV7E)
 	- [엔티티 에디터 (Entity Editor)](https://tech4labs.com/T4Framework_Features_EntityEditor/)
-      - [#2 : Entity Editor 소개 및 기본적인 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
+      - [#2 : 풀 바디(Fullbody) 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
       - [#3 : 캐릭터 애니메이션 시스템 설정](https://youtu.be/nS3N1X3Dh1o)
       - [#4 : 캐릭터 스탠스 및 스킬 애니메이션 설정](https://youtu.be/XaPErl6Zypg)
       - [#5 : 아이템 엔티티 소개 (Weapon/Costume)](https://youtu.be/lX8tb-azEQQ)
