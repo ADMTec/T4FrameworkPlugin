@@ -3,6 +3,7 @@
 #pragma once
 
 #include "T4EngineMinimal.h"
+#include "T4Engine.h"
 #include "Components/StaticMeshComponent.h"
 #include "T4StaticMeshComponent.generated.h"
 
@@ -10,7 +11,7 @@
   * https://docs.unrealengine.com/en-us/Engine/Content/Types/StaticMeshes
  */
 UCLASS()
-class T4ENGINE_API UT4StaticMeshComponent : public UStaticMeshComponent
+class T4ENGINE_API UT4StaticMeshComponent : public UStaticMeshComponent, public IT4CompositeComponent
 {
 	GENERATED_UCLASS_BODY()
 
@@ -21,6 +22,23 @@ public:
 		FActorComponentTickFunction* ThisTickFunction
 	) override;
 
+public:
+	// ~IT4CompositeComponent : #162
+	FName GetCompositeName() const override { return NAME_None; }
+
+	const FTransform GetLocalTransform() const override { return GetRelativeTransform(); }
+
+	void SetLocalTransform(const FTransform& InTransform) override; // SetComponentTransform
+	void SetLocalLocation(const FVector& InLocation) override { SetRelativeLocation(InLocation); }
+	void SetLocalRotation(const FRotator& InRotation) override;
+	void SetLocalScale3D(const FVector& InScale) override { SetRelativeScale3D(InScale); }
+
+public:
+	void SetImportRotation(const FRotator& InRotation) { ImportRotation = InRotation; } // #162
+
 protected:
 	void BeginPlay() override;
+
+private:
+	FRotator ImportRotation; // #162
 };

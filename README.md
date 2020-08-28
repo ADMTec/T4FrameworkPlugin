@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.33)
+# T4FrameworkPlugin (v0.9.34)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,9 +18,10 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.33**
-    - #161 [기능추가] Builtin HUD 의 QuickMenu 에 노출되는 GameDB UID 를 DefaultT4Framework.ini 에서 설정할 수 있도록 기능 추가
-    - #158 [버그수정] Entity Editor, Character Entity 오픈 시 카메라가 원점에 생성되던 문제 수정
+  - **v0.9.34**
+    - #162 [기능추가] Entity Editor, Prop Entity RelativeTransform 을 EditMode 의 Manipulator 를 통해 편집 할 수 있도록 추가
+    - #162 [버그수정] Entity Editor, Prop Entity 의 애니메이션 사용 시 간헐적으로 발생하던 크래시 수정
+	- #162 [버그수정] Entity Editor, Player Reload 시 카메라 위치를 유지하도록 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**
@@ -30,42 +31,26 @@
 	- 빠른 시간 내 정식 튜토리얼을 제작해 공유하도록 하겠습니다.
 	  - https://tech4labs.com/T4Framework_Tutorials/
   - **튜토리얼 제작**
-    - #1 : 간단한 툴 소개
-      - https://youtu.be/r29O3YdeV7E
-	- 엔티티 에디터 (Entity Editor)
-      - #2 : Entity Editor 소개 및 기본적인 캐릭터 설정
-        - https://youtu.be/dGmG2QWp_wo
-      - #3 : 캐릭터 애니메이션 시스템 설정
-        - https://youtu.be/nS3N1X3Dh1o
-      - #4 : 캐릭터 스탠스 및 스킬 애니메이션 설정 
-        - https://youtu.be/XaPErl6Zypg
-      - #5 : 아이템 엔티티 소개 (Weapon/Costume)
-        - https://youtu.be/lX8tb-azEQQ
-      - #6 : 웨폰 아이템 Drop/Item Mesh 설정
-        - https://youtu.be/R1mB9WCzAto
-      - #7 : 웨폰 아이템 Animation 설정
-        - https://youtu.be/ajs6sW0QK_s
-      - #8 : 코스튬 아이템 Drop/Item Mesh 설정
-        - https://youtu.be/vZ4OO3M2OTY
-      - #9 : 코스튬 아이템 Override Material 설정
-        - https://youtu.be/LRRBrXH0b8k
-	  - #10 : 조합형(Modular) 캐릭터 설정
-	    - https://youtu.be/JYd_X66RD2c
-	  - #11 : 엔티티 브라우저(Entity Browser) 소개
-	    - https://youtu.be/-aVTZihDUHo
+    - [#1 : 간단한 툴 소개](https://youtu.be/r29O3YdeV7E)
+	- 엔티티 에디터 (Entity Editor) : https://tech4labs.com/T4Framework_Features_EntityEditor/
+      - [#2 : Entity Editor 소개 및 기본적인 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
+      - [#3 : 캐릭터 애니메이션 시스템 설정](https://youtu.be/nS3N1X3Dh1o)
+      - [#4 : 캐릭터 스탠스 및 스킬 애니메이션 설정](https://youtu.be/XaPErl6Zypg)
+      - [#5 : 아이템 엔티티 소개 (Weapon/Costume)](https://youtu.be/lX8tb-azEQQ)
+      - [#6 : 웨폰 아이템 Drop/Item Mesh 설정](https://youtu.be/R1mB9WCzAto)
+      - [#7 : 웨폰 아이템 Animation 설정](https://youtu.be/ajs6sW0QK_s)
+      - [#8 : 코스튬 아이템 Drop/Item Mesh 설정](https://youtu.be/vZ4OO3M2OTY)
+      - [#9 : 코스튬 아이템 Override Material 설정](https://youtu.be/LRRBrXH0b8k)
+	  - [#10 : 조합형(Modular) 캐릭터 설정](https://youtu.be/JYd_X66RD2c)
+	  - [#11 : 엔티티 브라우저(Entity Browser) 소개](https://youtu.be/-aVTZihDUHo)
+	  - [#12 : 프랍(Prop) Mesh/Animation 설정](https://youtu.be/6uU5MU99UpU)
   - **콘텐츠 제작 가이드**
-    - #1 : 준비
-      - https://youtu.be/LFErpgcwbnc
-    - #2 : Content Editor 레이아웃
-      - https://youtu.be/W3XC4lnz6Og
-    - #3 : GameDB 소개
-      - https://youtu.be/JzJgi4McRWQ
-    - #4 : Spawn 기본
-      - https://youtu.be/sonSG9Qsaws
-    - #5 : Spawn 오브젝트
-      - https://youtu.be/M1OQyaR1Ors
-    - #6 : Spawn Waypoints
-      - https://youtu.be/cbDLHxQRolI
+    - [#1 : 준비](https://youtu.be/LFErpgcwbnc)
+    - [#2 : Content Editor 레이아웃](https://youtu.be/W3XC4lnz6Og)
+    - [#3 : GameDB 소개](https://youtu.be/JzJgi4McRWQ)
+    - [#4 : Spawn 기본](https://youtu.be/sonSG9Qsaws)
+    - [#5 : Spawn 오브젝트](https://youtu.be/M1OQyaR1Ors)
+    - [#6 : Spawn Waypoints](https://youtu.be/cbDLHxQRolI)
 - **문의**
   - SoonBo Noh : <niceofer@hotmail.com>
   - <https://tech4labs.com>

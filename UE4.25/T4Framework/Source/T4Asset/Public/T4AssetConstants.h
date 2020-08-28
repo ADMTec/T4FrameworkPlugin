@@ -19,6 +19,9 @@ static const FName T4Const_DefaultActionPointName = TEXT("Root"); // #63
 static const FName T4Const_DefaultFullBodySkinName = T4Const_DefaultName; // #130
 static const FName T4Const_DefaultPlayTagName = T4Const_DefaultName;
 
+static const FName T4Const_RootActorComponentName = TEXT("Root"); // #162
+static const FName T4Const_DefaultActorComponentName = T4Const_DefaultName; // #162
+
 
 // #73, #106 : AnimSet
 

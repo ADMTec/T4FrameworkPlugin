@@ -151,6 +151,21 @@ public:
 	virtual uint32 NumChildActions(const FT4ActionKey& InActionKey) const = 0; // #54
 };
 
+class T4ENGINE_API IT4CompositeComponent // #162
+{
+public:
+	virtual ~IT4CompositeComponent() {}
+
+	virtual FName GetCompositeName() const = 0;
+
+	virtual const FTransform GetLocalTransform() const = 0;
+
+	virtual void SetLocalTransform(const FTransform& InTransform) = 0; // Local == Relative
+	virtual void SetLocalLocation(const FVector& InLocation) = 0;
+	virtual void SetLocalRotation(const FRotator& InRotation) = 0;
+	virtual void SetLocalScale3D(const FVector& InScale) = 0;
+};
+
 class T4ENGINE_API IT4WorldActor
 {
 public:
@@ -191,6 +206,8 @@ public:
 	virtual IT4AnimControl* GetAnimControl() const = 0; // #14
 	virtual IT4ActionControl* GetActionControl() = 0; // #20, #76 : Action Public Manager
 	virtual const FT4WorldActorProperty& GetPropertyConst() const = 0; // #34
+
+	virtual IT4CompositeComponent* GetCompositeComponent(FName InComponentName) = 0; // #162 : Composite, T4Const_DefaultActorComponentName = Default = NAME_None
 
 	virtual float GetLifeTimeSec() const = 0; // #102
 	virtual float GetWorldTimeScale() const = 0; // #102

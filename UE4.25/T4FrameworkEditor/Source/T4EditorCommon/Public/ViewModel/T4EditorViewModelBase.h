@@ -44,7 +44,7 @@ class T4EDITORCOMMON_API FT4EditorViewModelBase : public IT4EditorViewModel
 public:
 	DECLARE_MULTICAST_DELEGATE(FT4OnViewModelChanged); // #77, #85
 
-	DECLARE_MULTICAST_DELEGATE_OneParam(FT4OnManipulatorStartTracking, AActor*); // #125
+	DECLARE_MULTICAST_DELEGATE(FT4OnManipulatorStartTracking); // #125
 	DECLARE_MULTICAST_DELEGATE(FT4OnManipulatorEndTracking); // #125
 	DECLARE_MULTICAST_DELEGATE_TwoParams(FT4OnManipulatorUpdating, ET4EditWidgetUpdateType, const FVector&); // #118: PRS (rot or loc or scale)
 
@@ -74,9 +74,10 @@ public:
 	IT4WorldActor* GetPlayerActor() const; // #58
 	IT4PlayerController* GetPlayerController() const;
 
-	virtual AActor* GetManipulatorTarget() const override; // #94
+	virtual bool IsUseManipulator() const override; // #162
+	virtual const FTransform GetManipulatorTransform() const override; // #162
 
-	virtual void NotifyManipulatorStartTracking(AActor* InSelectedActor) override; // #125
+	virtual void NotifyManipulatorStartTracking() override; // #125
 	virtual void NotifyManipulatorEndTracking() override; // #125 : 미반영 복구
 	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
 
@@ -119,6 +120,8 @@ public:
 	virtual UT4EditorEnvironmentController* GetEditorBackupEnvironmentController() const { return nullptr; } // #147
 
 	virtual UT4EditorPathSegmentController* GetEditorPathSegmentController() const { return nullptr; } // #155
+
+	virtual AActor* GetManipulatorActor() const; // #94
 
 	bool HasReplaySystem() const { return EditorReplaySystemPtr.IsValid(); } // #104
 	UT4EditorReplaySystemController* GetReplaySystem(); // #60, #68, #104
@@ -363,6 +366,8 @@ protected:
 	FVector CachedPlayerLocation; // #116
 
 	bool bCachedFreeCameraEnabled; // #162
+	FT4ActorID CachedCameraOwnerActorID; // #162 : Reload 시 카메라 세팅 변경 방지
+	FVector CachedFreeCameraAtLocation; // #158
 	FVector CachedFreeCameraLocation; // #158
 	FRotator CachedFreeCameraRotation; // #158
 

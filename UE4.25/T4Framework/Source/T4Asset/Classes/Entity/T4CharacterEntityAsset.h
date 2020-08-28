@@ -72,10 +72,14 @@ struct T4ASSET_API FT4EntityCharacterRenderingData : public FT4EntityRenderingDa
 
 public:
 	FT4EntityCharacterRenderingData()
+		: Scale(1.0f)
 	{
 	}
 
 	// CustomizeCharacterEntityDetails
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "0.1", ClampMax = "10"))
+	float Scale;
 };
 
 class UT4MapEntityAsset;
@@ -544,6 +548,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category= Rendering)
 	FT4EntityCharacterRenderingData Rendering;
+
+	UPROPERTY(EditAnywhere, Category = ImportSettings)
+	FT4EntityImportSettingData ImportSettings;
 
 	UPROPERTY(EditAnywhere, Category= Testing)
 	FT4EntityCharacterTestingData Testing;

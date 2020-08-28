@@ -167,6 +167,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "Rendering"))
 	FT4EntityItemRenderingData DropMeshRendering;
 
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "ImportSettings"))
+	FT4EntityImportSettingData DropMeshImportSettings;
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor, meta = (DisplayName = "Test"))
 	FT4EditorTestItemData EditorTestItemData; // #107

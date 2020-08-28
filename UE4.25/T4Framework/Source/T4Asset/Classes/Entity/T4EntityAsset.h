@@ -75,9 +75,7 @@ struct T4ASSET_API FT4EntityRenderingData
 
 public:
 	FT4EntityRenderingData()
-		: Scale(1.0f)
-		, ImportRotationYaw(-90.0f)
-		, bReceivesDecals(false) // #54
+		: bReceivesDecals(false) // #54
 	{
 	}
 
@@ -85,14 +83,30 @@ public:
 	// CustomizePropEntityDetails
 	// CustomizeItemCommonEntityDetails
 
-	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "0.1", ClampMax = "10"))
-	float Scale;
 
-	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "-360.0", ClampMax = "360.0"))
-	float ImportRotationYaw;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bReceivesDecals; // #54
+};
+
+// #162
+USTRUCT()
+struct T4ASSET_API FT4EntityImportSettingData
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4EntityImportSettingData()
+		: ImportRotationYaw(-90.0f)
+	{
+	}
+
+	// CustomizeCharacterEntityDetails
+	// CustomizePropEntityDetails
+	// CustomizeItemCommonEntityDetails
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "-360.0", ClampMax = "360.0"))
+	float ImportRotationYaw;
 };
 
 // #80

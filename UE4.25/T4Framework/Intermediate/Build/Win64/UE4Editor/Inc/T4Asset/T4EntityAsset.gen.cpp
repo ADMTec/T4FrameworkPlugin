@@ -32,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPlayAnimationData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityMaterialSlotData();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityImportSettingData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityRenderingData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPhysicalData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityBoundType();
@@ -1067,6 +1068,95 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMaterialSlotDa
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4EntityMaterialSlotData_Hash() { return 1978436035U; }
+class UScriptStruct* FT4EntityImportSettingData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityImportSettingData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityImportSettingData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityImportSettingData"), sizeof(FT4EntityImportSettingData), Get_Z_Construct_UScriptStruct_FT4EntityImportSettingData_Hash());
+	}
+	return Singleton;
+}
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityImportSettingData>()
+{
+	return FT4EntityImportSettingData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityImportSettingData(FT4EntityImportSettingData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityImportSettingData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityImportSettingData
+{
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityImportSettingData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityImportSettingData")),new UScriptStruct::TCppStructOps<FT4EntityImportSettingData>);
+	}
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityImportSettingData;
+	struct Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ImportRotationYaw_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ImportRotationYaw;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #162\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
+		{ "ToolTip", "#162" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityImportSettingData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewProp_ImportRotationYaw_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ClampMax", "360.0" },
+		{ "ClampMin", "-360.0" },
+		{ "Comment", "// CustomizeCharacterEntityDetails\n// CustomizePropEntityDetails\n// CustomizeItemCommonEntityDetails\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
+		{ "ToolTip", "CustomizeCharacterEntityDetails\nCustomizePropEntityDetails\nCustomizeItemCommonEntityDetails" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewProp_ImportRotationYaw = { "ImportRotationYaw", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityImportSettingData, ImportRotationYaw), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewProp_ImportRotationYaw_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewProp_ImportRotationYaw_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::NewProp_ImportRotationYaw,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
+		nullptr,
+		&NewStructOps,
+		"T4EntityImportSettingData",
+		sizeof(FT4EntityImportSettingData),
+		alignof(FT4EntityImportSettingData),
+		Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityImportSettingData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityImportSettingData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityImportSettingData"), sizeof(FT4EntityImportSettingData), Get_Z_Construct_UScriptStruct_FT4EntityImportSettingData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityImportSettingData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityImportSettingData_Hash() { return 3379482016U; }
 class UScriptStruct* FT4EntityRenderingData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1100,14 +1190,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityRenderingData
 #endif
 		static void NewProp_bReceivesDecals_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bReceivesDecals;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ImportRotationYaw_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ImportRotationYaw;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Scale_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Scale;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -1123,7 +1205,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityRenderingData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// CustomizeCharacterEntityDetails\n// CustomizePropEntityDetails\n// CustomizeItemCommonEntityDetails\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
+		{ "ToolTip", "CustomizeCharacterEntityDetails\nCustomizePropEntityDetails\nCustomizeItemCommonEntityDetails" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals_SetBit(void* Obj)
@@ -1131,30 +1215,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityRenderingData
 		((FT4EntityRenderingData*)Obj)->bReceivesDecals = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals = { "bReceivesDecals", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityRenderingData), &Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_ImportRotationYaw_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ClampMax", "360.0" },
-		{ "ClampMin", "-360.0" },
-		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_ImportRotationYaw = { "ImportRotationYaw", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityRenderingData, ImportRotationYaw), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_ImportRotationYaw_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_ImportRotationYaw_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_Scale_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ClampMax", "10" },
-		{ "ClampMin", "0.1" },
-		{ "Comment", "// CustomizeCharacterEntityDetails\n// CustomizePropEntityDetails\n// CustomizeItemCommonEntityDetails\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
-		{ "ToolTip", "CustomizeCharacterEntityDetails\nCustomizePropEntityDetails\nCustomizeItemCommonEntityDetails" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_Scale = { "Scale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityRenderingData, Scale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_Scale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_Scale_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_bReceivesDecals,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_ImportRotationYaw,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::NewProp_Scale,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityRenderingData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
@@ -1184,7 +1246,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityRenderingData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityRenderingData_Hash() { return 412794587U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityRenderingData_Hash() { return 1540875541U; }
 class UScriptStruct* FT4EntityPhysicalData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

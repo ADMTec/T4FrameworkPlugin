@@ -44,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeT4CharacterEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4CharacterEntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4CharacterEntityAsset();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActorEntityAsset();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityImportSettingData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimBlueprint_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeleton_NoRegister();
@@ -1592,6 +1593,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterRende
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Scale_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Scale;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
@@ -1603,6 +1609,20 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterRende
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityCharacterRenderingData>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::NewProp_Scale_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ClampMax", "10" },
+		{ "ClampMin", "0.1" },
+		{ "Comment", "// CustomizeCharacterEntityDetails\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+		{ "ToolTip", "CustomizeCharacterEntityDetails" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::NewProp_Scale = { "Scale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterRenderingData, Scale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::NewProp_Scale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::NewProp_Scale_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::NewProp_Scale,
+	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 		Z_Construct_UScriptStruct_FT4EntityRenderingData,
@@ -1610,8 +1630,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterRende
 		"T4EntityCharacterRenderingData",
 		sizeof(FT4EntityCharacterRenderingData),
 		alignof(FT4EntityCharacterRenderingData),
-		nullptr,
-		0,
+		Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
 		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Statics::Struct_MetaDataParams))
@@ -1631,7 +1651,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterRende
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Hash() { return 962609642U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterRenderingData_Hash() { return 1580508499U; }
 class UScriptStruct* FT4EntityCharacterPhysicalData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1751,6 +1771,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Testing;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ImportSettings_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ImportSettings;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Rendering_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rendering;
@@ -1811,6 +1835,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Testing = { "Testing", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, Testing), Z_Construct_UScriptStruct_FT4EntityCharacterTestingData, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Testing_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Testing_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ImportSettings_MetaData[] = {
+		{ "Category", "ImportSettings" },
+		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ImportSettings = { "ImportSettings", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, ImportSettings), Z_Construct_UScriptStruct_FT4EntityImportSettingData, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ImportSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ImportSettings_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Rendering_MetaData[] = {
 		{ "Category", "Rendering" },
@@ -1886,6 +1917,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_SkeletonAsset = { "SkeletonAsset", nullptr, (EPropertyFlags)0x0014010000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, SkeletonAsset), Z_Construct_UClass_USkeleton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_SkeletonAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_SkeletonAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4CharacterEntityAsset_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Testing,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ImportSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Rendering,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_Physical,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_ReactionSetData,
@@ -1925,7 +1957,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 599649189);
+	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 2028967406);
 	template<> T4ASSET_API UClass* StaticClass<UT4CharacterEntityAsset>()
 	{
 		return UT4CharacterEntityAsset::StaticClass();

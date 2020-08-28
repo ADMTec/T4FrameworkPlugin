@@ -59,8 +59,6 @@ public:
 	FT4EntityPropRenderingData()
 	{
 	}
-
-	// CustomizePropEntityDetails // #126
 };
 
 USTRUCT()
@@ -112,6 +110,30 @@ public:
 	}
 };
 
+// #162
+USTRUCT()
+struct T4ASSET_API FT4EntityPropCompositeData
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4EntityPropCompositeData()
+	{
+	}
+
+	UPROPERTY(EditAnywhere, Category= Common)
+	FT4EntityPropMeshData MeshData;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4EntityPropAnimationData AnimationData; // #126
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	FT4EntityPropRenderingData Rendering;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	FT4EntityImportSettingData ImportSettings;
+};
+
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
 class T4ASSET_API UT4PropEntityAsset : public UT4ActorEntityAsset
 {
@@ -131,27 +153,27 @@ public:
 #if WITH_EDITOR
 	virtual bool IsSpawnable() override // #131
 	{
-		if (ET4EntityMeshType::None == MeshData.MeshType)
+		if (ET4EntityMeshType::None == DefaultCompositeData.MeshData.MeshType)
 		{
 			return false;
 		}
-		if (ET4EntityMeshType::StaticMesh == MeshData.MeshType)
+		if (ET4EntityMeshType::StaticMesh == DefaultCompositeData.MeshData.MeshType)
 		{
-			if (MeshData.StaticMeshAsset.IsNull())
+			if (DefaultCompositeData.MeshData.StaticMeshAsset.IsNull())
 			{
 				return false;
 			}
 		}
-		else if (ET4EntityMeshType::SkeletalMesh == MeshData.MeshType)
+		else if (ET4EntityMeshType::SkeletalMesh == DefaultCompositeData.MeshData.MeshType)
 		{
-			if (MeshData.SkeletalMeshAsset.IsNull())
+			if (DefaultCompositeData.MeshData.SkeletalMeshAsset.IsNull())
 			{
 				return false;
 			}
 		}
-		else if (ET4EntityMeshType::ParticleSystem == MeshData.MeshType)
+		else if (ET4EntityMeshType::ParticleSystem == DefaultCompositeData.MeshData.MeshType)
 		{
-			if (MeshData.ParticleSystemAsset.IsNull())
+			if (DefaultCompositeData.MeshData.ParticleSystemAsset.IsNull())
 			{
 				return false;
 			}
@@ -161,15 +183,9 @@ public:
 #endif
 
 public:
-	UPROPERTY(EditAnywhere, Category= Common)
-	FT4EntityPropMeshData MeshData;
-
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4EntityPropAnimationData AnimationData; // #126
+	FT4EntityPropCompositeData DefaultCompositeData;
 
 	UPROPERTY(EditAnywhere, Category= Common)
 	FT4EntityPropPhysicalData Physical;
-
-	UPROPERTY(EditAnywhere, Category= ClientOnly)
-	FT4EntityPropRenderingData Rendering;
 };
