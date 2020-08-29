@@ -131,9 +131,9 @@ enum class ET4PlayTarget : uint8 // #100
 UENUM()
 enum class ET4PlayTagType : uint8 // #81
 {
-	Material, // #81
 	Attachment, // #74
 	Action, // #74
+	Material, // #81
 
 	All, // #81
 };

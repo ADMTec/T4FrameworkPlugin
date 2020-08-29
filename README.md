@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.34)
+# T4FrameworkPlugin (v0.9.35)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,10 +18,14 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.34**
-    - #162 [기능추가] Entity Editor, Prop Entity RelativeTransform 을 EditMode 의 Manipulator 를 통해 편집 할 수 있도록 추가
-    - #162 [버그수정] Entity Editor, Prop Entity 의 애니메이션 사용 시 간헐적으로 발생하던 크래시 수정
-	- #162 [버그수정] Entity Editor, Player Reload 시 카메라 위치를 유지하도록 수정
+  - **v0.9.35**
+    - #161 [기능개선] Entity Editor, Drop Item 설정 시에도 Manipulator 를 통해 Relative Transform 을 설정할 수 있도록 지원
+    - #158 [버그수정] Entity Editor, Item/Prop Entity 의 Particle System MeshType 설정이 정상적으로 동작하지 않던 문제 수정
+	- #158 [버그수정] Action Editor, PlayTag Action 의 PlayTag DropList 에서 아이템을 선택할 수 없던 문제 수정
+	- #158 [버그수정] Action Editor, ActionPack 에 Preview 용 Entity 설정 시 매프레임 발생되던 Warning(Already exist) 로그 수정
+	- #158 [기능개선] 공용 AnimBP, BehaviorTree 에셋 네이밍 변경
+	  - Ex. BP_Human_Basic => T4AnimBP_Human_Basic
+	  - Ex. BT_NPC_Combat => T4BT_NPC_Combat
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상(임시)**

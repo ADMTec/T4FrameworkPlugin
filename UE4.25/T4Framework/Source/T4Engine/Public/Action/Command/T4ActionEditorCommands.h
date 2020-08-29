@@ -23,17 +23,17 @@ public:
 	ET4EditorAction EditorActionType;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName PlayTagName; // #81 : PlayTagSet, PlayTagClear
+	ET4PlayTagType PlayTagType; // #81 : PlayTagSet, PlayTagClear
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4PlayTagType PlayTagType; // #81 : PlayTagSet, PlayTagClear
+	FName PlayTagName; // #81 : PlayTagSet, PlayTagClear
 
 public:
 	FT4EditorActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
 		, EditorActionType(ET4EditorAction::None)
-		, PlayTagName(NAME_None) // #81 : PlayTagSet, PlayTagClear
 		, PlayTagType(ET4PlayTagType::All) // #81 : PlayTagSet, PlayTagClear
+		, PlayTagName(NAME_None) // #81 : PlayTagSet, PlayTagClear
 	{
 	}
 

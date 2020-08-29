@@ -266,9 +266,9 @@ public:
 	bool ClientTeleport(const FVector& InLocation); // #86
 	bool ClientTeleport(const FVector2D& InLocation); // #90
 
-	bool ClientHasActivePlayTag(FName InPlayTagName, ET4PlayTagType InPlayTagType) const; // #81, #124
-	void ClientActivePlayTag(FName InPlayTagName, ET4PlayTagType InPlayTagType); // #81
-	void ClientInactivePlayTag(FName InPlayTagName, ET4PlayTagType InPlayTagType); // #81
+	bool ClientHasActivePlayTag(ET4PlayTagType InPlayTagType, FName InPlayTagName) const; // #81, #124
+	void ClientActivePlayTag(ET4PlayTagType InPlayTagType, FName InPlayTagName); // #81
+	void ClientInactivePlayTag(ET4PlayTagType InPlayTagType, FName InPlayTagName); // #81
 
 	bool ClientWorldTravel(const UT4EntityAsset* InEntityAsset); // #79
 	bool ClientWorldTravel(const FT4EntityKey& InMapEntityKey); // #87

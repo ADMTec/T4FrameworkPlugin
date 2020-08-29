@@ -48,14 +48,14 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PlayTagName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PlayTagType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PlayTagType_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PlayTagName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EditorActionType_MetaData[];
 #endif
@@ -76,22 +76,22 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EditorActionCommand>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #81 : PlayTagSet, PlayTagClear\n" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionEditorCommands.h" },
 		{ "ToolTip", "#81 : PlayTagSet, PlayTagClear" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType = { "PlayTagType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommand, PlayTagType), Z_Construct_UEnum_T4Asset_ET4PlayTagType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName = { "PlayTagName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommand, PlayTagName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionEditorCommands.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName = { "PlayTagName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommand, PlayTagName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType = { "PlayTagType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommand, PlayTagType), Z_Construct_UEnum_T4Asset_ET4PlayTagType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType_MetaData[] = {
 		{ "Category", "Common" },
@@ -101,9 +101,9 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType = { "EditorActionType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorActionCommand, EditorActionType), Z_Construct_UEnum_T4Engine_ET4EditorAction, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_PlayTagName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorActionCommand_Statics::NewProp_EditorActionType_Underlying,
 	};
@@ -135,7 +135,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EditorActionCommand
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorActionCommand_Hash() { return 797186823U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorActionCommand_Hash() { return 2759116939U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

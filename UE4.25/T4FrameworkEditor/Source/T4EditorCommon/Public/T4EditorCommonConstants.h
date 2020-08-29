@@ -8,29 +8,29 @@
 /**
   * #39, #90
  */
-static const FName T4Editor_ConstnatTableMapZone = TEXT("MapZone"); // #92 : Int Value
-static const FName T4Editor_ConstnatTableTimeTag = TEXT("TimeTag"); // #90 : Float Value
+static const FName T4Editor_ConstantTableMapZone = TEXT("MapZone"); // #92 : Int Value
+static const FName T4Editor_ConstantTableTimeTag = TEXT("TimeTag"); // #90 : Float Value
 
-static const FName T4Editor_ConstnatTableCharacterSystemAnimation = TEXT("CharacterSystemAnimation"); // #38
-static const FName T4Editor_ConstnatTableCharacterBasicSkillAnimation = TEXT("CharacterBasicSkillAnimation");
-static const FName T4Editor_ConstnatTableCharacterParagonSkillAnimation = TEXT("CharacterParagonSkillAnimation"); // #131
-static const FName T4Editor_ConstnatTablePropAnimation = TEXT("PropAnimation"); // #126
-static const FName T4Editor_ConstnatTableWeaponAnimation = TEXT("WeaponAnimation"); // #107
+static const FName T4Editor_ConstantTableCharacterSystemAnimation = TEXT("CharacterSystemAnimation"); // #38
+static const FName T4Editor_ConstantTableCharacterBasicSkillAnimation = TEXT("CharacterBasicSkillAnimation");
+static const FName T4Editor_ConstantTableCharacterParagonSkillAnimation = TEXT("CharacterParagonSkillAnimation"); // #131
+static const FName T4Editor_ConstantTablePropAnimation = TEXT("PropAnimation"); // #126
+static const FName T4Editor_ConstantTableWeaponAnimation = TEXT("WeaponAnimation"); // #107
 
-static const FName T4Editor_ConstnatTableActionPoint = TEXT("ActionPoint"); // #47
+static const FName T4Editor_ConstantTableActionPoint = TEXT("ActionPoint"); // #47
 
-static const FName T4Editor_ConstnatTableEquipPoint = TEXT("EquipPoint"); // #72
-static const FName T4Editor_ConstnatTableCompositePart = TEXT("CompositePart"); // #71
-static const FName T4Editor_ConstnatTableFullBodySkin = TEXT("FullBodySkin"); // #130
+static const FName T4Editor_ConstantTableEquipPoint = TEXT("EquipPoint"); // #72
+static const FName T4Editor_ConstantTableCompositePart = TEXT("CompositePart"); // #71
+static const FName T4Editor_ConstantTableFullBodySkin = TEXT("FullBodySkin"); // #130
 
-static const FName T4Editor_ConstnatTablePlayTagMaterial = TEXT("PlayTagMaterial"); // #74
-static const FName T4Editor_ConstnatTablePlayTagAttachment = TEXT("PlayTagAttachment"); // #74
-static const FName T4Editor_ConstnatTablePlayTagAction = TEXT("PlayTagAction"); // #74
+static const FName T4Editor_ConstantTablePlayTagMaterial = TEXT("PlayTagMaterial"); // #74
+static const FName T4Editor_ConstantTablePlayTagAttachment = TEXT("PlayTagAttachment"); // #74
+static const FName T4Editor_ConstantTablePlayTagAction = TEXT("PlayTagAction"); // #74
 
-static const FName T4Editor_ConstnatTableAnimset = TEXT("Animset");  // #73
-static const FName T4Editor_ConstnatTableStance = TEXT("Stance"); // #106
+static const FName T4Editor_ConstantTableAnimset = TEXT("Animset");  // #73
+static const FName T4Editor_ConstantTableStance = TEXT("Stance"); // #106
 
-static const FName T4Editor_ConstnatTableReaction = TEXT("Reaction"); // #76
+static const FName T4Editor_ConstantTableReaction = TEXT("Reaction"); // #76
 
 static const FName T4Editor_DefaultAssetTypeCategory = FName(TEXT("T4Framework"));
 

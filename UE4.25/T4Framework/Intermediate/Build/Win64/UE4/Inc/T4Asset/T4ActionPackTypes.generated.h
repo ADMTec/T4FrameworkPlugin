@@ -34,9 +34,9 @@ enum class ET4MovementType : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4MovementType>();
 
 #define FOREACH_ENUM_ET4PLAYTAGTYPE(op) \
-	op(ET4PlayTagType::Material) \
 	op(ET4PlayTagType::Attachment) \
 	op(ET4PlayTagType::Action) \
+	op(ET4PlayTagType::Material) \
 	op(ET4PlayTagType::All) 
 
 enum class ET4PlayTagType : uint8;

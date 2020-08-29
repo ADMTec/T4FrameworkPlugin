@@ -161,7 +161,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4PlayTagType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4PlayTagType(ET4PlayTagType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4PlayTagType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PlayTagType_Hash() { return 1371772521U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PlayTagType_Hash() { return 4080374520U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4PlayTagType()
 	{
 #if WITH_HOT_RELOAD
@@ -173,9 +173,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4PlayTagType::Material", (int64)ET4PlayTagType::Material },
 				{ "ET4PlayTagType::Attachment", (int64)ET4PlayTagType::Attachment },
 				{ "ET4PlayTagType::Action", (int64)ET4PlayTagType::Action },
+				{ "ET4PlayTagType::Material", (int64)ET4PlayTagType::Material },
 				{ "ET4PlayTagType::All", (int64)ET4PlayTagType::All },
 			};
 #if WITH_METADATA
@@ -183,14 +183,14 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "Action.Comment", "// #74\n" },
 				{ "Action.Name", "ET4PlayTagType::Action" },
 				{ "Action.ToolTip", "#74" },
-				{ "All.Comment", "// #74\n" },
+				{ "All.Comment", "// #81\n" },
 				{ "All.Name", "ET4PlayTagType::All" },
-				{ "All.ToolTip", "#74" },
-				{ "Attachment.Comment", "// #81\n" },
+				{ "All.ToolTip", "#81" },
 				{ "Attachment.Name", "ET4PlayTagType::Attachment" },
-				{ "Attachment.ToolTip", "#81" },
 				{ "Comment", "// #81\n" },
+				{ "Material.Comment", "// #74\n" },
 				{ "Material.Name", "ET4PlayTagType::Material" },
+				{ "Material.ToolTip", "#74" },
 				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
 				{ "ToolTip", "#81" },
 			};

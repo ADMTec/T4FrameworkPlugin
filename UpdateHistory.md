@@ -2,6 +2,10 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.34
+  - #162 [기능추가] Entity Editor, Prop Entity RelativeTransform 을 EditMode 의 Manipulator 를 통해 편집 할 수 있도록 추가
+  - #162 [버그수정] Entity Editor, Prop Entity 의 애니메이션 사용 시 간헐적으로 발생하던 크래시 수정
+  - #162 [버그수정] Entity Editor, Player Reload 시 카메라 위치를 유지하도록 수정
 - v0.9.33
   - #161 [기능추가] Builtin HUD 의 QuickMenu 에 노출되는 GameDB UID 를 DefaultT4Framework.ini 에서 설정할 수 있도록 기능 추가
   - #158 [버그수정] Entity Editor, Character Entity 오픈 시 카메라가 원점에 생성되던 문제 수정

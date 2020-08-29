@@ -1561,14 +1561,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PlayTagActionData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PlayTagName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PlayTagType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PlayTagType_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTagName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_PlayTagName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -1584,26 +1584,26 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PlayTagActionData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4PlayTagActionData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType = { "PlayTagType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayTagActionData, PlayTagType), Z_Construct_UEnum_T4Asset_ET4PlayTagType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName = { "PlayTagName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayTagActionData, PlayTagName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #39 : FT4ActionDetails::CustomizePlayTagActionDetails\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
 		{ "ToolTip", "#39 : FT4ActionDetails::CustomizePlayTagActionDetails" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName = { "PlayTagName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayTagActionData, PlayTagName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType = { "PlayTagType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayTagActionData, PlayTagType), Z_Construct_UEnum_T4Asset_ET4PlayTagType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::NewProp_PlayTagName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
@@ -1633,7 +1633,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PlayTagActionData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PlayTagActionData_Hash() { return 2616319010U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4PlayTagActionData_Hash() { return 2535382980U; }
 class UScriptStruct* FT4ReactionActionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

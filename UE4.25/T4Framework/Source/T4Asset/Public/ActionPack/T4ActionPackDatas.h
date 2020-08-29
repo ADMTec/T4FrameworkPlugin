@@ -784,16 +784,16 @@ struct T4ASSET_API FT4PlayTagActionData : public FT4ActionDataBase
 public:
 	// #39 : FT4ActionDetails::CustomizePlayTagActionDetails
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName PlayTagName;
+	ET4PlayTagType PlayTagType;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4PlayTagType PlayTagType;
+	FName PlayTagName;
 
 public:
 	FT4PlayTagActionData()
 		: FT4ActionDataBase(StaticActionType())
-		, PlayTagName(NAME_None)
 		, PlayTagType(ET4PlayTagType::All)
+		, PlayTagName(NAME_None)
 	{
 	}
 

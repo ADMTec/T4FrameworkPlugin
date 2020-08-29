@@ -237,7 +237,7 @@ public:
 	virtual const float GetMovementSpeed() const = 0;
 
 	virtual bool HasReaction(const FName& InReactionName) const = 0; // #73
-	virtual bool HasPlayTag(const FName& InPlayTagName, ET4PlayTagType InPlayTagType) const = 0; // #81
+	virtual bool HasPlayTag(ET4PlayTagType InPlayTagType, const FName& InPlayTagName) const = 0; // #81
 	virtual bool HasActionPoint(const FName& InActionPoint) const = 0; // #57 : ActionPoint = Socket or Bone or VirtualBone
 	virtual bool HasEquipment(const FT4ActionKey& InActionKey) const = 0; // #111
 
