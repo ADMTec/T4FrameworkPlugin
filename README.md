@@ -18,6 +18,8 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
+  - **Milestone 7** (2020.07.06 ~ 2020.10.08)
+    - https://tech4labs.com/T4Framework_Milestone7_Achieved/
   - **v0.9.36**
     - #158 [기능개선] 프로젝트 별 Content Name 및 MasterTable 을 별도로 지정해 사용할 수 있도록 수정
 	  - DefaultProject.ini => ProjectGameMasterTablePath / ProjectGameContentName
