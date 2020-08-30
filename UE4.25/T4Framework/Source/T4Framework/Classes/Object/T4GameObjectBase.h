@@ -40,7 +40,7 @@ public:
 	virtual bool IsServerObject() const { return false; }
 	virtual bool IsClientObject() const { return false; }
 
-	virtual bool IsEntered() const { return bEntered; } // #134
+	virtual bool IsObjectEntered() const { return bObjectEntered; } // #134
 
 	virtual IT4ObjectController* GetController() const { return nullptr; } // #114 : Server All, Client Player Only
 	virtual IT4WorldActor* GetPossessActor() const;
@@ -78,6 +78,6 @@ private:
 	FT4ObjectID GameObjectID;
 
 protected:
-	bool bEntered;
+	bool bObjectEntered;
 	FT4ActorID ControlActorID; // #114 : ActorID 기억! 현재는 ObjectID.Value 와 같다. 이후 교체가 되어야 할 수 있음
 };
