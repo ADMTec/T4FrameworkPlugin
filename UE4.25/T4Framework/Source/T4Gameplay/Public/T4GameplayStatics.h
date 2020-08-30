@@ -13,6 +13,16 @@
 /**
   * #151
  */
+struct FT4GameplayParameters // #158
+{
+	FT4GameplayParameters()
+		: ProjectGameContentName(NAME_None)
+	{
+	}
+	FSoftObjectPath ProjectGameMasterTablePath;
+	FName ProjectGameContentName;
+};
+
 class UT4ContentSpawnAsset;
 class IT4PlayerController;
 class UT4GameClientObject;
@@ -23,6 +33,11 @@ public:
 
 	FT4GameplayStatics();
 	~FT4GameplayStatics();
+
+	bool IsInitialized() const { return bInitialized; }
+
+	void Initialize(const FT4GameplayParameters& InGameplayParameters); // #158
+	void Finalize(); // #158
 
 	IT4PlayerController* GetPlayerController(ET4LayerType InLayerType) const;
 	UT4GameClientObject* GetPlayerClientObject(ET4LayerType InLayerType) const;
@@ -109,4 +124,7 @@ public:
 
 	bool IsReplayPlaying(ET4LayerType InLayerType); // #68
 	bool IsReplayRecording(ET4LayerType InLayerType); // #68
+
+private:
+	bool bInitialized; // #158
 };

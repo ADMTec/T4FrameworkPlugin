@@ -2,6 +2,14 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.35
+  - #161 [기능개선] Entity Editor, Drop Item 설정 시에도 Manipulator 를 통해 Relative Transform 을 설정할 수 있도록 지원
+  - #158 [버그수정] Entity Editor, Item/Prop Entity 의 Particle System MeshType 설정이 정상적으로 동작하지 않던 문제 수정
+  - #158 [버그수정] Action Editor, PlayTag Action 의 PlayTag DropList 에서 아이템을 선택할 수 없던 문제 수정
+  - #158 [버그수정] Action Editor, ActionPack 에 Preview 용 Entity 설정 시 매프레임 발생되던 Warning(Already exist) 로그 수정
+  - #158 [기능개선] 공용 AnimBP, BehaviorTree 에셋 네이밍 변경
+	- Ex. BP_Human_Basic => T4AnimBP_Human_Basic
+	- Ex. BT_NPC_Combat => T4BT_NPC_Combat
 - v0.9.34
   - #162 [기능추가] Entity Editor, Prop Entity RelativeTransform 을 EditMode 의 Manipulator 를 통해 편집 할 수 있도록 추가
   - #162 [버그수정] Entity Editor, Prop Entity 의 애니메이션 사용 시 간헐적으로 발생하던 크래시 수정

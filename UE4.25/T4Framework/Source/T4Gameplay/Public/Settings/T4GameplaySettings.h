@@ -38,11 +38,11 @@ public:
 
 public:
 	// Plugins/T4Framework/Config/DefaultT4Framework.ini
-	UPROPERTY(EditAnywhere, config, Category = "Game Content")
-	TSoftObjectPtr<UDataTable> GameMasterTablePath; // #48, #135
+	UPROPERTY(EditAnywhere, config, Category = "Game DB")
+	TSoftObjectPtr<UDataTable> DefaultGameMasterTablePath; // #48, #135
 
-	UPROPERTY(EditAnywhere, config, Category = "Game Content")
-	FName GameContentName; // #135 : def = Default
+	UPROPERTY(EditAnywhere, config, Category = "Game DB")
+	FName DefaultGameContentName; // #135 : def = Default
 
 	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
 	TSubclassOf<UT4BuiltinUserWidget> DefaultUserWidgetClass;

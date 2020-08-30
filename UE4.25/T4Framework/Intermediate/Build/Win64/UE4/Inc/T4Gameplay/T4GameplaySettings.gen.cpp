@@ -105,13 +105,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_DefaultUserWidgetClass;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameContentName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultGameContentName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_GameContentName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_DefaultGameContentName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameMasterTablePath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultGameMasterTablePath_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_GameMasterTablePath;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultGameMasterTablePath;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -257,23 +257,23 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass = { "DefaultUserWidgetClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultUserWidgetClass), Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameContentName_MetaData[] = {
-		{ "Category", "Game Content" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName_MetaData[] = {
+		{ "Category", "Game DB" },
 		{ "Comment", "// #48, #135\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 		{ "ToolTip", "#48, #135" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameContentName = { "GameContentName", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, GameContentName), METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameContentName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameContentName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName = { "DefaultGameContentName", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultGameContentName), METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameMasterTablePath_MetaData[] = {
-		{ "Category", "Game Content" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath_MetaData[] = {
+		{ "Category", "Game DB" },
 		{ "Comment", "// Plugins/T4Framework/Config/DefaultT4Framework.ini\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 		{ "ToolTip", "Plugins/T4Framework/Config/DefaultT4Framework.ini" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameMasterTablePath = { "GameMasterTablePath", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, GameMasterTablePath), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameMasterTablePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameMasterTablePath_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath = { "DefaultGameMasterTablePath", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultGameMasterTablePath), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4GameplaySettings_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_AxisMappings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_AxisMappings_Inner,
@@ -294,8 +294,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameContentName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameMasterTablePath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4GameplaySettings_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4GameplaySettings>::IsAbstract,
@@ -324,7 +324,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameplaySettings, 3804857022);
+	IMPLEMENT_CLASS(UT4GameplaySettings, 3560723928);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameplaySettings>()
 	{
 		return UT4GameplaySettings::StaticClass();

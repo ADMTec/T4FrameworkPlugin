@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.35)
+# T4FrameworkPlugin (v0.9.36)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -18,23 +18,20 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **v0.9.35**
-    - #161 [기능개선] Entity Editor, Drop Item 설정 시에도 Manipulator 를 통해 Relative Transform 을 설정할 수 있도록 지원
-    - #158 [버그수정] Entity Editor, Item/Prop Entity 의 Particle System MeshType 설정이 정상적으로 동작하지 않던 문제 수정
-	- #158 [버그수정] Action Editor, PlayTag Action 의 PlayTag DropList 에서 아이템을 선택할 수 없던 문제 수정
-	- #158 [버그수정] Action Editor, ActionPack 에 Preview 용 Entity 설정 시 매프레임 발생되던 Warning(Already exist) 로그 수정
-	- #158 [기능개선] 공용 AnimBP, BehaviorTree 에셋 네이밍 변경
-	  - Ex. BP_Human_Basic => T4AnimBP_Human_Basic
-	  - Ex. BT_NPC_Combat => T4BT_NPC_Combat
+  - **v0.9.36**
+    - #158 [기능개선] 프로젝트 별 Content Name 및 MasterTable 을 별도로 지정해 사용할 수 있도록 수정
+	  - DefaultProject.ini => ProjectGameMasterTablePath / ProjectGameContentName
+	  - 주의, 프로젝트 소스 재빌드 필요 (T4FrameworkExample, TECH4Demo Project)
+    - #158 [버그수정] Entity Editor, Viewport 에서 Delete 키로 편집 캐릭터가 Despawn 되어 편집이 불가능해지던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
-- **참고영상(임시)**
+- **참고영상**
   - **주의**
     - 본 영상은 튜토리얼 및 데모 제작을 위해 개발자가 내부 공유의 목적으로 제작한 가이드 영상입니다.
     - 화면 편집, 음성 볼륨 조정 등의 후반 작업과 스크립트 없이 리이브로 녹화된 점 감안해 주시기 바랍니다.
 	- 빠른 시간 내 정식 튜토리얼을 제작해 공유하도록 하겠습니다.
 	  - https://tech4labs.com/T4Framework_Tutorials/
-  - **튜토리얼 제작**
+  - **튜토리얼(초안)**
     - [#1 : 간단한 툴 소개](https://youtu.be/r29O3YdeV7E)
 	- [엔티티 에디터 (Entity Editor)](https://tech4labs.com/T4Framework_Features_EntityEditor/)
       - [#2 : 풀 바디(Fullbody) 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
@@ -48,7 +45,7 @@
 	  - [#10 : 조합형(Modular) 캐릭터 설정](https://youtu.be/JYd_X66RD2c)
 	  - [#11 : 엔티티 브라우저(Entity Browser) 소개](https://youtu.be/-aVTZihDUHo)
 	  - [#12 : 프랍(Prop) Mesh/Animation 설정](https://youtu.be/6uU5MU99UpU)
-  - **콘텐츠 제작 가이드**
+  - **콘텐츠 제작 가이드(초안)**
     - [#1 : 준비](https://youtu.be/LFErpgcwbnc)
     - [#2 : Content Editor 레이아웃](https://youtu.be/W3XC4lnz6Og)
     - [#3 : GameDB 소개](https://youtu.be/JzJgi4McRWQ)
