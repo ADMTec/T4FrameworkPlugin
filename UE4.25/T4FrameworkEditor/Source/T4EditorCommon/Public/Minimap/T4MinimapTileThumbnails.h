@@ -6,7 +6,7 @@
 #include "Textures/SlateTextureData.h"
 
 class FObjectThumbnail;
-struct FT4LevelThumbnailData;
+struct FT4MapThumbnailData;
 class FSlateTextureRenderTarget2DResource;
 class FT4MinimapTileModel;
 class UTexture2DDynamic;
@@ -39,7 +39,7 @@ public:
 
 private:
 	FSlateTextureDataPtr ToSlateTextureData(const FObjectThumbnail* ObjectThumbnail) const;
-	FSlateTextureDataPtr ToSlateTextureDataEx(const FT4LevelThumbnailData* InWorldSubLevelThumbnail) const; // #84
+	FSlateTextureDataPtr ToSlateTextureDataEx(const FT4MapThumbnailData* InWorldSubLevelThumbnail) const; // #84
 
 private:
 	const FT4MinimapTileModel&				TileModel;

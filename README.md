@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.36_1)
+# T4FrameworkPlugin (v0.9.37)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,13 +20,12 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.36_1**
-	- #158 [버그수정] Content Editor, GameDB 에서 일부 아이템을 선택할 경우 발생하는 크래시 수정 (HOTFIX_1)
-	- #158 [버그수정] Action Editor, 툴바의 ReloadObject 가 정상적으로 동작하지 않던 문제 수정 (HOTFIX_1)
-    - #158 [기능개선] 프로젝트 별 Content Name 및 MasterTable 을 별도로 지정해 사용할 수 있도록 수정
-	  - DefaultProject.ini => ProjectGameMasterTablePath / ProjectGameContentName
-	  - 주의, 프로젝트 소스 재빌드 필요 (T4FrameworkExample, TECH4Demo Project)
-    - #158 [버그수정] Entity Editor, Viewport 에서 Delete 키로 편집 캐릭터가 Despawn 되어 편집이 불가능해지던 문제 수정
+  - **v0.9.37**
+    - #158 [기능개선] Entity Editor, Map Entity Default Details 에 MapZoneDatas, MapThumbnailDatas 프로퍼티 리셋 기능 추가
+  	- #158 [버그수정] Entity Editor, New Map Entity 생성 후 Entity Editor 에서 오픈할 경우 발생하는 크래시 수정
+	- #158 [버그수정] Entity Editor, Zone Entity 테스트(Zone In/Out Blending, Control 캐릭터 변경 등...)가 정상적으로 동작하지 않던 문제 수정
+	- #158 [버그수정] Entity Editor, 일부 Player 컨트롤이 Simulation 옵션에 영향을 받지 않던 문제 수정
+	- #158 [버그수정] T4GameplayerUserSettings 의 PC/NPC/Weapon Quick HotKey 설정이 한칸씩 뒤로 밀려 적용되던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

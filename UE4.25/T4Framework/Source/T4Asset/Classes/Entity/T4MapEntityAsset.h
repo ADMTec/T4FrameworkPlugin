@@ -29,12 +29,12 @@ private:
 // #84, #104 : WorldAsset 의 Tile 을 MapEntity 로 이전!
 static const FName T4Const_DefaultPersistentThumbnailName = TEXT("PersistentLevel"); // #118
 USTRUCT()
-struct T4ASSET_API FT4LevelThumbnailData
+struct T4ASSET_API FT4MapThumbnailData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4LevelThumbnailData()
+	FT4MapThumbnailData()
 #if WITH_EDITOR
 		: ImageWidth(0)
 		, ImageHeight(0)
@@ -168,7 +168,7 @@ public:
 	TArray<FT4EntityMapZoneData> MapZoneDatas; // #147 : WorldExplorer 에서 채운다. AT4MapZoneVolume 런타임 생성.
 
 #if WITH_EDITORONLY_DATA
-	UPROPERTY()
-	TMap<FName, FT4LevelThumbnailData> LevelThumbnailDatas; // #84, #104 : WorldAsset 의 Tile 을 MapEntity 로 이전!
+	UPROPERTY(VisibleAnywhere, Category = Editor)
+	TMap<FName, FT4MapThumbnailData> MapThumbnailDatas; // #84, #104 : WorldExplorer Asset 의 Tile 을 MapEntity 로 이전!
 #endif
 };

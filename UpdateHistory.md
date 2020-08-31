@@ -2,6 +2,13 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.36_1
+  - #158 [버그수정] Content Editor, GameDB 에서 일부 아이템을 선택할 경우 발생하는 크래시 수정 (HOTFIX_1)
+  - #158 [버그수정] Action Editor, 툴바의 ReloadObject 가 정상적으로 동작하지 않던 문제 수정 (HOTFIX_1)
+  - #158 [기능개선] 프로젝트 별 Content Name 및 MasterTable 을 별도로 지정해 사용할 수 있도록 수정
+	- DefaultProject.ini => ProjectGameMasterTablePath / ProjectGameContentName
+	- 주의, 프로젝트 소스 재빌드 필요 (T4FrameworkExample, TECH4Demo Project)
+  - #158 [버그수정] Entity Editor, Viewport 에서 Delete 키로 편집 캐릭터가 Despawn 되어 편집이 불가능해지던 문제 수정
 - v0.9.35
   - #161 [기능개선] Entity Editor, Drop Item 설정 시에도 Manipulator 를 통해 Relative Transform 을 설정할 수 있도록 지원
   - #158 [버그수정] Entity Editor, Item/Prop Entity 의 Particle System MeshType 설정이 정상적으로 동작하지 않던 문제 수정

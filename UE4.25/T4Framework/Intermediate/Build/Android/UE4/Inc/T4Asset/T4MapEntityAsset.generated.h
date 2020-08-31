@@ -28,11 +28,11 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4EntityMapData>();
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4EntityMapZoneData>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Entity_T4MapEntityAsset_h_34_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
-template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4LevelThumbnailData>();
+template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4MapThumbnailData>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Entity_T4MapEntityAsset_h_139_SPARSE_DATA
 #define HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Entity_T4MapEntityAsset_h_139_RPC_WRAPPERS

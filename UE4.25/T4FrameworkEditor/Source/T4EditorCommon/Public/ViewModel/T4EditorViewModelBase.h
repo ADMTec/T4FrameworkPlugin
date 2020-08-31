@@ -121,7 +121,8 @@ public:
 
 	virtual UT4EditorPathSegmentController* GetEditorPathSegmentController() const { return nullptr; } // #155
 
-	virtual AActor* GetManipulatorActor() const; // #94
+	virtual AActor* GetManipulator() const; // #94
+	virtual IT4WorldActor* GetManipulatorActor() const; // #158
 
 	bool HasReplaySystem() const { return EditorReplaySystemPtr.IsValid(); } // #104
 	UT4EditorReplaySystemController* GetReplaySystem(); // #60, #68, #104

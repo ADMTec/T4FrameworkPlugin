@@ -9,13 +9,13 @@
  */
 class UT4MapEntityAsset;
 class FObjectThumbnail;
-struct FT4LevelThumbnailData; // #104
+struct FT4MapThumbnailData; // #104
 
 namespace T4AssetUtil
 {
 
 	// #84
-	T4EDITORCOMMON_API const FT4LevelThumbnailData* MapEntityGetSubLevelThumbnail(
+	T4EDITORCOMMON_API const FT4MapThumbnailData* MapEntityGetSubLevelThumbnail(
 		UT4MapEntityAsset* InMapEntityAsset,
 		const FName InLevelAssetName
 	);

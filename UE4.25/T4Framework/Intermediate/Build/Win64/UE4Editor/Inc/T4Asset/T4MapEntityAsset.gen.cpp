@@ -23,7 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeT4MapEntityAsset() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EnvironmentAsset_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4LevelThumbnailData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4MapThumbnailData();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4MapEntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4MapEntityAsset();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
@@ -315,29 +315,29 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityMapZoneData
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4EntityMapZoneData_Hash() { return 4000648166U; }
-class UScriptStruct* FT4LevelThumbnailData::StaticStruct()
+class UScriptStruct* FT4MapThumbnailData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4LevelThumbnailData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4LevelThumbnailData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4LevelThumbnailData"), sizeof(FT4LevelThumbnailData), Get_Z_Construct_UScriptStruct_FT4LevelThumbnailData_Hash());
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4MapThumbnailData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4MapThumbnailData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4MapThumbnailData"), sizeof(FT4MapThumbnailData), Get_Z_Construct_UScriptStruct_FT4MapThumbnailData_Hash());
 	}
 	return Singleton;
 }
-template<> T4ASSET_API UScriptStruct* StaticStruct<FT4LevelThumbnailData>()
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4MapThumbnailData>()
 {
-	return FT4LevelThumbnailData::StaticStruct();
+	return FT4MapThumbnailData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4LevelThumbnailData(FT4LevelThumbnailData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4LevelThumbnailData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4MapThumbnailData(FT4MapThumbnailData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4MapThumbnailData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData
 {
-	FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData()
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4LevelThumbnailData")),new UScriptStruct::TCppStructOps<FT4LevelThumbnailData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4MapThumbnailData")),new UScriptStruct::TCppStructOps<FT4MapThumbnailData>);
 	}
-} ScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData;
-	struct Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData;
+	struct Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -367,92 +367,92 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #118\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 		{ "ToolTip", "#118" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4LevelThumbnailData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4MapThumbnailData>();
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData_MetaData[] = {
 		{ "Comment", "/** Image data bytes */" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 		{ "ToolTip", "Image data bytes" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData = { "RawImageData", nullptr, (EPropertyFlags)0x0010000800002000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4LevelThumbnailData, RawImageData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData_Inner = { "RawImageData", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData = { "RawImageData", nullptr, (EPropertyFlags)0x0010000800002000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MapThumbnailData, RawImageData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData_Inner = { "RawImageData", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "/** Compressed image data (serialized) */" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 		{ "ToolTip", "Compressed image data (serialized)" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData = { "CompressedImageData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4LevelThumbnailData, CompressedImageData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData_Inner = { "CompressedImageData", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData = { "CompressedImageData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MapThumbnailData, CompressedImageData), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData_Inner = { "CompressedImageData", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageHeight_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageHeight_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "/** Thumbnail height (serialized) */" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 		{ "ToolTip", "Thumbnail height (serialized)" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageHeight = { "ImageHeight", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4LevelThumbnailData, ImageHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageHeight_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageHeight = { "ImageHeight", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MapThumbnailData, ImageHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageWidth_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageWidth_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "/** Thumbnail width (serialized) */" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 		{ "ToolTip", "Thumbnail width (serialized)" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageWidth = { "ImageWidth", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4LevelThumbnailData, ImageWidth), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageWidth_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageWidth_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_RawImageData_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_CompressedImageData_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::NewProp_ImageWidth,
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageWidth = { "ImageWidth", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MapThumbnailData, ImageWidth), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageWidth_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageWidth_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_RawImageData_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_CompressedImageData_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::NewProp_ImageWidth,
 	};
 #endif // WITH_EDITORONLY_DATA
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 		nullptr,
 		&NewStructOps,
-		"T4LevelThumbnailData",
-		sizeof(FT4LevelThumbnailData),
-		alignof(FT4LevelThumbnailData),
-		IF_WITH_EDITORONLY_DATA(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::PropPointers, nullptr),
-		IF_WITH_EDITORONLY_DATA(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::PropPointers), 0),
+		"T4MapThumbnailData",
+		sizeof(FT4MapThumbnailData),
+		alignof(FT4MapThumbnailData),
+		IF_WITH_EDITORONLY_DATA(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::PropPointers, nullptr),
+		IF_WITH_EDITORONLY_DATA(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::PropPointers), 0),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4LevelThumbnailData()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4MapThumbnailData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4LevelThumbnailData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4MapThumbnailData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4LevelThumbnailData"), sizeof(FT4LevelThumbnailData), Get_Z_Construct_UScriptStruct_FT4LevelThumbnailData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4MapThumbnailData"), sizeof(FT4MapThumbnailData), Get_Z_Construct_UScriptStruct_FT4MapThumbnailData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4LevelThumbnailData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4MapThumbnailData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4LevelThumbnailData_Hash() { return 1979111349U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4MapThumbnailData_Hash() { return 2478550247U; }
 	void UT4MapEntityAsset::StaticRegisterNativesUT4MapEntityAsset()
 	{
 	}
@@ -468,11 +468,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
 #endif
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelThumbnailDatas_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MapThumbnailDatas_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_LevelThumbnailDatas;
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_LevelThumbnailDatas_Key_KeyProp;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LevelThumbnailDatas_ValueProp;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_MapThumbnailDatas;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_MapThumbnailDatas_Key_KeyProp;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MapThumbnailDatas_ValueProp;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MapZoneDatas_MetaData[];
@@ -503,13 +503,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
 #endif
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData[] = {
+		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas = { "LevelThumbnailDatas", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, LevelThumbnailDatas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_MetaData)) };
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_Key_KeyProp = { "LevelThumbnailDatas_Key", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_ValueProp = { "LevelThumbnailDatas", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4LevelThumbnailData, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas = { "MapThumbnailDatas", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, MapThumbnailDatas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_Key_KeyProp = { "MapThumbnailDatas_Key", nullptr, (EPropertyFlags)0x0000000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_ValueProp = { "MapThumbnailDatas", nullptr, (EPropertyFlags)0x0000000800020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4MapThumbnailData, METADATA_PARAMS(nullptr, 0) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas_MetaData[] = {
@@ -528,9 +529,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapData = { "MapData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, MapData), Z_Construct_UScriptStruct_FT4EntityMapData, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapData_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4MapEntityAsset_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_LevelThumbnailDatas_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_ValueProp,
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas_Inner,
@@ -563,7 +564,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4LevelThumbnailData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4MapEntityAsset, 1171597079);
+	IMPLEMENT_CLASS(UT4MapEntityAsset, 3722389149);
 	template<> T4ASSET_API UClass* StaticClass<UT4MapEntityAsset>()
 	{
 		return UT4MapEntityAsset::StaticClass();

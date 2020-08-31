@@ -11,7 +11,7 @@
 class ULevel;
 class UWorld;
 class ST4Minimap; // #83
-struct FT4LevelThumbnailData;
+struct FT4MapThumbnailData;
 class FT4WorldPreviewViewModel;
 class FT4MinimapLevelCollectionModel;
 class UT4MapEntityAsset; // #104
@@ -40,7 +40,7 @@ public:
 	TSharedPtr<FT4MinimapLevelCollectionModel> GetWorldModelPtr();
 
 	bool GetTileThumbnailSize(int32& OutTileThumbnailSize, int32& OutTileThumbnailAtlasSize); // #91
-	const FT4LevelThumbnailData* GetSubLevelThumbnail(const FName InLevelAssetName); // #84
+	const FT4MapThumbnailData* GetSubLevelThumbnail(const FName InLevelAssetName); // #84
 
 	FT4OnSubLevelSelection& GetOnSubLevelSelection() { return OnSubLevelSelection; } // #83
 	FT4OnSubLevelChanged& GetOnSubLevelChanged() { return OnSubLevelChanged; } // #83
