@@ -36,7 +36,7 @@
 	  - https://tech4labs.com/T4Framework_Tutorials/
   - **튜토리얼(초안)**
     - [#1 : T4Framework Editor 소개](https://youtu.be/r29O3YdeV7E)
-	- [#2 : 엔티티 에디터 (Entity Editor)](https://tech4labs.com/T4Framework_Features_EntityEditor/)
+	- #2 : 엔티티 에디터 (Entity Editor) => [link](https://tech4labs.com/T4Framework_Features_EntityEditor/)
       - [#2-1 : Character Entity 의 풀 바디(Full-body) 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
       - [#2-2 : Character Entity 의 Animation 시스템](https://youtu.be/nS3N1X3Dh1o)
       - [#2-3 : Character Entity 의 Stance 및 Skill Animation 설정](https://youtu.be/XaPErl6Zypg)
