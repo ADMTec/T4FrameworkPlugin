@@ -44,6 +44,7 @@ public:
 	FT4PathSegmentPoint()
 		: Location(FVector::ZeroVector)
 		, MovementType(ET4PathMovementType::Run)
+		, bOnNavMesh(true)
 	{
 	}
 
@@ -52,6 +53,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4PathMovementType MovementType; // #156
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bOnNavMesh; // #156
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

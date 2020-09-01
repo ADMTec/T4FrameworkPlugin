@@ -34,6 +34,11 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOnNavMesh_MetaData[];
+#endif
+		static void NewProp_bOnNavMesh_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOnNavMesh;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MovementType;
@@ -57,6 +62,19 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #156\n" },
+		{ "ModuleRelativePath", "Public/Helper/T4EditorPathSegmentController.h" },
+		{ "ToolTip", "#156" },
+	};
+#endif
+	void Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh_SetBit(void* Obj)
+	{
+		((UT4EditorPathSegmentController*)Obj)->bOnNavMesh = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh = { "bOnNavMesh", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorPathSegmentController), &Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_MovementType_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorPathSegmentController.h" },
@@ -72,6 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorPathSegmentController, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EditorPathSegmentController_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_bOnNavMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_MovementType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_MovementType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorPathSegmentController_Statics::NewProp_Location,
@@ -103,7 +122,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorPathSegmentController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 2770802118);
+	IMPLEMENT_CLASS(UT4EditorPathSegmentController, 729185810);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorPathSegmentController>()
 	{
 		return UT4EditorPathSegmentController::StaticClass();

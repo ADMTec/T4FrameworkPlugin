@@ -46,7 +46,7 @@ private: \
 	static void StaticRegisterNativesUT4ZoneEntityAsset(); \
 	friend struct Z_Construct_UClass_UT4ZoneEntityAsset_Statics; \
 public: \
-	DECLARE_CLASS(UT4ZoneEntityAsset, UT4EntityAsset, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Asset"), NO_API) \
+	DECLARE_CLASS(UT4ZoneEntityAsset, UT4ActorEntityAsset, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Asset"), NO_API) \
 	DECLARE_SERIALIZER(UT4ZoneEntityAsset) \
 	HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Entity_T4ZoneEntityAsset_h_110_ARCHIVESERIALIZER
 
@@ -56,7 +56,7 @@ private: \
 	static void StaticRegisterNativesUT4ZoneEntityAsset(); \
 	friend struct Z_Construct_UClass_UT4ZoneEntityAsset_Statics; \
 public: \
-	DECLARE_CLASS(UT4ZoneEntityAsset, UT4EntityAsset, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Asset"), NO_API) \
+	DECLARE_CLASS(UT4ZoneEntityAsset, UT4ActorEntityAsset, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Asset"), NO_API) \
 	DECLARE_SERIALIZER(UT4ZoneEntityAsset) \
 	HostProject_Plugins_T4Framework_Source_T4Asset_Classes_Entity_T4ZoneEntityAsset_h_110_ARCHIVESERIALIZER
 

@@ -2,6 +2,12 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.37
+  - #158 [기능개선] Entity Editor, Map Entity Default Details 에 MapZoneDatas, MapThumbnailDatas 프로퍼티 리셋 기능 추가
+  - #158 [버그수정] Entity Editor, New Map Entity 생성 후 Entity Editor 에서 오픈할 경우 발생하는 크래시 수정
+  - #158 [버그수정] Entity Editor, Zone Entity 테스트(Zone In/Out Blending, Control 캐릭터 변경 등...)가 정상적으로 동작하지 않던 문제 수정
+  - #158 [버그수정] Entity Editor, 일부 Player 컨트롤이 Simulation 옵션에 영향을 받지 않던 문제 수정
+  - #158 [버그수정] T4GameplayerUserSettings 의 PC/NPC/Weapon Quick HotKey 설정이 한칸씩 뒤로 밀려 적용되던 문제 수정
 - v0.9.36_1
   - #158 [버그수정] Content Editor, GameDB 에서 일부 아이템을 선택할 경우 발생하는 크래시 수정 (HOTFIX_1)
   - #158 [버그수정] Action Editor, 툴바의 ReloadObject 가 정상적으로 동작하지 않던 문제 수정 (HOTFIX_1)
@@ -29,7 +35,7 @@
   - #162 [버그수정] Entity Editor, Prop Entity Details 에서 Property 수정 시 카메라가 리셋되는 문제 수정
   - #162 [버그수정] Entity Editor, Prop Entity 에서 MeshType 변경 시 발생하던 크래시 수정
   - #158 [버그수정] T4Framework Content 내 EnvironmentAsset 에서 잘못된 경로를 가르키던 HDR 에셋 정리
-	- UE4.25/Content 폴더 재복사 필요
+	- UE4.25/Content 폴더 내 에셋 업데이트 필요
 - v0.9.31
   - #158 [버그수정] Entity Editor, Weapon/Costume Entity 오픈 시 초기 카메라 위치가 원점에서 생성되던 문제 수정
   - #158 [버그수정] Entity Editor, 캐릭터 <=> 프리 카메라 교체 시 카메라 위치가 초기화되던 문제 수정

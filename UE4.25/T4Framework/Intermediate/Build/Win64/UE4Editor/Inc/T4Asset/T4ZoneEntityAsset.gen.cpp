@@ -23,7 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ZoneEntityAsset() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ZoneEntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ZoneEntityAsset();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActorEntityAsset();
 // End Cross Module References
 class UScriptStruct* FT4EntityZoneEnvironmentData::StaticStruct()
 {
@@ -425,7 +425,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityZoneDebugData
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UT4ZoneEntityAsset_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UT4EntityAsset,
+		(UObject* (*)())Z_Construct_UClass_UT4ActorEntityAsset,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 	};
 #if WITH_METADATA
@@ -481,7 +481,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityZoneDebugData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ZoneEntityAsset, 2549913193);
+	IMPLEMENT_CLASS(UT4ZoneEntityAsset, 2707809589);
 	template<> T4ASSET_API UClass* StaticClass<UT4ZoneEntityAsset>()
 	{
 		return UT4ZoneEntityAsset::StaticClass();

@@ -89,7 +89,7 @@ public:
 
 	virtual bool LoadTable(
 		const FName InTableName,
-		const FSoftObjectPath& InTablePath,
+		const TSoftObjectPtr<UDataTable>& InDataTablePtr,
 		ET4EditorConstantValueType InValueType
 	) = 0;
 

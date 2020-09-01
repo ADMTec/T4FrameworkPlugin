@@ -55,3 +55,61 @@ public:
 	UPROPERTY(EditAnywhere, Category=Attribute)
 	FString Description; 
 };
+
+USTRUCT()
+struct T4EDITORCOMMON_API FT4EditorConstantMasterTableRow : public FTableRowBase
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category= ConstantTable)
+	TSoftObjectPtr<UDataTable> MapZoneConstantDataTable; // #92
+
+	UPROPERTY(EditAnywhere, Category= ConstantTable)
+	TSoftObjectPtr<UDataTable> TimeTagConstantDataTable; // #90
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> CharacterSystemAnimationConstantDataTable; // #39
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> CharacterBasicSkillAnimationConstantDataTable; // #39
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> CharacterParagonSkillAnimationConstantDataTable; // #131
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> PropAnimationConstantDataTable; // #126
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> WeaponAnimationConstantDataTable; // #107
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> ActionPointConstantDataTable; // #57
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> EquipPointConstantDataTable; // #72
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> CompositePartConstantDataTable; // #71
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> FullBodySkinConstantDataTable; // #130
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> PlayTagMaterialConstantDataTable; // #74
+
+	UPROPERTY(EditAnywhere, Category = ConstantTable)
+	TSoftObjectPtr<UDataTable> PlayTagAttachmentConstantDataTable; // #74
+
+	UPROPERTY(EditAnywhere, Category = ConstantTable)
+	TSoftObjectPtr<UDataTable> PlayTagActionConstantDataTable; // #74
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> AnimSetConstantDataTable; // #73
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> StanceConstantDataTable; // #106
+
+	UPROPERTY(EditAnywhere, Category=ConstantTable)
+	TSoftObjectPtr<UDataTable> ReactionConstantDataTable; // #76
+};

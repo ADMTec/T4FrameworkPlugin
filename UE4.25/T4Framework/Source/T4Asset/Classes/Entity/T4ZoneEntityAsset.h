@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4AssetMinimal.h"
-#include "T4EntityAsset.h"
+#include "T4ActorEntityAsset.h"
 #include "World/T4EnvironmentAsset.h"
 #include "T4ZoneEntityAsset.generated.h"
 
@@ -105,7 +105,7 @@ public:
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4ASSET_API UT4ZoneEntityAsset : public UT4EntityAsset
+class T4ASSET_API UT4ZoneEntityAsset : public UT4ActorEntityAsset
 {
 	GENERATED_UCLASS_BODY()
 

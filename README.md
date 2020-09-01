@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.37)
+# T4FrameworkPlugin (v0.9.38)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,12 +20,12 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.37**
-    - #158 [기능개선] Entity Editor, Map Entity Default Details 에 MapZoneDatas, MapThumbnailDatas 프로퍼티 리셋 기능 추가
-  	- #158 [버그수정] Entity Editor, New Map Entity 생성 후 Entity Editor 에서 오픈할 경우 발생하는 크래시 수정
-	- #158 [버그수정] Entity Editor, Zone Entity 테스트(Zone In/Out Blending, Control 캐릭터 변경 등...)가 정상적으로 동작하지 않던 문제 수정
-	- #158 [버그수정] Entity Editor, 일부 Player 컨트롤이 Simulation 옵션에 영향을 받지 않던 문제 수정
-	- #158 [버그수정] T4GameplayerUserSettings 의 PC/NPC/Weapon Quick HotKey 설정이 한칸씩 뒤로 밀려 적용되던 문제 수정
+  - **v0.9.38**
+	- #158 [기능개선] T4Framework Editor, 에디터용 Constant Table 을 국가별로 추가할 수 있도록 기능 추가
+	  - DefaultT4FrameworkEditor.ini => ConstantMasterDataTable / ConstantMasterLanguage
+    - #158 [버그수정] Content Editor, Spawn Details 의 "Get New SpawnObjects from World" 를 통한 Spawn Prefab/Object 자동 등록 오류 수정
+  	- #158 [버그수정] Content Editor, SpawnObject 의 Character/Prop Anchor 가 정상적으로 출력되지 않던 문제 수정
+	  - UE4.25/Content 폴더 내 에셋 업데이트 필요
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

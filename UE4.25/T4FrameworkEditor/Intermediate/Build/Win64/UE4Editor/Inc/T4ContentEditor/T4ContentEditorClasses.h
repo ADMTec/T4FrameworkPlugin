@@ -7,4 +7,5 @@
 #pragma once
 
 
+#include "T4ContentEditor/Classes/ConstantTable/T4ContentConstantDataTable.h"
 

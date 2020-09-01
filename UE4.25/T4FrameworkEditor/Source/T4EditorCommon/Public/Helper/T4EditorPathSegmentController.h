@@ -44,7 +44,7 @@ public:
 	int32 Remove(int32 InRemoveIndex); // Success != INDEX_NONE
 	bool Remove(const TArray<int32>& InRemoveIndices);
 
-	void SaveMovementType();
+	void Flush();
 
 	bool CopyTo(FT4PathSegmentPoint& OutData);
 	bool CopyFrom(const FT4PathSegmentPoint& InData);
@@ -58,6 +58,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4PathMovementType MovementType; // #156
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	bool bOnNavMesh; // #156
 
 private:
 	TWeakObjectPtr<UT4PathSegmentData> PathSegmentDataPtr;
