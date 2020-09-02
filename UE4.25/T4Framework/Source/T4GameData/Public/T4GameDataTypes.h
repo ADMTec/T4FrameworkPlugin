@@ -25,6 +25,9 @@ enum class ET4GameAttackType : uint8 // #63
 UENUM(BlueprintType)
 enum class ET4GameEffectType : uint8 // #68
 {
+	Buff, // #158 : Zone Weather
+	Debuff, // #158 : Zone Weather
+
 	DirectDamage,
 	AreaDamage,
 

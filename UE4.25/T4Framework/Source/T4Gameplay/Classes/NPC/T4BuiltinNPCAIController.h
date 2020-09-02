@@ -41,7 +41,7 @@ protected:
 	void NotifyAIStart() override; // #50
 	void NotifyAIEnd() override; // #50
 
-	void NotifyMoveTo(const FVector& InMoveToTarget) override; // #42, #34, #52, #144
+	void NotifyMoveStart(const FVector& InGoalLocation) override; // #42, #34, #52, #144
 	void NotifyMoveStop() override; // #52, #144
 
 private:

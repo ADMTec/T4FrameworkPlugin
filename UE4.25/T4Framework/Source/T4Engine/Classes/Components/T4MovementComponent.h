@@ -48,6 +48,9 @@ public:
 public:
 	void Init(ET4LayerType InLayerType, const FT4ActorID& InActorID);
 
+	bool IsZeroGravity() const { return (0.0f == GravityZ) ? true : false; } // #165 : add bGoalOnNavMesh : Zone Waypoint
+	void SetGravityZ(float InGravityZ) { GravityZ = InGravityZ; } // #165 : add bGoalOnNavMesh : Zone Waypoint
+
 	bool IsSpecialMoves() const;
 
 	bool DoCustom(bool bInEnabled); // #132
@@ -82,6 +85,8 @@ public:
 	FT4ActorID OwnerActorID;
 
 	ET4MovementMode MovementMode;
+
+	float GravityZ;
 
 	float MaxMoveSpeed;
 	FVector Acceleration;

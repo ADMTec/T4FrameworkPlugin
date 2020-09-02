@@ -213,6 +213,12 @@ private:
 	void SC_RecvPacket_SkillTarget(const FT4GamePacketSC_SkillTarget& InPacket);
 
 	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_EffectBuff(const FT4GamePacketSC_EffectBuff& InPacket); // #158 : Zone Weather
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_EffectDebuff(const FT4GamePacketSC_EffectDebuff& InPacket); // #158 : Zone Weather
+
+	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_EffectDirect(const FT4GamePacketSC_EffectDirect& InPacket);
 
 	UFUNCTION(Reliable, client)

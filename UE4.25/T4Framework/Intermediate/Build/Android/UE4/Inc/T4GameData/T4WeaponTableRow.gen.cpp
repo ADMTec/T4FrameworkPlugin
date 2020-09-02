@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WeaponTableRow() {}
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ItemTableRowBase();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponEntityData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ItemStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillSetDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
@@ -64,6 +65,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #endif
 		static void NewProp_bDontUseMesh_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDontUseMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeEffectDBKey_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeEffectDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemStatDBKey_MetaData[];
 #endif
@@ -128,9 +133,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// #114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat\n" },
+		{ "Comment", "// #158 : Equip \xec\x8b\x9c \xec\x9e\x90\xec\x8b\xa0\xec\x97\x90\xea\xb2\x8c \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa0 Effect \xed\x9a\xa8\xea\xb3\xbc\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
-		{ "ToolTip", "#114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat" },
+		{ "ToolTip", "#158 : Equip \xec\x8b\x9c \xec\x9e\x90\xec\x8b\xa0\xec\x97\x90\xea\xb2\x8c \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa0 Effect \xed\x9a\xa8\xea\xb3\xbc" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh_SetBit(void* Obj)
@@ -138,6 +143,15 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		((FT4WeaponTableRow*)Obj)->bDontUseMesh = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh = { "bDontUseMesh", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4WeaponTableRow), &Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
+		{ "ToolTip", "#114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey = { "InitializeEffectDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, InitializeEffectDBKey), Z_Construct_UScriptStruct_FT4EffectDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -204,6 +218,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_SubEntityDatas_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MainEntityData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey_Key_KeyProp,
@@ -242,7 +257,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 237452003U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 350968586U; }
 class UScriptStruct* FT4WeaponEntityData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

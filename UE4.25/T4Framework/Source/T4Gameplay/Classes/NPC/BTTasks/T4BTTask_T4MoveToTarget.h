@@ -111,10 +111,4 @@ public:
 
 protected:
 	EBTNodeResult::Type PerformMoveTask(UBehaviorTreeComponent& InOwnerComp, uint8* InNodeMemory);
-
-	virtual UAITask_MoveTo* PrepareMoveTask(
-		UBehaviorTreeComponent& OwnerComp, 
-		UAITask_MoveTo* ExistingTask, 
-		FAIMoveRequest& MoveRequest
-	);
 };

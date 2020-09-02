@@ -358,7 +358,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		return ET4GameEffectType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameEffectType(ET4GameEffectType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameEffectType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameEffectType_Hash() { return 365630091U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameEffectType_Hash() { return 4022255877U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType()
 	{
 #if WITH_HOT_RELOAD
@@ -370,6 +370,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameEffectType::Buff", (int64)ET4GameEffectType::Buff },
+				{ "ET4GameEffectType::Debuff", (int64)ET4GameEffectType::Debuff },
 				{ "ET4GameEffectType::DirectDamage", (int64)ET4GameEffectType::DirectDamage },
 				{ "ET4GameEffectType::AreaDamage", (int64)ET4GameEffectType::AreaDamage },
 				{ "ET4GameEffectType::Knockback", (int64)ET4GameEffectType::Knockback },
@@ -385,8 +387,14 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "Airborne.ToolTip", "CC" },
 				{ "AreaDamage.Name", "ET4GameEffectType::AreaDamage" },
 				{ "BlueprintType", "true" },
+				{ "Buff.Name", "ET4GameEffectType::Buff" },
 				{ "Comment", "// #68\n" },
+				{ "Debuff.Comment", "// #158 : Zone Weather\n" },
+				{ "Debuff.Name", "ET4GameEffectType::Debuff" },
+				{ "Debuff.ToolTip", "#158 : Zone Weather" },
+				{ "DirectDamage.Comment", "// #158 : Zone Weather\n" },
 				{ "DirectDamage.Name", "ET4GameEffectType::DirectDamage" },
+				{ "DirectDamage.ToolTip", "#158 : Zone Weather" },
 				{ "Knockback.Name", "ET4GameEffectType::Knockback" },
 				{ "Mis.Comment", "// CC\n" },
 				{ "Mis.Name", "ET4GameEffectType::Mis" },

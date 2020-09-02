@@ -1208,9 +1208,14 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MoveSyncActionComma
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveToLocation_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bGoalOnNavMesh_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MoveToLocation;
+		static void NewProp_bGoalOnNavMesh_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bGoalOnNavMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GoalLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_GoalLocation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_EDITORONLY_DATA
 #endif // WITH_EDITORONLY_DATA
@@ -1257,19 +1262,32 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MoveSyncActionComma
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #165 : add bGoalOnNavMesh : Zone Waypoint\n" },
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionMoveCommands.h" },
+		{ "ToolTip", "#165 : add bGoalOnNavMesh : Zone Waypoint" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MoveSyncActionCommand, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #50, #150\n" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionMoveCommands.h" },
 		{ "ToolTip", "#50, #150" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MoveSyncActionCommand, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh_SetBit(void* Obj)
+	{
+		((FT4MoveSyncActionCommand*)Obj)->bGoalOnNavMesh = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh = { "bGoalOnNavMesh", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4MoveSyncActionCommand), &Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveToLocation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_GoalLocation_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionMoveCommands.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveToLocation = { "MoveToLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MoveSyncActionCommand, MoveToLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveToLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveToLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_GoalLocation = { "GoalLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MoveSyncActionCommand, GoalLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_GoalLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_GoalLocation_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_ServerDirection,
@@ -1277,7 +1295,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MoveSyncActionComma
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_HeadYawAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_MoveToLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_bGoalOnNavMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::NewProp_GoalLocation,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
@@ -1307,7 +1326,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4MoveSyncActionComma
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Hash() { return 2970821347U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4MoveSyncActionCommand_Hash() { return 553281747U; }
 class UScriptStruct* FT4MoveAsyncActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

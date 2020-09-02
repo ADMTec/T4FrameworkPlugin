@@ -18,7 +18,7 @@ struct FT4ItemTableRowBase : public FT4TableRowBase
 
 public:
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UBehaviorTree> BehaviorTreePath; // DropItem
+	TSoftObjectPtr<UBehaviorTree> DropBehaviorTreePath; // DropItem
 
 public:
 	FT4ItemTableRowBase()

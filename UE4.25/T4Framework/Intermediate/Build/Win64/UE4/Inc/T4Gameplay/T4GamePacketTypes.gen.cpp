@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2294462672U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 1794685321U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -70,6 +70,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::SkillCasting", (int64)ET4GamePacketSC::SkillCasting },
 				{ "ET4GamePacketSC::SkillCancel", (int64)ET4GamePacketSC::SkillCancel },
 				{ "ET4GamePacketSC::SkillTarget", (int64)ET4GamePacketSC::SkillTarget },
+				{ "ET4GamePacketSC::EffectBuff", (int64)ET4GamePacketSC::EffectBuff },
+				{ "ET4GamePacketSC::EffectDebuff", (int64)ET4GamePacketSC::EffectDebuff },
 				{ "ET4GamePacketSC::EffectDirect", (int64)ET4GamePacketSC::EffectDirect },
 				{ "ET4GamePacketSC::EffectArea", (int64)ET4GamePacketSC::EffectArea },
 				{ "ET4GamePacketSC::EffectKnockback", (int64)ET4GamePacketSC::EffectKnockback },
@@ -92,9 +94,15 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "EffectAirborne.Name", "ET4GamePacketSC::EffectAirborne" },
 				{ "EffectAirborne.ToolTip", "#135" },
 				{ "EffectArea.Name", "ET4GamePacketSC::EffectArea" },
-				{ "EffectDirect.Comment", "// #116\n" },
+				{ "EffectBuff.Comment", "// #116\n" },
+				{ "EffectBuff.Name", "ET4GamePacketSC::EffectBuff" },
+				{ "EffectBuff.ToolTip", "#116" },
+				{ "EffectDebuff.Comment", "// #158 : Zone Weather\n" },
+				{ "EffectDebuff.Name", "ET4GamePacketSC::EffectDebuff" },
+				{ "EffectDebuff.ToolTip", "#158 : Zone Weather" },
+				{ "EffectDirect.Comment", "// #158 : Zone Weather\n" },
 				{ "EffectDirect.Name", "ET4GamePacketSC::EffectDirect" },
-				{ "EffectDirect.ToolTip", "#116" },
+				{ "EffectDirect.ToolTip", "#158 : Zone Weather" },
 				{ "EffectKnockback.Comment", "// #68\n" },
 				{ "EffectKnockback.Name", "ET4GamePacketSC::EffectKnockback" },
 				{ "EffectKnockback.ToolTip", "#68" },

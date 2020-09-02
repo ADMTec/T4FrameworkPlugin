@@ -45,6 +45,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GamePacketSC::SkillCasting) \
 	op(ET4GamePacketSC::SkillCancel) \
 	op(ET4GamePacketSC::SkillTarget) \
+	op(ET4GamePacketSC::EffectBuff) \
+	op(ET4GamePacketSC::EffectDebuff) \
 	op(ET4GamePacketSC::EffectDirect) \
 	op(ET4GamePacketSC::EffectArea) \
 	op(ET4GamePacketSC::EffectKnockback) \

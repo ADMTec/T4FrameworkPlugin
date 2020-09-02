@@ -264,6 +264,7 @@ public:
 #endif
 
 #if !UE_BUILD_SHIPPING
+	virtual void SetDebugDraw(bool bInEnable) = 0; // #158
 	virtual void SetDebugPause(bool bInPause) = 0; // #102
 	virtual void SetDebugColor(const FColor& InColor) = 0; // #155
 

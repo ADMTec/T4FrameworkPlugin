@@ -101,6 +101,8 @@ enum class ET4GamePacketSC : uint32
 	SkillCancel, // #113, #116
 	SkillTarget, // #116
 
+	EffectBuff, // #158 : Zone Weather
+	EffectDebuff, // #158 : Zone Weather
 	EffectDirect,
 	EffectArea, // #68
 	EffectKnockback, // #135

@@ -100,7 +100,7 @@ protected:
 	virtual void NotifyAIStart() {} // #50
 	virtual void NotifyAIEnd() {} // #50
 
-	virtual void NotifyMoveTo(const FVector& InMoveToTarget) {} // #42, #34, #52, #144
+	virtual void NotifyMoveStart(const FVector& InGoalLocation) {} // #42, #34, #52, #144
 	virtual void NotifyMoveStop() {} // #52, #144
 
 protected:

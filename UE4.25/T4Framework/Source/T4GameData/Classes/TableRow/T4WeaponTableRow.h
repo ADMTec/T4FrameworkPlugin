@@ -59,6 +59,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat
 
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4EffectDBKey InitializeEffectDBKey; // #158 : Equip 시 자신에게 사용될 Effect 효과
+
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	bool bDontUseMesh; // #135
 

@@ -75,6 +75,8 @@ enum class ET4GameFindTarget : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameFindTarget>();
 
 #define FOREACH_ENUM_ET4GAMEEFFECTTYPE(op) \
+	op(ET4GameEffectType::Buff) \
+	op(ET4GameEffectType::Debuff) \
 	op(ET4GameEffectType::DirectDamage) \
 	op(ET4GameEffectType::AreaDamage) \
 	op(ET4GameEffectType::Knockback) \

@@ -70,7 +70,10 @@ struct T4ENGINE_API FT4MoveSyncActionCommand : public FT4ActionCommandBase
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	FVector MoveToLocation; // #50, #150
+	FVector GoalLocation; // #50, #150
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bGoalOnNavMesh; // #165 : add bGoalOnNavMesh : Zone Waypoint
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float MoveSpeed; // #150
@@ -89,7 +92,8 @@ public:
 public:
 	FT4MoveSyncActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
-		, MoveToLocation(FVector::ZeroVector)
+		, GoalLocation(FVector::ZeroVector)
+		, bGoalOnNavMesh(false) // #165 : add bGoalOnNavMesh : Zone Waypoint
 		, MoveSpeed(0.0f) // #150
 		, HeadYawAngle(T4Const_EmptyYawAngle)
 #if WITH_EDITORONLY_DATA
@@ -103,9 +107,9 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
-		if (MoveToLocation.IsNearlyZero())
+		if (GoalLocation.IsNearlyZero())
 		{
-			OutMsg = TEXT("Invalid MoveToLocation");
+			OutMsg = TEXT("Invalid GoalLocation");
 			return false;
 		}
 		return true;

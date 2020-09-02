@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ENGINE_T4ActionMoveCommands_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_343_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_347_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4LaunchActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_317_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_321_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4MoveSpeedSyncActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -29,7 +29,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4LaunchActionComman
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MoveSpeedSyncActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_284_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_288_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4MoveStopActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -37,7 +37,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MoveSpeedSyncActio
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MoveStopActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_255_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_259_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4TurnActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -45,7 +45,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4MoveStopActionComm
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4TurnActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_222_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_226_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4RotationActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -53,7 +53,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4TurnActionCommand>
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4RotationActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_184_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_188_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4TeleportActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;
@@ -61,7 +61,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4RotationActionComm
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4TeleportActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_123_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionMoveCommands_h_127_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4JumpActionCommand_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionCommandBase Super;

@@ -2,6 +2,12 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.38
+  - #158 [기능개선] T4Framework Editor, 에디터용 Constant Table 을 국가별로 추가할 수 있도록 기능 추가
+	- DefaultT4FrameworkEditor.ini => ConstantMasterDataTable / ConstantMasterLanguage
+  - #158 [버그수정] Content Editor, Spawn Details 의 "Get New SpawnObjects from World" 를 통한 Spawn Prefab/Object 자동 등록 오류 수정
+  - #158 [버그수정] Content Editor, SpawnObject 의 Character/Prop Anchor 가 정상적으로 출력되지 않던 문제 수정
+	- UE4.25/Content 폴더 내 에셋 업데이트 필요
 - v0.9.37
   - #158 [기능개선] Entity Editor, Map Entity Default Details 에 MapZoneDatas, MapThumbnailDatas 프로퍼티 리셋 기능 추가
   - #158 [버그수정] Entity Editor, New Map Entity 생성 후 Entity Editor 에서 오픈할 경우 발생하는 크래시 수정

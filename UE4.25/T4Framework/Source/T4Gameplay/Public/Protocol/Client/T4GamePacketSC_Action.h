@@ -14,6 +14,8 @@
 // ET4GamePacketSC::SkillCasting
 // ET4GamePacketSC::SkillCancel
 // ET4GamePacketSC::SkillTarget
+// ET4GamePacketSC::EffectBuff // #158 : Zone Weather
+// ET4GamePacketSC::EffectDebuff // #158 : Zone Weather
 // ET4GamePacketSC::EffectDirect
 // ET4GamePacketSC::EffectArea
 // ET4GamePacketSC::EffectKnockback
@@ -231,6 +233,82 @@ public:
 	FString ToString() const override
 	{
 		return FString(TEXT("SC_Packet:Attack"));
+	}
+};
+
+// #158 : Zone Weather
+USTRUCT()
+struct FT4GamePacketSC_EffectBuff : public FT4GamePacketSC_Base 
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey EffectDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID SenderObjectID;
+
+public:
+	FT4GamePacketSC_EffectBuff()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::EffectBuff)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:EffectBuff"));
+	}
+};
+
+// #158 : Zone Weather
+USTRUCT()
+struct FT4GamePacketSC_EffectDebuff : public FT4GamePacketSC_Base 
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey EffectDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID SenderObjectID;
+
+public:
+	FT4GamePacketSC_EffectDebuff()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::EffectDebuff)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:EffectDebuff"));
 	}
 };
 

@@ -37,7 +37,10 @@ public:
 	FT4ObjectID ObjectID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FVector MoveToLocation; // #52 : Velocity * (1.0f / DefaultNetworkLatencySec) / 레이턴시 감안 복원
+	FVector GoalLocation; // #52 : Velocity * (1.0f / DefaultNetworkLatencySec) / 레이턴시 감안 복원
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bGoalOnNavMesh; // #165 : add bGoalOnNavMesh : Zone Waypoint
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	float MoveSpeed; // #150
@@ -56,7 +59,8 @@ public:
 public:
 	FT4GamePacketSC_Move()
 		: FT4GamePacketSC_Base(ET4GamePacketSC::Move)
-		, MoveToLocation(FVector::ZeroVector)
+		, GoalLocation(FVector::ZeroVector)
+		, bGoalOnNavMesh(false) // #165 : add bGoalOnNavMesh : Zone Waypoint
 		, MoveSpeed(0.0f)
 		, HeadYawAngle(TNumericLimits<float>::Max())
 #if WITH_EDITORONLY_DATA
