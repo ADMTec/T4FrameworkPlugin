@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvPostProcessData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvSkyLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvBPSkySphereData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvSkyLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvDirectionalLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvDirectionalData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4BuiltInEasing();
@@ -52,13 +52,13 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AtmosphericFogData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkyLightData_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkyLightData;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BPSkySphereData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BPSkySphereData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkyLightData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkyLightData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DirectionalLightData_MetaData[];
 #endif
@@ -113,21 +113,12 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Public/Helper/T4EditorEnvironmentController.h" },
-		{ "ToolTip", "#90" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData = { "AtmosphericFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorEnvironmentController, AtmosphericFogData), Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData, METADATA_PARAMS(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData[] = {
-		{ "Category", "ClientOnly" },
 		{ "Comment", "// #97\n" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorEnvironmentController.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData = { "SkyLightData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorEnvironmentController, SkyLightData), Z_Construct_UScriptStruct_FT4EnvSkyLightData, METADATA_PARAMS(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData = { "AtmosphericFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorEnvironmentController, AtmosphericFogData), Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData, METADATA_PARAMS(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_BPSkySphereData_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -137,6 +128,15 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_BPSkySphereData = { "BPSkySphereData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorEnvironmentController, BPSkySphereData), Z_Construct_UScriptStruct_FT4EnvBPSkySphereData, METADATA_PARAMS(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_BPSkySphereData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_BPSkySphereData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "Comment", "// #90\n" },
+		{ "ModuleRelativePath", "Public/Helper/T4EditorEnvironmentController.h" },
+		{ "ToolTip", "#90" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData = { "SkyLightData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorEnvironmentController, SkyLightData), Z_Construct_UScriptStruct_FT4EnvSkyLightData, METADATA_PARAMS(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_DirectionalLightData_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -178,8 +178,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_PostProcessData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_ExponentialHeightFogData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_AtmosphericFogData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_BPSkySphereData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_SkyLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_DirectionalLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_DirectionalData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorEnvironmentController_Statics::NewProp_TimeBlendCurve,
@@ -213,7 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorEnvironmentController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorEnvironmentController, 3145650849);
+	IMPLEMENT_CLASS(UT4EditorEnvironmentController, 3917728274);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorEnvironmentController>()
 	{
 		return UT4EditorEnvironmentController::StaticClass();

@@ -22,7 +22,7 @@ namespace T4AssetUtil
 		FString& OutErrorMessage
 	); // #90, #95
 
-	T4EDITORCOMMON_API bool EnviromentTimeTagAdd(
+	T4EDITORCOMMON_API FName EnviromentTimeTagAdd(
 		UT4EnvironmentAsset* InEnvironmentAsset,
 		FName InSourceName,
 		const FT4EnvTimeTagData* InData,

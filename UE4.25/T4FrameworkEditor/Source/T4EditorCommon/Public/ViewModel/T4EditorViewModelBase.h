@@ -98,8 +98,8 @@ public:
 	void SetWorldSystemTimeStop(bool bPause) override; // #94
 	bool IsWorldSystemTimeStopped() const override; // #94
 
-	void SetWorldSystemTimelapseScale(float inScale) override; // #93
-	float GetWorldSystemTimelapseScale() const override; // #93
+	void SetWorldSystemTimeScale(float inScale) override; // #93
+	float GetWorldSystemTimelScale() const override; // #93
 
 	void SetWorldSystemTimeHour(float InHour) override; // #93
 	float GetWorldSystemTimeHour() const override; // #93

@@ -72,13 +72,13 @@ protected:
 	// #93
 	TSharedRef<SWidget> HandleOnFillTimelapseScaleMenu(); 
 
-	FText HandleOnGetTimelapseLabel() const;
+	FText HandleOnGetWorldTimeLabel() const;
 
-	float HandleOnGetTimelapseScaleBoxValue() const;
-	void HandleOnSetTimelapseScaleBoxValue(float NewValue);
+	float HandleOnGetWorldTimeScaleBoxValue() const;
+	void HandleOnSetWorldTimeScaleBoxValue(float NewValue);
 
-	float HandleOnGetTimelapseSetHourBoxValue() const;
-	void HandleOnSetTimelapseSetHourBoxValue(float NewValue);
+	float HandleOnGetWorldTimeHourBoxValue() const;
+	void HandleOnSetWorldTimeHourBoxValue(float NewValue);
 	// ~#93
 
 	// #83

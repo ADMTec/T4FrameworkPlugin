@@ -97,10 +97,10 @@ public:
 		, CloudOpacity(0.7f) // #97
 		, StarsBrightness(0.1f) // #97
 		, bColorsDeterminedBySunPosition(true) // #97
-		, ZenithColor(FLinearColor(0.034046f, 0.102947f, 0.295f, 1.0f).ToFColor(true)) // #97
-		, HorizonColor(FLinearColor(1.979559f, 2.586644f, 3.0f, 1.0f).ToFColor(true)) // #97
-		, CloudColor(FLinearColor(0.855778f, 0.91902f, 1.0f, 1.0f).ToFColor(true)) // #97
-		, OverallColor(255) // #97
+		, ZenithColor(FLinearColor(0.034046f, 0.102947f, 0.295f, 1.0f)) // #97
+		, HorizonColor(FLinearColor(1.979559f, 2.586644f, 3.0f, 1.0f)) // #97
+		, CloudColor(FLinearColor(0.855778f, 0.91902f, 1.0f, 1.0f)) // #97
+		, OverallColor(FLinearColor(1.0f, 1.0f, 1.0f, 1.0f)) // #97
 	{
 
 	}
@@ -126,16 +126,16 @@ public:
 	bool bColorsDeterminedBySunPosition;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
-	FColor ZenithColor; // #98
+	FLinearColor ZenithColor; // #98
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
-	FColor HorizonColor; // #98
+	FLinearColor HorizonColor; // #98
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
-	FColor CloudColor; // #98
+	FLinearColor CloudColor; // #98
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
-	FColor OverallColor; // #98
+	FLinearColor OverallColor; // #98
 };
 
 // #90
@@ -301,10 +301,10 @@ public:
 	FT4EnvDirectionalLightData DirectionalLightData;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FT4EnvBPSkySphereData BPSkySphereData; // #97
+	FT4EnvSkyLightData SkyLightData;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FT4EnvSkyLightData SkyLightData;
+	FT4EnvBPSkySphereData BPSkySphereData; // #97
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvAtmosphericFogData AtmosphericFogData;

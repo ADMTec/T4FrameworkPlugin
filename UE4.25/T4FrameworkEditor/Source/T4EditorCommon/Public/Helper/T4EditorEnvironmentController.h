@@ -21,6 +21,8 @@ public:
 	FT4OnPropertiesChanged& OnPropertiesChanged() { return OnPropertiesChangedDelegate; }
 
 public:
+	void Reset();
+
 	bool CopyTo(FT4EnvTimeTagData& OutData, bool bInCopyDataOnly = false);
 	bool CopyFrom(const FT4EnvTimeTagData& InData, bool bInCopyDataOnly = false);
 
@@ -46,10 +48,10 @@ public:
 	FT4EnvDirectionalLightData DirectionalLightData; // #90
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FT4EnvBPSkySphereData BPSkySphereData; // #97
+	FT4EnvSkyLightData SkyLightData; // #90
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FT4EnvSkyLightData SkyLightData; // #90
+	FT4EnvBPSkySphereData BPSkySphereData; // #97
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvAtmosphericFogData AtmosphericFogData; // #90

@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvPostProcessData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvSkyLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvBPSkySphereData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvSkyLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvDirectionalLightData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvDirectionalData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4BuiltInEasing();
@@ -166,13 +166,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AtmosphericFogData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkyLightData_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkyLightData;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BPSkySphereData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BPSkySphereData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkyLightData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkyLightData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DirectionalLightData_MetaData[];
 #endif
@@ -221,19 +221,12 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData = { "AtmosphericFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, AtmosphericFogData), Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData[] = {
-		{ "Category", "ClientOnly" },
 		{ "Comment", "// #97\n" },
 		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData = { "SkyLightData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, SkyLightData), Z_Construct_UScriptStruct_FT4EnvSkyLightData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData = { "AtmosphericFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, AtmosphericFogData), Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -241,6 +234,13 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData = { "BPSkySphereData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, BPSkySphereData), Z_Construct_UScriptStruct_FT4EnvBPSkySphereData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData = { "SkyLightData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, SkyLightData), Z_Construct_UScriptStruct_FT4EnvSkyLightData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalLightData_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -278,8 +278,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_PostProcessData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_ExponentialHeightFogData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalLightData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_TimeBlendCurve,
@@ -314,7 +314,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 438915373U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 4253024317U; }
 class UScriptStruct* FT4EnvPostProcessData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -958,7 +958,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "ToolTip", "#98" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor = { "OverallColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, OverallColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor = { "OverallColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, OverallColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_OverallColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -968,7 +968,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "ToolTip", "#98" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor = { "CloudColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, CloudColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor = { "CloudColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, CloudColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_CloudColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -978,7 +978,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "ToolTip", "#98" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor = { "HorizonColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, HorizonColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor = { "HorizonColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, HorizonColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_HorizonColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -986,7 +986,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor = { "ZenithColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, ZenithColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor = { "ZenithColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, ZenithColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_bColorsDeterminedBySunPosition_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -1092,7 +1092,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Hash() { return 729415307U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Hash() { return 1815957622U; }
 class UScriptStruct* FT4EnvDirectionalLightData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

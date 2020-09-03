@@ -2,6 +2,13 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.39
+  - #165 [기능추가] NPC AI 의 Waypoint 이동에서 NavMesh 사용 여부를 옵션으로 선택해 동작하도록 기능 추가
+  - #158 [기능추가] Action Editor, PreviewEntityAsset 을 설정하지 않을 경우 에디터용 Axis Prop Entity 를 사용하도록 기능 추가
+  - #158 [기능개선] Content Editor, NPC GameDB 에 Zone Entity 를 사용할 수 있도록 기능 개선
+  - #158 [버그수정] Content Editor, GameDB 의 Details 편집중 간헐적으로 Scroll Bar 가 확장되지 않던 버그 수정
+  - #158 [기능개선] 기본 캐릭터 Stance 에 "Flying" 추가
+	- UE4.25/Content 폴더 내 에셋 업데이트 필요
 - v0.9.38
   - #158 [기능개선] T4Framework Editor, 에디터용 Constant Table 을 국가별로 추가할 수 있도록 기능 추가
 	- DefaultT4FrameworkEditor.ini => ConstantMasterDataTable / ConstantMasterLanguage

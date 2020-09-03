@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.39)
+# T4FrameworkPlugin (v0.9.40)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,13 +20,13 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.39**
-    - #165 [기능추가] NPC AI 의 Waypoint 이동에서 NavMesh 사용 여부를 옵션으로 선택해 동작하도록 기능 추가
-	- #158 [기능추가] Action Editor, PreviewEntityAsset 을 설정하지 않을 경우 에디터용 Axis Prop Entity 를 사용하도록 기능 추가
-	- #158 [기능개선] Content Editor, NPC GameDB 에 Zone Entity 를 사용할 수 있도록 기능 개선
-	- #158 [버그수정] Content Editor, GameDB 의 Details 편집중 간헐적으로 Scroll Bar 가 확장되지 않던 버그 수정
-	- #158 [기능개선] 기본 캐릭터 Stance 에 "Flying" 추가
-	  - UE4.25/Content 폴더 내 에셋 업데이트 필요
+  - **v0.9.40**
+    - #158 [기능개선] T4Framework Editor, Viewport 의 WorldTime Overlay Menu 변경이 Simulation 사용과 관계없이 Environment 가 적용되도록 개선
+	  - Viewport 의 기존 Timelapse Overlay Menu 를 WorldTime 으로 변경됨
+	- #158 [버그수정] Entity Editor, Zone Entity 첫 생성 시 WorldTime 에 해당하는 Environment 가 적용되지 않던 문제 수정
+    - #158 [버그수정] Entity Editor, Zone Entity 오픈 시 설정된 Environment 가 자동으로 뷰포트에 적용되지 않던 문제 수정
+    - #158 [버그수정] World Explorer, Environment Details 에서 새로운 EnvTimeTag 추가가 리스트에 반영되지 않던 문제 수정
+	- #158 [버그수정] T4EnvironmentAsset 을 사용한 TimeOfDay 적용 후 복구 시 Sky Cloud 컬러가 틀어지는 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

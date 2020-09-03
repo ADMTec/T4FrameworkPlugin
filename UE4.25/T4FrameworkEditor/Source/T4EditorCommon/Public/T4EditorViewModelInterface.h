@@ -79,8 +79,8 @@ public:
 	virtual void SetWorldSystemTimeStop(bool bPause) = 0; // #94
 	virtual bool IsWorldSystemTimeStopped() const = 0; // #94
 
-	virtual void SetWorldSystemTimelapseScale(float InScale) = 0; // #93
-	virtual float GetWorldSystemTimelapseScale() const = 0; // #93
+	virtual void SetWorldSystemTimeScale(float InScale) = 0; // #93
+	virtual float GetWorldSystemTimelScale() const = 0; // #93
 
 	virtual void SetWorldSystemTimeHour(float InHour) = 0; // #93
 	virtual float GetWorldSystemTimeHour() const = 0; // #93
