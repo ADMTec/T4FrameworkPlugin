@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionBase() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionBase();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LifecycleType();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionPlayMode();
 // End Cross Module References
 class UScriptStruct* FT4ActionBase::StaticStruct()
 {
@@ -46,6 +47,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionBase
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LifecycleType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LifecycleType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LifecycleType_Underlying;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DurationSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DurationSec;
@@ -54,10 +60,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionBase
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StartTimeSec;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LifecycleType_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionPlayMode_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LifecycleType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LifecycleType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ActionPlayMode;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ActionPlayMode_Underlying;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -71,6 +77,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionBase
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ActionBase>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData[] = {
+		{ "Comment", "// #20 : TotalTimeSec = StartTimeSec + DurationSec;\n" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionBase.h" },
+		{ "ToolTip", "#20 : TotalTimeSec = StartTimeSec + DurationSec;" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType = { "LifecycleType", nullptr, (EPropertyFlags)0x0010000020000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionBase, LifecycleType_DEPRECATED), Z_Construct_UEnum_T4Asset_ET4LifecycleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_DurationSec_MetaData[] = {
 		{ "Category", "Common" },
@@ -88,20 +103,22 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionBase
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_StartTimeSec = { "StartTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionBase, StartTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_StartTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_StartTimeSec_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #39 : FT4ActionDetails::CustomizeCommonActionDetails\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionBase.h" },
 		{ "ToolTip", "#39 : FT4ActionDetails::CustomizeCommonActionDetails" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType = { "LifecycleType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionBase, LifecycleType), Z_Construct_UEnum_T4Asset_ET4LifecycleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode = { "ActionPlayMode", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionBase, ActionPlayMode), Z_Construct_UEnum_T4Asset_ET4ActionPlayMode, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ActionBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_DurationSec,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_StartTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_LifecycleType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_DurationSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_StartTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionBase_Statics::NewProp_ActionPlayMode_Underlying,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ActionBase_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
@@ -131,7 +148,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionBase
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionBase_Hash() { return 1053605083U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionBase_Hash() { return 3649397643U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

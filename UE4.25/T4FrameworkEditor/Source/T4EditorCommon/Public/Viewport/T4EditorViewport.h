@@ -70,7 +70,7 @@ protected:
 	void OnScreenShotCaptured(UObject* InOwner, UTexture2D* InScreenShot);
 
 	// #93
-	TSharedRef<SWidget> HandleOnFillTimelapseScaleMenu(); 
+	TSharedRef<SWidget> HandleOnFillWorldTimeMenu(); 
 
 	FText HandleOnGetWorldTimeLabel() const;
 

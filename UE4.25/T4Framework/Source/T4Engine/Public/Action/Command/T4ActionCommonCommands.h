@@ -23,13 +23,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<class UT4ActionPackAsset> ActionPackAsset;
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	ET4LoadingPolicy LoadingPolicy;
-
 public:
 	FT4ActionPackActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 	{
 	}
 

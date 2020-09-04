@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionEditor_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x63BA539C,
+				0xDEB75506,
 				0x368D5F0D,
 				METADATA_PARAMS(nullptr, 0)
 			};

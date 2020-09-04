@@ -82,14 +82,6 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4BranchCondition>();
 enum class ET4PlayCount : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4PlayCount>();
 
-#define FOREACH_ENUM_ET4LOADINGPOLICY(op) \
-	op(ET4LoadingPolicy::Async) \
-	op(ET4LoadingPolicy::Sync) \
-	op(ET4LoadingPolicy::Default) 
-
-enum class ET4LoadingPolicy : uint8;
-template<> T4ASSET_API UEnum* StaticEnum<ET4LoadingPolicy>();
-
 #define FOREACH_ENUM_ET4LIFECYCLETYPE(op) \
 	op(ET4LifecycleType::Auto) \
 	op(ET4LifecycleType::Duration) \
@@ -99,6 +91,15 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4LoadingPolicy>();
 enum class ET4LifecycleType : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4LifecycleType>();
 
+#define FOREACH_ENUM_ET4ACTIONPLAYMODE(op) \
+	op(ET4ActionPlayMode::Auto) \
+	op(ET4ActionPlayMode::Duration) \
+	op(ET4ActionPlayMode::Looping) \
+	op(ET4ActionPlayMode::Default) 
+
+enum class ET4ActionPlayMode : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4ActionPlayMode>();
+
 #define FOREACH_ENUM_ET4ACTIONDATATYPE(op) \
 	op(ET4ActionDataType::Branch) \
 	op(ET4ActionDataType::Movement) \
@@ -106,6 +107,7 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4LifecycleType>();
 	op(ET4ActionDataType::Mesh) \
 	op(ET4ActionDataType::Particle) \
 	op(ET4ActionDataType::Decal) \
+	op(ET4ActionDataType::Audio) \
 	op(ET4ActionDataType::Projectile) \
 	op(ET4ActionDataType::Reaction) \
 	op(ET4ActionDataType::PlayTag) \

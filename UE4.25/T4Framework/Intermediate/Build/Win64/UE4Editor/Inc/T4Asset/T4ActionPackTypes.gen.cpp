@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4AttachParent();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4BranchCondition();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4PlayCount();
-	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LoadingPolicy();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LifecycleType();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionPlayMode();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionBaseType();
 // End Cross Module References
@@ -465,65 +465,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		}
 		return ReturnEnum;
 	}
-	static UEnum* ET4LoadingPolicy_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4LoadingPolicy, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4LoadingPolicy"));
-		}
-		return Singleton;
-	}
-	template<> T4ASSET_API UEnum* StaticEnum<ET4LoadingPolicy>()
-	{
-		return ET4LoadingPolicy_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4LoadingPolicy(ET4LoadingPolicy_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4LoadingPolicy"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4LoadingPolicy_Hash() { return 2656781781U; }
-	UEnum* Z_Construct_UEnum_T4Asset_ET4LoadingPolicy()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4LoadingPolicy"), 0, Get_Z_Construct_UEnum_T4Asset_ET4LoadingPolicy_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4LoadingPolicy::Async", (int64)ET4LoadingPolicy::Async },
-				{ "ET4LoadingPolicy::Sync", (int64)ET4LoadingPolicy::Sync },
-				{ "ET4LoadingPolicy::Default", (int64)ET4LoadingPolicy::Default },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Async.Name", "ET4LoadingPolicy::Async" },
-				{ "Default.Comment", "// #8, #56 : \xec\x82\xac\xec\x9a\xa9 \xec\xa0\x9c\xed\x95\x9c \xed\x95\x84\xec\x9a\x94!!! \xeb\xa7\x8c\xec\x95\xbd\xec\x9d\x84 \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa4\x80\xeb\xb9\x84\xeb\x8a\x94 \xed\x95\xb4\xeb\x91\x94 \xea\xb2\x83!\n" },
-				{ "Default.Hidden", "" },
-				{ "Default.Name", "ET4LoadingPolicy::Default" },
-				{ "Default.ToolTip", "#8, #56 : \xec\x82\xac\xec\x9a\xa9 \xec\xa0\x9c\xed\x95\x9c \xed\x95\x84\xec\x9a\x94!!! \xeb\xa7\x8c\xec\x95\xbd\xec\x9d\x84 \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa4\x80\xeb\xb9\x84\xeb\x8a\x94 \xed\x95\xb4\xeb\x91\x94 \xea\xb2\x83!" },
-				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
-				{ "Sync.Comment", "// Default\n" },
-				{ "Sync.Name", "ET4LoadingPolicy::Sync" },
-				{ "Sync.ToolTip", "Default" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
-				nullptr,
-				"ET4LoadingPolicy",
-				"ET4LoadingPolicy",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 	static UEnum* ET4LifecycleType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -538,7 +479,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4LifecycleType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4LifecycleType(ET4LifecycleType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4LifecycleType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4LifecycleType_Hash() { return 2178206508U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4LifecycleType_Hash() { return 3632221159U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4LifecycleType()
 	{
 #if WITH_HOT_RELOAD
@@ -559,13 +500,12 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Auto.Name", "ET4LifecycleType::Auto" },
 				{ "Comment", "// #24\n" },
-				{ "Default.Comment", "// #74\n" },
+				{ "Default.Comment", "// #74, #158\n" },
 				{ "Default.Name", "ET4LifecycleType::Default" },
-				{ "Default.ToolTip", "#74" },
+				{ "Default.ToolTip", "#74, #158" },
 				{ "Duration.Comment", "// #56\n" },
 				{ "Duration.Name", "ET4LifecycleType::Duration" },
 				{ "Duration.ToolTip", "#56" },
-				{ "Looping.DisplayName", "Looping (Warning #1)" },
 				{ "Looping.Name", "ET4LifecycleType::Looping" },
 				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
 				{ "ToolTip", "#24" },
@@ -576,6 +516,68 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				nullptr,
 				"ET4LifecycleType",
 				"ET4LifecycleType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4ActionPlayMode_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4ActionPlayMode, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4ActionPlayMode"));
+		}
+		return Singleton;
+	}
+	template<> T4ASSET_API UEnum* StaticEnum<ET4ActionPlayMode>()
+	{
+		return ET4ActionPlayMode_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionPlayMode(ET4ActionPlayMode_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4ActionPlayMode"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionPlayMode_Hash() { return 1240191310U; }
+	UEnum* Z_Construct_UEnum_T4Asset_ET4ActionPlayMode()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4ActionPlayMode"), 0, Get_Z_Construct_UEnum_T4Asset_ET4ActionPlayMode_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4ActionPlayMode::Auto", (int64)ET4ActionPlayMode::Auto },
+				{ "ET4ActionPlayMode::Duration", (int64)ET4ActionPlayMode::Duration },
+				{ "ET4ActionPlayMode::Looping", (int64)ET4ActionPlayMode::Looping },
+				{ "ET4ActionPlayMode::Default", (int64)ET4ActionPlayMode::Default },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Auto.Name", "ET4ActionPlayMode::Auto" },
+				{ "Comment", "// #24 => #152 : to ET4LifecycleType\n" },
+				{ "Default.Comment", "// #74, #158\n" },
+				{ "Default.Name", "ET4ActionPlayMode::Default" },
+				{ "Default.ToolTip", "#74, #158" },
+				{ "Duration.Comment", "// #56\n" },
+				{ "Duration.Name", "ET4ActionPlayMode::Duration" },
+				{ "Duration.ToolTip", "#56" },
+				{ "Looping.Name", "ET4ActionPlayMode::Looping" },
+				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
+				{ "ToolTip", "#24 => #152 : to ET4LifecycleType" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
+				nullptr,
+				"ET4ActionPlayMode",
+				"ET4ActionPlayMode",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -601,7 +603,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4ActionDataType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionDataType(ET4ActionDataType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4ActionDataType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 1590054796U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 3507012196U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType()
 	{
 #if WITH_HOT_RELOAD
@@ -619,6 +621,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "ET4ActionDataType::Mesh", (int64)ET4ActionDataType::Mesh },
 				{ "ET4ActionDataType::Particle", (int64)ET4ActionDataType::Particle },
 				{ "ET4ActionDataType::Decal", (int64)ET4ActionDataType::Decal },
+				{ "ET4ActionDataType::Audio", (int64)ET4ActionDataType::Audio },
 				{ "ET4ActionDataType::Projectile", (int64)ET4ActionDataType::Projectile },
 				{ "ET4ActionDataType::Reaction", (int64)ET4ActionDataType::Reaction },
 				{ "ET4ActionDataType::PlayTag", (int64)ET4ActionDataType::PlayTag },
@@ -635,6 +638,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "Animation.Comment", "// #132\n" },
 				{ "Animation.Name", "ET4ActionDataType::Animation" },
 				{ "Animation.ToolTip", "#132" },
+				{ "Audio.Comment", "// #54\n" },
+				{ "Audio.Name", "ET4ActionDataType::Audio" },
+				{ "Audio.ToolTip", "#54" },
 				{ "Branch.Comment", "// #62 : Begin Data Format // #T4_ADD_ACTION_TAG_DATA\n" },
 				{ "Branch.Name", "ET4ActionDataType::Branch" },
 				{ "Branch.ToolTip", "#62 : Begin Data Format  #T4_ADD_ACTION_TAG_DATA" },
@@ -665,9 +671,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "PostProcess.Comment", "// #101\n" },
 				{ "PostProcess.Name", "ET4ActionDataType::PostProcess" },
 				{ "PostProcess.ToolTip", "#101" },
-				{ "Projectile.Comment", "// #54\n" },
+				{ "Projectile.Comment", "// #152\n" },
 				{ "Projectile.Name", "ET4ActionDataType::Projectile" },
-				{ "Projectile.ToolTip", "#54" },
+				{ "Projectile.ToolTip", "#152" },
 				{ "Reaction.Comment", "// #63\n" },
 				{ "Reaction.Name", "ET4ActionDataType::Reaction" },
 				{ "Reaction.ToolTip", "#63" },

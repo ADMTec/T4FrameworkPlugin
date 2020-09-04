@@ -407,9 +407,6 @@ public:
 	TSoftObjectPtr<UT4ActionPackAsset> EndActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4LoadingPolicy LoadingPolicy;
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	bool bRandomRollAngle; // #127
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -452,7 +449,6 @@ public:
 		, CollideLocation(FVector::ZeroVector) // #140 : 점프시 첫번째 부딪히는 지점이 있을 경우. 없으면 Zero
 		, CollideTimeSec(0.0f) // #140 : 점프시 첫번째 부딪히는 지점까지의 시간. 없으면 Zero
 		, AirborneFlightTimeRatio(0.0f) // #132 : 정점에서 유지할 체공시간 비율
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 		, bRandomRollAngle(false) // #127
 		, InitialRollAngle(0.0f) // #127
 		, bEnableHitAttached(false)// #112

@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMovieSection() {}
 	T4ACTIONEDITOR_API UClass* Z_Construct_UClass_UT4ActionMovieSection();
 	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneSection();
 	UPackage* Z_Construct_UPackage__Script_T4ActionEditor();
-	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LifecycleType();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionPlayMode();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType();
 	T4ACTIONEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionMovieSceneChannel();
 // End Cross Module References
@@ -35,10 +35,10 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMovieSection() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionLifecycleType_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionActionPlayMode_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ActionLifecycleType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ActionLifecycleType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ActionActionPlayMode;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ActionActionPlayMode_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionHeaderKey_MetaData[];
 #endif
@@ -71,12 +71,12 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMovieSection() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode_MetaData[] = {
 		{ "ModuleRelativePath", "Private/Sequencer/T4ActionMovieSection.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType = { "ActionLifecycleType", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionMovieSection, ActionLifecycleType), Z_Construct_UEnum_T4Asset_ET4LifecycleType, METADATA_PARAMS(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode = { "ActionActionPlayMode", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionMovieSection, ActionActionPlayMode), Z_Construct_UEnum_T4Asset_ET4ActionPlayMode, METADATA_PARAMS(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionHeaderKey_MetaData[] = {
 		{ "ModuleRelativePath", "Private/Sequencer/T4ActionMovieSection.h" },
@@ -105,8 +105,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMovieSection() {}
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ViewModelInstanceKey = { "ViewModelInstanceKey", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActionMovieSection, ViewModelInstanceKey), METADATA_PARAMS(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ViewModelInstanceKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ViewModelInstanceKey_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4ActionMovieSection_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionLifecycleType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionActionPlayMode_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionHeaderKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionDataType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActionMovieSection_Statics::NewProp_ActionDataType_Underlying,
@@ -140,7 +140,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMovieSection() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ActionMovieSection, 1562032673);
+	IMPLEMENT_CLASS(UT4ActionMovieSection, 813688683);
 	template<> T4ACTIONEDITOR_API UClass* StaticClass<UT4ActionMovieSection>()
 	{
 		return UT4ActionMovieSection::StaticClass();

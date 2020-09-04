@@ -60,6 +60,8 @@ public:
 	// FEditorViewportClient
 	UWorld* GetWorld() const override; // #79
 
+	void SetupViewForRendering(FSceneViewFamily& ViewFamily, FSceneView& View) override; // #152
+
 	void OverridePostProcessSettings(FSceneView& View) override; // #100
 
 public:

@@ -9,6 +9,7 @@
 #include "Entity/T4EntityTypes.h"
 #include "Engine/Scene.h" // #100
 #include "Camera/CameraShake.h" // #101
+#include "Sound/SoundAttenuation.h" // #152
 #include "T4ActionPackDatas.generated.h"
 
 /**
@@ -22,6 +23,7 @@
 // ET4ActionDataType::Mesh // #108
 // ET4ActionDataType::Particle
 // ET4ActionDataType::Decal // #52
+// ET4ActionDataType::Audio // #152
 // ET4ActionDataType::Projectile // #63
 // ET4ActionDataType::Reaction // #76
 // ET4ActionDataType::PlayTag // #81
@@ -120,15 +122,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UT4ActionPackAsset> ActionPackAsset;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4LoadingPolicy LoadingPolicy;
-
 public:
 	FT4BranchActionData()
 		: FT4ActionDataBase(StaticActionType())
 		, Contition(ET4BranchCondition::Default)
 		, ConditionName(NAME_None)
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 	{
 	}
 
@@ -403,9 +401,6 @@ public:
 	TSoftObjectPtr<UStaticMesh> StaticMeshAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4LoadingPolicy LoadingPolicy;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FVector LocalOffset; // #112
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -420,7 +415,6 @@ public:
 		, AttachParent(ET4AttachParent::Default) // #54
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 		, LocalOffset(FVector::ZeroVector) // #112
 		, LocalRotation(FRotator::ZeroRotator) // #112
 		, LocalScale(FVector::OneVector) // #54
@@ -466,9 +460,6 @@ public:
 	TSoftObjectPtr<UParticleSystem> ParticleAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4LoadingPolicy LoadingPolicy;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FVector LocalOffset; // #112
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -486,7 +477,6 @@ public:
 		, AttachParent(ET4AttachParent::Default) // #54
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 		, LocalOffset(FVector::ZeroVector) // #112
 		, LocalRotation(FRotator::ZeroRotator) // #112
 		, LocalScale(FVector::OneVector) // #54
@@ -530,9 +520,6 @@ public:
 	TSoftObjectPtr<UMaterialInterface> DecalMaterial;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4LoadingPolicy LoadingPolicy;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FVector Scale; // #54
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -553,7 +540,6 @@ public:
 		, AttachParent(ET4AttachParent::Default)
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 		, Scale(FVector::OneVector)
 		, DecalSortOrder(0)
 		, DecalSize(128.0f, 256.0f, 256.0f)
@@ -572,6 +558,73 @@ public:
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Decal '%s'"), *(DecalMaterial.GetAssetName())); // #54
+	}
+};
+
+// #152
+class USoundBase;
+class USoundAttenuation;
+USTRUCT()
+struct T4ASSET_API FT4AudioActionData : public FT4ActionDataBase
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	// #39 : FT4ActionDetails::CustomizeAudioActionDetails
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	ET4AttachParent AttachParent;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bParentInheritPoint; // #76 : Parent ActionPoint 가 없다면 본래 세팅을 따르도록...
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FName ActionPoint;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	TSoftObjectPtr<USoundBase> SoundAsset;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	TSoftObjectPtr<USoundAttenuation> AttenuationSettings;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bUISound;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	float VolumeMultiplier;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	float PitchMultiplier;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	float FadeInTimeSec;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	float FadeOutTimeSec;
+
+public:
+	FT4AudioActionData()
+		: FT4ActionDataBase(StaticActionType())
+		, AttachParent(ET4AttachParent::Default)
+		, bParentInheritPoint(false) // #76
+		, ActionPoint(T4Const_DefaultActionPointName)
+		, bUISound(false)
+		, VolumeMultiplier(1.0f)
+		, PitchMultiplier(1.0f)
+		, FadeInTimeSec(0.1f)
+		, FadeOutTimeSec(0.1f)
+	{
+	}
+
+	static ET4ActionDataType StaticActionType() { return ET4ActionDataType::Audio; }
+
+	FString ToString() const override
+	{
+		return FString(TEXT("AudioAction"));
+	}
+
+	FString ToDisplayText() override
+	{
+		return FString::Printf(TEXT("Audio '%s'"), *(SoundAsset.GetAssetName()));
 	}
 };
 
@@ -614,9 +667,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UT4ActionPackAsset> EndActionPackAsset;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4LoadingPolicy LoadingPolicy;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4MovementType ProjectileMotion; // #127
@@ -669,7 +719,6 @@ public:
 	FT4ProjectileActionData()
 		: FT4ActionDataBase(StaticActionType())
 		, ActionPoint(NAME_None)
-		, LoadingPolicy(ET4LoadingPolicy::Default)
 		, ProjectileMotion(ET4MovementType::Straight) // #127
 		, AcceleratedMotion(ET4AcceleratedMotion::Uniform) // #127
 		, MaxHeight(0.0f) // #127 : 포물선(Parabola) 에서 사용될 최대 높이
@@ -847,7 +896,7 @@ public:
 		, BlendOutTimeSec(0.0f)
 		, TimeScale(1.0f)
 	{
-		LifecycleType = ET4LifecycleType::Duration; // Duration 만!, 시스템으로 제어 필요
+		ActionPlayMode = ET4ActionPlayMode::Duration; // Duration 만!, 시스템으로 제어 필요
 	}
 
 	static ET4ActionDataType StaticActionType() { return ET4ActionDataType::TimeScale; }
@@ -1095,7 +1144,7 @@ public:
 		, PlaySpace(ECameraAnimPlaySpace::CameraLocal)
 		, UserDefinedPlaySpace(ForceInitToZero)
 	{
-		LifecycleType = ET4LifecycleType::Duration; // Duration 만!, 시스템으로 제어 필요
+		ActionPlayMode = ET4ActionPlayMode::Duration; // Duration 만!, 시스템으로 제어 필요
 	}
 
 	static ET4ActionDataType StaticActionType() { return ET4ActionDataType::CameraShake; }

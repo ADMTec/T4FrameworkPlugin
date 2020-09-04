@@ -447,12 +447,15 @@ public:
 
 // #56 : Only Editor, Action Editor 에서 Invisible or Isolate 로 출력을 제어할 때 더미용으로 사용(delay, duration 동작 보장)
 USTRUCT()
-struct FT4EditorActionCommandContext
+struct FT4EditorActionContext
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 #if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4ActorID OwnerActorID; // #152
+
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSet<uint32> InvisibleActionPack; // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어한다.
 
@@ -461,13 +464,14 @@ public:
 #endif
 
 public:
-	FT4EditorActionCommandContext()
+	FT4EditorActionContext()
 	{
 	}
 };
 
 #if WITH_EDITOR
 T4ENGINE_API bool HasEditorActionContext(ET4LayerType InLayerType); // #127
-T4ENGINE_API TSharedPtr<FT4EditorActionCommandContext> CreateOrGetEditorActionContext(ET4LayerType InLayerType); // #127
+T4ENGINE_API TSharedPtr<FT4EditorActionContext> GetEditorActionContext(ET4LayerType InLayerType); // #127
+T4ENGINE_API bool CreateEditorActionContext(ET4LayerType InLayerType); // #127
 T4ENGINE_API void DestroyEditorActionContext(ET4LayerType InLayerType); // #127
 #endif

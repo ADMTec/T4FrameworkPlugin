@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4ENGINE_T4ActionParameters_generated_h
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionParameters_h_452_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4EditorActionCommandContext_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4EditorActionContext_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
-template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4EditorActionCommandContext>();
+template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4EditorActionContext>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_T4ActionParameters_h_207_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ActionParameters_Statics; \

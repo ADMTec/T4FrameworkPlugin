@@ -252,7 +252,7 @@ public:
 	virtual void SetInvisible(bool bInEnable) = 0; // #153 : SetActorHiddenInGame, 전체
 	virtual void SetNoCollision(bool bInActive) = 0; // #135
 	virtual void SetHeightOffset(float InOffset) = 0; // #18
-	virtual void SetOutline(bool bInUse) = 0; // #115
+	virtual void SetOutline(bool bInShow) = 0; // #115
 	virtual void SetNameplateText(FName InKey, const TCHAR* InText, float InHeightOffset, const FColor& InTextColor, float InScaleXY) = 0; // #119
 	virtual void ClearNameplateText(FName InKey) = 0; // #119
 

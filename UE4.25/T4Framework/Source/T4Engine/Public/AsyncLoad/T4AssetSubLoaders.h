@@ -20,6 +20,9 @@ class USkeletalMeshComponent;
 class USkinnedMeshComponent;
 class USkeletalMeshComponent;
 class UParticleSystemComponent;
+class USoundBase; // #152
+class USoundAttenuation;
+class UAudioComponent; // #152
 class UT4ActionPackAsset;
 class UT4AnimsetAsset;
 
@@ -117,6 +120,32 @@ public:
 	bool Process(UParticleSystemComponent* InParticleSystemComponent);
 
 	UParticleSystem* GetParticleSystem(); // #56
+};
+
+#include "Sound/SoundAttenuation.h" // #152
+
+// #152
+class T4ENGINE_API FT4SoundAttenuationLoader : public FT4AssetLoader
+{
+public:
+	explicit FT4SoundAttenuationLoader() {}
+	virtual ~FT4SoundAttenuationLoader() { Reset(); }
+
+	bool Process(UAudioComponent* InAudioComponent);
+
+	USoundAttenuation* GetSoundAttenuation();
+};
+
+// #152
+class T4ENGINE_API FT4SoundLoader : public FT4AssetLoader
+{
+public:
+	explicit FT4SoundLoader() {}
+	virtual ~FT4SoundLoader() { Reset(); }
+
+	bool Process(UAudioComponent* InAudioComponent);
+
+	USoundBase* GetSoundBase();
 };
 
 // #24

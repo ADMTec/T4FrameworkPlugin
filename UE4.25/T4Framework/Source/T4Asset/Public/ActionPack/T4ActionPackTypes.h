@@ -39,6 +39,7 @@ enum class ET4ActionDataType : uint32
 	Mesh, // #108
 	Particle,
 	Decal, // #54
+	Audio, // #152
 
 	Projectile, // #63
 
@@ -60,6 +61,18 @@ enum class ET4ActionDataType : uint32
 	None,
 };
 
+// #24 => #152 : to ET4LifecycleType
+UENUM()
+enum class ET4ActionPlayMode : uint8
+{
+	Auto, // #56
+	Duration,
+
+	Looping, // #74, #158
+
+	Default, // Default = Auto
+};
+
 // #24
 UENUM()
 enum class ET4LifecycleType : uint8
@@ -67,19 +80,9 @@ enum class ET4LifecycleType : uint8
 	Auto, // #56
 	Duration,
 
-	Looping		UMETA(DisplayName = "Looping (Warning #1)"), // #74
+	Looping, // #74, #158
 
 	Default, // Default = Auto
-};
-
-UENUM()
-enum class ET4LoadingPolicy : uint8
-{
-	Async, // Default
-
-	Sync, // #8, #56 : 사용 제한 필요!!! 만약을 대비해 준비는 해둔 것!
-
-	Default UMETA(Hidden) // Default = Async
 };
 
 // #134

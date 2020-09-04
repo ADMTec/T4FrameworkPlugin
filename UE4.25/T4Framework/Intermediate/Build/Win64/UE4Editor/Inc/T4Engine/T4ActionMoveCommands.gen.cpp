@@ -17,7 +17,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionMoveCommands() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionCommandBase();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPackAsset_NoRegister();
-	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4LoadingPolicy();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActorID();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4AcceleratedMotion();
@@ -102,11 +101,6 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4LaunchActionCommand
 #endif
 		static void NewProp_bRandomRollAngle_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bRandomRollAngle;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LoadingPolicy_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LoadingPolicy;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LoadingPolicy_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndActionPackAsset_MetaData[];
 #endif
@@ -287,14 +281,6 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4LaunchActionCommand
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bRandomRollAngle = { "bRandomRollAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4LaunchActionCommand), &Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bRandomRollAngle_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bRandomRollAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bRandomRollAngle_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/Action/Command/T4ActionMoveCommands.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy = { "LoadingPolicy", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4LaunchActionCommand, LoadingPolicy), Z_Construct_UEnum_T4Asset_ET4LoadingPolicy, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_EndActionPackAsset_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionMoveCommands.h" },
@@ -458,8 +444,6 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4LaunchActionCommand
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bEnableHitAttached,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_InitialRollAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_bRandomRollAngle,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_LoadingPolicy_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_EndActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_HeadActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4LaunchActionCommand_Statics::NewProp_OwnerActorID,
@@ -509,7 +493,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4LaunchActionCommand
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4LaunchActionCommand_Hash() { return 468972879U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4LaunchActionCommand_Hash() { return 628623781U; }
 class UScriptStruct* FT4MoveSpeedSyncActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

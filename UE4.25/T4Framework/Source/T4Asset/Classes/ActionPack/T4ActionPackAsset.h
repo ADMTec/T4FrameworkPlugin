@@ -17,6 +17,7 @@ struct FT4ActionPackCustomVersion
 		InitializeVer = 0,
 
 		CommonPropertyNameChanged, // #102
+		AddActionPlayModeProperty, // #152
 
 		// -----<new versions can be added above this line>-------------------------------------------------
 		VersionPlusOne,
@@ -117,6 +118,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TArray<FT4DecalActionData> DecalActions; // #54
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	TArray<FT4AudioActionData> AudioActions; // #152
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TArray<FT4ProjectileActionData> ProjectileActions; // #63
