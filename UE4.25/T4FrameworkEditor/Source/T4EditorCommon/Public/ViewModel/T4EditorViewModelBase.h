@@ -225,13 +225,13 @@ public:
 	); // #39
 
 	virtual void ClientPlayAction(
-		UT4ActionPackAsset* InActionPackAsset, 
+		const UT4ActionPackAsset* InActionPackAsset, 
 		float InStartTimeSec, 
 		const FT4ActionParameters* InActionParameters
 	); // #39, #56
 
 	void ClientPlayAction(
-		UT4ActionPackAsset* InActionPackAsset, 
+		const UT4ActionPackAsset* InActionPackAsset,
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 
@@ -240,23 +240,22 @@ public:
 
 	void ClientPlayAction(
 		ET4LayerType InLayerType, 
-		UT4ActionPackAsset* InActionPackAsset, 
+		const UT4ActionPackAsset* InActionPackAsset,
 		float InStartTimeSec, 
 		const FT4ActionKey& InActionKey, 
 		const FT4ActionParameters* InActionParameters, 
 		bool bOverride
 	); // #39, #56
 
-	virtual void ClientEquipWeapon(
+	void ClientEquipWeapon(
 		const FT4ActionKey& InActionKey,
-		UT4EntityAsset* InWeaponEntity,
-		FName InOverrideEquipPointName,
+		const TArray<FT4GameEditorEquipData>& InEquipDatas, // #158 : Support Main & Subs Item
 		bool bInChangeAnimSetSync, // #72, #111 : 스탠스 변경과 동기화한다.
 		bool bInChangeAnimSetInEntity = false // #120 : Weapon 에 설정된 AnimSet 자동 적용 
 	);
 	void ClientUnequipWeapon(const FT4ActionKey& InActionKey, FName InOverrideEquipPointName, bool bInChangeAnimSetSync); // #111 : 스탠스 변경과 동기화한다.
 
-	void ClientExchangeCostume(UT4EntityAsset* InCostumeEntity, FName InCompositePartName, bool bSet); // #72
+	void ClientExchangeCostume(const UT4EntityAsset* InCostumeEntity, FName InCompositePartName, bool bSet); // #72
 	virtual void ClientExchangeSkin(FName InSkinName); // #130
 
 	virtual void ClientChangeAnimSet(FName InAnimSetName, bool bInImmediate); // #73

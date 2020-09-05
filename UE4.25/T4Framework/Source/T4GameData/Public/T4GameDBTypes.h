@@ -452,7 +452,7 @@ public:
 	FT4WeaponDBKey(const FT4GameDBKey& InGameDBKey)
 		: FT4GameDBKey(ET4GameDBType::Weapon, InGameDBKey.RowName)
 	{
-		check(ET4GameDBType::Weapon == InGameDBKey.Type);
+		ensure(ET4GameDBType::Weapon == InGameDBKey.Type);
 	}
 
 	FORCEINLINE FT4GameDBKey operator=(const FT4WeaponDBKey& InRhs)

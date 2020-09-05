@@ -2,6 +2,13 @@
 ### Massive Action RPG Framework for UE4
 
 > **Update History**
+- **v0.9.41** : 2020.09.04
+  - #152 [기능추가] Action Editor, Audio Action 추가
+	- SoundWave, SoundCue 에셋 사용, UI Sound 및 SoundAttenuation 기반 3D 사운드 지원
+  - #152 [기능개선] Action Editor, 플레이어 캐릭터가 없을 경우에도 Action Timeline Track 의 Isolation 과 Invisible 옵션이 동작할 수 있도록 기능 개선
+  - #152 [기능개선] Action Editor, Action Timeline Track 선택시 Detail View 의 Sub Details Tab 이 자동 선택되도록 개선
+  - #160 [버그수정] 마우스 오버 타겟 아웃라인 버그 수정
+	- Composite Character 의 경우 일부 파츠에만 아웃라인 생성 및 Prop/DropItem 에 대한 아웃라인이 생기지 않던 문제
 - v0.9.40
   - #158 [기능개선] T4Framework Editor, Viewport 의 WorldTime Overlay Menu 변경이 Simulation 사용과 관계없이 Environment 가 적용되도록 개선
 	- Viewport 의 기존 Timelapse Overlay Menu 를 WorldTime 으로 변경됨

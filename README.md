@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.41)
+# T4FrameworkPlugin (v0.9.42)
 ### Massive Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,13 +20,14 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.41**
-	- #152 [기능추가] Action Editor, Audio Action 추가
-	  - SoundWave, SoundCue 에셋 사용, UI Sound 및 SoundAttenuation 기반 3D 사운드 지원
-    - #152 [기능개선] Action Editor, 플레이어 캐릭터가 없을 경우에도 Action Timeline Track 의 Isolation 과 Invisible 옵션이 동작할 수 있도록 기능 개선
-    - #152 [기능개선] Action Editor, Action Timeline Track 선택시 Detail View 의 Sub Details Tab 이 자동 선택되도록 개선
-	- #160 [버그수정] 마우스 오버 타겟 아웃라인 버그 수정
-	  - Composite Character 의 경우 일부 파츠에만 아웃라인 생성 및 Prop/DropItem 에 대한 아웃라인이 생기지 않던 문제
+  - **v0.9.42**
+	- #158 [버그수정] Content Editor, GameDB 프리뷰에서 PC/NPC 가 장착한 Weapon 의 보조 장비가 출력되지 않던 문제 수정
+    - #158 [기능개선] Action Editor, Animation Action Details 의 AnimSequence 리스트에 Item 출력 순서 변경을 위한 Move Up/Down 기능 추가
+	- #158 [버그수정] Action Editor, Action Details 의 "Play" 테스트가 간헐적으로 동작하지 않던 문제 수정
+	- #158 [버그수정] Action Editor, Test Player Settings 에서 WeaponDB Equip/Uneqip 이 동작하지 않던 문제 수정
+    - #152 [버그수정] Action Editor, Audio Action Details 에서 "Play" 테스트 시 사운드가 출력되지 않던 문제 수정
+	  - Audio Action 의 경우 뷰포트에 포커스가 있어야 소리가 출력됨
+	- #152 [버그수정] 플레이어 무기 장착 해제시 발생하는 크래시 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

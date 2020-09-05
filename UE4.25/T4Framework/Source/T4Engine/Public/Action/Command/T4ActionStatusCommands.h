@@ -163,7 +163,7 @@ public:
 	TSoftObjectPtr<class UT4WeaponEntityAsset> WeaponEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName OverrideEquipPoint; // #57 : BoneOrSocketName;
+	FName OverrideEquipPoint; // #57
 
 public:
 	FT4EquipWeaponEntityData()

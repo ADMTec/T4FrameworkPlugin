@@ -82,6 +82,9 @@ protected:
 	virtual void OnItemAdd(); // #134
 	virtual void OnItemRemove(TSharedPtr<FT4ListViewItem> InSelectedItem); // #134
 
+	virtual void OnItemMoveUp(TSharedPtr<FT4ListViewItem> InSelectedItem); // #158 : up/down
+	virtual void OnItemMoveDown(TSharedPtr<FT4ListViewItem> InSelectedItem); // #158 : up/down
+
 	virtual void OnItemMultiSelected(const TArray<FName>& InMultiSelected); // #104
 
 protected:

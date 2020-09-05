@@ -114,7 +114,8 @@ class T4ENGINE_API IT4ActionNode // #23
 public:
 	virtual ~IT4ActionNode() {}
 
-	virtual bool IsPlaying() const = 0;
+	virtual bool IsPlayStart() const = 0;
+	virtual bool IsPlaying() const = 0; // #60 : Pause 상태면 false 가 리턴됨에 유의 (Only Editor)
 	virtual bool IsLooping() const = 0;
 
 	virtual float GetElapsedTimeSec() const = 0; // #102

@@ -54,18 +54,18 @@ public:
 	ET4ViewModelEditMode GetEditMode() const override { return ET4ViewModelEditMode::Preview; }
 
 public:
-	UT4EntityAsset* GetSelectedEntityAsset() { return EntityAsset; }
+	UT4EntityAsset* GetSelectedEntityAsset() { return EntityAssetOwner; }
 
-	void OnSpawnFromEntity(UObject* InEntityAsset, float InKeepUpdateTimeSec);
+	void OnSpawnFromEntity(UT4EntityAsset* InEntityAsset, float InKeepUpdateTimeSec);
 	void OnSpawnFromEntity(
-		UObject* InEntityAsset, 
+		UT4EntityAsset* InEntityAsset,
 		FName InGameDBKey,
 		FName InSkinName, 
 		FName InAnimSetName, // #142
 		FName InStanceName, // #142
 		float InKeepUpdateTimeSec
 	);
-	void OnSpawnFromAction(UT4ActionPackAsset* InActionPackAsset, float InDurationSec, float InDelayTimeSec);
+	void OnSpawnFromAction(const UT4ActionPackAsset* InActionPackAsset, float InDurationSec, float InDelayTimeSec);
 	void OnSpawnFromGameData(ET4EditorDataType InGameDBType, FName InRowName); // #120
 
 	void HandleOnEntityPropertiesChanged();
@@ -83,5 +83,5 @@ protected:
 	void StartPlay() override; // #76, #86
 
 private:
-	UT4EntityAsset* EntityAsset;
+	UT4EntityAsset* EntityAssetOwner;
 };

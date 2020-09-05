@@ -252,6 +252,18 @@ enum ET4EditorDataType
 	EdData_Effect,
 };
 
+class UT4WeaponEntityAsset;
+struct FT4GameEditorEquipData
+{
+	FT4GameEditorEquipData()
+		: WeaponEntityAsset(nullptr)
+		, OverrideEquipPoint(NAME_None)
+	{
+	}
+	const UT4WeaponEntityAsset* WeaponEntityAsset;
+	FName OverrideEquipPoint;
+};
+
 struct FWorldContext;
 class FViewport;
 class IT4EditorViewportClient
@@ -308,6 +320,7 @@ public:
 //        컨텐츠 쪽에서 구현해주어야 에디터에서 사용할 수 있음 (T4Gameplay 을 사용하지 않을 경우를 위함)
 class UT4EntityAsset;
 class UT4ActionPackAsset;
+
 class T4FRAMEWORK_API IT4EditorGameData // #60
 {
 public:
@@ -317,8 +330,8 @@ public:
 	virtual void GetDataNamesByDataType(ET4EditorDataType InEditorDataType, TArray<FName>& OutDBKeyNames) = 0;
 
 	virtual UT4EntityAsset* GetEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0;
-	virtual UT4EntityAsset* GetWeaponEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
-	virtual UT4ActionPackAsset* GetActionPackAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
+	virtual bool GetWeaponEntityAssetInGameData(ET4EditorDataType InEditorDataType,  const FName& InDataName, TArray<FT4GameEditorEquipData>& OutEquipData) = 0; // #120, #158 : index 0 : Main, 0 < : Subs
+	virtual const UT4ActionPackAsset* GetActionPackAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
 
 	virtual bool GetNPCDataInfo(const FName& InDataName, FT4EditorNPCDataInfo& OutData) = 0; // #135
 	virtual bool GetSkillDataInfo(const FName& InDataName, FT4EditorSkillDataInfo& OutData) = 0;
