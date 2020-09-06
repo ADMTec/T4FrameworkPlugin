@@ -1,8 +1,16 @@
 # T4FrameworkPlugin
-### Massive Action RPG Framework for UE4
+### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
-- **v0.9.41** : 2020.09.04
+- **v0.9.42** : 2020.09.05
+  - #158 [버그수정] Content Editor, GameDB 프리뷰에서 PC/NPC 가 장착한 Weapon 의 보조 장비가 출력되지 않던 문제 수정
+  - #158 [기능개선] Action Editor, Animation Action Details 의 AnimSequence 리스트에 Item 출력 순서 변경을 위한 Move Up/Down 기능 추가
+  - #158 [버그수정] Action Editor, Action Details 의 "Play" 테스트가 간헐적으로 동작하지 않던 문제 수정
+  - #158 [버그수정] Action Editor, Test Player Settings 에서 WeaponDB Equip/Uneqip 이 동작하지 않던 문제 수정
+  - #152 [버그수정] Action Editor, Audio Action Details 에서 "Play" 테스트 시 사운드가 출력되지 않던 문제 수정
+	- Audio Action 의 경우 뷰포트에 포커스가 있어야 소리가 출력됨
+  - #152 [버그수정] 플레이어 무기 장착 해제시 발생하는 크래시 수정
+- v0.9.41 : 2020.09.04
   - #152 [기능추가] Action Editor, Audio Action 추가
 	- SoundWave, SoundCue 에셋 사용, UI Sound 및 SoundAttenuation 기반 3D 사운드 지원
   - #152 [기능개선] Action Editor, 플레이어 캐릭터가 없을 경우에도 Action Timeline Track 의 Isolation 과 Invisible 옵션이 동작할 수 있도록 기능 개선

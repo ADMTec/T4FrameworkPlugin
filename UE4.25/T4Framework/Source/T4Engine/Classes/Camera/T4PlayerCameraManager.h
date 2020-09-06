@@ -21,16 +21,23 @@ public:
 	FVector GetCameraLocation() const override; // #158 : Free Camera 대응
 	FRotator GetCameraRotation() const override; // #158 : Free Camera 대응
 
+	bool IsFreeCameraEnabled() const { return bFreeCameraEnabled; } // #158
 	void SetEnableFreeCamera(bool bInEnable) { bFreeCameraEnabled = bInEnable; } // #158
-	void SetFreeCameraLocationAndRotation(const FVector& InLocation, const FRotator& InRotation) // #158
-	{ 
-		FreeCameraLocation = InLocation; 
-		FreeCameraRotation = InRotation;
-	}
+	void SetFreeCameraLocationAndRotation(const FVector& InLocation, const FRotator& InRotation); // #158
+
+	bool IsFreeCameraBlended() const { return bFreeCameraBlended; } // #158
+	void SetBlendFreeCamera(bool bInBlend); // #158
+	void SetFreeCameraBlendLocationAndRotation(const FVector& InLocation, const FRotator& InRotation); // #158
+	const FVector& GetFreeCameraBlendLocation() const { return FreeCameraBlendLocation; } // #158
+	const FRotator& GetFreeCameraBlendRotation() const { return FreeCameraBlendRotation; } // #158
 
 private:
 	bool bFreeCameraEnabled; // #158 : Free Camera 대응
 	FVector FreeCameraLocation; // #158
 	FRotator FreeCameraRotation; // #158
+
+	bool bFreeCameraBlended; // #158 : CameraWork 를 통해 카메라 위치를 제어 (Editor Only)
+	FVector FreeCameraBlendLocation; // #158
+	FRotator FreeCameraBlendRotation; // #158
 #endif
 };

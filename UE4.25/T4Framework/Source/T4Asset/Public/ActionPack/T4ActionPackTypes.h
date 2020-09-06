@@ -116,7 +116,7 @@ enum class ET4BranchCondition : uint8
 UENUM(BlueprintType)
 enum class ET4AttachParent : uint8 // #54
 {
-	Object, // Default
+	Actor, // Default
 	World,
 
 	Default,

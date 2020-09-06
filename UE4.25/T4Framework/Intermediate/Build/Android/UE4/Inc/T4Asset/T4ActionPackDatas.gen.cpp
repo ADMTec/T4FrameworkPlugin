@@ -1404,10 +1404,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimeScale_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TimeScale;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BlendOutTimeSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BlendOutTimeSec;
@@ -1425,6 +1421,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_BlendInCurve;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_BlendInCurve_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimeScale_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TimeScale;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachParent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_AttachParent;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_AttachParent_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayTarget_MetaData[];
 #endif
@@ -1444,16 +1449,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TimeScaleActionData>();
 	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData[] = {
-		{ "Category", "ClientOnly" },
-		{ "ClampMin", "0.1" },
-		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
-		{ "UIMax", "5" },
-		{ "UIMin", "0.1" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale = { "TimeScale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TimeScaleActionData, TimeScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendOutTimeSec_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -1485,6 +1480,26 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve = { "BlendInCurve", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TimeScaleActionData, BlendInCurve), Z_Construct_UEnum_T4Asset_ET4BuiltInEasing, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ClampMin", "0.1" },
+		{ "Comment", "// #158 : World \xeb\x8a\x94 \xec\xa0\x84\xec\xb2\xb4, Actor \xeb\x8a\x94 \xec\x9e\x90\xec\x8b\xa0\xec\x97\x90\xea\xb2\x8c\xeb\xa7\x8c (Default = Actor)\n" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "ToolTip", "#158 : World \xeb\x8a\x94 \xec\xa0\x84\xec\xb2\xb4, Actor \xeb\x8a\x94 \xec\x9e\x90\xec\x8b\xa0\xec\x97\x90\xea\xb2\x8c\xeb\xa7\x8c (Default = Actor)" },
+		{ "UIMax", "5" },
+		{ "UIMin", "0.1" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale = { "TimeScale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TimeScaleActionData, TimeScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent = { "AttachParent", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TimeScaleActionData, AttachParent), Z_Construct_UEnum_T4Asset_ET4AttachParent, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #39 : FT4ActionDetails::CustomizeTimeScaleActionDetails\n" },
@@ -1495,13 +1510,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget = { "PlayTarget", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TimeScaleActionData, PlayTarget), Z_Construct_UEnum_T4Asset_ET4PlayTarget, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendOutTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendOutCurve,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendOutCurve_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_BlendInCurve_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_TimeScale,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_AttachParent_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics::NewProp_PlayTarget_Underlying,
 	};
@@ -1533,7 +1550,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TimeScaleActionData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4TimeScaleActionData_Hash() { return 22089915U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4TimeScaleActionData_Hash() { return 3918515745U; }
 class UScriptStruct* FT4PlayTagActionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

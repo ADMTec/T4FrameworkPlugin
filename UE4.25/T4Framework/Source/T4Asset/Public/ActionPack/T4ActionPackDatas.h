@@ -872,6 +872,12 @@ public:
 	ET4PlayTarget PlayTarget;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	ET4AttachParent AttachParent; // #158 : World 는 전체, Actor 는 자신에게만 (Default = Actor)
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.1", UIMin = "0.1", UIMax = "5"))
+	float TimeScale;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4BuiltInEasing BlendInCurve;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -883,18 +889,16 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	float BlendOutTimeSec;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.1", UIMin = "0.1", UIMax = "5"))
-	float TimeScale;
-
 public:
 	FT4TimeScaleActionData()
 		: FT4ActionDataBase(StaticActionType())
 		, PlayTarget(ET4PlayTarget::Default)
+		, AttachParent(ET4AttachParent::Default) // #158 : World 는 전체, Actor 는 자신에게만 (Default = Actor)
+		, TimeScale(1.0f)
 		, BlendInCurve(ET4BuiltInEasing::Linear)
 		, BlendInTimeSec(0.0f)
 		, BlendOutCurve(ET4BuiltInEasing::Linear)
 		, BlendOutTimeSec(0.0f)
-		, TimeScale(1.0f)
 	{
 		ActionPlayMode = ET4ActionPlayMode::Duration; // Duration 만!, 시스템으로 제어 필요
 	}
@@ -957,7 +961,7 @@ public:
 		: ChannelKey(INDEX_NONE)
 		, StartTimeSec(0.0f)
 		, EasingCurve(ET4BuiltInEasing::Linear)
-		, LookAtPoint(NAME_None)
+		, LookAtPoint(TEXT("Root"))
 		, bInverse(false)
 		, ViewDirection(FVector::BackwardVector)
 		, Distance(100.0f)
@@ -1012,9 +1016,9 @@ public:
 		: FT4ActionDataBase(StaticActionType())
 		, PlayTarget(ET4PlayTarget::Default)
 		, BlendInCurve(ET4BuiltInEasing::Linear)
-		, BlendInTimeSec(0.0f)
+		, BlendInTimeSec(0.25f)
 		, BlendOutCurve(ET4BuiltInEasing::Linear)
-		, BlendOutTimeSec(0.0f)
+		, BlendOutTimeSec(0.25f)
 	{
 	}
 

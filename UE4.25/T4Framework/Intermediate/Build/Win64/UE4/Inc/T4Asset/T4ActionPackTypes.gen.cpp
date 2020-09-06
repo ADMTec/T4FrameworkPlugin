@@ -283,7 +283,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4AttachParent_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4AttachParent(ET4AttachParent_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4AttachParent"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4AttachParent_Hash() { return 3750998676U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4AttachParent_Hash() { return 2089354575U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4AttachParent()
 	{
 #if WITH_HOT_RELOAD
@@ -295,17 +295,17 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4AttachParent::Object", (int64)ET4AttachParent::Object },
+				{ "ET4AttachParent::Actor", (int64)ET4AttachParent::Actor },
 				{ "ET4AttachParent::World", (int64)ET4AttachParent::World },
 				{ "ET4AttachParent::Default", (int64)ET4AttachParent::Default },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Actor.Name", "ET4AttachParent::Actor" },
 				{ "BlueprintType", "true" },
 				{ "Comment", "// #54\n" },
 				{ "Default.Name", "ET4AttachParent::Default" },
 				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
-				{ "Object.Name", "ET4AttachParent::Object" },
 				{ "ToolTip", "#54" },
 				{ "World.Comment", "// Default\n" },
 				{ "World.Name", "ET4AttachParent::World" },

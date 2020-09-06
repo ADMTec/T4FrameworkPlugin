@@ -174,6 +174,9 @@ protected:
 	virtual void OnUninstallPlayerSettings(); // #153
 
 private:
+	void SetPossessActorID(const FT4ActorID& InActionID); // #158
+	void ResetPossessActorID(); // #158
+
 	void AttachCameraComponent(APawn* InOwner);
 	void DetachCameraComponent();
 

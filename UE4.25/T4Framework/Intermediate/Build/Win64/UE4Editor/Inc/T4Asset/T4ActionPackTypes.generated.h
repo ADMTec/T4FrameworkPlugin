@@ -51,7 +51,7 @@ enum class ET4PlayTarget : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4PlayTarget>();
 
 #define FOREACH_ENUM_ET4ATTACHPARENT(op) \
-	op(ET4AttachParent::Object) \
+	op(ET4AttachParent::Actor) \
 	op(ET4AttachParent::World) \
 	op(ET4AttachParent::Default) 
 

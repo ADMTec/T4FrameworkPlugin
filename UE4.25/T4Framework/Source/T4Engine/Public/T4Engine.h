@@ -563,18 +563,19 @@ public:
 	virtual IT4WorldLoadBalancer* GetLoadBalancer() = 0; // #143
 
 	// Client Only
-	virtual bool SetPlayerInfo(const FT4ObjectID& InPlayerObjectID, APlayerController* InPlayerController) = 0; // AT4PlayerControllerBase
-	virtual bool HasPlayerController() const = 0; // #115 : PC가 스폰되어야 렌더링이 가능하다.
-	virtual const FT4ObjectID GetPlayerObjectID() const = 0;
-
 	virtual APlayerController* GetPlayerController() const = 0; // #114
 	virtual APlayerCameraManager* GetPlayerCameraManager() const = 0; // #114
 #if TECH4_ENGINE_HMD_USED
 	virtual IT4HeadMountedDisplay* GetHeadMountedDisplay() = 0; // #153
 #endif
 
+	virtual bool SetPlayerInfo(const FT4ObjectID& InPlayerObjectID, APlayerController* InPlayerController) = 0; // AT4PlayerControllerBase
+	virtual bool HasPlayerController() const = 0; // #115 : PC가 스폰되어야 렌더링이 가능하다.
+	virtual const FT4ObjectID GetPlayerObjectID() const = 0;
+
 	virtual bool HasPlayerActor() const = 0;
-	virtual IT4WorldActor* GetPlayerActor() const = 0; // #133 : Free Camera 일 경우 nullptr 이 리턴됨에 유의!! (FreeCam 은 툴 전용이다)
+	virtual void SetPlayerActorID(const FT4ActorID& InActorID) = 0; // #158 : PC 가 사용하는 PlayerActorID 설정. PC 의 ViewTarget 쓰다 직접 설정하는 것으로 변경함
+	virtual IT4WorldActor* GetPlayerActor() = 0;
 	virtual bool ComparePlayerActor(const FT4ActorID& InActorID) const = 0;
 	virtual bool ComparePlayerActor(IT4WorldActor* InWorldActor) const = 0;
 
