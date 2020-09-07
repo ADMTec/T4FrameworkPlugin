@@ -14,7 +14,7 @@
 class IDetailsView;
 class ST4PathSegmentPointListWidget;
 class FT4EditorViewModelBase;
-class UT4PathSegmentData;
+class UT4PathSegmentAsset;
 class UT4EditorPathSegmentController;
 class T4EDITORCOMMON_API FT4PathSegmentDetails : public FEditorUndoClient, public TSharedFromThis<FT4PathSegmentDetails>
 {
@@ -29,7 +29,7 @@ public:
 
 	void CustomizeDetails(
 		IDetailCategoryBuilder& InDetailCategoryBuilder,
-		UT4PathSegmentData* InPathSegmentData
+		UT4PathSegmentAsset* InPathSegmentAsset
 	);
 
 private:
@@ -48,7 +48,7 @@ private:
 
 private:
 	FT4EditorViewModelBase* ViewModelBaseRef;
-	TWeakObjectPtr<UT4PathSegmentData> PathSegmentDataPtr;
+	TWeakObjectPtr<UT4PathSegmentAsset> PathSegmentAssetPtr;
 
 	TSharedPtr<ST4PathSegmentPointListWidget> PathSegmentPointListWidgetPtr;
 	TSharedPtr<IDetailsView> PathSegmentPointDetailsPtr;

@@ -7,4 +7,4 @@
 /**
   * #148
  */
-static const TCHAR* T4Const_T4FrameworkVersionName = TEXT("0.9.43");
+static const TCHAR* T4Const_T4FrameworkVersionName = TEXT("0.9.44");

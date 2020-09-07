@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Asset/Classes/World/T4EnvironmentAsset.h"
+#include "T4Asset/Classes/Data/T4EnvironmentAsset.h"
 #include "T4EditorEnvironmentController.generated.h"
 
 /**

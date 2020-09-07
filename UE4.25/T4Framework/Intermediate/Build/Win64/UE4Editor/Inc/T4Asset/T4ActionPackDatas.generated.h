@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ASSET_T4ActionPackDatas_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1309_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1239_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4VoidActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4VoidActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1250_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1176_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4EnvironmentActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -29,7 +29,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4VoidActionData>();
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4EnvironmentActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1186_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1125_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4PostProcessActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -37,7 +37,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4EnvironmentActionDa
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PostProcessActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1118_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1060_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4CameraShakeActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -45,21 +45,14 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PostProcessActionDa
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraShakeActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1078_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4CameraShakeAnimData_Statics; \
-	static class UScriptStruct* StaticStruct();
-
-
-template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraShakeAnimData>();
-
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1049_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_1031_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4CameraShakeOscillationData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraShakeOscillationData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_991_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_973_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4CameraWorkActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -67,21 +60,21 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraShakeOscillat
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraWorkActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_976_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_958_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4CameraWorkSectionData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraWorkSectionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_930_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_912_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4CameraWorkSectionKeyData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraWorkSectionKeyData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_866_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_848_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4TimeScaleActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -89,7 +82,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4CameraWorkSectionKe
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4TimeScaleActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_831_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_813_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4PlayTagActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -97,7 +90,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4TimeScaleActionData
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PlayTagActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_775_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_757_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ReactionActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -105,14 +98,14 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4PlayTagActionData>(
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ReactionActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_755_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_737_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ReactionTestSettings>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_655_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_637_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ProjectileActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -120,14 +113,14 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ReactionTestSetting
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ProjectileActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_635_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_617_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ProjectileTestSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ProjectileTestSettings>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_570_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_552_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4AudioActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -135,7 +128,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4ProjectileTestSetti
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4AudioActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_506_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_488_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4DecalActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;
@@ -143,7 +136,7 @@ template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4AudioActionData>();
 
 template<> T4ASSET_API UScriptStruct* StaticStruct<struct FT4DecalActionData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_446_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackDatas_h_437_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ParticleActionData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4ActionDataBase Super;

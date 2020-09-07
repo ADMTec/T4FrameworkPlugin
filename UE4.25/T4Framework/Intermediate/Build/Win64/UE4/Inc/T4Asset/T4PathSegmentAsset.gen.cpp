@@ -5,21 +5,21 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Asset/Classes/Data/T4PathSegmentData.h"
+#include "T4Asset/Classes/Data/T4PathSegmentAsset.h"
 #include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-void EmptyLinkFunctionForGeneratedCodeT4PathSegmentData() {}
+void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAsset() {}
 // Cross Module References
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4PathMovementType();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4PathSegmentPoint();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentData_NoRegister();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentData();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentAsset_NoRegister();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4PathSegmentAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 // End Cross Module References
 	static UEnum* ET4PathMovementType_StaticEnum()
@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentData() {}
 		return ET4PathMovementType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4PathMovementType(ET4PathMovementType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4PathMovementType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PathMovementType_Hash() { return 2527851309U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PathMovementType_Hash() { return 820357512U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4PathMovementType()
 	{
 #if WITH_HOT_RELOAD
@@ -59,7 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentData() {}
 				{ "Comment", "// #156\n" },
 				{ "Idle.Name", "ET4PathMovementType::Idle" },
 				{ "Jump.Name", "ET4PathMovementType::Jump" },
-				{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+				{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 				{ "Run.Name", "ET4PathMovementType::Run" },
 				{ "ToolTip", "#156" },
 				{ "Walk.Name", "ET4PathMovementType::Walk" },
@@ -128,7 +128,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewStructOps()
@@ -139,7 +139,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_bOnNavMesh_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #156\n" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 		{ "ToolTip", "#156" },
 	};
 #endif
@@ -151,7 +151,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType = { "MovementType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PathSegmentPoint, MovementType), Z_Construct_UEnum_T4Asset_ET4PathMovementType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType_MetaData)) };
@@ -159,7 +159,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PathSegmentPoint, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData)) };
@@ -197,15 +197,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PathSegmentPoint_Hash() { return 3750712634U; }
-	void UT4PathSegmentData::StaticRegisterNativesUT4PathSegmentData()
+	uint32 Get_Z_Construct_UScriptStruct_FT4PathSegmentPoint_Hash() { return 2990094622U; }
+	void UT4PathSegmentAsset::StaticRegisterNativesUT4PathSegmentAsset()
 	{
 	}
-	UClass* Z_Construct_UClass_UT4PathSegmentData_NoRegister()
+	UClass* Z_Construct_UClass_UT4PathSegmentAsset_NoRegister()
 	{
-		return UT4PathSegmentData::StaticClass();
+		return UT4PathSegmentAsset::StaticClass();
 	}
-	struct Z_Construct_UClass_UT4PathSegmentData_Statics
+	struct Z_Construct_UClass_UT4PathSegmentAsset_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
@@ -220,65 +220,65 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
-	UObject* (*const Z_Construct_UClass_UT4PathSegmentData_Statics::DependentSingletons[])() = {
+	UObject* (*const Z_Construct_UClass_UT4PathSegmentAsset_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UObject,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::Class_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentAsset_Statics::Class_MetaDataParams[] = {
 		{ "Category", "T4Framework" },
 		{ "ClassGroupNames", "T4Framework" },
-		{ "IncludePath", "Data/T4PathSegmentData.h" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "IncludePath", "Data/T4PathSegmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints_MetaData[] = {
 		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentData.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4PathSegmentData, PathSegmentPoints), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_Inner = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4PathSegmentPoint, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4PathSegmentData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentData_Statics::NewProp_PathSegmentPoints_Inner,
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4PathSegmentAsset, PathSegmentPoints), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints_Inner = { "PathSegmentPoints", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4PathSegmentPoint, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4PathSegmentAsset_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4PathSegmentAsset_Statics::NewProp_PathSegmentPoints_Inner,
 	};
-	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4PathSegmentData_Statics::StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<UT4PathSegmentData>::IsAbstract,
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4PathSegmentAsset_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UT4PathSegmentAsset>::IsAbstract,
 	};
-	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4PathSegmentData_Statics::ClassParams = {
-		&UT4PathSegmentData::StaticClass,
+	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4PathSegmentAsset_Statics::ClassParams = {
+		&UT4PathSegmentAsset::StaticClass,
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_UT4PathSegmentData_Statics::PropPointers,
+		Z_Construct_UClass_UT4PathSegmentAsset_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentAsset_Statics::PropPointers),
 		0,
 		0x001000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentData_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentData_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentAsset_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentAsset_Statics::Class_MetaDataParams))
 	};
-	UClass* Z_Construct_UClass_UT4PathSegmentData()
+	UClass* Z_Construct_UClass_UT4PathSegmentAsset()
 	{
 		static UClass* OuterClass = nullptr;
 		if (!OuterClass)
 		{
-			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4PathSegmentData_Statics::ClassParams);
+			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4PathSegmentAsset_Statics::ClassParams);
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PathSegmentData, 4063750177);
-	template<> T4ASSET_API UClass* StaticClass<UT4PathSegmentData>()
+	IMPLEMENT_CLASS(UT4PathSegmentAsset, 802744539);
+	template<> T4ASSET_API UClass* StaticClass<UT4PathSegmentAsset>()
 	{
-		return UT4PathSegmentData::StaticClass();
+		return UT4PathSegmentAsset::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4PathSegmentData(Z_Construct_UClass_UT4PathSegmentData, &UT4PathSegmentData::StaticClass, TEXT("/Script/T4Asset"), TEXT("UT4PathSegmentData"), false, nullptr, nullptr, nullptr);
-	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4PathSegmentData);
-	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UT4PathSegmentData)
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4PathSegmentAsset(Z_Construct_UClass_UT4PathSegmentAsset, &UT4PathSegmentAsset::StaticClass, TEXT("/Script/T4Asset"), TEXT("UT4PathSegmentAsset"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4PathSegmentAsset);
+	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UT4PathSegmentAsset)
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

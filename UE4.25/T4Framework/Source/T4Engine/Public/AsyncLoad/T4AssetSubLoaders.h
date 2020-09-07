@@ -23,6 +23,7 @@ class UParticleSystemComponent;
 class USoundBase; // #152
 class USoundAttenuation;
 class UAudioComponent; // #152
+class UT4PostProcessAsset; // #158
 class UT4ActionPackAsset;
 class UT4AnimsetAsset;
 
@@ -146,6 +147,16 @@ public:
 	bool Process(UAudioComponent* InAudioComponent);
 
 	USoundBase* GetSoundBase();
+};
+
+// #158
+class T4ENGINE_API FT4PostProcessAssetLoader : public FT4AssetLoader
+{
+public:
+	explicit FT4PostProcessAssetLoader() {}
+	virtual ~FT4PostProcessAssetLoader() { Reset(); }
+
+	UT4PostProcessAsset* GetPostProcessAsset() const;
 };
 
 // #24

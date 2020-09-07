@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Asset/Classes/World/T4EnvironmentAsset.h"
+#include "T4Asset/Classes/Data/T4EnvironmentAsset.h"
 #include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -35,7 +35,6 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EnvironmentAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EnvironmentAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-	T4ASSET_API UClass* Z_Construct_UClass_UT4WorldExploreAsset_NoRegister();
 // End Cross Module References
 class UScriptStruct* FT4EnvTimeTagSetData::StaticStruct()
 {
@@ -76,7 +75,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagSetData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -87,7 +86,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagSetData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Statics::NewProp_TimeTagDatas_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Statics::NewProp_TimeTagDatas = { "TimeTagDatas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagSetData, TimeTagDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Statics::NewProp_TimeTagDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Statics::NewProp_TimeTagDatas_MetaData)) };
@@ -124,7 +123,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagSetData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Hash() { return 540621121U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagSetData_Hash() { return 3742955830U; }
 class UScriptStruct* FT4EnvTimeTagData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -196,7 +195,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -207,14 +206,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_PostProcessData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_PostProcessData = { "PostProcessData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, PostProcessData), Z_Construct_UScriptStruct_FT4EnvPostProcessData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_PostProcessData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_PostProcessData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_ExponentialHeightFogData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_ExponentialHeightFogData = { "ExponentialHeightFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, ExponentialHeightFogData), Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_ExponentialHeightFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_ExponentialHeightFogData_MetaData)) };
@@ -222,7 +221,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_AtmosphericFogData_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #97\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
@@ -230,14 +229,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData = { "BPSkySphereData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, BPSkySphereData), Z_Construct_UScriptStruct_FT4EnvBPSkySphereData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_BPSkySphereData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData = { "SkyLightData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, SkyLightData), Z_Construct_UScriptStruct_FT4EnvSkyLightData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_SkyLightData_MetaData)) };
@@ -245,7 +244,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalLightData_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #93\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#93" },
 	};
 #endif
@@ -254,7 +253,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #123\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#123" },
 	};
 #endif
@@ -262,7 +261,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_TimeBlendCurve_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_TimeBlendCurve = { "TimeBlendCurve", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, TimeBlendCurve), Z_Construct_UEnum_T4Asset_ET4BuiltInEasing, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_TimeBlendCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_TimeBlendCurve_MetaData)) };
@@ -270,7 +269,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, Name), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_Name_MetaData)) };
@@ -314,7 +313,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 4253024317U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 2563163633U; }
 class UScriptStruct* FT4EnvPostProcessData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -358,7 +357,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvPostProcessData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvPostProcessData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #98\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -371,7 +370,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvPostProcessData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendPostProcess \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendPostProcess \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -379,7 +378,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvPostProcessData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvPostProcessData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvPostProcessData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -419,7 +418,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvPostProcessData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvPostProcessData_Hash() { return 72776062U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvPostProcessData_Hash() { return 1306049815U; }
 class UScriptStruct* FT4EnvExponentialHeightFogData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -475,7 +474,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -487,7 +486,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogInscatteringColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogInscatteringColor = { "FogInscatteringColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvExponentialHeightFogData, FogInscatteringColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogInscatteringColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogInscatteringColor_MetaData)) };
@@ -495,7 +494,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_SecondFogData_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_SecondFogData = { "SecondFogData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvExponentialHeightFogData, SecondFogData), Z_Construct_UScriptStruct_FExponentialHeightFogData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_SecondFogData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_SecondFogData_MetaData)) };
@@ -503,7 +502,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff = { "FogHeightFalloff", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvExponentialHeightFogData, FogHeightFalloff), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff_MetaData)) };
@@ -512,7 +511,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendExponentialHeightFog \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendExponentialHeightFog \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -520,7 +519,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -563,7 +562,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Hash() { return 970476919U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Hash() { return 724939665U; }
 class UScriptStruct* FT4EnvAtmosphericFogData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -619,7 +618,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n// https://docs.unrealengine.com/ko/Engine/Actors/FogEffects/AtmosphericFog/index.html\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#90\nhttps:docs.unrealengine.com/ko/Engine/Actors/FogEffects/AtmosphericFog/index.html" },
 	};
 #endif
@@ -631,7 +630,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityOffset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityOffset = { "DensityOffset", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvAtmosphericFogData, DensityOffset), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityOffset_MetaData)) };
@@ -639,7 +638,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityMultiplier_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityMultiplier = { "DensityMultiplier", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvAtmosphericFogData, DensityMultiplier), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_DensityMultiplier_MetaData)) };
@@ -647,7 +646,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_FogMultiplier_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_FogMultiplier = { "FogMultiplier", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvAtmosphericFogData, FogMultiplier), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_FogMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_FogMultiplier_MetaData)) };
@@ -656,7 +655,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendAtmosphericFog \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendAtmosphericFog \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -664,7 +663,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -707,7 +706,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvAtmosphericFogDat
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Hash() { return 70568750U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvAtmosphericFogData_Hash() { return 3040963795U; }
 class UScriptStruct* FT4EnvSkyLightData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -766,7 +765,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewStructOps()
@@ -777,7 +776,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_LightColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_LightColor = { "LightColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvSkyLightData, LightColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_LightColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_LightColor_MetaData)) };
@@ -785,7 +784,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_Intensity_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_Intensity = { "Intensity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvSkyLightData, Intensity), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_Intensity_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_Intensity_MetaData)) };
@@ -793,7 +792,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_CubemapResolution_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_CubemapResolution = { "CubemapResolution", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvSkyLightData, CubemapResolution), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_CubemapResolution_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_CubemapResolution_MetaData)) };
@@ -802,7 +801,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #97\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
@@ -812,7 +811,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendSkyLight \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendSkyLight \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -820,7 +819,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvSkyLightData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -864,7 +863,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvSkyLightData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvSkyLightData_Hash() { return 596247742U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvSkyLightData_Hash() { return 1218366296U; }
 class UScriptStruct* FT4EnvBPSkySphereData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -941,7 +940,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #97\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#97" },
 	};
 #endif
@@ -954,7 +953,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -964,7 +963,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -974,7 +973,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -983,7 +982,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor = { "ZenithColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvBPSkySphereData, ZenithColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_ZenithColor_MetaData)) };
@@ -992,7 +991,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -1006,7 +1005,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -1016,7 +1015,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -1026,7 +1025,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #98\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#98" },
 	};
 #endif
@@ -1036,7 +1035,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendBPSkySphere \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendBPSkySphere \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -1044,7 +1043,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -1092,7 +1091,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvBPSkySphereData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Hash() { return 1815957622U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvBPSkySphereData_Hash() { return 2943787803U; }
 class UScriptStruct* FT4EnvDirectionalLightData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1140,7 +1139,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalLightD
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -1152,7 +1151,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalLightD
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_LightColor_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_LightColor = { "LightColor", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvDirectionalLightData, LightColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_LightColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_LightColor_MetaData)) };
@@ -1161,7 +1160,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalLightD
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendDirectionalLight \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendDirectionalLight \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -1169,7 +1168,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalLightD
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -1210,7 +1209,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalLightD
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Hash() { return 761277760U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvDirectionalLightData_Hash() { return 2332132039U; }
 class UScriptStruct* FT4EnvDirectionalData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1254,7 +1253,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvDirectionalData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #93\n" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#93" },
 	};
 #endif
@@ -1267,7 +1266,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendDirectional \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!\n" },
 		{ "EditCondition", "bEnabled" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendDirectional \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
 	};
 #endif
@@ -1275,7 +1274,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvDirectionalData_Statics::NewProp_bEnabled_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4EnvDirectionalData_Statics::NewProp_bEnabled_SetBit(void* Obj)
@@ -1315,7 +1314,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvDirectionalData_Hash() { return 2059157954U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvDirectionalData_Hash() { return 1507783434U; }
 	void UT4EnvironmentAsset::StaticRegisterNativesUT4EnvironmentAsset()
 	{
 	}
@@ -1329,19 +1328,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PreviewWorldAsset_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_PreviewWorldAsset;
-#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimeTagSetData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TimeTagSetData;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_EDITORONLY_DATA
-#endif // WITH_EDITORONLY_DATA
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -1353,31 +1344,19 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentAsset_Statics::Class_MetaDataParams[] = {
 		{ "Category", "T4Framework" },
 		{ "ClassGroupNames", "T4Framework" },
-		{ "IncludePath", "World/T4EnvironmentAsset.h" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "IncludePath", "Data/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
-#if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_PreviewWorldAsset_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_PreviewWorldAsset = { "PreviewWorldAsset", nullptr, (EPropertyFlags)0x0014000800000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EnvironmentAsset, PreviewWorldAsset), Z_Construct_UClass_UT4WorldExploreAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_PreviewWorldAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_PreviewWorldAsset_MetaData)) };
-#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_TimeTagSetData_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "DisplayName", "Time of Day" },
-		{ "ModuleRelativePath", "Classes/World/T4EnvironmentAsset.h" },
+		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_TimeTagSetData = { "TimeTagSetData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EnvironmentAsset, TimeTagSetData), Z_Construct_UScriptStruct_FT4EnvTimeTagSetData, METADATA_PARAMS(Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_TimeTagSetData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_TimeTagSetData_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EnvironmentAsset_Statics::PropPointers[] = {
-#if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_PreviewWorldAsset,
-#endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EnvironmentAsset_Statics::NewProp_TimeTagSetData,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EnvironmentAsset_Statics::StaticCppClassTypeInfo = {
@@ -1407,7 +1386,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvDirectionalData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EnvironmentAsset, 2038381708);
+	IMPLEMENT_CLASS(UT4EnvironmentAsset, 2392505899);
 	template<> T4ASSET_API UClass* StaticClass<UT4EnvironmentAsset>()
 	{
 		return UT4EnvironmentAsset::StaticClass();

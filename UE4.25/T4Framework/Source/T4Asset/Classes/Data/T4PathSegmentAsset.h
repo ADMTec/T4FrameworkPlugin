@@ -3,12 +3,12 @@
 #pragma once
 
 #include "T4AssetMinimal.h"
-#include "T4PathSegmentData.generated.h"
+#include "T4PathSegmentAsset.generated.h"
 
 /**
   * #155
  */
-struct FT4PathSegmentDataCustomVersion
+struct FT4PathSegmentCustomVersion
 {
 	enum Type
 	{
@@ -22,7 +22,7 @@ struct FT4PathSegmentDataCustomVersion
 	T4ASSET_API const static FGuid GUID;
 
 private:
-	FT4PathSegmentDataCustomVersion() {}
+	FT4PathSegmentCustomVersion() {}
 };
 
 UENUM(BlueprintType)
@@ -59,7 +59,7 @@ public:
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4ASSET_API UT4PathSegmentData : public UObject
+class T4ASSET_API UT4PathSegmentAsset : public UObject
 {
 	GENERATED_UCLASS_BODY()
 

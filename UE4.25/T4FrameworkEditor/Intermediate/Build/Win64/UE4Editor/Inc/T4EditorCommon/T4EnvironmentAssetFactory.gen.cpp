@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4WorldExplorer/Private/Assets/Factories/T4EnvironmentAssetFactory.h"
+#include "T4EditorCommon/Private/Assets/Factories/T4EnvironmentAssetFactory.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -13,10 +13,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 // Cross Module References
-	T4WORLDEXPLORER_API UClass* Z_Construct_UClass_UT4EnvironmentAssetFactory_NoRegister();
-	T4WORLDEXPLORER_API UClass* Z_Construct_UClass_UT4EnvironmentAssetFactory();
+	T4EDITORCOMMON_API UClass* Z_Construct_UClass_UT4EnvironmentAssetFactory_NoRegister();
+	T4EDITORCOMMON_API UClass* Z_Construct_UClass_UT4EnvironmentAssetFactory();
 	UNREALED_API UClass* Z_Construct_UClass_UFactory();
-	UPackage* Z_Construct_UPackage__Script_T4WorldExplorer();
+	UPackage* Z_Construct_UPackage__Script_T4EditorCommon();
 // End Cross Module References
 	void UT4EnvironmentAssetFactory::StaticRegisterNativesUT4EnvironmentAssetFactory()
 	{
@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 	};
 	UObject* (*const Z_Construct_UClass_UT4EnvironmentAssetFactory_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UFactory,
-		(UObject* (*)())Z_Construct_UPackage__Script_T4WorldExplorer,
+		(UObject* (*)())Z_Construct_UPackage__Script_T4EditorCommon,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentAssetFactory_Statics::Class_MetaDataParams[] = {
@@ -73,12 +73,12 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EnvironmentAssetFactory, 2184106313);
-	template<> T4WORLDEXPLORER_API UClass* StaticClass<UT4EnvironmentAssetFactory>()
+	IMPLEMENT_CLASS(UT4EnvironmentAssetFactory, 107335727);
+	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EnvironmentAssetFactory>()
 	{
 		return UT4EnvironmentAssetFactory::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4EnvironmentAssetFactory(Z_Construct_UClass_UT4EnvironmentAssetFactory, &UT4EnvironmentAssetFactory::StaticClass, TEXT("/Script/T4WorldExplorer"), TEXT("UT4EnvironmentAssetFactory"), false, nullptr, nullptr, nullptr);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4EnvironmentAssetFactory(Z_Construct_UClass_UT4EnvironmentAssetFactory, &UT4EnvironmentAssetFactory::StaticClass, TEXT("/Script/T4EditorCommon"), TEXT("UT4EnvironmentAssetFactory"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4EnvironmentAssetFactory);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

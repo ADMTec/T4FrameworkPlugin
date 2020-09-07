@@ -36,6 +36,8 @@ public:
 	void SetPlayRate(float InPlayRate) { PlayRate = InPlayRate; } // #102
 
 	void LeaveOut(float InOffsetTimeSec); // #99 : 강제로 Leave 한다. Action 연계한 FadeOut 처리
+
+	void SetAffectGlobal(bool bInAffectGlobal) { bAffectGlobal = bInAffectGlobal; }
 	void SetOverrideBlendTime(float InBlendInTimeSec, float InBlendOutTimeSec); // #99
 
 	bool TestEncompassesPoint(const FVector& InLocation); // #94
@@ -58,6 +60,7 @@ public:
 	TWeakObjectPtr<const UT4ZoneEntityAsset> EntityAssetPtr;
 
 	float PlayRate; // #102
+	bool bAffectGlobal; // #158 : ZoneEntity 의 거리 설정을 무시하고, 전역으로 적용
 
 	bool bEntered;
 	bool bBlendStart;

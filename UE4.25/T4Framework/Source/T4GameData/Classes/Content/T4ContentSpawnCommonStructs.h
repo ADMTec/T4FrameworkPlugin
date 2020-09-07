@@ -3,7 +3,7 @@
 #pragma once
 
 #include "T4GameDataMinimal.h"
-#include "T4Asset/Classes/Data/T4PathSegmentData.h" // #155
+#include "T4Asset/Classes/Data/T4PathSegmentAsset.h" // #155
 #include "T4ContentSpawnCommonStructs.generated.h"
 
 /**
@@ -37,10 +37,13 @@ public:
 	FName WaypointName;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	TSoftObjectPtr<UT4PathSegmentData> PathSegmentData;
+	TSoftObjectPtr<UT4PathSegmentAsset> PathSegmentAsset;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FColor LineColor;
 #endif
+
+	UPROPERTY()
+	TSoftObjectPtr<UT4PathSegmentAsset> PathSegmentData_DEPRECATED; // #158 : PathSegmentData => PathSegmentAsset
 };

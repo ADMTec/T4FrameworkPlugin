@@ -6,7 +6,7 @@
 #include "T4EngineTypes.h"
 #include "T4Asset/Public/Entity/T4EntityTypes.h" // #94
 #include "T4Asset/Public/ActionPack/T4ActionPackTypes.h" // #102
-#include "T4Asset/Classes/World/T4EnvironmentAsset.h"
+#include "T4Asset/Classes/Data/T4EnvironmentAsset.h"
 #include "T4Asset/Classes/Entity/T4MapEntityAsset.h" // #147
 #include "FinalPostProcessSettings.h" // #98
 

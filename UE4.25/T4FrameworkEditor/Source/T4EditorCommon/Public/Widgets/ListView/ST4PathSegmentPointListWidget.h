@@ -9,7 +9,7 @@
 /**
   * #90
  */
-class UT4PathSegmentData;
+class UT4PathSegmentAsset;
 class T4EDITORCOMMON_API ST4PathSegmentPointListWidget : public ST4ListViewWidget
 {
 public:
@@ -22,14 +22,14 @@ public:
 
 	void Construct(
 		const FArguments& InArgs, 
-		const UT4PathSegmentData* InEnvironmentAsset
+		const UT4PathSegmentAsset* InEnvironmentAsset
 	);
 
 	ST4PathSegmentPointListWidget();
 	~ST4PathSegmentPointListWidget();
 
 	void SetInitializeValueIndex(int32 InValueIndex) { InitializeValueIndex = InValueIndex; }
-	void SetPathSegmentData(const UT4PathSegmentData* InPathSegmentData);
+	void SetPathSegmentAsset(const UT4PathSegmentAsset* InPathSegmentAsset);
 
 protected:
 	void UpdateLists() override;
@@ -37,7 +37,7 @@ protected:
 	void OnItemSelected(TSharedPtr<FT4ListViewItem> InSelectedItem, bool bForced) override;
 
 private:
-	TWeakObjectPtr<const UT4PathSegmentData> PathSegmentDataPtr;
+	TWeakObjectPtr<const UT4PathSegmentAsset> PathSegmentAssetPtr;
 
 	int32 InitializeValueIndex;
 };

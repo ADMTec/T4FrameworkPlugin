@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.43)
+# T4FrameworkPlugin (v0.9.44)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -21,12 +21,11 @@
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
   - **v0.9.43**
-	- #158 [기능개선] Action Editor, CameraWork Action 사용 시 뷰포트의 Anchor Actor 를 마우스 좌클릭으로 선택, 편집할 수 있도록 기능 추가
-    - #158 [기능개선] Action Editor, TimeScale Action 동작을 Actor (플레이어 자신) 또는 World (전체 월드) 를 대상으로 동작할 수 있도록 옵션 추가 
-	- #158 [버그수정] Action Editor, TimeScale Action 적용시 플레이 중인 애니메이션의 Blending Time 에는 적용되지 않던 문제 수정 
-	- #158 [버그수정] Action Editor, CameraWork Action 플레이가 FreeCamera 일 경우 비정상적으로 동작하던 문제 수정
-    - #158 [버그수정] Action Editor, CameraWork Action 추가 시 발생하는 크래시 수정
-	- #158 [버그수정] Action Editor, Preview Entity 로 Prop Entity 를 사용할 경우 일부 Action 이 플레이되지 않던 문제 수정
+	- #158 [기능개선] Action Editor, Environment Action 에서 전역 환경 적용을 위한 플레이 옵션 추가 (bAffectGlobal)
+    - #158 [기능개선] Action Editor, PostProcess Action 설정을 T4PostProcessAsset 을 사용하도록 에셋 추가 및 UI 개선
+	- #158 [버그수정] Action Editor, Movement Action 이 Prop/Item Actor 에게 동작하지 않던 문제 수정
+    - #158 [버그수정] Action Editor, Movement Action 의 기본값으로 Play 할 경우 발생하는 크래시 수정
+	- #158 [버그수정] Entity Editor, 일부 Character Entity 의 OverrideMaterial 설정 및 동작 오류 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**
@@ -37,7 +36,7 @@
 	  - https://tech4labs.com/T4Framework_Tutorials/
   - **튜토리얼(초안)**
     - [#1 : T4Framework Editor 소개](https://youtu.be/r29O3YdeV7E)
-	- #2 : 엔티티 에디터 (Entity Editor)
+	- [#2 : 엔티티 에디터 (Entity Editor)](https://tech4labs.com/T4Framework_Features_EntityEditor/)
       - [#2-1 : Character Entity 의 풀 바디(Full-body) 캐릭터 설정](https://youtu.be/dGmG2QWp_wo)
       - [#2-2 : Character Entity 의 Animation 시스템](https://youtu.be/nS3N1X3Dh1o)
       - [#2-3 : Character Entity 의 Stance 및 Skill Animation 설정](https://youtu.be/XaPErl6Zypg)
@@ -51,6 +50,22 @@
 	  - [#2-11 : Prop Entity 의 Mesh/Animation 설정](https://youtu.be/6uU5MU99UpU)
 	  - [#2-12 : Zone Entity 의 Dynamic Environment 설정](https://youtu.be/7kspOTltztU)
 	  - [#2-13 : Map Entity 의 Level Asset 설정](https://youtu.be/i1Xwh1TjN9E)
+	- [#3 : 액션 에디터 (Action Editor)](https://tech4labs.com/T4Framework_Features_ActionEditor/)
+	  - #3-1 : 애니메이션 액션 (Animation Action)
+	  - #3-2 : 파티클 액션 (Particle Action)
+	  - #3-3 : 데칼 액션 (Decal Action)
+	  - #3-4 : 메시 액션 (Mesh Action)
+	  - #3-5 : 오디오 액션 (Audio Action)
+	  - #3-6 : 리액션 액션 (Reaction Action)
+	  - #3-7 : 플레이 테그 액션 (PlayTag Action)
+	  - #3-8 : 이동 액션 (Movement Action)
+	  - #3-9 : 프로젝타일 액션 (Projectile Action)
+	  - #3-10 : 타임 스케일 액션 (TimeScale Action)
+	  - #3-11 : 카메라 워크 액션 (CameraWork Action)
+	  - #3-12: 카메라 셰이크 액션 (CameraShake Action)
+	  - #3-13 : 포스트 프로세스 액션 (PostProcess Action)
+	  - #3-14 : 환경 액션 (Environment Action)
+	  - #3-15 : 브랜치 액션 (Branch Action)
   - **콘텐츠 제작 가이드(초안)**
     - [#1 : 준비](https://youtu.be/LFErpgcwbnc)
     - [#2 : Content Editor 레이아웃](https://youtu.be/W3XC4lnz6Og)

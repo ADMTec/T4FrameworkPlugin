@@ -4,7 +4,7 @@
 
 #include "T4AssetMinimal.h"
 #include "T4ActorEntityAsset.h"
-#include "World/T4EnvironmentAsset.h"
+#include "Data/T4EnvironmentAsset.h"
 #include "T4ZoneEntityAsset.generated.h"
 
 /**

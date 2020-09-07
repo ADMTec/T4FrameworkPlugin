@@ -153,10 +153,10 @@ public:
 	FT4MovementTestSettings()
 #if WITH_EDITORONLY_DATA
 		: TestMoveAngleType(ET4MoveAngleType::Back)
-		, TestMaxDistance(0.0f)
-		, TestMaxMoveSpeed(0.0f)
-		, TestMaxHeight(0.0f)
-		, TestMaxHeightSpeed(0.0f) // #140 : MaxHeight / HeightSpeed 로 최대 높이까지의 시간을 구한다.
+		, TestMaxDistance(200.0f)
+		, TestMaxMoveSpeed(200.0f)
+		, TestMaxHeight(200.0f)
+		, TestMaxHeightSpeed(100.0f) // #140 : MaxHeight / HeightSpeed 로 최대 높이까지의 시간을 구한다.
 #endif
 	{
 	}
@@ -171,7 +171,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	float TestMaxMoveSpeed; // #132 : 테스트용 속도
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "5.0", UIMin = "5.0", UIMax = "1500.0"))
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.0", UIMin = "0.0", UIMax = "1500.0"))
 	float TestMaxHeight; // #127, #132 : 테스트용 포물선에서 사용될 최대 높이
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -401,13 +401,7 @@ public:
 	TSoftObjectPtr<UStaticMesh> StaticMeshAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FVector LocalOffset; // #112
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FRotator LocalRotation; // #108
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FVector LocalScale; // #54
+	FTransform RelativeTransform; // #54, #112, #108
 
 public:
 	FT4MeshActionData()
@@ -415,9 +409,6 @@ public:
 		, AttachParent(ET4AttachParent::Default) // #54
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
-		, LocalOffset(FVector::ZeroVector) // #112
-		, LocalRotation(FRotator::ZeroRotator) // #112
-		, LocalScale(FVector::OneVector) // #54
 	{
 	}
 
@@ -460,16 +451,10 @@ public:
 	TSoftObjectPtr<UParticleSystem> ParticleAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FVector LocalOffset; // #112
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FRotator LocalRotation; // #112
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FVector LocalScale; // #54
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	float PlayRate;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FTransform RelativeTransform; // #54, #112
 
 public:
 	FT4ParticleActionData()
@@ -477,9 +462,6 @@ public:
 		, AttachParent(ET4AttachParent::Default) // #54
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
-		, LocalOffset(FVector::ZeroVector) // #112
-		, LocalRotation(FRotator::ZeroRotator) // #112
-		, LocalScale(FVector::OneVector) // #54
 		, PlayRate(1.0f)
 	{
 	}
@@ -1073,46 +1055,6 @@ public:
 };
 
 USTRUCT()
-struct T4ASSET_API FT4CameraShakeAnimData
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta=(ClampMin = "0.001"))
-	float AnimPlayRate;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta=(ClampMin = "0.0"))
-	float AnimScale;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta=(ClampMin = "0.0"))
-	float AnimBlendInTime;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta=(ClampMin = "0.0"))
-	float AnimBlendOutTime;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	uint32 bRandomAnimSegment : 1;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.0", editcondition = "bRandomAnimSegment"))
-	float RandomAnimSegmentDuration;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	class UCameraAnim* CameraAnim;
-
-public:
-	FT4CameraShakeAnimData()
-		: AnimPlayRate(1.0f)
-		, AnimScale(0.0f)
-		, AnimBlendInTime(0.0f)
-		, AnimBlendOutTime(0.0f)
-		, bRandomAnimSegment(0)
-		, RandomAnimSegmentDuration(0.0f)
-		, CameraAnim(nullptr)
-	{
-	}
-};
-
-USTRUCT()
 struct T4ASSET_API FT4CameraShakeActionData : public FT4ActionDataBase
 {
 	GENERATED_USTRUCT_BODY()
@@ -1134,11 +1076,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FRotator UserDefinedPlaySpace;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "!bUseCameraAnim"))
 	FT4CameraShakeOscillationData OscillationData;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FT4CameraShakeAnimData AnimData;
 
 public:
 	FT4CameraShakeActionData()
@@ -1166,13 +1105,12 @@ public:
 		PlaySpace = ECameraAnimPlaySpace::CameraLocal;
 		UserDefinedPlaySpace = FRotator::ZeroRotator;
 		OscillationData = FT4CameraShakeOscillationData();
-		AnimData = FT4CameraShakeAnimData();
 	}
 
 	FString ToDisplayText() override
 	{
 		return FString::Printf(
-			TEXT("CameraShake 'PlayTarget => %s'"), 
+			TEXT("CameraShake 'PlayTarget => %s'"),
 			(ET4PlayTarget::All == PlayTarget) ? TEXT("All") : TEXT("Player")
 		);
 	}
@@ -1180,6 +1118,7 @@ public:
 };
 
 // #100
+class UT4PostProcessAsset;
 USTRUCT()
 struct T4ASSET_API FT4PostProcessActionData : public FT4ActionDataBase
 {
@@ -1203,7 +1142,7 @@ public:
 	float BlendOutTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FPostProcessSettings PostProcessSettings; // #98 에서는 Zone 처리,
+	TSoftObjectPtr<UT4PostProcessAsset> PostProcessAsset; // #158 : Asset 으로 분리
 
 public:
 	FT4PostProcessActionData()
@@ -1223,23 +1162,10 @@ public:
 		return FString(TEXT("PostProcessAction"));
 	}
 
-#if WITH_EDITOR
-	void Reset()
-	{
-		PlayTarget = ET4PlayTarget::Default;
-		BlendInTimeSec = 0.0f;
-		BlendOutTimeSec = 0.0f;
-		PostProcessSettings.SetBaseValues();
-	}
-
 	FString ToDisplayText() override
 	{
-		return FString::Printf(
-			TEXT("PostProcess 'PlayTarget => %s'"), 
-			(ET4PlayTarget::All == PlayTarget) ? TEXT("All") : TEXT("Player")
-		);
+		return FString::Printf(TEXT("PostProcess '%s'"), *(PostProcessAsset.GetAssetName()));
 	}
-#endif
 };
 
 // #99
@@ -1267,6 +1193,9 @@ public:
 	TSoftObjectPtr<UT4ZoneEntityAsset> ZoneEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bAffectGlobal; // #158 : ZoneEntity 의 거리 설정을 무시하고, 전역으로 적용
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	bool bOverrideBlendTime;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bOverrideBlendTime", ClampMin = "0.0"))
@@ -1282,6 +1211,7 @@ public:
 		, bParentInheritPoint(false) // #76
 		, ActionPoint(T4Const_DefaultActionPointName)
 		, PlayTarget(ET4PlayTarget::Default)
+		, bAffectGlobal(false) // #158 : ZoneEntity 의 거리 설정을 무시하고, 전역으로 적용
 		, bOverrideBlendTime(false)
 		, OverrideBlendInTimeSec(1.0f)
 		, OverrideBlendOutTimeSec(1.0f)

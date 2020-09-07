@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4Asset/Classes/Data/T4PathSegmentData.h"
+#include "T4Asset/Classes/Data/T4PathSegmentAsset.h"
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4EditorPathSegmentController.generated.h"
 
 /**
   * #155
  */
-class UT4PathSegmentData;
+class UT4PathSegmentAsset;
 UCLASS()
 class T4EDITORCOMMON_API UT4EditorPathSegmentController : public UObject
 {
@@ -29,7 +29,7 @@ public:
 
 	void Reset();
 
-	void SetData(UT4PathSegmentData* InPathSegmentData);
+	void SetData(UT4PathSegmentAsset* InPathSegmentAsset);
 
 	int32 GetSelected() const { return PathSegmentIndex; }
 	void Select(int32 InPathSegmentIndex) { PathSegmentIndex = InPathSegmentIndex; }
@@ -63,7 +63,7 @@ public:
 	bool bOnNavMesh; // #156
 
 private:
-	TWeakObjectPtr<UT4PathSegmentData> PathSegmentDataPtr;
+	TWeakObjectPtr<UT4PathSegmentAsset> PathSegmentAssetPtr;
 	int32 PathSegmentIndex;
 	FT4OnItemRefresh OnItemRefreshDelegate;
 	FT4OnItemChanged OnItemChangedDelegate;

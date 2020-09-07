@@ -357,12 +357,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "Time of Day"))
 	FT4EnvTimeTagSetData TimeTagSetData; // #90 : 이후 별도 Asset 으로 분리!
 
-public:
-#if WITH_EDITORONLY_DATA
-	UPROPERTY(EditAnywhere, Category = Editor)
-	TSoftObjectPtr<UT4WorldExploreAsset> PreviewWorldAsset;
-#endif
-
 private:
 #if WITH_EDITOR
 	FT4OnPropertiesChanged OnPropertiesChangedDelegate;

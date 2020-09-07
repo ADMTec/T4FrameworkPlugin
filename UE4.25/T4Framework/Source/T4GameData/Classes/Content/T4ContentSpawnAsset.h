@@ -17,6 +17,8 @@ struct FT4ContentSpawnVersion
 	{
 		InitializeVer = 0,
 
+		PropertyNameChanged, // #158 : PathSegmentData => PathSegmentAsset
+
 		// -----<new versions can be added above this line>-------------------------------------------------
 		VersionPlusOne,
 		LatestVersion = VersionPlusOne - 1,

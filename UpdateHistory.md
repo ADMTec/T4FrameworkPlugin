@@ -2,7 +2,14 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
-- **v0.9.42** : 2020.09.05
+- **v0.9.43** : 2020.09.06
+  - #158 [기능개선] Action Editor, CameraWork Action 사용 시 뷰포트의 Anchor Actor 를 마우스 좌클릭으로 선택, 편집할 수 있도록 기능 추가
+  - #158 [기능개선] Action Editor, TimeScale Action 동작을 Actor (플레이어 자신) 또는 World (전체 월드) 를 대상으로 동작할 수 있도록 옵션 추가 
+  - #158 [버그수정] Action Editor, TimeScale Action 적용시 플레이 중인 애니메이션의 Blending Time 에는 적용되지 않던 문제 수정 
+  - #158 [버그수정] Action Editor, CameraWork Action 플레이가 FreeCamera 일 경우 비정상적으로 동작하던 문제 수정
+  - #158 [버그수정] Action Editor, CameraWork Action 추가 시 발생하는 크래시 수정
+  - #158 [버그수정] Action Editor, Preview Entity 로 Prop Entity 를 사용할 경우 일부 Action 이 플레이되지 않던 문제 수정
+- v0.9.42 : 2020.09.05
   - #158 [버그수정] Content Editor, GameDB 프리뷰에서 PC/NPC 가 장착한 Weapon 의 보조 장비가 출력되지 않던 문제 수정
   - #158 [기능개선] Action Editor, Animation Action Details 의 AnimSequence 리스트에 Item 출력 순서 변경을 위한 Move Up/Down 기능 추가
   - #158 [버그수정] Action Editor, Action Details 의 "Play" 테스트가 간헐적으로 동작하지 않던 문제 수정
