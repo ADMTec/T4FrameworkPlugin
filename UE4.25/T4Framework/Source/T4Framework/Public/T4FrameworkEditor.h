@@ -379,7 +379,7 @@ public:
 
 	virtual bool DoSpawn(
 		ET4EditorDataType InGameDBType, // #126
-		const FName& InDataNameID, 
+		const FName InDataNameID, 
 		const FVector& InLocation, 
 		const FRotator& InRotation, 
 		const FT4ObjectID& InReservedObjectID
@@ -408,8 +408,12 @@ public:
 	virtual bool DoChangeAnimSet(FName InAnimSetName) = 0;// #73, #114
 	virtual bool DoChangeStance(FName InStanceName) = 0; // #106, #114
 
-	virtual bool DoEquipWeaponItem(const FName& InWeaponDataNameID, bool bInUnequip) = 0; // #60 : to player
-	virtual bool DoExchangeCostumeItem(const FName& InCostumeDataNameID) = 0; // #60 : to player
+	virtual bool DoEquipWeaponItem(const FName InWeaponDBKeyName, bool bInUnequip) = 0; // #60 : to player
+	virtual bool DoExchangeCostumeItem(const FName InCostumeDBKeyName) = 0; // #60 : to player
+
+#if WITH_EDITOR
+	virtual bool GetDBKeyNamesInFolder(ET4EditorDataType InGameDBType, const FName InFolderName, TArray<FName>& OutDBKeyNames) = 0; // #158
+#endif
 };
 
 // #135, #140

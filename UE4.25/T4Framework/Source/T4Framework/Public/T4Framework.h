@@ -180,6 +180,8 @@ public:
 	virtual void ChangePrevControlMode() = 0; // #151
 	virtual void ChangeNextControlMode() = 0; // #151
 
+	virtual void SetNotificationText(const FText& InNotificationText) = 0; // #164
+
 #if WITH_EDITOR
 	virtual bool AddServerSpawnGroup(const FGuid& InGuid, const FSoftObjectPath& InSpawnAssetPath) = 0; // #118
 	virtual void RemoveServerSpawnGroup(const FGuid& InGuid) = 0; // #118
@@ -189,6 +191,7 @@ public:
 #endif
 };
 
+class AT4GameModeBase;
 class UT4GameObjectBase;
 class T4FRAMEWORK_API IT4Framework
 {
@@ -210,6 +213,7 @@ public:
 
 	virtual UWorld* GetWorld() const = 0;
 	virtual IT4WorldSystem* GetWorldSystem() const = 0;
+	virtual AT4GameModeBase* GetGameModeBase() const = 0; // #164
 
 	virtual void RegisterGameMainFrame(IT4GameMainFrame* InLayerInstance) = 0; // #42
 	virtual IT4GameMainFrame* GetGameMainFrame() const = 0; // #42
@@ -219,12 +223,7 @@ public:
 	virtual uint32 GetWorldTravelCount() const = 0; // #146
 
 	virtual bool SetWorldTravel(const UT4MapEntityAsset* InMapEntityAsset) = 0; // #87
-	virtual bool SetWorldTravel(
-		const FSoftObjectPath& InMapEntityPath,
-		FName InWorldKeyName,  // #146
-		float InWorldTimeHour,
-		float InWorldTimeScale
-	) = 0; // #146
+	virtual bool SetWorldTravel(const FSoftObjectPath& InMapEntityPath, FName InWorldKeyName, float InWorldTimeHour, float InWorldTimeScale) = 0; // #146
 
 	virtual void SetWorldTimeSync(FName InWorldTimeTag, float InWorldTimeScale) = 0; // #146
 	virtual void SetWorldTimeSync(float InWorldTimeHour, float InWorldTimeScale) = 0; // #146

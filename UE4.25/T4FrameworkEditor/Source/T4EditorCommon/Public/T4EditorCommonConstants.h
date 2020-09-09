@@ -38,6 +38,7 @@ static const FName PersistentLevelName = TEXT("PersistentLevel"); // #91
 
 // #124
 static const FName T4Editor_PropertyCategoryConstant = TEXT("Constant"); // #150
+static const FName T4Editor_PropertyCategoryUI = TEXT("UI"); // #164
 static const FName T4Editor_PropertyCategoryCommon = TEXT("Common");
 static const FName T4Editor_PropertyCategoryServerOnly = TEXT("ServerOnly");
 static const FName T4Editor_PropertyCategoryClientOnly = TEXT("ClientOnly");
@@ -46,6 +47,7 @@ static const FName T4Editor_PropertyCategoryHide = TEXT("Hide");
 
 static const FName T4Editor_SubDetailCategorySortNames[] = {
 	T4Editor_PropertyCategoryConstant,
+	T4Editor_PropertyCategoryUI, // #164
 	T4Editor_PropertyCategoryCommon,
 	T4Editor_PropertyCategoryServerOnly,
 	T4Editor_PropertyCategoryClientOnly,

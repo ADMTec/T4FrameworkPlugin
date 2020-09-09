@@ -10,6 +10,37 @@
   * #148
  */
 UENUM(BlueprintType)
+enum class ET4GameQuestType : uint8 // #164
+{
+	Kill			UMETA(DisplayName = "Kill Quests"),
+	//Talk,
+	//Combo,
+	//Delivery,
+	//Escort,
+	//Gather,
+
+	None,
+};
+
+UENUM(BlueprintType)
+enum class ET4GameQuestRule : uint8 // #164
+{
+	AllSpawnObjects			UMETA(DisplayName = "All SpawnObjects"),
+	TargetSpawnObject		UMETA(DisplayName = "Target SpawnObject"),
+
+	None,
+};
+
+UENUM(BlueprintType)
+enum class ET4GameChainCallFunction : uint8 // #164
+{
+	ImmediateCall			UMETA(DisplayName = "Immediate Call"),
+	CallAfterCompletion		UMETA(DisplayName = "Call After Completion"),
+
+	None,
+};
+
+UENUM(BlueprintType)
 enum class ET4GameAttackType : uint8 // #63
 {
 	Swing,

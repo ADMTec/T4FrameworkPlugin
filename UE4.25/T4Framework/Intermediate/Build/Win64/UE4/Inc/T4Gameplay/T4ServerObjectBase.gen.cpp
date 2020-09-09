@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 		return ET4ServerObjectType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ServerObjectType(ET4ServerObjectType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4ServerObjectType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType_Hash() { return 23174486U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType_Hash() { return 4244473835U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4ServerObjectType()
 	{
 #if WITH_HOT_RELOAD
@@ -47,13 +47,17 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectBase() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4ServerObjectType::Player", (int64)ET4ServerObjectType::Player },
 				{ "ET4ServerObjectType::NPC", (int64)ET4ServerObjectType::NPC },
+				{ "ET4ServerObjectType::Item", (int64)ET4ServerObjectType::Item },
 				{ "ET4ServerObjectType::None", (int64)ET4ServerObjectType::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "/**\n  * #114\n */// #142\n" },
+				{ "Item.Name", "ET4ServerObjectType::Item" },
 				{ "ModuleRelativePath", "Private/Server/Object/T4ServerObjectBase.h" },
+				{ "None.Comment", "// #161\n" },
 				{ "None.Name", "ET4ServerObjectType::None" },
+				{ "None.ToolTip", "#161" },
 				{ "NPC.Name", "ET4ServerObjectType::NPC" },
 				{ "Player.Name", "ET4ServerObjectType::Player" },
 				{ "ToolTip", "#114\n // #142" },

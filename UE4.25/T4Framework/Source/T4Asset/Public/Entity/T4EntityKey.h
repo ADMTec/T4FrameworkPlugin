@@ -111,6 +111,7 @@ public:
 			TEXT("Item"), // #37 : Costume or Weapon
 			TEXT("Costume"), // #37
 			TEXT("Weapon"),
+			TEXT("Goods"), // #164
 			TEXT("Zone"),
 			TEXT("Max"),
 		};

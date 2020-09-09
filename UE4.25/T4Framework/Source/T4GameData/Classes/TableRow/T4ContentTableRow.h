@@ -13,6 +13,29 @@
 class UT4ContentSpawnAsset;
 
 USTRUCT()
+struct FT4ContentWorldData
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4WorldDBKey WorldDBKey;
+
+	UPROPERTY(EditAnywhere, Category= ServerOnly)
+	FName WorldTimeTag;
+
+	UPROPERTY(EditAnywhere, Category= ServerOnly, meta = (ClampMin = "0.1", ClampMax = "5000"))
+	float WorldTimeScale;
+
+public:
+	FT4ContentWorldData()
+		: WorldTimeTag(NAME_None)
+		, WorldTimeScale(1.0f)
+	{
+	}
+};
+
+USTRUCT()
 struct FT4ContentTableRow : public FT4TableRowBase
 {
 	GENERATED_USTRUCT_BODY()
@@ -29,23 +52,30 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FGuid Guid;
 
+	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4GameQuestType QuestType; // #164
+
+	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4GameQuestRule QuestRule; // #164
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4WorldDBKey WorldDBKey;
-
-	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	FName WorldTimeTag;
-
-	UPROPERTY(EditAnywhere, Category= ServerOnly, meta = (ClampMin = "0.1", ClampMax = "5000"))
-	float WorldTimeScale;
+	FT4ContentWorldData ContentWorldData;
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
 	TSoftObjectPtr<UT4ContentSpawnAsset> ContentSpawnAsset;
 
+	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4GameChainCallFunction ChainCallFunction; // #164
+
+	UPROPERTY(EditAnywhere, Category = Hide)
+	FT4ContentDBKey ChainContentDBKey; // #164
+
 public:
 	FT4ContentTableRow()
 		: Version(0) // #135
-		, WorldTimeTag(NAME_None)
-		, WorldTimeScale(1.0f)
+		, QuestType(ET4GameQuestType::None) // #164
+		, QuestRule(ET4GameQuestRule::None) // #164
+		, ChainCallFunction(ET4GameChainCallFunction::None) // #164
 	{
 	}
 };

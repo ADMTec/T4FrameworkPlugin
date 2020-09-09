@@ -47,6 +47,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RewardTableAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_RewardTableAsset;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StatTableAsset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_StatTableAsset;
@@ -66,6 +70,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillSetTableAsset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_SkillSetTableAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GoodsTableAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_GoodsTableAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CostumeTableAsset_MetaData[];
 #endif
@@ -113,6 +121,15 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4MasterTableRow>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_RewardTableAsset_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #114\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4MasterTableRow.h" },
+		{ "ToolTip", "#114" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_RewardTableAsset = { "RewardTableAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MasterTableRow, RewardTableAsset), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_RewardTableAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_RewardTableAsset_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_StatTableAsset_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4MasterTableRow.h" },
@@ -147,12 +164,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4MasterTableRow.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset = { "SkillSetTableAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MasterTableRow, SkillSetTableAsset), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_GoodsTableAsset_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #48\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4MasterTableRow.h" },
 		{ "ToolTip", "#48" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset = { "SkillSetTableAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MasterTableRow, SkillSetTableAsset), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_GoodsTableAsset = { "GoodsTableAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MasterTableRow, GoodsTableAsset), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_GoodsTableAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_GoodsTableAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_CostumeTableAsset_MetaData[] = {
 		{ "Category", "Common" },
@@ -216,11 +242,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4MasterTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_RewardTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_StatTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_EffectTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_EffectSetTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_SkillSetTableAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_GoodsTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_CostumeTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_WeaponTableAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4MasterTableRow_Statics::NewProp_NPCTableAsset,
@@ -258,7 +286,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4MasterTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4MasterTableRow_Hash() { return 911122U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4MasterTableRow_Hash() { return 4051396262U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

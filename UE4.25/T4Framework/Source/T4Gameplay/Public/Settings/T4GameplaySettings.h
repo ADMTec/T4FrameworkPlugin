@@ -65,6 +65,9 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Game Mode")
 	float DefaultCrosshairTextureScale;
 
+	UPROPERTY(EditAnywhere, config, Category = "Game System UI")
+	TSubclassOf<UT4BuiltinUserWidget> NotificationUserWidgetClass; // #164
+
 	UPROPERTY(EditAnywhere, config, Category = "Indicator Outline")
 	FLinearColor IndicatorDefaultSelectOutlineColor; // #115
 

@@ -228,6 +228,12 @@ struct FT4GamePacketCS_CmdItemEnter : public FT4GamePacketCS_Base
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid Guid; // #142
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FName NameID; // #142
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4GameDBKey ItemDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
@@ -236,11 +242,20 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	FRotator SpawnRotation;
 
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	uint32 ReservedObjectID; // #118
+#endif
+
 public:
 	FT4GamePacketCS_CmdItemEnter()
 		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdItemEnter)
+		, NameID(NAME_None)
 		, SpawnLocation(FVector::ZeroVector)
 		, SpawnRotation(FRotator::ZeroRotator)
+#if WITH_EDITOR
+		, ReservedObjectID(T4Const_EmptyObjectID) // #118
+#endif
 	{
 	}
 

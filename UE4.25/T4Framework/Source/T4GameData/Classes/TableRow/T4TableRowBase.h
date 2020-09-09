@@ -19,6 +19,12 @@ struct FT4TableRowBase : public FTableRowBase
 	GENERATED_USTRUCT_BODY()
 
 public:
+	UPROPERTY(EditAnywhere, Category = UI)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = UI)
+	FText UI_Body_Text; // #164
+
 	UPROPERTY(VisibleAnywhere, Category = Hide)
 	FName FolderName; // #122
 
@@ -28,9 +34,6 @@ public:
 
 	UPROPERTY(Transient, VisibleAnywhere, Category = Constant)
 	FName DBKeyName;
-
-	UPROPERTY(EditAnywhere, Category= Editor)
-	FString Description;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	bool bPinned; // #142

@@ -99,4 +99,27 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEffectType>();
 enum class ET4GameAttackType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameAttackType>();
 
+#define FOREACH_ENUM_ET4GAMECHAINCALLFUNCTION(op) \
+	op(ET4GameChainCallFunction::ImmediateCall) \
+	op(ET4GameChainCallFunction::CallAfterCompletion) \
+	op(ET4GameChainCallFunction::None) 
+
+enum class ET4GameChainCallFunction : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameChainCallFunction>();
+
+#define FOREACH_ENUM_ET4GAMEQUESTRULE(op) \
+	op(ET4GameQuestRule::AllSpawnObjects) \
+	op(ET4GameQuestRule::TargetSpawnObject) \
+	op(ET4GameQuestRule::None) 
+
+enum class ET4GameQuestRule : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestRule>();
+
+#define FOREACH_ENUM_ET4GAMEQUESTTYPE(op) \
+	op(ET4GameQuestType::Kill) \
+	op(ET4GameQuestType::None) 
+
+enum class ET4GameQuestType : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

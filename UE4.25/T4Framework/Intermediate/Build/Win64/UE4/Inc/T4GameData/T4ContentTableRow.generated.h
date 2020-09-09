@@ -13,13 +13,20 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4ContentTableRow_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4ContentTableRow_h_18_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4ContentTableRow_h_41_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ContentTableRow_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4TableRowBase Super;
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4ContentTableRow>();
+
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4ContentTableRow_h_18_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4ContentWorldData_Statics; \
+	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4ContentWorldData>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4ContentTableRow_h

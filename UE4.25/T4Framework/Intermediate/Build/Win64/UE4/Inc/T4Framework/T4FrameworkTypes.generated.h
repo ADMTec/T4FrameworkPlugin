@@ -19,7 +19,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_ET4CONTROLLERTYPE(op) \
 	op(ET4ControllerType::Player) \
-	op(ET4ControllerType::NPCAI) \
+	op(ET4ControllerType::NPC) \
+	op(ET4ControllerType::Item) \
 	op(ET4ControllerType::Max) 
 
 enum class ET4ControllerType : uint8;

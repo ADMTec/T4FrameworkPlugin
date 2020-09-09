@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkTypes() {}
 		return ET4ControllerType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ControllerType(ET4ControllerType_StaticEnum, TEXT("/Script/T4Framework"), TEXT("ET4ControllerType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Framework_ET4ControllerType_Hash() { return 3385833211U; }
+	uint32 Get_Z_Construct_UEnum_T4Framework_ET4ControllerType_Hash() { return 2110673733U; }
 	UEnum* Z_Construct_UEnum_T4Framework_ET4ControllerType()
 	{
 #if WITH_HOT_RELOAD
@@ -44,19 +44,23 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4ControllerType::Player", (int64)ET4ControllerType::Player },
-				{ "ET4ControllerType::NPCAI", (int64)ET4ControllerType::NPCAI },
+				{ "ET4ControllerType::NPC", (int64)ET4ControllerType::NPC },
+				{ "ET4ControllerType::Item", (int64)ET4ControllerType::Item },
 				{ "ET4ControllerType::Max", (int64)ET4ControllerType::Max },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Max.Comment", "// #114 : Server Only\n" },
+				{ "Item.Comment", "// #114 : Server Only\n" },
+				{ "Item.Name", "ET4ControllerType::Item" },
+				{ "Item.ToolTip", "#114 : Server Only" },
+				{ "Max.Comment", "// #161 : Server Only\n" },
 				{ "Max.Hidden", "" },
 				{ "Max.Name", "ET4ControllerType::Max" },
-				{ "Max.ToolTip", "#114 : Server Only" },
+				{ "Max.ToolTip", "#161 : Server Only" },
 				{ "ModuleRelativePath", "Public/T4FrameworkTypes.h" },
-				{ "NPCAI.Comment", "// #114 : Server All, Client Player Only\n" },
-				{ "NPCAI.Name", "ET4ControllerType::NPCAI" },
-				{ "NPCAI.ToolTip", "#114 : Server All, Client Player Only" },
+				{ "NPC.Comment", "// #114 : Server All, Client Player Only\n" },
+				{ "NPC.Name", "ET4ControllerType::NPC" },
+				{ "NPC.ToolTip", "#114 : Server All, Client Player Only" },
 				{ "Player.Name", "ET4ControllerType::Player" },
 			};
 #endif

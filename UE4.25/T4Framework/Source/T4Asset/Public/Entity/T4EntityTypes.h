@@ -19,6 +19,7 @@ enum class ET4EntityType : uint8
 	Item, // #37 : Costume or Weapon
 	Costume, // #37
 	Weapon, // #37
+	Goods, // #164
 	Zone, // #94
 
 	None

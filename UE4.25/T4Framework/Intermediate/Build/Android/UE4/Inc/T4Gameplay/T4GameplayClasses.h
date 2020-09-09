@@ -21,6 +21,7 @@
 #include "T4Gameplay/Classes/T4BuiltinGameInstance.h"
 #include "T4Gameplay/Classes/T4BuiltinGameMode.h"
 #include "T4Gameplay/Classes/UI/T4BuiltinHUD.h"
+#include "T4Gameplay/Classes/NPC/T4BuiltinItemAIController.h"
 #include "T4Gameplay/Classes/Player/T4BuiltinLocalPlayer.h"
 #include "T4Gameplay/Classes/NPC/T4BuiltinNPCAIController.h"
 #include "T4Gameplay/Classes/Player/T4BuiltinPlayerController.h"

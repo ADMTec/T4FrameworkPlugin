@@ -43,6 +43,9 @@ public:
 	TSoftObjectPtr<UDataTable> CostumeTableAsset; // #48
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	TSoftObjectPtr<UDataTable> GoodsTableAsset; // #164
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> SkillSetTableAsset; // #50
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -56,6 +59,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> StatTableAsset; // #114
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	TSoftObjectPtr<UDataTable> RewardTableAsset; // #164
 
 public:
 	FT4MasterTableRow()

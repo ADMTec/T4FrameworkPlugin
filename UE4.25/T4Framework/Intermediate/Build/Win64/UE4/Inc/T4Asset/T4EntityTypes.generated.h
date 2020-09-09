@@ -94,6 +94,7 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4EntityBoundType>();
 	op(ET4EntityType::Item) \
 	op(ET4EntityType::Costume) \
 	op(ET4EntityType::Weapon) \
+	op(ET4EntityType::Goods) \
 	op(ET4EntityType::Zone) \
 	op(ET4EntityType::None) 
 

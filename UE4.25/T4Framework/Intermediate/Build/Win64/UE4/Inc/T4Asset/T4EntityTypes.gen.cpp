@@ -515,7 +515,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 		return ET4EntityType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityType(ET4EntityType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityType_Hash() { return 1121436952U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityType_Hash() { return 1365172976U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityType()
 	{
 #if WITH_HOT_RELOAD
@@ -533,6 +533,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				{ "ET4EntityType::Item", (int64)ET4EntityType::Item },
 				{ "ET4EntityType::Costume", (int64)ET4EntityType::Costume },
 				{ "ET4EntityType::Weapon", (int64)ET4EntityType::Weapon },
+				{ "ET4EntityType::Goods", (int64)ET4EntityType::Goods },
 				{ "ET4EntityType::Zone", (int64)ET4EntityType::Zone },
 				{ "ET4EntityType::None", (int64)ET4EntityType::None },
 			};
@@ -543,6 +544,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				{ "Costume.Comment", "// #37 : Costume or Weapon\n" },
 				{ "Costume.Name", "ET4EntityType::Costume" },
 				{ "Costume.ToolTip", "#37 : Costume or Weapon" },
+				{ "Goods.Comment", "// #37\n" },
+				{ "Goods.Name", "ET4EntityType::Goods" },
+				{ "Goods.ToolTip", "#37" },
 				{ "Item.Name", "ET4EntityType::Item" },
 				{ "Map.Name", "ET4EntityType::Map" },
 				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
@@ -556,9 +560,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				{ "Weapon.Comment", "// #37\n" },
 				{ "Weapon.Name", "ET4EntityType::Weapon" },
 				{ "Weapon.ToolTip", "#37" },
-				{ "Zone.Comment", "// #37\n" },
+				{ "Zone.Comment", "// #164\n" },
 				{ "Zone.Name", "ET4EntityType::Zone" },
-				{ "Zone.ToolTip", "#37" },
+				{ "Zone.ToolTip", "#164" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

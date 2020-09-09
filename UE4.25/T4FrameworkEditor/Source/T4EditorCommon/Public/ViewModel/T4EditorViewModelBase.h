@@ -116,6 +116,8 @@ public:
 	FT4OnManipulatorEndTracking& GetOnManipulatorEndTracking() { return OnManipulatorEndTracking; } // #125
 	FT4OnManipulatorUpdating& GetOnManipulatorUpdating() { return OnManipulatorUpdating; } // #118
 
+	IT4EditorGameplayCommand* GetEditorGameplayCommand() const;
+
 	virtual UT4EditorEnvironmentController* GetEditorEnvironmentController() const { return nullptr; } // #90, #94
 	virtual UT4EditorEnvironmentController* GetEditorBackupEnvironmentController() const { return nullptr; } // #147
 
@@ -315,11 +317,10 @@ protected:
 
 	IT4WorldActor* GetPlayerActor(ET4LayerType InLayerType) const;
 
-	IT4EditorGameplayCommand* GetEditorGameplayCommand() const;
-
 	bool IsPreviewSpawnable(ET4EntityType InType) const { return (ET4EntityType::Map != InType && ET4EntityType::Zone != InType) ? true : false; } // #94
 	bool IsSpawnable(ET4EntityType InType) const { return (ET4EntityType::Map != InType) ? true : false; } // #94
 	bool IsControllable(ET4EntityType InType) const { return (ET4EntityType::Map != InType && ET4EntityType::Zone != InType) ? true : false; } // #94
+
 
 	void SetSimulationMode(bool bInSimulating); // #156
 

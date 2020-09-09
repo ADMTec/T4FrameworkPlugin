@@ -26,6 +26,7 @@ enum class ET4GameDBType : uint8
 
 	Weapon, // #48
 	Costume, // #48
+	Goods, // #164
 
 	SkillSet, // #50
 	Skill,
@@ -34,6 +35,7 @@ enum class ET4GameDBType : uint8
 	Effect,
 
 	Stat, // #114
+	Reward, // #164
 
 	Nums,
 };
@@ -224,11 +226,13 @@ public:
 			TEXT("NPC"),
 			TEXT("Weapon"), // #37
 			TEXT("Costume"),
+			TEXT("Goods"), // #164
 			TEXT("SkillSet"), // #50
 			TEXT("Skill"),
 			TEXT("EffectSet"), // #135
 			TEXT("Effect"),
 			TEXT("Stat"), // #114
+			TEXT("Reward"), // #164
 			TEXT("None"),
 		};
 		static_assert(UE_ARRAY_COUNT(GT4GameDBTypeStrings) == (uint8)(ET4GameDBType::Nums) + 1, "GameDBType doesn't match!");
@@ -252,6 +256,36 @@ public:
 };
 
 static const FT4GameDBKey T4Const_InvalidDBKey;
+
+// #161
+USTRUCT()
+struct FT4ContentDBKey : public FT4GameDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4ContentDBKey()
+		: FT4GameDBKey(ET4GameDBType::Content)
+	{
+	}
+
+	FT4ContentDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Content, InRowName)
+	{
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4ContentDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4ContentDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
 
 USTRUCT()
 struct FT4WorldDBKey : public FT4GameDBKey

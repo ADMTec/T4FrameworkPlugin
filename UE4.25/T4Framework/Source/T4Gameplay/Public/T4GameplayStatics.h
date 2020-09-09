@@ -79,6 +79,22 @@ public:
 		const FT4ObjectID& InReservedObjectID // #118
 	); // #60
 
+	bool DoSpawnWeapon(
+		ET4LayerType InLayerType,
+		const FT4GameDBKey& InWeaponBKey,
+		const FVector& InLocation,
+		const FRotator& InRotation,
+		const FT4ObjectID& InReservedObjectID // #118
+	); // #158
+
+	bool DoSpawnCostume(
+		ET4LayerType InLayerType,
+		const FT4GameDBKey& InWeaponBKey,
+		const FVector& InLocation,
+		const FRotator& InRotation,
+		const FT4ObjectID& InReservedObjectID // #118
+	); // #158
+
 #if WITH_EDITOR
 	bool DoSpawnFromSpawnAsset(
 		ET4LayerType InLayerType,

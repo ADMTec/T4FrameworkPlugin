@@ -25,7 +25,8 @@ UENUM()
 enum class ET4ControllerType : uint8
 {
 	Player, // #114 : Server All, Client Player Only
-	NPCAI, // #114 : Server Only
+	NPC, // #114 : Server Only
+	Item, // #161 : Server Only
 
 	Max	UMETA(Hidden)
 };

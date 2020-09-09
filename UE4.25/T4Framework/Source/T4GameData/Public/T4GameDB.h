@@ -13,11 +13,13 @@
 #include "TableRow/T4NPCTableRow.h" // #31
 #include "TableRow/T4WeaponTableRow.h" // #27, #48
 #include "TableRow/T4CostumeTableRow.h" // #27, #48
+#include "TableRow/T4GoodsTableRow.h" // #164
 #include "TableRow/T4SkillSetTableRow.h" // #50
 #include "TableRow/T4SkillTableRow.h" // #25
 #include "TableRow/T4EffectSetTableRow.h" // #135
 #include "TableRow/T4EffectTableRow.h" // #25
 #include "TableRow/T4StatTableRow.h" // #114
+#include "TableRow/T4RewardTableRow.h" // #164
 
 #if WITH_EDITOR
 #include "UObject/StructOnScope.h" // #118 : Visual Studio Code Link
@@ -50,12 +52,14 @@ struct T4GAMEDATA_API FT4DBRowBase
 	const FT4NPCTableRow* QueryNPCTableRow() const;
 	const FT4WeaponTableRow* QueryWeaponTableRow() const;
 	const FT4CostumeTableRow* QueryCostumeTableRow() const;
+	const FT4GoodsTableRow* QueryGoodsTableRow() const; // #164
 	const FT4SkillSetTableRow* QuerySkillSetTableRow() const;
 	const FT4SkillTableRow* QuerySkillTableRow() const;
 	const FT4EffectSetTableRow* QueryEffectSetTableRow() const;
 	const FT4EffectTableRow* QueryEffectTableRow() const;
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 	const FT4StatTableRow* QueryStatTableRow() const;
+	const FT4RewardTableRow* QueryRewardTableRow() const; // #164
 #endif
 
 #if WITH_EDITOR
@@ -74,7 +78,8 @@ struct T4GAMEDATA_API FT4DBRowBase
 	virtual void SetParentRowName(FName InParentRowName) = 0; // #122
 	virtual FName GetFolderName() const = 0; // #122
 	virtual void SetFolderName(FName InFolderName) = 0; // #122
-	virtual const FString& GetDescription() const = 0;
+	virtual const FText& GetUITitleText() const = 0; // #164
+	virtual const FText& GetUIBodyText() const = 0; // #164
 	// ~#118
 #endif
 	
@@ -114,12 +119,14 @@ public:
 	virtual const FT4NPCTableRow* GetNPCTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4WeaponTableRow* GetWeaponTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4CostumeTableRow* GetCostumeTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4GoodsTableRow* GetGoodsTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 	virtual const FT4SkillSetTableRow* GetSkillSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4SkillTableRow* GetSkillTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4EffectSetTableRow* GetEffectSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4EffectTableRow* GetEffectTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 	virtual const FT4StatTableRow* GetStatTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4RewardTableRow* GetRewardTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 #endif
 
 	virtual bool GetDBKeyRowNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyRowNames) const = 0;

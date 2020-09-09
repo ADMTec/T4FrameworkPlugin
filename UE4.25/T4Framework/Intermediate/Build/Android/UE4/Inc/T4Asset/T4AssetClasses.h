@@ -18,6 +18,7 @@
 #include "T4Asset/Classes/Entity/T4ZoneEntityAsset.h"
 #include "T4Asset/Classes/Entity/T4ItemEntityAsset.h"
 #include "T4Asset/Classes/Entity/T4CostumeEntityAsset.h"
+#include "T4Asset/Classes/Entity/T4GoodsEntityAsset.h"
 #include "T4Asset/Classes/Entity/T4WeaponEntityAsset.h"
 #include "T4Asset/Classes/Entity/T4MapEntityAsset.h"
 #include "T4Asset/Classes/Data/T4PathSegmentAsset.h"

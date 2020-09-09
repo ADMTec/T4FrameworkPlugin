@@ -10,7 +10,7 @@
   * #150
  */
 class AController;
-UCLASS()
+UCLASS(Transient, BlueprintType, Blueprintable)
 class T4GAMEPLAY_API AT4BuiltinGameMode : public AT4GameModeBase
 {
 	GENERATED_UCLASS_BODY()
@@ -18,8 +18,4 @@ class T4GAMEPLAY_API AT4BuiltinGameMode : public AT4GameModeBase
 protected:
 	void NotifyStartPlay() override; // #144
 	void NotifyStartToLeaveMap() override;
-
-protected:
-	UPROPERTY()
-	UUserWidget* UserWidgetInstance;
 };

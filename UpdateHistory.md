@@ -2,6 +2,12 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- **v0.9.44** : 2020.09.08
+  - #158 [기능개선] Action Editor, Environment Action 에서 전역 환경 적용을 위한 플레이 옵션 추가 (bAffectGlobal)
+  - #158 [기능개선] Action Editor, PostProcess Action 설정을 T4PostProcessAsset 을 사용하도록 에셋 추가 및 UI 개선
+  - #158 [버그수정] Action Editor, Movement Action 이 Prop/Item Actor 에게 동작하지 않던 문제 수정
+  - #158 [버그수정] Action Editor, Movement Action 의 기본값으로 Play 할 경우 발생하는 크래시 수정
+  - #158 [버그수정] Entity Editor, 일부 Character Entity 의 OverrideMaterial 설정 및 동작 오류 수정
 - **v0.9.43** : 2020.09.06
   - #158 [기능개선] Action Editor, CameraWork Action 사용 시 뷰포트의 Anchor Actor 를 마우스 좌클릭으로 선택, 편집할 수 있도록 기능 추가
   - #158 [기능개선] Action Editor, TimeScale Action 동작을 Actor (플레이어 자신) 또는 World (전체 월드) 를 대상으로 동작할 수 있도록 옵션 추가 

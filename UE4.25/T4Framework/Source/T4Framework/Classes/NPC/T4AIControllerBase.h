@@ -56,7 +56,7 @@ protected:
 public:
 	// IT4ObjectController
 	ET4LayerType GetLayerType() const override { return LayerType; }
-	ET4ControllerType GetType() const override { return ET4ControllerType::NPCAI; } // #114
+	ET4ControllerType GetType() const override { return ET4ControllerType::NPC; } // #114
 
 	bool SetPossessActor(const FT4ActorID& InNewTargetID) override;
 	void ResetPossessActor(bool bInSetDefaultPawn) override;
