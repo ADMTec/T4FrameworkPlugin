@@ -13,6 +13,8 @@
 #include "Protocol/Client/T4GamePacketSC_Move.h"
 #include "Protocol/Client/T4GamePacketSC_Status.h"
 #include "Protocol/Client/T4GamePacketSC_World.h"
+#include "Protocol/Client/T4GamePacketSC_Mission.h" // #164
+#include "Protocol/Client/T4GamePacketSC_Debug.h" // #164
 
 #include "T4Framework/Classes/Player/T4PlayerControllerBase.h"
 
@@ -132,6 +134,24 @@ private:
 
 	// #T4_ADD_PACKET_TAG_SC
 	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_MissionStart(const FT4GamePacketSC_MissionStart& InPacket); // #164
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_MissionUpdate(const FT4GamePacketSC_MissionUpdate& InPacket); // #164
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_MissionCompleted(const FT4GamePacketSC_MissionCompleted& InPacket); // #164
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_DialogueStart(const FT4GamePacketSC_DialogueStart& InPacket); // #163
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_DialogueUpdate(const FT4GamePacketSC_DialogueUpdate& InPacket); // #163
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_DialogueCompleted(const FT4GamePacketSC_DialogueCompleted& InPacket); // #163
+
+	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_WorldTravel(const FT4GamePacketSC_WorldTravel& InPacket);
 
 	UFUNCTION(Reliable, client)
@@ -238,4 +258,7 @@ private:
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_Resurrect(const FT4GamePacketSC_Resurrect& InPacket); // #76
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_DebugAIStatus(const FT4GamePacketSC_DebugAIStatus& InPacket); // #164
 };

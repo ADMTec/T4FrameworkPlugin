@@ -53,6 +53,9 @@ public:
 	FGuid Guid;
 
 	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4GameQuestTarget QuestTarget; // #164
+
+	UPROPERTY(EditAnywhere, Category = Hide)
 	ET4GameQuestType QuestType; // #164
 
 	UPROPERTY(EditAnywhere, Category = Hide)

@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FT4GamePacketSC_DebugAIStatus;
 struct FT4GamePacketSC_Resurrect;
 struct FT4GamePacketSC_Die;
 struct FT4GamePacketSC_EffectStun;
@@ -44,6 +45,12 @@ struct FT4GamePacketSC_MyPCEnter;
 struct FT4GamePacketSC_WorldExplore;
 struct FT4GamePacketSC_WorldTimeSync;
 struct FT4GamePacketSC_WorldTravel;
+struct FT4GamePacketSC_DialogueCompleted;
+struct FT4GamePacketSC_DialogueUpdate;
+struct FT4GamePacketSC_DialogueStart;
+struct FT4GamePacketSC_MissionCompleted;
+struct FT4GamePacketSC_MissionUpdate;
+struct FT4GamePacketSC_MissionStart;
 struct FT4GamePacketCS_CmdBookmark;
 struct FT4GamePacketCS_CmdTeleport;
 struct FT4GamePacketCS_CmdLeave;
@@ -74,8 +81,9 @@ struct FT4GamePacketCS_ReadyToPlay;
 #endif
 #define T4GAMEPLAY_T4BuiltinPlayerController_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_SPARSE_DATA
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_RPC_WRAPPERS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_SPARSE_DATA
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_RPC_WRAPPERS \
+	virtual void SC_RecvPacket_DebugAIStatus_Implementation(FT4GamePacketSC_DebugAIStatus const& InPacket); \
 	virtual void SC_RecvPacket_Resurrect_Implementation(FT4GamePacketSC_Resurrect const& InPacket); \
 	virtual void SC_RecvPacket_Die_Implementation(FT4GamePacketSC_Die const& InPacket); \
 	virtual void SC_RecvPacket_EffectStun_Implementation(FT4GamePacketSC_EffectStun const& InPacket); \
@@ -112,6 +120,12 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_WorldExplore_Implementation(FT4GamePacketSC_WorldExplore const& InPacket); \
 	virtual void SC_RecvPacket_WorldTimeSync_Implementation(FT4GamePacketSC_WorldTimeSync const& InPacket); \
 	virtual void SC_RecvPacket_WorldTravel_Implementation(FT4GamePacketSC_WorldTravel const& InPacket); \
+	virtual void SC_RecvPacket_DialogueCompleted_Implementation(FT4GamePacketSC_DialogueCompleted const& InPacket); \
+	virtual void SC_RecvPacket_DialogueUpdate_Implementation(FT4GamePacketSC_DialogueUpdate const& InPacket); \
+	virtual void SC_RecvPacket_DialogueStart_Implementation(FT4GamePacketSC_DialogueStart const& InPacket); \
+	virtual void SC_RecvPacket_MissionCompleted_Implementation(FT4GamePacketSC_MissionCompleted const& InPacket); \
+	virtual void SC_RecvPacket_MissionUpdate_Implementation(FT4GamePacketSC_MissionUpdate const& InPacket); \
+	virtual void SC_RecvPacket_MissionStart_Implementation(FT4GamePacketSC_MissionStart const& InPacket); \
 	virtual bool CS_RecvPacket_CmdBookmark_Validate(FT4GamePacketCS_CmdBookmark const& ); \
 	virtual void CS_RecvPacket_CmdBookmark_Implementation(FT4GamePacketCS_CmdBookmark const& InPacket); \
 	virtual bool CS_RecvPacket_CmdTeleport_Validate(FT4GamePacketCS_CmdTeleport const& ); \
@@ -163,6 +177,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual bool CS_RecvPacket_ReadyToPlay_Validate(FT4GamePacketCS_ReadyToPlay const& ); \
 	virtual void CS_RecvPacket_ReadyToPlay_Implementation(FT4GamePacketCS_ReadyToPlay const& InPacket); \
  \
+	DECLARE_FUNCTION(execSC_RecvPacket_DebugAIStatus); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Resurrect); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Die); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectStun); \
@@ -199,6 +214,12 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldExplore); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTimeSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTravel); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueCompleted); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueUpdate); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueStart); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionCompleted); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionUpdate); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdBookmark); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdTeleport); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdLeave); \
@@ -226,7 +247,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_ReadyToPlay);
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void SC_RecvPacket_DebugAIStatus_Implementation(FT4GamePacketSC_DebugAIStatus const& InPacket); \
 	virtual void SC_RecvPacket_Resurrect_Implementation(FT4GamePacketSC_Resurrect const& InPacket); \
 	virtual void SC_RecvPacket_Die_Implementation(FT4GamePacketSC_Die const& InPacket); \
 	virtual void SC_RecvPacket_EffectStun_Implementation(FT4GamePacketSC_EffectStun const& InPacket); \
@@ -263,6 +285,12 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_WorldExplore_Implementation(FT4GamePacketSC_WorldExplore const& InPacket); \
 	virtual void SC_RecvPacket_WorldTimeSync_Implementation(FT4GamePacketSC_WorldTimeSync const& InPacket); \
 	virtual void SC_RecvPacket_WorldTravel_Implementation(FT4GamePacketSC_WorldTravel const& InPacket); \
+	virtual void SC_RecvPacket_DialogueCompleted_Implementation(FT4GamePacketSC_DialogueCompleted const& InPacket); \
+	virtual void SC_RecvPacket_DialogueUpdate_Implementation(FT4GamePacketSC_DialogueUpdate const& InPacket); \
+	virtual void SC_RecvPacket_DialogueStart_Implementation(FT4GamePacketSC_DialogueStart const& InPacket); \
+	virtual void SC_RecvPacket_MissionCompleted_Implementation(FT4GamePacketSC_MissionCompleted const& InPacket); \
+	virtual void SC_RecvPacket_MissionUpdate_Implementation(FT4GamePacketSC_MissionUpdate const& InPacket); \
+	virtual void SC_RecvPacket_MissionStart_Implementation(FT4GamePacketSC_MissionStart const& InPacket); \
 	virtual bool CS_RecvPacket_CmdBookmark_Validate(FT4GamePacketCS_CmdBookmark const& ); \
 	virtual void CS_RecvPacket_CmdBookmark_Implementation(FT4GamePacketCS_CmdBookmark const& InPacket); \
 	virtual bool CS_RecvPacket_CmdTeleport_Validate(FT4GamePacketCS_CmdTeleport const& ); \
@@ -314,6 +342,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual bool CS_RecvPacket_ReadyToPlay_Validate(FT4GamePacketCS_ReadyToPlay const& ); \
 	virtual void CS_RecvPacket_ReadyToPlay_Implementation(FT4GamePacketCS_ReadyToPlay const& InPacket); \
  \
+	DECLARE_FUNCTION(execSC_RecvPacket_DebugAIStatus); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Resurrect); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Die); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectStun); \
@@ -350,6 +379,12 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldExplore); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTimeSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTravel); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueCompleted); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueUpdate); \
+	DECLARE_FUNCTION(execSC_RecvPacket_DialogueStart); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionCompleted); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionUpdate); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MissionStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdBookmark); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdTeleport); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdLeave); \
@@ -377,7 +412,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_ReadyToPlay);
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_EVENT_PARMS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_EVENT_PARMS \
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_AnimSet_Parms \
 	{ \
 		FT4GamePacketCS_AnimSet InPacket; \
@@ -482,6 +517,22 @@ struct FT4GamePacketCS_ReadyToPlay;
 	{ \
 		FT4GamePacketSC_AnimSet InPacket; \
 	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_DebugAIStatus_Parms \
+	{ \
+		FT4GamePacketSC_DebugAIStatus InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_DialogueCompleted_Parms \
+	{ \
+		FT4GamePacketSC_DialogueCompleted InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_DialogueStart_Parms \
+	{ \
+		FT4GamePacketSC_DialogueStart InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_DialogueUpdate_Parms \
+	{ \
+		FT4GamePacketSC_DialogueUpdate InPacket; \
+	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_Die_Parms \
 	{ \
 		FT4GamePacketSC_Die InPacket; \
@@ -541,6 +592,18 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_LockOn_Parms \
 	{ \
 		FT4GamePacketSC_LockOn InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_MissionCompleted_Parms \
+	{ \
+		FT4GamePacketSC_MissionCompleted InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_MissionStart_Parms \
+	{ \
+		FT4GamePacketSC_MissionStart InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_MissionUpdate_Parms \
+	{ \
+		FT4GamePacketSC_MissionUpdate InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_Move_Parms \
 	{ \
@@ -624,8 +687,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	};
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_CALLBACK_WRAPPERS
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_INCLASS_NO_PURE_DECLS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_CALLBACK_WRAPPERS
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAT4BuiltinPlayerController(); \
 	friend struct Z_Construct_UClass_AT4BuiltinPlayerController_Statics; \
@@ -634,7 +697,7 @@ public: \
 	DECLARE_SERIALIZER(AT4BuiltinPlayerController)
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_INCLASS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_INCLASS \
 private: \
 	static void StaticRegisterNativesAT4BuiltinPlayerController(); \
 	friend struct Z_Construct_UClass_AT4BuiltinPlayerController_Statics; \
@@ -643,7 +706,7 @@ public: \
 	DECLARE_SERIALIZER(AT4BuiltinPlayerController)
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_STANDARD_CONSTRUCTORS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AT4BuiltinPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AT4BuiltinPlayerController) \
@@ -656,7 +719,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_ENHANCED_CONSTRUCTORS \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AT4BuiltinPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -669,33 +732,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AT4BuiltinPlayerController); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AT4BuiltinPlayerController)
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_PRIVATE_PROPERTY_OFFSET
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_24_PROLOG \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_EVENT_PARMS
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_26_PROLOG \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_EVENT_PARMS
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_GENERATED_BODY_LEGACY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_SPARSE_DATA \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_RPC_WRAPPERS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_CALLBACK_WRAPPERS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_INCLASS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_STANDARD_CONSTRUCTORS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_SPARSE_DATA \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_RPC_WRAPPERS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_CALLBACK_WRAPPERS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_INCLASS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_SPARSE_DATA \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_CALLBACK_WRAPPERS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_27_ENHANCED_CONSTRUCTORS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_SPARSE_DATA \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_CALLBACK_WRAPPERS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_Player_T4BuiltinPlayerController_h_29_ENHANCED_CONSTRUCTORS \
 static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class T4BuiltinPlayerController."); \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

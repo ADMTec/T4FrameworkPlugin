@@ -13,12 +13,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4ServerObjectStructs_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Server_Object_T4ServerObjectStructs_h_123_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Server_Object_T4ServerObjectStructs_h_142_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GameObjectStatus_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GameObjectStatus>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Server_Object_T4ServerObjectStructs_h_123_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GameObjectMissionInfo_Statics; \
+	T4GAMEPLAY_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GameObjectMissionInfo>();
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Server_Object_T4ServerObjectStructs_h_88_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GameObjectStat_Statics; \

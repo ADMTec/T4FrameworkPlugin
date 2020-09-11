@@ -122,4 +122,11 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestRule>();
 enum class ET4GameQuestType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestType>();
 
+#define FOREACH_ENUM_ET4GAMEQUESTTARGET(op) \
+	op(ET4GameQuestTarget::Personal) \
+	op(ET4GameQuestTarget::None) 
+
+enum class ET4GameQuestTarget : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestTarget>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

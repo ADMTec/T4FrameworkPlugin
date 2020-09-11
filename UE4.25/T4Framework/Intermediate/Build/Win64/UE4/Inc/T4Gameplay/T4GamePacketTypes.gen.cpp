@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 1794685321U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2719507534U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -43,6 +43,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GamePacketSC::MissionStart", (int64)ET4GamePacketSC::MissionStart },
+				{ "ET4GamePacketSC::MissionUpdate", (int64)ET4GamePacketSC::MissionUpdate },
+				{ "ET4GamePacketSC::MissionCompleted", (int64)ET4GamePacketSC::MissionCompleted },
+				{ "ET4GamePacketSC::DialogueStart", (int64)ET4GamePacketSC::DialogueStart },
+				{ "ET4GamePacketSC::DialogueUpdate", (int64)ET4GamePacketSC::DialogueUpdate },
+				{ "ET4GamePacketSC::DialogueCompleted", (int64)ET4GamePacketSC::DialogueCompleted },
 				{ "ET4GamePacketSC::WorldTravel", (int64)ET4GamePacketSC::WorldTravel },
 				{ "ET4GamePacketSC::WorldTimeSync", (int64)ET4GamePacketSC::WorldTimeSync },
 				{ "ET4GamePacketSC::WorldExplore", (int64)ET4GamePacketSC::WorldExplore },
@@ -79,6 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::EffectStun", (int64)ET4GamePacketSC::EffectStun },
 				{ "ET4GamePacketSC::Die", (int64)ET4GamePacketSC::Die },
 				{ "ET4GamePacketSC::Resurrect", (int64)ET4GamePacketSC::Resurrect },
+				{ "ET4GamePacketSC::DebugAIStatus", (int64)ET4GamePacketSC::DebugAIStatus },
 				{ "ET4GamePacketSC::None", (int64)ET4GamePacketSC::None },
 			};
 #if WITH_METADATA
@@ -87,6 +94,18 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "AnimSet.Name", "ET4GamePacketSC::AnimSet" },
 				{ "AnimSet.ToolTip", "#40" },
 				{ "Comment", "// #T4_ADD_PACKET_TAG_SC\n" },
+				{ "DebugAIStatus.Comment", "// #76\n" },
+				{ "DebugAIStatus.Name", "ET4GamePacketSC::DebugAIStatus" },
+				{ "DebugAIStatus.ToolTip", "#76" },
+				{ "DialogueCompleted.Comment", "// #163\n" },
+				{ "DialogueCompleted.Name", "ET4GamePacketSC::DialogueCompleted" },
+				{ "DialogueCompleted.ToolTip", "#163" },
+				{ "DialogueStart.Comment", "// #164\n" },
+				{ "DialogueStart.Name", "ET4GamePacketSC::DialogueStart" },
+				{ "DialogueStart.ToolTip", "#164" },
+				{ "DialogueUpdate.Comment", "// #163\n" },
+				{ "DialogueUpdate.Name", "ET4GamePacketSC::DialogueUpdate" },
+				{ "DialogueUpdate.ToolTip", "#163" },
 				{ "Die.Comment", "// #135\n" },
 				{ "Die.Name", "ET4GamePacketSC::Die" },
 				{ "Die.ToolTip", "#135" },
@@ -126,6 +145,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "LockOn.Comment", "// #52\n" },
 				{ "LockOn.Name", "ET4GamePacketSC::LockOn" },
 				{ "LockOn.ToolTip", "#52" },
+				{ "MissionCompleted.Comment", "// #164\n" },
+				{ "MissionCompleted.Name", "ET4GamePacketSC::MissionCompleted" },
+				{ "MissionCompleted.ToolTip", "#164" },
+				{ "MissionStart.Name", "ET4GamePacketSC::MissionStart" },
+				{ "MissionUpdate.Comment", "// #164\n" },
+				{ "MissionUpdate.Name", "ET4GamePacketSC::MissionUpdate" },
+				{ "MissionUpdate.ToolTip", "#164" },
 				{ "ModuleRelativePath", "Public/Protocol/T4GamePacketTypes.h" },
 				{ "Move.Comment", "// #41\n" },
 				{ "Move.Name", "ET4GamePacketSC::Move" },
@@ -138,9 +164,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "MyPCEnter.Comment", "// #140 : \xed\x8a\xb9\xec\xa0\x95 \xec\x9c\x84\xec\xb9\x98\xeb\xa1\x9c \xec\xb9\xb4\xeb\xa9\x94\xeb\x9d\xbc \xec\x9d\xb4\xeb\x8f\x99\n" },
 				{ "MyPCEnter.Name", "ET4GamePacketSC::MyPCEnter" },
 				{ "MyPCEnter.ToolTip", "#140 : \xed\x8a\xb9\xec\xa0\x95 \xec\x9c\x84\xec\xb9\x98\xeb\xa1\x9c \xec\xb9\xb4\xeb\xa9\x94\xeb\x9d\xbc \xec\x9d\xb4\xeb\x8f\x99" },
-				{ "None.Comment", "// #76\n" },
+				{ "None.Comment", "// #164\n" },
 				{ "None.Name", "ET4GamePacketSC::None" },
-				{ "None.ToolTip", "#76" },
+				{ "None.ToolTip", "#164" },
 				{ "NPCEnter.Name", "ET4GamePacketSC::NPCEnter" },
 				{ "NPCLeave.Comment", "// #31\n" },
 				{ "NPCLeave.Name", "ET4GamePacketSC::NPCLeave" },
@@ -174,7 +200,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "WorldExplore.Name", "ET4GamePacketSC::WorldExplore" },
 				{ "WorldExplore.ToolTip", "#146" },
 				{ "WorldTimeSync.Name", "ET4GamePacketSC::WorldTimeSync" },
+				{ "WorldTravel.Comment", "// #163\n" },
 				{ "WorldTravel.Name", "ET4GamePacketSC::WorldTravel" },
+				{ "WorldTravel.ToolTip", "#163" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

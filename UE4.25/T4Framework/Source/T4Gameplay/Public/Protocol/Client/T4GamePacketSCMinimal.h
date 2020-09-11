@@ -8,3 +8,5 @@
 #include "T4GamePacketSC_Move.h"
 #include "T4GamePacketSC_Status.h"
 #include "T4GamePacketSC_World.h"
+#include "T4GamePacketSC_Mission.h" // #164
+#include "T4GamePacketSC_Debug.h" // #164

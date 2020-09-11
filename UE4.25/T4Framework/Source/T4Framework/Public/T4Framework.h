@@ -180,8 +180,6 @@ public:
 	virtual void ChangePrevControlMode() = 0; // #151
 	virtual void ChangeNextControlMode() = 0; // #151
 
-	virtual void SetNotificationText(const FText& InNotificationText) = 0; // #164
-
 #if WITH_EDITOR
 	virtual bool AddServerSpawnGroup(const FGuid& InGuid, const FSoftObjectPath& InSpawnAssetPath) = 0; // #118
 	virtual void RemoveServerSpawnGroup(const FGuid& InGuid) = 0; // #118
@@ -218,7 +216,7 @@ public:
 	virtual void RegisterGameMainFrame(IT4GameMainFrame* InLayerInstance) = 0; // #42
 	virtual IT4GameMainFrame* GetGameMainFrame() const = 0; // #42
 
-	virtual void OnAddDisplayMessage(int32 InKey, float InTimeToDisplay, FColor InColor, const FString& InMessage) = 0; // #133 : Cli => Screen, Srv (TODO) : Console display
+	virtual float GetWorldTimeSeconds() const = 0; // #164
 
 	virtual uint32 GetWorldTravelCount() const = 0; // #146
 
@@ -227,8 +225,11 @@ public:
 
 	virtual void SetWorldTimeSync(FName InWorldTimeTag, float InWorldTimeScale) = 0; // #146
 	virtual void SetWorldTimeSync(float InWorldTimeHour, float InWorldTimeScale) = 0; // #146
+	virtual void SetWorldTimeScaleSync(float InWorldTimeScale) = 0; // #164
 
 	virtual bool QueryLineTraceLocation(ET4CollisionChannel InChannel, const FRay& InWorldRay, FVector& OutLocation) = 0; // #121
+
+	virtual void OnAddDisplayMessage(int32 InKey, float InTimeToDisplay, FColor InColor, const FString& InMessage) = 0; // #133 : Cli => Screen, Srv (TODO) : Console display
 
 	// Client
 	//

@@ -36,7 +36,10 @@ struct FT4GamePacketCS_CmdPlayContent : public FT4GamePacketCS_Base
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4GameDBKey ContentDBKey;
+	FT4ObjectID SenderID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ContentDBKey ContentDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	bool bReplay; // #146 : 월드 이동과 재스폰까지 처리

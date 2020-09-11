@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.45)
+# T4FrameworkPlugin (v0.9.46)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,14 +20,12 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.45** : 2020.09.10
-    - #164 [기능추가] GameDB 내 UI Text 관리를 위한 StringTable 연동 처리 추가
-	  - UE4.25/Content 폴더 에셋 업데이트 및 소스 재빌드 필요
-    - #164 [기능추가] 재화 모델 대응을 위한 T4GoodsEntityAsset 및 Goods/Reward DataTable 추가
-	- #164 [기능개선] Content Editor,  Content Build Details 의 Tab Toolbar 제거
-	- #158 [기능개선] Content Editor, GameDB 리스트에서 폴더 아이템 DragDrop 시 폴더 내 아이템이 모두 스폰될 수 있도록 기능 개선
-	- #161 [기능개선] C/S 환경 및 Content Editor 에서 Weapon & Costume 아이템에 대한 Drop Item 처리 추가
-	- #158 [버그수정] Action Editor, Environment / Decal Action 이 정상적으로 동작하지 않던 문제 수정
+  - **v0.9.46** : 2020.09.11
+    - #158 [버그수정] Content Editor, CombatTestWorld 의 GridMap 로드 후 레벨 이동 시 발생하는 크래시 수정
+	  - UE4.25/Content 폴더 에셋 업데이트
+    - #158 [버그수정] Content Editor, PIE Standalone 실행 시 Level Save As 창이 뜨며 실행이 안되던 문제 수정
+    - #158 [버그수정] Content Editor 오픈 시 간헐적으로 레벨(Level) 에셋이 Modify 가 되던 문제 수정
+    - #158 [버그수정] Entity Editor, Map Entity 오픈 시 발생하던 크래시 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

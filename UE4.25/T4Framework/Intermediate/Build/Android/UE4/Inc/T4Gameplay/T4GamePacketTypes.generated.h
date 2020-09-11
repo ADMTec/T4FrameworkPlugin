@@ -18,6 +18,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define FOREACH_ENUM_ET4GAMEPACKETSC(op) \
+	op(ET4GamePacketSC::MissionStart) \
+	op(ET4GamePacketSC::MissionUpdate) \
+	op(ET4GamePacketSC::MissionCompleted) \
+	op(ET4GamePacketSC::DialogueStart) \
+	op(ET4GamePacketSC::DialogueUpdate) \
+	op(ET4GamePacketSC::DialogueCompleted) \
 	op(ET4GamePacketSC::WorldTravel) \
 	op(ET4GamePacketSC::WorldTimeSync) \
 	op(ET4GamePacketSC::WorldExplore) \
@@ -54,6 +60,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GamePacketSC::EffectStun) \
 	op(ET4GamePacketSC::Die) \
 	op(ET4GamePacketSC::Resurrect) \
+	op(ET4GamePacketSC::DebugAIStatus) \
 	op(ET4GamePacketSC::None) 
 
 enum class ET4GamePacketSC : uint32;

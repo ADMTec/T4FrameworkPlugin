@@ -45,20 +45,12 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Base
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
-#if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DebugAIStateName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_DebugAIStateName;
-#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PacketSC_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PacketSC;
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_PacketSC_Underlying;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_EDITORONLY_DATA
-#endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
@@ -71,15 +63,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Base
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_Base>();
 	}
-#if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_DebugAIStateName_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_DebugAIStateName = { "DebugAIStateName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Base, DebugAIStateName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_DebugAIStateName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_DebugAIStateName_MetaData)) };
-#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC_MetaData[] = {
 		{ "Category", "Default" },
@@ -89,9 +72,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Base
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC = { "PacketSC", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Base, PacketSC), Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC_MetaData)) };
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::PropPointers[] = {
-#if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_DebugAIStateName,
-#endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Statics::NewProp_PacketSC_Underlying,
 	};
@@ -123,7 +103,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Base
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Hash() { return 2938643428U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Base_Hash() { return 2419213520U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

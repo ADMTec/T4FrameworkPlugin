@@ -62,6 +62,14 @@ enum class ET4GamePacketCS : uint32
 UENUM()
 enum class ET4GamePacketSC : uint32
 {
+	MissionStart, // #164
+	MissionUpdate, // #164
+	MissionCompleted, // #164
+
+	DialogueStart, // #163
+	DialogueUpdate, // #163
+	DialogueCompleted, // #163
+
 	WorldTravel,
 	WorldTimeSync, // #146
 	WorldExplore, // #140 : 특정 위치로 카메라 이동
@@ -111,6 +119,8 @@ enum class ET4GamePacketSC : uint32
 
 	Die, // #76
 	Resurrect, // #76
+
+	DebugAIStatus, // #164
 
 	None,
 };

@@ -10,6 +10,14 @@
   * #148
  */
 UENUM(BlueprintType)
+enum class ET4GameQuestTarget : uint8 // #164
+{
+	Personal,
+
+	None,
+};
+
+UENUM(BlueprintType)
 enum class ET4GameQuestType : uint8 // #164
 {
 	Kill			UMETA(DisplayName = "Kill Quests"),

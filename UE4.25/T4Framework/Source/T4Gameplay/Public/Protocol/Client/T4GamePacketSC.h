@@ -26,25 +26,14 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	ET4GamePacketSC PacketSC;
 
-#if WITH_EDITORONLY_DATA
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FName DebugAIStateName; // #140 : NPC Only
-#endif
-
 public:
 	FT4GamePacketSC_Base()
 		: PacketSC(ET4GamePacketSC::None)
-#if WITH_EDITORONLY_DATA
-		, DebugAIStateName(NAME_None) // #140 : NPC Only
-#endif
 	{
 	}
 
 	FT4GamePacketSC_Base(ET4GamePacketSC InPacketSC)
 		: PacketSC(InPacketSC)
-#if WITH_EDITORONLY_DATA
-		, DebugAIStateName(NAME_None) // #140 : NPC Only
-#endif
 	{
 	}
 

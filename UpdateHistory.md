@@ -2,7 +2,15 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
-- **v0.9.44** : 2020.09.08
+- **v0.9.45** : 2020.09.10
+  - #164 [기능추가] GameDB 내 UI Text 관리를 위한 StringTable 연동 처리 추가
+	- UE4.25/Content 폴더 에셋 업데이트 및 소스 재빌드 필요
+  - #164 [기능추가] 재화 모델 대응을 위한 T4GoodsEntityAsset 및 Goods/Reward DataTable 추가
+  - #164 [기능개선] Content Editor,  Content Build Details 의 Tab Toolbar 제거
+  - #158 [기능개선] Content Editor, GameDB 리스트에서 폴더 아이템 DragDrop 시 폴더 내 아이템이 모두 스폰될 수 있도록 기능 개선
+  - #161 [기능개선] C/S 환경 및 Content Editor 에서 Weapon & Costume 아이템에 대한 Drop Item 처리 추가
+  - #158 [버그수정] Action Editor, Environment / Decal Action 이 정상적으로 동작하지 않던 문제 수정
+- **v0.9.44** : 2020.09.07
   - #158 [기능개선] Action Editor, Environment Action 에서 전역 환경 적용을 위한 플레이 옵션 추가 (bAffectGlobal)
   - #158 [기능개선] Action Editor, PostProcess Action 설정을 T4PostProcessAsset 을 사용하도록 에셋 추가 및 UI 개선
   - #158 [버그수정] Action Editor, Movement Action 이 Prop/Item Actor 에게 동작하지 않던 문제 수정

@@ -17,28 +17,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Classes_NPC_T4BuiltinNPCAITypes_h
 
 
-#define FOREACH_ENUM_ET4BUILTINAITASKSTATE(op) \
-	op(ET4BuiltinAITaskState::None) \
-	op(ET4BuiltinAITaskState::Dead) \
-	op(ET4BuiltinAITaskState::Entering) \
-	op(ET4BuiltinAITaskState::AbnormalStatus) \
-	op(ET4BuiltinAITaskState::FindNearestEnemy) \
-	op(ET4BuiltinAITaskState::Approaching) \
-	op(ET4BuiltinAITaskState::Attacking) \
-	op(ET4BuiltinAITaskState::Roaming) \
-	op(ET4BuiltinAITaskState::Jumping) \
-	op(ET4BuiltinAITaskState::Waiting) 
+#define FOREACH_ENUM_ET4BUILTINAITASKTYPE(op) \
+	op(ET4BuiltinAITaskType::None) \
+	op(ET4BuiltinAITaskType::Dead) \
+	op(ET4BuiltinAITaskType::Entering) \
+	op(ET4BuiltinAITaskType::AbnormalStatus) \
+	op(ET4BuiltinAITaskType::FindNearestEnemy) \
+	op(ET4BuiltinAITaskType::Approaching) \
+	op(ET4BuiltinAITaskType::Attacking) \
+	op(ET4BuiltinAITaskType::Roaming) \
+	op(ET4BuiltinAITaskType::Jumping) \
+	op(ET4BuiltinAITaskType::Waiting) 
 
-enum class ET4BuiltinAITaskState : uint8;
-template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4BuiltinAITaskState>();
+enum class ET4BuiltinAITaskType : uint8;
+template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4BuiltinAITaskType>();
 
-#define FOREACH_ENUM_ET4BUILTINAISTATE(op) \
-	op(ET4BuiltinAIState::Ready) \
-	op(ET4BuiltinAIState::Invisible) \
-	op(ET4BuiltinAIState::Active) \
-	op(ET4BuiltinAIState::Deactive) 
+#define FOREACH_ENUM_ET4BUILTINAISTATETYPE(op) \
+	op(ET4BuiltinAIStateType::Ready) \
+	op(ET4BuiltinAIStateType::Invisible) \
+	op(ET4BuiltinAIStateType::Active) \
+	op(ET4BuiltinAIStateType::Deactive) 
 
-enum class ET4BuiltinAIState : uint8;
-template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4BuiltinAIState>();
+enum class ET4BuiltinAIStateType : uint8;
+template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4BuiltinAIStateType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
