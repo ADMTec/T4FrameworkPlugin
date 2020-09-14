@@ -22,6 +22,7 @@
 // ET4ActionDataType::Animation
 // ET4ActionDataType::Mesh // #108
 // ET4ActionDataType::Particle
+// ET4ActionDataType::Trail // #166
 // ET4ActionDataType::Decal // #52
 // ET4ActionDataType::Audio // #152
 // ET4ActionDataType::Projectile // #63
@@ -476,6 +477,97 @@ public:
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Particle '%s'"), *(ParticleAsset.GetAssetName())); // #54
+	}
+};
+
+USTRUCT()
+struct T4ASSET_API FT4TrailTestSettings
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bRenderSpawnPoints;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bRenderTangents;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bRenderTessellation;
+#endif
+
+public:
+	FT4TrailTestSettings()
+#if WITH_EDITORONLY_DATA
+		: bRenderSpawnPoints(false)
+		, bRenderTangents(false)
+		, bRenderTessellation(false)
+#endif
+	{
+	}
+};
+
+USTRUCT()
+struct T4ASSET_API FT4TrailActionData : public FT4ActionDataBase // #166
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	// #39 : FT4ActionDetails::CustomizeTrailActionDetails
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	ET4AttachParent AttachParent;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	bool bParentInheritPoint; // #76 : Parent ActionPoint 가 없다면 본래 세팅을 따르도록...
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FName FirstActionPoint;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FName SecondActionPoint;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	TEnumAsByte<enum ETrailWidthMode> TrailWidthMode;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.1", UIMin = "0.1", UIMax = "5.0"))
+	float TrailWidth;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	TSoftObjectPtr<UParticleSystem> PSTemplate;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.1", UIMin = "0.1", UIMax = "5.0"))
+	float PlayRate;
+
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FT4TrailTestSettings TestSettings;
+#endif
+
+public:
+	FT4TrailActionData()
+		: FT4ActionDataBase(StaticActionType())
+		, AttachParent(ET4AttachParent::Default) // #54
+		, bParentInheritPoint(false) // #76
+		, FirstActionPoint(T4Const_DefaultActionPointName)
+		, SecondActionPoint(T4Const_DefaultActionPointName)
+		, TrailWidthMode(ETrailWidthMode::ETrailWidthMode_FromCentre)
+		, TrailWidth(1.0f)
+		, PlayRate(1.0f)
+	{
+		ActionPlayMode = ET4ActionPlayMode::Duration; // Duration 만!, 시스템으로 제어 필요
+	}
+
+	static ET4ActionDataType StaticActionType() { return ET4ActionDataType::Trail; }
+
+	FString ToString() const override
+	{
+		return FString(TEXT("TrailAction"));
+	}
+
+	FString ToDisplayText() override
+	{
+		return FString::Printf(TEXT("Trail '%s'"), *(PSTemplate.GetAssetName()));
 	}
 };
 

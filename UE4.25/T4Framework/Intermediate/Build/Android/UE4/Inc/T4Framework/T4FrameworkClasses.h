@@ -16,4 +16,5 @@
 #include "T4Framework/Classes/Player/T4LocalPlayerBase.h"
 #include "T4Framework/Classes/Player/T4PlayerControllerBase.h"
 #include "T4Framework/Classes/Player/T4PlayerDefaultPawnBase.h"
+#include "T4Framework/Classes/UI/T4UserWidgetBase.h"
 

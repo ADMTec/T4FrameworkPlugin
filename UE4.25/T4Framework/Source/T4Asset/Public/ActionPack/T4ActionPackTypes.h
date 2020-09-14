@@ -38,6 +38,7 @@ enum class ET4ActionDataType : uint32
 	
 	Mesh, // #108
 	Particle,
+	Trail, // #166
 	Decal, // #54
 	Audio, // #152
 

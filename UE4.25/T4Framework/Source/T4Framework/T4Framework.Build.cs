@@ -19,6 +19,7 @@ namespace UnrealBuildTool.Rules
 					"Engine",
                     "InputCore",
 					"UMG",
+					"Slate",
 					"AIModule",
                     "NavigationSystem",
 					"HeadMountedDisplay",

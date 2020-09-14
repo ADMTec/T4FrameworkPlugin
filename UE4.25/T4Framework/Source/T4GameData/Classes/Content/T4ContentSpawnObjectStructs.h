@@ -19,7 +19,7 @@ public:
 		: ID(NAME_None)
 		, PrefabID(NAME_None)
 #if WITH_EDITORONLY_DATA
-		, DebugColor(FColorList::White)
+		, DebugColor(FColorList::Black)
 		, ParentID(NAME_None) // #122
 		, FolderName(NAME_None) // #122
 #endif

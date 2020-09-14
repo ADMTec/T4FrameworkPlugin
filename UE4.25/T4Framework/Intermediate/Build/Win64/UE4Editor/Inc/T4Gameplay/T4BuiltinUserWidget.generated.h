@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesUT4BuiltinUserWidget(); \
 	friend struct Z_Construct_UClass_UT4BuiltinUserWidget_Statics; \
 public: \
-	DECLARE_CLASS(UT4BuiltinUserWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
+	DECLARE_CLASS(UT4BuiltinUserWidget, UT4UserWidgetBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
 	DECLARE_SERIALIZER(UT4BuiltinUserWidget)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesUT4BuiltinUserWidget(); \
 	friend struct Z_Construct_UClass_UT4BuiltinUserWidget_Statics; \
 public: \
-	DECLARE_CLASS(UT4BuiltinUserWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
+	DECLARE_CLASS(UT4BuiltinUserWidget, UT4UserWidgetBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4Gameplay"), NO_API) \
 	DECLARE_SERIALIZER(UT4BuiltinUserWidget)
 
 

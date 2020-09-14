@@ -25,6 +25,9 @@ struct FT4GamePacketSC_MissionStart : public FT4GamePacketSC_Base // #73
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid QuestKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4ContentDBKey ContentDBKey;
 
 public:
@@ -35,6 +38,11 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
+		if (!QuestKey.IsValid())
+		{
+			OutMsg = TEXT("Invalid QuestKey");
+			return false;
+		}
 		if (!ContentDBKey.IsValid())
 		{
 			OutMsg = TEXT("Invalid ContentDBKey");
@@ -56,6 +64,9 @@ struct FT4GamePacketSC_MissionUpdate : public FT4GamePacketSC_Base // #73
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid QuestKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4ContentDBKey ContentDBKey;
 
 public:
@@ -66,6 +77,11 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
+		if (!QuestKey.IsValid())
+		{
+			OutMsg = TEXT("Invalid QuestKey");
+			return false;
+		}
 		if (!ContentDBKey.IsValid())
 		{
 			OutMsg = TEXT("Invalid ContentDBKey");
@@ -87,6 +103,9 @@ struct FT4GamePacketSC_MissionCompleted : public FT4GamePacketSC_Base // #73
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid QuestKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4ContentDBKey ContentDBKey;
 
 public:
@@ -97,6 +116,11 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
+		if (!QuestKey.IsValid())
+		{
+			OutMsg = TEXT("Invalid QuestKey");
+			return false;
+		}
 		if (!ContentDBKey.IsValid())
 		{
 			OutMsg = TEXT("Invalid ContentDBKey");

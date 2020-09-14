@@ -35,6 +35,31 @@ public:
 	}
 };
 
+// #164
+USTRUCT()
+struct FT4ContentQuestData
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	ET4GameQuestTarget QuestTarget; // #164
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	ET4GameQuestType QuestType; // #164
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	ET4GameQuestRule QuestRule; // #164
+
+public:
+	FT4ContentQuestData()
+		: QuestTarget(ET4GameQuestTarget::None) // #164
+		, QuestType(ET4GameQuestType::None) // #164
+		, QuestRule(ET4GameQuestRule::None) // #164
+	{
+	}
+};
+
 USTRUCT()
 struct FT4ContentTableRow : public FT4TableRowBase
 {
@@ -52,17 +77,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FGuid Guid;
 
-	UPROPERTY(EditAnywhere, Category = Hide)
-	ET4GameQuestTarget QuestTarget; // #164
-
-	UPROPERTY(EditAnywhere, Category = Hide)
-	ET4GameQuestType QuestType; // #164
-
-	UPROPERTY(EditAnywhere, Category = Hide)
-	ET4GameQuestRule QuestRule; // #164
-
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ContentWorldData ContentWorldData;
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	bool bUseQuestContent; // #164
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseQuestContent"))
+	FT4ContentQuestData ContentQuestData;
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
 	TSoftObjectPtr<UT4ContentSpawnAsset> ContentSpawnAsset;
@@ -76,8 +98,7 @@ public:
 public:
 	FT4ContentTableRow()
 		: Version(0) // #135
-		, QuestType(ET4GameQuestType::None) // #164
-		, QuestRule(ET4GameQuestRule::None) // #164
+		, bUseQuestContent(false) // #164
 		, ChainCallFunction(ET4GameChainCallFunction::None) // #164
 	{
 	}

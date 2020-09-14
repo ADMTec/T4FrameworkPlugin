@@ -14,10 +14,23 @@
 #include "T4Engine/Public/Action/T4ActionKey.h"
 
 #include "T4Framework/Public/T4FrameworkEditor.h" // #126
+#include "T4GameData/Public/T4GameDBTypes.h" // #164
 
 /**
   * #76
  */
+class UT4WeaponEntityAsset;
+struct FT4GameEditorEquipData
+{
+	FT4GameEditorEquipData()
+		: WeaponEntityAsset(nullptr)
+		, OverrideEquipPoint(NAME_None)
+	{
+	}
+	const UT4WeaponEntityAsset* WeaponEntityAsset;
+	FName OverrideEquipPoint;
+};
+
 class FViewport;
 class FCanvas;
 class UWorld;
@@ -29,7 +42,7 @@ class UT4ContentSpawnAsset;
 class IT4WorldActor;
 class IT4WorldSystem; // #93
 class IT4PlayerController;
-class IT4EditorGameplayCommand; // #114
+class IT4EditorGameStatics; // #114
 class IT4Framework;
 class UT4EditorEnvironmentController; // #94
 class UT4EditorPathSegmentController; // #155
@@ -56,7 +69,7 @@ public:
 	virtual ET4LayerType GetLayerType() const override { return LayerType; } // #104 : World Editor 는 WorldMapViewModel 에서 별도 처리
 
 	virtual ET4ViewModelEditMode GetEditMode() const override { return ET4ViewModelEditMode::Default; }
-	bool IsPreviewMode() const override { return (ET4ViewModelEditMode::Preview == GetEditMode()) ? true : false; } // #118
+	bool IsThumbnailMode() const override { return (ET4ViewModelEditMode::Preview == GetEditMode()) ? true : false; } // #118
 
 	virtual const FString GetAssetPath() override { return FString(); } // #79
 
@@ -75,11 +88,12 @@ public:
 	IT4PlayerController* GetPlayerController() const;
 
 	virtual bool IsUseManipulator() const override; // #162
+	bool IsManipulatorTacking() const override { return bManipulatorStartTracking; } // #158
 	virtual const FTransform GetManipulatorTransform() const override; // #162
 
-	virtual void NotifyManipulatorStartTracking() override; // #125
-	virtual void NotifyManipulatorEndTracking() override; // #125 : 미반영 복구
-	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
+	void OnNotifyManipulatorStartTracking() override; // #125
+	void OnNotifyManipulatorEndTracking() override; // #125 : 미반영 복구
+	void OnNotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) override; // #118 : PRS (rot or loc or scale)
 
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) override {} // #94
 
@@ -116,7 +130,7 @@ public:
 	FT4OnManipulatorEndTracking& GetOnManipulatorEndTracking() { return OnManipulatorEndTracking; } // #125
 	FT4OnManipulatorUpdating& GetOnManipulatorUpdating() { return OnManipulatorUpdating; } // #118
 
-	IT4EditorGameplayCommand* GetEditorGameplayCommand() const;
+	IT4EditorGameStatics* GetEditorGameStatics() const;
 
 	virtual UT4EditorEnvironmentController* GetEditorEnvironmentController() const { return nullptr; } // #90, #94
 	virtual UT4EditorEnvironmentController* GetEditorBackupEnvironmentController() const { return nullptr; } // #147
@@ -125,6 +139,10 @@ public:
 
 	virtual AActor* GetManipulator() const; // #94
 	virtual IT4WorldActor* GetManipulatorActor() const; // #158
+
+	virtual void NotifyManipulatorStartTracking(); // #125
+	virtual void NotifyManipulatorEndTracking(); // #125 : 미반영 복구
+	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS); // #118 : PRS (rot or loc or scale)
 
 	bool HasReplaySystem() const { return EditorReplaySystemPtr.IsValid(); } // #104
 	UT4EditorReplaySystemController* GetReplaySystem(); // #60, #68, #104
@@ -156,35 +174,32 @@ public:
 public:
 
 	// Server => Client
+	bool ServerPlayContent(const FT4GameDBKey& InGameDBKey); // #164
+
 	virtual void ServerDespawnAll(bool bClearPlayerActor); // #68
-	virtual bool ServerSpawnObjectFromGameDB(
-		ET4EditorDataType InGameDBType, // #126
-		const FName& InGameDBKey, 
-		float InSpawnDistance = 0.0f
-	); // #60
-	bool ServerSpawnObjectFromGameDBEx(
-		ET4EditorDataType InGameDBType, // #126
-		const FName& InGameDBKey, 
+
+	virtual bool ServerSpawnObject(const FT4GameDBKey& InGameDBKey, float InSpawnDistance = 0.0f); // #60, #126
+	bool ServerSpawnObject(
+		const FT4GameDBKey& InGameDBKey,
 		const FVector& InLocation, 
 		const FRotator& InRotation, 
 		const FT4ObjectID& InReservedObjectID
 	); // #118
-	bool ServerSpawnObjectFromEntityAsset(
+	bool ServerSpawnObject(
 		const FT4ObjectID& InReservedObjectID, // #134 : GetPlayerController()->GetObjectID() 로 비교해 Player 를 판단한다.
 		const FT4EntityKey& InEntityKey,
 		const FVector& InLocation,
 		const FRotator& InRotation
 	); // #114
-	
-	bool ServerSpawnObjectFromSpawnAssetEx(
-		UT4ContentSpawnAsset* InSpawnAsset,
-		const FName& InSpawnObjectID,
-		const FT4ObjectID& InReservedObjectID
-	); // #126
-	bool ServerSpawnObjectFromSpawnAsset(UT4ContentSpawnAsset* InSpawnAsset); // #126
+	bool ServerSpawnObject(UT4ContentSpawnAsset* InSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InReservedObjectID); // #126
+	bool ServerSpawnObject(UT4ContentSpawnAsset* InSpawnAsset); // #126
 
 	void ServerDespawnObject(const FT4ObjectID& InObjectID); // #118
-	void ServerDespawnObjectWithEditorOnly(const FT4ObjectID& InObjectID); // #134
+	void ServerDespawnObject(const FT4ObjectID& InObjectID, bool bInClientOnly); // #134
+
+	void ServerQuestStart(const FT4GameDBKey& InGameDBKey); // #164
+	void ServerQuestStop(const FT4GameDBKey& InGameDBKey); // #164
+	void ServerQuestStopAll(); // #164
 
 	void ServerChangeAnimSet(FName InAnimSetName); // #73, #114
 	void ServerChangeStance(FName InStanceName); // #106, #114
@@ -321,7 +336,6 @@ protected:
 	bool IsSpawnable(ET4EntityType InType) const { return (ET4EntityType::Map != InType) ? true : false; } // #94
 	bool IsControllable(ET4EntityType InType) const { return (ET4EntityType::Map != InType && ET4EntityType::Zone != InType) ? true : false; } // #94
 
-
 	void SetSimulationMode(bool bInSimulating); // #156
 
 	void SavePlayerSettingsInfo(); // #87
@@ -358,6 +372,7 @@ private: // #79 : 월드 교체로 Framework 가 변경될 수 있음으로 관�
 
 protected:
 	FT4ActorID ManipulatorActorID; // #94
+	bool bManipulatorStartTracking; // #158
 
 	// #87
 	bool bCachedPlayerSettingsSaved;

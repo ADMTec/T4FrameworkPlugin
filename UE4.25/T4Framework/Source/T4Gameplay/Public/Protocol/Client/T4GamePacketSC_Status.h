@@ -11,6 +11,7 @@
  */
  // #T4_ADD_PACKET_TAG_SC
 
+// ET4GamePacketSC::StartToPlay // #164
 // ET4GamePacketSC::AnimSet // #73
 // ET4GamePacketSC::Stance // #106
 // ET4GamePacketSC::EquipItem
@@ -18,6 +19,42 @@
 // ET4GamePacketSC::ExchangeItem
 // ET4GamePacketSC::Die // #76
 // ET4GamePacketSC::Resurrect // #76
+
+USTRUCT()
+struct FT4GamePacketSC_StartToPlay : public FT4GamePacketSC_Base // #164
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID InitializeObjectID;
+
+#if 0
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4PlayerDBKey PlayerDBKey; // // TODO : 이후 스폰 캐릭터 정보가 있다면(게임 정보 저장) 서버에서 스폰 후 PlayerDBKey 를 클라까지 보낸다.
+#endif
+
+public:
+	FT4GamePacketSC_StartToPlay()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::StartToPlay)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!InitializeObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid InitializeObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:StartToPlay"));
+	}
+};
 
 USTRUCT()
 struct FT4GamePacketSC_AnimSet : public FT4GamePacketSC_Base // #73

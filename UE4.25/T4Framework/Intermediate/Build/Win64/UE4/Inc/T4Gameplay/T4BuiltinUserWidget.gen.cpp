@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinUserWidget() {}
 // Cross Module References
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister();
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_UT4BuiltinUserWidget();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget();
+	T4FRAMEWORK_API UClass* Z_Construct_UClass_UT4UserWidgetBase();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
 // End Cross Module References
 	void UT4BuiltinUserWidget::StaticRegisterNativesUT4BuiltinUserWidget()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinUserWidget() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UT4BuiltinUserWidget_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UUserWidget,
+		(UObject* (*)())Z_Construct_UClass_UT4UserWidgetBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
 	};
 #if WITH_METADATA
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinUserWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BuiltinUserWidget, 4125047469);
+	IMPLEMENT_CLASS(UT4BuiltinUserWidget, 2079082888);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BuiltinUserWidget>()
 	{
 		return UT4BuiltinUserWidget::StaticClass();

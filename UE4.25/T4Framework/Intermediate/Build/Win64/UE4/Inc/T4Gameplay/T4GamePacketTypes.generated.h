@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define FOREACH_ENUM_ET4GAMEPACKETSC(op) \
+	op(ET4GamePacketSC::StartToPlay) \
 	op(ET4GamePacketSC::MissionStart) \
 	op(ET4GamePacketSC::MissionUpdate) \
 	op(ET4GamePacketSC::MissionCompleted) \
@@ -81,7 +82,8 @@ template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GamePacketSC>();
 	op(ET4GamePacketCS::SkillCasting) \
 	op(ET4GamePacketCS::SkillCancel) \
 	op(ET4GamePacketCS::SkillTarget) \
-	op(ET4GamePacketCS::CmdPlayContent) \
+	op(ET4GamePacketCS::CmdContentStart) \
+	op(ET4GamePacketCS::CmdContentCompleted) \
 	op(ET4GamePacketCS::CmdWorldTravel) \
 	op(ET4GamePacketCS::CmdWorldTimeSync) \
 	op(ET4GamePacketCS::CmdChangePlayer) \

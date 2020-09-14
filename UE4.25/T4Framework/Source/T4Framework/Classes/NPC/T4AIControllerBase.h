@@ -58,6 +58,10 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::NPC; } // #114
 
+	const FT4ObjectID& GetOwnedObjectID() const override { return OwnedObjectID; }
+	UT4GameObjectBase* GetOwnedObjectBase() const override; // #114
+	void SetOwnedObjectID(const FT4ObjectID& InObjectID) override { check(InObjectID.IsValid()); OwnedObjectID = InObjectID; }
+
 	bool SetPossessActor(const FT4ActorID& InNewTargetID) override;
 	void ResetPossessActor(bool bInSetDefaultPawn) override;
 
@@ -81,12 +85,9 @@ public:
 	APlayerCameraManager* GetCameraManager() const override { return nullptr; } // #100
 
 	IT4WorldSystem* GetWorldSystem() const override; // #52
-	UT4GameObjectBase* GetGameObjectBase() const override; // #114
 
 public:
 	// IT4AIControllerBase
-	const FT4ObjectID& GetGameObjectID() const override { return GameObjectID; }
-	void SetGameObjectID(const FT4ObjectID& InObjectID) override { check(InObjectID.IsValid()); GameObjectID = InObjectID; }
 
 	virtual AAIController* GetAIController() override; // #104
 
@@ -106,6 +107,6 @@ protected:
 protected:
 	ET4LayerType LayerType;
 
-	FT4ObjectID GameObjectID; // #15
+	FT4ObjectID OwnedObjectID; // #15
 	FT4ActorID ControlActorID;
 };

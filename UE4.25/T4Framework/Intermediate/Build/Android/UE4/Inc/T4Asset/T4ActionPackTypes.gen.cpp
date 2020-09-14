@@ -603,7 +603,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4ActionDataType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionDataType(ET4ActionDataType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4ActionDataType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 3507012196U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 1902229276U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType()
 	{
 #if WITH_HOT_RELOAD
@@ -620,6 +620,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "ET4ActionDataType::Animation", (int64)ET4ActionDataType::Animation },
 				{ "ET4ActionDataType::Mesh", (int64)ET4ActionDataType::Mesh },
 				{ "ET4ActionDataType::Particle", (int64)ET4ActionDataType::Particle },
+				{ "ET4ActionDataType::Trail", (int64)ET4ActionDataType::Trail },
 				{ "ET4ActionDataType::Decal", (int64)ET4ActionDataType::Decal },
 				{ "ET4ActionDataType::Audio", (int64)ET4ActionDataType::Audio },
 				{ "ET4ActionDataType::Projectile", (int64)ET4ActionDataType::Projectile },
@@ -650,7 +651,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "CameraWork.Comment", "// #102\n" },
 				{ "CameraWork.Name", "ET4ActionDataType::CameraWork" },
 				{ "CameraWork.ToolTip", "#102" },
+				{ "Decal.Comment", "// #166\n" },
 				{ "Decal.Name", "ET4ActionDataType::Decal" },
+				{ "Decal.ToolTip", "#166" },
 				{ "Environment.Comment", "// #100\n" },
 				{ "Environment.Name", "ET4ActionDataType::Environment" },
 				{ "Environment.ToolTip", "#100" },
@@ -680,6 +683,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "TimeScale.Comment", "// #81\n" },
 				{ "TimeScale.Name", "ET4ActionDataType::TimeScale" },
 				{ "TimeScale.ToolTip", "#81" },
+				{ "Trail.Name", "ET4ActionDataType::Trail" },
 				{ "Void.Comment", "// #99\n" },
 				{ "Void.Name", "ET4ActionDataType::Void" },
 				{ "Void.ToolTip", "#99" },

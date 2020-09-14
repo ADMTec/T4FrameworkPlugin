@@ -58,6 +58,10 @@ public:
 	ET4LayerType GetLayerType() const override { return LayerType; }
 	ET4ControllerType GetType() const override { return ET4ControllerType::Player; } // #114
 
+	const FT4ObjectID& GetOwnedObjectID() const override { return OwnedObjectID; }
+	UT4GameObjectBase* GetOwnedObjectBase() const override; // #114
+	void SetOwnedObjectID(const FT4ObjectID& InObjectID) override; // #114
+
 	bool SetPossessActor(const FT4ActorID& InNewTargetID) override;
 	void ResetPossessActor(bool bInSetDefaultPawn) override;
 
@@ -81,13 +85,9 @@ public:
 	APlayerCameraManager* GetCameraManager() const override; // #100
 
 	IT4WorldSystem* GetWorldSystem() const override; // #52
-	UT4GameObjectBase* GetGameObjectBase() const override; // #114
 
 public:
 	// IT4PlayerController
-	const FT4ObjectID& GetGameObjectID() const override { return GameObjectID; }
-	void SetGameObjectID(const FT4ObjectID& InObjectID) override { check(InObjectID.IsValid()); GameObjectID = InObjectID; } // #114
-
 	bool CheckAuthority() const override { return HasAuthority(); }
 
 	void OnSetInputMode(ET4InputMode InMode) override;
@@ -189,7 +189,7 @@ private:
 
 protected:
 	ET4LayerType LayerType;
-	FT4ObjectID GameObjectID; // #114
+	FT4ObjectID OwnedObjectID; // #114
 
 	UPROPERTY(Transient)
 	UT4SpringArmComponent* CameraSpringArmComponent;

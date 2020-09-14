@@ -29,11 +29,14 @@ struct FT4EditorViewportDelegates
 	FT4OnIsViewportOverlay OnIsNPCAIDisabled;
 	FT4OnViewportOverlay OnToggleNPCAI; // #114
 	
-	FT4OnIsViewportOverlay OnIsWaypointEditingEnabled;
-	FT4OnViewportOverlay OnToggleWaypointEditing; // #155
+	FT4OnIsViewportOverlay OnIsEditWaypointsEnabled;
+	FT4OnViewportOverlay OnToggleEditWaypoints; // #155
 
 	FT4OnIsViewportOverlay OnIsEditModeEnabled;
 	FT4OnViewportOverlay OnToggleEditMode; // #118
+
+	FT4OnIsViewportOverlay OnIsShownEditObject; // #164
+	FT4OnViewportOverlay OnToggleShowEditObject; // #164
 
 	FT4OnViewportOverlay OnHotKeyJumpToPlay; // #99
 	FT4OnViewportOverlay OnHotKeyJumpToEnd; // #99

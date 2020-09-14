@@ -503,6 +503,42 @@ public:
 	}
 };
 
+USTRUCT()
+struct FT4CostumeDBKey : public FT4GameDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4CostumeDBKey()
+		: FT4GameDBKey(ET4GameDBType::Costume)
+	{
+	}
+
+	FT4CostumeDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Costume, InRowName)
+	{
+	}
+
+	FT4CostumeDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4GameDBKey(ET4GameDBType::Costume, InGameDBKey.RowName)
+	{
+		ensure(ET4GameDBType::Costume == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4CostumeDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4CostumeDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
 // #114
 USTRUCT()
 struct FT4PlayerStatDBKey : public FT4GameDBKey

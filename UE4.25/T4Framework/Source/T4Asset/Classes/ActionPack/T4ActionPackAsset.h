@@ -117,6 +117,9 @@ public:
 	TArray<FT4ParticleActionData> ParticleActions;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	TArray<FT4TrailActionData> TrailActions; // #166
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	TArray<FT4DecalActionData> DecalActions; // #54
 
 	UPROPERTY(EditAnywhere, Category = Common)

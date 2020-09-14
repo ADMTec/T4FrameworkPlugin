@@ -106,6 +106,7 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4ActionPlayMode>();
 	op(ET4ActionDataType::Animation) \
 	op(ET4ActionDataType::Mesh) \
 	op(ET4ActionDataType::Particle) \
+	op(ET4ActionDataType::Trail) \
 	op(ET4ActionDataType::Decal) \
 	op(ET4ActionDataType::Audio) \
 	op(ET4ActionDataType::Projectile) \

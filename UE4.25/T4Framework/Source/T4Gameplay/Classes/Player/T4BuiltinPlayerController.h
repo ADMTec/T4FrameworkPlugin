@@ -97,7 +97,10 @@ private:
 	void CS_RecvPacket_SkillTarget(const FT4GamePacketCS_SkillTarget& InPacket);
 
 	UFUNCTION(Reliable, server, WithValidation)
-	void CS_RecvPacket_CmdPlayContent(const FT4GamePacketCS_CmdPlayContent& InPacket); // #146
+	void CS_RecvPacket_CmdContentStart(const FT4GamePacketCS_CmdContentStart& InPacket); // #146
+
+	UFUNCTION(Reliable, server, WithValidation)
+	void CS_RecvPacket_CmdContentCompleted(const FT4GamePacketCS_CmdContentCompleted& InPacket); // #164
 
 	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_CmdWorldTravel(const FT4GamePacketCS_CmdWorldTravel& InPacket);
@@ -133,6 +136,9 @@ private:
 	friend class FT4ClientPacketHandler;
 
 	// #T4_ADD_PACKET_TAG_SC
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_StartToPlay(const FT4GamePacketSC_StartToPlay& InPacket); // #164
+
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_MissionStart(const FT4GamePacketSC_MissionStart& InPacket); // #164
 

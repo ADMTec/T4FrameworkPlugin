@@ -51,6 +51,8 @@ public:
 	IT4EditorViewModel* GetViewModel() const { return ViewModelRef; }
 	FT4EditorViewportClient* GetViewportClient() const { return ViewportClientPtr.Get(); } // #79
 
+	TSharedRef<SOverlay> GetViewportOverlayRef() { return ViewportOverlay.ToSharedRef(); } // #164
+
 	bool IsVisible() const override; // #76
 
 	int32 GetCameraSpeedSetting() const; // #145
@@ -117,15 +119,20 @@ protected:
 	void HandleOnToggleNPCAI(); // #114
 	FReply HandleOnToggleNPCAIClicked(); // #114
 
-	EVisibility HandleOnIsWaypointEditingEnabled() const; // #155
-	bool HandleOnIsWaypointEditingDisabled() const; // #155
-	void HandleOnToggleWaypointEditing(); // #155
-	FReply HandleOnToggleWaypointEditingClicked(); // #155
+	EVisibility HandleOnIsEditWaypointsEnabled() const; // #155
+	bool HandleOnIsEditWaypointsDisabled() const; // #155
+	void HandleOnToggleEditWaypoints(); // #155
+	FReply HandleOnToggleEditWaypointsClicked(); // #155
 	
 	EVisibility HandleOnIsEditModeEnabled() const; // #118
 	bool HandleOnIsEditModeDisabled() const; // #118
 	void HandleOnToggleEditMode(); // #118
 	FReply HandleOnToggleEditModeClicked(); // #118
+
+	EVisibility HandleOnIsShownEditObject() const; // #164
+	bool HandleOnIsShowEditObjectDisabled() const; // #164
+	void HandleOnToggleShowEditObject(); // #164
+	FReply HandleOnToggleShowEditObjectClicked(); // #164
 
 	FReply HandleOnUpdataThumbnailClicked(); // #105
 

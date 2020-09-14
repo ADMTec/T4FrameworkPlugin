@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.46)
+# T4FrameworkPlugin (v0.9.47)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,12 +20,16 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.46** : 2020.09.11
-    - #158 [버그수정] Content Editor, CombatTestWorld 의 GridMap 로드 후 레벨 이동 시 발생하는 크래시 수정
-	  - UE4.25/Content 폴더 에셋 업데이트
-    - #158 [버그수정] Content Editor, PIE Standalone 실행 시 Level Save As 창이 뜨며 실행이 안되던 문제 수정
-    - #158 [버그수정] Content Editor 오픈 시 간헐적으로 레벨(Level) 에셋이 Modify 가 되던 문제 수정
-    - #158 [버그수정] Entity Editor, Map Entity 오픈 시 발생하던 크래시 수정
+  - **v0.9.47** : 2020.09.15
+	- #164 [기능추가] Content Editor, ContentDB 를 사용한 기본 Quest 설정 및 동작 처리 추가
+	  - Server Quest Start/Completed 및 Client UI 출력
+	  - ContentDB 의 SpawnAsset 내 SpawnObject 를 모두 Kill 할 경우 Quest 종료 처리
+	  - 후속 작업으로 Quest 종료 조건 및 타겟 다양화, Quest Chain 플레이 등의 추가 작업 진행
+    - #166 [기능추가] Action Editor, Trail Action 추가
+	  - T4FrameworkExample 프로젝트에 샘플 ActionPack 추가
+	- #164 [기능개선] Content Editor, ContentDB Item 을 DragDrop 으로 Quest 실행이 될 수 있도록 기능 개선
+	- #164 [버그수정] Content Editor, Spawn Asset 의 Test Player/Weapon/Stance 설정이 저장되지 않던 문제 수정
+    - #158 [버그수정] Action Editor, CameraWork 의 Segment 옵션 수정 후 위치 수정이 동작하지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**
@@ -56,16 +60,17 @@
 	  - #3-3 : 데칼 액션 (Decal Action)
 	  - #3-4 : 메시 액션 (Mesh Action)
 	  - #3-5 : 오디오 액션 (Audio Action)
-	  - #3-6 : 리액션 액션 (Reaction Action)
-	  - #3-7 : 플레이 테그 액션 (PlayTag Action)
-	  - #3-8 : 이동 액션 (Movement Action)
-	  - #3-9 : 프로젝타일 액션 (Projectile Action)
-	  - #3-10 : 타임 스케일 액션 (TimeScale Action)
-	  - #3-11 : 카메라 워크 액션 (CameraWork Action)
-	  - #3-12: 카메라 셰이크 액션 (CameraShake Action)
-	  - #3-13 : 포스트 프로세스 액션 (PostProcess Action)
-	  - #3-14 : 환경 액션 (Environment Action)
-	  - #3-15 : 브랜치 액션 (Branch Action)
+	  - #3-6 : 트레일 액션 (Trail Action)
+	  - #3-7 : 리액션 액션 (Reaction Action)
+	  - #3-8 : 플레이 테그 액션 (PlayTag Action)
+	  - #3-9 : 이동 액션 (Movement Action)
+	  - #3-10 : 프로젝타일 액션 (Projectile Action)
+	  - #3-11 : 타임 스케일 액션 (TimeScale Action)
+	  - #3-12 : 카메라 워크 액션 (CameraWork Action)
+	  - #3-13: 카메라 셰이크 액션 (CameraShake Action)
+	  - #3-14 : 포스트 프로세스 액션 (PostProcess Action)
+	  - #3-15 : 환경 액션 (Environment Action)
+	  - #3-16 : 브랜치 액션 (Branch Action)
   - **콘텐츠 제작 가이드(초안)**
     - [#1 : 준비](https://youtu.be/LFErpgcwbnc)
     - [#2 : Content Editor 레이아웃](https://youtu.be/W3XC4lnz6Og)

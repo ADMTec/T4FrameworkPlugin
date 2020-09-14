@@ -915,9 +915,9 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorNPCDataInf
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #135\n" },
+		{ "Comment", "// #158 : \xec\x95\x84\xeb\x9e\x98 Struct \xeb\x93\xa4\xec\x9d\x80 T4EditorGameplayController \xeb\xa5\xbc \xed\x86\xb5\xed\x95\xb4 UI \xeb\xa1\x9c \xec\xa0\x9c\xea\xb3\xb5\xeb\x90\x98\xec\x96\xb4 USTRUCT \xeb\xa5\xbc \xec\x82\xac\xec\x9a\xa9\xed\x95\x98\xeb\x8a\x94 \xea\xb2\x83...\n// #135\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#135" },
+		{ "ToolTip", "#158 : \xec\x95\x84\xeb\x9e\x98 Struct \xeb\x93\xa4\xec\x9d\x80 T4EditorGameplayController \xeb\xa5\xbc \xed\x86\xb5\xed\x95\xb4 UI \xeb\xa1\x9c \xec\xa0\x9c\xea\xb3\xb5\xeb\x90\x98\xec\x96\xb4 USTRUCT \xeb\xa5\xbc \xec\x82\xac\xec\x9a\xa9\xed\x95\x98\xeb\x8a\x94 \xea\xb2\x83...\n#135" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewStructOps()
@@ -980,7 +980,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorNPCDataInf
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Hash() { return 2951799977U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Hash() { return 920316111U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

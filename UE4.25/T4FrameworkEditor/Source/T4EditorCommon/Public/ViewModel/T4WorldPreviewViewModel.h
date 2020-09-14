@@ -68,8 +68,8 @@ public:
 	void ToggleEditMode() { bEditModeEnabled = !bEditModeEnabled; } // #118
 	bool IsEditModelEnabled() const { return bEditModeEnabled; } // #118
 
-	void ToggleWaypointEditing() { bWaypointEditing = !bWaypointEditing; } // #155
-	bool IsWaypointEditing() const { return bWaypointEditing; } // #155
+	void ToggleEditWaypoints() { bEditWaypoints = !bEditWaypoints; } // #155
+	bool IsEditWaypoints() const { return bEditWaypoints; } // #155
 
 	void ToggleMouseStatus() { bMouseStatus = !bMouseStatus; } // #118
 
@@ -123,7 +123,7 @@ private:
 	ET4ViewModelEditMode ViewModelEditMode; // #118
 
 	bool bEditModeEnabled; // #118
-	bool bWaypointEditing; // #155
+	bool bEditWaypoints; // #155
 	bool bNPCAIDisabled; // #114
 	bool bUpdatingReload;
 	bool bMouseStatus; // #118

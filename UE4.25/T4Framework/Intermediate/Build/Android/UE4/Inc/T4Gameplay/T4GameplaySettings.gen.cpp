@@ -75,9 +75,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_IndicatorDefaultSelectOutlineColor;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NotificationUserWidgetClass_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuestInfoUserWidgetClass_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_NotificationUserWidgetClass;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_QuestInfoUserWidgetClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultCrosshairTextureScale_MetaData[];
 #endif
@@ -105,9 +105,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_DefaultControlMode;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_DefaultControlMode_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultUserWidgetClass_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameModeLayoutUserWidgetClass_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_DefaultUserWidgetClass;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_GameModeLayoutUserWidgetClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultGameContentName_MetaData[];
 #endif
@@ -204,12 +204,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorDefaultSelectOutlineColor = { "IndicatorDefaultSelectOutlineColor", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, IndicatorDefaultSelectOutlineColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorDefaultSelectOutlineColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorDefaultSelectOutlineColor_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NotificationUserWidgetClass_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_QuestInfoUserWidgetClass_MetaData[] = {
 		{ "Category", "Game System UI" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NotificationUserWidgetClass = { "NotificationUserWidgetClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, NotificationUserWidgetClass), Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NotificationUserWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NotificationUserWidgetClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_QuestInfoUserWidgetClass = { "QuestInfoUserWidgetClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, QuestInfoUserWidgetClass), Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_QuestInfoUserWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_QuestInfoUserWidgetClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultCrosshairTextureScale_MetaData[] = {
 		{ "Category", "Game Mode" },
@@ -261,14 +261,14 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode = { "DefaultControlMode", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultControlMode), Z_Construct_UEnum_T4Gameplay_ET4ControlModeType, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameModeLayoutUserWidgetClass_MetaData[] = {
 		{ "Category", "Game Mode" },
 		{ "Comment", "// #135 : def = Default\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 		{ "ToolTip", "#135 : def = Default" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass = { "DefaultUserWidgetClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, DefaultUserWidgetClass), Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameModeLayoutUserWidgetClass = { "GameModeLayoutUserWidgetClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, GameModeLayoutUserWidgetClass), Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameModeLayoutUserWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameModeLayoutUserWidgetClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName_MetaData[] = {
 		{ "Category", "Game DB" },
@@ -298,7 +298,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlCameraPitchMinAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorAttackTargetOutlineColor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_IndicatorDefaultSelectOutlineColor,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NotificationUserWidgetClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_QuestInfoUserWidgetClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultCrosshairTextureScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultCrosshairTexturePath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultVirtualKoysticksPath,
@@ -307,7 +307,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_MobileControlMode_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultControlMode_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultUserWidgetClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_GameModeLayoutUserWidgetClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameContentName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultGameMasterTablePath,
 	};
@@ -338,7 +338,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameplaySettings, 3336935632);
+	IMPLEMENT_CLASS(UT4GameplaySettings, 1520816470);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameplaySettings>()
 	{
 		return UT4GameplaySettings::StaticClass();

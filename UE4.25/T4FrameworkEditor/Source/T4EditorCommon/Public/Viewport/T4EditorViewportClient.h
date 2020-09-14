@@ -16,6 +16,7 @@ class IT4WorldActor;
 class FViewport;
 class FSceneView;
 struct FWorldContext;
+class SGameLayerManager; // #164
 class ST4EditorViewport;
 struct FPostProcessSettings; // #100
 class T4EDITORCOMMON_API FT4EditorViewportClient
@@ -82,7 +83,7 @@ public:
 	FViewport* GetViewport() const override; // #68
 	FSceneView* GetSceneView() override; // #142
 
-	bool IsPreviewMode() const override { return bPreviewMode; }
+	bool IsThumbnailMode() const override { return bThumbnailMode; }
 
 	void SetCustomCameraControl(bool bEnable) override; // #79
 
@@ -98,6 +99,9 @@ public:
 	void SetMouseCursorType(EMouseCursor::Type InMouseCursorType) override;
 
 	void SetInitialLocationAndRotation(const FVector& InLocation, const FRotator& InRotation) override; // #86
+
+	void AddWidgetToScreen(ULocalPlayer* InPlayer, TSharedRef<SWidget> InViewportContent, int32 InZOrder) override; // #164 : Preview 에서 UMG 지원을 위한 처리
+	void RemoveWidgetFromScreen(ULocalPlayer* InPlayer, TSharedRef<SWidget> InViewportContent) override; // #164 : GameViewportClient
 
 	void ShowDragBox(bool bInShow) override; // #142
 	bool GetDragBoxFrustum(bool bInUseBoxFrustum, FConvexVolume& OutFrustum) override; // #142
@@ -142,11 +146,13 @@ private:
 	TWeakPtr<ST4EditorViewport> ViewportPtr;
 	IT4EditorViewModel* ViewModelRef;
 
-	bool bPreviewMode;
+	bool bThumbnailMode;
 	bool bCustomCameraControl; // #79
 	bool bViewportFocused;
 	bool bShowMouseCursor; // #48
 	EMouseCursor::Type OverrideMouseCursorType; // #48
+
+	TSharedPtr<SGameLayerManager> GameLayerManagerPtr; // #164
 
 	float RealtimeDisableTimeLeft; // #59 : 섬네일 뷰포트는 Realtime 이 꺼져 있어 강제로 업데이트 해준다.
 

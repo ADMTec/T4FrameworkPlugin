@@ -25,6 +25,7 @@ class APawn; // #86
 class UTexture2D; // #121
 class UWorld;
 class FCanvas;
+class ULocalPlayer; // #164
 class FViewport;
 struct FWorldContext;
 class AController;
@@ -55,8 +56,9 @@ public:
 	virtual ET4LayerType GetLayerType() const = 0;
 	virtual ET4ControllerType GetType() const = 0; // #114
 
-	virtual const FT4ObjectID& GetGameObjectID() const = 0; // #114 : GameObject and Controller ID (WARN : 서버는 모두, 클라는 Player 만 존재)
-	virtual void SetGameObjectID(const FT4ObjectID& InObjectID) = 0; // #114
+	virtual const FT4ObjectID& GetOwnedObjectID() const = 0; // #114 : GameObject and Controller ID (WARN : 서버는 모두, 클라는 Player 만 존재)
+	virtual UT4GameObjectBase* GetOwnedObjectBase() const = 0; // #114
+	virtual void SetOwnedObjectID(const FT4ObjectID& InObjectID) = 0; // #114
 
 	virtual bool SetPossessActor(const FT4ActorID& InNewTargetID) = 0;
 	virtual void ResetPossessActor(bool bInSetDefaultPawn) = 0;
@@ -81,7 +83,6 @@ public:
 	virtual APlayerCameraManager* GetCameraManager() const = 0; // #100
 
 	virtual IT4WorldSystem* GetWorldSystem() const = 0; // #52
-	virtual UT4GameObjectBase* GetGameObjectBase() const = 0; // #114
 };
 
 class T4FRAMEWORK_API IT4AIControllerBase : public IT4ObjectController
@@ -181,11 +182,7 @@ public:
 	virtual void ChangeNextControlMode() = 0; // #151
 
 #if WITH_EDITOR
-	virtual bool AddServerSpawnGroup(const FGuid& InGuid, const FSoftObjectPath& InSpawnAssetPath) = 0; // #118
-	virtual void RemoveServerSpawnGroup(const FGuid& InGuid) = 0; // #118
-
-	virtual IT4EditorGameData* GetEditorGameData() = 0; // #60
-	virtual IT4EditorGameplayCommand* GetEditorGameplayCommand() = 0; // #114
+	virtual IT4EditorGameStatics* GetEditorGameStatics() = 0; // #114
 #endif
 };
 
@@ -198,6 +195,12 @@ public:
 
 	virtual ET4LayerType GetLayerType() const = 0;
 	virtual ET4FrameworkType GetType() const = 0;
+
+	virtual bool IsClient() const = 0;
+	virtual bool IsServer() const = 0;
+	virtual bool IsPreview() const = 0;
+	virtual bool IsLevelEditor() const = 0;
+	virtual bool IsToolSide() const = 0;
 
 	virtual void OnReset() = 0;
 	virtual void OnStartPlay() = 0;
@@ -233,6 +236,9 @@ public:
 
 	// Client
 	//
+	virtual bool IsClientGamePlaying() = 0; // #164
+	virtual void StartClientGameplay() = 0; // #164 : SC_StartToPlay 에서 켜진다.
+
 	virtual UT4GameObjectBase* GetPlayerClientObject() const = 0; // #114 : Only Client
 	virtual IT4PlayerController* GetPlayerController() const = 0;
 
@@ -307,7 +313,9 @@ public:
 	virtual AT4PlayerControllerBase* GetEditorPlayerController() const = 0; // #79
 	virtual void SetEditorPlayerController(AT4PlayerControllerBase* InPlayerController) = 0; // #42
 
-	virtual bool IsPreviewMode() const = 0; // #68
+	virtual IT4EditorGameStatics* GetEditorGameStatics() = 0; // #114
+
+	virtual bool IsThumbnailMode() const = 0; // #68
 
 	virtual bool IsEditMode() const = 0; // #132 : T4Framework 에디터에서 Simulation 사용 여부
 	virtual void SetEditMode(bool bInEnable) = 0; // #132 : T4Framework 에디터에서 Simulation 사용 여부

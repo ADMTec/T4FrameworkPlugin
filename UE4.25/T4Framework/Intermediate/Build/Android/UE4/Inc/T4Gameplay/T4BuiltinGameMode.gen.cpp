@@ -75,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinGameMode, 314240426);
+	IMPLEMENT_CLASS(AT4BuiltinGameMode, 1027556271);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinGameMode>()
 	{
 		return AT4BuiltinGameMode::StaticClass();

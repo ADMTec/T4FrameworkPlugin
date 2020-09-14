@@ -11,7 +11,8 @@
  */
  // #T4_ADD_PACKET_TAG_CS
 
-// ET4GamePacketCS::CmdPlayContent // #146
+// ET4GamePacketCS::CmdContentStart // #146
+// ET4GamePacketCS::CmdContentCompleted // #164
 
 // ET4GamePacketCS::CmdWorldTravel
 // ET4GamePacketCS::CmdWorldTimeSync // #146
@@ -30,7 +31,7 @@
 // ET4GamePacketCS::CmdBookmark // #140
 
 USTRUCT()
-struct FT4GamePacketCS_CmdPlayContent : public FT4GamePacketCS_Base
+struct FT4GamePacketCS_CmdContentStart : public FT4GamePacketCS_Base
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -41,19 +42,51 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4ContentDBKey ContentDBKey;
 
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	bool bReplay; // #146 : 월드 이동과 재스폰까지 처리
-
 public:
-	FT4GamePacketCS_CmdPlayContent()
-		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdPlayContent)
-		, bReplay(false) // #146
+	FT4GamePacketCS_CmdContentStart()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdContentStart)
 	{
 	}
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:CmdPlayContent"));
+		return FString(TEXT("CS_Packet:CmdContentStart"));
+	}
+};
+
+// #164
+USTRUCT()
+struct FT4GamePacketCS_CmdContentCompleted : public FT4GamePacketCS_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID SenderID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	ET4GameQuestTarget QuestTarget;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	ET4GameQuestResult QuestResult;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ContentDBKey ParamContentDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid ParamQuestKey;
+
+public:
+	FT4GamePacketCS_CmdContentCompleted()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdContentCompleted)
+		, QuestTarget(ET4GameQuestTarget::None) // #146
+		, QuestResult(ET4GameQuestResult::None) // #146
+	{
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("CS_Packet:CmdContentCompleted"));
 	}
 };
 

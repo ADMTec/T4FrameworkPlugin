@@ -37,7 +37,8 @@ enum class ET4GamePacketCS : uint32
 	SkillTarget, // #116
 
 	// Test
-	CmdPlayContent, // #146
+	CmdContentStart, // #146
+	CmdContentCompleted, // #164
 
 	CmdWorldTravel,
 	CmdWorldTimeSync, // #146
@@ -62,6 +63,8 @@ enum class ET4GamePacketCS : uint32
 UENUM()
 enum class ET4GamePacketSC : uint32
 {
+	StartToPlay, // #164 : 클라측 ReadyToPlay 에 대한 응답. Server/Client Object 생성!
+
 	MissionStart, // #164
 	MissionUpdate, // #164
 	MissionCompleted, // #164

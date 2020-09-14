@@ -6,6 +6,7 @@
 #include "ViewModel/T4EditorViewModelBase.h"
 
 #include "T4Framework/Public/T4FrameworkEditor.h"
+#include "T4GameData/Public/T4GameDBTypes.h"
 
 #include "UObject/GCObject.h"
 #include "TickableEditorObject.h"
@@ -56,8 +57,8 @@ public:
 public:
 	UT4EntityAsset* GetSelectedEntityAsset() { return EntityAssetOwner; }
 
-	void OnSpawnFromEntity(UT4EntityAsset* InEntityAsset, float InKeepUpdateTimeSec);
-	void OnSpawnFromEntity(
+	void OnSpawnPreview(UT4EntityAsset* InEntityAsset, float InKeepUpdateTimeSec);
+	void OnSpawnPreview(
 		UT4EntityAsset* InEntityAsset,
 		FName InGameDBKey,
 		FName InSkinName, 
@@ -65,8 +66,8 @@ public:
 		FName InStanceName, // #142
 		float InKeepUpdateTimeSec
 	);
-	void OnSpawnFromAction(const UT4ActionPackAsset* InActionPackAsset, float InDurationSec, float InDelayTimeSec);
-	void OnSpawnFromGameData(ET4EditorDataType InGameDBType, FName InRowName); // #120
+	void OnSpawnPreview(const UT4ActionPackAsset* InActionPackAsset, float InDurationSec, float InDelayTimeSec);
+	void OnSpawnPreview(const FT4GameDBKey& InGameDBKey); // #120
 
 	void HandleOnEntityPropertiesChanged();
 
@@ -81,6 +82,9 @@ protected:
 	void Cleanup() override; // #85
 	void Reset() override; // #79
 	void StartPlay() override; // #76, #86
+
+	bool GetWeaponEntityAssetByGameDB(const FT4GameDBKey& InGameDBKey, TArray<FT4GameEditorEquipData>& OutEquipData); // #120 : 0 : index 0 : Main, 0 < : Subs
+	const UT4ActionPackAsset* GetActionPackAssetInGameDB(const FT4GameDBKey& InGameDBKey); // #120
 
 private:
 	UT4EntityAsset* EntityAssetOwner;

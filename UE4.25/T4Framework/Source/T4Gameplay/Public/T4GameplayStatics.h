@@ -58,7 +58,13 @@ public:
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
 
-	bool DoPlayContent(ET4LayerType InLayerType, const FT4GameDBKey& InContentDBKey, bool bInReplay); // #146 : 월드 이동과 재스폰까지 처리
+	bool DoContentStart(ET4LayerType InLayerType, const FT4GameDBKey& InContentDBKey); // #146 : 월드 이동과 재스폰까지 처리
+	bool DoContentCompleted(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FGuid& InQuestKey); // #164
+	bool DoContentCompleted(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FT4GameDBKey& InContentDBKey); // #164
+#if WITH_EDITOR
+	bool DoContentStopAll(ET4LayerType InLayerType);
+#endif
+
 	bool DoWorldTravel(ET4LayerType InLayerType, const FT4GameDBKey& InWorldDBKey); // #144
 
 	bool DoSpawnPlayer(ET4LayerType InLayerType, const FT4GameDBKey& InPlayerDBKey, bool bInRandomLocation); // #43
@@ -96,13 +102,13 @@ public:
 	); // #158
 
 #if WITH_EDITOR
-	bool DoSpawnFromSpawnAsset(
+	bool DoSpawn(ET4LayerType InLayerType, UT4ContentSpawnAsset* InSpawnAsset); // #126
+	bool DoSpawnBy(
 		ET4LayerType InLayerType,
 		UT4ContentSpawnAsset* InSpawnAsset,
 		const FName& InSpawnActorID,
 		const FT4ObjectID& InReservedObjectID
 	); // #126
-	bool DoSpawnFromSpawnAsset(ET4LayerType InLayerType, UT4ContentSpawnAsset* InSpawnAsset); // #126
 #endif
 
 	bool DoDespawn(ET4LayerType InLayerType, const FT4ObjectID& InObjectID); // #114
@@ -111,7 +117,7 @@ public:
 #if WITH_EDITOR
 	// #114 : 툴에서만 호출됨!! Server 류는 Entity 정보가 테이블에 있기 때문에 테이블 데이터 없이 스폰하기 위한 처리임!
 	// #134 : 툴용도의 Server Send => Client Recv 대체 처리. 즉, 아래 코드에서 C/S 모드를 처리하고 있음에 유의!!
-	bool DoSpawnByEntityKey(
+	bool DoSpawnEditor(
 		ET4LayerType InLayerType,
 		const FT4ObjectID& InReservedObjectID, // #134 : GetPlayerController()->GetObjectID() 로 비교해 Player 를 판단한다.
 		const FT4EntityKey& InEntityKey,
@@ -119,7 +125,7 @@ public:
 		const FRotator& InRotation,
 		bool bInClientOnly
 	);
-	bool DoDespawnWithEditorOnly(ET4LayerType InLayerType, const FT4ObjectID& InObjectID, bool bInClientOnly);
+	bool DoDespawnEditor(ET4LayerType InLayerType, const FT4ObjectID& InObjectID, bool bInClientOnly);
 #endif
 
 	bool DoChangeAnimSet(ET4LayerType InLayerType, FName InAnimSetName);// #73, #114

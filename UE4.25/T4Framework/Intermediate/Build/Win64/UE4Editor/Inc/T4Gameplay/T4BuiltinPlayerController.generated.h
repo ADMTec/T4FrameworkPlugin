@@ -51,6 +51,7 @@ struct FT4GamePacketSC_DialogueStart;
 struct FT4GamePacketSC_MissionCompleted;
 struct FT4GamePacketSC_MissionUpdate;
 struct FT4GamePacketSC_MissionStart;
+struct FT4GamePacketSC_StartToPlay;
 struct FT4GamePacketCS_CmdBookmark;
 struct FT4GamePacketCS_CmdTeleport;
 struct FT4GamePacketCS_CmdLeave;
@@ -61,7 +62,8 @@ struct FT4GamePacketCS_CmdPCEnter;
 struct FT4GamePacketCS_CmdChangePlayer;
 struct FT4GamePacketCS_CmdWorldTimeSync;
 struct FT4GamePacketCS_CmdWorldTravel;
-struct FT4GamePacketCS_CmdPlayContent;
+struct FT4GamePacketCS_CmdContentCompleted;
+struct FT4GamePacketCS_CmdContentStart;
 struct FT4GamePacketCS_SkillTarget;
 struct FT4GamePacketCS_SkillCancel;
 struct FT4GamePacketCS_SkillCasting;
@@ -126,6 +128,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_MissionCompleted_Implementation(FT4GamePacketSC_MissionCompleted const& InPacket); \
 	virtual void SC_RecvPacket_MissionUpdate_Implementation(FT4GamePacketSC_MissionUpdate const& InPacket); \
 	virtual void SC_RecvPacket_MissionStart_Implementation(FT4GamePacketSC_MissionStart const& InPacket); \
+	virtual void SC_RecvPacket_StartToPlay_Implementation(FT4GamePacketSC_StartToPlay const& InPacket); \
 	virtual bool CS_RecvPacket_CmdBookmark_Validate(FT4GamePacketCS_CmdBookmark const& ); \
 	virtual void CS_RecvPacket_CmdBookmark_Implementation(FT4GamePacketCS_CmdBookmark const& InPacket); \
 	virtual bool CS_RecvPacket_CmdTeleport_Validate(FT4GamePacketCS_CmdTeleport const& ); \
@@ -146,8 +149,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_CmdWorldTimeSync_Implementation(FT4GamePacketCS_CmdWorldTimeSync const& InPacket); \
 	virtual bool CS_RecvPacket_CmdWorldTravel_Validate(FT4GamePacketCS_CmdWorldTravel const& ); \
 	virtual void CS_RecvPacket_CmdWorldTravel_Implementation(FT4GamePacketCS_CmdWorldTravel const& InPacket); \
-	virtual bool CS_RecvPacket_CmdPlayContent_Validate(FT4GamePacketCS_CmdPlayContent const& ); \
-	virtual void CS_RecvPacket_CmdPlayContent_Implementation(FT4GamePacketCS_CmdPlayContent const& InPacket); \
+	virtual bool CS_RecvPacket_CmdContentCompleted_Validate(FT4GamePacketCS_CmdContentCompleted const& ); \
+	virtual void CS_RecvPacket_CmdContentCompleted_Implementation(FT4GamePacketCS_CmdContentCompleted const& InPacket); \
+	virtual bool CS_RecvPacket_CmdContentStart_Validate(FT4GamePacketCS_CmdContentStart const& ); \
+	virtual void CS_RecvPacket_CmdContentStart_Implementation(FT4GamePacketCS_CmdContentStart const& InPacket); \
 	virtual bool CS_RecvPacket_SkillTarget_Validate(FT4GamePacketCS_SkillTarget const& ); \
 	virtual void CS_RecvPacket_SkillTarget_Implementation(FT4GamePacketCS_SkillTarget const& InPacket); \
 	virtual bool CS_RecvPacket_SkillCancel_Validate(FT4GamePacketCS_SkillCancel const& ); \
@@ -220,6 +225,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionCompleted); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionUpdate); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionStart); \
+	DECLARE_FUNCTION(execSC_RecvPacket_StartToPlay); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdBookmark); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdTeleport); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdLeave); \
@@ -230,7 +236,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdChangePlayer); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTimeSync); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTravel); \
-	DECLARE_FUNCTION(execCS_RecvPacket_CmdPlayContent); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdContentCompleted); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdContentStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillTarget); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCancel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCasting); \
@@ -291,6 +298,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_MissionCompleted_Implementation(FT4GamePacketSC_MissionCompleted const& InPacket); \
 	virtual void SC_RecvPacket_MissionUpdate_Implementation(FT4GamePacketSC_MissionUpdate const& InPacket); \
 	virtual void SC_RecvPacket_MissionStart_Implementation(FT4GamePacketSC_MissionStart const& InPacket); \
+	virtual void SC_RecvPacket_StartToPlay_Implementation(FT4GamePacketSC_StartToPlay const& InPacket); \
 	virtual bool CS_RecvPacket_CmdBookmark_Validate(FT4GamePacketCS_CmdBookmark const& ); \
 	virtual void CS_RecvPacket_CmdBookmark_Implementation(FT4GamePacketCS_CmdBookmark const& InPacket); \
 	virtual bool CS_RecvPacket_CmdTeleport_Validate(FT4GamePacketCS_CmdTeleport const& ); \
@@ -311,8 +319,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_CmdWorldTimeSync_Implementation(FT4GamePacketCS_CmdWorldTimeSync const& InPacket); \
 	virtual bool CS_RecvPacket_CmdWorldTravel_Validate(FT4GamePacketCS_CmdWorldTravel const& ); \
 	virtual void CS_RecvPacket_CmdWorldTravel_Implementation(FT4GamePacketCS_CmdWorldTravel const& InPacket); \
-	virtual bool CS_RecvPacket_CmdPlayContent_Validate(FT4GamePacketCS_CmdPlayContent const& ); \
-	virtual void CS_RecvPacket_CmdPlayContent_Implementation(FT4GamePacketCS_CmdPlayContent const& InPacket); \
+	virtual bool CS_RecvPacket_CmdContentCompleted_Validate(FT4GamePacketCS_CmdContentCompleted const& ); \
+	virtual void CS_RecvPacket_CmdContentCompleted_Implementation(FT4GamePacketCS_CmdContentCompleted const& InPacket); \
+	virtual bool CS_RecvPacket_CmdContentStart_Validate(FT4GamePacketCS_CmdContentStart const& ); \
+	virtual void CS_RecvPacket_CmdContentStart_Implementation(FT4GamePacketCS_CmdContentStart const& InPacket); \
 	virtual bool CS_RecvPacket_SkillTarget_Validate(FT4GamePacketCS_SkillTarget const& ); \
 	virtual void CS_RecvPacket_SkillTarget_Implementation(FT4GamePacketCS_SkillTarget const& InPacket); \
 	virtual bool CS_RecvPacket_SkillCancel_Validate(FT4GamePacketCS_SkillCancel const& ); \
@@ -385,6 +395,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionCompleted); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionUpdate); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MissionStart); \
+	DECLARE_FUNCTION(execSC_RecvPacket_StartToPlay); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdBookmark); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdTeleport); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdLeave); \
@@ -395,7 +406,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdChangePlayer); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTimeSync); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTravel); \
-	DECLARE_FUNCTION(execCS_RecvPacket_CmdPlayContent); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdContentCompleted); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdContentStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillTarget); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCancel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCasting); \
@@ -425,6 +437,14 @@ struct FT4GamePacketCS_ReadyToPlay;
 	{ \
 		FT4GamePacketCS_CmdChangePlayer InPacket; \
 	}; \
+	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentCompleted_Parms \
+	{ \
+		FT4GamePacketCS_CmdContentCompleted InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentStart_Parms \
+	{ \
+		FT4GamePacketCS_CmdContentStart InPacket; \
+	}; \
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdItemEnter_Parms \
 	{ \
 		FT4GamePacketCS_CmdItemEnter InPacket; \
@@ -440,10 +460,6 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdPCEnter_Parms \
 	{ \
 		FT4GamePacketCS_CmdPCEnter InPacket; \
-	}; \
-	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdPlayContent_Parms \
-	{ \
-		FT4GamePacketCS_CmdPlayContent InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdRespawn_Parms \
 	{ \
@@ -664,6 +680,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_Stance_Parms \
 	{ \
 		FT4GamePacketSC_Stance InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_StartToPlay_Parms \
+	{ \
+		FT4GamePacketSC_StartToPlay InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_Teleport_Parms \
 	{ \

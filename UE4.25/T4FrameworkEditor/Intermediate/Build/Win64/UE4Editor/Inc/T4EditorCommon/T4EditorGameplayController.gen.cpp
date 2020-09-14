@@ -106,10 +106,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #60\n */" },
 		{ "IncludePath", "Helper/T4EditorGameplayController.h" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorGameplayController.h" },
-		{ "ToolTip", "#60" },
 	};
 #endif
 #if WITH_METADATA
@@ -285,7 +283,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorGameplayController, 4002396850);
+	IMPLEMENT_CLASS(UT4EditorGameplayController, 3135542779);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorGameplayController>()
 	{
 		return UT4EditorGameplayController::StaticClass();

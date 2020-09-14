@@ -50,9 +50,12 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackDatas() {}
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4DecalActionData();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4TrailActionData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4TrailTestSettings();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ETrailWidthMode();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ParticleActionData();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4MeshActionData();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimationActionData();
@@ -2626,6 +2629,339 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4DecalActionData
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4DecalActionData_Hash() { return 1221707361U; }
+class UScriptStruct* FT4TrailActionData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4TrailActionData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4TrailActionData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4TrailActionData"), sizeof(FT4TrailActionData), Get_Z_Construct_UScriptStruct_FT4TrailActionData_Hash());
+	}
+	return Singleton;
+}
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4TrailActionData>()
+{
+	return FT4TrailActionData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4TrailActionData(FT4TrailActionData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4TrailActionData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TrailActionData
+{
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4TrailActionData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4TrailActionData")),new UScriptStruct::TCppStructOps<FT4TrailActionData>);
+	}
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4TrailActionData;
+	struct Z_Construct_UScriptStruct_FT4TrailActionData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestSettings_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TestSettings;
+#endif // WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PlayRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PSTemplate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_PSTemplate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TrailWidth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TrailWidth;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TrailWidthMode_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_TrailWidthMode;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SecondActionPoint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_SecondActionPoint;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FirstActionPoint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_FirstActionPoint;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bParentInheritPoint_MetaData[];
+#endif
+		static void NewProp_bParentInheritPoint_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bParentInheritPoint;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachParent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_AttachParent;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_AttachParent_Underlying;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_EDITORONLY_DATA
+#endif // WITH_EDITORONLY_DATA
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #166\n" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "ToolTip", "#166" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TrailActionData>();
+	}
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TestSettings_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TestSettings = { "TestSettings", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, TestSettings), Z_Construct_UScriptStruct_FT4TrailTestSettings, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TestSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TestSettings_MetaData)) };
+#endif // WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PlayRate_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ClampMin", "0.1" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "UIMax", "5.0" },
+		{ "UIMin", "0.1" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PlayRate = { "PlayRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, PlayRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PlayRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PlayRate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PSTemplate_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PSTemplate = { "PSTemplate", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, PSTemplate), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PSTemplate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PSTemplate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidth_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ClampMin", "0.1" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "UIMax", "5.0" },
+		{ "UIMin", "0.1" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidth = { "TrailWidth", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, TrailWidth), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidth_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidth_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidthMode_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidthMode = { "TrailWidthMode", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, TrailWidthMode), Z_Construct_UEnum_Engine_ETrailWidthMode, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidthMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidthMode_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_SecondActionPoint_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_SecondActionPoint = { "SecondActionPoint", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, SecondActionPoint), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_SecondActionPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_SecondActionPoint_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_FirstActionPoint_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "Comment", "// #76 : Parent ActionPoint \xea\xb0\x80 \xec\x97\x86\xeb\x8b\xa4\xeb\xa9\xb4 \xeb\xb3\xb8\xeb\x9e\x98 \xec\x84\xb8\xed\x8c\x85\xec\x9d\x84 \xeb\x94\xb0\xeb\xa5\xb4\xeb\x8f\x84\xeb\xa1\x9d...\n" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "ToolTip", "#76 : Parent ActionPoint \xea\xb0\x80 \xec\x97\x86\xeb\x8b\xa4\xeb\xa9\xb4 \xeb\xb3\xb8\xeb\x9e\x98 \xec\x84\xb8\xed\x8c\x85\xec\x9d\x84 \xeb\x94\xb0\xeb\xa5\xb4\xeb\x8f\x84\xeb\xa1\x9d..." },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_FirstActionPoint = { "FirstActionPoint", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, FirstActionPoint), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_FirstActionPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_FirstActionPoint_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint_SetBit(void* Obj)
+	{
+		((FT4TrailActionData*)Obj)->bParentInheritPoint = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint = { "bParentInheritPoint", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4TrailActionData), &Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "Comment", "// #39 : FT4ActionDetails::CustomizeTrailActionDetails\n" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "ToolTip", "#39 : FT4ActionDetails::CustomizeTrailActionDetails" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent = { "AttachParent", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4TrailActionData, AttachParent), Z_Construct_UEnum_T4Asset_ET4AttachParent, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4TrailActionData_Statics::PropPointers[] = {
+#if WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TestSettings,
+#endif // WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PlayRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_PSTemplate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidth,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_TrailWidthMode,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_SecondActionPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_FirstActionPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_bParentInheritPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailActionData_Statics::NewProp_AttachParent_Underlying,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4TrailActionData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
+		Z_Construct_UScriptStruct_FT4ActionDataBase,
+		&NewStructOps,
+		"T4TrailActionData",
+		sizeof(FT4TrailActionData),
+		alignof(FT4TrailActionData),
+		Z_Construct_UScriptStruct_FT4TrailActionData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailActionData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4TrailActionData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4TrailActionData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4TrailActionData"), sizeof(FT4TrailActionData), Get_Z_Construct_UScriptStruct_FT4TrailActionData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4TrailActionData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4TrailActionData_Hash() { return 859948733U; }
+class UScriptStruct* FT4TrailTestSettings::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4TrailTestSettings_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4TrailTestSettings, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4TrailTestSettings"), sizeof(FT4TrailTestSettings), Get_Z_Construct_UScriptStruct_FT4TrailTestSettings_Hash());
+	}
+	return Singleton;
+}
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4TrailTestSettings>()
+{
+	return FT4TrailTestSettings::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4TrailTestSettings(FT4TrailTestSettings::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4TrailTestSettings"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4TrailTestSettings
+{
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4TrailTestSettings()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4TrailTestSettings")),new UScriptStruct::TCppStructOps<FT4TrailTestSettings>);
+	}
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4TrailTestSettings;
+	struct Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bRenderTessellation_MetaData[];
+#endif
+		static void NewProp_bRenderTessellation_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bRenderTessellation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bRenderTangents_MetaData[];
+#endif
+		static void NewProp_bRenderTangents_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bRenderTangents;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bRenderSpawnPoints_MetaData[];
+#endif
+		static void NewProp_bRenderSpawnPoints_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bRenderSpawnPoints;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#endif // WITH_EDITORONLY_DATA
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TrailTestSettings>();
+	}
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation_SetBit(void* Obj)
+	{
+		((FT4TrailTestSettings*)Obj)->bRenderTessellation = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation = { "bRenderTessellation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4TrailTestSettings), &Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents_SetBit(void* Obj)
+	{
+		((FT4TrailTestSettings*)Obj)->bRenderTangents = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents = { "bRenderTangents", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4TrailTestSettings), &Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints_SetBit(void* Obj)
+	{
+		((FT4TrailTestSettings*)Obj)->bRenderSpawnPoints = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints = { "bRenderSpawnPoints", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4TrailTestSettings), &Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTessellation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderTangents,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::NewProp_bRenderSpawnPoints,
+	};
+#endif // WITH_EDITORONLY_DATA
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
+		nullptr,
+		&NewStructOps,
+		"T4TrailTestSettings",
+		sizeof(FT4TrailTestSettings),
+		alignof(FT4TrailTestSettings),
+		IF_WITH_EDITORONLY_DATA(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::PropPointers, nullptr),
+		IF_WITH_EDITORONLY_DATA(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::PropPointers), 0),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4TrailTestSettings()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4TrailTestSettings_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4TrailTestSettings"), sizeof(FT4TrailTestSettings), Get_Z_Construct_UScriptStruct_FT4TrailTestSettings_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4TrailTestSettings_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4TrailTestSettings_Hash() { return 3576707421U; }
 class UScriptStruct* FT4ParticleActionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

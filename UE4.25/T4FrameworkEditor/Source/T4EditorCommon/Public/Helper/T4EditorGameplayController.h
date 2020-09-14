@@ -10,6 +10,7 @@
 /**
   * #60
  */
+class UT4EntityAsset;
 UCLASS()
 class T4EDITORCOMMON_API UT4EditorGameplayController : public UObject, public IT4EditorGameplayHandler
 {
@@ -56,7 +57,12 @@ public:
 		return OnEditorGameplayControllerChanged;
 	}
 
-	class IT4EditorGameData* GetEditorGameData();
+	UT4EntityAsset* GetNPCEntityAsset(); // #164
+	UT4EntityAsset* GetWeaponEntityAsset(); // #164
+	UT4EntityAsset* GetCostumeEntityAsset(); // #164
+
+	bool LoadSkillDataFromGameDB(); // #164
+	bool LoadEffectDataFromGameDB(); // #164
 
 public:
 	// #T4_ADD_EDITOR_PLAY_TAG

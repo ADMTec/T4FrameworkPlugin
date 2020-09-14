@@ -27,6 +27,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ProjectileActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4AudioActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4DecalActionData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4TrailActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ParticleActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4MeshActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4AnimationActionData();
@@ -405,6 +406,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_DecalActions;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DecalActions_Inner;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TrailActions_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_TrailActions;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TrailActions_Inner;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParticleActions_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ParticleActions;
@@ -552,11 +558,21 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #166\n" },
 		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
+		{ "ToolTip", "#166" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions = { "DecalActions", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, DecalActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_Inner = { "DecalActions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4DecalActionData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions = { "TrailActions", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, TrailActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions_Inner = { "TrailActions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4TrailActionData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ParticleActions_MetaData[] = {
 		{ "Category", "Common" },
@@ -646,6 +662,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_AudioActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_DecalActions_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_TrailActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ParticleActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_ParticleActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_MeshActions,
@@ -693,7 +711,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 1934591812U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 1322320871U; }
 class UScriptStruct* FT4ActionFolderInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -29,9 +29,9 @@
   * #118
  */
 class FStructOnScope;
-struct T4GAMEDATA_API FT4DBRowBase
+struct T4GAMEDATA_API FT4GameDataBase
 {
-	FT4DBRowBase(const FName InRowName)
+	FT4GameDataBase(const FName InRowName)
 		: RowName(InRowName)
 #if WITH_EDITOR
 		, bDirtyed(false)
@@ -39,7 +39,7 @@ struct T4GAMEDATA_API FT4DBRowBase
 #endif
 	{
 	}
-	virtual ~FT4DBRowBase() {}
+	virtual ~FT4GameDataBase() {}
 
 	virtual ET4GameDBType GetType() const = 0; // #48
 	virtual const FT4GameUID GetUID() const = 0; // #150
@@ -110,8 +110,8 @@ public:
 	virtual bool Contains(const FT4GameDBKey& InGameDBKey) const = 0;
 
 	virtual const FT4GameDBKey GetDBKeyByUID(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
-	virtual const FT4DBRowBase* GetDBRowBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
-	virtual const FT4DBRowBase* GetDBRowBase(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameDBKey& InGameDBKey) const = 0;
 
 	virtual const FT4ContentTableRow* GetContentTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4WorldTableRow* GetWorldTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
@@ -129,28 +129,32 @@ public:
 	virtual const FT4RewardTableRow* GetRewardTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 #endif
 
-	virtual bool GetDBKeyRowNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyRowNames) const = 0;
+	virtual bool GetGameDBKeyNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyNames) const = 0;
 
 #if WITH_EDITOR
-	// #118
-	virtual bool Save(ET4GameDBType InGameDBType, FString& OutErrorMessage) = 0;
+	virtual FName GetGameDBTypeName(ET4GameDBType InGameDBType) const = 0; // #164
 
+	virtual bool GetGameDBKeyNamesInFolder(ET4GameDBType InGameDBType, FName InFolderName, TArray<FName>& OutDBKeyNames) = 0; // #164
+
+	// #118
 	virtual UDataTable* GetDataTable(ET4GameDBType InGameDBType) const = 0;
 
-	virtual const TArray<FT4DBRowBase*>& GetGameDBRows(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
-	virtual FT4DBRowBase* GetGameDBRow(const FT4GameDBKey& InGameDBKey) = 0;
-	virtual FT4WeaponTableRow* GetWeaponDBRow(const FT4GameDBKey& InGameDBKey) = 0; // #154 : StanceSkillSet Add 를 위한 처리. const 외에는 인터페이스가 없다.
+	virtual const TArray<FT4GameDataBase*>& GetGameDataBases(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
+	virtual FT4GameDataBase* GetGameDataBase(const FT4GameDBKey& InGameDBKey) = 0;
+	virtual FT4WeaponTableRow* GetWeaponTableRow(const FT4GameDBKey& InGameDBKey) = 0; // #154 : StanceSkillSet Add 를 위한 처리. const 외에는 인터페이스가 없다.
 
-	virtual bool DataTableAddFolder(ET4GameDBType InGameDBType, const FName InNewFolderName, const FName InRefRowName) = 0;
-	virtual FT4TableRowBase* DataTableAddRow(ET4GameDBType InGameDBType, const FName InNewRowName, const FName InRefRowName) = 0;
-	virtual void DataTableRemoveRow(ET4GameDBType InGameDBType, const FName InRowName) = 0;
-	virtual void DataTableRenameRow(ET4GameDBType InGameDBType, const FName InOldRowName, const FName InNewRowName) = 0;
-	virtual FT4TableRowBase* DataTableDuplicateRow(ET4GameDBType InGameDBType, const FName InSourceRowName, const FName InNewRowName) = 0;
-	virtual void DataTableMoveRow(ET4GameDBType InGameDBType, const FName InTargetRowName, const FName InSourceRowName) = 0;
-	virtual void DataTableOverwriteRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
+	virtual bool SourceDataSave(ET4GameDBType InGameDBType, FString& OutErrorMessage) = 0;
 
-	virtual void DataTableSetTreeExpansion(ET4GameDBType InGameDBType, const FName InRowName, bool bInExpand) = 0; // #122
-	virtual bool DataTableIsTreeExpanded(ET4GameDBType InGameDBType, const FName InRowName) const = 0; // #122
+	virtual bool SourceDataAddFolder(ET4GameDBType InGameDBType, const FName InNewFolderName, const FName InRefRowName) = 0;
+	virtual FT4TableRowBase* SourceDataAddTableRow(ET4GameDBType InGameDBType, const FName InNewRowName, const FName InRefRowName) = 0;
+	virtual void SourceDataRemoveTableRow(ET4GameDBType InGameDBType, const FName InRowName) = 0;
+	virtual void SourceDataRenameTableRow(ET4GameDBType InGameDBType, const FName InOldRowName, const FName InNewRowName) = 0;
+	virtual FT4TableRowBase* SourceDataDuplicateTableRow(ET4GameDBType InGameDBType, const FName InSourceRowName, const FName InNewRowName) = 0;
+	virtual void SourceDataMoveTableRow(ET4GameDBType InGameDBType, const FName InTargetRowName, const FName InSourceRowName) = 0;
+	virtual void SourceDataRefreshTableRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
+
+	virtual void EditorSetTreeExpansion(ET4GameDBType InGameDBType, const FName InRowName, bool bInExpand) = 0; // #122
+	virtual bool EditorIsTreeExpanded(ET4GameDBType InGameDBType, const FName InRowName) const = 0; // #122
 	// ~#118
 #endif
 };

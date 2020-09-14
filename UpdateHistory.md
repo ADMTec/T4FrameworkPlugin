@@ -2,6 +2,12 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- **v0.9.46** : 2020.09.11
+  - #158 [버그수정] Content Editor, CombatTestWorld 의 GridMap 로드 후 레벨 이동 시 발생하는 크래시 수정
+	- UE4.25/Content 폴더 에셋 업데이트
+  - #158 [버그수정] Content Editor, PIE Standalone 실행 시 Level Save As 창이 뜨며 실행이 안되던 문제 수정
+  - #158 [버그수정] Content Editor 오픈 시 간헐적으로 레벨(Level) 에셋이 Modify 가 되던 문제 수정
+  - #158 [버그수정] Entity Editor, Map Entity 오픈 시 발생하던 크래시 수정
 - **v0.9.45** : 2020.09.10
   - #164 [기능추가] GameDB 내 UI Text 관리를 위한 StringTable 연동 처리 추가
 	- UE4.25/Content 폴더 에셋 업데이트 및 소스 재빌드 필요

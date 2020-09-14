@@ -107,9 +107,18 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameAttackType>();
 enum class ET4GameChainCallFunction : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameChainCallFunction>();
 
+#define FOREACH_ENUM_ET4GAMEQUESTRESULT(op) \
+	op(ET4GameQuestResult::Completed_By_QuestKey) \
+	op(ET4GameQuestResult::Completed_By_ContentDBKey) \
+	op(ET4GameQuestResult::Completed_All) \
+	op(ET4GameQuestResult::None) 
+
+enum class ET4GameQuestResult : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestResult>();
+
 #define FOREACH_ENUM_ET4GAMEQUESTRULE(op) \
-	op(ET4GameQuestRule::AllSpawnObjects) \
-	op(ET4GameQuestRule::TargetSpawnObject) \
+	op(ET4GameQuestRule::QuestSpawn_All) \
+	op(ET4GameQuestRule::QuestSpawn_Target) \
 	op(ET4GameQuestRule::None) 
 
 enum class ET4GameQuestRule : uint8;
@@ -123,7 +132,9 @@ enum class ET4GameQuestType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestType>();
 
 #define FOREACH_ENUM_ET4GAMEQUESTTARGET(op) \
+	op(ET4GameQuestTarget::World) \
 	op(ET4GameQuestTarget::Personal) \
+	op(ET4GameQuestTarget::PlayerAll) \
 	op(ET4GameQuestTarget::None) 
 
 enum class ET4GameQuestTarget : uint8;

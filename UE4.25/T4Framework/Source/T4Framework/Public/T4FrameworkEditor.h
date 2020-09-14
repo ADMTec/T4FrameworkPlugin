@@ -65,7 +65,7 @@ enum class ET4EditorFindTarget : uint8 // #117 : 공객 대상을 찾을 경우�
 
 class UT4ActionPackAsset;
 
-
+// #158 : 아래 Struct 들은 T4EditorGameplayController 를 통해 UI 로 제공되어 USTRUCT 를 사용하는 것...
 USTRUCT()
 struct FT4EditorNPCDataInfo // #135
 {
@@ -241,31 +241,10 @@ public:
 
 #if WITH_EDITOR
 
-enum ET4EditorDataType
-{
-	EdData_PC,
-	EdData_NPC,
-	EdData_Weapon,
-	EdData_Costume,
-	EdData_SkillSet, // #120
-	EdData_Skill,
-	EdData_Effect,
-};
-
-class UT4WeaponEntityAsset;
-struct FT4GameEditorEquipData
-{
-	FT4GameEditorEquipData()
-		: WeaponEntityAsset(nullptr)
-		, OverrideEquipPoint(NAME_None)
-	{
-	}
-	const UT4WeaponEntityAsset* WeaponEntityAsset;
-	FName OverrideEquipPoint;
-};
-
 struct FWorldContext;
 class FViewport;
+class SWidget; // #164
+class ULocalPlayer; // #164
 class IT4EditorViewportClient
 {
 public:
@@ -274,7 +253,7 @@ public:
 	virtual FViewport* GetViewport() const = 0; // #68
 	virtual FSceneView* GetSceneView() = 0; // #142
 
-	virtual bool IsPreviewMode() const = 0;
+	virtual bool IsThumbnailMode() const = 0;
 
 	virtual void SetCustomCameraControl(bool bEnable) = 0; // #79
 
@@ -290,6 +269,9 @@ public:
 	virtual void SetMouseCursorType(EMouseCursor::Type InMouseCursorType) = 0;
 
 	virtual void SetInitialLocationAndRotation(const FVector& InLocation, const FRotator& InRotation) = 0; // #86
+
+	virtual void AddWidgetToScreen(ULocalPlayer* InPlayer, TSharedRef<SWidget> InViewportContent, int32 InZOrder) = 0; // #164 : Preview 에서 UMG 지원을 위한 처리
+	virtual void RemoveWidgetFromScreen(ULocalPlayer* InPlayer, TSharedRef<SWidget> InViewportContent) = 0; // #164 : GameViewportClient
 
 	virtual void ShowDragBox(bool bInShow) = 0; // #142
 	virtual bool GetDragBoxFrustum(bool bInUseBoxFrustum, FConvexVolume& OutFrustum) = 0; // #142
@@ -316,26 +298,54 @@ public:
 	virtual bool IsMouseRightButtonClicked() const = 0; // #142 : 매프레임 Reset 됨
 };
 
-// #114 : 에디터에서 N종의 게임 컨텐츠 데이터에서 정보를 얻기 위한 인터페이스
-//        컨텐츠 쪽에서 구현해주어야 에디터에서 사용할 수 있음 (T4Gameplay 을 사용하지 않을 경우를 위함)
-class UT4EntityAsset;
-class UT4ActionPackAsset;
+// #114 : 에디터에서 N종의 게임 로직을 사용하기 위한 인터페이스
+//        (T4Gameplay 을 사용하지 않을 경우를 위함)
 
-class T4FRAMEWORK_API IT4EditorGameData // #60
+struct FT4GameDBKey; //#164 : FT4GameDBKey 는 상위 모듈인 T4GameData, 전방 선언해준다. (Type Cast 가 툴작업에 어려움이 있었음)
+
+class UT4ContentSpawnAsset;
+class T4FRAMEWORK_API IT4EditorGameStatics
 {
 public:
-	virtual ~IT4EditorGameData() {}
+	virtual ~IT4EditorGameStatics() {}
 
-	virtual FName GetDataTypeName(ET4EditorDataType InEditorDataType) = 0; // #118
-	virtual void GetDataNamesByDataType(ET4EditorDataType InEditorDataType, TArray<FName>& OutDBKeyNames) = 0;
+	virtual bool DoContentStart(const FName& InContentDBKeyName) = 0; // #164
 
-	virtual UT4EntityAsset* GetEntityAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0;
-	virtual bool GetWeaponEntityAssetInGameData(ET4EditorDataType InEditorDataType,  const FName& InDataName, TArray<FT4GameEditorEquipData>& OutEquipData) = 0; // #120, #158 : index 0 : Main, 0 < : Subs
-	virtual const UT4ActionPackAsset* GetActionPackAssetInGameData(ET4EditorDataType InEditorDataType, const FName& InDataName) = 0; // #120
+	virtual bool DoContentStopAll() = 0; // #164
+	virtual bool DoContentStop(const FName& InContentDBKeyName) = 0; // #164 : QuestTarget World
+	virtual bool DoContentCompleted(const FGuid& InQuestKey, bool bInPlayerAll) = 0; // #164
+	virtual bool DoContentCompleted(const FName InContentDBKeyName, bool bInPlayerAll) = 0; // #164
 
-	virtual bool GetNPCDataInfo(const FName& InDataName, FT4EditorNPCDataInfo& OutData) = 0; // #135
-	virtual bool GetSkillDataInfo(const FName& InDataName, FT4EditorSkillDataInfo& OutData) = 0;
-	virtual bool GetEffectDataInfo(const FName& InDataName, FT4EditorEffectDataInfo& OutData) = 0;
+	virtual bool DoWorldTravel(const FName& InWorldDBKeyName) = 0; // #144
+
+	virtual bool DoSpawn(
+		const FT4GameDBKey* InGameDBKey, // #126, #164 : FT4GameDBKey struct 전방선언
+		const FVector& InLocation, 
+		const FRotator& InRotation, 
+		const FT4ObjectID& InObjectID
+	) = 0; // #60
+
+	virtual bool DoSpawn(UT4ContentSpawnAsset* InSpawnAsset) = 0; // #126
+	virtual bool DoSpawnBy(UT4ContentSpawnAsset* InSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InObjectID) = 0; // #126
+
+	virtual bool DoDespawn(const FT4ObjectID& InObjectID) = 0; // #114
+	virtual bool DoDespawnAll(bool bClearPlayerActor) = 0; // #68
+
+	// #114, #134 : 툴용도의 Server Send => Client Recv 대체 처리. 즉, 아래 코드에서 C/S 모드를 처리하고 있음에 유의!!
+	virtual bool DoSpawnEditor(
+		const FT4ObjectID& InReservedObjectID, // #134 : GetPlayerController()->GetObjectID() 로 비교해 Player 를 판단한다.
+		const FT4EntityKey& InEntityKey,
+		const FVector& InLocation,
+		const FRotator& InRotation,
+		bool bInClientOnly
+	) = 0;
+	virtual bool DoDespawnEditor(const FT4ObjectID& InObjectID, bool bInClientOnly) = 0;
+
+	virtual bool DoChangeAnimSet(FName InAnimSetName) = 0;// #73, #114
+	virtual bool DoChangeStance(FName InStanceName) = 0; // #106, #114
+
+	virtual bool DoEquipWeaponItem(const FName InWeaponDBKeyName, bool bInUnequip) = 0; // #60 : to player
+	virtual bool DoExchangeCostumeItem(const FName InCostumeDBKeyName) = 0; // #60 : to player
 };
 
 // #114 : 에디터에서 N종의 게임 로직을 컨트롤 하기 위해 에디터상에서 구현해야 할 인터페이스
@@ -365,55 +375,6 @@ public:
 	virtual const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const = 0;
 
 	virtual const FSoftObjectPath& GetOverrideActionPackPath() const = 0;
-};
-
-// #114 : 에디터에서 N종의 게임 로직을 사용하기 위한 인터페이스
-//        (T4Gameplay 을 사용하지 않을 경우를 위함)
-class UT4ContentSpawnAsset;
-class T4FRAMEWORK_API IT4EditorGameplayCommand
-{
-public:
-	virtual ~IT4EditorGameplayCommand() {}
-
-	virtual bool DoWorldTravel(const FName& InWorldDataNameID) = 0; // #144
-
-	virtual bool DoSpawn(
-		ET4EditorDataType InGameDBType, // #126
-		const FName InDataNameID, 
-		const FVector& InLocation, 
-		const FRotator& InRotation, 
-		const FT4ObjectID& InReservedObjectID
-	) = 0; // #60 : to player
-
-	virtual bool DoSpawnFromSpawnAsset(
-		UT4ContentSpawnAsset* InSpawnAsset, 
-		const FName& InSpawnObjectID, 
-		const FT4ObjectID& InReservedObjectID
-	) = 0; // #126
-	virtual bool DoSpawnFromSpawnAsset(UT4ContentSpawnAsset* InSpawnAsset) = 0; // #126
-
-	virtual bool DoDespawn(const FT4ObjectID& InObjectID) = 0; // #114
-	virtual bool DoDespawnAll(bool bClearPlayerActor) = 0; // #68
-
-	// #114, #134 : 툴용도의 Server Send => Client Recv 대체 처리. 즉, 아래 코드에서 C/S 모드를 처리하고 있음에 유의!!
-	virtual bool DoSpawnByEntityKey(
-		const FT4ObjectID& InReservedObjectID, // #134 : GetPlayerController()->GetObjectID() 로 비교해 Player 를 판단한다.
-		const FT4EntityKey& InEntityKey,
-		const FVector& InLocation,
-		const FRotator& InRotation,
-		bool bInClientOnly
-	) = 0;
-	virtual bool DoDespawnWithEditorOnly(const FT4ObjectID& InObjectID, bool bInClientOnly) = 0;
-
-	virtual bool DoChangeAnimSet(FName InAnimSetName) = 0;// #73, #114
-	virtual bool DoChangeStance(FName InStanceName) = 0; // #106, #114
-
-	virtual bool DoEquipWeaponItem(const FName InWeaponDBKeyName, bool bInUnequip) = 0; // #60 : to player
-	virtual bool DoExchangeCostumeItem(const FName InCostumeDBKeyName) = 0; // #60 : to player
-
-#if WITH_EDITOR
-	virtual bool GetDBKeyNamesInFolder(ET4EditorDataType InGameDBType, const FName InFolderName, TArray<FName>& OutDBKeyNames) = 0; // #158
-#endif
 };
 
 // #135, #140

@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ItemStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerStatDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4CostumeDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectSetDBKey();
@@ -623,6 +624,74 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerStatDBKey
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerStatDBKey_Hash() { return 3543024859U; }
+class UScriptStruct* FT4CostumeDBKey::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4CostumeDBKey_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4CostumeDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4CostumeDBKey"), sizeof(FT4CostumeDBKey), Get_Z_Construct_UScriptStruct_FT4CostumeDBKey_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4CostumeDBKey>()
+{
+	return FT4CostumeDBKey::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4CostumeDBKey(FT4CostumeDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4CostumeDBKey"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4CostumeDBKey
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4CostumeDBKey()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4CostumeDBKey")),new UScriptStruct::TCppStructOps<FT4CostumeDBKey>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4CostumeDBKey;
+	struct Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4CostumeDBKey>();
+	}
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		Z_Construct_UScriptStruct_FT4GameDBKey,
+		&NewStructOps,
+		"T4CostumeDBKey",
+		sizeof(FT4CostumeDBKey),
+		alignof(FT4CostumeDBKey),
+		nullptr,
+		0,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4CostumeDBKey()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4CostumeDBKey_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4CostumeDBKey"), sizeof(FT4CostumeDBKey), Get_Z_Construct_UScriptStruct_FT4CostumeDBKey_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4CostumeDBKey_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4CostumeDBKey_Hash() { return 1324817925U; }
 class UScriptStruct* FT4WeaponDBKey::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

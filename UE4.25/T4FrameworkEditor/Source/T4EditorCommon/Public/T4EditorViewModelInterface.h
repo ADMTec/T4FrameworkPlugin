@@ -39,7 +39,7 @@ public:
 	virtual ET4LayerType GetLayerType() const = 0;
 
 	virtual ET4ViewModelEditMode GetEditMode() const = 0;
-	virtual bool IsPreviewMode() const = 0; // #118
+	virtual bool IsThumbnailMode() const = 0; // #118
 
 	virtual const FString GetAssetPath() = 0; // #79
 
@@ -56,11 +56,12 @@ public:
 	virtual IT4WorldSystem* GetWorldSystem() const = 0; // #93
 
 	virtual bool IsUseManipulator() const = 0; // #162
+	virtual bool IsManipulatorTacking() const = 0; // #158
 	virtual const FTransform GetManipulatorTransform() const = 0; // #162
 
-	virtual void NotifyManipulatorStartTracking() = 0; // #125
-	virtual void NotifyManipulatorEndTracking() = 0; // #125 : 미반영 복구
-	virtual void NotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) = 0; // #118 : PRS (rot or loc or scale)
+	virtual void OnNotifyManipulatorStartTracking() = 0; // #125
+	virtual void OnNotifyManipulatorEndTracking() = 0; // #125 : 미반영 복구
+	virtual void OnNotifyManipulatorUpdating(ET4EditWidgetUpdateType InUpdateType, const FVector& InPRS) = 0; // #118 : PRS (rot or loc or scale)
 
 	virtual void ChangeWorldEnvironment(FName InTimeTagName) = 0; // #94
 
