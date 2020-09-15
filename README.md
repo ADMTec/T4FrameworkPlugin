@@ -54,7 +54,7 @@
 	  - [#2-11 : Prop Entity 의 Mesh/Animation 설정](https://youtu.be/6uU5MU99UpU)
 	  - [#2-12 : Zone Entity 의 Dynamic Environment 설정](https://youtu.be/7kspOTltztU)
 	  - [#2-13 : Map Entity 의 Level Asset 설정](https://youtu.be/i1Xwh1TjN9E)
-	- [#3 : 액션 에디터 (Action Editor)](https://tech4labs.com/T4Framework_Features_ActionEditor/)
+	- [#3 : 액션 에디터 (Action Editor)](https://youtu.be/Z-DLnRLcHmI)
 	  - #3-1 : 애니메이션 액션 (Animation Action)
 	  - #3-2 : 파티클 액션 (Particle Action)
 	  - #3-3 : 데칼 액션 (Decal Action)
