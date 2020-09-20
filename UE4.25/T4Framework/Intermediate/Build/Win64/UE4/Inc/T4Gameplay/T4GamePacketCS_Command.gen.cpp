@@ -30,11 +30,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketCS_Command() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTimeSync();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTravel();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ContentDBKey();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestResult();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestTarget();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey();
 // End Cross Module References
 class UScriptStruct* FT4GamePacketCS_CmdBookmark::StaticStruct()
 {
@@ -1135,52 +1133,39 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdW
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTravel_Hash() { return 350473948U; }
-class UScriptStruct* FT4GamePacketCS_CmdContentCompleted::StaticStruct()
+class UScriptStruct* FT4GamePacketCS_CmdQuestFinish::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_CmdContentCompleted"), sizeof(FT4GamePacketCS_CmdContentCompleted), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Hash());
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_CmdQuestFinish"), sizeof(FT4GamePacketCS_CmdQuestFinish), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_CmdContentCompleted>()
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_CmdQuestFinish>()
 {
-	return FT4GamePacketCS_CmdContentCompleted::StaticStruct();
+	return FT4GamePacketCS_CmdQuestFinish::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted(FT4GamePacketCS_CmdContentCompleted::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_CmdContentCompleted"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentCompleted
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish(FT4GamePacketCS_CmdQuestFinish::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_CmdQuestFinish"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestFinish
 {
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentCompleted()
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestFinish()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_CmdContentCompleted")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdContentCompleted>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_CmdQuestFinish")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdQuestFinish>);
 	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentCompleted;
-	struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestFinish;
+	struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParamQuestKey_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bFinishAll_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ParamQuestKey;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParamContentDBKey_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ParamContentDBKey;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuestResult_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_QuestResult;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_QuestResult_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuestTarget_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_QuestTarget;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_QuestTarget_Underlying;
+		static void NewProp_bFinishAll_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bFinishAll;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
 #endif
@@ -1189,123 +1174,99 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 		{ "ToolTip", "#164" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdContentCompleted>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdQuestFinish>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamQuestKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamQuestKey = { "ParamQuestKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentCompleted, ParamQuestKey), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamQuestKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamQuestKey_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_SetBit(void* Obj)
+	{
+		((FT4GamePacketCS_CmdQuestFinish*)Obj)->bFinishAll = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll = { "bFinishAll", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketCS_CmdQuestFinish), &Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamContentDBKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamContentDBKey = { "ParamContentDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentCompleted, ParamContentDBKey), Z_Construct_UScriptStruct_FT4ContentDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamContentDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamContentDBKey_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdQuestFinish, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID,
 	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult = { "QuestResult", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentCompleted, QuestResult), Z_Construct_UEnum_T4GameData_ET4GameQuestResult, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget = { "QuestTarget", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentCompleted, QuestTarget), Z_Construct_UEnum_T4GameData_ET4GameQuestTarget, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_SenderID_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentCompleted, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_SenderID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamQuestKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_ParamContentDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestResult_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_QuestTarget_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::NewProp_SenderID,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
 		Z_Construct_UScriptStruct_FT4GamePacketCS_Base,
 		&NewStructOps,
-		"T4GamePacketCS_CmdContentCompleted",
-		sizeof(FT4GamePacketCS_CmdContentCompleted),
-		alignof(FT4GamePacketCS_CmdContentCompleted),
-		Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::PropPointers),
+		"T4GamePacketCS_CmdQuestFinish",
+		sizeof(FT4GamePacketCS_CmdQuestFinish),
+		alignof(FT4GamePacketCS_CmdQuestFinish),
+		Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_CmdContentCompleted"), sizeof(FT4GamePacketCS_CmdContentCompleted), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_CmdQuestFinish"), sizeof(FT4GamePacketCS_CmdQuestFinish), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted_Hash() { return 2708931375U; }
-class UScriptStruct* FT4GamePacketCS_CmdContentStart::StaticStruct()
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash() { return 168422976U; }
+class UScriptStruct* FT4GamePacketCS_CmdQuestStart::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_CmdContentStart"), sizeof(FT4GamePacketCS_CmdContentStart), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Hash());
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketCS_CmdQuestStart"), sizeof(FT4GamePacketCS_CmdQuestStart), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_CmdContentStart>()
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketCS_CmdQuestStart>()
 {
-	return FT4GamePacketCS_CmdContentStart::StaticStruct();
+	return FT4GamePacketCS_CmdQuestStart::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_CmdContentStart(FT4GamePacketCS_CmdContentStart::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_CmdContentStart"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentStart
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketCS_CmdQuestStart(FT4GamePacketCS_CmdQuestStart::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketCS_CmdQuestStart"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestStart
 {
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentStart()
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestStart()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_CmdContentStart")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdContentStart>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketCS_CmdQuestStart")),new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdQuestStart>);
 	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdContentStart;
-	struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQuestStart;
+	struct Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ContentDBKey_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuestDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ContentDBKey;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_QuestDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
 #endif
@@ -1314,63 +1275,63 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdC
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// ET4GamePacketCS::CmdTeleport\n// ET4GamePacketCS::CmdBookmark // #140\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 		{ "ToolTip", "ET4GamePacketCS::CmdTeleport\nET4GamePacketCS::CmdBookmark  #140" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdContentStart>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdQuestStart>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_ContentDBKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_QuestDBKey_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_ContentDBKey = { "ContentDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentStart, ContentDBKey), Z_Construct_UScriptStruct_FT4ContentDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_ContentDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_ContentDBKey_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_QuestDBKey = { "QuestDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdQuestStart, QuestDBKey), Z_Construct_UScriptStruct_FT4QuestDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_QuestDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_QuestDBKey_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_SenderID_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_SenderID_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdContentStart, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_SenderID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_ContentDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::NewProp_SenderID,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdQuestStart, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_SenderID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_QuestDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::NewProp_SenderID,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
 		Z_Construct_UScriptStruct_FT4GamePacketCS_Base,
 		&NewStructOps,
-		"T4GamePacketCS_CmdContentStart",
-		sizeof(FT4GamePacketCS_CmdContentStart),
-		alignof(FT4GamePacketCS_CmdContentStart),
-		Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::PropPointers),
+		"T4GamePacketCS_CmdQuestStart",
+		sizeof(FT4GamePacketCS_CmdQuestStart),
+		alignof(FT4GamePacketCS_CmdQuestStart),
+		Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_CmdContentStart"), sizeof(FT4GamePacketCS_CmdContentStart), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketCS_CmdQuestStart"), sizeof(FT4GamePacketCS_CmdQuestStart), Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart_Hash() { return 1344392881U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart_Hash() { return 766905193U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -29,7 +29,7 @@ public:
 	TArray<FName> WeaponDBKeyNames; // #45
 
 	UPROPERTY(EditAnywhere, config, Category = "HUD PlayContent UID")
-	TArray<uint32> PlayContentUIDs; // #161
+	TArray<uint32> PlayQuestUIDs; // #161
 
 	UPROPERTY(EditAnywhere, config, Category = "HUD WorldTravel UID")
 	TArray<uint32> WorldTravelUIDs; // #161

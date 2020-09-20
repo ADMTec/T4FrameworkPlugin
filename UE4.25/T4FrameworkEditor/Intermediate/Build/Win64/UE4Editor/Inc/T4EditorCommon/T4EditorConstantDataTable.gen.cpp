@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4EditorCommon/Classes/ContentTable/T4EditorConstantDataTable.h"
+#include "T4EditorCommon/Classes/ConstantTable/T4EditorConstantDataTable.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -122,7 +122,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewStructOps()
@@ -133,7 +133,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_ReactionConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #106\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#106" },
 	};
 #endif
@@ -142,7 +142,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_StanceConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #73\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#73" },
 	};
 #endif
@@ -151,7 +151,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_AnimSetConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #74\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#74" },
 	};
 #endif
@@ -160,7 +160,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_PlayTagActionConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #74\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#74" },
 	};
 #endif
@@ -169,7 +169,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_PlayTagAttachmentConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #74\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#74" },
 	};
 #endif
@@ -178,7 +178,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_PlayTagMaterialConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #130\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#130" },
 	};
 #endif
@@ -187,7 +187,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_FullBodySkinConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #71\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#71" },
 	};
 #endif
@@ -196,7 +196,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_CompositePartConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #72\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#72" },
 	};
 #endif
@@ -205,7 +205,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_EquipPointConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #57\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#57" },
 	};
 #endif
@@ -214,7 +214,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_ActionPointConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #107\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#107" },
 	};
 #endif
@@ -223,7 +223,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_WeaponAnimationConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #126\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#126" },
 	};
 #endif
@@ -232,7 +232,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_PropAnimationConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #131\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#131" },
 	};
 #endif
@@ -241,7 +241,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_CharacterParagonSkillAnimationConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #39\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#39" },
 	};
 #endif
@@ -250,7 +250,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_CharacterBasicSkillAnimationConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #39\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#39" },
 	};
 #endif
@@ -259,7 +259,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_CharacterSystemAnimationConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -268,7 +268,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_TimeTagConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
 		{ "Comment", "// #92\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#92" },
 	};
 #endif
@@ -276,7 +276,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_MapZoneConstantDataTable_MetaData[] = {
 		{ "Category", "ConstantTable" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_MapZoneConstantDataTable = { "MapZoneConstantDataTable", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantMasterTableRow, MapZoneConstantDataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_MapZoneConstantDataTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Statics::NewProp_MapZoneConstantDataTable_MetaData)) };
@@ -327,7 +327,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Hash() { return 3698195236U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantMasterTableRow_Hash() { return 3854844619U; }
 class UScriptStruct* FT4EditorConstantIntValueTableRow::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -374,7 +374,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -385,21 +385,21 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantIntValueTableRow, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Description_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantIntValueTableRow, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Value_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantIntValueTableRow, Name), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Statics::NewProp_Name_MetaData)) };
@@ -436,7 +436,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Hash() { return 642322485U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantIntValueTableRow_Hash() { return 2946599954U; }
 class UScriptStruct* FT4EditorConstantFloatValueTableRow::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -483,7 +483,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #90\n" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -494,21 +494,21 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantFloatValueTableRow, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Description_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantFloatValueTableRow, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Value_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantFloatValueTableRow, Name), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Statics::NewProp_Name_MetaData)) };
@@ -545,7 +545,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Hash() { return 53619701U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantFloatValueTableRow_Hash() { return 3846567606U; }
 class UScriptStruct* FT4EditorConstantNameTableRow::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -588,7 +588,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * http://api.unrealengine.com/KOR/Gameplay/DataDriven/\n */" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 		{ "ToolTip", "http://api.unrealengine.com/KOR/Gameplay/DataDriven/" },
 	};
 #endif
@@ -599,14 +599,14 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantNameTableRow, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Description_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "Attribute" },
-		{ "ModuleRelativePath", "Classes/ContentTable/T4EditorConstantDataTable.h" },
+		{ "ModuleRelativePath", "Classes/ConstantTable/T4EditorConstantDataTable.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorConstantNameTableRow, Name), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Statics::NewProp_Name_MetaData)) };
@@ -642,7 +642,7 @@ static struct FScriptStruct_T4EditorCommon_StaticRegisterNativesFT4EditorConstan
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Hash() { return 3156882678U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorConstantNameTableRow_Hash() { return 1369568469U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

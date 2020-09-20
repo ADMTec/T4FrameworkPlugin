@@ -110,7 +110,7 @@ struct FT4NPCTableRow : public FT4TableRowBase
 public:
 	// FT4NPCDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -141,7 +141,7 @@ public:
 	FT4EffectSetDBKey InitializeEffectSetDBKey; // #142 : 피격 효과(Effect)를 처리할 자신의 EffectSet 설정
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UBehaviorTree> BehaviorTreePath;
+	TSoftObjectPtr<UBehaviorTree> BehaviorTreeAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4NPCBehaviorData BehaviorData; // #50
@@ -152,9 +152,23 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FName InitializeSkinName; // #135
 
+	UPROPERTY()
+	TSoftObjectPtr<UBehaviorTree> BehaviorTreePath_DEPRECATED; // #164 : 이후 삭제
+
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		BehaviorTreeChanged,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4NPCTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, RaceName(NAME_None) // #104, #114
 		, InitializeAnimSetName(T4Const_DefaultAnimSetName) // #142
 		, InitializeStanceName(T4Const_DefaultStanceName) // #142

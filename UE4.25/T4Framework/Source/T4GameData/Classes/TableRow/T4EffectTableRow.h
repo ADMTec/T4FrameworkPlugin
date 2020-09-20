@@ -72,7 +72,7 @@ public:
 	// FT4EffectDBRowDetails::CustomizeDetails
 
 	// #T4_ADD_EFFECT_TAG_DATA
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -91,8 +91,17 @@ public:
 	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4EffectTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 	{
 	}
 };

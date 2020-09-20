@@ -59,7 +59,7 @@ private:
 	bool OnExecuteByUID(const FT4GameUID& InGameUID);
 
 #if WITH_EDITOR
-	bool ProcessPlayContent(ET4LayerType InLayerType, FName InContentDBKey); // #146
+	bool ProcessPlayContent(ET4LayerType InLayerType, FName InQuestDBKey); // #146
 	bool ProcessWorldTravel(ET4LayerType InLayerType, FName InWorldDBKey); // #146
 
 	bool ProcessSpawnNPC(

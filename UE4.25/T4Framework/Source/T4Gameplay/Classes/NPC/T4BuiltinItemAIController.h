@@ -24,7 +24,7 @@ class T4GAMEPLAY_API AT4BuiltinItemAIController : public AT4AIControllerBase
 	GENERATED_UCLASS_BODY()
 
 public:
-	void AIUpdate(float InDeltaTime); // #114 : from BTTree
+	void UpdateBTService(float InDeltaTime) override; // #114 : from BTTree
 
 	bool CheckCancelWaitTask();
 
@@ -48,8 +48,8 @@ private:
 	bool CheckAsyncLoading();
 
 private:
-	ET4AIDataLoadState AIDataLoadState; // #50
-	FT4BehaviorTreeAssetLoader* BehaviorTreeAssetLoader;
+	ET4AIDataLoadState AIDataLoadState; // #50 // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
+	FT4BehaviorTreeAssetLoader* BehaviorTreeAssetLoader; // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
 
 	/* Cached BT component */
 	UPROPERTY(transient)

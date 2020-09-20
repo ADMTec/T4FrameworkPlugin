@@ -58,9 +58,8 @@ public:
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
 
-	bool DoContentStart(ET4LayerType InLayerType, const FT4GameDBKey& InContentDBKey); // #146 : 월드 이동과 재스폰까지 처리
+	bool DoMissionStart(ET4LayerType InLayerType, const FT4GameDBKey& InQuestDBKey); // #146 : 월드 이동과 재스폰까지 처리
 	bool DoContentCompleted(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FGuid& InQuestKey); // #164
-	bool DoContentCompleted(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FT4GameDBKey& InContentDBKey); // #164
 #if WITH_EDITOR
 	bool DoContentStopAll(ET4LayerType InLayerType);
 #endif

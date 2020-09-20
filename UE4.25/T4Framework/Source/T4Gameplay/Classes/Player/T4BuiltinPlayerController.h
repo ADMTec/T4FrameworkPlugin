@@ -13,7 +13,7 @@
 #include "Protocol/Client/T4GamePacketSC_Move.h"
 #include "Protocol/Client/T4GamePacketSC_Status.h"
 #include "Protocol/Client/T4GamePacketSC_World.h"
-#include "Protocol/Client/T4GamePacketSC_Mission.h" // #164
+#include "Protocol/Client/T4GamePacketSC_Quest.h" // #164
 #include "Protocol/Client/T4GamePacketSC_Debug.h" // #164
 
 #include "T4Framework/Classes/Player/T4PlayerControllerBase.h"
@@ -97,10 +97,10 @@ private:
 	void CS_RecvPacket_SkillTarget(const FT4GamePacketCS_SkillTarget& InPacket);
 
 	UFUNCTION(Reliable, server, WithValidation)
-	void CS_RecvPacket_CmdContentStart(const FT4GamePacketCS_CmdContentStart& InPacket); // #146
+	void CS_RecvPacket_CmdQuestStart(const FT4GamePacketCS_CmdQuestStart& InPacket); // #146
 
 	UFUNCTION(Reliable, server, WithValidation)
-	void CS_RecvPacket_CmdContentCompleted(const FT4GamePacketCS_CmdContentCompleted& InPacket); // #164
+	void CS_RecvPacket_CmdQuestFinish(const FT4GamePacketCS_CmdQuestFinish& InPacket); // #164
 
 	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_CmdWorldTravel(const FT4GamePacketCS_CmdWorldTravel& InPacket);
@@ -140,13 +140,16 @@ private:
 	void SC_RecvPacket_StartToPlay(const FT4GamePacketSC_StartToPlay& InPacket); // #164
 
 	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_QuestStart(const FT4GamePacketSC_QuestStart& InPacket); // #164
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_QuestFinish(const FT4GamePacketSC_QuestFinish& InPacket); // #164
+	
+	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_MissionStart(const FT4GamePacketSC_MissionStart& InPacket); // #164
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_MissionUpdate(const FT4GamePacketSC_MissionUpdate& InPacket); // #164
-
-	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_MissionCompleted(const FT4GamePacketSC_MissionCompleted& InPacket); // #164
+	void SC_RecvPacket_MissionFinish(const FT4GamePacketSC_MissionFinish& InPacket); // #164
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_DialogueStart(const FT4GamePacketSC_DialogueStart& InPacket); // #163
@@ -155,7 +158,7 @@ private:
 	void SC_RecvPacket_DialogueUpdate(const FT4GamePacketSC_DialogueUpdate& InPacket); // #163
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_DialogueCompleted(const FT4GamePacketSC_DialogueCompleted& InPacket); // #163
+	void SC_RecvPacket_DialogueFinish(const FT4GamePacketSC_DialogueFinish& InPacket); // #163
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_WorldTravel(const FT4GamePacketSC_WorldTravel& InPacket);

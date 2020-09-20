@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/Server/Object/T4NPCServerObject.h"
+#include "T4Gameplay/Private/MainFrame/Server/Object/T4NPCServerObject.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCServerObject() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4NPCServerObject_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "Server/Object/T4NPCServerObject.h" },
-		{ "ModuleRelativePath", "Private/Server/Object/T4NPCServerObject.h" },
+		{ "IncludePath", "MainFrame/Server/Object/T4NPCServerObject.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4NPCServerObject.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4NPCServerObject_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCServerObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4NPCServerObject, 1479852105);
+	IMPLEMENT_CLASS(UT4NPCServerObject, 132006835);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4NPCServerObject>()
 	{
 		return UT4NPCServerObject::StaticClass();

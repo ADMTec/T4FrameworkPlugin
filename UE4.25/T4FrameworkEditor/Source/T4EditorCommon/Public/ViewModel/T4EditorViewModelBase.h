@@ -174,7 +174,7 @@ public:
 public:
 
 	// Server => Client
-	bool ServerPlayContent(const FT4GameDBKey& InGameDBKey); // #164
+	bool ServerPlayQuest(const FT4GameDBKey& InGameDBKey); // #164
 
 	virtual void ServerDespawnAll(bool bClearPlayerActor); // #68
 
@@ -197,7 +197,7 @@ public:
 	void ServerDespawnObject(const FT4ObjectID& InObjectID); // #118
 	void ServerDespawnObject(const FT4ObjectID& InObjectID, bool bInClientOnly); // #134
 
-	void ServerQuestStart(const FT4GameDBKey& InGameDBKey); // #164
+	void ServerMissionStart(const FT4GameDBKey& InGameDBKey); // #164
 	void ServerQuestStop(const FT4GameDBKey& InGameDBKey); // #164
 	void ServerQuestStopAll(); // #164
 

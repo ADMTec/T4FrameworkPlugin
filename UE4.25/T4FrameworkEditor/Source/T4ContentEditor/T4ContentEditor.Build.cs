@@ -29,20 +29,13 @@ namespace UnrealBuildTool.Rules
                     "Landscape",
 					"GraphEditor",
 					"LevelEditor",
-                    "PropertyEditor",
-                    "DesktopPlatform",
-                    "MainFrame",
-                    "Projects",
-                    "Foliage",
-					"CommonMenuExtensions",
-                    "AdvancedPreviewScene",
-                    "NavigationSystem",
-                    "MaterialUtilities",
-                    "MeshDescription",
-                    "SourceControl",
-					"SourceControlWindows",
-                    "RHI"
-                }
+					"PropertyEditor",
+					"AIGraph",
+					"AIModule",
+					"Kismet",
+					"KismetWidgets",
+					"ToolMenus",
+				}
 			);
 
             PublicDependencyModuleNames.AddRange(

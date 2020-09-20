@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/Server/Object/T4PlayerServerObject.h"
+#include "T4Gameplay/Private/MainFrame/Server/Object/T4PlayerServerObject.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerServerObject() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PlayerServerObject_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #142\n */" },
-		{ "IncludePath", "Server/Object/T4PlayerServerObject.h" },
-		{ "ModuleRelativePath", "Private/Server/Object/T4PlayerServerObject.h" },
+		{ "IncludePath", "MainFrame/Server/Object/T4PlayerServerObject.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4PlayerServerObject.h" },
 		{ "ToolTip", "#142" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerServerObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PlayerServerObject, 3001234934);
+	IMPLEMENT_CLASS(UT4PlayerServerObject, 2176690698);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4PlayerServerObject>()
 	{
 		return UT4PlayerServerObject::StaticClass();

@@ -31,6 +31,6 @@ protected:
 	void UpdateItemLists() override;
 
 private:
-	ET4GameDBType GameDataType;
+	ET4GameDBType GameDBType;
 	ET4GameStatCategory GameStatCategory;
 };

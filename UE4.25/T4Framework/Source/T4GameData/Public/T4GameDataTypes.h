@@ -12,18 +12,13 @@
 UENUM(BlueprintType)
 enum class ET4GameQuestTarget : uint8 // #164
 {
-	World,
-
 	Personal,
-	PlayerAll,
-
-	None,
 };
 
 UENUM(BlueprintType)
-enum class ET4GameQuestType : uint8 // #164
+enum class ET4GameMissionType : uint8 // #164
 {
-	Kill					UMETA(DisplayName = "Kill Quests"),
+	Kill,
 	//Talk,
 	//Combo,
 	//Delivery,
@@ -34,29 +29,10 @@ enum class ET4GameQuestType : uint8 // #164
 };
 
 UENUM(BlueprintType)
-enum class ET4GameQuestRule : uint8 // #164
+enum class ET4GameMissionRule : uint8 // #164
 {
-	QuestSpawn_All,
-	QuestSpawn_Target,
-
-	None,
-};
-
-UENUM(BlueprintType)
-enum class ET4GameQuestResult: uint8 // #164
-{
-	Completed_By_QuestKey,
-	Completed_By_ContentDBKey,
-	Completed_All,
-
-	None,
-};
-
-UENUM(BlueprintType)
-enum class ET4GameChainCallFunction : uint8 // #164
-{
-	ImmediateCall			UMETA(DisplayName = "Immediate Call"),
-	CallAfterCompletion		UMETA(DisplayName = "Call After Completion"),
+	Spawn_All,
+	Spawn_Target,
 
 	None,
 };

@@ -26,7 +26,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
-		FName InContentTableName
+		FName InQuestTableName
 	);
 
 	void Construct(

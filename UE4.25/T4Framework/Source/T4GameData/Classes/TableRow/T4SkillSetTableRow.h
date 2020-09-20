@@ -20,7 +20,7 @@ struct FT4SkillSetTableRow : public FT4TableRowBase
 public:
 	// FT4SkillSetDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -69,8 +69,17 @@ public:
 	FT4SkillDBKey AbilityDBKey_D; // RMB
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4SkillSetTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, PlayMode(ET4GameSkillSetPlayMode::Primary) // #142
 	{
 	}

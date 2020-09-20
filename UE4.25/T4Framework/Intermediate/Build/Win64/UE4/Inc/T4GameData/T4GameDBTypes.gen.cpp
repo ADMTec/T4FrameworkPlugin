@@ -15,9 +15,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 // Cross Module References
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameDBValidation();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4QuestDBNameType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameDBType();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectStatDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectStatDBKey();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatCategory();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ItemStatDBKey();
@@ -31,7 +34,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SkillSetDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldDBKey();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ContentDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 	static UEnum* ET4GameDBValidation_StaticEnum()
@@ -93,6 +96,58 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		}
 		return ReturnEnum;
 	}
+	static UEnum* ET4QuestDBNameType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4QuestDBNameType, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4QuestDBNameType"));
+		}
+		return Singleton;
+	}
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4QuestDBNameType>()
+	{
+		return ET4QuestDBNameType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4QuestDBNameType(ET4QuestDBNameType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4QuestDBNameType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4QuestDBNameType_Hash() { return 3171893278U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4QuestDBNameType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4QuestDBNameType"), 0, Get_Z_Construct_UEnum_T4GameData_ET4QuestDBNameType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4QuestDBNameType::None", (int64)ET4QuestDBNameType::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #164\n// #164 : Mission BTTree \xec\xa7\x80\xec\x9b\x90\xec\x9d\x84 \xec\x9c\x84\xed\x95\xb4 \xeb\xa1\x9c\xeb\x94\xa9 \xed\x83\x80\xec\x9e\x84\xec\x97\x90 Enum \xec\x9d\x84 \xec\xb1\x84\xec\x9a\xb4\xeb\x8b\xa4. RefreshDBNameTypes \xec\xb0\xb8\xec\xa1\xb0!\n" },
+				{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
+				{ "None.Name", "ET4QuestDBNameType::None" },
+				{ "ToolTip", "#164\n#164 : Mission BTTree \xec\xa7\x80\xec\x9b\x90\xec\x9d\x84 \xec\x9c\x84\xed\x95\xb4 \xeb\xa1\x9c\xeb\x94\xa9 \xed\x83\x80\xec\x9e\x84\xec\x97\x90 Enum \xec\x9d\x84 \xec\xb1\x84\xec\x9a\xb4\xeb\x8b\xa4. RefreshDBNameTypes \xec\xb0\xb8\xec\xa1\xb0!" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
+				nullptr,
+				"ET4QuestDBNameType",
+				"ET4QuestDBNameType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* ET4GameDBType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -107,7 +162,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		return ET4GameDBType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameDBType(ET4GameDBType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameDBType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameDBType_Hash() { return 224562246U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameDBType_Hash() { return 804962707U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameDBType()
 	{
 #if WITH_HOT_RELOAD
@@ -120,7 +175,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4GameDBType::Master", (int64)ET4GameDBType::Master },
-				{ "ET4GameDBType::Content", (int64)ET4GameDBType::Content },
+				{ "ET4GameDBType::Quest", (int64)ET4GameDBType::Quest },
 				{ "ET4GameDBType::World", (int64)ET4GameDBType::World },
 				{ "ET4GameDBType::Player", (int64)ET4GameDBType::Player },
 				{ "ET4GameDBType::NPC", (int64)ET4GameDBType::NPC },
@@ -133,12 +188,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 				{ "ET4GameDBType::Effect", (int64)ET4GameDBType::Effect },
 				{ "ET4GameDBType::Stat", (int64)ET4GameDBType::Stat },
 				{ "ET4GameDBType::Reward", (int64)ET4GameDBType::Reward },
+				{ "ET4GameDBType::Text", (int64)ET4GameDBType::Text },
 				{ "ET4GameDBType::Nums", (int64)ET4GameDBType::Nums },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "// #T4_ADD_GAME_DATATABLE\n" },
-				{ "Content.Name", "ET4GameDBType::Content" },
 				{ "Costume.Comment", "// #48\n" },
 				{ "Costume.Name", "ET4GameDBType::Costume" },
 				{ "Costume.ToolTip", "#48" },
@@ -156,6 +211,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 				{ "Nums.Name", "ET4GameDBType::Nums" },
 				{ "Nums.ToolTip", "#164" },
 				{ "Player.Name", "ET4GameDBType::Player" },
+				{ "Quest.Name", "ET4GameDBType::Quest" },
 				{ "Reward.Comment", "// #114\n" },
 				{ "Reward.Name", "ET4GameDBType::Reward" },
 				{ "Reward.ToolTip", "#114" },
@@ -166,6 +222,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 				{ "SkillSet.Name", "ET4GameDBType::SkillSet" },
 				{ "SkillSet.ToolTip", "#164" },
 				{ "Stat.Name", "ET4GameDBType::Stat" },
+				{ "Text.Comment", "// #164\n" },
+				{ "Text.Name", "ET4GameDBType::Text" },
+				{ "Text.ToolTip", "#164" },
 				{ "ToolTip", "#T4_ADD_GAME_DATATABLE" },
 				{ "Weapon.Name", "ET4GameDBType::Weapon" },
 				{ "World.Comment", "// #146\n" },
@@ -189,6 +248,146 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		}
 		return ReturnEnum;
 	}
+class UScriptStruct* FT4TextDBKey::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4TextDBKey_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4TextDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4TextDBKey"), sizeof(FT4TextDBKey), Get_Z_Construct_UScriptStruct_FT4TextDBKey_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4TextDBKey>()
+{
+	return FT4TextDBKey::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4TextDBKey(FT4TextDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4TextDBKey"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TextDBKey
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4TextDBKey()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4TextDBKey")),new UScriptStruct::TCppStructOps<FT4TextDBKey>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4TextDBKey;
+	struct Z_Construct_UScriptStruct_FT4TextDBKey_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TextDBKey_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4TextDBKey_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TextDBKey>();
+	}
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4TextDBKey_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		Z_Construct_UScriptStruct_FT4GameDBKey,
+		&NewStructOps,
+		"T4TextDBKey",
+		sizeof(FT4TextDBKey),
+		alignof(FT4TextDBKey),
+		nullptr,
+		0,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TextDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TextDBKey_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4TextDBKey()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4TextDBKey_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4TextDBKey"), sizeof(FT4TextDBKey), Get_Z_Construct_UScriptStruct_FT4TextDBKey_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4TextDBKey_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4TextDBKey_Hash() { return 3972009122U; }
+class UScriptStruct* FT4RewardDBKey::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4RewardDBKey_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4RewardDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4RewardDBKey"), sizeof(FT4RewardDBKey), Get_Z_Construct_UScriptStruct_FT4RewardDBKey_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4RewardDBKey>()
+{
+	return FT4RewardDBKey::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4RewardDBKey(FT4RewardDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4RewardDBKey"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardDBKey
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardDBKey()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4RewardDBKey")),new UScriptStruct::TCppStructOps<FT4RewardDBKey>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4RewardDBKey;
+	struct Z_Construct_UScriptStruct_FT4RewardDBKey_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4RewardDBKey>();
+	}
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		Z_Construct_UScriptStruct_FT4GameDBKey,
+		&NewStructOps,
+		"T4RewardDBKey",
+		sizeof(FT4RewardDBKey),
+		alignof(FT4RewardDBKey),
+		nullptr,
+		0,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4RewardDBKey()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4RewardDBKey_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4RewardDBKey"), sizeof(FT4RewardDBKey), Get_Z_Construct_UScriptStruct_FT4RewardDBKey_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4RewardDBKey_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4RewardDBKey_Hash() { return 1012252003U; }
 class UScriptStruct* FT4EffectStatDBKey::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1174,29 +1373,29 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldDBKey
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4WorldDBKey_Hash() { return 1756536487U; }
-class UScriptStruct* FT4ContentDBKey::StaticStruct()
+class UScriptStruct* FT4QuestDBKey::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4ContentDBKey_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ContentDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4ContentDBKey"), sizeof(FT4ContentDBKey), Get_Z_Construct_UScriptStruct_FT4ContentDBKey_Hash());
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4QuestDBKey_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4QuestDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4QuestDBKey"), sizeof(FT4QuestDBKey), Get_Z_Construct_UScriptStruct_FT4QuestDBKey_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4ContentDBKey>()
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4QuestDBKey>()
 {
-	return FT4ContentDBKey::StaticStruct();
+	return FT4QuestDBKey::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ContentDBKey(FT4ContentDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4ContentDBKey"), false, nullptr, nullptr);
-static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentDBKey
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4QuestDBKey(FT4QuestDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4QuestDBKey"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestDBKey
 {
-	FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentDBKey()
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestDBKey()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ContentDBKey")),new UScriptStruct::TCppStructOps<FT4ContentDBKey>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4QuestDBKey")),new UScriptStruct::TCppStructOps<FT4QuestDBKey>);
 	}
-} ScriptStruct_T4GameData_StaticRegisterNativesFT4ContentDBKey;
-	struct Z_Construct_UScriptStruct_FT4ContentDBKey_Statics
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4QuestDBKey;
+	struct Z_Construct_UScriptStruct_FT4QuestDBKey_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -1205,45 +1404,45 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentDBKey
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// #161\n" },
 		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
 		{ "ToolTip", "#161" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ContentDBKey>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4QuestDBKey>();
 	}
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
 		Z_Construct_UScriptStruct_FT4GameDBKey,
 		&NewStructOps,
-		"T4ContentDBKey",
-		sizeof(FT4ContentDBKey),
-		alignof(FT4ContentDBKey),
+		"T4QuestDBKey",
+		sizeof(FT4QuestDBKey),
+		alignof(FT4QuestDBKey),
 		nullptr,
 		0,
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4ContentDBKey()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4ContentDBKey_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4QuestDBKey_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ContentDBKey"), sizeof(FT4ContentDBKey), Get_Z_Construct_UScriptStruct_FT4ContentDBKey_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4QuestDBKey"), sizeof(FT4QuestDBKey), Get_Z_Construct_UScriptStruct_FT4QuestDBKey_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ContentDBKey_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4QuestDBKey_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ContentDBKey_Hash() { return 2855069500U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4QuestDBKey_Hash() { return 3833190779U; }
 class UScriptStruct* FT4GameDBKey::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1308,6 +1507,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameDBKey
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_RowName_MetaData[] = {
 		{ "Category", "Common" },
+		{ "DisplayName", "Name" },
 		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
 	};
 #endif
@@ -1356,7 +1556,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameDBKey
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameDBKey_Hash() { return 2297001978U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameDBKey_Hash() { return 3079078789U; }
 class UScriptStruct* FT4GameUID::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

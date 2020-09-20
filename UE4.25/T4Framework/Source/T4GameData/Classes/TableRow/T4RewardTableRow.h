@@ -21,7 +21,7 @@ public:
 	// FT4RewardDBRowDetails::CustomizeDetails
 
 	// #T4_ADD_Reward_CONTENT_TAG
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -31,8 +31,17 @@ public:
 	FT4GameDBKey ItemGameDBKey;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4RewardTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 	{
 	}
 };

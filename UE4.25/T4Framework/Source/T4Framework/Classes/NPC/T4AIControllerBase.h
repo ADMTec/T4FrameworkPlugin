@@ -92,6 +92,8 @@ public:
 	virtual AAIController* GetAIController() override; // #104
 
 public:
+	virtual void UpdateBTService(float InDeltaTime) {}
+
 	IT4WorldActor* FindWorldActor(const FT4ActorID& InActorID) const; // #104
 
 protected:

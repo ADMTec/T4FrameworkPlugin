@@ -53,7 +53,7 @@ struct FT4PlayerTableRow : public FT4TableRowBase
 public:
 	// FT4PlayerDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -81,8 +81,17 @@ public:
 	TSoftObjectPtr<UT4CharacterEntityAsset> EntityAsset;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4PlayerTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, RaceName(T4Game_DefaultPlayerRaceName) // #104, #114
 		, InitializeLevel(ET4GameStatLevel::Level_1)
 	{

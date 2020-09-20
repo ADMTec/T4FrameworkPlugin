@@ -131,7 +131,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_UID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData[] = {
-		{ "Category", "Common" },
+		{ "Category", "Hide" },
 		{ "Comment", "// #T4_ADD_EFFECT_TAG_DATA\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
 		{ "ToolTip", "#T4_ADD_EFFECT_TAG_DATA" },
@@ -174,7 +174,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 2015974338U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 3750446403U; }
 class UScriptStruct* FT4EffectShapeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

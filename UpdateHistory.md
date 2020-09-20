@@ -2,6 +2,16 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- **v0.9.47** : 2020.09.15
+  - #164 [기능추가] Content Editor, ContentDB 를 사용한 기본 Quest 설정 및 동작 처리 추가
+	- Server Quest Start/Completed 및 Client UI 출력
+	- ContentDB 의 SpawnAsset 내 SpawnObject 를 모두 Kill 할 경우 Quest 종료 처리
+	- 후속 작업으로 Quest 종료 조건 및 타겟 다양화, Quest Chain 플레이 등의 추가 작업 진행
+  - #166 [기능추가] Action Editor, Trail Action 추가
+	- T4FrameworkExample 프로젝트에 샘플 ActionPack 추가
+  - #164 [기능개선] Content Editor, ContentDB Item 을 DragDrop 으로 Quest 실행이 될 수 있도록 기능 개선
+  - #164 [버그수정] Content Editor, Spawn Asset 의 Test Player/Weapon/Stance 설정이 저장되지 않던 문제 수정
+  - #158 [버그수정] Action Editor, CameraWork 의 Segment 옵션 수정 후 위치 수정이 동작하지 않던 문제 수정
 - **v0.9.46** : 2020.09.11
   - #158 [버그수정] Content Editor, CombatTestWorld 의 GridMap 로드 후 레벨 이동 시 발생하는 크래시 수정
 	- UE4.25/Content 폴더 에셋 업데이트

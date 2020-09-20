@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/Classes/NPC/T4BuiltinNPCAITypes.h"
+#include "T4Gameplay/Private/MainFrame/Server/AIController/T4BuiltinNPCAITypes.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 		return ET4BuiltinAITaskType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4BuiltinAITaskType(ET4BuiltinAITaskType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4BuiltinAITaskType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskType_Hash() { return 1539813197U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskType_Hash() { return 1244209991U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4BuiltinAITaskType()
 	{
 #if WITH_HOT_RELOAD
@@ -66,7 +66,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 				{ "FindNearestEnemy.Name", "ET4BuiltinAITaskType::FindNearestEnemy" },
 				{ "FindNearestEnemy.ToolTip", "#135" },
 				{ "Jumping.Name", "ET4BuiltinAITaskType::Jumping" },
-				{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAITypes.h" },
+				{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAITypes.h" },
 				{ "None.Name", "ET4BuiltinAITaskType::None" },
 				{ "Roaming.Name", "ET4BuiltinAITaskType::Roaming" },
 				{ "ToolTip", "#114" },
@@ -105,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 		return ET4BuiltinAIStateType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4BuiltinAIStateType(ET4BuiltinAIStateType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4BuiltinAIStateType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAIStateType_Hash() { return 2936467989U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4BuiltinAIStateType_Hash() { return 1057024916U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4BuiltinAIStateType()
 	{
 #if WITH_HOT_RELOAD
@@ -128,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAITypes() {}
 				{ "Comment", "/**\n  * #114\n */// #114\n" },
 				{ "Deactive.Name", "ET4BuiltinAIStateType::Deactive" },
 				{ "Invisible.Name", "ET4BuiltinAIStateType::Invisible" },
-				{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAITypes.h" },
+				{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAITypes.h" },
 				{ "Ready.Name", "ET4BuiltinAIStateType::Ready" },
 				{ "ToolTip", "#114\n // #114" },
 			};

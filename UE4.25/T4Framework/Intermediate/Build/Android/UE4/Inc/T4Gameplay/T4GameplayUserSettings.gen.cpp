@@ -47,10 +47,10 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayUserSettings() {}
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_WorldTravelUIDs;
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_WorldTravelUIDs_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayContentUIDs_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayQuestUIDs_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PlayContentUIDs;
-		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_PlayContentUIDs_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PlayQuestUIDs;
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_PlayQuestUIDs_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponDBKeyNames_MetaData[];
 #endif
@@ -111,15 +111,15 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayUserSettings() {}
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs = { "WorldTravelUIDs", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplayUserSettings, WorldTravelUIDs), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs_MetaData)) };
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs_Inner = { "WorldTravelUIDs", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs_MetaData[] = {
 		{ "Category", "HUD PlayContent UID" },
 		{ "Comment", "// #45\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplayUserSettings.h" },
 		{ "ToolTip", "#45" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs = { "PlayContentUIDs", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplayUserSettings, PlayContentUIDs), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs_MetaData)) };
-	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs_Inner = { "PlayContentUIDs", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs = { "PlayQuestUIDs", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplayUserSettings, PlayQuestUIDs), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs_Inner = { "PlayQuestUIDs", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WeaponDBKeyNames_MetaData[] = {
 		{ "Category", "Equip Weapon (KEY 1 ~ 9)" },
@@ -155,8 +155,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayUserSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PCSpawnUIDs_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WorldTravelUIDs_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayContentUIDs_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_PlayQuestUIDs_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WeaponDBKeyNames,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_WeaponDBKeyNames_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplayUserSettings_Statics::NewProp_NPCDBKeyNames,
@@ -191,7 +191,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayUserSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameplayUserSettings, 2839284396);
+	IMPLEMENT_CLASS(UT4GameplayUserSettings, 1378064536);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameplayUserSettings>()
 	{
 		return UT4GameplayUserSettings::StaticClass();

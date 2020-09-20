@@ -182,6 +182,7 @@ public:
 	virtual void ChangeNextControlMode() = 0; // #151
 
 #if WITH_EDITOR
+	virtual void SetClientModeOnly() = 0; // #164 : ServerManager 를 생성하지 않는다. ThumbnailMode
 	virtual IT4EditorGameStatics* GetEditorGameStatics() = 0; // #114
 #endif
 };

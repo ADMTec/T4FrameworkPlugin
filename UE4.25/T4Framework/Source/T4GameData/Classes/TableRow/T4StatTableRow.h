@@ -21,7 +21,7 @@ public:
 	// FT4StatDBRowDetails::CustomizeDetails
 
 	// #T4_ADD_STAT_CONTENT_TAG
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -46,8 +46,17 @@ public:
 	float Dodge_Rate; // #114 : 회피률
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4StatTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, StatCategory(ET4GameStatCategory::None) // #114 : 사용처를 명시한다.
 		, Health_Point(100.0f)
 		, Striking_Power(10.0f)

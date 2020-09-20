@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "T4EditorCommon/Classes/ContentTable/T4EditorConstantDataTable.h" // #39
+#include "T4EditorCommon/Classes/ConstantTable/T4EditorConstantDataTable.h" // #39
 #include "T4ContentConstantDataTable.generated.h"
 
 /**

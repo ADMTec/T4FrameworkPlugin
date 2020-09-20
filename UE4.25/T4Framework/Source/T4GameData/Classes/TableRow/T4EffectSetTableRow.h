@@ -20,7 +20,7 @@ struct FT4EffectSetTableRow : public FT4TableRowBase
 public:
 	// FT4EffectSetDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -44,8 +44,17 @@ public:
 	FT4EffectDBKey MisDBKey_Normal;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4EffectSetTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 	{
 	}
 };

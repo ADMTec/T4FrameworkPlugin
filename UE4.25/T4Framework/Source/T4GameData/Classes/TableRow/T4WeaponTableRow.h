@@ -38,7 +38,7 @@ struct FT4WeaponTableRow : public FT4ItemTableRowBase
 public:
 	// FT4WeaponDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -72,8 +72,17 @@ public:
 	TArray<FT4WeaponEntityData> SubEntityDatas;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4WeaponTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, MinAttackRange(10.0f) // #135
 		, MaxAttackRange(100.0f) // #50
 		, bDontUseMesh(false) // #135

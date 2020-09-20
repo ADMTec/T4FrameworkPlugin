@@ -7,7 +7,7 @@
 #include "T4GameDBTypes.h" // #48
 #include "T4GameDataTypes.h" // #148
 
-#include "TableRow/T4ContentTableRow.h" // #27
+#include "TableRow/T4QuestTableRow.h" // #27
 #include "TableRow/T4WorldTableRow.h" // #27
 #include "TableRow/T4PlayerTableRow.h" // #27
 #include "TableRow/T4NPCTableRow.h" // #31
@@ -18,8 +18,11 @@
 #include "TableRow/T4SkillTableRow.h" // #25
 #include "TableRow/T4EffectSetTableRow.h" // #135
 #include "TableRow/T4EffectTableRow.h" // #25
+#if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 #include "TableRow/T4StatTableRow.h" // #114
 #include "TableRow/T4RewardTableRow.h" // #164
+#endif
+#include "TableRow/T4TextTableRow.h" // #164
 
 #if WITH_EDITOR
 #include "UObject/StructOnScope.h" // #118 : Visual Studio Code Link
@@ -46,7 +49,7 @@ struct T4GAMEDATA_API FT4GameDataBase
 
 	virtual const FT4TableRowBase* GetTableRowBase() const = 0; // #150
 
-	const FT4ContentTableRow* QueryContentTableRow() const;
+	const FT4QuestTableRow* QueryQuestTableRow() const;
 	const FT4WorldTableRow* QueryWorldTableRow() const;
 	const FT4PlayerTableRow* QueryPlayerTableRow() const;
 	const FT4NPCTableRow* QueryNPCTableRow() const;
@@ -61,6 +64,7 @@ struct T4GAMEDATA_API FT4GameDataBase
 	const FT4StatTableRow* QueryStatTableRow() const;
 	const FT4RewardTableRow* QueryRewardTableRow() const; // #164
 #endif
+	const FT4TextTableRow* QueryTextTableRow() const; // #164
 
 #if WITH_EDITOR
 	ET4GameDBValidation GetResultValidation(const FT4GameDBKey& InDBKey);
@@ -79,7 +83,6 @@ struct T4GAMEDATA_API FT4GameDataBase
 	virtual FName GetFolderName() const = 0; // #122
 	virtual void SetFolderName(FName InFolderName) = 0; // #122
 	virtual const FText& GetUITitleText() const = 0; // #164
-	virtual const FText& GetUIBodyText() const = 0; // #164
 	// ~#118
 #endif
 	
@@ -113,7 +116,7 @@ public:
 	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
 	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameDBKey& InGameDBKey) const = 0;
 
-	virtual const FT4ContentTableRow* GetContentTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4QuestTableRow* GetQuestTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4WorldTableRow* GetWorldTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4PlayerTableRow* GetPlayerTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4NPCTableRow* GetNPCTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
@@ -128,6 +131,9 @@ public:
 	virtual const FT4StatTableRow* GetStatTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4RewardTableRow* GetRewardTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 #endif
+	virtual const FT4TextTableRow* GetTextTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
+
+	virtual FName ToQuestDBRowName(const ET4QuestDBNameType& InDBNameType) const = 0; // #164
 
 	virtual bool GetGameDBKeyNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyNames) const = 0;
 

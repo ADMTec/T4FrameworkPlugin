@@ -33,6 +33,16 @@ enum ET4GameHotKeyType // #116
 };
 
 UENUM()
+enum class ET4GameQuestResult : uint8 // #164
+{
+	Completed_By_QuestKey,
+	Completed_By_QuestDBKey,
+	Completed_All,
+
+	None,
+};
+
+UENUM()
 enum class ET4GameTargetParamType : uint8 // #112
 {
 	ObjectID,

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Gameplay/Private/Classes/NPC/T4BuiltinNPCAIStructs.h"
+#include "T4Gameplay/Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -79,7 +79,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #114\n */// #114\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#114\n // #114" },
 	};
 #endif
@@ -91,7 +91,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_IdleWaitTimeSec_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #140\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
@@ -100,7 +100,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_JumpRate_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
@@ -109,7 +109,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_RoamingRate_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
@@ -118,7 +118,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_RomaingRange_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
@@ -127,7 +127,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_SensoryRange_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
@@ -136,7 +136,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
@@ -145,7 +145,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Statics::NewProp_bAggressive_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #114\n// FT4BuiltinNPCAIBehaviorData : AIController (Runtime)\n// FT4NPCBehaviorData : NPC DataTable (Original Set)\n// FT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)\n" },
-		{ "ModuleRelativePath", "Private/Classes/NPC/T4BuiltinNPCAIStructs.h" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/AIController/T4BuiltinNPCAIStructs.h" },
 		{ "ToolTip", "#114\nFT4BuiltinNPCAIBehaviorData : AIController (Runtime)\nFT4NPCBehaviorData : NPC DataTable (Original Set)\nFT4GameOverrideNPCBehaviorData : Spawn Asset (Instance Set)" },
 	};
 #endif
@@ -191,7 +191,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4BuiltinNPCAIBehav
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Hash() { return 1981794688U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4BuiltinNPCAIBehaviorData_Hash() { return 3759871304U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

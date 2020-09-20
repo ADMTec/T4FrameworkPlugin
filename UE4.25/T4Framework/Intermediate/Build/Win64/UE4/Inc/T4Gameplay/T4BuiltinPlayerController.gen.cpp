@@ -20,12 +20,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_AnimSet();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdBookmark();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdChangePlayer();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdItemEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdLeave();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdNPCEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdPCEnter();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdRespawn();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdTeleport();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTimeSync();
@@ -45,7 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_UnequipItem();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_AnimSet();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_DebugAIStatus();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueCompleted();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueFinish();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueStart();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueUpdate();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Die();
@@ -63,9 +63,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Jump();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_LockOff();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_LockOn();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionCompleted();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionFinish();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionStart();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionUpdate();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Move();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop();
@@ -75,6 +74,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_NPCLeave();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_PCEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_PCLeave();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_QuestFinish();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_QuestStart();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Resurrect();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Rotation();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_SkillCancel();
@@ -384,12 +385,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->SC_RecvPacket_WorldTravel_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_DialogueCompleted)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_DialogueFinish)
 	{
-		P_GET_STRUCT(FT4GamePacketSC_DialogueCompleted,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketSC_DialogueFinish,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_DialogueCompleted_Implementation(Z_Param_InPacket);
+		P_THIS->SC_RecvPacket_DialogueFinish_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_DialogueUpdate)
@@ -408,20 +409,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->SC_RecvPacket_DialogueStart_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MissionCompleted)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MissionFinish)
 	{
-		P_GET_STRUCT(FT4GamePacketSC_MissionCompleted,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketSC_MissionFinish,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_MissionCompleted_Implementation(Z_Param_InPacket);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MissionUpdate)
-	{
-		P_GET_STRUCT(FT4GamePacketSC_MissionUpdate,Z_Param_InPacket);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_MissionUpdate_Implementation(Z_Param_InPacket);
+		P_THIS->SC_RecvPacket_MissionFinish_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MissionStart)
@@ -430,6 +423,22 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->SC_RecvPacket_MissionStart_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_QuestFinish)
+	{
+		P_GET_STRUCT(FT4GamePacketSC_QuestFinish,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SC_RecvPacket_QuestFinish_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_QuestStart)
+	{
+		P_GET_STRUCT(FT4GamePacketSC_QuestStart,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SC_RecvPacket_QuestStart_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_StartToPlay)
@@ -570,30 +579,30 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->CS_RecvPacket_CmdWorldTravel_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_CmdContentCompleted)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_CmdQuestFinish)
 	{
-		P_GET_STRUCT(FT4GamePacketCS_CmdContentCompleted,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketCS_CmdQuestFinish,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		if (!P_THIS->CS_RecvPacket_CmdContentCompleted_Validate(Z_Param_InPacket))
+		if (!P_THIS->CS_RecvPacket_CmdQuestFinish_Validate(Z_Param_InPacket))
 		{
-			RPC_ValidateFailed(TEXT("CS_RecvPacket_CmdContentCompleted_Validate"));
+			RPC_ValidateFailed(TEXT("CS_RecvPacket_CmdQuestFinish_Validate"));
 			return;
 		}
-		P_THIS->CS_RecvPacket_CmdContentCompleted_Implementation(Z_Param_InPacket);
+		P_THIS->CS_RecvPacket_CmdQuestFinish_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_CmdContentStart)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_CmdQuestStart)
 	{
-		P_GET_STRUCT(FT4GamePacketCS_CmdContentStart,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketCS_CmdQuestStart,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		if (!P_THIS->CS_RecvPacket_CmdContentStart_Validate(Z_Param_InPacket))
+		if (!P_THIS->CS_RecvPacket_CmdQuestStart_Validate(Z_Param_InPacket))
 		{
-			RPC_ValidateFailed(TEXT("CS_RecvPacket_CmdContentStart_Validate"));
+			RPC_ValidateFailed(TEXT("CS_RecvPacket_CmdQuestStart_Validate"));
 			return;
 		}
-		P_THIS->CS_RecvPacket_CmdContentStart_Implementation(Z_Param_InPacket);
+		P_THIS->CS_RecvPacket_CmdQuestStart_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_SkillTarget)
@@ -799,20 +808,6 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdChangePlayer),&Parms);
 	}
-	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted = FName(TEXT("CS_RecvPacket_CmdContentCompleted"));
-	void AT4BuiltinPlayerController::CS_RecvPacket_CmdContentCompleted(FT4GamePacketCS_CmdContentCompleted const& InPacket)
-	{
-		T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentCompleted_Parms Parms;
-		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted),&Parms);
-	}
-	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart = FName(TEXT("CS_RecvPacket_CmdContentStart"));
-	void AT4BuiltinPlayerController::CS_RecvPacket_CmdContentStart(FT4GamePacketCS_CmdContentStart const& InPacket)
-	{
-		T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentStart_Parms Parms;
-		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart),&Parms);
-	}
 	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdItemEnter = FName(TEXT("CS_RecvPacket_CmdItemEnter"));
 	void AT4BuiltinPlayerController::CS_RecvPacket_CmdItemEnter(FT4GamePacketCS_CmdItemEnter const& InPacket)
 	{
@@ -840,6 +835,20 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		T4BuiltinPlayerController_eventCS_RecvPacket_CmdPCEnter_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdPCEnter),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish = FName(TEXT("CS_RecvPacket_CmdQuestFinish"));
+	void AT4BuiltinPlayerController::CS_RecvPacket_CmdQuestFinish(FT4GamePacketCS_CmdQuestFinish const& InPacket)
+	{
+		T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestFinish_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart = FName(TEXT("CS_RecvPacket_CmdQuestStart"));
+	void AT4BuiltinPlayerController::CS_RecvPacket_CmdQuestStart(FT4GamePacketCS_CmdQuestStart const& InPacket)
+	{
+		T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestStart_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdRespawn = FName(TEXT("CS_RecvPacket_CmdRespawn"));
 	void AT4BuiltinPlayerController::CS_RecvPacket_CmdRespawn(FT4GamePacketCS_CmdRespawn const& InPacket)
@@ -974,12 +983,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_DebugAIStatus),&Parms);
 	}
-	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted = FName(TEXT("SC_RecvPacket_DialogueCompleted"));
-	void AT4BuiltinPlayerController::SC_RecvPacket_DialogueCompleted(FT4GamePacketSC_DialogueCompleted const& InPacket)
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish = FName(TEXT("SC_RecvPacket_DialogueFinish"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_DialogueFinish(FT4GamePacketSC_DialogueFinish const& InPacket)
 	{
-		T4BuiltinPlayerController_eventSC_RecvPacket_DialogueCompleted_Parms Parms;
+		T4BuiltinPlayerController_eventSC_RecvPacket_DialogueFinish_Parms Parms;
 		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted),&Parms);
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_DialogueStart = FName(TEXT("SC_RecvPacket_DialogueStart"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_DialogueStart(FT4GamePacketSC_DialogueStart const& InPacket)
@@ -1100,12 +1109,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_LockOn),&Parms);
 	}
-	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted = FName(TEXT("SC_RecvPacket_MissionCompleted"));
-	void AT4BuiltinPlayerController::SC_RecvPacket_MissionCompleted(FT4GamePacketSC_MissionCompleted const& InPacket)
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish = FName(TEXT("SC_RecvPacket_MissionFinish"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_MissionFinish(FT4GamePacketSC_MissionFinish const& InPacket)
 	{
-		T4BuiltinPlayerController_eventSC_RecvPacket_MissionCompleted_Parms Parms;
+		T4BuiltinPlayerController_eventSC_RecvPacket_MissionFinish_Parms Parms;
 		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted),&Parms);
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart = FName(TEXT("SC_RecvPacket_MissionStart"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_MissionStart(FT4GamePacketSC_MissionStart const& InPacket)
@@ -1113,13 +1122,6 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		T4BuiltinPlayerController_eventSC_RecvPacket_MissionStart_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart),&Parms);
-	}
-	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate = FName(TEXT("SC_RecvPacket_MissionUpdate"));
-	void AT4BuiltinPlayerController::SC_RecvPacket_MissionUpdate(FT4GamePacketSC_MissionUpdate const& InPacket)
-	{
-		T4BuiltinPlayerController_eventSC_RecvPacket_MissionUpdate_Parms Parms;
-		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_Move = FName(TEXT("SC_RecvPacket_Move"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_Move(FT4GamePacketSC_Move const& InPacket)
@@ -1183,6 +1185,20 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		T4BuiltinPlayerController_eventSC_RecvPacket_PCLeave_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_PCLeave),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish = FName(TEXT("SC_RecvPacket_QuestFinish"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_QuestFinish(FT4GamePacketSC_QuestFinish const& InPacket)
+	{
+		T4BuiltinPlayerController_eventSC_RecvPacket_QuestFinish_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart = FName(TEXT("SC_RecvPacket_QuestStart"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_QuestStart(FT4GamePacketSC_QuestStart const& InPacket)
+	{
+		T4BuiltinPlayerController_eventSC_RecvPacket_QuestStart_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_Resurrect = FName(TEXT("SC_RecvPacket_Resurrect"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_Resurrect(FT4GamePacketSC_Resurrect const& InPacket)
@@ -1275,12 +1291,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "CS_RecvPacket_AnimSet", &AT4BuiltinPlayerController::execCS_RecvPacket_AnimSet },
 			{ "CS_RecvPacket_CmdBookmark", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdBookmark },
 			{ "CS_RecvPacket_CmdChangePlayer", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdChangePlayer },
-			{ "CS_RecvPacket_CmdContentCompleted", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdContentCompleted },
-			{ "CS_RecvPacket_CmdContentStart", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdContentStart },
 			{ "CS_RecvPacket_CmdItemEnter", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdItemEnter },
 			{ "CS_RecvPacket_CmdLeave", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdLeave },
 			{ "CS_RecvPacket_CmdNPCEnter", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdNPCEnter },
 			{ "CS_RecvPacket_CmdPCEnter", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdPCEnter },
+			{ "CS_RecvPacket_CmdQuestFinish", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdQuestFinish },
+			{ "CS_RecvPacket_CmdQuestStart", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdQuestStart },
 			{ "CS_RecvPacket_CmdRespawn", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdRespawn },
 			{ "CS_RecvPacket_CmdTeleport", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdTeleport },
 			{ "CS_RecvPacket_CmdWorldTimeSync", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdWorldTimeSync },
@@ -1300,7 +1316,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "CS_RecvPacket_UnequipItem", &AT4BuiltinPlayerController::execCS_RecvPacket_UnequipItem },
 			{ "SC_RecvPacket_AnimSet", &AT4BuiltinPlayerController::execSC_RecvPacket_AnimSet },
 			{ "SC_RecvPacket_DebugAIStatus", &AT4BuiltinPlayerController::execSC_RecvPacket_DebugAIStatus },
-			{ "SC_RecvPacket_DialogueCompleted", &AT4BuiltinPlayerController::execSC_RecvPacket_DialogueCompleted },
+			{ "SC_RecvPacket_DialogueFinish", &AT4BuiltinPlayerController::execSC_RecvPacket_DialogueFinish },
 			{ "SC_RecvPacket_DialogueStart", &AT4BuiltinPlayerController::execSC_RecvPacket_DialogueStart },
 			{ "SC_RecvPacket_DialogueUpdate", &AT4BuiltinPlayerController::execSC_RecvPacket_DialogueUpdate },
 			{ "SC_RecvPacket_Die", &AT4BuiltinPlayerController::execSC_RecvPacket_Die },
@@ -1318,9 +1334,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "SC_RecvPacket_Jump", &AT4BuiltinPlayerController::execSC_RecvPacket_Jump },
 			{ "SC_RecvPacket_LockOff", &AT4BuiltinPlayerController::execSC_RecvPacket_LockOff },
 			{ "SC_RecvPacket_LockOn", &AT4BuiltinPlayerController::execSC_RecvPacket_LockOn },
-			{ "SC_RecvPacket_MissionCompleted", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionCompleted },
+			{ "SC_RecvPacket_MissionFinish", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionFinish },
 			{ "SC_RecvPacket_MissionStart", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionStart },
-			{ "SC_RecvPacket_MissionUpdate", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionUpdate },
 			{ "SC_RecvPacket_Move", &AT4BuiltinPlayerController::execSC_RecvPacket_Move },
 			{ "SC_RecvPacket_MoveSpeedSync", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveSpeedSync },
 			{ "SC_RecvPacket_MoveStop", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveStop },
@@ -1330,6 +1345,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "SC_RecvPacket_NPCLeave", &AT4BuiltinPlayerController::execSC_RecvPacket_NPCLeave },
 			{ "SC_RecvPacket_PCEnter", &AT4BuiltinPlayerController::execSC_RecvPacket_PCEnter },
 			{ "SC_RecvPacket_PCLeave", &AT4BuiltinPlayerController::execSC_RecvPacket_PCLeave },
+			{ "SC_RecvPacket_QuestFinish", &AT4BuiltinPlayerController::execSC_RecvPacket_QuestFinish },
+			{ "SC_RecvPacket_QuestStart", &AT4BuiltinPlayerController::execSC_RecvPacket_QuestStart },
 			{ "SC_RecvPacket_Resurrect", &AT4BuiltinPlayerController::execSC_RecvPacket_Resurrect },
 			{ "SC_RecvPacket_Rotation", &AT4BuiltinPlayerController::execSC_RecvPacket_Rotation },
 			{ "SC_RecvPacket_SkillCancel", &AT4BuiltinPlayerController::execSC_RecvPacket_SkillCancel },
@@ -1452,80 +1469,6 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdChangePlayer_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::NewProp_InPacket_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentCompleted_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentCompleted, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::NewProp_InPacket,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #146\n" },
-		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
-		{ "ToolTip", "#146" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_CmdContentCompleted", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentCompleted_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::NewProp_InPacket_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentStart_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_CmdContentStart, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::NewProp_InPacket,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_CmdContentStart", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_CmdContentStart_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1676,6 +1619,80 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdPCEnter_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestFinish_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #146\n" },
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#146" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_CmdQuestFinish", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestFinish_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestStart_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestStart, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_CmdQuestStart", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_CmdQuestStart_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2387,7 +2404,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
@@ -2400,28 +2417,28 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::NewProp_InPacket_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::NewProp_InPacket_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_DialogueCompleted_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueCompleted, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::NewProp_InPacket,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_DialogueFinish_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueFinish, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::NewProp_InPacket,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "// #163\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
 		{ "ToolTip", "#163" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_DialogueCompleted", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_DialogueCompleted_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_DialogueFinish", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_DialogueFinish_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3061,7 +3078,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
@@ -3074,28 +3091,28 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::NewProp_InPacket_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::NewProp_InPacket_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_MissionCompleted_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_MissionCompleted, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::NewProp_InPacket,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_MissionFinish_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_MissionFinish, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::NewProp_InPacket,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MissionCompleted", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MissionCompleted_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MissionFinish", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MissionFinish_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3134,44 +3151,6 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::NewProp_InPacket_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_MissionUpdate_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_MissionUpdate, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::NewProp_InPacket,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #164\n" },
-		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
-		{ "ToolTip", "#164" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MissionUpdate", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MissionUpdate_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3506,6 +3485,82 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_PCLeave_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_QuestFinish_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_QuestFinish, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_QuestFinish", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_QuestFinish_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_QuestStart_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_QuestStart, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_QuestStart", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_QuestStart_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3981,12 +4036,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_AnimSet, "CS_RecvPacket_AnimSet" }, // 1031288824
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdBookmark, "CS_RecvPacket_CmdBookmark" }, // 3692332218
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdChangePlayer, "CS_RecvPacket_CmdChangePlayer" }, // 1841975250
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentCompleted, "CS_RecvPacket_CmdContentCompleted" }, // 1695185445
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdContentStart, "CS_RecvPacket_CmdContentStart" }, // 1889985044
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdItemEnter, "CS_RecvPacket_CmdItemEnter" }, // 1517377118
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdLeave, "CS_RecvPacket_CmdLeave" }, // 2245230882
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdNPCEnter, "CS_RecvPacket_CmdNPCEnter" }, // 2724010078
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdPCEnter, "CS_RecvPacket_CmdPCEnter" }, // 2281218224
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestFinish, "CS_RecvPacket_CmdQuestFinish" }, // 324144008
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdQuestStart, "CS_RecvPacket_CmdQuestStart" }, // 1968458450
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdRespawn, "CS_RecvPacket_CmdRespawn" }, // 666999330
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdTeleport, "CS_RecvPacket_CmdTeleport" }, // 3306950779
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdWorldTimeSync, "CS_RecvPacket_CmdWorldTimeSync" }, // 95428864
@@ -4006,7 +4061,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_UnequipItem, "CS_RecvPacket_UnequipItem" }, // 4182478621
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_AnimSet, "SC_RecvPacket_AnimSet" }, // 1033525803
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DebugAIStatus, "SC_RecvPacket_DebugAIStatus" }, // 3984456961
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueCompleted, "SC_RecvPacket_DialogueCompleted" }, // 959803112
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueFinish, "SC_RecvPacket_DialogueFinish" }, // 2492252812
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueStart, "SC_RecvPacket_DialogueStart" }, // 3525731150
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_DialogueUpdate, "SC_RecvPacket_DialogueUpdate" }, // 2793275355
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Die, "SC_RecvPacket_Die" }, // 331545772
@@ -4024,9 +4079,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Jump, "SC_RecvPacket_Jump" }, // 2812609767
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_LockOff, "SC_RecvPacket_LockOff" }, // 2115950746
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_LockOn, "SC_RecvPacket_LockOn" }, // 588552202
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionCompleted, "SC_RecvPacket_MissionCompleted" }, // 910102200
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish, "SC_RecvPacket_MissionFinish" }, // 893400564
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart, "SC_RecvPacket_MissionStart" }, // 2280028081
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionUpdate, "SC_RecvPacket_MissionUpdate" }, // 1240290375
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move, "SC_RecvPacket_Move" }, // 2611051135
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSpeedSync, "SC_RecvPacket_MoveSpeedSync" }, // 1641032715
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop, "SC_RecvPacket_MoveStop" }, // 1666609580
@@ -4036,6 +4090,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_NPCLeave, "SC_RecvPacket_NPCLeave" }, // 3562324327
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_PCEnter, "SC_RecvPacket_PCEnter" }, // 3803292638
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_PCLeave, "SC_RecvPacket_PCLeave" }, // 3108752064
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestFinish, "SC_RecvPacket_QuestFinish" }, // 1266356645
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_QuestStart, "SC_RecvPacket_QuestStart" }, // 3025481312
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Resurrect, "SC_RecvPacket_Resurrect" }, // 390280845
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Rotation, "SC_RecvPacket_Rotation" }, // 247564388
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_SkillCancel, "SC_RecvPacket_SkillCancel" }, // 3913896226
@@ -4085,7 +4141,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 3359043112);
+	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 603664450);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinPlayerController>()
 	{
 		return AT4BuiltinPlayerController::StaticClass();

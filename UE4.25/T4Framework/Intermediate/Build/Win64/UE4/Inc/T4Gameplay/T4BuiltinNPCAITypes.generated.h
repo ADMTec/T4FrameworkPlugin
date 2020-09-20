@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4GAMEPLAY_T4BuiltinNPCAITypes_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_Classes_NPC_T4BuiltinNPCAITypes_h
+#define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Gameplay_Private_MainFrame_Server_AIController_T4BuiltinNPCAITypes_h
 
 
 #define FOREACH_ENUM_ET4BUILTINAITASKTYPE(op) \

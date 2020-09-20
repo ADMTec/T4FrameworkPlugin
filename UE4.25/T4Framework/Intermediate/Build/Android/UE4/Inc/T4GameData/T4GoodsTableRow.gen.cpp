@@ -115,7 +115,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GoodsTableRow
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GoodsTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GoodsTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GoodsTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GoodsTableRow_Statics::NewProp_UID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GoodsTableRow_Statics::NewProp_Version_MetaData[] = {
-		{ "Category", "Common" },
+		{ "Category", "Hide" },
 		{ "Comment", "// FT4GoodsDBRowDetails::CustomizeDetails\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4GoodsTableRow.h" },
 		{ "ToolTip", "FT4GoodsDBRowDetails::CustomizeDetails" },
@@ -157,7 +157,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GoodsTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GoodsTableRow_Hash() { return 3360128397U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GoodsTableRow_Hash() { return 2545093728U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

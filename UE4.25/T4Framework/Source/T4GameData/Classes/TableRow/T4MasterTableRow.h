@@ -25,7 +25,7 @@ public:
 	FName ContentName;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UDataTable> ContentTableAsset; // #146
+	TSoftObjectPtr<UDataTable> QuestTableAsset; // #146
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> WorldTableAsset;
@@ -63,9 +63,21 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> RewardTableAsset; // #164
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	TSoftObjectPtr<UDataTable> TextTableAsset; // #164
+
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4MasterTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 		, ContentName(T4Const_DefaultGameContentName)
 	{
 	}

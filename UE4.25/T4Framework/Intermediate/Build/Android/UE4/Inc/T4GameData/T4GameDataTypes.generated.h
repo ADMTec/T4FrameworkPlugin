@@ -99,43 +99,23 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEffectType>();
 enum class ET4GameAttackType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameAttackType>();
 
-#define FOREACH_ENUM_ET4GAMECHAINCALLFUNCTION(op) \
-	op(ET4GameChainCallFunction::ImmediateCall) \
-	op(ET4GameChainCallFunction::CallAfterCompletion) \
-	op(ET4GameChainCallFunction::None) 
+#define FOREACH_ENUM_ET4GAMEMISSIONRULE(op) \
+	op(ET4GameMissionRule::Spawn_All) \
+	op(ET4GameMissionRule::Spawn_Target) \
+	op(ET4GameMissionRule::None) 
 
-enum class ET4GameChainCallFunction : uint8;
-template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameChainCallFunction>();
+enum class ET4GameMissionRule : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameMissionRule>();
 
-#define FOREACH_ENUM_ET4GAMEQUESTRESULT(op) \
-	op(ET4GameQuestResult::Completed_By_QuestKey) \
-	op(ET4GameQuestResult::Completed_By_ContentDBKey) \
-	op(ET4GameQuestResult::Completed_All) \
-	op(ET4GameQuestResult::None) 
+#define FOREACH_ENUM_ET4GAMEMISSIONTYPE(op) \
+	op(ET4GameMissionType::Kill) \
+	op(ET4GameMissionType::None) 
 
-enum class ET4GameQuestResult : uint8;
-template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestResult>();
-
-#define FOREACH_ENUM_ET4GAMEQUESTRULE(op) \
-	op(ET4GameQuestRule::QuestSpawn_All) \
-	op(ET4GameQuestRule::QuestSpawn_Target) \
-	op(ET4GameQuestRule::None) 
-
-enum class ET4GameQuestRule : uint8;
-template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestRule>();
-
-#define FOREACH_ENUM_ET4GAMEQUESTTYPE(op) \
-	op(ET4GameQuestType::Kill) \
-	op(ET4GameQuestType::None) 
-
-enum class ET4GameQuestType : uint8;
-template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestType>();
+enum class ET4GameMissionType : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameMissionType>();
 
 #define FOREACH_ENUM_ET4GAMEQUESTTARGET(op) \
-	op(ET4GameQuestTarget::World) \
-	op(ET4GameQuestTarget::Personal) \
-	op(ET4GameQuestTarget::PlayerAll) \
-	op(ET4GameQuestTarget::None) 
+	op(ET4GameQuestTarget::Personal) 
 
 enum class ET4GameQuestTarget : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestTarget>();

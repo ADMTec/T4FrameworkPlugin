@@ -18,7 +18,7 @@ enum class ET4GameDBType : uint8
 {
 	Master,
 
-	Content, // #146
+	Quest, // #146
 
 	World,
 	Player,
@@ -37,7 +37,17 @@ enum class ET4GameDBType : uint8
 	Stat, // #114
 	Reward, // #164
 
+	Text, // #164
+
 	Nums,
+};
+
+static const int64 T4Const_DefaultQuestDBNameType = GetTypeHash(TEXT("ET4QuestDBNameType::None")); // #164
+ // #164 : Mission BTTree 지원을 위해 로딩 타임에 Enum 을 채운다. RefreshDBNameTypes 참조!
+UENUM()
+enum class ET4QuestDBNameType : int64
+{
+	None,
 };
 
 UENUM()
@@ -113,7 +123,7 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Common, meta = (DisplayName = "DB Type"))
 	ET4GameDBType Type;
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Common, meta = (DisplayName = "Name"))
 	FName RowName;
 
 	UPROPERTY(Transient)
@@ -220,7 +230,7 @@ public:
 		static const TCHAR* GT4GameDBTypeStrings[] =
 		{
 			TEXT("Master"),
-			TEXT("Content"), // #146
+			TEXT("Quest"), // #146
 			TEXT("World"),
 			TEXT("Player"),
 			TEXT("NPC"),
@@ -233,6 +243,7 @@ public:
 			TEXT("Effect"),
 			TEXT("Stat"), // #114
 			TEXT("Reward"), // #164
+			TEXT("Text"), // #164
 			TEXT("None"),
 		};
 		static_assert(UE_ARRAY_COUNT(GT4GameDBTypeStrings) == (uint8)(ET4GameDBType::Nums) + 1, "GameDBType doesn't match!");
@@ -259,28 +270,28 @@ static const FT4GameDBKey T4Const_InvalidDBKey;
 
 // #161
 USTRUCT()
-struct FT4ContentDBKey : public FT4GameDBKey
+struct FT4QuestDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4ContentDBKey()
-		: FT4GameDBKey(ET4GameDBType::Content)
+	FT4QuestDBKey()
+		: FT4GameDBKey(ET4GameDBType::Quest)
 	{
 	}
 
-	FT4ContentDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Content, InRowName)
+	FT4QuestDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Quest, InRowName)
 	{
 	}
 
-	FORCEINLINE FT4GameDBKey operator=(const FT4ContentDBKey& InRhs)
+	FORCEINLINE FT4GameDBKey operator=(const FT4QuestDBKey& InRhs)
 	{
 		RowName = InRhs.RowName;
 		return *this;
 	}
 
-	FORCEINLINE FT4ContentDBKey operator=(const FT4GameDBKey& InRhs)
+	FORCEINLINE FT4QuestDBKey operator=(const FT4GameDBKey& InRhs)
 	{
 		RowName = InRhs.RowName;
 		return *this;
@@ -713,6 +724,80 @@ public:
 	}
 
 	FORCEINLINE FT4EffectStatDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #164
+USTRUCT()
+struct FT4RewardDBKey : public FT4GameDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4RewardDBKey()
+		: FT4GameDBKey(ET4GameDBType::Reward)
+	{
+	}
+
+	FT4RewardDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Reward, InRowName)
+	{
+	}
+
+	FT4RewardDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4GameDBKey(ET4GameDBType::Reward, InGameDBKey.RowName)
+	{
+		ensure(ET4GameDBType::Reward == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4RewardDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4RewardDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #164
+USTRUCT()
+struct FT4TextDBKey : public FT4GameDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4TextDBKey()
+		: FT4GameDBKey(ET4GameDBType::Text)
+	{
+	}
+
+	FT4TextDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Text, InRowName)
+	{
+	}
+
+	FT4TextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4GameDBKey(ET4GameDBType::Text, InGameDBKey.RowName)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4TextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4TextDBKey operator=(const FT4GameDBKey& InRhs)
 	{
 		RowName = InRhs.RowName;
 		return *this;

@@ -11,8 +11,8 @@
  */
  // #T4_ADD_PACKET_TAG_CS
 
-// ET4GamePacketCS::CmdContentStart // #146
-// ET4GamePacketCS::CmdContentCompleted // #164
+// ET4GamePacketCS::CmdQuestStart // #146
+// ET4GamePacketCS::CmdQuestFinish // #164
 
 // ET4GamePacketCS::CmdWorldTravel
 // ET4GamePacketCS::CmdWorldTimeSync // #146
@@ -31,7 +31,7 @@
 // ET4GamePacketCS::CmdBookmark // #140
 
 USTRUCT()
-struct FT4GamePacketCS_CmdContentStart : public FT4GamePacketCS_Base
+struct FT4GamePacketCS_CmdQuestStart : public FT4GamePacketCS_Base
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -40,23 +40,23 @@ public:
 	FT4ObjectID SenderID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ContentDBKey ContentDBKey;
+	FT4QuestDBKey QuestDBKey;
 
 public:
-	FT4GamePacketCS_CmdContentStart()
-		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdContentStart)
+	FT4GamePacketCS_CmdQuestStart()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdQuestStart)
 	{
 	}
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:CmdContentStart"));
+		return FString(TEXT("CS_Packet:CmdQuestStart"));
 	}
 };
 
 // #164
 USTRUCT()
-struct FT4GamePacketCS_CmdContentCompleted : public FT4GamePacketCS_Base
+struct FT4GamePacketCS_CmdQuestFinish : public FT4GamePacketCS_Base
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -65,28 +65,18 @@ public:
 	FT4ObjectID SenderID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	ET4GameQuestTarget QuestTarget;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	ET4GameQuestResult QuestResult;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ContentDBKey ParamContentDBKey;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FGuid ParamQuestKey;
+	bool bFinishAll;
 
 public:
-	FT4GamePacketCS_CmdContentCompleted()
-		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdContentCompleted)
-		, QuestTarget(ET4GameQuestTarget::None) // #146
-		, QuestResult(ET4GameQuestResult::None) // #146
+	FT4GamePacketCS_CmdQuestFinish()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdQuestFinish)
+		, bFinishAll(true)
 	{
 	}
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:CmdContentCompleted"));
+		return FString(TEXT("CS_Packet:CmdQuestFinish"));
 	}
 };
 

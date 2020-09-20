@@ -166,7 +166,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version_MetaData[] = {
-		{ "Category", "Common" },
+		{ "Category", "Hide" },
 		{ "Comment", "// #T4_ADD_STAT_CONTENT_TAG\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#T4_ADD_STAT_CONTENT_TAG" },
@@ -212,7 +212,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 1195189544U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 23862319U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -22,9 +22,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = UI)
 	FText UI_Title_Text; // #164
 
-	UPROPERTY(EditAnywhere, Category = UI)
-	FText UI_Body_Text; // #164
-
 	UPROPERTY(VisibleAnywhere, Category = Hide)
 	FName FolderName; // #122
 

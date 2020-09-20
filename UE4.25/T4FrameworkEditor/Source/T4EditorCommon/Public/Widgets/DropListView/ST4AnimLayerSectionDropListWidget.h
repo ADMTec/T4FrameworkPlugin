@@ -33,7 +33,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		TSharedRef<FT4EditorViewTargetSelector> InViewTargetSelector, // #131 : Valid Check
-		FName InContentTableName
+		FName InQuestTableName
 	);
 
 	void Construct(
@@ -45,7 +45,7 @@ public:
 	void Construct(
 		const FArguments& InArgs,
 		const TArray<FT4AnimsetAnimSequenceData>* InSelectArray,
-		FName InContentTableName
+		FName InQuestTableName
 	);
 
 	void Construct(
@@ -71,7 +71,7 @@ private:
 
 	bool bUseAdditive; // #138
 
-	FName ContentTableName;
+	FName QuestTableName;
 	TWeakPtr<FT4EditorViewTargetSelector> ViewTargetSelector;
 	const TArray<FT4AnimsetAnimSequenceData>* AnimSequenceArrayRef; // #107
 

@@ -21,10 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameAttackType();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameChainCallFunction();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestResult();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestRule();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestType();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestTarget();
 // End Cross Module References
 	static UEnum* ET4GameSkillSetPlayMode_StaticEnum()
@@ -500,54 +498,52 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		}
 		return ReturnEnum;
 	}
-	static UEnum* ET4GameChainCallFunction_StaticEnum()
+	static UEnum* ET4GameMissionRule_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
 		if (!Singleton)
 		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameChainCallFunction, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameChainCallFunction"));
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameMissionRule, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameMissionRule"));
 		}
 		return Singleton;
 	}
-	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameChainCallFunction>()
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameMissionRule>()
 	{
-		return ET4GameChainCallFunction_StaticEnum();
+		return ET4GameMissionRule_StaticEnum();
 	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameChainCallFunction(ET4GameChainCallFunction_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameChainCallFunction"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameChainCallFunction_Hash() { return 4235756426U; }
-	UEnum* Z_Construct_UEnum_T4GameData_ET4GameChainCallFunction()
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameMissionRule(ET4GameMissionRule_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameMissionRule"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameMissionRule_Hash() { return 1205815299U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameChainCallFunction"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameChainCallFunction_Hash(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameMissionRule"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameMissionRule_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameChainCallFunction::ImmediateCall", (int64)ET4GameChainCallFunction::ImmediateCall },
-				{ "ET4GameChainCallFunction::CallAfterCompletion", (int64)ET4GameChainCallFunction::CallAfterCompletion },
-				{ "ET4GameChainCallFunction::None", (int64)ET4GameChainCallFunction::None },
+				{ "ET4GameMissionRule::Spawn_All", (int64)ET4GameMissionRule::Spawn_All },
+				{ "ET4GameMissionRule::Spawn_Target", (int64)ET4GameMissionRule::Spawn_Target },
+				{ "ET4GameMissionRule::None", (int64)ET4GameMissionRule::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
-				{ "CallAfterCompletion.DisplayName", "Call After Completion" },
-				{ "CallAfterCompletion.Name", "ET4GameChainCallFunction::CallAfterCompletion" },
 				{ "Comment", "// #164\n" },
-				{ "ImmediateCall.DisplayName", "Immediate Call" },
-				{ "ImmediateCall.Name", "ET4GameChainCallFunction::ImmediateCall" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Name", "ET4GameChainCallFunction::None" },
+				{ "None.Name", "ET4GameMissionRule::None" },
+				{ "Spawn_All.Name", "ET4GameMissionRule::Spawn_All" },
+				{ "Spawn_Target.Name", "ET4GameMissionRule::Spawn_Target" },
 				{ "ToolTip", "#164" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
 				nullptr,
-				"ET4GameChainCallFunction",
-				"ET4GameChainCallFunction",
+				"ET4GameMissionRule",
+				"ET4GameMissionRule",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -559,160 +555,43 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		}
 		return ReturnEnum;
 	}
-	static UEnum* ET4GameQuestResult_StaticEnum()
+	static UEnum* ET4GameMissionType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
 		if (!Singleton)
 		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameQuestResult, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameQuestResult"));
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameMissionType, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameMissionType"));
 		}
 		return Singleton;
 	}
-	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestResult>()
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameMissionType>()
 	{
-		return ET4GameQuestResult_StaticEnum();
+		return ET4GameMissionType_StaticEnum();
 	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameQuestResult(ET4GameQuestResult_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameQuestResult"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameQuestResult_Hash() { return 1547523656U; }
-	UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestResult()
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameMissionType(ET4GameMissionType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameMissionType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameMissionType_Hash() { return 3723214171U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameQuestResult"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameQuestResult_Hash(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameMissionType"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameMissionType_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameQuestResult::Completed_By_QuestKey", (int64)ET4GameQuestResult::Completed_By_QuestKey },
-				{ "ET4GameQuestResult::Completed_By_ContentDBKey", (int64)ET4GameQuestResult::Completed_By_ContentDBKey },
-				{ "ET4GameQuestResult::Completed_All", (int64)ET4GameQuestResult::Completed_All },
-				{ "ET4GameQuestResult::None", (int64)ET4GameQuestResult::None },
+				{ "ET4GameMissionType::Kill", (int64)ET4GameMissionType::Kill },
+				{ "ET4GameMissionType::None", (int64)ET4GameMissionType::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "Comment", "// #164\n" },
-				{ "Completed_All.Name", "ET4GameQuestResult::Completed_All" },
-				{ "Completed_By_ContentDBKey.Name", "ET4GameQuestResult::Completed_By_ContentDBKey" },
-				{ "Completed_By_QuestKey.Name", "ET4GameQuestResult::Completed_By_QuestKey" },
-				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Name", "ET4GameQuestResult::None" },
-				{ "ToolTip", "#164" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
-				nullptr,
-				"ET4GameQuestResult",
-				"ET4GameQuestResult",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* ET4GameQuestRule_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameQuestRule, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameQuestRule"));
-		}
-		return Singleton;
-	}
-	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestRule>()
-	{
-		return ET4GameQuestRule_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameQuestRule(ET4GameQuestRule_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameQuestRule"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameQuestRule_Hash() { return 1210352574U; }
-	UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestRule()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameQuestRule"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameQuestRule_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameQuestRule::QuestSpawn_All", (int64)ET4GameQuestRule::QuestSpawn_All },
-				{ "ET4GameQuestRule::QuestSpawn_Target", (int64)ET4GameQuestRule::QuestSpawn_Target },
-				{ "ET4GameQuestRule::None", (int64)ET4GameQuestRule::None },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "Comment", "// #164\n" },
-				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Name", "ET4GameQuestRule::None" },
-				{ "QuestSpawn_All.Name", "ET4GameQuestRule::QuestSpawn_All" },
-				{ "QuestSpawn_Target.Name", "ET4GameQuestRule::QuestSpawn_Target" },
-				{ "ToolTip", "#164" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
-				nullptr,
-				"ET4GameQuestRule",
-				"ET4GameQuestRule",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* ET4GameQuestType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameQuestType, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameQuestType"));
-		}
-		return Singleton;
-	}
-	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestType>()
-	{
-		return ET4GameQuestType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameQuestType(ET4GameQuestType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameQuestType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameQuestType_Hash() { return 1971171041U; }
-	UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameQuestType"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameQuestType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameQuestType::Kill", (int64)ET4GameQuestType::Kill },
-				{ "ET4GameQuestType::None", (int64)ET4GameQuestType::None },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "Comment", "// #164\n" },
-				{ "Kill.DisplayName", "Kill Quests" },
-				{ "Kill.Name", "ET4GameQuestType::Kill" },
+				{ "Kill.Name", "ET4GameMissionType::Kill" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
 				{ "None.Comment", "//Talk,\n//Combo,\n//Delivery,\n//Escort,\n//Gather,\n" },
-				{ "None.Name", "ET4GameQuestType::None" },
+				{ "None.Name", "ET4GameMissionType::None" },
 				{ "None.ToolTip", "Talk,\nCombo,\nDelivery,\nEscort,\nGather," },
 				{ "ToolTip", "#164" },
 			};
@@ -720,8 +599,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
 				nullptr,
-				"ET4GameQuestType",
-				"ET4GameQuestType",
+				"ET4GameMissionType",
+				"ET4GameMissionType",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -747,7 +626,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		return ET4GameQuestTarget_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameQuestTarget(ET4GameQuestTarget_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameQuestTarget"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameQuestTarget_Hash() { return 1623452442U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameQuestTarget_Hash() { return 2941042570U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestTarget()
 	{
 #if WITH_HOT_RELOAD
@@ -759,21 +638,15 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameQuestTarget::World", (int64)ET4GameQuestTarget::World },
 				{ "ET4GameQuestTarget::Personal", (int64)ET4GameQuestTarget::Personal },
-				{ "ET4GameQuestTarget::PlayerAll", (int64)ET4GameQuestTarget::PlayerAll },
-				{ "ET4GameQuestTarget::None", (int64)ET4GameQuestTarget::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "Comment", "/**\n  * #148\n */// #164\n" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Name", "ET4GameQuestTarget::None" },
 				{ "Personal.Name", "ET4GameQuestTarget::Personal" },
-				{ "PlayerAll.Name", "ET4GameQuestTarget::PlayerAll" },
 				{ "ToolTip", "#148\n // #164" },
-				{ "World.Name", "ET4GameQuestTarget::World" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

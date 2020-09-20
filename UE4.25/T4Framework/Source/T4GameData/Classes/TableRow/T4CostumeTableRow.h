@@ -19,7 +19,7 @@ struct FT4CostumeTableRow : public FT4ItemTableRowBase
 public:
 	// FT4CostumeDBRowDetails::CustomizeDetails
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -38,8 +38,17 @@ public:
 	FName ExchangePartName;
 
 public:
+	enum EVersion
+	{
+		InitializeVer = 0,
+
+		// -----<new versions can be added above this line>-------------------------------------------------
+		VersionPlusOne,
+		LatestVersion = VersionPlusOne - 1,
+	};
+
 	FT4CostumeTableRow()
-		: Version(0) // #135
+		: Version(EVersion::LatestVersion) // #135
 	{
 	}
 };

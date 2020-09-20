@@ -15,10 +15,9 @@
 static const FName T4Const_GameModeLayoutWidgetName = TEXT("Default"); // #164
 static const FName T4Const_QuestInfoWidgetName = TEXT("QuestInfo"); // #164
 
-static const FName T4Const_QuestInfoWidgetStartTitleText = TEXT("QuestStartTitle"); // #164
-static const FName T4Const_QuestInfoWidgetCompletedTitleText = TEXT("QuestCompletedTitle"); // #164
-static const FName T4Const_QuestInfoWidgetSubTitleText = TEXT("QuestSubTitle"); // #164
-static const FName T4Const_QuestInfoWidgetSubBodyText = TEXT("QuestSubBody"); // #164
+static const FName T4Const_QuestWidgetQueTitleText = TEXT("QuestTitle"); // #164
+static const FName T4Const_QuestWidgetMissionTitleText = TEXT("MissionTitle"); // #164
+static const FName T4Const_QuestWidgetActiveMissionsText = TEXT("ActiveMissions"); // #164
 
 class UUserWidget;
 class AController;

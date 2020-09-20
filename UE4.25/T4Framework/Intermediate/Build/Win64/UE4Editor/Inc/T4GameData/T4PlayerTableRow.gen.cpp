@@ -172,7 +172,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UID = { "UID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, UID), Z_Construct_UScriptStruct_FT4GameUID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_Version_MetaData[] = {
-		{ "Category", "Common" },
+		{ "Category", "Hide" },
 		{ "Comment", "// FT4PlayerDBRowDetails::CustomizeDetails\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "FT4PlayerDBRowDetails::CustomizeDetails" },
@@ -219,7 +219,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 551715103U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 982690565U; }
 class UScriptStruct* FT4PlayerLocomotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
