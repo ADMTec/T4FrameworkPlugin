@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.48)
+# T4FrameworkPlugin (v0.9.48_1)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,7 +20,8 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.48** : 2020.09.20
+  - **v0.9.48_1** : 2020.09.20
+    - #164 [버그수정] NPC AI 가 동작하지 않던 문제 수정 (HOTFIX 1)
 	- #164 [기능추가] Quest Editor 추가
       - Quest 및 Mission 를 BehaviorTree 형식의 QuestFlow 를 통한 설정 지원 (T4QuestFlowAsset)
 	  - Content Editor 의 뷰포트를 통한 Quest 테스트 지원
