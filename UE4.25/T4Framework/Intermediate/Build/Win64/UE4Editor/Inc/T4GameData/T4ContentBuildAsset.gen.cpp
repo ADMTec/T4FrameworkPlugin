@@ -14,9 +14,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4ContentBuildAsset() {}
 // Cross Module References
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ContentSpawnLayerData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnLayerData();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
-	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentBuildAsset_NoRegister();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentBuildAsset();
@@ -25,29 +25,29 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentBuildAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorTestAutomationData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldDBKey();
 // End Cross Module References
-class UScriptStruct* FT4ContentSpawnLayerData::StaticStruct()
+class UScriptStruct* FT4SpawnLayerData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4ContentSpawnLayerData"), sizeof(FT4ContentSpawnLayerData), Get_Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Hash());
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4SpawnLayerData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4SpawnLayerData"), sizeof(FT4SpawnLayerData), Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4ContentSpawnLayerData>()
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4SpawnLayerData>()
 {
-	return FT4ContentSpawnLayerData::StaticStruct();
+	return FT4SpawnLayerData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ContentSpawnLayerData(FT4ContentSpawnLayerData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4ContentSpawnLayerData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayerData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4SpawnLayerData(FT4SpawnLayerData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4SpawnLayerData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData
 {
-	FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayerData()
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ContentSpawnLayerData")),new UScriptStruct::TCppStructOps<FT4ContentSpawnLayerData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4SpawnLayerData")),new UScriptStruct::TCppStructOps<FT4SpawnLayerData>);
 	}
-} ScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayerData;
-	struct Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData;
+	struct Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -68,9 +68,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayer
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Description;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ContentSpawnAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ContentSpawnAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_SpawnAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WorldTimeTag_MetaData[];
 #endif
@@ -89,107 +89,107 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayer
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::Struct_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ContentSpawnLayerData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4SpawnLayerData>();
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_FolderName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_FolderName_MetaData[] = {
 		{ "Category", "Hide" },
 		{ "Comment", "// #122\n" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 		{ "ToolTip", "#122" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_FolderName = { "FolderName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, FolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_FolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_FolderName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_FolderName = { "FolderName", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, FolderName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_FolderName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_FolderName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ParentID_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ParentID_MetaData[] = {
 		{ "Category", "Hide" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ParentID = { "ParentID", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, ParentID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ParentID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ParentID_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ParentID = { "ParentID", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, ParentID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ParentID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ParentID_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Description_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Description_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Description_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ContentSpawnAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ContentSpawnAsset = { "ContentSpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, ContentSpawnAsset), Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ContentSpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ContentSpawnAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset = { "SpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, SpawnAsset), Z_Construct_UClass_UT4SpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_WorldTimeTag = { "WorldTimeTag", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, WorldTimeTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag = { "WorldTimeTag", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, WorldTimeTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Guid_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Guid_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ID_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ID = { "ID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ContentSpawnLayerData, ID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::PropPointers[] = {
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID = { "ID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, ID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_FolderName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ParentID,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Description,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_FolderName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ParentID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Description,
 #endif // WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ContentSpawnAsset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_WorldTimeTag,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_Guid,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::NewProp_ID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
 		nullptr,
 		&NewStructOps,
-		"T4ContentSpawnLayerData",
-		sizeof(FT4ContentSpawnLayerData),
-		alignof(FT4ContentSpawnLayerData),
-		Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::PropPointers),
+		"T4SpawnLayerData",
+		sizeof(FT4SpawnLayerData),
+		alignof(FT4SpawnLayerData),
+		Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4ContentSpawnLayerData()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnLayerData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ContentSpawnLayerData"), sizeof(FT4ContentSpawnLayerData), Get_Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4SpawnLayerData"), sizeof(FT4SpawnLayerData), Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Hash() { return 2860518965U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash() { return 3494045101U; }
 	void UT4ContentBuildAsset::StaticRegisterNativesUT4ContentBuildAsset()
 	{
 	}
@@ -264,7 +264,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayer
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_SpawnLayerArray = { "SpawnLayerArray", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ContentBuildAsset, SpawnLayerArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_SpawnLayerArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_SpawnLayerArray_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_SpawnLayerArray_Inner = { "SpawnLayerArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4ContentSpawnLayerData, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_SpawnLayerArray_Inner = { "SpawnLayerArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4SpawnLayerData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentBuildAsset_Statics::NewProp_WorldDBKey_MetaData[] = {
 		{ "Category", "Editor" },
@@ -308,7 +308,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ContentSpawnLayer
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ContentBuildAsset, 3123499228);
+	IMPLEMENT_CLASS(UT4ContentBuildAsset, 2960121831);
 	template<> T4GAMEDATA_API UClass* StaticClass<UT4ContentBuildAsset>()
 	{
 		return UT4ContentBuildAsset::StaticClass();

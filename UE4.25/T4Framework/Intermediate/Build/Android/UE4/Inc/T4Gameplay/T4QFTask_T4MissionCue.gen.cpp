@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_UT4QFTask_T4MissionCue();
 	AIMODULE_API UClass* Z_Construct_UClass_UBTTaskNode();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
-	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
@@ -125,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset = { "MissionSpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionCue, MissionSpawnAsset), Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset = { "MissionSpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionCue, MissionSpawnAsset), Z_Construct_UClass_UT4SpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionRule_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QFTask_T4MissionCue, 1235212185);
+	IMPLEMENT_CLASS(UT4QFTask_T4MissionCue, 1361820057);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4QFTask_T4MissionCue>()
 	{
 		return UT4QFTask_T4MissionCue::StaticClass();

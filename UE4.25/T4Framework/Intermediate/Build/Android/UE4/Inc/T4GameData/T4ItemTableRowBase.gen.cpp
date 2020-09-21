@@ -16,7 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ItemTableRowBase() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ItemTableRowBase();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
-	AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister();
 // End Cross Module References
 class UScriptStruct* FT4ItemTableRowBase::StaticStruct()
 {
@@ -47,9 +47,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ItemTableRowBase
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorTreePath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorFlowAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_BehaviorTreePath;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_BehaviorFlowAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -63,14 +63,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ItemTableRowBase
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ItemTableRowBase>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorTreePath_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorFlowAsset_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4ItemTableRowBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorTreePath = { "BehaviorTreePath", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ItemTableRowBase, BehaviorTreePath), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorTreePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorTreePath_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorFlowAsset = { "BehaviorFlowAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ItemTableRowBase, BehaviorFlowAsset), Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorFlowAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorFlowAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorTreePath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::NewProp_BehaviorFlowAsset,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ItemTableRowBase_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
@@ -100,7 +100,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4ItemTableRowBase
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ItemTableRowBase_Hash() { return 2099911401U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ItemTableRowBase_Hash() { return 4031365600U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

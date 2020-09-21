@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4GameData/Classes/Quest/T4QuestFlowAsset.h"
+#include "T4GameData/Classes/Content/T4QuestFlowAsset.h"
 #include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -51,14 +51,14 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowAsset() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowAsset_Statics::Class_MetaDataParams[] = {
 		{ "Category", "T4Framework" },
 		{ "ClassGroupNames", "T4Framework" },
-		{ "IncludePath", "Quest/T4QuestFlowAsset.h" },
-		{ "ModuleRelativePath", "Classes/Quest/T4QuestFlowAsset.h" },
+		{ "IncludePath", "Content/T4QuestFlowAsset.h" },
+		{ "ModuleRelativePath", "Classes/Content/T4QuestFlowAsset.h" },
 	};
 #endif
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
-		{ "ModuleRelativePath", "Classes/Quest/T4QuestFlowAsset.h" },
+		{ "ModuleRelativePath", "Classes/Content/T4QuestFlowAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4QuestFlowAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QuestFlowAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4QuestFlowAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QuestFlowAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QuestFlowAsset, 2547043213);
+	IMPLEMENT_CLASS(UT4QuestFlowAsset, 1834607010);
 	template<> T4GAMEDATA_API UClass* StaticClass<UT4QuestFlowAsset>()
 	{
 		return UT4QuestFlowAsset::StaticClass();

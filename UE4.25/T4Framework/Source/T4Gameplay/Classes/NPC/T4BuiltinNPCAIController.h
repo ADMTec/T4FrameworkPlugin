@@ -14,10 +14,10 @@
   * WARN : AI Controller 는 서버에서만 사용하고, 클라리언트에서는 사용하지 않음에 유의할 것!
   * #114
  */
-class UBehaviorTree;
+class UT4BehaviorFlowAsset;
 class IT4WorldActor;
 class UT4NPCServerObject;
-class FT4BehaviorTreeAssetLoader;
+class FT4BehaviorFlowAssetLoader;
 UCLASS()
 class T4GAMEPLAY_API AT4BuiltinNPCAIController : public AT4AIControllerBase
 {
@@ -49,9 +49,9 @@ private:
 
 private:
 	ET4AIDataLoadState AIDataLoadState; // #50 // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
-	FT4BehaviorTreeAssetLoader* BehaviorTreeAssetLoader; // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
+	FT4BehaviorFlowAssetLoader* BehaviorFlowAssetLoader; // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
 
 	/* Cached BT component */
 	UPROPERTY(transient)
-	UBehaviorTree* BehaviorTreeAsset;
+	UT4BehaviorFlowAsset* BehaviorFlowAsset;
 };

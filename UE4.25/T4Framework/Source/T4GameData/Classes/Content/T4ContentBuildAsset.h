@@ -27,15 +27,15 @@ private:
 	FT4ContentBuildVersion() {}
 };
 
-class UT4ContentSpawnAsset;
+class UT4SpawnAsset;
 
 USTRUCT()
-struct T4GAMEDATA_API FT4ContentSpawnLayerData
+struct T4GAMEDATA_API FT4SpawnLayerData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4ContentSpawnLayerData()
+	FT4SpawnLayerData()
 		: WorldTimeTag(NAME_None)
 #if WITH_EDITORONLY_DATA
 		, ParentID(NAME_None) // #122
@@ -49,7 +49,7 @@ public:
 		return (ID == InKey) ? true : false;
 	}
 
-	FORCEINLINE bool operator==(const FT4ContentSpawnLayerData& InRhs) const
+	FORCEINLINE bool operator==(const FT4SpawnLayerData& InRhs) const
 	{
 		return (ID == InRhs.ID) ? true : false;
 	}
@@ -64,7 +64,7 @@ public:
 	FName WorldTimeTag;
 	
 	UPROPERTY(EditAnywhere, Category = Editor)
-	TSoftObjectPtr<UT4ContentSpawnAsset> ContentSpawnAsset;
+	TSoftObjectPtr<UT4SpawnAsset> SpawnAsset;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
@@ -99,7 +99,7 @@ public:
 	FT4WorldDBKey WorldDBKey;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	TArray<FT4ContentSpawnLayerData> SpawnLayerArray;
+	TArray<FT4SpawnLayerData> SpawnLayerArray;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)

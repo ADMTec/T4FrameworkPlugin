@@ -11,7 +11,7 @@
 /**
   * #164
  */
-class UT4ContentSpawnAsset;
+class UT4SpawnAsset;
 class UBehaviorTreeComponent;
 UCLASS(hidecategories = (Task))
 class T4GAMEPLAY_API UT4QFTask_T4MissionCue : public UBTTaskNode
@@ -35,7 +35,7 @@ public:
 	ET4GameMissionRule MissionRule; // #164
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4ContentSpawnAsset> MissionSpawnAsset;
+	TSoftObjectPtr<UT4SpawnAsset> MissionSpawnAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	bool bApplyTimeSync;

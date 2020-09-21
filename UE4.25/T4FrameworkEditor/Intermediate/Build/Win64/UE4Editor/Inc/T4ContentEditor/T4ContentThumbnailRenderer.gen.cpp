@@ -17,8 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4ContentBuildThumbnailRenderer();
 	T4EDITORCOMMON_API UClass* Z_Construct_UClass_UT4EditorThumbnailRenderer();
 	UPackage* Z_Construct_UPackage__Script_T4ContentEditor();
-	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_NoRegister();
-	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer();
+	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer_NoRegister();
+	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer();
 // End Cross Module References
 	void UT4ContentBuildThumbnailRenderer::StaticRegisterNativesUT4ContentBuildThumbnailRenderer()
 	{
@@ -81,14 +81,14 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4ContentBuildThumbnailRenderer(Z_Construct_UClass_UT4ContentBuildThumbnailRenderer, &UT4ContentBuildThumbnailRenderer::StaticClass, TEXT("/Script/T4ContentEditor"), TEXT("UT4ContentBuildThumbnailRenderer"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4ContentBuildThumbnailRenderer);
-	void UT4ContentSpawnThumbnailRenderer::StaticRegisterNativesUT4ContentSpawnThumbnailRenderer()
+	void UT4SpawnThumbnailRenderer::StaticRegisterNativesUT4SpawnThumbnailRenderer()
 	{
 	}
-	UClass* Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_NoRegister()
+	UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer_NoRegister()
 	{
-		return UT4ContentSpawnThumbnailRenderer::StaticClass();
+		return UT4SpawnThumbnailRenderer::StaticClass();
 	}
-	struct Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics
+	struct Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
@@ -97,21 +97,21 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
-	UObject* (*const Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::DependentSingletons[])() = {
+	UObject* (*const Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UT4EditorThumbnailRenderer,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4ContentEditor,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::Class_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Utility/T4ContentThumbnailRenderer.h" },
 		{ "ModuleRelativePath", "Private/Utility/T4ContentThumbnailRenderer.h" },
 	};
 #endif
-	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<UT4ContentSpawnThumbnailRenderer>::IsAbstract,
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UT4SpawnThumbnailRenderer>::IsAbstract,
 	};
-	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::ClassParams = {
-		&UT4ContentSpawnThumbnailRenderer::StaticClass,
+	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::ClassParams = {
+		&UT4SpawnThumbnailRenderer::StaticClass,
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
@@ -123,24 +123,24 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::Class_MetaDataParams))
 	};
-	UClass* Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer()
+	UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer()
 	{
 		static UClass* OuterClass = nullptr;
 		if (!OuterClass)
 		{
-			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer_Statics::ClassParams);
+			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4SpawnThumbnailRenderer_Statics::ClassParams);
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ContentSpawnThumbnailRenderer, 1543739942);
-	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4ContentSpawnThumbnailRenderer>()
+	IMPLEMENT_CLASS(UT4SpawnThumbnailRenderer, 1929935887);
+	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4SpawnThumbnailRenderer>()
 	{
-		return UT4ContentSpawnThumbnailRenderer::StaticClass();
+		return UT4SpawnThumbnailRenderer::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4ContentSpawnThumbnailRenderer(Z_Construct_UClass_UT4ContentSpawnThumbnailRenderer, &UT4ContentSpawnThumbnailRenderer::StaticClass, TEXT("/Script/T4ContentEditor"), TEXT("UT4ContentSpawnThumbnailRenderer"), false, nullptr, nullptr, nullptr);
-	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4ContentSpawnThumbnailRenderer);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4SpawnThumbnailRenderer(Z_Construct_UClass_UT4SpawnThumbnailRenderer, &UT4SpawnThumbnailRenderer::StaticClass, TEXT("/Script/T4ContentEditor"), TEXT("UT4SpawnThumbnailRenderer"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4SpawnThumbnailRenderer);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode_Composite.h"
+#include "T4ContentEditor/Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Composite.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode_Composite() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraphNode_Composite_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode_Composite.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode_Composite.h" },
+		{ "IncludePath", "SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Composite.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Composite.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4QuestFlowGraphNode_Composite_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode_Composite() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QuestFlowGraphNode_Composite, 2214058297);
+	IMPLEMENT_CLASS(UT4QuestFlowGraphNode_Composite, 3002330347);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4QuestFlowGraphNode_Composite>()
 	{
 		return UT4QuestFlowGraphNode_Composite::StaticClass();

@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ContentWorldSettings();
-	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4QuestFlowAsset_NoRegister();
@@ -140,7 +140,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset = { "QuestSpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, QuestSpawnAsset), Z_Construct_UClass_UT4ContentSpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset = { "QuestSpawnAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, QuestSpawnAsset), Z_Construct_UClass_UT4SpawnAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestSpawnAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_QuestMissionRule_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -260,7 +260,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4QuestTableRow_Hash() { return 1648623774U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4QuestTableRow_Hash() { return 317581240U; }
 class UScriptStruct* FT4ContentWorldSettings::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

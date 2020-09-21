@@ -61,7 +61,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AT4BuiltinNPCAIController); \
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_NPC_T4BuiltinNPCAIController_h_24_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__BehaviorTreeAsset() { return STRUCT_OFFSET(AT4BuiltinNPCAIController, BehaviorTreeAsset); }
+	FORCEINLINE static uint32 __PPO__BehaviorFlowAsset() { return STRUCT_OFFSET(AT4BuiltinNPCAIController, BehaviorFlowAsset); }
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_NPC_T4BuiltinNPCAIController_h_21_PROLOG

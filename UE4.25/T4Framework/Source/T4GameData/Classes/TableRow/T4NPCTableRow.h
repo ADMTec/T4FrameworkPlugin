@@ -15,7 +15,7 @@
 /**
   * http://api.unrealengine.com/KOR/Gameplay/DataDriven/
  */
-class UBehaviorTree;
+class UT4BehaviorFlowAsset;
 class UT4ActorEntityAsset;
 
 USTRUCT()
@@ -144,7 +144,7 @@ public:
 	FT4EffectSetDBKey InitializeEffectSetDBKey; // #142 : 피격 효과(Effect)를 처리할 자신의 EffectSet 설정
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UBehaviorTree> BehaviorTreeAsset;
+	TSoftObjectPtr<UT4BehaviorFlowAsset> BehaviorFlowAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4NPCBehaviorData BehaviorData; // #50
@@ -154,9 +154,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FName InitializeSkinName; // #135
-
-	UPROPERTY()
-	TSoftObjectPtr<UBehaviorTree> BehaviorTreePath_DEPRECATED; // #164 : 이후 삭제
 
 public:
 	enum EVersion

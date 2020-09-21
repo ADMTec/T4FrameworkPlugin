@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode.h"
+#include "T4ContentEditor/Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -51,14 +51,14 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraphNode_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode.h" },
+		{ "IncludePath", "SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraphNode_Statics::NewProp_bInjectedNode_MetaData[] = {
 		{ "Comment", "/** if set, this node was injected from subtree and shouldn't be edited */" },
-		{ "ModuleRelativePath", "Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode.h" },
 		{ "ToolTip", "if set, this node was injected from subtree and shouldn't be edited" },
 	};
 #endif
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraphNode_Statics::NewProp_Services_MetaData[] = {
 		{ "Comment", "/** only some of Mission tree nodes support services */" },
-		{ "ModuleRelativePath", "Private/SubEditor/Quest/QuestFlow/T4QuestFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode.h" },
 		{ "ToolTip", "only some of Mission tree nodes support services" },
 	};
 #endif
@@ -108,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QuestFlowGraphNode, 3504668519);
+	IMPLEMENT_CLASS(UT4QuestFlowGraphNode, 1621365268);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4QuestFlowGraphNode>()
 	{
 		return UT4QuestFlowGraphNode::StaticClass();

@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAIController() {}
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_AT4BuiltinNPCAIController();
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4AIControllerBase();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
-	AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister();
 // End Cross Module References
 	void AT4BuiltinNPCAIController::StaticRegisterNativesAT4BuiltinNPCAIController()
 	{
@@ -33,9 +33,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAIController() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorTreeAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorFlowAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BehaviorTreeAsset;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BehaviorFlowAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -52,15 +52,15 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAIController() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorTreeAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorFlowAsset_MetaData[] = {
 		{ "Comment", "/* Cached BT component */" },
 		{ "ModuleRelativePath", "Classes/NPC/T4BuiltinNPCAIController.h" },
 		{ "ToolTip", "Cached BT component" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorTreeAsset = { "BehaviorTreeAsset", nullptr, (EPropertyFlags)0x0040000000002000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4BuiltinNPCAIController, BehaviorTreeAsset), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorTreeAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorTreeAsset_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorFlowAsset = { "BehaviorFlowAsset", nullptr, (EPropertyFlags)0x0040000000002000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AT4BuiltinNPCAIController, BehaviorFlowAsset), Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorFlowAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorFlowAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorTreeAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::NewProp_BehaviorFlowAsset,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AT4BuiltinNPCAIController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AT4BuiltinNPCAIController>::IsAbstract,
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinNPCAIController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinNPCAIController, 2612487630);
+	IMPLEMENT_CLASS(AT4BuiltinNPCAIController, 2728683330);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinNPCAIController>()
 	{
 		return AT4BuiltinNPCAIController::StaticClass();

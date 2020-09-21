@@ -2,6 +2,12 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.49 : 2020.09.21
+  - #164 [기능개선] Content Editor, 에디터 종료 시 ShowMenu 의 마지막 설정을 저장, 복원할 수 있도록 기능 개선
+  - #164 [기능개선] Content Editor, 플레이어가 스폰 되어 있을 경우 ShowMenu 의 EditMode 사용 시 자동으로 FreeCamera 로 전환, 복원되도록 수정
+  - #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 변경이 GameDB List 의 Colume 에 즉시 반영되지 않던 문제 수정
+  - #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 프로퍼티가 비정상적인 위치에 출력되던 문제 수정
+  - #164 [버그수정] Content Editor, SpawnObject 의 Waypoint 편집중 SpawnLayer 를 변경할 경우 Waypoint Anchor 가 사라지지 않던 문제 수정
 - v0.9.48_1 : 2020.09.20
   - #164 [버그수정] NPC AI 가 동작하지 않던 문제 수정 (HOTFIX 1)
   - #164 [기능추가] Quest Editor 추가

@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define T4GAMEDATA_T4ContentBuildAsset_generated_h
 
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_Content_T4ContentBuildAsset_h_35_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4ContentSpawnLayerData_Statics; \
+	friend struct Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4ContentSpawnLayerData>();
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4SpawnLayerData>();
 
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_Content_T4ContentBuildAsset_h_85_SPARSE_DATA
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_Content_T4ContentBuildAsset_h_85_RPC_WRAPPERS

@@ -10,7 +10,7 @@
 /**
   * http://api.unrealengine.com/KOR/Gameplay/DataDriven/
  */
-class UBehaviorTree;
+class UT4BehaviorFlowAsset;
 USTRUCT()
 struct FT4ItemTableRowBase : public FT4TableRowBase
 {
@@ -18,7 +18,7 @@ struct FT4ItemTableRowBase : public FT4TableRowBase
 
 public:
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UBehaviorTree> BehaviorTreePath; // DropItem
+	TSoftObjectPtr<UT4BehaviorFlowAsset> BehaviorFlowAsset; // DropItem
 
 public:
 	FT4ItemTableRowBase()

@@ -23,7 +23,7 @@ struct FT4GameplayParameters // #158
 	FName ProjectGameContentName;
 };
 
-class UT4ContentSpawnAsset;
+class UT4SpawnAsset;
 class IT4PlayerController;
 class UT4GameClientObject;
 class T4GAMEPLAY_API FT4GameplayStatics
@@ -101,10 +101,10 @@ public:
 	); // #158
 
 #if WITH_EDITOR
-	bool DoSpawn(ET4LayerType InLayerType, UT4ContentSpawnAsset* InSpawnAsset); // #126
+	bool DoSpawn(ET4LayerType InLayerType, UT4SpawnAsset* InSpawnAsset); // #126
 	bool DoSpawnBy(
 		ET4LayerType InLayerType,
-		UT4ContentSpawnAsset* InSpawnAsset,
+		UT4SpawnAsset* InSpawnAsset,
 		const FName& InSpawnActorID,
 		const FT4ObjectID& InReservedObjectID
 	); // #126

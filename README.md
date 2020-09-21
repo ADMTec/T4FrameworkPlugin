@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.49)
+# T4FrameworkPlugin (v0.9.50)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,12 +20,10 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.49** : 2020.09.21
-	- #164 [기능개선] Content Editor, 에디터 종료 시 ShowMenu 의 마지막 설정을 저장, 복원할 수 있도록 기능 개선
-    - #164 [기능개선] Content Editor, 플레이어가 스폰 되어 있을 경우 ShowMenu 의 EditMode 사용 시 자동으로 FreeCamera 로 전환, 복원되도록 수정
-    - #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 변경이 GameDB List 의 Colume 에 즉시 반영되지 않던 문제 수정
-	- #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 프로퍼티가 비정상적인 위치에 출력되던 문제 수정
-	- #164 [버그수정] Content Editor, SpawnObject 의 Waypoint 편집중 SpawnLayer 를 변경할 경우 Waypoint Anchor 가 사라지지 않던 문제 수정
+  - **v0.9.50** : 2020.09.22
+	- #167 [기능개선] Content Editor, NPC AI BehaviorTree 제작을 위한 T4BehaviorEditor 추가
+	  - NPC AI 를 기존 UE4 의 BehaviorTree 에서 T4BehaviorFlowAsset 을 사용하도록 수정됨
+	  - WARN : UE4.25/Content 폴더 에셋 업데이트
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**
