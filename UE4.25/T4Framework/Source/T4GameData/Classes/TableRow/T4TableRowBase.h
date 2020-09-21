@@ -19,9 +19,6 @@ struct FT4TableRowBase : public FTableRowBase
 	GENERATED_USTRUCT_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, Category = UI)
-	FText UI_Title_Text; // #164
-
 	UPROPERTY(VisibleAnywhere, Category = Hide)
 	FName FolderName; // #122
 

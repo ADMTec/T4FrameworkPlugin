@@ -79,6 +79,9 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FT4EffectShapeData EffectShapeData; // #135
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)

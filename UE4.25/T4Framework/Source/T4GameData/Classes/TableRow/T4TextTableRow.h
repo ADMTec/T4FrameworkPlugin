@@ -24,7 +24,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4GameUID UID;
 
-	UPROPERTY(EditAnywhere, Category = UI)
+	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FText UI_Description_Text; // #164
 
 public:

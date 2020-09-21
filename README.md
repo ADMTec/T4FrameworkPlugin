@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.48_1)
+# T4FrameworkPlugin (v0.9.49)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,17 +20,12 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.48_1** : 2020.09.20
-    - #164 [버그수정] NPC AI 가 동작하지 않던 문제 수정 (HOTFIX 1)
-	- #164 [기능추가] Quest Editor 추가
-      - Quest 및 Mission 를 BehaviorTree 형식의 QuestFlow 를 통한 설정 지원 (T4QuestFlowAsset)
-	  - Content Editor 의 뷰포트를 통한 Quest 테스트 지원
-	  - 기존 Content GameDB 가 Quest GameDB 로 변경
-	  - Mission 에서 사용될 UI 용 Text 관리를 위한 Text GameDB 추가
-	  - WARN : UE4.25/Content 폴더 에셋 업데이트
-	- #164 [버그수정] 타겟팅 된 캐릭터로 발사되는 Projectile 이동이 정상적이지 않던 문제 수정
-    - #164 [버그수정] Content Editor, Player 재스폰 시 발생하던 크래시 수정
-	- #158 [버그수정] Action Editor, Clipboard 를 통한 Action 복사 시 SortOrder 가 바뀌던 문제 수정
+  - **v0.9.49** : 2020.09.21
+	- #164 [기능개선] Content Editor, 에디터 종료 시 ShowMenu 의 마지막 설정을 저장, 복원할 수 있도록 기능 개선
+    - #164 [기능개선] Content Editor, 플레이어가 스폰 되어 있을 경우 ShowMenu 의 EditMode 사용 시 자동으로 FreeCamera 로 전환, 복원되도록 수정
+    - #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 변경이 GameDB List 의 Colume 에 즉시 반영되지 않던 문제 수정
+	- #164 [버그수정] Content Editor, GameDB Details 의 UI_Title_Text 프로퍼티가 비정상적인 위치에 출력되던 문제 수정
+	- #164 [버그수정] Content Editor, SpawnObject 의 Waypoint 편집중 SpawnLayer 를 변경할 경우 Waypoint Anchor 가 사라지지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

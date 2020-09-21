@@ -65,7 +65,7 @@ public:
 	void OnDisplayEditorWorldModified(); // #83
 	void OnSubLevelSelection(const TArray<FName>& InSubLevelPackageNames, bool bFlushLevelStreaming); // #83, #86
 
-	void ToggleEditMode() { bEditModeEnabled = !bEditModeEnabled; } // #118
+	void ToggleEditMode(); // #118
 	bool IsEditModelEnabled() const { return bEditModeEnabled; } // #118
 
 	void ToggleEditWaypoints() { bEditWaypoints = !bEditWaypoints; } // #155

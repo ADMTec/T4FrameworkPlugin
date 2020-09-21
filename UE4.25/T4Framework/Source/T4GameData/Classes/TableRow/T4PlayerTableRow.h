@@ -60,6 +60,9 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)

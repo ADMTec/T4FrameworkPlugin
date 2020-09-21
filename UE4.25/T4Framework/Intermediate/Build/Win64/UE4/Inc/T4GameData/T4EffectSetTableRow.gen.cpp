@@ -68,6 +68,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectSetTableRow
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HitDBKey_Normal;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_Text_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_UI_Title_Text;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
@@ -127,6 +131,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectSetTableRow
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_HitDBKey_Normal = { "HitDBKey_Normal", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectSetTableRow, HitDBKey_Normal), Z_Construct_UScriptStruct_FT4EffectDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_HitDBKey_Normal_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_HitDBKey_Normal_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UI_Title_Text_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectSetTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UI_Title_Text = { "UI_Title_Text", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectSetTableRow, UI_Title_Text), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UI_Title_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UI_Title_Text_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectSetTableRow.h" },
@@ -148,6 +159,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectSetTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_AirborneDBKey_Normal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_KnockbackDBKey_Normal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_HitDBKey_Normal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UI_Title_Text,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectSetTableRow_Statics::NewProp_Version,
 	};
@@ -179,7 +191,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectSetTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectSetTableRow_Hash() { return 3267429756U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectSetTableRow_Hash() { return 1001643386U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

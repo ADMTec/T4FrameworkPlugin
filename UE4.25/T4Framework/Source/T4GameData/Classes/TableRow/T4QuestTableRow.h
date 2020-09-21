@@ -68,14 +68,17 @@ public:
 	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	UPROPERTY(EditAnywhere, Category = Common)
 	FT4GameUID UID;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Description_Text; // #164
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FGuid Guid;
-
-	UPROPERTY(EditAnywhere, Category = Editor)
-	FT4WorldDBKey WorldDBKey;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameQuestTarget QuestTarget; // #164
@@ -95,8 +98,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ContentWorldSettings WorldSettings;
 
-	UPROPERTY(EditAnywhere, Category = UI)
-	FText UI_Description_Text; // #164
+	UPROPERTY(EditAnywhere, Category = Editor)
+	FT4WorldDBKey WorldDBKey;
 
 public:
 	enum EVersion

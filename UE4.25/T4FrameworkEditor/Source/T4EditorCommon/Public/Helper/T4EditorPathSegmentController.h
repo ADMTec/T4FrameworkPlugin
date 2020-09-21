@@ -27,7 +27,7 @@ public:
 	FT4OnSelectionChanged& OnSelectionChanged() { return OnSelectionChangedDelegate; }  // #155 : PathSegmentDetails 에서 호출
 	FT4OnFocusChanged& OnFocusChanged() { return OnFocusChangedDelegate; }  // #155 : PathSegmentDetails 에서 호출
 
-	void Reset();
+	void Reset() { SetData(nullptr); PathSegmentIndex = INDEX_NONE; }
 
 	void SetData(UT4PathSegmentAsset* InPathSegmentAsset);
 

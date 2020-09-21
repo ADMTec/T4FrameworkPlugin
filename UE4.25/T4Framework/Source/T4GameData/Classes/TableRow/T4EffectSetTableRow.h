@@ -26,6 +26,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4GameUID UID;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
 	// #T4_ADD_EFFECT_TAG_DATA
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)

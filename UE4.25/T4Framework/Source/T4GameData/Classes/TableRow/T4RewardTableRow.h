@@ -28,6 +28,9 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FText UI_Title_Text; // #164
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4GameDBKey ItemGameDBKey;
 
 public:
