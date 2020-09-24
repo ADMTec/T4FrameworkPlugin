@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectStructs() {}
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectMissionInfo();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectStat();
@@ -50,6 +51,18 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveQuestMap_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActiveQuestMap;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveQuestMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveQuestMap_ValueProp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InventoryItemMap_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_InventoryItemMap;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InventoryItemMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_InventoryItemMap_ValueProp;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUsePatrol_MetaData[];
 #endif
 		static void NewProp_bUsePatrol_SetBit(void* Obj);
@@ -74,10 +87,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		static void NewProp_bDead_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDead;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_Point_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health_Point;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMoveSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxMoveSpeed;
@@ -90,11 +99,13 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AnimSetName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveQuestMap_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Current_HP_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActiveQuestMap;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveQuestMap_Key_KeyProp;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveQuestMap_ValueProp;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Current_HP;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Current_Level_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Current_Level;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -109,6 +120,28 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ServerObjectStatus>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData[] = {
+		{ "Category", "Default" },
+		{ "Comment", "// #168 : Temp\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#168 : Temp" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap = { "ActiveQuestMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, ActiveQuestMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_Key_KeyProp = { "ActiveQuestMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_ValueProp = { "ActiveQuestMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_MetaData[] = {
+		{ "Category", "Default" },
+		{ "Comment", "// #156 : ActivePatrolPathSegmentAssetPtr \xea\xb0\x80 \xec\x9e\x88\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0 \xec\xb4\x88\xea\xb8\xb0\xec\x97\x90 \xec\x84\xb8\xed\x8c\x85\xeb\x90\xa8. \xec\x98\x81\xea\xb5\xac\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#156 : ActivePatrolPathSegmentAssetPtr \xea\xb0\x80 \xec\x9e\x88\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0 \xec\xb4\x88\xea\xb8\xb0\xec\x97\x90 \xec\x84\xb8\xed\x8c\x85\xeb\x90\xa8. \xec\x98\x81\xea\xb5\xac" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap = { "InventoryItemMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, InventoryItemMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_Key_KeyProp = { "InventoryItemMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4GameDBKey, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_ValueProp = { "InventoryItemMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bUsePatrol_MetaData[] = {
 		{ "Category", "Default" },
@@ -158,9 +191,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData[] = {
 		{ "Category", "Default" },
-		{ "Comment", "// \xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5\n" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
-		{ "ToolTip", "\xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_SetBit(void* Obj)
@@ -168,13 +199,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		((FT4ServerObjectStatus*)Obj)->bDead = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead = { "bDead", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ServerObjectStatus), &Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Health_Point_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Health_Point = { "Health_Point", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, Health_Point), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Health_Point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Health_Point_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MaxMoveSpeed_MetaData[] = {
 		{ "Category", "Default" },
@@ -192,34 +216,45 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName_MetaData[] = {
 		{ "Category", "Default" },
-		{ "Comment", "// #164\n" },
+		{ "Comment", "// \xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5\n" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
-		{ "ToolTip", "#164" },
+		{ "ToolTip", "\xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName = { "AnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, AnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_HP_MetaData[] = {
+		{ "Category", "Default" },
+		{ "Comment", "// \xeb\xa0\x88\xeb\xb2\xa8\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "\xeb\xa0\x88\xeb\xb2\xa8" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_HP = { "Current_HP", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, Current_HP), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_HP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_HP_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_Level_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap = { "ActiveQuestMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, ActiveQuestMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_Key_KeyProp = { "ActiveQuestMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_ValueProp = { "ActiveQuestMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_Level = { "Current_Level", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, Current_Level), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_Level_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_Level_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_InventoryItemMap_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bUsePatrol,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AbnormalStatusDurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bAbnormalStatus,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bEntered,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Health_Point,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MaxMoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_StanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_ActiveQuestMap_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_HP,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_Current_Level,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
@@ -249,7 +284,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStatus_Hash() { return 1491159089U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStatus_Hash() { return 3784730013U; }
 class UScriptStruct* FT4ServerObjectQuestInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -534,6 +569,10 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStat
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_Point_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health_Point;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Stat_Level_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Stat_Level;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -587,18 +626,28 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStat
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// \xeb\xa0\x88\xeb\xb2\xa8\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "\xeb\xa0\x88\xeb\xb2\xa8" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point = { "Health_Point", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStat, Health_Point), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Stat_Level_MetaData[] = {
+		{ "Category", "Default" },
 		{ "Comment", "// FT4StatTableRow\n// Total Stat = InitializeNPCStatDBKey + MainWeaponDBKey (Stat)\n" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
 		{ "ToolTip", "FT4StatTableRow\nTotal Stat = InitializeNPCStatDBKey + MainWeaponDBKey (Stat)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point = { "Health_Point", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStat, Health_Point), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Stat_Level = { "Stat_Level", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStat, Stat_Level), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Stat_Level_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Stat_Level_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Dodge_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Hit_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Defensive_Power,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Striking_Power,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Health_Point,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::NewProp_Stat_Level,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ServerObjectStat_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
@@ -628,7 +677,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStat
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStat_Hash() { return 314675557U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStat_Hash() { return 2995414800U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

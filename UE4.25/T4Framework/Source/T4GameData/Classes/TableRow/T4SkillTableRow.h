@@ -117,7 +117,7 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4SkillShapeData SkillShapeData;

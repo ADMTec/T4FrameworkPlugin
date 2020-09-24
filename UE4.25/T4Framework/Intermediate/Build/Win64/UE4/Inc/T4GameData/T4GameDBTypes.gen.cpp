@@ -1515,11 +1515,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameDBKey
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_MetaData[] = {
 		{ "Category", "Common" },
-		{ "DisplayName", "DB Type" },
+		{ "DisplayName", "Type" },
 		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameDBKey, Type), Z_Construct_UEnum_T4GameData_ET4GameDBType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GameDBKey, Type), Z_Construct_UEnum_T4GameData_ET4GameDBType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_Type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GameDBKey_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GameDBKey_Statics::NewProp_ValidationResult,
@@ -1556,7 +1556,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4GameDBKey
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GameDBKey_Hash() { return 3079078789U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GameDBKey_Hash() { return 395539355U; }
 class UScriptStruct* FT4GameUID::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

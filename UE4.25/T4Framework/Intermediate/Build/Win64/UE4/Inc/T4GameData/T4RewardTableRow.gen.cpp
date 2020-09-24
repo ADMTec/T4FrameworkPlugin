@@ -16,7 +16,8 @@ void EmptyLinkFunctionForGeneratedCodeT4RewardTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardTableRow();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardItemPackageData();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ItemEntityAsset_NoRegister();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 class UScriptStruct* FT4RewardTableRow::StaticStruct()
@@ -48,13 +49,18 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardTableRow
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemGameDBKey_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemPackageDatas_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ItemGameDBKey;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ItemPackageDatas;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ItemPackageDatas_Inner;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_Text_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MainEntityAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_UI_Title_Text;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_MainEntityAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
@@ -68,9 +74,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardTableRow
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #164\n */" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4RewardTableRow.h" },
-		{ "ToolTip", "#164" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewStructOps()
@@ -78,21 +82,29 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardTableRow
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4RewardTableRow>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemGameDBKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4RewardTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas = { "ItemPackageDatas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, ItemPackageDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas_Inner = { "ItemPackageDatas", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4RewardItemPackageData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_MainEntityAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4RewardTableRow.h" },
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemGameDBKey = { "ItemGameDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, ItemGameDBKey), Z_Construct_UScriptStruct_FT4GameDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemGameDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemGameDBKey_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_MainEntityAsset = { "MainEntityAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, MainEntityAsset), Z_Construct_UClass_UT4ItemEntityAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_MainEntityAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_MainEntityAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_Text_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4RewardTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_Text = { "UI_Title_Text", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, UI_Title_Text), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_Text_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -110,8 +122,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4RewardTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemGameDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title_Text,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_ItemPackageDatas_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_MainEntityAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UI_Title,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4RewardTableRow_Statics::NewProp_Version,
 	};
@@ -143,7 +157,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4RewardTableRow_Hash() { return 2715426987U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4RewardTableRow_Hash() { return 3844372726U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

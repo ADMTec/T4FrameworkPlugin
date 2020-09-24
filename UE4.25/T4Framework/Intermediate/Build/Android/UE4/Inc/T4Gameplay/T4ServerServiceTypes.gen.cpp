@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 		return ET4QueState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4QueState(ET4QueState_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4QueState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4QueState_Hash() { return 315199932U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4QueState_Hash() { return 2512502952U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4QueState()
 	{
 #if WITH_HOT_RELOAD
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 				{ "ET4QueState::Binding", (int64)ET4QueState::Binding },
 				{ "ET4QueState::Binded", (int64)ET4QueState::Binded },
 				{ "ET4QueState::Playing", (int64)ET4QueState::Playing },
-				{ "ET4QueState::Stopped", (int64)ET4QueState::Stopped },
+				{ "ET4QueState::Stoping", (int64)ET4QueState::Stoping },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -113,7 +113,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 				{ "None.Name", "ET4QueState::None" },
 				{ "Playing.Name", "ET4QueState::Playing" },
 				{ "Ready.Name", "ET4QueState::Ready" },
-				{ "Stopped.Name", "ET4QueState::Stopped" },
+				{ "Stoping.Name", "ET4QueState::Stoping" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

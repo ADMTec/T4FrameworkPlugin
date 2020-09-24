@@ -2,11 +2,13 @@
 	"OutputFiles": [
 		"Module.T4Gameplay.cppa7.o",
 		"Module.T4Gameplay.cppa8.o",
-		"Module.T4Gameplay.gen.1_of_3.cppa7.o",
-		"Module.T4Gameplay.gen.2_of_3.cppa7.o",
-		"Module.T4Gameplay.gen.3_of_3.cppa7.o",
-		"Module.T4Gameplay.gen.1_of_3.cppa8.o",
-		"Module.T4Gameplay.gen.2_of_3.cppa8.o",
-		"Module.T4Gameplay.gen.3_of_3.cppa8.o"
+		"Module.T4Gameplay.gen.1_of_4.cppa7.o",
+		"Module.T4Gameplay.gen.2_of_4.cppa7.o",
+		"Module.T4Gameplay.gen.3_of_4.cppa7.o",
+		"Module.T4Gameplay.gen.4_of_4.cppa7.o",
+		"Module.T4Gameplay.gen.1_of_4.cppa8.o",
+		"Module.T4Gameplay.gen.2_of_4.cppa8.o",
+		"Module.T4Gameplay.gen.3_of_4.cppa8.o",
+		"Module.T4Gameplay.gen.4_of_4.cppa8.o"
 	]
 }

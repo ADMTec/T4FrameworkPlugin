@@ -12,6 +12,7 @@
 /**
   * #164
  */
+class UT4ItemEntityAsset;
 USTRUCT()
 struct FT4RewardTableRow : public FT4TableRowBase
 {
@@ -28,10 +29,13 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ItemEntityAsset> MainEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4GameDBKey ItemGameDBKey;
+	TArray<FT4RewardItemPackageData> ItemPackageDatas;
 
 public:
 	enum EVersion

@@ -16,7 +16,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEnemyType();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatLevel();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatCategory();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
@@ -140,79 +139,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				nullptr,
 				"ET4GameEnemyType",
 				"ET4GameEnemyType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* ET4GameStatLevel_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameStatLevel, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameStatLevel"));
-		}
-		return Singleton;
-	}
-	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameStatLevel>()
-	{
-		return ET4GameStatLevel_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameStatLevel(ET4GameStatLevel_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameStatLevel"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameStatLevel_Hash() { return 3079123244U; }
-	UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatLevel()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameStatLevel"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameStatLevel_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameStatLevel::Level_1", (int64)ET4GameStatLevel::Level_1 },
-				{ "ET4GameStatLevel::Level_2", (int64)ET4GameStatLevel::Level_2 },
-				{ "ET4GameStatLevel::Level_3", (int64)ET4GameStatLevel::Level_3 },
-				{ "ET4GameStatLevel::Level_4", (int64)ET4GameStatLevel::Level_4 },
-				{ "ET4GameStatLevel::Level_5", (int64)ET4GameStatLevel::Level_5 },
-				{ "ET4GameStatLevel::Level_6", (int64)ET4GameStatLevel::Level_6 },
-				{ "ET4GameStatLevel::Level_7", (int64)ET4GameStatLevel::Level_7 },
-				{ "ET4GameStatLevel::Level_8", (int64)ET4GameStatLevel::Level_8 },
-				{ "ET4GameStatLevel::Level_9", (int64)ET4GameStatLevel::Level_9 },
-				{ "ET4GameStatLevel::Level_10", (int64)ET4GameStatLevel::Level_10 },
-				{ "ET4GameStatLevel::Max", (int64)ET4GameStatLevel::Max },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Comment", "// #114\n" },
-				{ "Level_1.Name", "ET4GameStatLevel::Level_1" },
-				{ "Level_10.Name", "ET4GameStatLevel::Level_10" },
-				{ "Level_2.Name", "ET4GameStatLevel::Level_2" },
-				{ "Level_3.Name", "ET4GameStatLevel::Level_3" },
-				{ "Level_4.Name", "ET4GameStatLevel::Level_4" },
-				{ "Level_5.Name", "ET4GameStatLevel::Level_5" },
-				{ "Level_6.Name", "ET4GameStatLevel::Level_6" },
-				{ "Level_7.Name", "ET4GameStatLevel::Level_7" },
-				{ "Level_8.Name", "ET4GameStatLevel::Level_8" },
-				{ "Level_9.Name", "ET4GameStatLevel::Level_9" },
-				{ "Max.Hidden", "" },
-				{ "Max.Name", "ET4GameStatLevel::Max" },
-				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "ToolTip", "#114" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
-				nullptr,
-				"ET4GameStatLevel",
-				"ET4GameStatLevel",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

@@ -66,6 +66,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> TextTableAsset; // #164
 
+	UPROPERTY(EditAnywhere, Category = Hide)
+	FString UI_Title; // 빌드 오류로 인해 추가. 사용하지 않음
+
 public:
 	enum EVersion
 	{

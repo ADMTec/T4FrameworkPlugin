@@ -75,6 +75,8 @@ enum class ET4GamePacketSC : uint32
 	DialogueUpdate, // #163
 	DialogueFinish, // #163
 
+	InventoryAdd, // #168
+
 	WorldTravel,
 	WorldTimeSync, // #146
 	WorldExplore, // #140 : 특정 위치로 카메라 이동

@@ -5,8 +5,6 @@
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
 
-#include "T4GameDataConstants.h"
-
 #include "T4PlayerTableRow.generated.h"
 
 /**
@@ -60,16 +58,13 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4PlayerLocomotionData LocomotionData; // #114
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	ET4GameStatLevel InitializeLevel; // #114 : Stat 레벨
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4PlayerStatDBKey InitializePlayerStatDBKey; // #114 : 기본 Stat
@@ -95,8 +90,7 @@ public:
 
 	FT4PlayerTableRow()
 		: Version(EVersion::LatestVersion) // #135
-		, RaceName(T4Game_DefaultPlayerRaceName) // #104, #114
-		, InitializeLevel(ET4GameStatLevel::Level_1)
+		, RaceName(NAME_None) // #104, #114
 	{
 	}
 };

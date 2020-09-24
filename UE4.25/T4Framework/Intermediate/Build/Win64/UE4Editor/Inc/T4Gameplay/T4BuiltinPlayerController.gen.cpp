@@ -58,6 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectStun();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EquipItem();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_ExchangeItem();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_InventoryAdd();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_ItemEnter();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_ItemLeave();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Jump();
@@ -383,6 +384,14 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->SC_RecvPacket_WorldTravel_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_InventoryAdd)
+	{
+		P_GET_STRUCT(FT4GamePacketSC_InventoryAdd,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SC_RecvPacket_InventoryAdd_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_DialogueFinish)
@@ -1074,6 +1083,13 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_ExchangeItem),&Parms);
 	}
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd = FName(TEXT("SC_RecvPacket_InventoryAdd"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_InventoryAdd(FT4GamePacketSC_InventoryAdd const& InPacket)
+	{
+		T4BuiltinPlayerController_eventSC_RecvPacket_InventoryAdd_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd),&Parms);
+	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_ItemEnter = FName(TEXT("SC_RecvPacket_ItemEnter"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_ItemEnter(FT4GamePacketSC_ItemEnter const& InPacket)
 	{
@@ -1329,6 +1345,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "SC_RecvPacket_EffectStun", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectStun },
 			{ "SC_RecvPacket_EquipItem", &AT4BuiltinPlayerController::execSC_RecvPacket_EquipItem },
 			{ "SC_RecvPacket_ExchangeItem", &AT4BuiltinPlayerController::execSC_RecvPacket_ExchangeItem },
+			{ "SC_RecvPacket_InventoryAdd", &AT4BuiltinPlayerController::execSC_RecvPacket_InventoryAdd },
 			{ "SC_RecvPacket_ItemEnter", &AT4BuiltinPlayerController::execSC_RecvPacket_ItemEnter },
 			{ "SC_RecvPacket_ItemLeave", &AT4BuiltinPlayerController::execSC_RecvPacket_ItemLeave },
 			{ "SC_RecvPacket_Jump", &AT4BuiltinPlayerController::execSC_RecvPacket_Jump },
@@ -2892,6 +2909,44 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_InventoryAdd_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_InventoryAdd, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#163" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_InventoryAdd", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_InventoryAdd_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_ItemEnter_Statics
 	{
 #if WITH_METADATA
@@ -3999,9 +4054,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #163\n" },
+		{ "Comment", "// #168\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
-		{ "ToolTip", "#163" },
+		{ "ToolTip", "#168" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_WorldTravel", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_WorldTravel_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel_Statics::Function_MetaDataParams)) };
@@ -4074,6 +4129,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectStun, "SC_RecvPacket_EffectStun" }, // 2854188226
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EquipItem, "SC_RecvPacket_EquipItem" }, // 2956987550
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_ExchangeItem, "SC_RecvPacket_ExchangeItem" }, // 3032621298
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_InventoryAdd, "SC_RecvPacket_InventoryAdd" }, // 2579079098
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_ItemEnter, "SC_RecvPacket_ItemEnter" }, // 1589145284
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_ItemLeave, "SC_RecvPacket_ItemLeave" }, // 3172495337
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Jump, "SC_RecvPacket_Jump" }, // 2812609767
@@ -4103,7 +4159,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_UnequipItem, "SC_RecvPacket_UnequipItem" }, // 3421205343
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldExplore, "SC_RecvPacket_WorldExplore" }, // 762312355
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTimeSync, "SC_RecvPacket_WorldTimeSync" }, // 3954093321
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel, "SC_RecvPacket_WorldTravel" }, // 1903393613
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_WorldTravel, "SC_RecvPacket_WorldTravel" }, // 1582664889
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4BuiltinPlayerController_Statics::Class_MetaDataParams[] = {
@@ -4141,7 +4197,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 603664450);
+	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 97024036);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinPlayerController>()
 	{
 		return AT4BuiltinPlayerController::StaticClass();

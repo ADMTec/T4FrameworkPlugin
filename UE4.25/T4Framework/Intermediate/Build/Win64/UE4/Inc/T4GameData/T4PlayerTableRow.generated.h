@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4PlayerTableRow_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4PlayerTableRow_h_51_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4PlayerTableRow_h_49_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4TableRowBase Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4PlayerTableRow>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4PlayerTableRow_h_20_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4PlayerTableRow_h_18_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4PlayerLocomotionData_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
 

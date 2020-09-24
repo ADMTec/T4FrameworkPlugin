@@ -13,20 +13,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4QuestTableRow_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4QuestTableRow_h_63_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4QuestTableRow_h_39_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4QuestTableRow_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4TableRowBase Super;
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4QuestTableRow>();
-
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4QuestTableRow_h_39_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4ContentWorldSettings_Statics; \
-	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
-
-
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4ContentWorldSettings>();
 
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4QuestTableRow_h_20_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ContentMissionData_Statics; \

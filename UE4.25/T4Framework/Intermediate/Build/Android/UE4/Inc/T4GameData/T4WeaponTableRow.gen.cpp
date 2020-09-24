@@ -92,9 +92,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAttackRange;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_Text_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_UI_Title_Text;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
@@ -204,12 +204,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange = { "MinAttackRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, MinAttackRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_Text_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_Text = { "UI_Title_Text", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, UI_Title_Text), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_Text_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -239,7 +239,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title_Text,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UI_Title,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_Version,
 	};
@@ -271,7 +271,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 1039933034U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 22001782U; }
 class UScriptStruct* FT4WeaponEntityData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

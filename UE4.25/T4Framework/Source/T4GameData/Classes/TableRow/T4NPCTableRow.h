@@ -5,7 +5,6 @@
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
 
-#include "T4GameDataConstants.h"
 #include "T4GameDataTypes.h" // #104
 
 #include "T4Asset/Public/T4AssetConstants.h"
@@ -117,7 +116,7 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName RaceName; // #104, #114
@@ -130,9 +129,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4NPCLocomotionData LocomotionData; // #50, #108, #109
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	ET4GameStatLevel InitializeLevel; // #114 : Stat 레벨
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4NPCStatDBKey InitializeNPCStatDBKey; // #114 : 기본 Stat
@@ -172,7 +168,6 @@ public:
 		, RaceName(NAME_None) // #104, #114
 		, InitializeAnimSetName(T4Const_DefaultAnimSetName) // #142
 		, InitializeStanceName(T4Const_DefaultStanceName) // #142
-		, InitializeLevel(ET4GameStatLevel::Level_1) // #114
 		, InitializeSkinName(NAME_None) // #135
 	{
 	}

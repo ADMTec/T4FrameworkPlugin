@@ -27,7 +27,7 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	// #T4_ADD_EFFECT_TAG_DATA
 

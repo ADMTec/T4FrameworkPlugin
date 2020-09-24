@@ -13,11 +13,14 @@
 
 // TEMP
 static const FName T4Const_GameModeLayoutWidgetName = TEXT("Default"); // #164
-static const FName T4Const_QuestInfoWidgetName = TEXT("QuestInfo"); // #164
+static const FName T4Const_GameMainLayoutWidgetName = TEXT("QuestInfo"); // #164
 
-static const FName T4Const_QuestWidgetQueTitleText = TEXT("QuestTitle"); // #164
-static const FName T4Const_QuestWidgetMissionTitleText = TEXT("MissionTitle"); // #164
-static const FName T4Const_QuestWidgetActiveMissionsText = TEXT("ActiveMissions"); // #164
+static const FName T4Const_MainWidgetQuestTitleText = TEXT("QuestTitle"); // #164
+static const FName T4Const_MainWidgetMissionTitleText = TEXT("MissionTitle"); // #164
+static const FName T4Const_MainWidgetActiveMissionsText = TEXT("ActiveMissions"); // #164
+
+static const FName T4Const_MainWidgetInventoryNoticeText = TEXT("InventoryNotice"); // #168
+static const FName T4Const_MainWidgetInventoryStatusText = TEXT("InventoryStatus"); // #168
 
 class UUserWidget;
 class AController;

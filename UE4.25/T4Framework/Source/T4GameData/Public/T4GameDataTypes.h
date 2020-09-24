@@ -92,23 +92,6 @@ enum class ET4GameStatCategory : uint8 // #114
 };
 
 UENUM()
-enum class ET4GameStatLevel : uint8 // #114
-{
-	Level_1,
-	Level_2,
-	Level_3,
-	Level_4,
-	Level_5,
-	Level_6,
-	Level_7,
-	Level_8,
-	Level_9,
-	Level_10,
-
-	Max UMETA(Hidden),
-};
-
-UENUM()
 enum class ET4GameEnemyType : uint8 // #104
 {
 	None,

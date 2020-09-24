@@ -30,7 +30,7 @@ template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4QuestFlowResult>();
 	op(ET4QueState::Binding) \
 	op(ET4QueState::Binded) \
 	op(ET4QueState::Playing) \
-	op(ET4QueState::Stopped) 
+	op(ET4QueState::Stoping) 
 
 enum class ET4QueState : uint8;
 template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4QueState>();

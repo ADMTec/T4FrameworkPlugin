@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionWait() {}
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_UT4QFTask_T4MissionWait();
 	AIMODULE_API UClass* Z_Construct_UClass_UBTTask_Wait();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardDBKey();
 // End Cross Module References
 	void UT4QFTask_T4MissionWait::StaticRegisterNativesUT4QFTask_T4MissionWait()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionWait() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RewardDBKey_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RewardDBKey;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -40,11 +46,23 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionWait() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n  * #164\n */" },
 		{ "HideCategories", "Task" },
 		{ "IncludePath", "QuestFlow/T4QFTask_T4MissionWait.h" },
 		{ "ModuleRelativePath", "Classes/QuestFlow/T4QFTask_T4MissionWait.h" },
+		{ "ToolTip", "#164" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::NewProp_RewardDBKey_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/QuestFlow/T4QFTask_T4MissionWait.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::NewProp_RewardDBKey = { "RewardDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionWait, RewardDBKey), Z_Construct_UScriptStruct_FT4RewardDBKey, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::NewProp_RewardDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::NewProp_RewardDBKey_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::NewProp_RewardDBKey,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4QFTask_T4MissionWait>::IsAbstract,
 	};
@@ -54,11 +72,11 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionWait() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::PropPointers),
 		0,
 		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionWait_Statics::Class_MetaDataParams))
@@ -72,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionWait() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QFTask_T4MissionWait, 1124478052);
+	IMPLEMENT_CLASS(UT4QFTask_T4MissionWait, 1648566830);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4QFTask_T4MissionWait>()
 	{
 		return UT4QFTask_T4MissionWait::StaticClass();

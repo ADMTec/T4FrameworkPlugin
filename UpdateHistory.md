@@ -2,6 +2,10 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.50 : 2020.09.22
+  - #167 [기능개선] Content Editor, NPC AI BehaviorTree 제작을 위한 T4BehaviorEditor 추가
+	- NPC AI 를 기존 UE4 의 BehaviorTree 에서 T4BehaviorFlowAsset 을 사용하도록 수정됨
+	- WARN : UE4.25/Content 폴더 에셋 업데이트
 - v0.9.49 : 2020.09.21
   - #164 [기능개선] Content Editor, 에디터 종료 시 ShowMenu 의 마지막 설정을 저장, 복원할 수 있도록 기능 개선
   - #164 [기능개선] Content Editor, 플레이어가 스폰 되어 있을 경우 ShowMenu 의 EditMode 사용 시 자동으로 FreeCamera 로 전환, 복원되도록 수정

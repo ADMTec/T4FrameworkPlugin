@@ -45,6 +45,7 @@ struct FT4GamePacketSC_MyPCEnter;
 struct FT4GamePacketSC_WorldExplore;
 struct FT4GamePacketSC_WorldTimeSync;
 struct FT4GamePacketSC_WorldTravel;
+struct FT4GamePacketSC_InventoryAdd;
 struct FT4GamePacketSC_DialogueFinish;
 struct FT4GamePacketSC_DialogueUpdate;
 struct FT4GamePacketSC_DialogueStart;
@@ -123,6 +124,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_WorldExplore_Implementation(FT4GamePacketSC_WorldExplore const& InPacket); \
 	virtual void SC_RecvPacket_WorldTimeSync_Implementation(FT4GamePacketSC_WorldTimeSync const& InPacket); \
 	virtual void SC_RecvPacket_WorldTravel_Implementation(FT4GamePacketSC_WorldTravel const& InPacket); \
+	virtual void SC_RecvPacket_InventoryAdd_Implementation(FT4GamePacketSC_InventoryAdd const& InPacket); \
 	virtual void SC_RecvPacket_DialogueFinish_Implementation(FT4GamePacketSC_DialogueFinish const& InPacket); \
 	virtual void SC_RecvPacket_DialogueUpdate_Implementation(FT4GamePacketSC_DialogueUpdate const& InPacket); \
 	virtual void SC_RecvPacket_DialogueStart_Implementation(FT4GamePacketSC_DialogueStart const& InPacket); \
@@ -221,6 +223,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldExplore); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTimeSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTravel); \
+	DECLARE_FUNCTION(execSC_RecvPacket_InventoryAdd); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueFinish); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueUpdate); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueStart); \
@@ -295,6 +298,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_WorldExplore_Implementation(FT4GamePacketSC_WorldExplore const& InPacket); \
 	virtual void SC_RecvPacket_WorldTimeSync_Implementation(FT4GamePacketSC_WorldTimeSync const& InPacket); \
 	virtual void SC_RecvPacket_WorldTravel_Implementation(FT4GamePacketSC_WorldTravel const& InPacket); \
+	virtual void SC_RecvPacket_InventoryAdd_Implementation(FT4GamePacketSC_InventoryAdd const& InPacket); \
 	virtual void SC_RecvPacket_DialogueFinish_Implementation(FT4GamePacketSC_DialogueFinish const& InPacket); \
 	virtual void SC_RecvPacket_DialogueUpdate_Implementation(FT4GamePacketSC_DialogueUpdate const& InPacket); \
 	virtual void SC_RecvPacket_DialogueStart_Implementation(FT4GamePacketSC_DialogueStart const& InPacket); \
@@ -393,6 +397,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldExplore); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTimeSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_WorldTravel); \
+	DECLARE_FUNCTION(execSC_RecvPacket_InventoryAdd); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueFinish); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueUpdate); \
 	DECLARE_FUNCTION(execSC_RecvPacket_DialogueStart); \
@@ -593,6 +598,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_ExchangeItem_Parms \
 	{ \
 		FT4GamePacketSC_ExchangeItem InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_InventoryAdd_Parms \
+	{ \
+		FT4GamePacketSC_InventoryAdd InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_ItemEnter_Parms \
 	{ \

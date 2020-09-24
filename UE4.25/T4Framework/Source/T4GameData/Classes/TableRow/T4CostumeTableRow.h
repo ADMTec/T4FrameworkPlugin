@@ -26,7 +26,7 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat

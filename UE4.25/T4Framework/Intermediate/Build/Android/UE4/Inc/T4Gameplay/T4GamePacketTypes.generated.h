@@ -26,6 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GamePacketSC::DialogueStart) \
 	op(ET4GamePacketSC::DialogueUpdate) \
 	op(ET4GamePacketSC::DialogueFinish) \
+	op(ET4GamePacketSC::InventoryAdd) \
 	op(ET4GamePacketSC::WorldTravel) \
 	op(ET4GamePacketSC::WorldTimeSync) \
 	op(ET4GamePacketSC::WorldExplore) \

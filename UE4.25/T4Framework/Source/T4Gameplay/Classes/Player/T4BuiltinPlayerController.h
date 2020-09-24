@@ -13,7 +13,7 @@
 #include "Protocol/Client/T4GamePacketSC_Move.h"
 #include "Protocol/Client/T4GamePacketSC_Status.h"
 #include "Protocol/Client/T4GamePacketSC_World.h"
-#include "Protocol/Client/T4GamePacketSC_Quest.h" // #164
+#include "Protocol/Client/T4GamePacketSC_Game.h" // #164
 #include "Protocol/Client/T4GamePacketSC_Debug.h" // #164
 
 #include "T4Framework/Classes/Player/T4PlayerControllerBase.h"
@@ -159,6 +159,9 @@ private:
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_DialogueFinish(const FT4GamePacketSC_DialogueFinish& InPacket); // #163
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_InventoryAdd(const FT4GamePacketSC_InventoryAdd& InPacket); // #168
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_WorldTravel(const FT4GamePacketSC_WorldTravel& InPacket);

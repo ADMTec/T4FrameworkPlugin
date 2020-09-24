@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 4055513031U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2514294836U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -51,6 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::DialogueStart", (int64)ET4GamePacketSC::DialogueStart },
 				{ "ET4GamePacketSC::DialogueUpdate", (int64)ET4GamePacketSC::DialogueUpdate },
 				{ "ET4GamePacketSC::DialogueFinish", (int64)ET4GamePacketSC::DialogueFinish },
+				{ "ET4GamePacketSC::InventoryAdd", (int64)ET4GamePacketSC::InventoryAdd },
 				{ "ET4GamePacketSC::WorldTravel", (int64)ET4GamePacketSC::WorldTravel },
 				{ "ET4GamePacketSC::WorldTimeSync", (int64)ET4GamePacketSC::WorldTimeSync },
 				{ "ET4GamePacketSC::WorldExplore", (int64)ET4GamePacketSC::WorldExplore },
@@ -134,6 +135,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "EquipItem.Name", "ET4GamePacketSC::EquipItem" },
 				{ "EquipItem.ToolTip", "#106" },
 				{ "ExchangeItem.Name", "ET4GamePacketSC::ExchangeItem" },
+				{ "InventoryAdd.Comment", "// #163\n" },
+				{ "InventoryAdd.Name", "ET4GamePacketSC::InventoryAdd" },
+				{ "InventoryAdd.ToolTip", "#163" },
 				{ "ItemEnter.Comment", "// #31\n" },
 				{ "ItemEnter.Name", "ET4GamePacketSC::ItemEnter" },
 				{ "ItemEnter.ToolTip", "#31" },
@@ -208,9 +212,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "WorldExplore.Name", "ET4GamePacketSC::WorldExplore" },
 				{ "WorldExplore.ToolTip", "#146" },
 				{ "WorldTimeSync.Name", "ET4GamePacketSC::WorldTimeSync" },
-				{ "WorldTravel.Comment", "// #163\n" },
+				{ "WorldTravel.Comment", "// #168\n" },
 				{ "WorldTravel.Name", "ET4GamePacketSC::WorldTravel" },
-				{ "WorldTravel.ToolTip", "#163" },
+				{ "WorldTravel.ToolTip", "#168" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

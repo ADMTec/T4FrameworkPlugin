@@ -66,6 +66,8 @@ struct T4GAMEDATA_API FT4GameDataBase
 #endif
 	const FT4TextTableRow* QueryTextTableRow() const; // #164
 
+	virtual const FString& GetUITitle() const = 0; // #164, #168
+
 #if WITH_EDITOR
 	ET4GameDBValidation GetResultValidation(const FT4GameDBKey& InDBKey);
 
@@ -82,7 +84,6 @@ struct T4GAMEDATA_API FT4GameDataBase
 	virtual void SetParentRowName(FName InParentRowName) = 0; // #122
 	virtual FName GetFolderName() const = 0; // #122
 	virtual void SetFolderName(FName InFolderName) = 0; // #122
-	virtual const FText& GetUITitleText() const = 0; // #164
 	// ~#118
 #endif
 	

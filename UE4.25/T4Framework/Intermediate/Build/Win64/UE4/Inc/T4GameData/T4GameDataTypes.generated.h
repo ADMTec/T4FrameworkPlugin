@@ -38,22 +38,6 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameSkillSetPlayMode>();
 enum class ET4GameEnemyType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEnemyType>();
 
-#define FOREACH_ENUM_ET4GAMESTATLEVEL(op) \
-	op(ET4GameStatLevel::Level_1) \
-	op(ET4GameStatLevel::Level_2) \
-	op(ET4GameStatLevel::Level_3) \
-	op(ET4GameStatLevel::Level_4) \
-	op(ET4GameStatLevel::Level_5) \
-	op(ET4GameStatLevel::Level_6) \
-	op(ET4GameStatLevel::Level_7) \
-	op(ET4GameStatLevel::Level_8) \
-	op(ET4GameStatLevel::Level_9) \
-	op(ET4GameStatLevel::Level_10) \
-	op(ET4GameStatLevel::Max) 
-
-enum class ET4GameStatLevel : uint8;
-template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameStatLevel>();
-
 #define FOREACH_ENUM_ET4GAMESTATCATEGORY(op) \
 	op(ET4GameStatCategory::Player) \
 	op(ET4GameStatCategory::NPC) \

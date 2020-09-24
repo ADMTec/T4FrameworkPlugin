@@ -5,12 +5,12 @@
 #include "T4GameplayMinimal.h"
 #include "T4GameData/Public/T4GameDBTypes.h"
 #include "BehaviorTree/Tasks/BTTask_Wait.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"
 #include "T4QFTask_T4MissionWait.generated.h"
 
 /**
   * #164
  */
-class UBehaviorTreeComponent;
 UCLASS(hidecategories = (Task))
 class T4GAMEPLAY_API UT4QFTask_T4MissionWait : public UBTTask_Wait
 {
@@ -25,4 +25,8 @@ protected:
 #if WITH_EDITOR
 	FName GetNodeIconName() const override;
 #endif
+
+public:
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4RewardDBKey RewardDBKey; // #168
 };

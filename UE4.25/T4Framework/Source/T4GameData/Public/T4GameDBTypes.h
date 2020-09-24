@@ -120,7 +120,7 @@ struct FT4GameDBKey
 	GENERATED_USTRUCT_BODY()
 
 public:
-	UPROPERTY(VisibleAnywhere, Category = Common, meta = (DisplayName = "DB Type"))
+	UPROPERTY(EditAnywhere, Category = Common, meta = (DisplayName = "Type"))
 	ET4GameDBType Type;
 
 	UPROPERTY(EditAnywhere, Category = Common, meta = (DisplayName = "Name"))
@@ -251,7 +251,7 @@ public:
 		return GT4GameDBTypeStrings[uint8(InType)];
 	}
 
-	FORCEINLINE const TCHAR* ToTypeString() const
+	FORCEINLINE FString ToTypeString() const
 	{
 		return ToTypeString(Type);
 	}
@@ -259,9 +259,9 @@ public:
 	FORCEINLINE FString ToString() const
 	{
 		return FString::Printf(
-			TEXT("FT4GameDBKey:%s=%s"),
+			TEXT("DBKey:%s=%s"),
 			*(ToNameString()),
-			ToTypeString()
+			*(ToTypeString())
 		);
 	}
 };

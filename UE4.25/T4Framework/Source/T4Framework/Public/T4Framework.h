@@ -220,8 +220,6 @@ public:
 	virtual void RegisterGameMainFrame(IT4GameMainFrame* InLayerInstance) = 0; // #42
 	virtual IT4GameMainFrame* GetGameMainFrame() const = 0; // #42
 
-	virtual float GetWorldTimeSeconds() const = 0; // #164
-
 	virtual uint32 GetWorldTravelCount() const = 0; // #146
 
 	virtual bool SetWorldTravel(const UT4MapEntityAsset* InMapEntityAsset) = 0; // #87

@@ -45,7 +45,7 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FText UI_Title_Text; // #164
+	FString UI_Title; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float MinAttackRange; // #135 : 이 거리 안이면 Approach 에서 뒤로 이동 후 다시 공격하도록 처리하기 위해 추가

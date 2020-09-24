@@ -1,8 +1,9 @@
 {
 	"OutputFiles": [
 		"Module.T4Gameplay.cpp.obj",
-		"Module.T4Gameplay.gen.1_of_3.cpp.obj",
-		"Module.T4Gameplay.gen.2_of_3.cpp.obj",
-		"Module.T4Gameplay.gen.3_of_3.cpp.obj"
+		"Module.T4Gameplay.gen.1_of_4.cpp.obj",
+		"Module.T4Gameplay.gen.2_of_4.cpp.obj",
+		"Module.T4Gameplay.gen.3_of_4.cpp.obj",
+		"Module.T4Gameplay.gen.4_of_4.cpp.obj"
 	]
 }

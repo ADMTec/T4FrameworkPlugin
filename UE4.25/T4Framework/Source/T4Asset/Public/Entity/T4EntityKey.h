@@ -101,7 +101,7 @@ public:
 		return Value.ToString();
 	}
 
-	FORCEINLINE const TCHAR* ToTypeString() const
+	FORCEINLINE FString ToTypeString() const
 	{
 		static const TCHAR* T4Const_EntityTypeStrings[] =
 		{
@@ -123,9 +123,9 @@ public:
 	FORCEINLINE FString ToString() const
 	{
 		return FString::Printf(
-			TEXT("FT4EntityKey:%s=%s"),
+			TEXT("EntityKey:%s=%s"),
 			*(ToNameString()),
-			ToTypeString()
+			*(ToTypeString())
 		);
 	}
 };
