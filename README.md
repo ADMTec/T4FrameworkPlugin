@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.51)
+# T4FrameworkPlugin (v0.9.51_1)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,7 +20,11 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.51** : 2020.09.24
+  - **v0.9.51_1** : 2020.09.24
+    - #158 [기능개선] AnimSet 기본 옵션에 AnimInstance 에 대한 RootMotionMode 옵션 설정 추가 (HOTFIX 1)
+	  - Entity Editor => AnimSet Detail Tab => AnimRootMotionMode
+	  - https://docs.unrealengine.com/en-US/Engine/Animation/RootMotion/index.html
+    - #158 [버그수정] 비정상적인 에셋 경로 변경으로 인해 Content 폴더에 물리적인 Asset 이 없을 경우 발생하는 크래시 수정 (HOTFIX 1)
 	- #168 [기능추가] Quest Editor, QuestFlow 의 GraphNode 를 통한 Mission Branch, Reward Item 설정 기능 추가
 	  - Reward Item 관리를 위한 Inventory UI 가 추가됨 (Item 사용은 아직 불가)
 	  - WARN : UE4.25/Content 폴더 에셋 업데이트 필요

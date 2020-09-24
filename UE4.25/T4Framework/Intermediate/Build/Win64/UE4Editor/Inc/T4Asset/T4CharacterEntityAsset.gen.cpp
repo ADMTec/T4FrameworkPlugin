@@ -46,6 +46,7 @@ void EmptyLinkFunctionForGeneratedCodeT4CharacterEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActorEntityAsset();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityImportSettingData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType();
+	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ERootMotionMode();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimBlueprint_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeleton_NoRegister();
 // End Cross Module References
@@ -1805,6 +1806,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MeshType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MeshType_Underlying;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimRootMotionMode_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_AnimRootMotionMode;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimBlueprintAsset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_AnimBlueprintAsset;
@@ -1894,11 +1899,20 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// #158\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+		{ "ToolTip", "#158" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, MeshType), Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimRootMotionMode_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimRootMotionMode = { "AnimRootMotionMode", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4CharacterEntityAsset, AnimRootMotionMode), Z_Construct_UEnum_Engine_ERootMotionMode, METADATA_PARAMS(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimRootMotionMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimRootMotionMode_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimBlueprintAsset_MetaData[] = {
 		{ "Category", "Common" },
@@ -1927,6 +1941,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_FullBodyMeshData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_MeshType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimRootMotionMode,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_AnimBlueprintAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4CharacterEntityAsset_Statics::NewProp_SkeletonAsset,
 	};
@@ -1957,7 +1972,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 2028967406);
+	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 1417101824);
 	template<> T4ASSET_API UClass* StaticClass<UT4CharacterEntityAsset>()
 	{
 		return UT4CharacterEntityAsset::StaticClass();

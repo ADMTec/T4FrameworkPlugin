@@ -5,6 +5,7 @@
 #include "T4AssetMinimal.h"
 #include "T4ActorEntityAsset.h"
 #include "T4AssetConstants.h" // #74
+#include "Animation/AnimEnums.h" // #158
 #include "T4CharacterEntityAsset.generated.h"
 
 /**
@@ -527,6 +528,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UAnimBlueprint> AnimBlueprintAsset;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	TEnumAsByte<ERootMotionMode::Type> AnimRootMotionMode; // #158
 
 	UPROPERTY(EditAnywhere, Category= Default)
 	ET4EntityCharacterMeshType MeshType;
