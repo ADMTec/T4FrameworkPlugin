@@ -41,4 +41,19 @@ public:
 	TSharedPtr<FUICommandInfo> ViewportTogglePlayBySpace; // #132 : Keys : Space 
 
 	TArray<TSharedPtr<FUICommandInfo>> ViewportPlaybackSpeedCommands; // #117
+
+	// #161 : SEditorViewport 가 ALT + 1 ~9 핫키를 VideMode 와 연동하고 있어 별도 처리함
+	TSharedPtr< FUICommandInfo > ViewportWireframeMode;
+	TSharedPtr< FUICommandInfo > ViewportUnlitMode;
+	TSharedPtr< FUICommandInfo > ViewportLitMode;
+#if RHI_RAYTRACING
+	TSharedPtr< FUICommandInfo > ViewportPathTracingMode;
+	TSharedPtr< FUICommandInfo > ViewportRayTracingDebugMode;
+#endif
+	TSharedPtr< FUICommandInfo > ViewportDetailLightingMode;
+	TSharedPtr< FUICommandInfo > ViewportLightingOnlyMode;
+	TSharedPtr< FUICommandInfo > ViewportLightComplexityMode;
+	TSharedPtr< FUICommandInfo > ViewportShaderComplexityMode;
+	TSharedPtr< FUICommandInfo > ViewportQuadOverdrawMode;
+	TSharedPtr< FUICommandInfo > ViewportShaderComplexityWithQuadOverdrawMode;
 };

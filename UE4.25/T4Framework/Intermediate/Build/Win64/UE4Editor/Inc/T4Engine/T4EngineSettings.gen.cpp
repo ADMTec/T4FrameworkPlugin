@@ -178,9 +178,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SkillPressedKeepTimeSec;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillSequenceKeepTimeSec_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillComboKeepTimeSec_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SkillSequenceKeepTimeSec;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SkillComboKeepTimeSec;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WorldTimeHoursPerDay_MetaData[];
 #endif
@@ -505,14 +505,14 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec = { "SkillPressedKeepTimeSec", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SkillPressedKeepTimeSec), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec_MetaData[] = {
 		{ "Category", "GeneralControlSettting" },
 		{ "Comment", "// #93\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#93" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec = { "SkillSequenceKeepTimeSec", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SkillSequenceKeepTimeSec), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec = { "SkillComboKeepTimeSec", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, SkillComboKeepTimeSec), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData[] = {
 		{ "Category", "GeneralWorldSettting" },
@@ -595,7 +595,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_CameraRotateHoldTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_JumpHoldTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillSequenceKeepTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialParameterOpacityName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalOutlineColorName,
@@ -629,7 +629,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 691018062);
+	IMPLEMENT_CLASS(UT4EngineSettings, 979477247);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

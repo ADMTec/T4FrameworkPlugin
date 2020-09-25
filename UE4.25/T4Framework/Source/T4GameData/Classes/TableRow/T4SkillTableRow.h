@@ -128,6 +128,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4SkillStatDBKey SkillStatDBKey; // #114 : 기본 Stat
 
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4EffectDBKey SkillEffectDBKey; // #161 : 이 스킬이 사용이 적용될 효과 설정. 없으면 기본 EffectSet 설정으로 넘어간다.
+
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
 	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
 

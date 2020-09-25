@@ -49,7 +49,7 @@ public:
 	int32 WorldTimeHoursPerDay; // #93
 
 	UPROPERTY(config, EditAnywhere, Category = GeneralControlSettting)
-	float SkillSequenceKeepTimeSec; // #45 : Skill 연속기 사용을 위한 허용 시간
+	float SkillComboKeepTimeSec; // #45 : Skill 연속기 사용을 위한 허용 시간
 
 	UPROPERTY(config, EditAnywhere, Category = GeneralControlSettting)
 	float SkillPressedKeepTimeSec; // #116 : Skill Block 이후 Pressed 사용을 위한 허용 시간

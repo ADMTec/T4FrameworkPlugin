@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.51_1)
+# T4FrameworkPlugin (v0.9.52)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,15 +20,12 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.51_1** : 2020.09.24
-    - #158 [기능개선] AnimSet 기본 옵션에 AnimInstance 에 대한 RootMotionMode 옵션 설정 추가 (HOTFIX 1)
-	  - Entity Editor => AnimSet Detail Tab => AnimRootMotionMode
-	  - https://docs.unrealengine.com/en-US/Engine/Animation/RootMotion/index.html
-    - #158 [버그수정] 비정상적인 에셋 경로 변경으로 인해 Content 폴더에 물리적인 Asset 이 없을 경우 발생하는 크래시 수정 (HOTFIX 1)
-	- #168 [기능추가] Quest Editor, QuestFlow 의 GraphNode 를 통한 Mission Branch, Reward Item 설정 기능 추가
-	  - Reward Item 관리를 위한 Inventory UI 가 추가됨 (Item 사용은 아직 불가)
-	  - WARN : UE4.25/Content 폴더 에셋 업데이트 필요
-	  - WARN : T4FrameworkExample 프로젝트의 경우 Quest GameDB Table 수정과 NPC BehaviorFlow Asset 포멧이 변경되어 확인 필요
+  - **v0.9.52** : 2020.09.25
+    - #161 [기능추가] C/S 기반 Area of Effect (AOE) Skill/Effect 처리 추가 (광역 스킬)
+    - #168 [버그수정] Quest Editor, QuestFlow 편집 시 RootNode 에서는 Quest Node 만 연결할 수 있도록 ContentMenu 수정 
+	- #161 [버그수정] SkillSet 의 PlayMode 옵션 Sequential, Combo, Random 이 정상적으로 동작하지 않던 문제 수정
+	- #161 [버그수정] Content Editor, Show Menu 의 NPC AI Disable 옵션이 정상적으로 동작하지 않던 문제 수정
+	- #158 [버그수정] Content Editor, 뷰포트에서 ALT + 1~9 핫키를 이용한 Player 스폰시 뷰포트 ViewMode 가 함께 변경되던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

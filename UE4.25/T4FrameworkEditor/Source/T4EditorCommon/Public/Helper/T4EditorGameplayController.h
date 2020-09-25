@@ -23,12 +23,12 @@ public:
 public:
 	// IT4EditorGameplayHandler
 	bool IsSimulating() const override { return bSimulating; } // #102
+	bool IsSettingsUsed() const override { return bSettingsUsed; } // #104 : Action 에서만 true, 기타는 False. 즉 Override 를 사용하지 않음
 
-	float GetDefaultMoveSpeed() const { return DefaultMoveSpeed; } // #114
+	float GetDefaultMoveSpeed() const override { return DefaultMoveSpeed; } // #114
 
-	bool IsEnabled() const override { return bGameplaySettingsUsed; } // #104 : conti 에서만 true, world 에서는 false
-
-	bool IsAISystemDisabled() const override { return (bSimulating) ? bAIDisabled : false; } // #102
+	bool IsNPCAIDisabled() const override { return (bSimulating) ? bNPCAIDisabled : false; } // #102
+	void SetDisableNPCAI(bool bInDisable) override { bNPCAIDisabled = bInDisable; } // #161
 
 	bool IsSandbagAttackable() const override { return (SandbagRole == ET4EditorPlayRole::Attacker) ? true : false; }
 	bool IsSandbagOneHitDie() const override { return bSandbagOneHitDie; } // #76
@@ -47,7 +47,7 @@ public:
 	void SetLayerType(ET4LayerType InLayerType) { LayerType = InLayerType; } // #60
 	
 	void SetSimulationEnabled(bool bInEnable) { bSimulating = bInEnable; } // #102
-	void SetUseGameplaySettings(bool bInEnable) { bGameplaySettingsUsed = bInEnable; } // #104 : conti 에서만 true, world 에서는 false
+	void SetUseSettings(bool bInEnable) { bSettingsUsed = bInEnable; } // #104 : conti 에서만 true, world 에서는 false
 
 	FT4ActionParameters& GetActionParameters() { return ContiParameter; }
 
@@ -83,7 +83,7 @@ public:
 	TSoftObjectPtr<UT4EntityAsset> NPCEntityAsset; // #76
 
 	UPROPERTY(EditAnywhere, Category = Default, Transient)
-	bool bAIDisabled;
+	bool bNPCAIDisabled;
 
 	UPROPERTY(EditAnywhere, Category = Default, Transient)
 	ET4EditorPlayRole SandbagRole; // #63
@@ -114,7 +114,7 @@ public:
 private:
 	ET4LayerType LayerType; // #60
 	bool bSimulating; // #102
-	bool bGameplaySettingsUsed; // #104 : conti 에서만 true, world 에서는 false
+	bool bSettingsUsed; // #104 : conti 에서만 true, world 에서는 false
 	FT4ActionParameters ContiParameter;
 	FT4OnEditorGameplayControllerChanged OnEditorGameplayControllerChanged;
 };

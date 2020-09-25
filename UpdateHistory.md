@@ -2,6 +2,15 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.51_1 : 2020.09.24
+  - #158 [기능개선] AnimSet 기본 옵션에 AnimInstance 에 대한 RootMotionMode 옵션 설정 추가 (HOTFIX 1)
+	- Entity Editor => AnimSet Detail Tab => AnimRootMotionMode
+	- https://docs.unrealengine.com/en-US/Engine/Animation/RootMotion/index.html
+  - #158 [버그수정] 비정상적인 에셋 경로 변경으로 인해 Content 폴더에 물리적인 Asset 이 없을 경우 발생하는 크래시 수정 (HOTFIX 1)
+  - #168 [기능추가] Quest Editor, QuestFlow 의 GraphNode 를 통한 Mission Branch, Reward Item 설정 기능 추가
+	- Reward Item 관리를 위한 Inventory UI 가 추가됨 (Item 사용은 아직 불가)
+	- WARN : UE4.25/Content 폴더 에셋 업데이트 필요
+	- WARN : T4FrameworkExample 프로젝트의 경우 Quest GameDB Table 수정과 NPC BehaviorFlow Asset 포멧이 변경되어 확인 필요
 - v0.9.50 : 2020.09.22
   - #167 [기능개선] Content Editor, NPC AI BehaviorTree 제작을 위한 T4BehaviorEditor 추가
 	- NPC AI 를 기존 UE4 의 BehaviorTree 에서 T4BehaviorFlowAsset 을 사용하도록 수정됨

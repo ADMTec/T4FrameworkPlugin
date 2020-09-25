@@ -331,8 +331,8 @@ public:
 	virtual bool IsChangePlayerDisabled() const = 0;
 	virtual void SetDisableChangePlayer(bool bInDisable) = 0; // #72
 
-	virtual bool IsNPCAIDisabled() const = 0;
-	virtual void SetDisableNPCAI(bool bInDisable) = 0; // #52
+	virtual bool IsEditorNPCAIDisabled() const = 0; // #52 : 레벨 에디터용 임시처리 (삭제하고 EditorGameplayController 를 사용하도록 처리할 것!)
+	virtual void SetEditorDisableNPCAI(bool bInDisable) = 0; // #52 : 레벨 에디터용 임시처리 (삭제하고 EditorGameplayController 를 사용하도록 처리할 것!)
 #endif
 };
 

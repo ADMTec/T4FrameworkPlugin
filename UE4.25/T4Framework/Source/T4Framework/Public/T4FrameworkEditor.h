@@ -353,12 +353,13 @@ class T4FRAMEWORK_API IT4EditorGameplayHandler
 public:
 	virtual ~IT4EditorGameplayHandler() {}
 
-	virtual bool IsEnabled() const = 0; // #104 : conti 에서만 true, world 에서는 false, 아래 옵션 사용 여부
 	virtual bool IsSimulating() const = 0; // #102
+	virtual bool IsSettingsUsed() const = 0; // #104 : conti 에서만 true, world 에서는 false, 아래 옵션 사용 여부
 
 	virtual float GetDefaultMoveSpeed() const = 0; // #114
 
-	virtual bool IsAISystemDisabled() const = 0;
+	virtual bool IsNPCAIDisabled() const = 0;
+	virtual void SetDisableNPCAI(bool bInDisable) = 0; // #161
 
 	virtual bool IsSandbagAttackable() const = 0;
 	virtual bool IsSandbagOneHitDie() const = 0; // #76

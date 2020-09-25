@@ -47,6 +47,8 @@ enum class ET4GameAttackType : uint8 // #63
 	Air, // #135 : Jump Attack
 	Dash, // #135
 
+	AreaOfEffect, // #161 : 광역기, SkillEffectDBKey 와 함께 사용됨!
+
 	None,
 };
 
@@ -112,6 +114,5 @@ enum class ET4GameSkillSetPlayMode // #142
 	Sequential,
 	Combo,
 
-	HotKey,
 	Random,
 };

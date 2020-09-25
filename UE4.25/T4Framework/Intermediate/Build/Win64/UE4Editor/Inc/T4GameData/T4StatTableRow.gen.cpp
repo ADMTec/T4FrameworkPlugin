@@ -123,7 +123,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Defensive_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "100" },
+		{ "ClampMax", "1000" },
 		{ "ClampMin", "0.0" },
 		{ "Comment", "// #114 : \xea\xb3\xb5\xea\xb2\xa9\xeb\xa0\xa5\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
@@ -134,7 +134,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Striking_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "100" },
+		{ "ClampMax", "1000" },
 		{ "ClampMin", "0.0" },
 		{ "Comment", "// #114 : \xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
@@ -226,7 +226,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 3914653860U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 3035722145U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

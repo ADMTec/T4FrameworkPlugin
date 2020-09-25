@@ -29,6 +29,8 @@ private:
 	const FSlateBrush* GetViewMenuLabelIcon() const;
 
 protected:
+	void BindCommands();
+
 	virtual TSharedRef<SWidget> GenerateViewMenuContent() const;
 	ST4EditorViewport* ViewportRef;
 

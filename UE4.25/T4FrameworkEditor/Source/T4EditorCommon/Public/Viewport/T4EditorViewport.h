@@ -50,6 +50,7 @@ public:
 
 	IT4EditorViewModel* GetViewModel() const { return ViewModelRef; }
 	FT4EditorViewportClient* GetViewportClient() const { return ViewportClientPtr.Get(); } // #79
+	TSharedPtr<FT4EditorViewportClient> GetViewportClientPtr() const { return ViewportClientPtr; } // #79
 
 	TSharedRef<SOverlay> GetViewportOverlayRef() { return ViewportOverlay.ToSharedRef(); } // #164
 
@@ -57,6 +58,8 @@ public:
 
 	int32 GetCameraSpeedSetting() const; // #145
 	void SetCameraSpeedSetting(int32 InCameraSpeedSetting); // #145
+
+	TSharedPtr<FUICommandList> GetCommandList() const { return CommandList; } // #167
 
 protected:
 	TSharedRef<FEditorViewportClient> MakeEditorViewportClient() override;

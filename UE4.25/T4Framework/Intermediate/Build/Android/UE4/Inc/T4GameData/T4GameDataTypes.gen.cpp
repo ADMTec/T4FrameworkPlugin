@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		return ET4GameSkillSetPlayMode_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameSkillSetPlayMode(ET4GameSkillSetPlayMode_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameSkillSetPlayMode"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode_Hash() { return 3520732893U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode_Hash() { return 3044279259U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode()
 	{
 #if WITH_HOT_RELOAD
@@ -53,14 +53,12 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "ET4GameSkillSetPlayMode::Primary", (int64)ET4GameSkillSetPlayMode::Primary },
 				{ "ET4GameSkillSetPlayMode::Sequential", (int64)ET4GameSkillSetPlayMode::Sequential },
 				{ "ET4GameSkillSetPlayMode::Combo", (int64)ET4GameSkillSetPlayMode::Combo },
-				{ "ET4GameSkillSetPlayMode::HotKey", (int64)ET4GameSkillSetPlayMode::HotKey },
 				{ "ET4GameSkillSetPlayMode::Random", (int64)ET4GameSkillSetPlayMode::Random },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Combo.Name", "ET4GameSkillSetPlayMode::Combo" },
 				{ "Comment", "// #142\n" },
-				{ "HotKey.Name", "ET4GameSkillSetPlayMode::HotKey" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
 				{ "Primary.Name", "ET4GameSkillSetPlayMode::Primary" },
 				{ "Random.Name", "ET4GameSkillSetPlayMode::Random" },
@@ -369,7 +367,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		return ET4GameAttackType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameAttackType(ET4GameAttackType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameAttackType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameAttackType_Hash() { return 3931865315U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameAttackType_Hash() { return 3504319462U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameAttackType()
 	{
 #if WITH_HOT_RELOAD
@@ -386,6 +384,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "ET4GameAttackType::Launch", (int64)ET4GameAttackType::Launch },
 				{ "ET4GameAttackType::Air", (int64)ET4GameAttackType::Air },
 				{ "ET4GameAttackType::Dash", (int64)ET4GameAttackType::Dash },
+				{ "ET4GameAttackType::AreaOfEffect", (int64)ET4GameAttackType::AreaOfEffect },
 				{ "ET4GameAttackType::None", (int64)ET4GameAttackType::None },
 			};
 #if WITH_METADATA
@@ -393,6 +392,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "Air.Comment", "// #135, \xed\x8a\xb9\xec\x88\x98, \xeb\xb0\x9c\xec\x82\xac\xec\xb2\xb4\xec\x99\x80 \xeb\xb0\x98\xeb\x8f\x99\xec\x9d\xb4 \xed\x95\xa8\xea\xbb\x98 \xec\x9e\x88\xec\x9d\x8c (TODO : \xec\xa0\x81\xeb\x8b\xb9\xed\x95\x9c \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4 \xec\x9e\x88\xeb\x8b\xa4\xeb\xa9\xb4 \xec\x88\x98\xec\xa0\x95\xed\x95\xa0 \xea\xb2\x83)\n" },
 				{ "Air.Name", "ET4GameAttackType::Air" },
 				{ "Air.ToolTip", "#135, \xed\x8a\xb9\xec\x88\x98, \xeb\xb0\x9c\xec\x82\xac\xec\xb2\xb4\xec\x99\x80 \xeb\xb0\x98\xeb\x8f\x99\xec\x9d\xb4 \xed\x95\xa8\xea\xbb\x98 \xec\x9e\x88\xec\x9d\x8c (TODO : \xec\xa0\x81\xeb\x8b\xb9\xed\x95\x9c \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4 \xec\x9e\x88\xeb\x8b\xa4\xeb\xa9\xb4 \xec\x88\x98\xec\xa0\x95\xed\x95\xa0 \xea\xb2\x83)" },
+				{ "AreaOfEffect.Comment", "// #135\n" },
+				{ "AreaOfEffect.Name", "ET4GameAttackType::AreaOfEffect" },
+				{ "AreaOfEffect.ToolTip", "#135" },
 				{ "BlueprintType", "true" },
 				{ "Comment", "// #63\n" },
 				{ "Dash.Comment", "// #135 : Jump Attack\n" },
@@ -400,9 +402,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "Dash.ToolTip", "#135 : Jump Attack" },
 				{ "Launch.Name", "ET4GameAttackType::Launch" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Comment", "// #135\n" },
+				{ "None.Comment", "// #161 : \xea\xb4\x91\xec\x97\xad\xea\xb8\xb0, SkillEffectDBKey \xec\x99\x80 \xed\x95\xa8\xea\xbb\x98 \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa8!\n" },
 				{ "None.Name", "ET4GameAttackType::None" },
-				{ "None.ToolTip", "#135" },
+				{ "None.ToolTip", "#161 : \xea\xb4\x91\xec\x97\xad\xea\xb8\xb0, SkillEffectDBKey \xec\x99\x80 \xed\x95\xa8\xea\xbb\x98 \xec\x82\xac\xec\x9a\xa9\xeb\x90\xa8!" },
 				{ "Swing.Name", "ET4GameAttackType::Swing" },
 				{ "Throw.Name", "ET4GameAttackType::Throw" },
 				{ "ToolTip", "#63" },

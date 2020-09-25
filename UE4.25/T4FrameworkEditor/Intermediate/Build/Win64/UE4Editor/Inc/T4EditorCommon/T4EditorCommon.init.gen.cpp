@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorCommon_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x533F07E2,
+				0x272C388A,
 				0x04EBF346,
 				METADATA_PARAMS(nullptr, 0)
 			};

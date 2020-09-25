@@ -21,7 +21,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GameSkillSetPlayMode::Primary) \
 	op(ET4GameSkillSetPlayMode::Sequential) \
 	op(ET4GameSkillSetPlayMode::Combo) \
-	op(ET4GameSkillSetPlayMode::HotKey) \
 	op(ET4GameSkillSetPlayMode::Random) 
 
 enum class ET4GameSkillSetPlayMode;
@@ -78,6 +77,7 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEffectType>();
 	op(ET4GameAttackType::Launch) \
 	op(ET4GameAttackType::Air) \
 	op(ET4GameAttackType::Dash) \
+	op(ET4GameAttackType::AreaOfEffect) \
 	op(ET4GameAttackType::None) 
 
 enum class ET4GameAttackType : uint8;
