@@ -42,7 +42,7 @@ protected:
 	void NotifyAIEnd() override; // #50
 
 	void NotifyMoveStart(const FVector& InGoalLocation) override; // #42, #34, #52, #144
-	void NotifyMoveStop() override; // #52, #144
+	void NotifyMoveStop(const bool bInInterrupted) override; // #52, #144
 
 private:
 	bool CheckAsyncLoading();

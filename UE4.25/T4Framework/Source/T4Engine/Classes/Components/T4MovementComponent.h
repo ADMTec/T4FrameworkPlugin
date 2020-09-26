@@ -74,7 +74,13 @@ private:
 	bool FloorSweepTest(const FVector& InStart, const FVector& InEnd, FT4HitSingleResult& OutHitResult);
 
 	float GetSimulationTimeStep(float InRemainingTime, int32 InIterations) const;
+
+	bool IsWalkable(const FHitResult& Hit) const;
+
+	FVector ComputeGroundMovementDelta(const FVector& Delta, const FHitResult& RampHit, const bool bHitFromLineTrace) const;
 	FVector NewFallVelocity(const FVector& InInitialVelocity, const FVector& InGravity, float InDeltaTime) const;
+
+	void HandleImpact(const FHitResult& Impact, float TimeSlice, const FVector& MoveDelta);
 
 	IT4WorldSystem* GetWorldSystem();
 	IT4WorldCollision* GetWorldCollision();

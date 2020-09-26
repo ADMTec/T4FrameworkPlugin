@@ -104,7 +104,7 @@ protected:
 	virtual void NotifyAIEnd() {} // #50
 
 	virtual void NotifyMoveStart(const FVector& InGoalLocation) {} // #42, #34, #52, #144
-	virtual void NotifyMoveStop() {} // #52, #144
+	virtual void NotifyMoveStop(const bool bInInterrupted) {} // #52, #144
 
 protected:
 	ET4LayerType LayerType;

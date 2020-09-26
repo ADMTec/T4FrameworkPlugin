@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.52)
+# T4FrameworkPlugin (v0.9.53)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,12 +20,14 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.52** : 2020.09.25
-    - #161 [기능추가] C/S 기반 Area of Effect (AOE) Skill/Effect 처리 추가 (광역 스킬)
-    - #168 [버그수정] Quest Editor, QuestFlow 편집 시 RootNode 에서는 Quest Node 만 연결할 수 있도록 ContentMenu 수정 
-	- #161 [버그수정] SkillSet 의 PlayMode 옵션 Sequential, Combo, Random 이 정상적으로 동작하지 않던 문제 수정
-	- #161 [버그수정] Content Editor, Show Menu 의 NPC AI Disable 옵션이 정상적으로 동작하지 않던 문제 수정
-	- #158 [버그수정] Content Editor, 뷰포트에서 ALT + 1~9 핫키를 이용한 Player 스폰시 뷰포트 ViewMode 가 함께 변경되던 문제 수정
+  - **v0.9.53** : 2020.09.26
+    - #161 [기능개선] NPC AI 가 이동이 막힐 경우 제자리 걸음을 하던 문제 개선
+    - #161 [버그수정] 쿼터뷰 카메라에서 마우스 우클릭 드레그로 Pitch 조절이 되던 문제 수정
+    - #161 [버그수정] 쿼터뷰 카메라 사용중 플레이어 Actor 를 교체할 경우 고정 카메라 거리가 설정되지 않던 문제 수정
+    - #165 [버그수정] NPC AI 이동이 간헐적으로 캐릭터 위로 이동하던 문제 수정
+	- #168 [버그수정] 진행중인 Quest 가 간헐적으로 종료되던 문제 수정
+    - #168 [버그수정] Quest Editor, QuestFlow 편집이 Content Editor 에 즉시 반영되지 않고 에디터 종료 후 적용되던 문제 수정
+	- #164 [버그수정] Content Editor, Waypoint 복제 시 Manipulator 가 사라지던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

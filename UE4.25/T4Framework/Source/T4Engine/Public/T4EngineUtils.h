@@ -172,7 +172,7 @@ public:
 	bool GetMovementPathSimulation(
 		ET4LayerType InLayerType,
 		const FVector& InStartLocation,
-		const FVector& InInVelocity,
+		const FVector& InVelocity,
 		float InShapeRadius,
 		float InMaxSimulationTimeSec,
 		const FVector& InNavPointExtent,

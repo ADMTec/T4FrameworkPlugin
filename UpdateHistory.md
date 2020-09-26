@@ -2,6 +2,12 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.52 : 2020.09.25
+  - #161 [기능추가] C/S 기반 Area of Effect (AOE) Skill/Effect 처리 추가 (광역 스킬)
+  - #168 [버그수정] Quest Editor, QuestFlow 편집 시 RootNode 에서는 Quest Node 만 연결할 수 있도록 ContentMenu 수정 
+  - #161 [버그수정] SkillSet 의 PlayMode 옵션 Sequential, Combo, Random 이 정상적으로 동작하지 않던 문제 수정
+  - #161 [버그수정] Content Editor, Show Menu 의 NPC AI Disable 옵션이 정상적으로 동작하지 않던 문제 수정
+  - #158 [버그수정] Content Editor, 뷰포트에서 ALT + 1~9 핫키를 이용한 Player 스폰시 뷰포트 ViewMode 가 함께 변경되던 문제 수정
 - v0.9.51_1 : 2020.09.24
   - #158 [기능개선] AnimSet 기본 옵션에 AnimInstance 에 대한 RootMotionMode 옵션 설정 추가 (HOTFIX 1)
 	- Entity Editor => AnimSet Detail Tab => AnimRootMotionMode
