@@ -17,7 +17,4 @@ class T4GAMEPLAY_API UT4BFTask_T4JumpToTarget : public UBTTask_Wait
 
 public:
 	EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& InOwnerComp, uint8* InNodeMemory) override;
-
-protected:
-	void TickTask(UBehaviorTreeComponent& InOwnerComp, uint8* InNodeMemory, float InDeltaSeconds) override;
 };

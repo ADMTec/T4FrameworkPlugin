@@ -240,6 +240,16 @@ enum class ET4FootstepType : uint8 // #111
 };
 
 UENUM()
+enum class ET4MovementCategory : uint8 // #161
+{
+	Jump,
+	Segments, // #161
+	Projectile,
+
+	None,
+};
+
+UENUM()
 enum class ET4MovementPathType : uint8 // #135
 {
 	Actor,
@@ -247,7 +257,18 @@ enum class ET4MovementPathType : uint8 // #135
 	Gravity, // #140 : Jump, Knockdown 등, 캐릭터 이동
 	Infinity,
 
+	Segment, // #161
+
 	InPlace, // #132 : Airborne
+};
+
+UENUM()
+enum class ET4MoveSegmentType : uint8 // #161
+{
+	Walk,
+	Jump,
+
+	None,
 };
 
 UENUM()

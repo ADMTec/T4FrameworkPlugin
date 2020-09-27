@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GamePacketSC_Move_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_347_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_394_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_LockOff_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_LockOff>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_312_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_359_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_LockOn_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -29,23 +29,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Loc
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_LockOn>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_277_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics; \
-	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
-	typedef FT4GamePacketSC_Base Super;
-
-
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveSpeedSync>();
-
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_233_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics; \
-	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
-	typedef FT4GamePacketSC_Base Super;
-
-
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveStop>();
-
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_188_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_315_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Teleport_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -53,7 +37,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Mov
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Teleport>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_153_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_280_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Rotation_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -61,7 +45,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Tel
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Rotation>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_92_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_219_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Jump_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -69,13 +53,37 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Rot
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Jump>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_33_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics; \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_176_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
 
 
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Move>();
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveSegments>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_140_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics; \
+	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
+	typedef FT4GamePacketSC_Base Super;
+
+
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveSpeedSync>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_96_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics; \
+	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
+	typedef FT4GamePacketSC_Base Super;
+
+
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveStop>();
+
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h_36_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics; \
+	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
+	typedef FT4GamePacketSC_Base Super;
+
+
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_MoveStart>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Move_h

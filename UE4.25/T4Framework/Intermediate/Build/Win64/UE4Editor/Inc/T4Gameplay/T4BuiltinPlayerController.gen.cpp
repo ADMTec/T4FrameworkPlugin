@@ -66,8 +66,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_LockOn();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionFinish();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MissionStart();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Move();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MyPCChange();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MyPCEnter();
@@ -266,6 +267,14 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->SC_RecvPacket_MoveStop_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MoveSegments)
+	{
+		P_GET_STRUCT(FT4GamePacketSC_MoveSegments,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SC_RecvPacket_MoveSegments_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_Teleport)
 	{
 		P_GET_STRUCT(FT4GamePacketSC_Teleport,Z_Param_InPacket);
@@ -290,12 +299,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->SC_RecvPacket_Jump_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_Move)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_MoveStart)
 	{
-		P_GET_STRUCT(FT4GamePacketSC_Move,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketSC_MoveStart,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_Move_Implementation(Z_Param_InPacket);
+		P_THIS->SC_RecvPacket_MoveStart_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_ItemLeave)
@@ -1139,12 +1148,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart),&Parms);
 	}
-	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_Move = FName(TEXT("SC_RecvPacket_Move"));
-	void AT4BuiltinPlayerController::SC_RecvPacket_Move(FT4GamePacketSC_Move const& InPacket)
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments = FName(TEXT("SC_RecvPacket_MoveSegments"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_MoveSegments(FT4GamePacketSC_MoveSegments const& InPacket)
 	{
-		T4BuiltinPlayerController_eventSC_RecvPacket_Move_Parms Parms;
+		T4BuiltinPlayerController_eventSC_RecvPacket_MoveSegments_Parms Parms;
 		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_Move),&Parms);
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveSpeedSync = FName(TEXT("SC_RecvPacket_MoveSpeedSync"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_MoveSpeedSync(FT4GamePacketSC_MoveSpeedSync const& InPacket)
@@ -1152,6 +1161,13 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		T4BuiltinPlayerController_eventSC_RecvPacket_MoveSpeedSync_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveSpeedSync),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart = FName(TEXT("SC_RecvPacket_MoveStart"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_MoveStart(FT4GamePacketSC_MoveStart const& InPacket)
+	{
+		T4BuiltinPlayerController_eventSC_RecvPacket_MoveStart_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop = FName(TEXT("SC_RecvPacket_MoveStop"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_MoveStop(FT4GamePacketSC_MoveStop const& InPacket)
@@ -1353,8 +1369,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "SC_RecvPacket_LockOn", &AT4BuiltinPlayerController::execSC_RecvPacket_LockOn },
 			{ "SC_RecvPacket_MissionFinish", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionFinish },
 			{ "SC_RecvPacket_MissionStart", &AT4BuiltinPlayerController::execSC_RecvPacket_MissionStart },
-			{ "SC_RecvPacket_Move", &AT4BuiltinPlayerController::execSC_RecvPacket_Move },
+			{ "SC_RecvPacket_MoveSegments", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveSegments },
 			{ "SC_RecvPacket_MoveSpeedSync", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveSpeedSync },
+			{ "SC_RecvPacket_MoveStart", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveStart },
 			{ "SC_RecvPacket_MoveStop", &AT4BuiltinPlayerController::execSC_RecvPacket_MoveStop },
 			{ "SC_RecvPacket_MyPCChange", &AT4BuiltinPlayerController::execSC_RecvPacket_MyPCChange },
 			{ "SC_RecvPacket_MyPCEnter", &AT4BuiltinPlayerController::execSC_RecvPacket_MyPCEnter },
@@ -3209,7 +3226,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
@@ -3222,28 +3239,26 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::NewProp_InPacket_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::NewProp_InPacket_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_Move_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_Move, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::NewProp_InPacket,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_MoveSegments_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::NewProp_InPacket,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #41\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
-		{ "ToolTip", "#41" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_Move", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_Move_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MoveSegments", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MoveSegments_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3285,6 +3300,44 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_MoveStart_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #41\n" },
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#41" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MoveStart", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MoveStart_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics
 	{
 #if WITH_METADATA
@@ -3308,7 +3361,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #161\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#161" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_MoveStop", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_MoveStop_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop_Statics::Function_MetaDataParams)) };
@@ -4137,9 +4192,10 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_LockOn, "SC_RecvPacket_LockOn" }, // 588552202
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionFinish, "SC_RecvPacket_MissionFinish" }, // 893400564
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MissionStart, "SC_RecvPacket_MissionStart" }, // 2280028081
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_Move, "SC_RecvPacket_Move" }, // 2611051135
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSegments, "SC_RecvPacket_MoveSegments" }, // 1743683809
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveSpeedSync, "SC_RecvPacket_MoveSpeedSync" }, // 1641032715
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop, "SC_RecvPacket_MoveStop" }, // 1666609580
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStart, "SC_RecvPacket_MoveStart" }, // 2076681928
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MoveStop, "SC_RecvPacket_MoveStop" }, // 1469588422
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MyPCChange, "SC_RecvPacket_MyPCChange" }, // 339669831
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_MyPCEnter, "SC_RecvPacket_MyPCEnter" }, // 1434298745
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_NPCEnter, "SC_RecvPacket_NPCEnter" }, // 2267015669
@@ -4197,7 +4253,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 97024036);
+	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 2332494409);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinPlayerController>()
 	{
 		return AT4BuiltinPlayerController::StaticClass();

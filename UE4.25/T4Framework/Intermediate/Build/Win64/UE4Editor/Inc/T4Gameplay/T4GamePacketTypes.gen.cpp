@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2514294836U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2148517679U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -63,12 +63,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::NPCLeave", (int64)ET4GamePacketSC::NPCLeave },
 				{ "ET4GamePacketSC::ItemEnter", (int64)ET4GamePacketSC::ItemEnter },
 				{ "ET4GamePacketSC::ItemLeave", (int64)ET4GamePacketSC::ItemLeave },
-				{ "ET4GamePacketSC::Move", (int64)ET4GamePacketSC::Move },
+				{ "ET4GamePacketSC::MoveStart", (int64)ET4GamePacketSC::MoveStart },
+				{ "ET4GamePacketSC::MoveStop", (int64)ET4GamePacketSC::MoveStop },
+				{ "ET4GamePacketSC::MoveSpeedSync", (int64)ET4GamePacketSC::MoveSpeedSync },
+				{ "ET4GamePacketSC::MoveSegments", (int64)ET4GamePacketSC::MoveSegments },
 				{ "ET4GamePacketSC::Jump", (int64)ET4GamePacketSC::Jump },
 				{ "ET4GamePacketSC::Rotation", (int64)ET4GamePacketSC::Rotation },
 				{ "ET4GamePacketSC::Teleport", (int64)ET4GamePacketSC::Teleport },
-				{ "ET4GamePacketSC::MoveStop", (int64)ET4GamePacketSC::MoveStop },
-				{ "ET4GamePacketSC::MoveSpeedSync", (int64)ET4GamePacketSC::MoveSpeedSync },
 				{ "ET4GamePacketSC::LockOn", (int64)ET4GamePacketSC::LockOn },
 				{ "ET4GamePacketSC::LockOff", (int64)ET4GamePacketSC::LockOff },
 				{ "ET4GamePacketSC::AnimSet", (int64)ET4GamePacketSC::AnimSet },
@@ -144,13 +145,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ItemLeave.Comment", "// #41\n" },
 				{ "ItemLeave.Name", "ET4GamePacketSC::ItemLeave" },
 				{ "ItemLeave.ToolTip", "#41" },
+				{ "Jump.Comment", "// #161\n" },
 				{ "Jump.Name", "ET4GamePacketSC::Jump" },
+				{ "Jump.ToolTip", "#161" },
 				{ "LockOff.Comment", "// #40\n" },
 				{ "LockOff.Name", "ET4GamePacketSC::LockOff" },
 				{ "LockOff.ToolTip", "#40" },
-				{ "LockOn.Comment", "// #52\n" },
 				{ "LockOn.Name", "ET4GamePacketSC::LockOn" },
-				{ "LockOn.ToolTip", "#52" },
 				{ "MissionFinish.Comment", "// #164\n" },
 				{ "MissionFinish.Name", "ET4GamePacketSC::MissionFinish" },
 				{ "MissionFinish.ToolTip", "#164" },
@@ -158,12 +159,15 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "MissionStart.Name", "ET4GamePacketSC::MissionStart" },
 				{ "MissionStart.ToolTip", "#164" },
 				{ "ModuleRelativePath", "Public/Protocol/T4GamePacketTypes.h" },
-				{ "Move.Comment", "// #41\n" },
-				{ "Move.Name", "ET4GamePacketSC::Move" },
-				{ "Move.ToolTip", "#41" },
+				{ "MoveSegments.Comment", "// #52\n" },
+				{ "MoveSegments.Name", "ET4GamePacketSC::MoveSegments" },
+				{ "MoveSegments.ToolTip", "#52" },
 				{ "MoveSpeedSync.Comment", "// #52\n" },
 				{ "MoveSpeedSync.Name", "ET4GamePacketSC::MoveSpeedSync" },
 				{ "MoveSpeedSync.ToolTip", "#52" },
+				{ "MoveStart.Comment", "// #41\n" },
+				{ "MoveStart.Name", "ET4GamePacketSC::MoveStart" },
+				{ "MoveStart.ToolTip", "#41" },
 				{ "MoveStop.Name", "ET4GamePacketSC::MoveStop" },
 				{ "MyPCChange.Name", "ET4GamePacketSC::MyPCChange" },
 				{ "MyPCEnter.Comment", "// #140 : \xed\x8a\xb9\xec\xa0\x95 \xec\x9c\x84\xec\xb9\x98\xeb\xa1\x9c \xec\xb9\xb4\xeb\xa9\x94\xeb\x9d\xbc \xec\x9d\xb4\xeb\x8f\x99\n" },

@@ -38,12 +38,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4GamePacketSC::NPCLeave) \
 	op(ET4GamePacketSC::ItemEnter) \
 	op(ET4GamePacketSC::ItemLeave) \
-	op(ET4GamePacketSC::Move) \
+	op(ET4GamePacketSC::MoveStart) \
+	op(ET4GamePacketSC::MoveStop) \
+	op(ET4GamePacketSC::MoveSpeedSync) \
+	op(ET4GamePacketSC::MoveSegments) \
 	op(ET4GamePacketSC::Jump) \
 	op(ET4GamePacketSC::Rotation) \
 	op(ET4GamePacketSC::Teleport) \
-	op(ET4GamePacketSC::MoveStop) \
-	op(ET4GamePacketSC::MoveSpeedSync) \
 	op(ET4GamePacketSC::LockOn) \
 	op(ET4GamePacketSC::LockOff) \
 	op(ET4GamePacketSC::AnimSet) \

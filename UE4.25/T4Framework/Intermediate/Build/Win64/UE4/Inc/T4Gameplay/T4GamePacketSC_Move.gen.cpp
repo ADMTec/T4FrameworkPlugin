@@ -18,14 +18,17 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketSC_Move() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Base();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4ObjectID();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_LockOn();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Teleport();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Rotation();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Jump();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Move();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4PacketSC_MoveSegmentData();
+	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MoveSegmentType();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart();
 // End Cross Module References
 class UScriptStruct* FT4GamePacketSC_LockOff::StaticStruct()
 {
@@ -217,231 +220,6 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Lock
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_LockOn_Hash() { return 3113906153U; }
-class UScriptStruct* FT4GamePacketSC_MoveSpeedSync::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveSpeedSync"), sizeof(FT4GamePacketSC_MoveSpeedSync), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash());
-	}
-	return Singleton;
-}
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveSpeedSync>()
-{
-	return FT4GamePacketSC_MoveSpeedSync::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync(FT4GamePacketSC_MoveSpeedSync::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveSpeedSync"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync
-{
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveSpeedSync")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSpeedSync>);
-	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync;
-	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectID_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ObjectID;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #52\n" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-		{ "ToolTip", "#52" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSpeedSync>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSpeedSync, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSpeedSync, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
-		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
-		&NewStructOps,
-		"T4GamePacketSC_MoveSpeedSync",
-		sizeof(FT4GamePacketSC_MoveSpeedSync),
-		alignof(FT4GamePacketSC_MoveSpeedSync),
-		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveSpeedSync"), sizeof(FT4GamePacketSC_MoveSpeedSync), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash() { return 1928401195U; }
-class UScriptStruct* FT4GamePacketSC_MoveStop::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveStop"), sizeof(FT4GamePacketSC_MoveStop), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash());
-	}
-	return Singleton;
-}
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveStop>()
-{
-	return FT4GamePacketSC_MoveStop::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveStop(FT4GamePacketSC_MoveStop::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveStop"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop
-{
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveStop")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStop>);
-	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop;
-	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bSyncLocation_MetaData[];
-#endif
-		static void NewProp_bSyncLocation_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSyncLocation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadYawAngle_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HeadYawAngle;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StopLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StopLocation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectID_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ObjectID;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #52\n" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-		{ "ToolTip", "#52" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStop>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData[] = {
-		{ "Category", "Default" },
-		{ "Comment", "// #40 : \xed\x95\x84\xec\x9a\x94\xed\x95\xa0 \xeb\x95\x8c 3D \xeb\xa1\x9c \xed\x99\x95\xec\x9e\xa5. #50 : \xec\x9d\xb4\xeb\x8f\x99 \xeb\xb0\xa9\xed\x96\xa5\xea\xb3\xbc Head \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xeb\x8b\xa4\xeb\xa5\xbc \xea\xb2\xbd\xec\x9a\xb0\xeb\xa5\xbc \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa1\xb4\xec\x9e\xac\n" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-		{ "ToolTip", "#40 : \xed\x95\x84\xec\x9a\x94\xed\x95\xa0 \xeb\x95\x8c 3D \xeb\xa1\x9c \xed\x99\x95\xec\x9e\xa5. #50 : \xec\x9d\xb4\xeb\x8f\x99 \xeb\xb0\xa9\xed\x96\xa5\xea\xb3\xbc Head \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xeb\x8b\xa4\xeb\xa5\xbc \xea\xb2\xbd\xec\x9a\xb0\xeb\xa5\xbc \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa1\xb4\xec\x9e\xac" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_SetBit(void* Obj)
-	{
-		((FT4GamePacketSC_MoveStop*)Obj)->bSyncLocation = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation = { "bSyncLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketSC_MoveStop), &Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle = { "HeadYawAngle", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, HeadYawAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation = { "StopLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, StopLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
-		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
-		&NewStructOps,
-		"T4GamePacketSC_MoveStop",
-		sizeof(FT4GamePacketSC_MoveStop),
-		alignof(FT4GamePacketSC_MoveStop),
-		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveStop"), sizeof(FT4GamePacketSC_MoveStop), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash() { return 1958903478U; }
 class UScriptStruct* FT4GamePacketSC_Teleport::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -797,29 +575,369 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Jump
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Jump_Hash() { return 1933177608U; }
-class UScriptStruct* FT4GamePacketSC_Move::StaticStruct()
+class UScriptStruct* FT4GamePacketSC_MoveSegments::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_Move, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_Move"), sizeof(FT4GamePacketSC_Move), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Hash());
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveSegments"), sizeof(FT4GamePacketSC_MoveSegments), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Hash());
 	}
 	return Singleton;
 }
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_Move>()
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveSegments>()
 {
-	return FT4GamePacketSC_Move::StaticStruct();
+	return FT4GamePacketSC_MoveSegments::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_Move(FT4GamePacketSC_Move::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_Move"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Move
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveSegments(FT4GamePacketSC_MoveSegments::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveSegments"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSegments
 {
-	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Move()
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSegments()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_Move")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_Move>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveSegments")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSegments>);
 	}
-} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Move;
-	struct Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSegments;
+	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSegmentDatas_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_MoveSegmentDatas;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MoveSegmentDatas_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSegmentType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MoveSegmentType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MoveSegmentType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ObjectID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #161\n" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+		{ "ToolTip", "#161" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSegments>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas = { "MoveSegmentDatas", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSegments, MoveSegmentDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas_Inner = { "MoveSegmentDatas", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4PacketSC_MoveSegmentData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType = { "MoveSegmentType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSegments, MoveSegmentType), Z_Construct_UEnum_T4Engine_ET4MoveSegmentType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_ObjectID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSegments, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_ObjectID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentDatas_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_MoveSegmentType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::NewProp_ObjectID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
+		&NewStructOps,
+		"T4GamePacketSC_MoveSegments",
+		sizeof(FT4GamePacketSC_MoveSegments),
+		alignof(FT4GamePacketSC_MoveSegments),
+		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveSegments"), sizeof(FT4GamePacketSC_MoveSegments), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSegments_Hash() { return 2091357098U; }
+class UScriptStruct* FT4GamePacketSC_MoveSpeedSync::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveSpeedSync"), sizeof(FT4GamePacketSC_MoveSpeedSync), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveSpeedSync>()
+{
+	return FT4GamePacketSC_MoveSpeedSync::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync(FT4GamePacketSC_MoveSpeedSync::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveSpeedSync"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveSpeedSync")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSpeedSync>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveSpeedSync;
+	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ObjectID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #52\n" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+		{ "ToolTip", "#52" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveSpeedSync>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSpeedSync, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveSpeedSync, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_MoveSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::NewProp_ObjectID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
+		&NewStructOps,
+		"T4GamePacketSC_MoveSpeedSync",
+		sizeof(FT4GamePacketSC_MoveSpeedSync),
+		alignof(FT4GamePacketSC_MoveSpeedSync),
+		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveSpeedSync"), sizeof(FT4GamePacketSC_MoveSpeedSync), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveSpeedSync_Hash() { return 1928401195U; }
+class UScriptStruct* FT4GamePacketSC_MoveStop::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveStop"), sizeof(FT4GamePacketSC_MoveStop), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveStop>()
+{
+	return FT4GamePacketSC_MoveStop::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveStop(FT4GamePacketSC_MoveStop::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveStop"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveStop")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStop>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStop;
+	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bSyncLocation_MetaData[];
+#endif
+		static void NewProp_bSyncLocation_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSyncLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeadYawAngle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HeadYawAngle;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StopLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StopLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ObjectID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #52\n" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+		{ "ToolTip", "#52" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStop>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData[] = {
+		{ "Category", "Default" },
+		{ "Comment", "// #40 : \xed\x95\x84\xec\x9a\x94\xed\x95\xa0 \xeb\x95\x8c 3D \xeb\xa1\x9c \xed\x99\x95\xec\x9e\xa5. #50 : \xec\x9d\xb4\xeb\x8f\x99 \xeb\xb0\xa9\xed\x96\xa5\xea\xb3\xbc Head \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xeb\x8b\xa4\xeb\xa5\xbc \xea\xb2\xbd\xec\x9a\xb0\xeb\xa5\xbc \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa1\xb4\xec\x9e\xac\n" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+		{ "ToolTip", "#40 : \xed\x95\x84\xec\x9a\x94\xed\x95\xa0 \xeb\x95\x8c 3D \xeb\xa1\x9c \xed\x99\x95\xec\x9e\xa5. #50 : \xec\x9d\xb4\xeb\x8f\x99 \xeb\xb0\xa9\xed\x96\xa5\xea\xb3\xbc Head \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xeb\x8b\xa4\xeb\xa5\xbc \xea\xb2\xbd\xec\x9a\xb0\xeb\xa5\xbc \xeb\x8c\x80\xeb\xb9\x84\xed\x95\xb4 \xec\xa1\xb4\xec\x9e\xac" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_SetBit(void* Obj)
+	{
+		((FT4GamePacketSC_MoveStop*)Obj)->bSyncLocation = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation = { "bSyncLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketSC_MoveStop), &Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle = { "HeadYawAngle", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, HeadYawAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation = { "StopLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, StopLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStop, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_bSyncLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_HeadYawAngle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_StopLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::NewProp_ObjectID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
+		&NewStructOps,
+		"T4GamePacketSC_MoveStop",
+		sizeof(FT4GamePacketSC_MoveStop),
+		alignof(FT4GamePacketSC_MoveStop),
+		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveStop"), sizeof(FT4GamePacketSC_MoveStop), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStop_Hash() { return 1958903478U; }
+class UScriptStruct* FT4GamePacketSC_MoveStart::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4GamePacketSC_MoveStart"), sizeof(FT4GamePacketSC_MoveStart), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4GamePacketSC_MoveStart>()
+{
+	return FT4GamePacketSC_MoveStart::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4GamePacketSC_MoveStart(FT4GamePacketSC_MoveStart::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4GamePacketSC_MoveStart"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStart
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStart()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4GamePacketSC_MoveStart")),new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStart>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_MoveStart;
+	struct Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -862,119 +980,119 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Move
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "// WARN : #46\n//\n// StoC \xed\x8c\xa8\xed\x82\xb7\xec\x9d\x80 \xed\x81\xb4\xeb\x9d\xbc\xec\x97\x90\xec\x84\x9c \xeb\x84\x98\xec\x96\xb4\xec\x98\xa8 Normalize \xeb\x90\x9c Direction \xec\x97\x90 Speed \xeb\xa5\xbc \xec\x96\xbb\xec\x96\xb4 Velocity \xeb\xa5\xbc \xeb\x84\x98\xea\xb2\xa8\xec\xa4\x80\xeb\x8b\xa4. \n//\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 		{ "ToolTip", "WARN : #46\n\nStoC \xed\x8c\xa8\xed\x82\xb7\xec\x9d\x80 \xed\x81\xb4\xeb\x9d\xbc\xec\x97\x90\xec\x84\x9c \xeb\x84\x98\xec\x96\xb4\xec\x98\xa8 Normalize \xeb\x90\x9c Direction \xec\x97\x90 Speed \xeb\xa5\xbc \xec\x96\xbb\xec\x96\xb4 Velocity \xeb\xa5\xbc \xeb\x84\x98\xea\xb2\xa8\xec\xa4\x80\xeb\x8b\xa4." },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_Move>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketSC_MoveStart>();
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerDirection_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerDirection_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #52\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 		{ "ToolTip", "#52" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerDirection = { "ServerDirection", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, ServerDirection), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerDirection_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerDirection_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerDirection = { "ServerDirection", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, ServerDirection), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerDirection_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerDirection_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerNavPoint_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerNavPoint_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerNavPoint = { "ServerNavPoint", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, ServerNavPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerNavPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerNavPoint_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerNavPoint = { "ServerNavPoint", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, ServerNavPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerNavPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerNavPoint_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_HeadYawAngle_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_HeadYawAngle_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #150\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 		{ "ToolTip", "#150" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_HeadYawAngle = { "HeadYawAngle", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, HeadYawAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_HeadYawAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_HeadYawAngle_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_HeadYawAngle = { "HeadYawAngle", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, HeadYawAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_HeadYawAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_HeadYawAngle_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_MoveSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #165 : add bGoalOnNavMesh : Zone Waypoint\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 		{ "ToolTip", "#165 : add bGoalOnNavMesh : Zone Waypoint" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_MoveSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, MoveSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_MoveSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #52 : Velocity * (1.0f / DefaultNetworkLatencySec) / \xeb\xa0\x88\xec\x9d\xb4\xed\x84\xb4\xec\x8b\x9c \xea\xb0\x90\xec\x95\x88 \xeb\xb3\xb5\xec\x9b\x90\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 		{ "ToolTip", "#52 : Velocity * (1.0f / DefaultNetworkLatencySec) / \xeb\xa0\x88\xec\x9d\xb4\xed\x84\xb4\xec\x8b\x9c \xea\xb0\x90\xec\x95\x88 \xeb\xb3\xb5\xec\x9b\x90" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh_SetBit(void* Obj)
 	{
-		((FT4GamePacketSC_Move*)Obj)->bGoalOnNavMesh = 1;
+		((FT4GamePacketSC_MoveStart*)Obj)->bGoalOnNavMesh = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh = { "bGoalOnNavMesh", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketSC_Move), &Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh = { "bGoalOnNavMesh", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketSC_MoveStart), &Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_GoalLocation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_GoalLocation_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_GoalLocation = { "GoalLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, GoalLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_GoalLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_GoalLocation_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_GoalLocation = { "GoalLocation", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, GoalLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_GoalLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_GoalLocation_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ObjectID_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ObjectID_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Move.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_Move, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ObjectID_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::PropPointers[] = {
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ObjectID = { "ObjectID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_MoveStart, ObjectID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ObjectID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ObjectID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerDirection,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ServerNavPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerDirection,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ServerNavPoint,
 #endif // WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_HeadYawAngle,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_MoveSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_bGoalOnNavMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_GoalLocation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::NewProp_ObjectID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_HeadYawAngle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_MoveSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_bGoalOnNavMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_GoalLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::NewProp_ObjectID,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
 		Z_Construct_UScriptStruct_FT4GamePacketSC_Base,
 		&NewStructOps,
-		"T4GamePacketSC_Move",
-		sizeof(FT4GamePacketSC_Move),
-		alignof(FT4GamePacketSC_Move),
-		Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::PropPointers),
+		"T4GamePacketSC_MoveStart",
+		sizeof(FT4GamePacketSC_MoveStart),
+		alignof(FT4GamePacketSC_MoveStart),
+		Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_Move()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_Move"), sizeof(FT4GamePacketSC_Move), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4GamePacketSC_MoveStart"), sizeof(FT4GamePacketSC_MoveStart), Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_Move_Hash() { return 2012651455U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_MoveStart_Hash() { return 3549016454U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

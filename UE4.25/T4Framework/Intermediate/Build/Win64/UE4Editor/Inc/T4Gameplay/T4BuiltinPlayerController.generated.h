@@ -30,10 +30,11 @@ struct FT4GamePacketSC_LockOff;
 struct FT4GamePacketSC_LockOn;
 struct FT4GamePacketSC_MoveSpeedSync;
 struct FT4GamePacketSC_MoveStop;
+struct FT4GamePacketSC_MoveSegments;
 struct FT4GamePacketSC_Teleport;
 struct FT4GamePacketSC_Rotation;
 struct FT4GamePacketSC_Jump;
-struct FT4GamePacketSC_Move;
+struct FT4GamePacketSC_MoveStart;
 struct FT4GamePacketSC_ItemLeave;
 struct FT4GamePacketSC_ItemEnter;
 struct FT4GamePacketSC_NPCLeave;
@@ -109,10 +110,11 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_LockOn_Implementation(FT4GamePacketSC_LockOn const& InPacket); \
 	virtual void SC_RecvPacket_MoveSpeedSync_Implementation(FT4GamePacketSC_MoveSpeedSync const& InPacket); \
 	virtual void SC_RecvPacket_MoveStop_Implementation(FT4GamePacketSC_MoveStop const& InPacket); \
+	virtual void SC_RecvPacket_MoveSegments_Implementation(FT4GamePacketSC_MoveSegments const& InPacket); \
 	virtual void SC_RecvPacket_Teleport_Implementation(FT4GamePacketSC_Teleport const& InPacket); \
 	virtual void SC_RecvPacket_Rotation_Implementation(FT4GamePacketSC_Rotation const& InPacket); \
 	virtual void SC_RecvPacket_Jump_Implementation(FT4GamePacketSC_Jump const& InPacket); \
-	virtual void SC_RecvPacket_Move_Implementation(FT4GamePacketSC_Move const& InPacket); \
+	virtual void SC_RecvPacket_MoveStart_Implementation(FT4GamePacketSC_MoveStart const& InPacket); \
 	virtual void SC_RecvPacket_ItemLeave_Implementation(FT4GamePacketSC_ItemLeave const& InPacket); \
 	virtual void SC_RecvPacket_ItemEnter_Implementation(FT4GamePacketSC_ItemEnter const& InPacket); \
 	virtual void SC_RecvPacket_NPCLeave_Implementation(FT4GamePacketSC_NPCLeave const& InPacket); \
@@ -208,10 +210,11 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveSpeedSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveStop); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MoveSegments); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Teleport); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Rotation); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Jump); \
-	DECLARE_FUNCTION(execSC_RecvPacket_Move); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MoveStart); \
 	DECLARE_FUNCTION(execSC_RecvPacket_ItemLeave); \
 	DECLARE_FUNCTION(execSC_RecvPacket_ItemEnter); \
 	DECLARE_FUNCTION(execSC_RecvPacket_NPCLeave); \
@@ -283,10 +286,11 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_LockOn_Implementation(FT4GamePacketSC_LockOn const& InPacket); \
 	virtual void SC_RecvPacket_MoveSpeedSync_Implementation(FT4GamePacketSC_MoveSpeedSync const& InPacket); \
 	virtual void SC_RecvPacket_MoveStop_Implementation(FT4GamePacketSC_MoveStop const& InPacket); \
+	virtual void SC_RecvPacket_MoveSegments_Implementation(FT4GamePacketSC_MoveSegments const& InPacket); \
 	virtual void SC_RecvPacket_Teleport_Implementation(FT4GamePacketSC_Teleport const& InPacket); \
 	virtual void SC_RecvPacket_Rotation_Implementation(FT4GamePacketSC_Rotation const& InPacket); \
 	virtual void SC_RecvPacket_Jump_Implementation(FT4GamePacketSC_Jump const& InPacket); \
-	virtual void SC_RecvPacket_Move_Implementation(FT4GamePacketSC_Move const& InPacket); \
+	virtual void SC_RecvPacket_MoveStart_Implementation(FT4GamePacketSC_MoveStart const& InPacket); \
 	virtual void SC_RecvPacket_ItemLeave_Implementation(FT4GamePacketSC_ItemLeave const& InPacket); \
 	virtual void SC_RecvPacket_ItemEnter_Implementation(FT4GamePacketSC_ItemEnter const& InPacket); \
 	virtual void SC_RecvPacket_NPCLeave_Implementation(FT4GamePacketSC_NPCLeave const& InPacket); \
@@ -382,10 +386,11 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_LockOn); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveSpeedSync); \
 	DECLARE_FUNCTION(execSC_RecvPacket_MoveStop); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MoveSegments); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Teleport); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Rotation); \
 	DECLARE_FUNCTION(execSC_RecvPacket_Jump); \
-	DECLARE_FUNCTION(execSC_RecvPacket_Move); \
+	DECLARE_FUNCTION(execSC_RecvPacket_MoveStart); \
 	DECLARE_FUNCTION(execSC_RecvPacket_ItemLeave); \
 	DECLARE_FUNCTION(execSC_RecvPacket_ItemEnter); \
 	DECLARE_FUNCTION(execSC_RecvPacket_NPCLeave); \
@@ -631,13 +636,17 @@ struct FT4GamePacketCS_ReadyToPlay;
 	{ \
 		FT4GamePacketSC_MissionStart InPacket; \
 	}; \
-	struct T4BuiltinPlayerController_eventSC_RecvPacket_Move_Parms \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_MoveSegments_Parms \
 	{ \
-		FT4GamePacketSC_Move InPacket; \
+		FT4GamePacketSC_MoveSegments InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_MoveSpeedSync_Parms \
 	{ \
 		FT4GamePacketSC_MoveSpeedSync InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_MoveStart_Parms \
+	{ \
+		FT4GamePacketSC_MoveStart InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_MoveStop_Parms \
 	{ \

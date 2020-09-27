@@ -150,6 +150,8 @@ enum class ET4MovementType : uint8 // #127, #132
 	Howitzer, // #127 : 곡사포
 	Mortar, // #127 : 박격포
 	Airborne, // #132 : 부유
+
+	Segments, // #161
 };
 
 UENUM()

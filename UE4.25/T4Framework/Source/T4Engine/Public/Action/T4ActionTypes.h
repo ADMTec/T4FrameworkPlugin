@@ -25,16 +25,14 @@ enum class ET4ActionCommandType : uint32
 
 	MoveAsync, // #40
 	MoveSync, // #40
+	MoveStop, // #52
+	MoveSpeedSync, // #52
+	MoveSegments, // #161
 
 	Jump,
 	Teleport,
 	Rotation, // #137 : WorldActor 회전 (C/S 동기화!)
 	Turn, // #131 : 캐릭터의 회전 연출(애니) 처리
-
-	MoveStop, // #52
-	MoveSpeedSync, // #52
-
-	Launch, // #63 : Only Projectile
 
 	Aim, // #113
 	LockOn,

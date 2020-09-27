@@ -4,6 +4,7 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4GamePacketSC.h"
+#include "T4GamePacketSCStructs.h"
 #include "T4GamePacketSC_Move.generated.h"
 
 /**
@@ -11,13 +12,15 @@
  */
  // #T4_ADD_PACKET_TAG_SC
 
-// ET4GamePacketSC::Move
+// ET4GamePacketSC::MoveStart
+// ET4GamePacketSC::MoveStop // #52
+// ET4GamePacketSC::MoveSpeedSync // #52
+
+// ET4GamePacketSC::MoveSegments // #161
+
 // ET4GamePacketSC::Jump
 // ET4GamePacketSC::Rotation // #40
 // ET4GamePacketSC::Teleport
-
-// ET4GamePacketSC::MoveStop // #52
-// ET4GamePacketSC::MoveSpeedSync // #52
 
 // ET4GamePacketSC::LockOn
 // ET4GamePacketSC::LockOff
@@ -28,7 +31,7 @@
 //
 
 USTRUCT()
-struct FT4GamePacketSC_Move : public FT4GamePacketSC_Base
+struct FT4GamePacketSC_MoveStart : public FT4GamePacketSC_Base
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -57,8 +60,8 @@ public:
 #endif
 
 public:
-	FT4GamePacketSC_Move()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::Move)
+	FT4GamePacketSC_MoveStart()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveStart)
 		, GoalLocation(FVector::ZeroVector)
 		, bGoalOnNavMesh(false) // #165 : add bGoalOnNavMesh : Zone Waypoint
 		, MoveSpeed(0.0f)
@@ -82,7 +85,131 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("SC_Packet:Move"));
+		return FString(TEXT("SC_Packet:MoveStart"));
+	}
+};
+
+// #52
+USTRUCT()
+struct FT4GamePacketSC_MoveStop : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FVector StopLocation;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float HeadYawAngle; // #40 : 필요할 때 3D 로 확장. #50 : 이동 방향과 Head 방향이 다를 경우를 대비해 존재
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bSyncLocation;
+
+public:
+	FT4GamePacketSC_MoveStop()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveStop)
+		, StopLocation(FVector::ZeroVector)
+		, HeadYawAngle(TNumericLimits<float>::Max())
+		, bSyncLocation(false)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:MoveStop"));
+	}
+};
+
+// #52
+USTRUCT()
+struct FT4GamePacketSC_MoveSpeedSync : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float MoveSpeed;
+
+public:
+	FT4GamePacketSC_MoveSpeedSync()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveSpeedSync)
+		, MoveSpeed(0.0f)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:MoveSpeedSync"));
+	}
+};
+
+// #161
+USTRUCT()
+struct FT4GamePacketSC_MoveSegments : public FT4GamePacketSC_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID ObjectID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	ET4MoveSegmentType MoveSegmentType;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	TArray<FT4PacketSC_MoveSegmentData> MoveSegmentDatas;
+
+public:
+	FT4GamePacketSC_MoveSegments()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveSegments)
+		, MoveSegmentType(ET4MoveSegmentType::None)
+	{
+	}
+
+	bool Validate(FString& OutMsg) override
+	{
+		if (!ObjectID.IsValid())
+		{
+			OutMsg = TEXT("Invalid ObjectID");
+			return false;
+		}
+		if (0 >= MoveSegmentDatas.Num())
+		{
+			OutMsg = TEXT("MoveSegmentData is Empty");
+			return false;
+		}
+		return true;
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("SC_Packet:MoveSegments"));
 	}
 };
 
@@ -223,86 +350,6 @@ public:
 	FString ToString() const override
 	{
 		return FString(TEXT("SC_Packet:Teleport"));
-	}
-};
-
-// #52
-USTRUCT()
-struct FT4GamePacketSC_MoveStop : public FT4GamePacketSC_Base
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID ObjectID;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FVector StopLocation;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	float HeadYawAngle; // #40 : 필요할 때 3D 로 확장. #50 : 이동 방향과 Head 방향이 다를 경우를 대비해 존재
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	bool bSyncLocation;
-
-public:
-	FT4GamePacketSC_MoveStop()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveStop)
-		, StopLocation(FVector::ZeroVector)
-		, HeadYawAngle(TNumericLimits<float>::Max())
-		, bSyncLocation(false)
-	{
-	}
-
-	bool Validate(FString& OutMsg) override
-	{
-		if (!ObjectID.IsValid())
-		{
-			OutMsg = TEXT("Invalid ObjectID");
-			return false;
-		}
-		return true;
-	}
-
-	FString ToString() const override
-	{
-		return FString(TEXT("SC_Packet:MoveStop"));
-	}
-};
-
-// #52
-USTRUCT()
-struct FT4GamePacketSC_MoveSpeedSync : public FT4GamePacketSC_Base
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID ObjectID;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	float MoveSpeed;
-
-public:
-	FT4GamePacketSC_MoveSpeedSync()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::MoveSpeedSync)
-		, MoveSpeed(0.0f)
-	{
-	}
-
-	bool Validate(FString& OutMsg) override
-	{
-		if (!ObjectID.IsValid())
-		{
-			OutMsg = TEXT("Invalid ObjectID");
-			return false;
-		}
-		return true;
-	}
-
-	FString ToString() const override
-	{
-		return FString(TEXT("SC_Packet:MoveSpeedSync"));
 	}
 };
 

@@ -125,6 +125,15 @@ public:
 	TArray<FT4MoveSyncActionCommand> MoveSyncActions;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	TArray<FT4MoveStopActionCommand> MoveStopActions;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	TArray<FT4MoveSpeedSyncActionCommand> MoveSpeedSyncActions;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	TArray<FT4MoveSegmentsActionCommand> MoveSegmentsActions; // #161
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FT4JumpActionCommand> JumpActions;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
@@ -135,15 +144,6 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FT4TurnActionCommand> TurnActions;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4MoveStopActionCommand> MoveStopActions;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4MoveSpeedSyncActionCommand> MoveSpeedSyncActions;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FT4LaunchActionCommand> LaunchActions;
 
 
 	// T4ActionCommandStatus.h

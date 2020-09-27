@@ -15,7 +15,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 // Cross Module References
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4EditorAction();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
+	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MoveSegmentType();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MovementPathType();
+	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4MovementCategory();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4FootstepType();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4EquipmentType();
 	T4ENGINE_API UEnum* Z_Construct_UEnum_T4Engine_ET4AnimNotifyType();
@@ -120,6 +122,62 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		}
 		return ReturnEnum;
 	}
+	static UEnum* ET4MoveSegmentType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Engine_ET4MoveSegmentType, Z_Construct_UPackage__Script_T4Engine(), TEXT("ET4MoveSegmentType"));
+		}
+		return Singleton;
+	}
+	template<> T4ENGINE_API UEnum* StaticEnum<ET4MoveSegmentType>()
+	{
+		return ET4MoveSegmentType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MoveSegmentType(ET4MoveSegmentType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4MoveSegmentType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4MoveSegmentType_Hash() { return 858511167U; }
+	UEnum* Z_Construct_UEnum_T4Engine_ET4MoveSegmentType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4MoveSegmentType"), 0, Get_Z_Construct_UEnum_T4Engine_ET4MoveSegmentType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4MoveSegmentType::Walk", (int64)ET4MoveSegmentType::Walk },
+				{ "ET4MoveSegmentType::Jump", (int64)ET4MoveSegmentType::Jump },
+				{ "ET4MoveSegmentType::None", (int64)ET4MoveSegmentType::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #161\n" },
+				{ "Jump.Name", "ET4MoveSegmentType::Jump" },
+				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+				{ "None.Name", "ET4MoveSegmentType::None" },
+				{ "ToolTip", "#161" },
+				{ "Walk.Name", "ET4MoveSegmentType::Walk" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Engine,
+				nullptr,
+				"ET4MoveSegmentType",
+				"ET4MoveSegmentType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* ET4MovementPathType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -134,7 +192,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 		return ET4MovementPathType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MovementPathType(ET4MovementPathType_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4MovementPathType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4MovementPathType_Hash() { return 2220434380U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4MovementPathType_Hash() { return 4013408788U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4MovementPathType()
 	{
 #if WITH_HOT_RELOAD
@@ -150,6 +208,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "ET4MovementPathType::Location", (int64)ET4MovementPathType::Location },
 				{ "ET4MovementPathType::Gravity", (int64)ET4MovementPathType::Gravity },
 				{ "ET4MovementPathType::Infinity", (int64)ET4MovementPathType::Infinity },
+				{ "ET4MovementPathType::Segment", (int64)ET4MovementPathType::Segment },
 				{ "ET4MovementPathType::InPlace", (int64)ET4MovementPathType::InPlace },
 			};
 #if WITH_METADATA
@@ -160,9 +219,12 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				{ "Infinity.Comment", "// #140 : Jump, Knockdown \xeb\x93\xb1, \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0 \xec\x9d\xb4\xeb\x8f\x99\n" },
 				{ "Infinity.Name", "ET4MovementPathType::Infinity" },
 				{ "Infinity.ToolTip", "#140 : Jump, Knockdown \xeb\x93\xb1, \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0 \xec\x9d\xb4\xeb\x8f\x99" },
+				{ "InPlace.Comment", "// #161\n" },
 				{ "InPlace.Name", "ET4MovementPathType::InPlace" },
+				{ "InPlace.ToolTip", "#161" },
 				{ "Location.Name", "ET4MovementPathType::Location" },
 				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+				{ "Segment.Name", "ET4MovementPathType::Segment" },
 				{ "ToolTip", "#135" },
 			};
 #endif
@@ -171,6 +233,66 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineTypes() {}
 				nullptr,
 				"ET4MovementPathType",
 				"ET4MovementPathType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4MovementCategory_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Engine_ET4MovementCategory, Z_Construct_UPackage__Script_T4Engine(), TEXT("ET4MovementCategory"));
+		}
+		return Singleton;
+	}
+	template<> T4ENGINE_API UEnum* StaticEnum<ET4MovementCategory>()
+	{
+		return ET4MovementCategory_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MovementCategory(ET4MovementCategory_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4MovementCategory"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4MovementCategory_Hash() { return 3176235787U; }
+	UEnum* Z_Construct_UEnum_T4Engine_ET4MovementCategory()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Engine();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4MovementCategory"), 0, Get_Z_Construct_UEnum_T4Engine_ET4MovementCategory_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4MovementCategory::Jump", (int64)ET4MovementCategory::Jump },
+				{ "ET4MovementCategory::Segments", (int64)ET4MovementCategory::Segments },
+				{ "ET4MovementCategory::Projectile", (int64)ET4MovementCategory::Projectile },
+				{ "ET4MovementCategory::None", (int64)ET4MovementCategory::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #161\n" },
+				{ "Jump.Name", "ET4MovementCategory::Jump" },
+				{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+				{ "None.Name", "ET4MovementCategory::None" },
+				{ "Projectile.Comment", "// #161\n" },
+				{ "Projectile.Name", "ET4MovementCategory::Projectile" },
+				{ "Projectile.ToolTip", "#161" },
+				{ "Segments.Name", "ET4MovementCategory::Segments" },
+				{ "ToolTip", "#161" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Engine,
+				nullptr,
+				"ET4MovementCategory",
+				"ET4MovementCategory",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

@@ -24,13 +24,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ET4ActionCommandType::WorldDespawn) \
 	op(ET4ActionCommandType::MoveAsync) \
 	op(ET4ActionCommandType::MoveSync) \
+	op(ET4ActionCommandType::MoveStop) \
+	op(ET4ActionCommandType::MoveSpeedSync) \
+	op(ET4ActionCommandType::MoveSegments) \
 	op(ET4ActionCommandType::Jump) \
 	op(ET4ActionCommandType::Teleport) \
 	op(ET4ActionCommandType::Rotation) \
 	op(ET4ActionCommandType::Turn) \
-	op(ET4ActionCommandType::MoveStop) \
-	op(ET4ActionCommandType::MoveSpeedSync) \
-	op(ET4ActionCommandType::Launch) \
 	op(ET4ActionCommandType::Aim) \
 	op(ET4ActionCommandType::LockOn) \
 	op(ET4ActionCommandType::AnimSet) \

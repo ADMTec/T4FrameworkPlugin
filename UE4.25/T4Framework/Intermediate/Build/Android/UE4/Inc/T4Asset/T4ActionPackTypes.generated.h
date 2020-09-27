@@ -28,7 +28,8 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4AcceleratedMotion>();
 	op(ET4MovementType::Parabola) \
 	op(ET4MovementType::Howitzer) \
 	op(ET4MovementType::Mortar) \
-	op(ET4MovementType::Airborne) 
+	op(ET4MovementType::Airborne) \
+	op(ET4MovementType::Segments) 
 
 enum class ET4MovementType : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4MovementType>();

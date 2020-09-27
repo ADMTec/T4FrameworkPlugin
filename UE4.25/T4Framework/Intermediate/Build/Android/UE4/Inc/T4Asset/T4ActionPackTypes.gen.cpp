@@ -92,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4MovementType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MovementType(ET4MovementType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4MovementType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4MovementType_Hash() { return 1682354168U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4MovementType_Hash() { return 2737925689U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4MovementType()
 	{
 #if WITH_HOT_RELOAD
@@ -109,6 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "ET4MovementType::Howitzer", (int64)ET4MovementType::Howitzer },
 				{ "ET4MovementType::Mortar", (int64)ET4MovementType::Mortar },
 				{ "ET4MovementType::Airborne", (int64)ET4MovementType::Airborne },
+				{ "ET4MovementType::Segments", (int64)ET4MovementType::Segments },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -127,6 +128,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "Parabola.Comment", "// #63\n" },
 				{ "Parabola.Name", "ET4MovementType::Parabola" },
 				{ "Parabola.ToolTip", "#63" },
+				{ "Segments.Comment", "// #132 : \xeb\xb6\x80\xec\x9c\xa0\n" },
+				{ "Segments.Name", "ET4MovementType::Segments" },
+				{ "Segments.ToolTip", "#132 : \xeb\xb6\x80\xec\x9c\xa0" },
 				{ "Straight.Name", "ET4MovementType::Straight" },
 				{ "ToolTip", "#127, #132" },
 			};

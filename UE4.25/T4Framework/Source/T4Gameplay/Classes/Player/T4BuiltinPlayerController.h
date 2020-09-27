@@ -197,7 +197,7 @@ private:
 	void SC_RecvPacket_ItemLeave(const FT4GamePacketSC_ItemLeave& InPacket); // #41
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_Move(const FT4GamePacketSC_Move& InPacket);
+	void SC_RecvPacket_MoveStart(const FT4GamePacketSC_MoveStart& InPacket);
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_Jump(const FT4GamePacketSC_Jump& InPacket);
@@ -207,6 +207,9 @@ private:
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_Teleport(const FT4GamePacketSC_Teleport& InPacket);
+
+	UFUNCTION(Reliable, client)
+	void SC_RecvPacket_MoveSegments(const FT4GamePacketSC_MoveSegments& InPacket); // #161
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_MoveStop(const FT4GamePacketSC_MoveStop& InPacket); // #52

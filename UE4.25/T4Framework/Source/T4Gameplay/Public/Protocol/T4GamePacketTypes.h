@@ -93,13 +93,15 @@ enum class ET4GamePacketSC : uint32
 	ItemEnter, // #41
 	ItemLeave, // #41
 
-	Move,
+	MoveStart,
+	MoveStop, // #52
+	MoveSpeedSync, // #52
+
+	MoveSegments, // #161
+
 	Jump,
 	Rotation, // #40
 	Teleport,
-
-	MoveStop, // #52
-	MoveSpeedSync, // #52
 
 	LockOn, // #40
 	LockOff, // #40

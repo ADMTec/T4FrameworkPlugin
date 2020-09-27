@@ -13,14 +13,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ENGINE_T4EngineTypes_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_401_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_422_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ObjectID_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ObjectID>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_288_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_309_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ActorID_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
@@ -46,15 +46,33 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ActorID>();
 enum class ET4EditorAction : uint8;
 template<> T4ENGINE_API UEnum* StaticEnum<ET4EditorAction>();
 
+#define FOREACH_ENUM_ET4MOVESEGMENTTYPE(op) \
+	op(ET4MoveSegmentType::Walk) \
+	op(ET4MoveSegmentType::Jump) \
+	op(ET4MoveSegmentType::None) 
+
+enum class ET4MoveSegmentType : uint8;
+template<> T4ENGINE_API UEnum* StaticEnum<ET4MoveSegmentType>();
+
 #define FOREACH_ENUM_ET4MOVEMENTPATHTYPE(op) \
 	op(ET4MovementPathType::Actor) \
 	op(ET4MovementPathType::Location) \
 	op(ET4MovementPathType::Gravity) \
 	op(ET4MovementPathType::Infinity) \
+	op(ET4MovementPathType::Segment) \
 	op(ET4MovementPathType::InPlace) 
 
 enum class ET4MovementPathType : uint8;
 template<> T4ENGINE_API UEnum* StaticEnum<ET4MovementPathType>();
+
+#define FOREACH_ENUM_ET4MOVEMENTCATEGORY(op) \
+	op(ET4MovementCategory::Jump) \
+	op(ET4MovementCategory::Segments) \
+	op(ET4MovementCategory::Projectile) \
+	op(ET4MovementCategory::None) 
+
+enum class ET4MovementCategory : uint8;
+template<> T4ENGINE_API UEnum* StaticEnum<ET4MovementCategory>();
 
 #define FOREACH_ENUM_ET4FOOTSTEPTYPE(op) \
 	op(ET4FootstepType::FootLeftDown) \
