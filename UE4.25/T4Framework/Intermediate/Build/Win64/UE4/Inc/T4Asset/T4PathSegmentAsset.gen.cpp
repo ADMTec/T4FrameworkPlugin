@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAsset() {}
 		return ET4PathMovementType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4PathMovementType(ET4PathMovementType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4PathMovementType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PathMovementType_Hash() { return 820357512U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4PathMovementType_Hash() { return 2875878049U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4PathMovementType()
 	{
 #if WITH_HOT_RELOAD
@@ -49,20 +49,16 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAsset() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4PathMovementType::Run", (int64)ET4PathMovementType::Run },
-				{ "ET4PathMovementType::Walk", (int64)ET4PathMovementType::Walk },
 				{ "ET4PathMovementType::Jump", (int64)ET4PathMovementType::Jump },
-				{ "ET4PathMovementType::Idle", (int64)ET4PathMovementType::Idle },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "Comment", "// #156\n" },
-				{ "Idle.Name", "ET4PathMovementType::Idle" },
 				{ "Jump.Name", "ET4PathMovementType::Jump" },
 				{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
 				{ "Run.Name", "ET4PathMovementType::Run" },
 				{ "ToolTip", "#156" },
-				{ "Walk.Name", "ET4PathMovementType::Walk" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -110,6 +106,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RangeSpread_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RangeSpread;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpeedScale_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpeedScale;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOnNavMesh_MetaData[];
 #endif
 		static void NewProp_bOnNavMesh_SetBit(void* Obj);
@@ -136,6 +140,28 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4PathSegmentPoint>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_RangeSpread_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ClampMax", "500" },
+		{ "ClampMin", "0.0" },
+		{ "Comment", "// #161\n" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
+		{ "ToolTip", "#161" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_RangeSpread = { "RangeSpread", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PathSegmentPoint, RangeSpread), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_RangeSpread_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_RangeSpread_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_SpeedScale_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ClampMax", "5" },
+		{ "ClampMin", "0.1" },
+		{ "Comment", "// #156\n" },
+		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
+		{ "ToolTip", "#156" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_SpeedScale = { "SpeedScale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PathSegmentPoint, SpeedScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_SpeedScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_SpeedScale_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_bOnNavMesh_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #156\n" },
@@ -159,11 +185,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #T4_ADD_PATH_SEGMENT_TAG_DATA\n" },
 		{ "ModuleRelativePath", "Classes/Data/T4PathSegmentAsset.h" },
+		{ "ToolTip", "#T4_ADD_PATH_SEGMENT_TAG_DATA" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PathSegmentPoint, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_Location_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_RangeSpread,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_SpeedScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_bOnNavMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PathSegmentPoint_Statics::NewProp_MovementType_Underlying,
@@ -197,7 +227,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4PathSegmentPoint
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PathSegmentPoint_Hash() { return 2990094622U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4PathSegmentPoint_Hash() { return 2869978192U; }
 	void UT4PathSegmentAsset::StaticRegisterNativesUT4PathSegmentAsset()
 	{
 	}

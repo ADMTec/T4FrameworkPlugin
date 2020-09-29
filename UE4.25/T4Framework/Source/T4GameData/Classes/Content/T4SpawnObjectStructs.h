@@ -38,7 +38,7 @@ public:
 
 	// FT4SpawnObjectDetails::CustomizeDetails
 
-	UPROPERTY(VisibleAnywhere, Category = Common)
+	UPROPERTY(VisibleAnywhere, Category = ServerOnly)
 	FName ID;
 
 	UPROPERTY(VisibleAnywhere, Category = ServerOnly)

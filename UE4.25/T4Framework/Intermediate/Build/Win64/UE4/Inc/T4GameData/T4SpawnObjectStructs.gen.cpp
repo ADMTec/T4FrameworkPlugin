@@ -166,7 +166,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ID_MetaData[] = {
-		{ "Category", "Common" },
+		{ "Category", "ServerOnly" },
 		{ "Comment", "// FT4SpawnObjectDetails::CustomizeDetails\n" },
 		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
 		{ "ToolTip", "FT4SpawnObjectDetails::CustomizeDetails" },
@@ -215,7 +215,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnObjectData_Hash() { return 3767904787U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnObjectData_Hash() { return 2458750296U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

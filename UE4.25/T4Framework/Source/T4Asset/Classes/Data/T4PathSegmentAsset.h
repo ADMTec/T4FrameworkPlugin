@@ -29,10 +29,7 @@ UENUM(BlueprintType)
 enum class ET4PathMovementType : uint8 // #156
 {
 	Run,
-	Walk,
 	Jump,
-
-	Idle,
 };
 
 USTRUCT()
@@ -45,8 +42,12 @@ public:
 		: Location(FVector::ZeroVector)
 		, MovementType(ET4PathMovementType::Run)
 		, bOnNavMesh(true)
+		, SpeedScale(1.0f)
+		, RangeSpread(0.0f)
 	{
 	}
+
+	// #T4_ADD_PATH_SEGMENT_TAG_DATA
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FVector Location;
@@ -56,6 +57,12 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bOnNavMesh; // #156
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "0.1", ClampMax = "5"))
+	float SpeedScale; // #161
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "0.0", ClampMax = "500"))
+	float RangeSpread; // #161
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

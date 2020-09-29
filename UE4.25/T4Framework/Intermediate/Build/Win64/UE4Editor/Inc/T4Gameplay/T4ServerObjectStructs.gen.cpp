@@ -87,6 +87,10 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		static void NewProp_bDead_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDead;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeedScale_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeedScale;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMoveSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxMoveSpeed;
@@ -191,7 +195,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// #161\n" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#161" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_SetBit(void* Obj)
@@ -199,6 +205,13 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		((FT4ServerObjectStatus*)Obj)->bDead = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead = { "bDead", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ServerObjectStatus), &Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MoveSpeedScale_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MoveSpeedScale = { "MoveSpeedScale", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectStatus, MoveSpeedScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MoveSpeedScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MoveSpeedScale_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MaxMoveSpeed_MetaData[] = {
 		{ "Category", "Default" },
@@ -250,6 +263,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bAbnormalStatus,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bEntered,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_bDead,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MoveSpeedScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_MaxMoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_StanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectStatus_Statics::NewProp_AnimSetName,
@@ -284,7 +298,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectStatu
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStatus_Hash() { return 3784730013U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectStatus_Hash() { return 2622837764U; }
 class UScriptStruct* FT4ServerObjectQuestInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

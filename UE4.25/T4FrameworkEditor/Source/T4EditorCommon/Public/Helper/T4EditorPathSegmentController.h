@@ -53,6 +53,8 @@ private:
 	void GeneratePathSegmentPoint(int32 InSourceIndex, FT4PathSegmentPoint& OutNewPoint);
 
 public:
+	// #T4_ADD_PATH_SEGMENT_TAG_DATA
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FVector Location;
 
@@ -61,6 +63,12 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	bool bOnNavMesh; // #156
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	float SpeedScale; // #161
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	float RangeSpread; // #161
 
 private:
 	TWeakObjectPtr<UT4PathSegmentAsset> PathSegmentAssetPtr;

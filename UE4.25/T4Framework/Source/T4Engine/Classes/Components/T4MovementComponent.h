@@ -12,10 +12,13 @@
  */
 enum ET4MovementMode
 {
-	Move_None,
+	Move_Ready,
+
 	Move_Walking,
 	Move_Falling,
 	Move_Custom,
+
+	Move_None,
 };
 
 UCLASS()
@@ -29,8 +32,6 @@ public:
 		enum ELevelTick TickType,
 		FActorComponentTickFunction* ThisTickFunction
 	) override;
-
-	void OnRegister() override; // #149
 
 	float GetMaxSpeed() const override;
 	void StopActiveMovement() override;
@@ -47,6 +48,8 @@ public:
 
 public:
 	void Init(ET4LayerType InLayerType, const FT4ActorID& InActorID);
+
+	void StartGame();  // #161 : 로딩 단계에서는 스폰 위치에 그대로 유지하도록 처리.로딩이 완료되거나, 이동이 발생하면 Falling or Walking 으로 변경함
 
 	bool IsZeroGravity() const { return (0.0f == GravityZ) ? true : false; } // #165 : add bGoalOnNavMesh : Zone Waypoint
 	void SetGravityZ(float InGravityZ) { GravityZ = InGravityZ; } // #165 : add bGoalOnNavMesh : Zone Waypoint

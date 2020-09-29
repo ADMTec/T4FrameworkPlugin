@@ -40,8 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCServerObject() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4NPCServerObject_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "// #142\n" },
 		{ "IncludePath", "MainFrame/Server/Object/T4NPCServerObject.h" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4NPCServerObject.h" },
+		{ "ToolTip", "#142" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4NPCServerObject_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCServerObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4NPCServerObject, 132006835);
+	IMPLEMENT_CLASS(UT4NPCServerObject, 2794124959);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4NPCServerObject>()
 	{
 		return UT4NPCServerObject::StaticClass();

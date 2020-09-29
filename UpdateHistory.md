@@ -2,6 +2,12 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.54 : 2020.09.28
+  - #161 [기능추가] NPC Spawn 의 Waypoint 중 Jump 구간에 대한 C/S 연동 처리 추가 (NPC 등장 연출에서 사용)
+  - #161 [버그수정] NPC AI 에서 Behavior Property 의 Roaming Rate 와 Idle Wait Time 이 적용되지 않던 문제 수정
+  - #161 [버그수정] NPC AI 가 간헐적으로 특정 프랍에 끼어 이동하지 못하던 문제 수정
+  - #161 [기능개선] Content Editor, SpawnObject 의 Waypoint T4PathSegment Asset 에 대한 "SaveAs..." 기능 추가
+  - #161 [버그수정] Content Editor, Spawn Waypoint 편집 시 "End" 키 적용이 NavMesh 미사용 Point 에도 영향을 주던 문제 수정
 - v0.9.53 : 2020.09.26
   - #161 [기능개선] NPC AI 가 이동이 막힐 경우 제자리 걸음을 하던 문제 개선
   - #161 [버그수정] 쿼터뷰 카메라에서 마우스 우클릭 드레그로 Pitch 조절이 되던 문제 수정
