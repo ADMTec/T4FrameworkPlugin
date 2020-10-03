@@ -19,6 +19,7 @@ enum class ET4DefaultParamBits
 {
 	ActionKeyBit,
 	ContidionNameBit, // #54
+	OverlapEventNameBit, // #161
 };
 
 UENUM(Meta = (Bitflags))
@@ -57,7 +58,7 @@ enum class ET4OverrideParamBits // #112
 UENUM(Meta = (Bitflags))
 enum class ET4AnimationParamBits
 {
-	PlaySkipBit, // #142 : EffectDirect 등과 같이 이동중일 경우 Hit 애니메이션 Skip 을 위한 처리
+	PlaySkipBit, // #142 : EffectHit 등과 같이 이동중일 경우 Hit 애니메이션 Skip 을 위한 처리
 	NoBlendInTimeWithOffsetPlayBit, // #54 : 애니 BlendIn Time 을 없앤다. (현재는 툴용)
 };
 
@@ -74,12 +75,16 @@ public:
 	FT4ActionKey ActionKey; // #32
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName ActiveConditionName; // #54
+	FName ConditionName; // #54
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FName OverlapEventName; // #161
 
 public:
 	FT4ActionDefaultParameters()
 		: SetBits(0)
-		, ActiveConditionName(NAME_None)
+		, ConditionName(NAME_None)
+		, OverlapEventName(NAME_None)
 	{
 	}
 };
@@ -289,9 +294,16 @@ public:
 
 	FORCEINLINE void SetConditionName(const FName& InConditionName)
 	{
-		DefaultParams.ActiveConditionName = InConditionName;
+		DefaultParams.ConditionName = InConditionName;
 		DefaultParams.SetBits |= BIT_LEFTSHIFT(ET4DefaultParamBits::ContidionNameBit);
 		bDirty = true; // #68
+	}
+
+	FORCEINLINE void SetOverlapEventName(const FName& InOverlapEventName) // #161
+	{
+		DefaultParams.OverlapEventName = InOverlapEventName;
+		DefaultParams.SetBits |= BIT_LEFTSHIFT(ET4DefaultParamBits::OverlapEventNameBit);
+		bDirty = true;
 	}
 
 	FORCEINLINE void SetTargetActorID(const FT4ActorID& InTargetActorID)
@@ -426,7 +438,7 @@ public:
 		bDirty = true;
 	}
 
-	FORCEINLINE void SetAnimationPlaySkip() // #142 : EffectDirect 등과 같이 이동중일 경우 Hit 애니메이션 Skip 을 위한 처리
+	FORCEINLINE void SetAnimationPlaySkip() // #142 : EffectHit 등과 같이 이동중일 경우 Hit 애니메이션 Skip 을 위한 처리
 	{
 		AnimationParams.SetBits |= BIT_LEFTSHIFT(ET4AnimationParamBits::PlaySkipBit);
 		bDirty = true; // #68

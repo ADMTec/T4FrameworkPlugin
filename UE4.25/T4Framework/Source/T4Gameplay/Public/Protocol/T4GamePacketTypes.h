@@ -120,7 +120,7 @@ enum class ET4GamePacketSC : uint32
 
 	EffectBuff, // #158 : Zone Weather
 	EffectDebuff, // #158 : Zone Weather
-	EffectDirect,
+	EffectHit,
 	EffectArea, // #68
 	EffectKnockback, // #135
 	EffectAirborne, // #135

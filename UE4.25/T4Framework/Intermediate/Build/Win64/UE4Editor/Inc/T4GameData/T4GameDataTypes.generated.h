@@ -37,6 +37,15 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameSkillSetPlayMode>();
 enum class ET4GameEnemyType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEnemyType>();
 
+#define FOREACH_ENUM_ET4GAMESTATITEMCATEGORY(op) \
+	op(ET4GameStatItemCategory::Weapon) \
+	op(ET4GameStatItemCategory::Costume) \
+	op(ET4GameStatItemCategory::Goods) \
+	op(ET4GameStatItemCategory::None) 
+
+enum class ET4GameStatItemCategory : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameStatItemCategory>();
+
 #define FOREACH_ENUM_ET4GAMESTATCATEGORY(op) \
 	op(ET4GameStatCategory::Player) \
 	op(ET4GameStatCategory::NPC) \
@@ -58,14 +67,13 @@ enum class ET4GameFindTarget : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameFindTarget>();
 
 #define FOREACH_ENUM_ET4GAMEEFFECTTYPE(op) \
+	op(ET4GameEffectType::Hit) \
+	op(ET4GameEffectType::Area) \
+	op(ET4GameEffectType::Knockback) \
+	op(ET4GameEffectType::Stun) \
+	op(ET4GameEffectType::Airborne) \
 	op(ET4GameEffectType::Buff) \
 	op(ET4GameEffectType::Debuff) \
-	op(ET4GameEffectType::DirectDamage) \
-	op(ET4GameEffectType::AreaDamage) \
-	op(ET4GameEffectType::Knockback) \
-	op(ET4GameEffectType::Airborne) \
-	op(ET4GameEffectType::Stun) \
-	op(ET4GameEffectType::Mis) \
 	op(ET4GameEffectType::None) 
 
 enum class ET4GameEffectType : uint8;

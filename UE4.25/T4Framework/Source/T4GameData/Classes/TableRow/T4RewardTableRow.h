@@ -4,9 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
-
-#include "T4GameDataTypes.h" // #68
-
+#include "T4GameDataStructs.h"
 #include "T4RewardTableRow.generated.h"
 
 /**

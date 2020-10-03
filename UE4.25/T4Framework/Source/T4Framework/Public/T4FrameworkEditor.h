@@ -41,8 +41,8 @@ enum class ET4EditorAttackType : uint8 // #63
 UENUM()
 enum class ET4EditorEffectType : uint8 // #68
 {
-	DirectDamage,
-	AreaDamage,
+	Direct,
+	Area,
 
 	Knockback, // CC
 	Airborne, // CC
@@ -97,7 +97,7 @@ public:
 	ET4EditorAttackType AttackType; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float HitDelayTimeSec;
+	float DelayTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float DurationSec;
@@ -136,7 +136,7 @@ public:
 	float AimingPitchAngle; // #127
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> UsingActionPackAsset;
 
 	UPROPERTY(VisibleAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting"))
 	TSoftObjectPtr<UT4ActionPackAsset> CastingActionPackAsset;
@@ -157,7 +157,7 @@ public:
 	{
 		Name = NAME_None;
 		AttackType = ET4EditorAttackType::Swing;
-		HitDelayTimeSec = 0.0f;
+		DelayTimeSec = 0.0f;
 		DurationSec = 0.0f;;
 		MoveAngleType = ET4MoveAngleType::None; // #135
 		MoveMaxDistance = 0.0f; // #140
@@ -206,16 +206,16 @@ public:
 	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float MinAreaRange; // #114 : ET4GameEffectType::AreaDamage
+	float MinAreaRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float MaxAreaRange; // #114 : ET4GameEffectType::AreaDamage
+	float MaxAreaRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	FName ChainEffectDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	TSoftObjectPtr<UT4ActionPackAsset> ActionPackAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> OverrideActionPackAsset;
 
 public:
 	FT4EditorEffectDataInfo()
@@ -233,8 +233,8 @@ public:
 		MoveMaxDistance = 0.0f;
 		MoveMaxHeight = 0.0f; // #135
 		MoveMaxHeightSpeed = 0.0f; // #140
-		MinAreaRange = 0.0f; // #114 : ET4GameEffectType::AreaDamage
-		MaxAreaRange = 0.0f; // #114 : ET4GameEffectType::AreaDamage
+		MinAreaRange = 0.0f; // #114 : ET4GameEffectType::Area
+		MaxAreaRange = 0.0f; // #114 : ET4GameEffectType::Area
 		ChainEffectDBKey = NAME_None;
 	}
 };
@@ -302,6 +302,7 @@ public:
 //        (T4Gameplay 을 사용하지 않을 경우를 위함)
 
 struct FT4GameDBKey; //#164 : FT4GameDBKey 는 상위 모듈인 T4GameData, 전방 선언해준다. (Type Cast 가 툴작업에 어려움이 있었음)
+struct FT4EquipWeaponActionCommand; // #169
 
 class UT4SpawnAsset;
 class T4FRAMEWORK_API IT4EditorGameStatics
@@ -344,6 +345,8 @@ public:
 
 	virtual bool DoEquipWeaponItem(const FName InWeaponDBKeyName, bool bInUnequip) = 0; // #60 : to player
 	virtual bool DoExchangeCostumeItem(const FName InCostumeDBKeyName) = 0; // #60 : to player
+
+	virtual bool MakeEquipWeaponActionCommand(const FName InWeaponDBKeyName, FT4EquipWeaponActionCommand* OutActionCommand) = 0; // #169
 };
 
 // #114 : 에디터에서 N종의 게임 로직을 컨트롤 하기 위해 에디터상에서 구현해야 할 인터페이스

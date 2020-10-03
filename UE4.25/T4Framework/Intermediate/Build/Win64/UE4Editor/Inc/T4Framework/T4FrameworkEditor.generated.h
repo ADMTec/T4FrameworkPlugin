@@ -48,8 +48,8 @@ enum class ET4EditorFindTarget : uint8;
 template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorFindTarget>();
 
 #define FOREACH_ENUM_ET4EDITOREFFECTTYPE(op) \
-	op(ET4EditorEffectType::DirectDamage) \
-	op(ET4EditorEffectType::AreaDamage) \
+	op(ET4EditorEffectType::Direct) \
+	op(ET4EditorEffectType::Area) \
 	op(ET4EditorEffectType::Knockback) \
 	op(ET4EditorEffectType::Airborne) \
 	op(ET4EditorEffectType::Stun) \

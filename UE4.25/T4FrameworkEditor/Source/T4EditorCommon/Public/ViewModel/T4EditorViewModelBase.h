@@ -19,18 +19,6 @@
 /**
   * #76
  */
-class UT4WeaponEntityAsset;
-struct FT4GameEditorEquipData
-{
-	FT4GameEditorEquipData()
-		: WeaponEntityAsset(nullptr)
-		, OverrideEquipPoint(NAME_None)
-	{
-	}
-	const UT4WeaponEntityAsset* WeaponEntityAsset;
-	FName OverrideEquipPoint;
-};
-
 class FViewport;
 class FCanvas;
 class UWorld;
@@ -266,7 +254,7 @@ public:
 
 	void ClientEquipWeapon(
 		const FT4ActionKey& InActionKey,
-		const TArray<FT4GameEditorEquipData>& InEquipDatas, // #158 : Support Main & Subs Item
+		const FT4EquipWeaponActionCommand* InEquipWeaponActionCommand, // #158 : Support Main & Subs Item
 		bool bInChangeAnimSetSync, // #72, #111 : 스탠스 변경과 동기화한다.
 		bool bInChangeAnimSetInEntity = false // #120 : Weapon 에 설정된 AnimSet 자동 적용 
 	);
@@ -341,7 +329,7 @@ protected:
 	void SavePlayerSettingsInfo(); // #87
 	void RestorePlayerSettingsInfo(); // #87
 
-	void ExecuteVerification(const FT4ActionBase* InAction); // #129 : Entity 에디터에서 데이터 검증
+	void BroadcastActionCommand(const FT4ActionBase* InAction); // #129 : Entity 에디터에서 데이터 검증
 
 private:
 	void RegisterPlayerViewTargetChanged();

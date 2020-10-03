@@ -27,6 +27,7 @@ struct T4EDITORCOMMON_API FT4PreviewEntityViewModelOptions
 	UT4EntityAsset* EntityAsset;
 };
 
+struct FT4EquipWeaponActionCommand; // #169
 struct FT4ActionParameters;
 class T4EDITORCOMMON_API FT4PreviewEntityViewModel
 	: public TSharedFromThis<FT4PreviewEntityViewModel>
@@ -83,7 +84,7 @@ protected:
 	void Reset() override; // #79
 	void StartPlay() override; // #76, #86
 
-	bool GetWeaponEntityAssetByGameDB(const FT4GameDBKey& InGameDBKey, TArray<FT4GameEditorEquipData>& OutEquipData); // #120 : 0 : index 0 : Main, 0 < : Subs
+	bool GetWeaponEntityAssetByGameDB(const FT4GameDBKey& InGameDBKey, FT4EquipWeaponActionCommand* OutActionCommand); // #120, #169
 	const UT4ActionPackAsset* GetActionPackAssetInGameDB(const FT4GameDBKey& InGameDBKey); // #120
 
 private:

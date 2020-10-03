@@ -35,7 +35,9 @@ struct FT4WorldActorProperty // #34
 	void Reset()
 	{
 		bIsLockOn = false;
-		bUseOverlapEvents = false; // #158
+
+		bCollisionDisabled = false; // #161
+		bUseOverlapEvents = false; // #47, #161
 
 		// #33
 		MoveSpeed[(uint8)ET4MoveMode::Sync] = 0.0f;
@@ -73,7 +75,9 @@ struct FT4WorldActorProperty // #34
 	}
 
 	bool bIsLockOn;
-	bool bUseOverlapEvents; // #158
+
+	bool bCollisionDisabled; // #161
+	bool bUseOverlapEvents; // #47, #161
 
 	float MoveSpeed[(uint8)ET4MoveMode::Count]; // #33
 	float MoveAccelerationScale; // #38, #52 (0.1 ~ 1)
@@ -131,10 +135,10 @@ struct FT4WorldActorDebugInfo // #118, #140
 #endif
 
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4EngineMinimal.h)
-struct FT4HitOverlapDelegates // #49
+struct FT4WorldActorOverlapDelegates // #49
 {
-	DECLARE_MULTICAST_DELEGATE_ThreeParams(FT4OnHitOverlap, const FName&, class IT4WorldActor*, const FHitResult&);
-	FT4OnHitOverlap OnHitOverlap;
+	DECLARE_MULTICAST_DELEGATE_FourParams(FT4OnWeaponOverlap, const FName&, class UPrimitiveComponent*, class IT4WorldActor*, const FHitResult&);
+	FT4OnWeaponOverlap OnWeaponOverlap;
 };
 #endif
 
@@ -202,7 +206,7 @@ struct FT4WorldConstructionValues // #87
 		, WorldSource(ET4WorldSource::None)
 		, WorldContextGameOrEditorOnly(nullptr)
 #if WITH_EDITOR
-		, bPreviewThumbnailMode(false)
+		, bThumbnailMode(false)
 #endif
 	{
 	}
@@ -213,6 +217,6 @@ struct FT4WorldConstructionValues // #87
 	FWorldContext* WorldContextGameOrEditorOnly; // Game (PIE)만 설정
 
 #if WITH_EDITOR
-	bool bPreviewThumbnailMode;
+	bool bThumbnailMode;
 #endif
 };

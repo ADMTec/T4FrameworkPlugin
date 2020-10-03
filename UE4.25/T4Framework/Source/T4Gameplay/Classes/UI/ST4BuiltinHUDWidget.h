@@ -50,9 +50,9 @@ protected:
 	FReply HandleOnQuickReplayPlayStop();
 
 	bool HandleOnQuickIsReplayRecordable() const;
-	bool HandleOnQuickIsReplayRecording() const;
+	bool HandleOnQuickReplayIsRecording() const;
 	bool HandleOnQuickIsReplayPlayable() const;
-	bool HandleOnQuickIsReplayPlaying() const;
+	bool HandleOnQuickReplayIsPlaying() const;
 #endif
 
 private:

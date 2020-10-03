@@ -127,10 +127,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseOverlapEvent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseOverlapEvents_MetaData[];
 #endif
-		static void NewProp_bUseOverlapEvent_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvent;
+		static void NewProp_bUseOverlapEvents_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvents;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCollisionDisabled_MetaData[];
+#endif
+		static void NewProp_bCollisionDisabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCollisionDisabled;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UseAnimSetName_MetaData[];
 #endif
@@ -181,18 +186,31 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityItemWeaponMeshData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #161\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4WeaponEntityAsset.h" },
+		{ "ToolTip", "#161" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents_SetBit(void* Obj)
+	{
+		((FT4EntityItemWeaponMeshData*)Obj)->bUseOverlapEvents = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents = { "bUseOverlapEvents", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityItemWeaponMeshData), &Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #106\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4WeaponEntityAsset.h" },
 		{ "ToolTip", "#106" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled_SetBit(void* Obj)
 	{
-		((FT4EntityItemWeaponMeshData*)Obj)->bUseOverlapEvent = 1;
+		((FT4EntityItemWeaponMeshData*)Obj)->bCollisionDisabled = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent = { "bUseOverlapEvent", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityItemWeaponMeshData), &Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled = { "bCollisionDisabled", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityItemWeaponMeshData), &Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName_MetaData[] = {
 		{ "Category", "Common" },
@@ -268,7 +286,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityItemWeaponMeshData, MeshType), Z_Construct_UEnum_T4Asset_ET4EntityMeshType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_MeshType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_MeshType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_MeshType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bUseOverlapEvents,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_bCollisionDisabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_UseAnimSetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_RelativeTransform,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Statics::NewProp_EquipPointName,
@@ -308,7 +327,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Hash() { return 3250153115U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityItemWeaponMeshData_Hash() { return 2854037704U; }
 	void UT4WeaponEntityAsset::StaticRegisterNativesUT4WeaponEntityAsset()
 	{
 	}

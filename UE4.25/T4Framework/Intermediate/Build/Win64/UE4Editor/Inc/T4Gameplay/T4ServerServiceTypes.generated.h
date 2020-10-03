@@ -38,7 +38,6 @@ template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4QueState>();
 #define FOREACH_ENUM_ET4SERVERJOBTYPE(op) \
 	op(ET4ServerJobType::DespawnNPC) \
 	op(ET4ServerJobType::DieNPC) \
-	op(ET4ServerJobType::EffectSet) \
 	op(ET4ServerJobType::Effect) \
 	op(ET4ServerJobType::None) 
 

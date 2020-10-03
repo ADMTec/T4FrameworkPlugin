@@ -53,7 +53,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectArea();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectBuff();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectDebuff();
-	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectDirect();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectHit();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectKnockback();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EffectStun();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketSC_EquipItem();
@@ -147,12 +147,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->SC_RecvPacket_EffectArea_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_EffectDirect)
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_EffectHit)
 	{
-		P_GET_STRUCT(FT4GamePacketSC_EffectDirect,Z_Param_InPacket);
+		P_GET_STRUCT(FT4GamePacketSC_EffectHit,Z_Param_InPacket);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SC_RecvPacket_EffectDirect_Implementation(Z_Param_InPacket);
+		P_THIS->SC_RecvPacket_EffectHit_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execSC_RecvPacket_EffectDebuff)
@@ -1057,12 +1057,12 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectDebuff),&Parms);
 	}
-	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect = FName(TEXT("SC_RecvPacket_EffectDirect"));
-	void AT4BuiltinPlayerController::SC_RecvPacket_EffectDirect(FT4GamePacketSC_EffectDirect const& InPacket)
+	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit = FName(TEXT("SC_RecvPacket_EffectHit"));
+	void AT4BuiltinPlayerController::SC_RecvPacket_EffectHit(FT4GamePacketSC_EffectHit const& InPacket)
 	{
-		T4BuiltinPlayerController_eventSC_RecvPacket_EffectDirect_Parms Parms;
+		T4BuiltinPlayerController_eventSC_RecvPacket_EffectHit_Parms Parms;
 		Parms.InPacket=InPacket;
-		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect),&Parms);
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_SC_RecvPacket_EffectKnockback = FName(TEXT("SC_RecvPacket_EffectKnockback"));
 	void AT4BuiltinPlayerController::SC_RecvPacket_EffectKnockback(FT4GamePacketSC_EffectKnockback const& InPacket)
@@ -1356,7 +1356,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "SC_RecvPacket_EffectArea", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectArea },
 			{ "SC_RecvPacket_EffectBuff", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectBuff },
 			{ "SC_RecvPacket_EffectDebuff", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectDebuff },
-			{ "SC_RecvPacket_EffectDirect", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectDirect },
+			{ "SC_RecvPacket_EffectHit", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectHit },
 			{ "SC_RecvPacket_EffectKnockback", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectKnockback },
 			{ "SC_RecvPacket_EffectStun", &AT4BuiltinPlayerController::execSC_RecvPacket_EffectStun },
 			{ "SC_RecvPacket_EquipItem", &AT4BuiltinPlayerController::execSC_RecvPacket_EquipItem },
@@ -2738,7 +2738,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
@@ -2751,28 +2751,28 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::NewProp_InPacket_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::NewProp_InPacket_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_EffectDirect_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_EffectDirect, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::NewProp_InPacket_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::NewProp_InPacket,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventSC_RecvPacket_EffectHit_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketSC_EffectHit, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::NewProp_InPacket,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "// #158 : Zone Weather\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
 		{ "ToolTip", "#158 : Zone Weather" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_EffectDirect", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_EffectDirect_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "SC_RecvPacket_EffectHit", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventSC_RecvPacket_EffectHit_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -4179,7 +4179,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectArea, "SC_RecvPacket_EffectArea" }, // 889995122
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectBuff, "SC_RecvPacket_EffectBuff" }, // 430405787
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDebuff, "SC_RecvPacket_EffectDebuff" }, // 913374594
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectDirect, "SC_RecvPacket_EffectDirect" }, // 1907460705
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectHit, "SC_RecvPacket_EffectHit" }, // 2538851856
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectKnockback, "SC_RecvPacket_EffectKnockback" }, // 2388853989
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EffectStun, "SC_RecvPacket_EffectStun" }, // 2854188226
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_SC_RecvPacket_EquipItem, "SC_RecvPacket_EquipItem" }, // 2956987550
@@ -4253,7 +4253,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 2332494409);
+	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 262635744);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinPlayerController>()
 	{
 		return AT4BuiltinPlayerController::StaticClass();

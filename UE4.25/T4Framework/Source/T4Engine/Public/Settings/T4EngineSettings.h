@@ -9,7 +9,7 @@
 /**
   * #40
  */
-
+class UMaterialInterface;
 UCLASS(config = T4Framework, meta = (DisplayName = "T4Engine"))
 class T4ENGINE_API UT4EngineSettings : public UDeveloperSettings
 {
@@ -125,6 +125,12 @@ public:
 
 	UPROPERTY(config, EditAnywhere, Category= FPSCameraSettting)
 	float FPS_RotationSpeed; // #121
+
+	UPROPERTY(config, EditAnywhere, Category = UI)
+	TSoftObjectPtr<UMaterialInterface> NameplateMaterialPath; // #119
+
+	UPROPERTY(config, EditAnywhere, Category = UI)
+	TSoftObjectPtr<UMaterialInterface> FloatingDamageMaterialPath; // #161
 
 	UPROPERTY(config, EditAnywhere, Category=HMD)
 	FVector HMDOriginOffset; // #153

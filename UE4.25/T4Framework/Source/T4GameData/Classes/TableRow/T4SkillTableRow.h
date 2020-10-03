@@ -27,12 +27,6 @@ public:
 	ET4GameAttackType AttackType; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float HitDelayTimeSec;
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float DurationSec;
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	bool bMoveable;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -40,6 +34,15 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bCasting; // #113, #135
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bUseOverlapEvents; // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bUseOverlapEvents"))
+	float DelayTimeSec;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float DurationSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
@@ -62,17 +65,15 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4GameFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bUseHitOverlapEvent; // #135 : 정교한 판정에 사용, 일단 Player 만 사용한다.
-
 public:
 	FT4SkillShapeData()
 		: AttackType(ET4GameAttackType::Swing) // #63
-		, HitDelayTimeSec(0.0f)
-		, DurationSec(0.0f)
 		, bMoveable(false)
 		, bLockOn(false)  // #113
 		, bCasting(false) // #1135
+		, bUseOverlapEvents(false) // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
+		, DelayTimeSec(0.0f)
+		, DurationSec(0.0f)
 		, RotationRateSpeed(1.0f) // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 		, MoveAngleType(ET4MoveAngleType::None) // #135
 		, MoveMaxDistance(0.0f)
@@ -80,7 +81,6 @@ public:
 		, MoveMaxHeightSpeed(0.0f) // #140
 		, ProjectileSpeed(0.0f) // #63
 		, FindTargetType(ET4GameFindTarget::All)
-		, bUseHitOverlapEvent(false) // #135 : 정교한 판정에 사용, 일단 Player 만 사용한다.
 	{
 	}
 };
@@ -129,10 +129,10 @@ public:
 	FT4SkillStatDBKey SkillStatDBKey; // #114 : 기본 Stat
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4EffectDBKey SkillEffectDBKey; // #161 : 이 스킬이 사용이 적용될 효과 설정. 없으면 기본 EffectSet 설정으로 넘어간다.
+	FT4EffectDBKey SkillEffectDBKey; // #161 : 이 스킬 사용으로 적용될 효과 설정
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
-	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> UsingActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly, meta = (EditCondition = "bCasting"))
 	TSoftObjectPtr<UT4ActionPackAsset> CastingActionPackAsset; // #117 : bAiming

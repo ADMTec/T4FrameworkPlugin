@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.55)
+# T4FrameworkPlugin (v0.9.56)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,21 +20,21 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.55** : 2020.09.29
-    - #161 [기능추가] NPC Spawn Object 의 Waypoint 관련 기능 업데이트 (T4PathSegmentAsset)
-	  - Manipulator 를 통한 Rotation 편집 기능 추가
-	  - SpeedScale : PathSegmentPoint 구간 이속을 조절할 수 있는 프로퍼티
-	  - RangeSpread : PathSegmentPoint 위치를 랜덤하게 변형시킬 수 있는 프로퍼티
-	  - WARN : UE4.25/Content 폴더 에셋 업데이트
-	- #161 [기능개선] Content Editor, Spawn Object 선택시 Preview Thumbnail 창에 모델을 표시하도록 개선
-	- #161 [기능개선] Content Editor, 월드에 스폰된 NPC 에서 Spawn Asset 의 Prefab Data 를 가져올 수 있는 기능 추가
-	- #161 [버그수정] Quest Flow 를 통한 퀘스트 플레이 시 Waypoint 등장 연출이 출력되지 않던 문제 수정 
-	- #161 [버그수정] NPC AI Jump 시 점프 방향으로의 캐릭터 회전이 동작하지 않던 문제 수정
-	- #161 [버그수정] NPC 스폰 위치가 NavMesh 가 아닐 경우 랜덤하게 바닥으로 떨어지던 문제 수정
-	- #161 [버그수정] NPC AI 등장 연출 처리에서 점프 후 착지, 이동의 과정에서 잠깐의 딜레이가 발생하는 문제 수정
-	- #165 [버그수정] NPC AI 이동 시 작은 높이의 단차에서도 NPC 이동이 멈추는 문제 수정
-	- #161 [버그수정] Content Editor, Spawn Object Waypoint 의 PathSegmentAsset SaveAs 후 Point 복제가 안되던 문제 수정
-	- #161 [버그수정] Content Editor, 뷰포트에 Player 스폰 시 간헐적으로 발생하는 크래시 수정
+  - **v0.9.56** : 2020.10.03
+    - #161 [기능추가] 스탠스 전환 시 무기 마운트 위치 변환 기능 추가 (Sworld 류 BackMount 지원)
+    - #161 [기능추가] Floating Damage Text 추가
+    - #161 [기능추가] C/S 환경에서 Weapon Overlap Event 를 통한 Hit 판정 처리 추가
+    - #161 [기능추가] Action Editor, Event Action 추가
+	  - ActionPack 내 Sword 류의 무기에 대한 Overlap Event Range 설정등에 사용
+	- #161 [기능개선] PC/NPC 전투 관련 처리에 GameDB Stat 적용
+	  - Paragon Asset 마이그레이션 필요
+	- #161 [기능개선] EffectSet GameDB 삭제
+	  - PC/NPC GameDB 의 VisualReactionData 에 ActionPack 을 직접 추가하는 것으로 변경
+	- #158 [기능개선] 개발용 HotKey 와 HUD 아이템 사용을 Project UserSettings 에서 처리하도록 개선
+	- #158 [기능개선] WorldExplorer Environment Details 메 수정
+	  - 기능별 사용 옵션을 상단에 노출해 효욜적으로 인지할 수 있도록 기능 개선
+	- #158 [기능개선] 에디터 Preview Thumbnail 배경을 단색으로 수정
+	  - T4Framework/Editor/Environment/T4EditorThumbnailEnvironment 에서 색 수정 가능
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

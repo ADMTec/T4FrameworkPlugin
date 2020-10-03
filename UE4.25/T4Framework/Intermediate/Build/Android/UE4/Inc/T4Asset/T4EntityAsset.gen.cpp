@@ -1289,6 +1289,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPhysicalData
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_BoundType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_BoundType_Underlying;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseOverlapEvents_MetaData[];
+#endif
+		static void NewProp_bUseOverlapEvents_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvents;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCollisionDisabled_MetaData[];
 #endif
 		static void NewProp_bCollisionDisabled_SetBit(void* Obj);
@@ -1330,13 +1335,26 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPhysicalData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #47, #161\n" },
+		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
+		{ "ToolTip", "#47, #161" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType = { "BoundType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPhysicalData, BoundType), Z_Construct_UEnum_T4Asset_ET4EntityBoundType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #118\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 		{ "ToolTip", "#118" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType = { "BoundType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityPhysicalData, BoundType), Z_Construct_UEnum_T4Asset_ET4EntityBoundType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents_SetBit(void* Obj)
+	{
+		((FT4EntityPhysicalData*)Obj)->bUseOverlapEvents = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents = { "bUseOverlapEvents", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityPhysicalData), &Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bCollisionDisabled_MetaData[] = {
 		{ "Category", "Common" },
@@ -1355,6 +1373,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPhysicalData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_BoundType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bUseOverlapEvents,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::NewProp_bCollisionDisabled,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityPhysicalData_Statics::ReturnStructParams = {
@@ -1385,7 +1404,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPhysicalData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPhysicalData_Hash() { return 4244596350U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPhysicalData_Hash() { return 474420252U; }
 class UScriptStruct* FT4EntityEditorThumbnailData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -43,10 +43,10 @@ public:
 	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MinAreaRange; // #114 : ET4GameEffectType::AreaDamage
+	float MinAreaRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MaxAreaRange; // #114 : ET4GameEffectType::AreaDamage
+	float MaxAreaRange; // #114 : ET4GameEffectType::Area
 
 public:
 	FT4EffectShapeData()
@@ -57,8 +57,8 @@ public:
 		, MoveMaxDistance(0.0f)
 		, MoveMaxHeight(0.0f) // #135
 		, MoveMaxHeightSpeed(0.0f) // #140
-		, MinAreaRange(0.0f) // #114 : ET4GameEffectType::AreaDamage
-		, MaxAreaRange(0.0f) // #114 : ET4GameEffectType::AreaDamage
+		, MinAreaRange(0.0f) // #114 : ET4GameEffectType::Area
+		, MaxAreaRange(0.0f) // #114 : ET4GameEffectType::Area
 	{
 	}
 };
@@ -91,7 +91,7 @@ public:
 	FT4EffectDBKey ChainEffectDBKey; // #68
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
-	TSoftObjectPtr<UT4ActionPackAsset> DefaultActionPackAsset;
+	TSoftObjectPtr<UT4ActionPackAsset> OverrideActionPackAsset;
 
 public:
 	enum EVersion

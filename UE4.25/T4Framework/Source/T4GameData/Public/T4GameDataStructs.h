@@ -9,6 +9,26 @@
 /**
   * #168
  */
+class UT4ActionPackAsset;
+USTRUCT()
+struct FT4VisualReactionData // #161 : EffectSet 에서 대체됨
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> HitActionPackAsset;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> KnockbackActionPackAsset;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> StunActionPackAsset;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> AirborneActionPackAsset;
+};
+
 USTRUCT()
 struct FT4RewardItemPackageData
 {

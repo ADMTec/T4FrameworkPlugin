@@ -136,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldCharacterActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldCharacterActor, 3856770445);
+	IMPLEMENT_CLASS(AT4WorldCharacterActor, 2750392063);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldCharacterActor>()
 	{
 		return AT4WorldCharacterActor::StaticClass();

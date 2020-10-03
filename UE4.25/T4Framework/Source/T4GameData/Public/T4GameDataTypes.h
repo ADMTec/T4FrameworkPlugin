@@ -55,17 +55,15 @@ enum class ET4GameAttackType : uint8 // #63
 UENUM(BlueprintType)
 enum class ET4GameEffectType : uint8 // #68
 {
-	Buff, // #158 : Zone Weather
-	Debuff, // #158 : Zone Weather
-
-	DirectDamage,
-	AreaDamage,
+	Hit,
+	Area,
 
 	Knockback, // CC
-	Airborne, // CC
 	Stun, // CC
+	Airborne, // CC
 
-	Mis, // #135, #142
+	Buff, // #158 : CC, Zone Weather
+	Debuff, // #158 : CC, Zone Weather
 
 	None UMETA(Hidden),
 };
@@ -85,6 +83,7 @@ enum class ET4GameStatCategory : uint8 // #114
 {
 	Player,
 	NPC,
+	
 	Item,
 
 	Skill,
@@ -92,6 +91,17 @@ enum class ET4GameStatCategory : uint8 // #114
 
 	None UMETA(Hidden),
 };
+
+UENUM()
+enum class ET4GameStatItemCategory : uint8 // #161
+{
+	Weapon,
+	Costume,
+	Goods,
+
+	None UMETA(Hidden),
+};
+
 
 UENUM()
 enum class ET4GameEnemyType : uint8 // #104

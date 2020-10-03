@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketSC_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketSC(ET4GamePacketSC_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketSC"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 2148517679U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC_Hash() { return 1577665208U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketSC()
 	{
 #if WITH_HOT_RELOAD
@@ -82,7 +82,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketSC::SkillTarget", (int64)ET4GamePacketSC::SkillTarget },
 				{ "ET4GamePacketSC::EffectBuff", (int64)ET4GamePacketSC::EffectBuff },
 				{ "ET4GamePacketSC::EffectDebuff", (int64)ET4GamePacketSC::EffectDebuff },
-				{ "ET4GamePacketSC::EffectDirect", (int64)ET4GamePacketSC::EffectDirect },
+				{ "ET4GamePacketSC::EffectHit", (int64)ET4GamePacketSC::EffectHit },
 				{ "ET4GamePacketSC::EffectArea", (int64)ET4GamePacketSC::EffectArea },
 				{ "ET4GamePacketSC::EffectKnockback", (int64)ET4GamePacketSC::EffectKnockback },
 				{ "ET4GamePacketSC::EffectAirborne", (int64)ET4GamePacketSC::EffectAirborne },
@@ -123,9 +123,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "EffectDebuff.Comment", "// #158 : Zone Weather\n" },
 				{ "EffectDebuff.Name", "ET4GamePacketSC::EffectDebuff" },
 				{ "EffectDebuff.ToolTip", "#158 : Zone Weather" },
-				{ "EffectDirect.Comment", "// #158 : Zone Weather\n" },
-				{ "EffectDirect.Name", "ET4GamePacketSC::EffectDirect" },
-				{ "EffectDirect.ToolTip", "#158 : Zone Weather" },
+				{ "EffectHit.Comment", "// #158 : Zone Weather\n" },
+				{ "EffectHit.Name", "ET4GamePacketSC::EffectHit" },
+				{ "EffectHit.ToolTip", "#158 : Zone Weather" },
 				{ "EffectKnockback.Comment", "// #68\n" },
 				{ "EffectKnockback.Name", "ET4GamePacketSC::EffectKnockback" },
 				{ "EffectKnockback.ToolTip", "#68" },

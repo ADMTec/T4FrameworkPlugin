@@ -19,11 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_ET4MOVEANGLETYPE(op) \
 	op(ET4MoveAngleType::Back) \
-	op(ET4MoveAngleType::Back_Left) \
-	op(ET4MoveAngleType::Back_Right) \
 	op(ET4MoveAngleType::Front) \
-	op(ET4MoveAngleType::Front_Left) \
-	op(ET4MoveAngleType::Front_Right) \
 	op(ET4MoveAngleType::Left) \
 	op(ET4MoveAngleType::Right) \
 	op(ET4MoveAngleType::Up) \

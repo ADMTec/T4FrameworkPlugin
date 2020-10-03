@@ -22,7 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(AT4WorldActor::execHandleOnHitOverlapOnlyServer)
+	DEFINE_FUNCTION(AT4WorldActor::execHandleOnWeaponOverlap)
 	{
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_InOverlappedComp);
 		P_GET_OBJECT(AActor,Z_Param_InOther);
@@ -32,20 +32,20 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_InSweepResult);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->HandleOnHitOverlapOnlyServer(Z_Param_InOverlappedComp,Z_Param_InOther,Z_Param_InOtherComp,Z_Param_InOtherBodyIndex,Z_Param_bInFromSweep,Z_Param_Out_InSweepResult);
+		P_THIS->HandleOnWeaponOverlap(Z_Param_InOverlappedComp,Z_Param_InOther,Z_Param_InOtherComp,Z_Param_InOtherBodyIndex,Z_Param_bInFromSweep,Z_Param_Out_InSweepResult);
 		P_NATIVE_END;
 	}
 	void AT4WorldActor::StaticRegisterNativesAT4WorldActor()
 	{
 		UClass* Class = AT4WorldActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "HandleOnHitOverlapOnlyServer", &AT4WorldActor::execHandleOnHitOverlapOnlyServer },
+			{ "HandleOnWeaponOverlap", &AT4WorldActor::execHandleOnWeaponOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics
+	struct Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics
 	{
-		struct T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms
+		struct T4WorldActor_eventHandleOnWeaponOverlap_Parms
 		{
 			UPrimitiveComponent* InOverlappedComp;
 			AActor* InOther;
@@ -77,52 +77,52 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InSweepResult_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InSweepResult_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InSweepResult = { "InSweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms, InSweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InSweepResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InSweepResult_MetaData)) };
-	void Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_bInFromSweep_SetBit(void* Obj)
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InSweepResult = { "InSweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnWeaponOverlap_Parms, InSweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InSweepResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InSweepResult_MetaData)) };
+	void Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_bInFromSweep_SetBit(void* Obj)
 	{
-		((T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms*)Obj)->bInFromSweep = 1;
+		((T4WorldActor_eventHandleOnWeaponOverlap_Parms*)Obj)->bInFromSweep = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_bInFromSweep = { "bInFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms), &Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_bInFromSweep_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherBodyIndex = { "InOtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms, InOtherBodyIndex), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_bInFromSweep = { "bInFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(T4WorldActor_eventHandleOnWeaponOverlap_Parms), &Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_bInFromSweep_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherBodyIndex = { "InOtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnWeaponOverlap_Parms, InOtherBodyIndex), METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherComp_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherComp_MetaData[] = {
 		{ "EditInline", "true" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherComp = { "InOtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms, InOtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherComp_MetaData)) };
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOther = { "InOther", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms, InOther), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherComp = { "InOtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnWeaponOverlap_Parms, InOtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherComp_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOther = { "InOther", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnWeaponOverlap_Parms, InOther), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOverlappedComp_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOverlappedComp_MetaData[] = {
 		{ "EditInline", "true" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOverlappedComp = { "InOverlappedComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms, InOverlappedComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOverlappedComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOverlappedComp_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InSweepResult,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_bInFromSweep,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherBodyIndex,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOtherComp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOther,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::NewProp_InOverlappedComp,
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOverlappedComp = { "InOverlappedComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4WorldActor_eventHandleOnWeaponOverlap_Parms, InOverlappedComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOverlappedComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOverlappedComp_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InSweepResult,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_bInFromSweep,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherBodyIndex,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOtherComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOther,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::NewProp_InOverlappedComp,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// #110, #111 : AnimSet \xeb\xb3\x80\xea\xb2\xbd\xec\x97\x90 \xec\x9e\x88\xeb\x8a\x94 AnimNotify_Equipment Unmount \xec\x97\x90 \xeb\x94\xb0\xeb\x9d\xbc Show => Hide \xec\xb2\x98\xeb\xa6\xac\xea\xb0\x80 \xeb\x90\xa8\n// ~#68\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #161\n" },
 		{ "ModuleRelativePath", "Private/WorldActor/T4WorldActor.h" },
-		{ "ToolTip", "#110, #111 : AnimSet \xeb\xb3\x80\xea\xb2\xbd\xec\x97\x90 \xec\x9e\x88\xeb\x8a\x94 AnimNotify_Equipment Unmount \xec\x97\x90 \xeb\x94\xb0\xeb\x9d\xbc Show => Hide \xec\xb2\x98\xeb\xa6\xac\xea\xb0\x80 \xeb\x90\xa8\n~#68" },
+		{ "ToolTip", "#161" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4WorldActor, nullptr, "HandleOnHitOverlapOnlyServer", nullptr, nullptr, sizeof(T4WorldActor_eventHandleOnHitOverlapOnlyServer_Parms), Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4WorldActor, nullptr, "HandleOnWeaponOverlap", nullptr, nullptr, sizeof(T4WorldActor_eventHandleOnWeaponOverlap_Parms), Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -151,7 +151,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AT4WorldActor_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AT4WorldActor_HandleOnHitOverlapOnlyServer, "HandleOnHitOverlapOnlyServer" }, // 1342781341
+		{ &Z_Construct_UFunction_AT4WorldActor_HandleOnWeaponOverlap, "HandleOnWeaponOverlap" }, // 882237371
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4WorldActor_Statics::Class_MetaDataParams[] = {
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldActor, 942430484);
+	IMPLEMENT_CLASS(AT4WorldActor, 4034927003);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldActor>()
 	{
 		return AT4WorldActor::StaticClass();

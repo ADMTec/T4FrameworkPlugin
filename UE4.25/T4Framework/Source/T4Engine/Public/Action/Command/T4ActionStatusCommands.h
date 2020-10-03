@@ -153,6 +153,7 @@ public:
 };
 
 // #111
+class UT4WeaponEntityAsset;
 USTRUCT()
 struct T4ENGINE_API FT4EquipWeaponEntityData
 {
@@ -160,14 +161,13 @@ struct T4ENGINE_API FT4EquipWeaponEntityData
 
 public:
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<class UT4WeaponEntityAsset> WeaponEntityAsset;
+	TSoftObjectPtr<UT4WeaponEntityAsset> WeaponEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName OverrideEquipPoint; // #57
+	TMap<FName, FName> StanceEquipPointMap; // #169 : Stance, EquipPoint
 
 public:
 	FT4EquipWeaponEntityData()
-		: OverrideEquipPoint(NAME_None)
 	{
 	}
 };

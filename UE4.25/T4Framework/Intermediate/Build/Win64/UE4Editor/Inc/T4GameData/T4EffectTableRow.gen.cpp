@@ -53,9 +53,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultActionPackAsset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverrideActionPackAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultActionPackAsset;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_OverrideActionPackAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChainEffectDBKey_MetaData[];
 #endif
@@ -93,14 +93,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EffectTableRow>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_OverrideActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "Comment", "// #68\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
 		{ "ToolTip", "#68" },
 	};
 #endif
-	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPackAsset = { "DefaultActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, DefaultActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPackAsset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_OverrideActionPackAsset = { "OverrideActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, OverrideActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_OverrideActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_OverrideActionPackAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_ChainEffectDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -152,7 +152,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_DefaultActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_OverrideActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_ChainEffectDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectTableRow_Statics::NewProp_EffectShapeData,
@@ -188,7 +188,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 2093645224U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectTableRow_Hash() { return 3650614588U; }
 class UScriptStruct* FT4EffectShapeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -272,9 +272,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #114 : ET4GameEffectType::AreaDamage\n" },
+		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
-		{ "ToolTip", "#114 : ET4GameEffectType::AreaDamage" },
+		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange = { "MaxAreaRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MaxAreaRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData)) };
@@ -387,7 +387,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeData_Hash() { return 1749874431U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeData_Hash() { return 3036975565U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -85,7 +85,7 @@ template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4UnequipWeaponActio
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4EquipWeaponActionCommand>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionStatusCommands_h_159_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_Action_Command_T4ActionStatusCommands_h_160_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics; \
 	static class UScriptStruct* StaticStruct();
 

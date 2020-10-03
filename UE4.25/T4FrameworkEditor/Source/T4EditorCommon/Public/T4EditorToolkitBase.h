@@ -48,7 +48,7 @@ protected:
 
 	virtual void HandleOnDespawnAll(); // #129
 
-	bool IsReplayPlaying();
+	bool ReplayIsPlaying();
 
 private:
 	void HandleOnMapChangedEvent(UWorld* InOldWorld, EMapChangeType InMapChangeType); // #118

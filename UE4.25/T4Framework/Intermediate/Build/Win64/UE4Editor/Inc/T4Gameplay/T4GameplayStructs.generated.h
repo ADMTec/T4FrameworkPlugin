@@ -13,13 +13,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GameplayStructs_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_T4GameplayStructs_h_34_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FT4GameplayEffectSetInfo_Statics; \
-	static class UScriptStruct* StaticStruct();
-
-
-template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GameplayEffectSetInfo>();
-
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_T4GameplayStructs_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GameplaySkillSetInfo_Statics; \
 	static class UScriptStruct* StaticStruct();

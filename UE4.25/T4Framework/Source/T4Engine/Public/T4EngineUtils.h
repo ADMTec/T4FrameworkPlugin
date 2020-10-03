@@ -153,6 +153,8 @@ private:
 	bool bAdvancing;
 };
 
+
+
 class IT4WorldActor;
 
 class T4ENGINE_API FT4EngineUtils
@@ -190,6 +192,18 @@ public:
 		FVector& OutCollideLocation, // 점프시 첫번째 부딪히는 지점이 있을 경우. 없으면 Zero
 		float& OutCollideTimeSec // 점프시 첫번째 부딪히는 지점까지의 시간. 없으면 Zero
 	); // #140 : Goal Location 을 찾아 서버로 전송 또는 클라 테스트
+
+	bool GetMovementStartParameter(
+		IT4WorldActor* InIgnoreActor,
+		const TArray<UPrimitiveComponent*>& InIgnoreComponents,
+		const FVector& InVelocity,
+		float InMaxHeight, // 최대 높이
+		float InHeightSpeed, // 점프 Z 스피드 
+		FVector& OutGoalLocation,
+		float& OutDurationSec,
+		FVector& OutCollideLocation, // 점프시 첫번째 부딪히는 지점이 있을 경우. 없으면 Zero
+		float& OutCollideTimeSec // 점프시 첫번째 부딪히는 지점까지의 시간. 없으면 Zero
+	); // #140, #161 : Goal Location 을 찾아 서버로 전송 또는 클라 테스트
 
 	bool GetMovementDurationParameter(
 		float InStartZ,

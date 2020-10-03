@@ -55,6 +55,8 @@ enum class ET4ActionDataType : uint32
 	PostProcess, // #100
 	Environment, // #99
 
+	Event, // #161
+
 	Void, // #56 : Action Editor 에서 Invisible or Isolate 로 출력을 제어할 때 더미용으로 사용 (delay, duration 동작 보장)
 
 	// #62 : End Data Format
@@ -160,4 +162,12 @@ enum class ET4AcceleratedMotion : uint8 // #127
 	Uniform,
 	//Acceleration, // #140 : 타이밍 오류로 막아둠
 	//Deceleration, // #140 : 타이밍 오류로 막아둠
+};
+
+UENUM()
+enum class ET4EventType : uint8 // #161
+{
+	WeaponOverlap, // #161
+
+	None
 };

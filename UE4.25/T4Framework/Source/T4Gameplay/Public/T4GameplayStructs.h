@@ -27,28 +27,3 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FName> AttackDBKeys;
 };
-
-USTRUCT()
-struct T4GAMEPLAY_API FT4GameplayEffectSetInfo
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	void Reset();
-
-public:
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FName> HitDBKeys;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FName> KnockbackDBKeys;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FName> StunDBKeys;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FName> AirborneDBKeys;
-
-	UPROPERTY(VisibleAnywhere, Category = Default)
-	TArray<FName> MisDBKeys;
-};

@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AssetTypes() {}
 		return ET4MoveAngleType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4MoveAngleType(ET4MoveAngleType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4MoveAngleType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4MoveAngleType_Hash() { return 2587811345U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4MoveAngleType_Hash() { return 808494976U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4MoveAngleType()
 	{
 #if WITH_HOT_RELOAD
@@ -44,11 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AssetTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4MoveAngleType::Back", (int64)ET4MoveAngleType::Back },
-				{ "ET4MoveAngleType::Back_Left", (int64)ET4MoveAngleType::Back_Left },
-				{ "ET4MoveAngleType::Back_Right", (int64)ET4MoveAngleType::Back_Right },
 				{ "ET4MoveAngleType::Front", (int64)ET4MoveAngleType::Front },
-				{ "ET4MoveAngleType::Front_Left", (int64)ET4MoveAngleType::Front_Left },
-				{ "ET4MoveAngleType::Front_Right", (int64)ET4MoveAngleType::Front_Right },
 				{ "ET4MoveAngleType::Left", (int64)ET4MoveAngleType::Left },
 				{ "ET4MoveAngleType::Right", (int64)ET4MoveAngleType::Right },
 				{ "ET4MoveAngleType::Up", (int64)ET4MoveAngleType::Up },
@@ -57,13 +53,9 @@ void EmptyLinkFunctionForGeneratedCodeT4AssetTypes() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Back.Name", "ET4MoveAngleType::Back" },
-				{ "Back_Left.Name", "ET4MoveAngleType::Back_Left" },
-				{ "Back_Right.Name", "ET4MoveAngleType::Back_Right" },
 				{ "BlueprintType", "true" },
 				{ "Comment", "// #132\n" },
 				{ "Front.Name", "ET4MoveAngleType::Front" },
-				{ "Front_Left.Name", "ET4MoveAngleType::Front_Left" },
-				{ "Front_Right.Name", "ET4MoveAngleType::Front_Right" },
 				{ "Left.Name", "ET4MoveAngleType::Left" },
 				{ "ModuleRelativePath", "Public/T4AssetTypes.h" },
 				{ "None.Name", "ET4MoveAngleType::None" },

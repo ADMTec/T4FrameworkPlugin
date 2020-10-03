@@ -16,7 +16,6 @@
 #include "TableRow/T4GoodsTableRow.h" // #164
 #include "TableRow/T4SkillSetTableRow.h" // #50
 #include "TableRow/T4SkillTableRow.h" // #25
-#include "TableRow/T4EffectSetTableRow.h" // #135
 #include "TableRow/T4EffectTableRow.h" // #25
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 #include "TableRow/T4StatTableRow.h" // #114
@@ -32,9 +31,9 @@
   * #118
  */
 class FStructOnScope;
-struct T4GAMEDATA_API FT4GameDataBase
+struct T4GAMEDATA_API FT4GameDBRowBase
 {
-	FT4GameDataBase(const FName InRowName)
+	FT4GameDBRowBase(const FName InRowName)
 		: RowName(InRowName)
 #if WITH_EDITOR
 		, bDirtyed(false)
@@ -42,7 +41,7 @@ struct T4GAMEDATA_API FT4GameDataBase
 #endif
 	{
 	}
-	virtual ~FT4GameDataBase() {}
+	virtual ~FT4GameDBRowBase() {}
 
 	virtual ET4GameDBType GetType() const = 0; // #48
 	virtual const FT4GameUID GetUID() const = 0; // #150
@@ -58,7 +57,6 @@ struct T4GAMEDATA_API FT4GameDataBase
 	const FT4GoodsTableRow* QueryGoodsTableRow() const; // #164
 	const FT4SkillSetTableRow* QuerySkillSetTableRow() const;
 	const FT4SkillTableRow* QuerySkillTableRow() const;
-	const FT4EffectSetTableRow* QueryEffectSetTableRow() const;
 	const FT4EffectTableRow* QueryEffectTableRow() const;
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 	const FT4StatTableRow* QueryStatTableRow() const;
@@ -113,9 +111,9 @@ public:
 	virtual bool Contains(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
 	virtual bool Contains(const FT4GameDBKey& InGameDBKey) const = 0;
 
-	virtual const FT4GameDBKey GetDBKeyByUID(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
-	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
-	virtual const FT4GameDataBase* GetGameDataBase(const FT4GameDBKey& InGameDBKey) const = 0;
+	virtual const FT4GameDBKey GetKeyByUID(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual const FT4GameDBRowBase* GetRowBase(const FT4GameUID& InUID) const = 0; // #150 : (WARN) GameUID 설정이 기본(0)으로 설정될 경우 검색되지 않는다!!
+	virtual const FT4GameDBRowBase* GetRowBase(const FT4GameDBKey& InGameDBKey) const = 0;
 
 	virtual const FT4QuestTableRow* GetQuestTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4WorldTableRow* GetWorldTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
@@ -126,7 +124,6 @@ public:
 	virtual const FT4GoodsTableRow* GetGoodsTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 	virtual const FT4SkillSetTableRow* GetSkillSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4SkillTableRow* GetSkillTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
-	virtual const FT4EffectSetTableRow* GetEffectSetTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 	virtual const FT4EffectTableRow* GetEffectTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4GameDataMinimal.h)
 	virtual const FT4StatTableRow* GetStatTableRow(const FT4GameDBKey& InGameDBKey) const = 0;
@@ -134,20 +131,20 @@ public:
 #endif
 	virtual const FT4TextTableRow* GetTextTableRow(const FT4GameDBKey& InGameDBKey) const = 0; // #164
 
-	virtual FName ToQuestDBRowName(const ET4QuestDBNameType& InDBNameType) const = 0; // #164
+	virtual FName ToQuestDBKeyName(const ET4QuestDBNameType& InDBNameType) const = 0; // #164
 
 	virtual bool GetGameDBKeyNames(ET4GameDBType InGameDBType, TArray<FName>& OutDBKeyNames) const = 0;
 
 #if WITH_EDITOR
-	virtual FName GetGameDBTypeName(ET4GameDBType InGameDBType) const = 0; // #164
+	virtual FName GetTypeName(ET4GameDBType InGameDBType) const = 0; // #164
 
-	virtual bool GetGameDBKeyNamesInFolder(ET4GameDBType InGameDBType, FName InFolderName, TArray<FName>& OutDBKeyNames) = 0; // #164
+	virtual bool GetKeyNamesInFolder(ET4GameDBType InGameDBType, FName InFolderName, TArray<FName>& OutDBKeyNames) = 0; // #164
 
 	// #118
 	virtual UDataTable* GetDataTable(ET4GameDBType InGameDBType) const = 0;
 
-	virtual const TArray<FT4GameDataBase*>& GetGameDataBases(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
-	virtual FT4GameDataBase* GetGameDataBase(const FT4GameDBKey& InGameDBKey) = 0;
+	virtual const TArray<FT4GameDBRowBase*>& GetRowBases(ET4GameDBType InGameDBType, bool bInCheckValidation) = 0;
+	virtual FT4GameDBRowBase* GetRowBase(const FT4GameDBKey& InGameDBKey) = 0;
 	virtual FT4WeaponTableRow* GetWeaponTableRow(const FT4GameDBKey& InGameDBKey) = 0; // #154 : StanceSkillSet Add 를 위한 처리. const 외에는 인터페이스가 없다.
 
 	virtual bool SourceDataSave(ET4GameDBType InGameDBType, FString& OutErrorMessage) = 0;

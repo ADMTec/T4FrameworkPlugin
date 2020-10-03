@@ -104,6 +104,22 @@ public:
 	TSoftObjectPtr<UT4EnvironmentAsset> EnvironmentAsset; // #90, #92
 };
 
+// #163 : UI Thumbnail Env 편집 지원
+USTRUCT()
+struct T4ASSET_API FT4EntityZoneTestingData
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4EntityZoneTestingData()
+		: bThumbnailMode(false) // #163 : UI Thumbnail Env 편집 지원
+	{
+	}
+
+	UPROPERTY(EditAnywhere, Category = Editor)
+	bool bThumbnailMode; // #163 : UI Thumbnail Env 편집 지원
+};
+
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
 class T4ASSET_API UT4ZoneEntityAsset : public UT4ActorEntityAsset
 {
@@ -133,4 +149,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EntityZoneEnvironmentData ZoneEnvironmentData;
+
+	UPROPERTY(EditAnywhere, Category = Testing)
+	FT4EntityZoneTestingData Testing; // #163 : UI Thumbnail Env 편집 지원
 };

@@ -33,6 +33,7 @@
 // ET4ActionDataType::CameraShake // #101
 // ET4ActionDataType::PostProcess // #100
 // ET4ActionDataType::Environment // #99
+// ET4ActionDataType::Event // #161
 
 class UT4ActionPackAsset;
 
@@ -100,10 +101,12 @@ public:
 		return FString(TEXT("ActionData"));
 	}
 
+#if WITH_EDITOR
 	virtual FString ToDisplayText()
 	{
 		return FString(TEXT("Untitled")); // #54
 	}
+#endif
 };
 
 // #54
@@ -138,10 +141,12 @@ public:
 		return FString(TEXT("BranchAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Branch '%s'"), *(ActionPackAsset.GetAssetName())); // #54
 	}
+#endif
 };
 
 // #132 : 네이밍에 명시적으로 Test prefix 를 붙일 것! 사용중 혼란을 야기할 수 있음
@@ -219,9 +224,9 @@ public:
 		return FString(TEXT("MovementAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
-#if WITH_EDITOR
 		FString DisplayString;
 		switch (MovementType)
 		{
@@ -270,10 +275,8 @@ public:
 				break;
 		}
 		return FString::Printf(TEXT("Movement '%s'"), *DisplayString); // #132
-#else
-		return FString();
-#endif
 	}
+#endif
 };
 
 // #134
@@ -356,6 +359,7 @@ public:
 		return FString(TEXT("AnimationAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		if (0 >= AnimSequenceDatas.Num())
@@ -379,6 +383,7 @@ public:
 		}
 		return FString::Printf(TEXT("Animation '%s'"), *DisplayString); // #54
 	}
+#endif
 };
 
 // #108
@@ -420,6 +425,7 @@ public:
 		return FString(TEXT("MeshAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		if (!StaticMeshAsset.IsNull())
@@ -428,6 +434,7 @@ public:
 		}
 		return FString::Printf(TEXT("Not Set Mesh")); // #54
 	}
+#endif
 };
 
 class UParticleSystem;
@@ -474,10 +481,12 @@ public:
 		return FString(TEXT("ParticleAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Particle '%s'"), *(ParticleAsset.GetAssetName())); // #54
 	}
+#endif
 };
 
 USTRUCT()
@@ -565,10 +574,12 @@ public:
 		return FString(TEXT("TrailAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Trail '%s'"), *(PSTemplate.GetAssetName()));
 	}
+#endif
 };
 
 // #54
@@ -629,10 +640,12 @@ public:
 		return FString(TEXT("DecalAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Decal '%s'"), *(DecalMaterial.GetAssetName())); // #54
 	}
+#endif
 };
 
 // #152
@@ -696,10 +709,12 @@ public:
 		return FString(TEXT("AudioAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Audio '%s'"), *(SoundAsset.GetAssetName()));
 	}
+#endif
 };
 
 // #132 : 네이밍에 명시적으로 Test prefix 를 붙일 것! 사용중 혼란을 야기할 수 있음
@@ -816,10 +831,12 @@ public:
 		return FString(TEXT("ProjectileAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Projectile '%s'"), *(HeadActionPackAsset.GetAssetName()));
 	}
+#endif
 };
 
 // #135 : 
@@ -892,10 +909,12 @@ public:
 		return FString(TEXT("ReactionAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Reaction '%s'"), *(ReactionName_A.ToString())); // #67
 	}
+#endif
 };
 
 // #81
@@ -927,10 +946,12 @@ public:
 		return FString(TEXT("PlayTagAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("PlayTag '%s'"), *(PlayTagName.ToString()));
 	}
+#endif
 };
 
 // #102
@@ -1254,10 +1275,12 @@ public:
 		return FString(TEXT("PostProcessAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("PostProcess '%s'"), *(PostProcessAsset.GetAssetName()));
 	}
+#endif
 };
 
 // #99
@@ -1317,10 +1340,51 @@ public:
 		return FString(TEXT("EnvironmentAction"));
 	}
 
+#if WITH_EDITOR
 	FString ToDisplayText() override
 	{
 		return FString::Printf(TEXT("Environment '%s'"), *(ZoneEntityAsset.GetAssetName()));
 	}
+#endif
+};
+
+// #161
+USTRUCT()
+struct T4ASSET_API FT4EventActionData : public FT4ActionDataBase
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	// #39 : FT4ActionDetails::CustomizeEventActionDetails
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	ET4EventType EventType;
+
+public:
+	FT4EventActionData()
+		: FT4ActionDataBase(StaticActionType())
+		, EventType(ET4EventType::None)
+	{
+	}
+
+	static ET4ActionDataType StaticActionType() { return ET4ActionDataType::Event; }
+
+	FString ToString() const override
+	{
+		return FString(TEXT("EventAction"));
+	}
+
+#if WITH_EDITOR
+	FString ToDisplayText() override
+	{
+		FString EventTypeString = TEXT("None");
+		const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("ET4EventType"), true);
+		if (nullptr != EnumPtr)
+		{
+			EventTypeString = EnumPtr->GetNameStringByIndex((int32)EventType);
+		}
+		return FString::Printf(TEXT("Event '%s'"), *EventTypeString);
+	}
+#endif
 };
 
 // #56, #134: Action Editor 에서 Invisible or Isolate 로 출력을 제어할 때 더미용으로 사용 (delay, duration 동작 보장)

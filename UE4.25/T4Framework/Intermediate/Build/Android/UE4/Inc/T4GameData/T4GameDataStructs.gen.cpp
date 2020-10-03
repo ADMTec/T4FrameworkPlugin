@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataStructs() {}
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardItemPackageData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4VisualReactionData();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPackAsset_NoRegister();
 // End Cross Module References
 class UScriptStruct* FT4GameWorldSettings::StaticStruct()
 {
@@ -177,9 +179,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardItemPackage
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4RewardItemPackageData_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #168\n */" },
 		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
-		{ "ToolTip", "#168" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4RewardItemPackageData_Statics::NewStructOps()
@@ -234,7 +234,128 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardItemPackage
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4RewardItemPackageData_Hash() { return 1294968074U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4RewardItemPackageData_Hash() { return 1734116452U; }
+class UScriptStruct* FT4VisualReactionData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4VisualReactionData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4VisualReactionData"), sizeof(FT4VisualReactionData), Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4VisualReactionData>()
+{
+	return FT4VisualReactionData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4VisualReactionData(FT4VisualReactionData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4VisualReactionData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionData
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4VisualReactionData")),new UScriptStruct::TCppStructOps<FT4VisualReactionData>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionData;
+	struct Z_Construct_UScriptStruct_FT4VisualReactionData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AirborneActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_AirborneActionPackAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StunActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_StunActionPackAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_KnockbackActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_KnockbackActionPackAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HitActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_HitActionPackAsset;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #161 : EffectSet \xec\x97\x90\xec\x84\x9c \xeb\x8c\x80\xec\xb2\xb4\xeb\x90\xa8\n" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+		{ "ToolTip", "#161 : EffectSet \xec\x97\x90\xec\x84\x9c \xeb\x8c\x80\xec\xb2\xb4\xeb\x90\xa8" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4VisualReactionData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset = { "AirborneActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, AirborneActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset = { "StunActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, StunActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset = { "KnockbackActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, KnockbackActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset = { "HitActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, HitActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		nullptr,
+		&NewStructOps,
+		"T4VisualReactionData",
+		sizeof(FT4VisualReactionData),
+		alignof(FT4VisualReactionData),
+		Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4VisualReactionData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4VisualReactionData"), sizeof(FT4VisualReactionData), Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash() { return 1989002469U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

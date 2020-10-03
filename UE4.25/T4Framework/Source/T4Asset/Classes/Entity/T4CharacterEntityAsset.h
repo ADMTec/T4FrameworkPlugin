@@ -54,6 +54,7 @@ public:
 		: InPlaceRotationRate(300.0f)
 		, MoveRotationRateScale(1.2f)
 	{
+		bUseOverlapEvents = true; // #47, #161 : 캐릭터는 기본으로 켠다.
 		BoundType = ET4EntityBoundType::Capsule; // #126
 	}
 

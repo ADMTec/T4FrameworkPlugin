@@ -12,20 +12,19 @@
 class UT4WeaponEntityAsset;
 
 USTRUCT()
-struct FT4WeaponEntityData // #108
+struct FT4WeaponEquipData // #108
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4WeaponEntityAsset> EntityAsset;
+	TSoftObjectPtr<UT4WeaponEntityAsset> WeaponEntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName OverrideEquipPoint;
+	TMap<FName, FName> StanceEquipPointMap; // #169 : Stance, EquipPoint
 
 public:
-	FT4WeaponEntityData()
-		: OverrideEquipPoint(NAME_None)
+	FT4WeaponEquipData()
 	{
 	}
 };
@@ -69,10 +68,10 @@ public:
 	bool bDontUseMesh; // #135
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "!bDontUseMesh"))
-	FT4WeaponEntityData MainEntityData;
+	FT4WeaponEquipData MainEquipData; // #169
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "!bDontUseMesh"))
-	TArray<FT4WeaponEntityData> SubEntityDatas;
+	TArray<FT4WeaponEquipData> SubEquipDatas; // #169
 
 public:
 	enum EVersion

@@ -17,6 +17,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4Asset_Public_ActionPack_T4ActionPackTypes_h
 
 
+#define FOREACH_ENUM_ET4EVENTTYPE(op) \
+	op(ET4EventType::WeaponOverlap) \
+	op(ET4EventType::None) 
+
+enum class ET4EventType : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4EventType>();
+
 #define FOREACH_ENUM_ET4ACCELERATEDMOTION(op) \
 	op(ET4AcceleratedMotion::Uniform) 
 
@@ -118,6 +125,7 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4ActionPlayMode>();
 	op(ET4ActionDataType::CameraShake) \
 	op(ET4ActionDataType::PostProcess) \
 	op(ET4ActionDataType::Environment) \
+	op(ET4ActionDataType::Event) \
 	op(ET4ActionDataType::Void) \
 	op(ET4ActionDataType::None) 
 

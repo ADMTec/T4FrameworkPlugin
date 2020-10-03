@@ -15,7 +15,7 @@ struct FT4GamePacketSC_EffectStun;
 struct FT4GamePacketSC_EffectAirborne;
 struct FT4GamePacketSC_EffectKnockback;
 struct FT4GamePacketSC_EffectArea;
-struct FT4GamePacketSC_EffectDirect;
+struct FT4GamePacketSC_EffectHit;
 struct FT4GamePacketSC_EffectDebuff;
 struct FT4GamePacketSC_EffectBuff;
 struct FT4GamePacketSC_SkillTarget;
@@ -95,7 +95,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_EffectAirborne_Implementation(FT4GamePacketSC_EffectAirborne const& InPacket); \
 	virtual void SC_RecvPacket_EffectKnockback_Implementation(FT4GamePacketSC_EffectKnockback const& InPacket); \
 	virtual void SC_RecvPacket_EffectArea_Implementation(FT4GamePacketSC_EffectArea const& InPacket); \
-	virtual void SC_RecvPacket_EffectDirect_Implementation(FT4GamePacketSC_EffectDirect const& InPacket); \
+	virtual void SC_RecvPacket_EffectHit_Implementation(FT4GamePacketSC_EffectHit const& InPacket); \
 	virtual void SC_RecvPacket_EffectDebuff_Implementation(FT4GamePacketSC_EffectDebuff const& InPacket); \
 	virtual void SC_RecvPacket_EffectBuff_Implementation(FT4GamePacketSC_EffectBuff const& InPacket); \
 	virtual void SC_RecvPacket_SkillTarget_Implementation(FT4GamePacketSC_SkillTarget const& InPacket); \
@@ -195,7 +195,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectAirborne); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectKnockback); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectArea); \
-	DECLARE_FUNCTION(execSC_RecvPacket_EffectDirect); \
+	DECLARE_FUNCTION(execSC_RecvPacket_EffectHit); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectDebuff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectBuff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_SkillTarget); \
@@ -271,7 +271,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void SC_RecvPacket_EffectAirborne_Implementation(FT4GamePacketSC_EffectAirborne const& InPacket); \
 	virtual void SC_RecvPacket_EffectKnockback_Implementation(FT4GamePacketSC_EffectKnockback const& InPacket); \
 	virtual void SC_RecvPacket_EffectArea_Implementation(FT4GamePacketSC_EffectArea const& InPacket); \
-	virtual void SC_RecvPacket_EffectDirect_Implementation(FT4GamePacketSC_EffectDirect const& InPacket); \
+	virtual void SC_RecvPacket_EffectHit_Implementation(FT4GamePacketSC_EffectHit const& InPacket); \
 	virtual void SC_RecvPacket_EffectDebuff_Implementation(FT4GamePacketSC_EffectDebuff const& InPacket); \
 	virtual void SC_RecvPacket_EffectBuff_Implementation(FT4GamePacketSC_EffectBuff const& InPacket); \
 	virtual void SC_RecvPacket_SkillTarget_Implementation(FT4GamePacketSC_SkillTarget const& InPacket); \
@@ -371,7 +371,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectAirborne); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectKnockback); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectArea); \
-	DECLARE_FUNCTION(execSC_RecvPacket_EffectDirect); \
+	DECLARE_FUNCTION(execSC_RecvPacket_EffectHit); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectDebuff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_EffectBuff); \
 	DECLARE_FUNCTION(execSC_RecvPacket_SkillTarget); \
@@ -584,9 +584,9 @@ struct FT4GamePacketCS_ReadyToPlay;
 	{ \
 		FT4GamePacketSC_EffectDebuff InPacket; \
 	}; \
-	struct T4BuiltinPlayerController_eventSC_RecvPacket_EffectDirect_Parms \
+	struct T4BuiltinPlayerController_eventSC_RecvPacket_EffectHit_Parms \
 	{ \
-		FT4GamePacketSC_EffectDirect InPacket; \
+		FT4GamePacketSC_EffectHit InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventSC_RecvPacket_EffectKnockback_Parms \
 	{ \

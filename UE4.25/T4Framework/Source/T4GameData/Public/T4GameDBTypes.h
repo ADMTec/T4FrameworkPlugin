@@ -30,8 +30,6 @@ enum class ET4GameDBType : uint8
 
 	SkillSet, // #50
 	Skill,
-
-	EffectSet, // #135
 	Effect,
 
 	Stat, // #114
@@ -239,7 +237,6 @@ public:
 			TEXT("Goods"), // #164
 			TEXT("SkillSet"), // #50
 			TEXT("Skill"),
-			TEXT("EffectSet"), // #135
 			TEXT("Effect"),
 			TEXT("Stat"), // #114
 			TEXT("Reward"), // #164
@@ -410,37 +407,6 @@ public:
 	}
 
 	FORCEINLINE FT4SkillDBKey operator=(const FT4GameDBKey& InRhs)
-	{
-		RowName = InRhs.RowName;
-		return *this;
-	}
-};
-
-// #135
-USTRUCT()
-struct FT4EffectSetDBKey : public FT4GameDBKey
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	FT4EffectSetDBKey()
-		: FT4GameDBKey(ET4GameDBType::EffectSet)
-	{
-	}
-
-	FT4EffectSetDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::EffectSet, InRowName)
-	{
-	}
-
-	FORCEINLINE FT4GameDBKey operator=(const FT4EffectSetDBKey& InRhs)
-	{
-		Type = InRhs.Type;
-		RowName = InRhs.RowName;
-		return *this;
-	}
-
-	FORCEINLINE FT4EffectSetDBKey operator=(const FT4GameDBKey& InRhs)
 	{
 		RowName = InRhs.RowName;
 		return *this;

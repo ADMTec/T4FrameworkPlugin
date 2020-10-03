@@ -1029,9 +1029,11 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverrideEquipPoint_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceEquipPointMap_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_OverrideEquipPoint;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_StanceEquipPointMap;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceEquipPointMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceEquipPointMap_ValueProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponEntityAsset_MetaData[];
 #endif
@@ -1041,9 +1043,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #111\n" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionStatusCommands.h" },
-		{ "ToolTip", "#111" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewStructOps()
@@ -1051,12 +1051,14 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EquipWeaponEntityData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_OverrideEquipPoint_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionStatusCommands.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_OverrideEquipPoint = { "OverrideEquipPoint", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EquipWeaponEntityData, OverrideEquipPoint), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_OverrideEquipPoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_OverrideEquipPoint_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap = { "StanceEquipPointMap", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EquipWeaponEntityData, StanceEquipPointMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_Key_KeyProp = { "StanceEquipPointMap_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_ValueProp = { "StanceEquipPointMap", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_WeaponEntityAsset_MetaData[] = {
 		{ "Category", "Common" },
@@ -1065,7 +1067,9 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_WeaponEntityAsset = { "WeaponEntityAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EquipWeaponEntityData, WeaponEntityAsset), Z_Construct_UClass_UT4WeaponEntityAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_WeaponEntityAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_WeaponEntityAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_OverrideEquipPoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_StanceEquipPointMap_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::NewProp_WeaponEntityAsset,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Statics::ReturnStructParams = {
@@ -1096,7 +1100,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4EquipWeaponEntityDa
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Hash() { return 4033877457U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EquipWeaponEntityData_Hash() { return 4097567966U; }
 class UScriptStruct* FT4StanceActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

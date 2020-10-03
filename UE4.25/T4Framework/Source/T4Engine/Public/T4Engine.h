@@ -39,6 +39,7 @@ class IT4ReplaySystem; // #68
 
 class UT4EntityAsset;
 
+class UPrimitiveComponent;
 struct FWorldContext;
 class UAnimSequence;
 class AController;
@@ -209,6 +210,7 @@ public:
 	virtual const FT4WorldActorProperty& GetPropertyConst() const = 0; // #34
 
 	virtual IT4CompositeComponent* GetCompositeComponent(FName InComponentName) = 0; // #162 : Composite, T4Const_DefaultActorComponentName = Default = NAME_None
+	virtual UPrimitiveComponent* GetWeaponOverlappedComponent(FName InOverlapEventName) const = 0; // #161 : HandleOnWeaponOverlap 시의 무기 Component RayCasting 에서 제외 필요
 
 	virtual float GetLifeTimeSec() const = 0; // #102
 	virtual float GetWorldTimeScale() const = 0; // #102
@@ -254,15 +256,20 @@ public:
 	virtual void SetNoCollision(bool bInActive) = 0; // #135
 	virtual void SetHeightOffset(float InOffset) = 0; // #18
 	virtual void SetOutline(bool bInShow) = 0; // #115
+
 	virtual void SetNameplateText(FName InKey, const TCHAR* InText, float InHeightOffset, const FColor& InTextColor, float InScaleXY) = 0; // #119
 	virtual void ClearNameplateText(FName InKey) = 0; // #119
 
-#if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4EngineMinimal.h)
-	virtual FT4HitOverlapDelegates& GetHitOverlapDelegates() = 0; // #49
+	virtual void AddFloatingDamageText(
+		const TCHAR* InDamageString,
+		float InDurationSec,
+		const FVector& InVelocity,
+		float InHeightOffset,
+		const FColor& InTextColor,
+		float InScaleXY
+	) = 0; // #161
 
-	virtual void BeginWeaponHitOverlapEvent(const FName& InHitOverlapEventName) = 0; // $49
-	virtual void EndWeaponHitOverlapEvent() = 0; // #49
-#endif
+	virtual FT4WorldActorOverlapDelegates& GetOverlapDelegates() = 0; // #49
 
 #if !UE_BUILD_SHIPPING
 	virtual void SetDebugDraw(bool bInEnable) = 0; // #158
@@ -282,13 +289,7 @@ public:
 	virtual void EditorSetOwner(UObject* InOwner) = 0; // #158 : 에디터에서 작업을 위해 스폰한 객체 확인 (Entity Player 교체에서 사용)
 
 	virtual void EditorSetAimTarget(bool bEnable, const FVector& InAimTarget) = 0; // #111
-	virtual bool EditorPlay(
-		UAnimSequence* InPlayAnimSequence,
-		FName InSectionName,
-		float InPlayRate = 1.0f,
-		float InBlendInTimeSec = T4Const_DefaultAnimBlendTimeSec,
-		float InBlendOutTimeSec = T4Const_DefaultAnimBlendTimeSec
-	) = 0; // #111
+	virtual bool EditorPlayAnimation(UAnimSequence* InPlayAnimSequence, FName InSectionName, float InPlayRate, float InBlendInTimeSec, float InBlendOutTimeSec) = 0; // #111
 #endif
 };
 

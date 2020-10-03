@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionTestSettings();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4ActionCompositeData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EventActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EnvironmentActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4PostProcessActionData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4CameraShakeActionData();
@@ -356,6 +357,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EventActions_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_EventActions;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EventActions_Inner;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnvironmentActions_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_EnvironmentActions;
@@ -465,6 +471,16 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ActionCompositeData>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #99\n" },
+		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
+		{ "ToolTip", "#99" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions = { "EventActions", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionCompositeData, EventActions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions_Inner = { "EventActions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4EventActionData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EnvironmentActions_MetaData[] = {
 		{ "Category", "Common" },
@@ -642,6 +658,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap_Key_KeyProp = { "HeaderInfoMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_HeaderInfoMap_ValueProp = { "HeaderInfoMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4ActionHeaderInfo, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EventActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EnvironmentActions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_EnvironmentActions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionCompositeData_Statics::NewProp_PostProcessActions,
@@ -711,7 +729,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionCompositeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 1322320871U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionCompositeData_Hash() { return 1687948812U; }
 class UScriptStruct* FT4ActionFolderInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

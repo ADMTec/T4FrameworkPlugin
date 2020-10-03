@@ -222,8 +222,9 @@ public:
 		: bEnabled(false)
 		, FogDensity(0.02f)
 		, FogHeightFalloff(0.2f)
-		, FogInscatteringColor(FLinearColor::White)
+		, FogInscatteringColor(0.447f, 0.638f, 1.0f)
 	{
+		SecondFogData.FogDensity = 0.0f;
 	}
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -231,10 +232,10 @@ public:
 
 	// #92 : 프로퍼티 추가시 FT4WorldEnvironmentControl::BlendExponentialHeightFog 구현 필요!!
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled", UIMin = "0", UIMax = ".05"))
 	float FogDensity;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled", UIMin = "0.001", UIMax = "2"))
 	float FogHeightFalloff;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bEnabled"))
@@ -293,6 +294,8 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4BuiltInEasing TimeBlendCurve; // #123
+
+	// FT4EnvironmentTimeTagDetails::CustomizePropertyOverride
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EnvDirectionalData DirectionalData; // #93

@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineUserSettings() {}
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4EngineUserSettings();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftObjectPath();
+	T4ASSET_API UClass* Z_Construct_UClass_UT4EnvironmentAsset_NoRegister();
 // End Cross Module References
 	void UT4EngineUserSettings::StaticRegisterNativesUT4EngineUserSettings()
 	{
@@ -33,13 +33,13 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineUserSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailSceneEnvironmentAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailSceneEnvironmentAssetPath;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ThumbnailSceneEnvironmentAsset;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PreviewSceneEnvironmentAssetPath_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PreviewSceneEnvironmentAsset_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PreviewSceneEnvironmentAssetPath;
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_PreviewSceneEnvironmentAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -50,33 +50,31 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineUserSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineUserSettings_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #153\n */" },
 		{ "IncludePath", "Settings/T4EngineUserSettings.h" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineUserSettings.h" },
-		{ "ToolTip", "#153" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAsset_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// #94\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineUserSettings.h" },
 		{ "ToolTip", "#94" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath = { "ThumbnailSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineUserSettings, ThumbnailSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAsset = { "ThumbnailSceneEnvironmentAsset", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineUserSettings, ThumbnailSceneEnvironmentAsset), Z_Construct_UClass_UT4EnvironmentAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAsset_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "Comment", "// Plugins/T4Framework/Config/DefaultT4Framework.ini\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineUserSettings.h" },
 		{ "ToolTip", "Plugins/T4Framework/Config/DefaultT4Framework.ini" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath = { "PreviewSceneEnvironmentAssetPath", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineUserSettings, PreviewSceneEnvironmentAssetPath), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAsset = { "PreviewSceneEnvironmentAsset", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineUserSettings, PreviewSceneEnvironmentAsset), Z_Construct_UClass_UT4EnvironmentAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EngineUserSettings_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAssetPath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAssetPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_ThumbnailSceneEnvironmentAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineUserSettings_Statics::NewProp_PreviewSceneEnvironmentAsset,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EngineUserSettings_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4EngineUserSettings>::IsAbstract,
@@ -105,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineUserSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineUserSettings, 4202743036);
+	IMPLEMENT_CLASS(UT4EngineUserSettings, 2894057294);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineUserSettings>()
 	{
 		return UT4EngineUserSettings::StaticClass();

@@ -149,6 +149,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TArray<FT4EnvironmentActionData> EnvironmentActions; // #99
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	TArray<FT4EventActionData> EventActions; // #161
+
 public:
 	void Reset();
 

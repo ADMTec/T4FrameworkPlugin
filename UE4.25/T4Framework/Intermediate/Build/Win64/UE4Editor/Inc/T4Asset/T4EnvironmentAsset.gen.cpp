@@ -252,9 +252,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// #123\n" },
+		{ "Comment", "// FT4EnvironmentTimeTagDetails::CustomizePropertyOverride\n" },
 		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
-		{ "ToolTip", "#123" },
+		{ "ToolTip", "FT4EnvironmentTimeTagDetails::CustomizePropertyOverride" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData = { "DirectionalData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvTimeTagData, DirectionalData), Z_Construct_UScriptStruct_FT4EnvDirectionalData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvTimeTagData_Statics::NewProp_DirectionalData_MetaData)) };
@@ -313,7 +313,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvTimeTagData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 2563163633U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvTimeTagData_Hash() { return 615986470U; }
 class UScriptStruct* FT4EnvPostProcessData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -503,6 +503,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bEnabled" },
 		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
+		{ "UIMax", "2" },
+		{ "UIMin", "0.001" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff = { "FogHeightFalloff", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvExponentialHeightFogData, FogHeightFalloff), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogHeightFalloff_MetaData)) };
@@ -513,6 +515,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 		{ "EditCondition", "bEnabled" },
 		{ "ModuleRelativePath", "Classes/Data/T4EnvironmentAsset.h" },
 		{ "ToolTip", "#92 : \xed\x94\x84\xeb\xa1\x9c\xed\x8d\xbc\xed\x8b\xb0 \xec\xb6\x94\xea\xb0\x80\xec\x8b\x9c FT4WorldEnvironmentControl::BlendExponentialHeightFog \xea\xb5\xac\xed\x98\x84 \xed\x95\x84\xec\x9a\x94!!" },
+		{ "UIMax", ".05" },
+		{ "UIMin", "0" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogDensity = { "FogDensity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EnvExponentialHeightFogData, FogDensity), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogDensity_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Statics::NewProp_FogDensity_MetaData)) };
@@ -562,7 +566,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EnvExponentialHeight
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Hash() { return 724939665U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EnvExponentialHeightFogData_Hash() { return 3985851279U; }
 class UScriptStruct* FT4EnvAtmosphericFogData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

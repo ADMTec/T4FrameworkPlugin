@@ -13,16 +13,7 @@
 /**
   * #151
  */
-struct FT4GameplayParameters // #158
-{
-	FT4GameplayParameters()
-		: ProjectGameContentName(NAME_None)
-	{
-	}
-	FSoftObjectPath ProjectGameMasterTablePath;
-	FName ProjectGameContentName;
-};
-
+struct FT4EquipWeaponActionCommand; // #169
 class UT4SpawnAsset;
 class IT4PlayerController;
 class UT4GameClientObject;
@@ -34,27 +25,14 @@ public:
 	FT4GameplayStatics();
 	~FT4GameplayStatics();
 
-	bool IsInitialized() const { return bInitialized; }
-
-	void Initialize(const FT4GameplayParameters& InGameplayParameters); // #158
-	void Finalize(); // #158
-
 	IT4PlayerController* GetPlayerController(ET4LayerType InLayerType) const;
 	UT4GameClientObject* GetPlayerClientObject(ET4LayerType InLayerType) const;
-
-	const TCHAR* GetControlModeName(ET4ControlModeType InControlModeType);
-	ET4ControlModeType GetControlModeType(const TCHAR* InControlModeName);
 
 	float GeMaxMoveSpeedByStance(const FT4GameDBKey& InDBKey, FName InStanceName);
 	bool GetJumpProperties(const FT4GameDBKey& InDBKey, float& OutJumpMaxHeight, float& OutJumpHeightSpeed);
 	bool GetSkillSetInfo(const FT4SkillSetDBKey& InDBKey, FT4GameplaySkillSetInfo& OutSkillSetInfo);
-	bool GetEffectSetInfo(const FT4EffectSetDBKey& InDBKey, FT4GameplayEffectSetInfo& OutEffectSetInfo);
 
-#if !UE_BUILD_SHIPPING
-	FName GetPlayerQuickHotKeyValue(int32 InHotKeyIndex); // #150
-	FName GetNPCQuickHotKeyValue(int32 InHotKeyIndex); // #150
-	FName GetWeaponQuickHotKeyValue(int32 InHotKeyIndex); // #150
-#endif
+	bool MakeEquipWeaponActionCommand(const FT4WeaponDBKey& InDBKey, FT4EquipWeaponActionCommand* OutActionCommand); // #169
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
 
@@ -67,12 +45,7 @@ public:
 	bool DoWorldTravel(ET4LayerType InLayerType, const FT4GameDBKey& InWorldDBKey); // #144
 
 	bool DoSpawnPlayer(ET4LayerType InLayerType, const FT4GameDBKey& InPlayerDBKey, bool bInRandomLocation); // #43
-	bool DoSpawnPlayer(
-		ET4LayerType InLayerType,
-		const FT4GameDBKey& InPlayerDBKey,
-		const FVector& InLocation,
-		const FRotator& InRotation
-	); // #126
+	bool DoSpawnPlayer(ET4LayerType InLayerType,const FT4GameDBKey& InPlayerDBKey, const FVector& InLocation, const FRotator& InRotation); // #126
 
 	bool DoSpawnNPCRandom(ET4LayerType InLayerType, bool bInRandomLocation); // #43
 	bool DoSpawnNPC(ET4LayerType InLayerType, const FT4GameDBKey& InNPCDBKey, bool bInRandomLocation); // #43
@@ -131,21 +104,4 @@ public:
 	bool DoChangeStance(ET4LayerType InLayerType, FName InStanceName); // #106, #109, #114
 
 	bool DoEquipWeapon(ET4LayerType InLayerType, const FT4GameDBKey& InWeaponDBKey, bool bUnequip, bool bInMainWeapon); // #48
-
-	void DoReplayPlay(
-		ET4LayerType InLayerType, 
-		FName InPlayAssetName, 
-		FName InFolderName,
-		bool bInPlayerPossessed,
-		bool bInPlayRepeat
-	); // #68
-	void DoReplayRec(ET4LayerType InLayerType, FName InRecAssetName, FName InFolderName); // #68
-
-	void DoReplayStop(ET4LayerType InLayerType, bool bInPlayStop, bool bInRecStop); // #68
-
-	bool IsReplayPlaying(ET4LayerType InLayerType); // #68
-	bool IsReplayRecording(ET4LayerType InLayerType); // #68
-
-private:
-	bool bInitialized; // #158
 };

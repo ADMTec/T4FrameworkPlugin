@@ -43,7 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 		return ET4AnimationParamBits_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4AnimationParamBits(ET4AnimationParamBits_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4AnimationParamBits"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4AnimationParamBits_Hash() { return 739275100U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4AnimationParamBits_Hash() { return 2300559907U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4AnimationParamBits()
 	{
 #if WITH_HOT_RELOAD
@@ -62,9 +62,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Bitflags", "" },
 				{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
-				{ "NoBlendInTimeWithOffsetPlayBit.Comment", "// #142 : EffectDirect \xeb\x93\xb1\xea\xb3\xbc \xea\xb0\x99\xec\x9d\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 Hit \xec\x95\xa0\xeb\x8b\x88\xeb\xa9\x94\xec\x9d\xb4\xec\x85\x98 Skip \xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xec\xb2\x98\xeb\xa6\xac\n" },
+				{ "NoBlendInTimeWithOffsetPlayBit.Comment", "// #142 : EffectHit \xeb\x93\xb1\xea\xb3\xbc \xea\xb0\x99\xec\x9d\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 Hit \xec\x95\xa0\xeb\x8b\x88\xeb\xa9\x94\xec\x9d\xb4\xec\x85\x98 Skip \xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xec\xb2\x98\xeb\xa6\xac\n" },
 				{ "NoBlendInTimeWithOffsetPlayBit.Name", "ET4AnimationParamBits::NoBlendInTimeWithOffsetPlayBit" },
-				{ "NoBlendInTimeWithOffsetPlayBit.ToolTip", "#142 : EffectDirect \xeb\x93\xb1\xea\xb3\xbc \xea\xb0\x99\xec\x9d\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 Hit \xec\x95\xa0\xeb\x8b\x88\xeb\xa9\x94\xec\x9d\xb4\xec\x85\x98 Skip \xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xec\xb2\x98\xeb\xa6\xac" },
+				{ "NoBlendInTimeWithOffsetPlayBit.ToolTip", "#142 : EffectHit \xeb\x93\xb1\xea\xb3\xbc \xea\xb0\x99\xec\x9d\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\xa4\x91\xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 Hit \xec\x95\xa0\xeb\x8b\x88\xeb\xa9\x94\xec\x9d\xb4\xec\x85\x98 Skip \xec\x9d\x84 \xec\x9c\x84\xed\x95\x9c \xec\xb2\x98\xeb\xa6\xac" },
 				{ "PlaySkipBit.Name", "ET4AnimationParamBits::PlaySkipBit" },
 			};
 #endif
@@ -264,7 +264,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 		return ET4DefaultParamBits_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4DefaultParamBits(ET4DefaultParamBits_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4DefaultParamBits"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4DefaultParamBits_Hash() { return 4047818128U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4DefaultParamBits_Hash() { return 993183279U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4DefaultParamBits()
 	{
 #if WITH_HOT_RELOAD
@@ -278,6 +278,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4DefaultParamBits::ActionKeyBit", (int64)ET4DefaultParamBits::ActionKeyBit },
 				{ "ET4DefaultParamBits::ContidionNameBit", (int64)ET4DefaultParamBits::ContidionNameBit },
+				{ "ET4DefaultParamBits::OverlapEventNameBit", (int64)ET4DefaultParamBits::OverlapEventNameBit },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -285,6 +286,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 				{ "Bitflags", "" },
 				{ "ContidionNameBit.Name", "ET4DefaultParamBits::ContidionNameBit" },
 				{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
+				{ "OverlapEventNameBit.Comment", "// #54\n" },
+				{ "OverlapEventNameBit.Name", "ET4DefaultParamBits::OverlapEventNameBit" },
+				{ "OverlapEventNameBit.ToolTip", "#54" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -1070,9 +1074,13 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionDefaultParame
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveConditionName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverlapEventName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ActiveConditionName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_OverlapEventName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ConditionName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ConditionName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionKey_MetaData[];
 #endif
@@ -1094,14 +1102,23 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionDefaultParame
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ActionDefaultParameters>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActiveConditionName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_OverlapEventName_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #54\n" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
+		{ "ToolTip", "#54" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_OverlapEventName = { "OverlapEventName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionDefaultParameters, OverlapEventName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_OverlapEventName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_OverlapEventName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ConditionName_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #32\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
 		{ "ToolTip", "#32" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActiveConditionName = { "ActiveConditionName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionDefaultParameters, ActiveConditionName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActiveConditionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActiveConditionName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ConditionName = { "ConditionName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionDefaultParameters, ConditionName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ConditionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ConditionName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActionKey_MetaData[] = {
 		{ "Category", "Common" },
@@ -1121,7 +1138,8 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionDefaultParame
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_SetBits = { "SetBits", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionDefaultParameters, SetBits), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_SetBits_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_SetBits_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActiveConditionName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_OverlapEventName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ConditionName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_ActionKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Statics::NewProp_SetBits,
 	};
@@ -1153,7 +1171,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionDefaultParame
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Hash() { return 1557980346U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionDefaultParameters_Hash() { return 2812668668U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

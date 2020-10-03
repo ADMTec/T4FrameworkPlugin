@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEnemyType();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatCategory();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
@@ -137,6 +138,65 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				nullptr,
 				"ET4GameEnemyType",
 				"ET4GameEnemyType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4GameStatItemCategory_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameStatItemCategory"));
+		}
+		return Singleton;
+	}
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameStatItemCategory>()
+	{
+		return ET4GameStatItemCategory_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameStatItemCategory(ET4GameStatItemCategory_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameStatItemCategory"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory_Hash() { return 1296088683U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameStatItemCategory"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameStatItemCategory::Weapon", (int64)ET4GameStatItemCategory::Weapon },
+				{ "ET4GameStatItemCategory::Costume", (int64)ET4GameStatItemCategory::Costume },
+				{ "ET4GameStatItemCategory::Goods", (int64)ET4GameStatItemCategory::Goods },
+				{ "ET4GameStatItemCategory::None", (int64)ET4GameStatItemCategory::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #161\n" },
+				{ "Costume.Name", "ET4GameStatItemCategory::Costume" },
+				{ "Goods.Name", "ET4GameStatItemCategory::Goods" },
+				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
+				{ "None.Hidden", "" },
+				{ "None.Name", "ET4GameStatItemCategory::None" },
+				{ "ToolTip", "#161" },
+				{ "Weapon.Name", "ET4GameStatItemCategory::Weapon" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
+				nullptr,
+				"ET4GameStatItemCategory",
+				"ET4GameStatItemCategory",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -285,7 +345,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		return ET4GameEffectType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameEffectType(ET4GameEffectType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameEffectType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameEffectType_Hash() { return 4022255877U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameEffectType_Hash() { return 3597964442U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType()
 	{
 #if WITH_HOT_RELOAD
@@ -297,14 +357,13 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameEffectType::Hit", (int64)ET4GameEffectType::Hit },
+				{ "ET4GameEffectType::Area", (int64)ET4GameEffectType::Area },
+				{ "ET4GameEffectType::Knockback", (int64)ET4GameEffectType::Knockback },
+				{ "ET4GameEffectType::Stun", (int64)ET4GameEffectType::Stun },
+				{ "ET4GameEffectType::Airborne", (int64)ET4GameEffectType::Airborne },
 				{ "ET4GameEffectType::Buff", (int64)ET4GameEffectType::Buff },
 				{ "ET4GameEffectType::Debuff", (int64)ET4GameEffectType::Debuff },
-				{ "ET4GameEffectType::DirectDamage", (int64)ET4GameEffectType::DirectDamage },
-				{ "ET4GameEffectType::AreaDamage", (int64)ET4GameEffectType::AreaDamage },
-				{ "ET4GameEffectType::Knockback", (int64)ET4GameEffectType::Knockback },
-				{ "ET4GameEffectType::Airborne", (int64)ET4GameEffectType::Airborne },
-				{ "ET4GameEffectType::Stun", (int64)ET4GameEffectType::Stun },
-				{ "ET4GameEffectType::Mis", (int64)ET4GameEffectType::Mis },
 				{ "ET4GameEffectType::None", (int64)ET4GameEffectType::None },
 			};
 #if WITH_METADATA
@@ -312,25 +371,22 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				{ "Airborne.Comment", "// CC\n" },
 				{ "Airborne.Name", "ET4GameEffectType::Airborne" },
 				{ "Airborne.ToolTip", "CC" },
-				{ "AreaDamage.Name", "ET4GameEffectType::AreaDamage" },
+				{ "Area.Name", "ET4GameEffectType::Area" },
 				{ "BlueprintType", "true" },
+				{ "Buff.Comment", "// CC\n" },
 				{ "Buff.Name", "ET4GameEffectType::Buff" },
+				{ "Buff.ToolTip", "CC" },
 				{ "Comment", "// #68\n" },
-				{ "Debuff.Comment", "// #158 : Zone Weather\n" },
+				{ "Debuff.Comment", "// #158 : CC, Zone Weather\n" },
 				{ "Debuff.Name", "ET4GameEffectType::Debuff" },
-				{ "Debuff.ToolTip", "#158 : Zone Weather" },
-				{ "DirectDamage.Comment", "// #158 : Zone Weather\n" },
-				{ "DirectDamage.Name", "ET4GameEffectType::DirectDamage" },
-				{ "DirectDamage.ToolTip", "#158 : Zone Weather" },
+				{ "Debuff.ToolTip", "#158 : CC, Zone Weather" },
+				{ "Hit.Name", "ET4GameEffectType::Hit" },
 				{ "Knockback.Name", "ET4GameEffectType::Knockback" },
-				{ "Mis.Comment", "// CC\n" },
-				{ "Mis.Name", "ET4GameEffectType::Mis" },
-				{ "Mis.ToolTip", "CC" },
 				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
-				{ "None.Comment", "// #135, #142\n" },
+				{ "None.Comment", "// #158 : CC, Zone Weather\n" },
 				{ "None.Hidden", "" },
 				{ "None.Name", "ET4GameEffectType::None" },
-				{ "None.ToolTip", "#135, #142" },
+				{ "None.ToolTip", "#158 : CC, Zone Weather" },
 				{ "Stun.Comment", "// CC\n" },
 				{ "Stun.Name", "ET4GameEffectType::Stun" },
 				{ "Stun.ToolTip", "CC" },

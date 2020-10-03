@@ -6,6 +6,7 @@
 #include "T4TableRowBase.h"
 
 #include "T4GameDataTypes.h" // #104
+#include "T4GameDataStructs.h"
 
 #include "T4Asset/Public/T4AssetConstants.h"
 
@@ -136,9 +137,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4WeaponDBKey InitializeWeaponDBKey; // #50
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4EffectSetDBKey InitializeEffectSetDBKey; // #142 : 피격 효과(Effect)를 처리할 자신의 EffectSet 설정
-
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
 	TSoftObjectPtr<UT4BehaviorFlowAsset> BehaviorFlowAsset;
 
@@ -150,6 +148,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FName InitializeSkinName; // #135
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FT4VisualReactionData ReactionData; // #161 
 
 public:
 	enum EVersion

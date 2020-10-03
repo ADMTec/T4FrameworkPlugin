@@ -254,7 +254,7 @@ private:
 	void SC_RecvPacket_EffectDebuff(const FT4GamePacketSC_EffectDebuff& InPacket); // #158 : Zone Weather
 
 	UFUNCTION(Reliable, client)
-	void SC_RecvPacket_EffectDirect(const FT4GamePacketSC_EffectDirect& InPacket);
+	void SC_RecvPacket_EffectHit(const FT4GamePacketSC_EffectHit& InPacket);
 
 	UFUNCTION(Reliable, client)
 	void SC_RecvPacket_EffectArea(const FT4GamePacketSC_EffectArea& InPacket); // #68

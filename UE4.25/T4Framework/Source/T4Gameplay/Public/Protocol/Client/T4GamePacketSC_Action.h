@@ -4,6 +4,7 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4GamePacketSC.h"
+#include "T4Asset/Public/T4AssetTypes.h"
 #include "T4GamePacketSC_Action.generated.h"
 
 /**
@@ -16,7 +17,7 @@
 // ET4GamePacketSC::SkillTarget
 // ET4GamePacketSC::EffectBuff // #158 : Zone Weather
 // ET4GamePacketSC::EffectDebuff // #158 : Zone Weather
-// ET4GamePacketSC::EffectDirect
+// ET4GamePacketSC::EffectHit
 // ET4GamePacketSC::EffectArea
 // ET4GamePacketSC::EffectKnockback
 // ET4GamePacketSC::EffectAirborne
@@ -146,6 +147,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	float MovementCollideTimeSec; // #140
 
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bMissedShot; // #161 : Range Attack 에서만 true or false, 나머지는 Effect 에서 판정!
+
 public:
 	FT4GamePacketSC_SkillTarget()
 		: FT4GamePacketSC_Base(ET4GamePacketSC::SkillTarget)
@@ -157,6 +161,7 @@ public:
 		, MovementDurationSec(0.0f) // #140
 		, MovementCollideLocation(FVector::ZeroVector) // #140
 		, MovementCollideTimeSec(0.0f) // #140
+		, bMissedShot(false) // #161
 	{
 	}
 
@@ -313,7 +318,7 @@ public:
 };
 
 USTRUCT()
-struct FT4GamePacketSC_EffectDirect : public FT4GamePacketSC_Base
+struct FT4GamePacketSC_EffectHit : public FT4GamePacketSC_Base
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -327,9 +332,17 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	FT4ObjectID AttackerObjectID;
 
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FVector TargetLocation;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float Damage; // #161
+
 public:
-	FT4GamePacketSC_EffectDirect()
-		: FT4GamePacketSC_Base(ET4GamePacketSC::EffectDirect)
+	FT4GamePacketSC_EffectHit()
+		: FT4GamePacketSC_Base(ET4GamePacketSC::EffectHit)
+		, TargetLocation(FVector::ZeroVector)
+		, Damage(0.0f)
 	{
 	}
 
@@ -345,7 +358,7 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("SC_Packet:EffectDirect"));
+		return FString(TEXT("SC_Packet:EffectHit"));
 	}
 };
 
@@ -409,6 +422,15 @@ public:
 	float MovementDurationSec; // #140
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	ET4MoveAngleType MovementAngleType; // #161
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float MovementMaxHeight; // #161
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	float MovementMaxHeightSpeed; // #161
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	FVector MovementCollideLocation; // #140
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
@@ -419,6 +441,9 @@ public:
 		: FT4GamePacketSC_Base(ET4GamePacketSC::EffectKnockback)
 		, TargetLocation(FVector::ZeroVector)
 		, MovementDurationSec(0.0f) // #140
+		, MovementAngleType(ET4MoveAngleType::None) // #161
+		, MovementMaxHeight(0.0f) // #161
+		, MovementMaxHeightSpeed(0.0f) // #161
 		, MovementCollideLocation(FVector::ZeroVector) // #140
 		, MovementCollideTimeSec(0.0f) // #140
 	{

@@ -56,14 +56,9 @@ UENUM(BlueprintType)
 enum class ET4MoveAngleType : uint8 // #132
 {
 	Back,
-	Back_Left,
-	Back_Right,
 	Front,
-	Front_Left,
-	Front_Right,
 	Left,
 	Right,
-
 	Up,
 
 	None

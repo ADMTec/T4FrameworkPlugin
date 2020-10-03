@@ -13,8 +13,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 // Cross Module References
-	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4AcceleratedMotion();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EventType();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4AcceleratedMotion();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4MovementType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4PlayTagType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4PlayTarget();
@@ -26,6 +27,62 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4ActionBaseType();
 // End Cross Module References
+	static UEnum* ET4EventType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4EventType, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4EventType"));
+		}
+		return Singleton;
+	}
+	template<> T4ASSET_API UEnum* StaticEnum<ET4EventType>()
+	{
+		return ET4EventType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EventType(ET4EventType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EventType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EventType_Hash() { return 2701471408U; }
+	UEnum* Z_Construct_UEnum_T4Asset_ET4EventType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EventType"), 0, Get_Z_Construct_UEnum_T4Asset_ET4EventType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4EventType::WeaponOverlap", (int64)ET4EventType::WeaponOverlap },
+				{ "ET4EventType::None", (int64)ET4EventType::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #161\n" },
+				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
+				{ "None.Comment", "// #161\n" },
+				{ "None.Name", "ET4EventType::None" },
+				{ "None.ToolTip", "#161" },
+				{ "ToolTip", "#161" },
+				{ "WeaponOverlap.Name", "ET4EventType::WeaponOverlap" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
+				nullptr,
+				"ET4EventType",
+				"ET4EventType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* ET4AcceleratedMotion_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -607,7 +664,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 		return ET4ActionDataType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ActionDataType(ET4ActionDataType_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4ActionDataType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 1902229276U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4ActionDataType_Hash() { return 2602524459U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4ActionDataType()
 	{
 #if WITH_HOT_RELOAD
@@ -635,6 +692,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "ET4ActionDataType::CameraShake", (int64)ET4ActionDataType::CameraShake },
 				{ "ET4ActionDataType::PostProcess", (int64)ET4ActionDataType::PostProcess },
 				{ "ET4ActionDataType::Environment", (int64)ET4ActionDataType::Environment },
+				{ "ET4ActionDataType::Event", (int64)ET4ActionDataType::Event },
 				{ "ET4ActionDataType::Void", (int64)ET4ActionDataType::Void },
 				{ "ET4ActionDataType::None", (int64)ET4ActionDataType::None },
 			};
@@ -661,6 +719,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "Environment.Comment", "// #100\n" },
 				{ "Environment.Name", "ET4ActionDataType::Environment" },
 				{ "Environment.ToolTip", "#100" },
+				{ "Event.Comment", "// #99\n" },
+				{ "Event.Name", "ET4ActionDataType::Event" },
+				{ "Event.ToolTip", "#99" },
 				{ "Mesh.Name", "ET4ActionDataType::Mesh" },
 				{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackTypes.h" },
 				{ "Movement.Comment", "// #54\n" },
@@ -688,9 +749,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionPackTypes() {}
 				{ "TimeScale.Name", "ET4ActionDataType::TimeScale" },
 				{ "TimeScale.ToolTip", "#81" },
 				{ "Trail.Name", "ET4ActionDataType::Trail" },
-				{ "Void.Comment", "// #99\n" },
+				{ "Void.Comment", "// #161\n" },
 				{ "Void.Name", "ET4ActionDataType::Void" },
-				{ "Void.ToolTip", "#99" },
+				{ "Void.ToolTip", "#161" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

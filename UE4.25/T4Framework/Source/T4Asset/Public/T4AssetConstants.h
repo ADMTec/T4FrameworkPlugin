@@ -28,6 +28,7 @@ static const FName T4Const_DefaultActorComponentName = T4Const_DefaultName; // #
 static const FName T4Const_DefaultAnimSetName = T4Const_DefaultName;
 
 static const FName T4Const_DefaultStanceName = T4Const_DefaultName;
+static const FName T4Const_CommonStanceName = TEXT("Common"); // #161 : 모두 적용, 주로 모든 스탠스에 적용될 때 사용
 static const FName T4Const_CombatStanceName = TEXT("Combat"); // #108
 static const FName T4Const_NonCombatStanceName = TEXT("NonCombat"); // #135
 static const FName T4Const_SprintStanceName = TEXT("Sprint"); // #131

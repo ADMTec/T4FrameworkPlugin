@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldAnchorActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldAnchorActor, 2244669010);
+	IMPLEMENT_CLASS(AT4WorldAnchorActor, 65124103);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldAnchorActor>()
 	{
 		return AT4WorldAnchorActor::StaticClass();

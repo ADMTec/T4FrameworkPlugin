@@ -2,6 +2,21 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.55 : 2020.09.29
+  - #161 [기능추가] NPC Spawn Object 의 Waypoint 관련 기능 업데이트 (T4PathSegmentAsset)
+	- Manipulator 를 통한 Rotation 편집 기능 추가
+	- SpeedScale : PathSegmentPoint 구간 이속을 조절할 수 있는 프로퍼티
+	- RangeSpread : PathSegmentPoint 위치를 랜덤하게 변형시킬 수 있는 프로퍼티
+	- WARN : UE4.25/Content 폴더 에셋 업데이트
+  - #161 [기능개선] Content Editor, Spawn Object 선택시 Preview Thumbnail 창에 모델을 표시하도록 개선
+  - #161 [기능개선] Content Editor, 월드에 스폰된 NPC 에서 Spawn Asset 의 Prefab Data 를 가져올 수 있는 기능 추가
+  - #161 [버그수정] Quest Flow 를 통한 퀘스트 플레이 시 Waypoint 등장 연출이 출력되지 않던 문제 수정 
+  - #161 [버그수정] NPC AI Jump 시 점프 방향으로의 캐릭터 회전이 동작하지 않던 문제 수정
+  - #161 [버그수정] NPC 스폰 위치가 NavMesh 가 아닐 경우 랜덤하게 바닥으로 떨어지던 문제 수정
+  - #161 [버그수정] NPC AI 등장 연출 처리에서 점프 후 착지, 이동의 과정에서 잠깐의 딜레이가 발생하는 문제 수정
+  - #165 [버그수정] NPC AI 이동 시 작은 높이의 단차에서도 NPC 이동이 멈추는 문제 수정
+  - #161 [버그수정] Content Editor, Spawn Object Waypoint 의 PathSegmentAsset SaveAs 후 Point 복제가 안되던 문제 수정
+  - #161 [버그수정] Content Editor, 뷰포트에 Player 스폰 시 간헐적으로 발생하는 크래시 수정
 - v0.9.54 : 2020.09.28
   - #161 [기능추가] NPC Spawn 의 Waypoint 중 Jump 구간에 대한 C/S 연동 처리 추가 (NPC 등장 연출에서 사용)
   - #161 [버그수정] NPC AI 에서 Behavior Property 의 Roaming Rate 와 Idle Wait Time 이 적용되지 않던 문제 수정

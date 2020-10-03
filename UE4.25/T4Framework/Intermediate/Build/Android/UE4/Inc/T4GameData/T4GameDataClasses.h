@@ -17,7 +17,6 @@
 #include "T4GameData/Classes/TableRow/T4TableRowBase.h"
 #include "T4GameData/Classes/TableRow/T4ItemTableRowBase.h"
 #include "T4GameData/Classes/TableRow/T4CostumeTableRow.h"
-#include "T4GameData/Classes/TableRow/T4EffectSetTableRow.h"
 #include "T4GameData/Classes/TableRow/T4EffectTableRow.h"
 #include "T4GameData/Classes/TableRow/T4GoodsTableRow.h"
 #include "T4GameData/Classes/TableRow/T4MasterTableRow.h"

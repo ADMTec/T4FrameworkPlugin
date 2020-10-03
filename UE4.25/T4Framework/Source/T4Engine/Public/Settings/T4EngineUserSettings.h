@@ -8,6 +8,7 @@
 /**
   * #153
  */
+class UT4EnvironmentAsset;
 UCLASS(config = T4Framework)
 class T4ENGINE_API UT4EngineUserSettings : public UObject
 {
@@ -20,10 +21,10 @@ public:
 	// Plugins/T4Framework/Config/DefaultT4Framework.ini
 
 	UPROPERTY(config, EditAnywhere, Category=Editor)
-	FSoftObjectPath PreviewSceneEnvironmentAssetPath; // #94
+	TSoftObjectPtr<UT4EnvironmentAsset> PreviewSceneEnvironmentAsset; // #94
 
 	UPROPERTY(config, EditAnywhere, Category= Editor)
-	FSoftObjectPath ThumbnailSceneEnvironmentAssetPath; // #97
+	TSoftObjectPtr<UT4EnvironmentAsset> ThumbnailSceneEnvironmentAsset; // #97
 
 private:
 #if WITH_EDITOR

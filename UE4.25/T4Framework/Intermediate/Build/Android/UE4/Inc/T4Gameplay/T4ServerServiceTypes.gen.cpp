@@ -146,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 		return ET4ServerJobType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4ServerJobType(ET4ServerJobType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4ServerJobType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerJobType_Hash() { return 2660669925U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4ServerJobType_Hash() { return 3136932356U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4ServerJobType()
 	{
 #if WITH_HOT_RELOAD
@@ -160,7 +160,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4ServerJobType::DespawnNPC", (int64)ET4ServerJobType::DespawnNPC },
 				{ "ET4ServerJobType::DieNPC", (int64)ET4ServerJobType::DieNPC },
-				{ "ET4ServerJobType::EffectSet", (int64)ET4ServerJobType::EffectSet },
 				{ "ET4ServerJobType::Effect", (int64)ET4ServerJobType::Effect },
 				{ "ET4ServerJobType::None", (int64)ET4ServerJobType::None },
 			};
@@ -173,8 +172,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerServiceTypes() {}
 				{ "DieNPC.Name", "ET4ServerJobType::DieNPC" },
 				{ "Effect.Comment", "/**\n  *\n */" },
 				{ "Effect.Name", "ET4ServerJobType::Effect" },
-				{ "EffectSet.Comment", "/**\n  *\n */" },
-				{ "EffectSet.Name", "ET4ServerJobType::EffectSet" },
 				{ "ModuleRelativePath", "Private/MainFrame/Server/Services/T4ServerServiceTypes.h" },
 				{ "None.Comment", "/**\n  *\n */" },
 				{ "None.Name", "ET4ServerJobType::None" },

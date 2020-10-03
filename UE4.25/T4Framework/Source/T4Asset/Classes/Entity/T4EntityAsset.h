@@ -44,6 +44,7 @@ struct T4ASSET_API FT4EntityPhysicalData
 public:
 	FT4EntityPhysicalData()
 		: bCollisionDisabled(false) // #118
+		, bUseOverlapEvents(false) // #47, #161
 		, BoundType(ET4EntityBoundType::Box) // #126
 		, BoundHeight(200.0f)
 		, BoundRadius(25.0f)
@@ -57,6 +58,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bCollisionDisabled; // #118
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bUseOverlapEvents; // #47, #161
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4EntityBoundType BoundType; // #126

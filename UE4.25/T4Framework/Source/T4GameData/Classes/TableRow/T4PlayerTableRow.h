@@ -4,7 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
-
+#include "T4GameDataStructs.h"
 #include "T4PlayerTableRow.generated.h"
 
 /**
@@ -72,11 +72,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4WeaponDBKey InitializeWeaponDBKey; // #142
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4EffectSetDBKey InitializeEffectSetDBKey; // #142 : 피격 효과(Effect)를 처리할 자신의 EffectSet 설정
-
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UT4CharacterEntityAsset> EntityAsset;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FT4VisualReactionData ReactionData; // #161 
 
 public:
 	enum EVersion

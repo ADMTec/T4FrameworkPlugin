@@ -40,10 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerServerObject() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PlayerServerObject_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #142\n */" },
+		{ "Comment", "// #161\n" },
 		{ "IncludePath", "MainFrame/Server/Object/T4PlayerServerObject.h" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4PlayerServerObject.h" },
-		{ "ToolTip", "#142" },
+		{ "ToolTip", "#161" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4PlayerServerObject_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerServerObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PlayerServerObject, 2176690698);
+	IMPLEMENT_CLASS(UT4PlayerServerObject, 1998579646);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4PlayerServerObject>()
 	{
 		return UT4PlayerServerObject::StaticClass();

@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftObjectPath();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 // End Cross Module References
 	void UT4EngineSettings::StaticRegisterNativesUT4EngineSettings()
 	{
@@ -77,6 +78,14 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HMDOriginOffset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HMDOriginOffset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FloatingDamageMaterialPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_FloatingDamageMaterialPath;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NameplateMaterialPath_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_NameplateMaterialPath;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FPS_RotationSpeed_MetaData[];
 #endif
@@ -211,11 +220,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n  * #40\n */" },
 		{ "DisplayName", "T4Engine" },
 		{ "IncludePath", "Settings/T4EngineSettings.h" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
-		{ "ToolTip", "#40" },
 	};
 #endif
 #if WITH_METADATA
@@ -311,12 +318,30 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData[] = {
 		{ "Category", "HMD" },
+		{ "Comment", "// #161\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#161" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset = { "HMDOriginOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDOriginOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FloatingDamageMaterialPath_MetaData[] = {
+		{ "Category", "UI" },
+		{ "Comment", "// #119\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#119" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FloatingDamageMaterialPath = { "FloatingDamageMaterialPath", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, FloatingDamageMaterialPath), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FloatingDamageMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FloatingDamageMaterialPath_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_NameplateMaterialPath_MetaData[] = {
+		{ "Category", "UI" },
 		{ "Comment", "// #121\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#121" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset = { "HMDOriginOffset", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, HMDOriginOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset_MetaData)) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_NameplateMaterialPath = { "NameplateMaterialPath", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, NameplateMaterialPath), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_NameplateMaterialPath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_NameplateMaterialPath_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed_MetaData[] = {
 		{ "Category", "FPSCameraSettting" },
@@ -570,6 +595,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDHandSkeletalMeshPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDCameraOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_HMDOriginOffset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FloatingDamageMaterialPath,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_NameplateMaterialPath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_RotationSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_ZoomInDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_FPS_SocketOffset,
@@ -629,7 +656,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 979477247);
+	IMPLEMENT_CLASS(UT4EngineSettings, 971105352);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

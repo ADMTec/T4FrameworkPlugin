@@ -41,6 +41,7 @@ public:
 	FT4EntityPropPhysicalData()
 		: bCanEverAffectNavigation(true)
 	{
+		bUseOverlapEvents = false; // #47, #161
 		BoundHeight = 200.0f;
 		BoundRadius = 50.0f;
 	}
@@ -69,7 +70,6 @@ struct T4ASSET_API FT4EntityPropMeshData
 public:
 	FT4EntityPropMeshData()
 		: MeshType(ET4EntityMeshType::StaticMesh)
-		, bUseOverlapEvent(false) // #106
 	{
 	}
 
@@ -93,9 +93,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FTransform RelativeTransform; // #106
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bUseOverlapEvent; // #106
 };
 
 // #126

@@ -52,9 +52,6 @@ public:
 	TSoftObjectPtr<UDataTable> SkillTableAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UDataTable> EffectSetTableAsset; // #135
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> EffectTableAsset;
 
 	UPROPERTY(EditAnywhere, Category = Common)

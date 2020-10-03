@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldMirrorActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4WorldMirrorActor, 3954644179);
+	IMPLEMENT_CLASS(AT4WorldMirrorActor, 1485672844);
 	template<> T4ENGINE_API UClass* StaticClass<AT4WorldMirrorActor>()
 	{
 		return AT4WorldMirrorActor::StaticClass();
