@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PlayerTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4PlayerLocomotionData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4CharacterShapeData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 class UScriptStruct* FT4PlayerTableRow::StaticStruct()
@@ -71,6 +72,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocomotionData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LocomotionData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShapeData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ShapeData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RaceName_MetaData[];
 #endif
@@ -136,12 +141,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #170\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
+		{ "ToolTip", "#170" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData = { "LocomotionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, LocomotionData), Z_Construct_UScriptStruct_FT4PlayerLocomotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_ShapeData_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #104, #114\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4PlayerTableRow.h" },
 		{ "ToolTip", "#104, #114" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData = { "LocomotionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, LocomotionData), Z_Construct_UScriptStruct_FT4PlayerLocomotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_ShapeData = { "ShapeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4PlayerTableRow, ShapeData), Z_Construct_UScriptStruct_FT4CharacterShapeData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_ShapeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_ShapeData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_RaceName_MetaData[] = {
 		{ "Category", "Common" },
@@ -180,6 +194,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializeWeaponDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_InitializePlayerStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_LocomotionData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_ShapeData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_RaceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UI_Title,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4PlayerTableRow_Statics::NewProp_UID,
@@ -213,7 +228,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4PlayerTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 1260974123U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4PlayerTableRow_Hash() { return 3971926652U; }
 class UScriptStruct* FT4PlayerLocomotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -32,8 +32,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bLockOn; // #113
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bApproach"))
 	bool bCasting; // #113, #135
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bCasting"))
+	bool bApproach; // #170
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bUseOverlapEvents; // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
@@ -71,6 +74,7 @@ public:
 		, bMoveable(false)
 		, bLockOn(false)  // #113
 		, bCasting(false) // #1135
+		, bApproach(false) // #170
 		, bUseOverlapEvents(false) // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
 		, DelayTimeSec(0.0f)
 		, DurationSec(0.0f)

@@ -97,6 +97,18 @@ public:
 	ET4EditorAttackType AttackType; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	bool bMoveable;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	bool bLockOn; // #113
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bApproach"))
+	bool bCasting; // #113, #135
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bCasting"))
+	bool bApproach; // #170
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	float DelayTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -118,19 +130,10 @@ public:
 	float ProjectileSpeed; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	bool bMoveable;
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bLockOn; // #113
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4EditorFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	bool bCasting; // #113, #135
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting", ClampMin = "-45.0", ClampMax = "45.0"))
 	float AimingPitchAngle; // #127
@@ -157,6 +160,10 @@ public:
 	{
 		Name = NAME_None;
 		AttackType = ET4EditorAttackType::Swing;
+		bMoveable = false;
+		bLockOn = false; // #113
+		bCasting = false; // #113
+		bApproach = false; // #170
 		DelayTimeSec = 0.0f;
 		DurationSec = 0.0f;;
 		MoveAngleType = ET4MoveAngleType::None; // #135
@@ -164,9 +171,6 @@ public:
 		MoveMaxHeight = 0.0f; // #140
 		MoveMaxHeightSpeed = 0.0f; // #140
 		ProjectileSpeed = 0.0f; // #63
-		bMoveable = false;
-		bLockOn = false; // #113
-		bCasting = false; // #113
 		AimingPitchAngle = 0.0f; // #127
 		RotationRateSpeed = 1.0f; // #113
 		FindTargetType = ET4EditorFindTarget::All; // #117

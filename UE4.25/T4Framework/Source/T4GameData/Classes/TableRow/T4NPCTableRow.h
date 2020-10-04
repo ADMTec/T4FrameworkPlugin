@@ -70,9 +70,6 @@ public:
 	float ActiveOrKeepAggroTimeSec; // #50
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float AgentRadius; // #114 : Agent 크기 및 Attack/Stop Distance 에서 겹치지 않기 위한 값으로 사용 (WorldActor = BoundRadius)
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	float SensoryRange; // #50
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
@@ -92,7 +89,6 @@ public:
 		: EnemyType(ET4GameEnemyType::NoEnemy) // #104
 		, bAggressive(false)
 		, ActiveOrKeepAggroTimeSec(5.0f/*60.0f * 5.0f*/)
-		, AgentRadius(50.0f) // #114 : Agent 크기 및 Attack/Stop Distance 에서 겹치지 않기 위한 값으로 사용 (WorldActor = BoundRadius)
 		, SensoryRange(1000.0f)
 		, RomaingRange(1000.0f)
 		, RoamingRate(0.5f)
@@ -127,6 +123,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName InitializeStanceName; // #142 : NPC 기본 스탠스 
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FT4CharacterShapeData ShapeData; // #170
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4NPCLocomotionData LocomotionData; // #50, #108, #109

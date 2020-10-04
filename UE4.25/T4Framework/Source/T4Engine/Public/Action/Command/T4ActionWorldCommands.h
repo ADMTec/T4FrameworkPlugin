@@ -147,8 +147,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FName DBKeyName;
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	bool bPlayer;
+	UPROPERTY(EditAnywhere, Category = Hide)
+	bool bReplayStarter; // WARN : 일반적으로는 사용하지 않음! 리플레이 녹화 시점의 플레이어 Marking, 재생 시는 이 위치를 기준으로 맵이동등의 처리가 진행됨
 	   
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -170,7 +170,7 @@ public:
 		, SpawnRotation(FRotator::ZeroRotator)
 		, MoveSpeed(0.0f) // #140
 		, DBKeyName(NAME_None)
-		, bPlayer(false)
+		, bReplayStarter(false) // WARN : 일반적으로는 사용하지 않음!
 #if WITH_EDITORONLY_DATA
 		, bUseMirrorActor(false) // #140 : 미러링 Actor 로 생성 여부
 		, MirrorSourceType(ET4LayerType::Max) // #140 : 미러링 Actor 하 후킹할 Source Layer Type

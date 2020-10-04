@@ -2,6 +2,21 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.56 : 2020.10.03
+  - #161 [기능추가] 스탠스 전환 시 무기 마운트 위치 변환 기능 추가 (Sworld 류 BackMount 지원)
+  - #161 [기능추가] Floating Damage Text 추가
+  - #161 [기능추가] C/S 환경에서 Weapon Overlap Event 를 통한 Hit 판정 처리 추가
+  - #161 [기능추가] Action Editor, Event Action 추가
+	- ActionPack 내 Sword 류의 무기에 대한 Overlap Event Range 설정등에 사용
+  - #161 [기능개선] PC/NPC 전투 관련 처리에 GameDB Stat 적용
+	- Paragon 관련 에셋 마이그레이션 필요
+  - #161 [기능개선] EffectSet GameDB 삭제
+	- PC/NPC GameDB 의 VisualReactionData 에 ActionPack 을 직접 추가하는 것으로 변경
+  - #158 [기능개선] 개발용 HotKey 와 HUD 아이템 사용을 Project UserSettings 에서 처리하도록 개선
+  - #158 [기능개선] WorldExplorer Environment Details 메 수정
+	- 기능별 사용 옵션을 상단에 노출해 효욜적으로 인지할 수 있도록 기능 개선
+  - #158 [기능개선] 에디터 Preview Thumbnail 배경을 단색으로 수정
+	- T4Framework/Editor/Environment/T4EditorThumbnailEnvironment 에서 색 수정 가능
 - v0.9.55 : 2020.09.29
   - #161 [기능추가] NPC Spawn Object 의 Waypoint 관련 기능 업데이트 (T4PathSegmentAsset)
 	- Manipulator 를 통한 Rotation 편집 기능 추가

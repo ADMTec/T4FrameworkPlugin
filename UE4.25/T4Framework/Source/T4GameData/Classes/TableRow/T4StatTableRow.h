@@ -82,27 +82,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
 	float Dodge_Rate; // #114 : 회피률
 
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "-100", ClampMax = "100"))
+	float Add_HP; // #114 : 방어력
+
 public:
 	FT4StatDefenseData()
 		: Defensive_Power(0.0f)
 		, Dodge_Rate(0.0f)
-	{
-	}
-};
-
-// #116
-USTRUCT()
-struct FT4StatHealthData
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.1", ClampMax = "10"))
-	float Health_Point; // #114 : 방어력
-
-public:
-	FT4StatHealthData()
-		: Health_Point(0.0f)
+		, Add_HP(0.0f)
 	{
 	}
 };
@@ -141,9 +128,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4StatDefenseData DefenseData; // #161 : Costume, Goods
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4StatHealthData HealthData; // #161 : Costume, Goods
 
 public:
 	enum EVersion

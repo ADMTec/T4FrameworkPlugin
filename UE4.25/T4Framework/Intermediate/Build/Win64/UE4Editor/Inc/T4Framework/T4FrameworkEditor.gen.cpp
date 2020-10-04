@@ -565,11 +565,6 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimingPitchAngle;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCasting_MetaData[];
-#endif
-		static void NewProp_bCasting_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCasting;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FindTargetType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_FindTargetType;
@@ -578,16 +573,6 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RotationRateSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RotationRateSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bLockOn_MetaData[];
-#endif
-		static void NewProp_bLockOn_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bLockOn;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMoveable_MetaData[];
-#endif
-		static void NewProp_bMoveable_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMoveable;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileSpeed_MetaData[];
 #endif
@@ -617,6 +602,26 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DelayTimeSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DelayTimeSec;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bApproach_MetaData[];
+#endif
+		static void NewProp_bApproach_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bApproach;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCasting_MetaData[];
+#endif
+		static void NewProp_bCasting_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCasting;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bLockOn_MetaData[];
+#endif
+		static void NewProp_bLockOn_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bLockOn;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bMoveable_MetaData[];
+#endif
+		static void NewProp_bMoveable_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bMoveable;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackType_MetaData[];
 #endif
@@ -677,26 +682,13 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		{ "Category", "ClientOnly" },
 		{ "ClampMax", "45.0" },
 		{ "ClampMin", "-45.0" },
-		{ "Comment", "// #113, #135\n" },
-		{ "EditCondition", "bCasting" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#113, #135" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle = { "AimingPitchAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AimingPitchAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData[] = {
-		{ "Category", "ClientOnly" },
 		{ "Comment", "// #117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)\n" },
+		{ "EditCondition", "bCasting" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_SetBit(void* Obj)
-	{
-		((FT4EditorSkillDataInfo*)Obj)->bCasting = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting = { "bCasting", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle = { "AimingPitchAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AimingPitchAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData[] = {
 		{ "Category", "Common" },
@@ -710,36 +702,12 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #113\n" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#113" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed = { "RotationRateSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, RotationRateSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_SetBit(void* Obj)
-	{
-		((FT4EditorSkillDataInfo*)Obj)->bLockOn = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn = { "bLockOn", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData[] = {
-		{ "Category", "Common" },
 		{ "Comment", "// #63\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#63" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_SetBit(void* Obj)
-	{
-		((FT4EditorSkillDataInfo*)Obj)->bMoveable = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable = { "bMoveable", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed = { "RotationRateSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, RotationRateSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData[] = {
 		{ "Category", "Common" },
@@ -794,12 +762,64 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #170\n" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#170" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec = { "DelayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, DelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #113, #135\n" },
+		{ "EditCondition", "!bCasting" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#113, #135" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bApproach = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach = { "bApproach", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #113\n" },
+		{ "EditCondition", "!bApproach" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#113" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bCasting = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting = { "bCasting", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bLockOn = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn = { "bLockOn", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #63\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#63" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec = { "DelayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, DelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bMoveable = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable = { "bMoveable", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_MetaData[] = {
 		{ "Category", "Common" },
@@ -823,12 +843,9 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CastingActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_UsingActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeight,
@@ -837,6 +854,10 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_Name,
@@ -869,7 +890,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Hash() { return 2551348367U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Hash() { return 2012793134U; }
 class UScriptStruct* FT4EditorNPCDataInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

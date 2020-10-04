@@ -26,4 +26,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	TArray<FName> AttackDBKeys;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	TSet<FName> ValidSkillSets;
 };

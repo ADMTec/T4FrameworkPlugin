@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCStatDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCLocomotionData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4CharacterShapeData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEnemyType();
 // End Cross Module References
@@ -86,6 +87,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocomotionData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LocomotionData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShapeData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ShapeData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeStanceName_MetaData[];
 #endif
@@ -184,12 +189,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #170\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
+		{ "ToolTip", "#170" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData = { "LocomotionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, LocomotionData), Z_Construct_UScriptStruct_FT4NPCLocomotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #142 : NPC \xea\xb8\xb0\xeb\xb3\xb8 \xec\x8a\xa4\xed\x83\xa0\xec\x8a\xa4 \n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
 		{ "ToolTip", "#142 : NPC \xea\xb8\xb0\xeb\xb3\xb8 \xec\x8a\xa4\xed\x83\xa0\xec\x8a\xa4" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData = { "LocomotionData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, LocomotionData), Z_Construct_UScriptStruct_FT4NPCLocomotionData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData = { "ShapeData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, ShapeData), Z_Construct_UScriptStruct_FT4CharacterShapeData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeStanceName_MetaData[] = {
 		{ "Category", "Common" },
@@ -249,6 +263,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeWeaponDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeStanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeAnimSetName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_RaceName,
@@ -284,7 +299,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 2026969648U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 2537249620U; }
 class UScriptStruct* FT4NPCBehaviorData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -333,10 +348,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SensoryRange_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SensoryRange;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AgentRadius_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AgentRadius;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveOrKeepAggroTimeSec_MetaData[];
 #endif
@@ -410,21 +421,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #114 : Agent \xed\x81\xac\xea\xb8\xb0 \xeb\xb0\x8f Attack/Stop Distance \xec\x97\x90\xec\x84\x9c \xea\xb2\xb9\xec\xb9\x98\xec\xa7\x80 \xec\x95\x8a\xea\xb8\xb0 \xec\x9c\x84\xed\x95\x9c \xea\xb0\x92\xec\x9c\xbc\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9 (WorldActor = BoundRadius)\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
-		{ "ToolTip", "#114 : Agent \xed\x81\xac\xea\xb8\xb0 \xeb\xb0\x8f Attack/Stop Distance \xec\x97\x90\xec\x84\x9c \xea\xb2\xb9\xec\xb9\x98\xec\xa7\x80 \xec\x95\x8a\xea\xb8\xb0 \xec\x9c\x84\xed\x95\x9c \xea\xb0\x92\xec\x9c\xbc\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9 (WorldActor = BoundRadius)" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange = { "SensoryRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCBehaviorData, SensoryRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_AgentRadius_MetaData[] = {
-		{ "Category", "ServerOnly" },
 		{ "Comment", "// #50\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
 		{ "ToolTip", "#50" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_AgentRadius = { "AgentRadius", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCBehaviorData, AgentRadius), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_AgentRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_AgentRadius_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange = { "SensoryRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCBehaviorData, SensoryRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -463,7 +465,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_RoamingRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_RomaingRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_SensoryRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_AgentRadius,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_bAggressive,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCBehaviorData_Statics::NewProp_EnemyType,
@@ -497,7 +498,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCBehaviorData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4NPCBehaviorData_Hash() { return 3251234730U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4NPCBehaviorData_Hash() { return 3850206157U; }
 class UScriptStruct* FT4NPCLocomotionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

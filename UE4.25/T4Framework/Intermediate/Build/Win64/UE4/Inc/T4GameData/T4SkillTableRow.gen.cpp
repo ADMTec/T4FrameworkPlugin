@@ -406,6 +406,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 		static void NewProp_bUseOverlapEvents_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvents;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bApproach_MetaData[];
+#endif
+		static void NewProp_bApproach_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bApproach;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCasting_MetaData[];
 #endif
 		static void NewProp_bCasting_SetBit(void* Obj);
@@ -522,9 +527,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #113, #135\n" },
+		{ "Comment", "// #170\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
-		{ "ToolTip", "#113, #135" },
+		{ "ToolTip", "#170" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents_SetBit(void* Obj)
@@ -533,9 +538,24 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents = { "bUseOverlapEvents", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4SkillShapeData), &Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #113, #135\n" },
+		{ "EditCondition", "!bCasting" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
+		{ "ToolTip", "#113, #135" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach_SetBit(void* Obj)
+	{
+		((FT4SkillShapeData*)Obj)->bApproach = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach = { "bApproach", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4SkillShapeData), &Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bCasting_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #113\n" },
+		{ "EditCondition", "!bApproach" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
 		{ "ToolTip", "#113" },
 	};
@@ -590,6 +610,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_DelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bApproach,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bCasting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bLockOn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bMoveable,
@@ -624,7 +645,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SkillShapeData_Hash() { return 3342744987U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SkillShapeData_Hash() { return 4256423364U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -13,19 +13,26 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4GameDataStructs_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_64_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_80_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GameWorldSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4GameWorldSettings>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_35_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_51_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4RewardItemPackageData_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4RewardItemPackageData>();
+
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_35_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics; \
+	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4CharacterShapeData>();
 
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDataStructs_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4VisualReactionData_Statics; \

@@ -64,6 +64,9 @@ public:
 	FName RaceName; // #104, #114
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	FT4CharacterShapeData ShapeData; // #170
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	FT4PlayerLocomotionData LocomotionData; // #114
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)

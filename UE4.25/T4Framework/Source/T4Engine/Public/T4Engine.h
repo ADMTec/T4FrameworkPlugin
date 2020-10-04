@@ -323,7 +323,7 @@ public:
 		const FVector& InScale
 	) = 0; // #68 : 소멸 조건이 되면 스스로 소멸한다.
 
-	virtual IT4WorldActor* CreateExtraActor(
+	virtual IT4WorldActor* CreateClientWorldActor(
 		ET4ActorType InWorldActorType, // #63 : Only World Object
 		const FName& InName,
 		const FVector& InLocation,

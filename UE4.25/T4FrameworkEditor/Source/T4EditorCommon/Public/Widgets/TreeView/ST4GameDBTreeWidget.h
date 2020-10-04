@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "T4GameData/Public/T4GameDBTypes.h"
+#include "T4GameData/Public/T4GameDBEditor.h"
 #include "Widgets/TreeView/ST4TreeViewWidget.h"
 
 /**
@@ -19,6 +20,8 @@ public:
 	SLATE_BEGIN_ARGS(ST4GameDBTreeWidget) {}
 		SLATE_ARGUMENT(bool, bAutoHeight) // #135
 		SLATE_ARGUMENT(int32, MaxHeight) // #135
+		SLATE_ARGUMENT(float, ColumnIDWidth) // #158
+		SLATE_ARGUMENT(float, ColumnInfoWidth) // #158
 		SLATE_EVENT(FT4OnSelected, OnSelected)
 		SLATE_EVENT(FT4OnDoubleClicked, OnDoubleClicked)
 		SLATE_EVENT(FT4OnAddItem, OnAddItem)
@@ -31,10 +34,7 @@ public:
 		SLATE_EVENT(FT4OnTreeExpanded, OnTreeExpanded) // #122
 	SLATE_END_ARGS();
 
-	void Construct(
-		const FArguments& InArgs,
-		ET4GameDBType InGameDBType
-	);
+	void Construct(const FArguments& InArgs, ET4GameDBType InGameDBType);
 
 	ST4GameDBTreeWidget();
 	~ST4GameDBTreeWidget();
@@ -43,6 +43,9 @@ public:
 
 	bool IsItemExpanded(FName InValueName) const override;
 	void SetItemExpansion(FName InValueName, bool bInExpand) override;
+
+	void SetColumnManualWidth(const FT4GameDBTreeColumnWidthInfo& InTreeColumnWidthInfo); // #158
+	void GetColumnManualWidth(FT4GameDBTreeColumnWidthInfo& OutTreeColumnWidthInfo); // #158
 
 protected:
 	void Reset();
@@ -57,4 +60,7 @@ protected:
 
 private:
 	ET4GameDBType GameDBType;
+
+	TSharedPtr<SHeaderRow> HeaderRowWidgetPtr;
+	FT4GameDBTreeColumnWidthInfo HeaderColumnWidthInfo; // #158
 };

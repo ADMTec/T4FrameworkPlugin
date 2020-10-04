@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataStructs() {}
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4RewardItemPackageData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4CharacterShapeData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4VisualReactionData();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPackAsset_NoRegister();
 // End Cross Module References
@@ -235,6 +236,91 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4RewardItemPackage
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4RewardItemPackageData_Hash() { return 1734116452U; }
+class UScriptStruct* FT4CharacterShapeData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4CharacterShapeData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4CharacterShapeData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4CharacterShapeData"), sizeof(FT4CharacterShapeData), Get_Z_Construct_UScriptStruct_FT4CharacterShapeData_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4CharacterShapeData>()
+{
+	return FT4CharacterShapeData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4CharacterShapeData(FT4CharacterShapeData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4CharacterShapeData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4CharacterShapeData
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4CharacterShapeData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4CharacterShapeData")),new UScriptStruct::TCppStructOps<FT4CharacterShapeData>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4CharacterShapeData;
+	struct Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AgentRadius_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AgentRadius;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #170\n" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+		{ "ToolTip", "#170" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4CharacterShapeData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewProp_AgentRadius_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewProp_AgentRadius = { "AgentRadius", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4CharacterShapeData, AgentRadius), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewProp_AgentRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewProp_AgentRadius_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::NewProp_AgentRadius,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		nullptr,
+		&NewStructOps,
+		"T4CharacterShapeData",
+		sizeof(FT4CharacterShapeData),
+		alignof(FT4CharacterShapeData),
+		Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4CharacterShapeData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4CharacterShapeData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4CharacterShapeData"), sizeof(FT4CharacterShapeData), Get_Z_Construct_UScriptStruct_FT4CharacterShapeData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4CharacterShapeData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4CharacterShapeData_Hash() { return 2648131136U; }
 class UScriptStruct* FT4VisualReactionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

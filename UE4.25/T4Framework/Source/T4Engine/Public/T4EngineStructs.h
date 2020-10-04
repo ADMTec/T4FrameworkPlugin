@@ -42,7 +42,6 @@ struct FT4WorldActorProperty // #34
 		// #33
 		MoveSpeed[(uint8)ET4MoveMode::Sync] = 0.0f;
 		MoveSpeed[(uint8)ET4MoveMode::Async] = 0.0f;
-		MoveAccelerationScale = 1.0f; // #38, #52 (0.1 ~ 1)
 		
 		InPlaceRotationRate = 300.0f; // #44, #46
 		MoveRotationRateScale = 1.2f; // #142
@@ -80,7 +79,6 @@ struct FT4WorldActorProperty // #34
 	bool bUseOverlapEvents; // #47, #161
 
 	float MoveSpeed[(uint8)ET4MoveMode::Count]; // #33
-	float MoveAccelerationScale; // #38, #52 (0.1 ~ 1)
 	
 	float InPlaceRotationRate; // #46
 	float MoveRotationRateScale; // #142

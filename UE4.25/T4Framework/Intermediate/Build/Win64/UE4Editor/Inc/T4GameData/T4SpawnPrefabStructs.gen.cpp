@@ -223,10 +223,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SensoryRange;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AgentRadius_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AgentRadius;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveOrKeepAggroTimeSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ActiveOrKeepAggroTimeSec;
@@ -265,11 +261,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 #endif
 		static void NewProp_bOverride_SensoryRange_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverride_SensoryRange;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOverride_AgentRadius_MetaData[];
-#endif
-		static void NewProp_bOverride_AgentRadius_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverride_AgentRadius;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bOverride_ActiveOrKeepAggroTimeSec_MetaData[];
 #endif
@@ -342,21 +333,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #114 : Agent \xed\x81\xac\xea\xb8\xb0 \xeb\xb0\x8f Attack/Stop Distance \xec\x97\x90\xec\x84\x9c \xea\xb2\xb9\xec\xb9\x98\xec\xa7\x80 \xec\x95\x8a\xea\xb8\xb0 \xec\x9c\x84\xed\x95\x9c \xea\xb0\x92\xec\x9c\xbc\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9 (WorldActor = BoundRadius)\n" },
 		{ "editcondition", "bOverride_SensoryRange" },
 		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
-		{ "ToolTip", "#114 : Agent \xed\x81\xac\xea\xb8\xb0 \xeb\xb0\x8f Attack/Stop Distance \xec\x97\x90\xec\x84\x9c \xea\xb2\xb9\xec\xb9\x98\xec\xa7\x80 \xec\x95\x8a\xea\xb8\xb0 \xec\x9c\x84\xed\x95\x9c \xea\xb0\x92\xec\x9c\xbc\xeb\xa1\x9c \xec\x82\xac\xec\x9a\xa9 (WorldActor = BoundRadius)" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange = { "SensoryRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, SensoryRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_AgentRadius_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "editcondition", "bOverride_AgentRadius" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_AgentRadius = { "AgentRadius", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, AgentRadius), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_AgentRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_AgentRadius_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -458,19 +439,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange = { "bOverride_SensoryRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4SpawnOverrideBehaviorData), &Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
-		{ "PinHiddenByDefault", "" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius_SetBit(void* Obj)
-	{
-		((FT4SpawnOverrideBehaviorData*)Obj)->bOverride_AgentRadius = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius = { "bOverride_AgentRadius", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4SpawnOverrideBehaviorData), &Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
@@ -517,7 +485,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RoamingRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RomaingRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_AgentRadius,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bAggressive,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_EnemyType,
@@ -527,7 +494,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_RoamingRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_RomaingRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_AgentRadius,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_ActiveOrKeepAggroTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_Aggressive,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_EnemyType,
@@ -560,7 +526,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Hash() { return 4027027800U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Hash() { return 2810198953U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

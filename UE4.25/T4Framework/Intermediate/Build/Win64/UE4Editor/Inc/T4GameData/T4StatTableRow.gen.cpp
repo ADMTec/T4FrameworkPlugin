@@ -16,7 +16,6 @@ void EmptyLinkFunctionForGeneratedCodeT4StatTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4StatTableRow();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4StatHealthData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4StatDefenseData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4StatOffenseData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4StatPhysicalData();
@@ -52,10 +51,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HealthData_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HealthData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefenseData_MetaData[];
 #endif
@@ -102,15 +97,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StatTableRow>();
 	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_HealthData_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #161 : Costume, Goods\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
-		{ "ToolTip", "#161 : Costume, Goods" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_HealthData = { "HealthData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, HealthData), Z_Construct_UScriptStruct_FT4StatHealthData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_HealthData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_HealthData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_DefenseData_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -182,7 +168,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatTableRow_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_HealthData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_DefenseData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_OffenseData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_PhysicalData,
@@ -222,94 +207,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 3450962492U; }
-class UScriptStruct* FT4StatHealthData::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4StatHealthData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4StatHealthData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4StatHealthData"), sizeof(FT4StatHealthData), Get_Z_Construct_UScriptStruct_FT4StatHealthData_Hash());
-	}
-	return Singleton;
-}
-template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4StatHealthData>()
-{
-	return FT4StatHealthData::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4StatHealthData(FT4StatHealthData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4StatHealthData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatHealthData
-{
-	FScriptStruct_T4GameData_StaticRegisterNativesFT4StatHealthData()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4StatHealthData")),new UScriptStruct::TCppStructOps<FT4StatHealthData>);
-	}
-} ScriptStruct_T4GameData_StaticRegisterNativesFT4StatHealthData;
-	struct Z_Construct_UScriptStruct_FT4StatHealthData_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_Point_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health_Point;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatHealthData_Statics::Struct_MetaDataParams[] = {
-		{ "Comment", "// #116\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
-		{ "ToolTip", "#116" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StatHealthData>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewProp_Health_Point_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "ClampMax", "10" },
-		{ "ClampMin", "0.1" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewProp_Health_Point = { "Health_Point", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatHealthData, Health_Point), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewProp_Health_Point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewProp_Health_Point_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatHealthData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatHealthData_Statics::NewProp_Health_Point,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4StatHealthData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
-		nullptr,
-		&NewStructOps,
-		"T4StatHealthData",
-		sizeof(FT4StatHealthData),
-		alignof(FT4StatHealthData),
-		Z_Construct_UScriptStruct_FT4StatHealthData_Statics::PropPointers,
-		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatHealthData_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatHealthData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatHealthData_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4StatHealthData()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4StatHealthData_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4StatHealthData"), sizeof(FT4StatHealthData), Get_Z_Construct_UScriptStruct_FT4StatHealthData_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4StatHealthData_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatHealthData_Hash() { return 8133852U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 3487588870U; }
 class UScriptStruct* FT4StatDefenseData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -339,6 +237,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Add_HP_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Add_HP;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Dodge_Rate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Dodge_Rate;
@@ -361,6 +263,17 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StatDefenseData>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "-100" },
+		{ "Comment", "// #114 : \xed\x9a\x8c\xed\x94\xbc\xeb\xa5\xa0\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
+		{ "ToolTip", "#114 : \xed\x9a\x8c\xed\x94\xbc\xeb\xa5\xa0" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP = { "Add_HP", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Add_HP), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ClampMax", "1.0" },
@@ -381,6 +294,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power = { "Defensive_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Defensive_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power,
 	};
@@ -412,7 +326,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatDefenseData_Hash() { return 4199012702U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatDefenseData_Hash() { return 3484237540U; }
 class UScriptStruct* FT4StatOffenseData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

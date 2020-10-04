@@ -30,6 +30,22 @@ public:
 };
 
 USTRUCT()
+struct FT4CharacterShapeData // #170
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, Category = Common)
+	float AgentRadius; // #114 : Agent 크기 및 Attack/Stop Distance 에서 겹치지 않기 위한 값으로 사용 (WorldActor = BoundRadius)
+
+public:
+	FT4CharacterShapeData()
+		: AgentRadius(50.0f) // #114
+	{
+	}
+};
+
+USTRUCT()
 struct FT4RewardItemPackageData
 {
 	GENERATED_USTRUCT_BODY()

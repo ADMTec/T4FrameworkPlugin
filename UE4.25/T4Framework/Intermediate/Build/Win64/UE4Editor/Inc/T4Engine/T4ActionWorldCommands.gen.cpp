@@ -163,10 +163,10 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseMirrorActor;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bPlayer_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bReplayStarter_MetaData[];
 #endif
-		static void NewProp_bPlayer_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bPlayer;
+		static void NewProp_bReplayStarter_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bReplayStarter;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DBKeyName_MetaData[];
 #endif
@@ -254,16 +254,16 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bUseMirrorActor = { "bUseMirrorActor", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4WorldSpawnActionCommand), &Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bUseMirrorActor_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bUseMirrorActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bUseMirrorActor_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer_MetaData[] = {
-		{ "Category", "Common" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter_MetaData[] = {
+		{ "Category", "Hide" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionWorldCommands.h" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter_SetBit(void* Obj)
 	{
-		((FT4WorldSpawnActionCommand*)Obj)->bPlayer = 1;
+		((FT4WorldSpawnActionCommand*)Obj)->bReplayStarter = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer = { "bPlayer", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4WorldSpawnActionCommand), &Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter = { "bReplayStarter", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4WorldSpawnActionCommand), &Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_DBKeyName_MetaData[] = {
 		{ "Category", "Common" },
@@ -367,7 +367,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_MirrorSourceType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bUseMirrorActor,
 #endif // WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bPlayer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_bReplayStarter,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_DBKeyName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Statics::NewProp_SpawnRotation,
@@ -410,7 +410,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4WorldSpawnActionCom
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Hash() { return 3519717314U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WorldSpawnActionCommand_Hash() { return 2262883145U; }
 class UScriptStruct* FT4WorldTimeSyncActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
