@@ -11,7 +11,7 @@
   * #150
  */
 UCLASS()
-class UT4BuiltinUserWidget : public UT4UserWidgetBase
+class T4GAMEPLAY_API UT4BuiltinUserWidget : public UT4UserWidgetBase
 {
 	GENERATED_BODY()
 };

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEnemyType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatItemCategory();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameTextCategory();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameStatCategory();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
@@ -197,6 +198,69 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				nullptr,
 				"ET4GameStatItemCategory",
 				"ET4GameStatItemCategory",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4GameTextCategory_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameTextCategory, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameTextCategory"));
+		}
+		return Singleton;
+	}
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameTextCategory>()
+	{
+		return ET4GameTextCategory_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameTextCategory(ET4GameTextCategory_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameTextCategory"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameTextCategory_Hash() { return 4277659451U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameTextCategory()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameTextCategory"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameTextCategory_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameTextCategory::Name", (int64)ET4GameTextCategory::Name },
+				{ "ET4GameTextCategory::World", (int64)ET4GameTextCategory::World },
+				{ "ET4GameTextCategory::Quest", (int64)ET4GameTextCategory::Quest },
+				{ "ET4GameTextCategory::Mission", (int64)ET4GameTextCategory::Mission },
+				{ "ET4GameTextCategory::Dialogue", (int64)ET4GameTextCategory::Dialogue },
+				{ "ET4GameTextCategory::None", (int64)ET4GameTextCategory::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #163\n" },
+				{ "Dialogue.Name", "ET4GameTextCategory::Dialogue" },
+				{ "Mission.Name", "ET4GameTextCategory::Mission" },
+				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
+				{ "Name.Name", "ET4GameTextCategory::Name" },
+				{ "None.Hidden", "" },
+				{ "None.Name", "ET4GameTextCategory::None" },
+				{ "Quest.Name", "ET4GameTextCategory::Quest" },
+				{ "ToolTip", "#163" },
+				{ "World.Name", "ET4GameTextCategory::World" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
+				nullptr,
+				"ET4GameTextCategory",
+				"ET4GameTextCategory",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

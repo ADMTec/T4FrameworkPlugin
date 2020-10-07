@@ -103,7 +103,7 @@ public:
 	FGuid MissionUniqueID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4TextDBKey TextDBKey;
+	FT4MissionTextDBKey MissionTextDBKey;
 
 public:
 	FT4GamePacketSC_MissionStart()

@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TextDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4MissionTextDBKey();
 // End Cross Module References
 	void UT4QFTask_T4MissionCue::StaticRegisterNativesUT4QFTask_T4MissionCue()
 	{
@@ -55,9 +55,9 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MissionType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MissionType_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TextDBKey_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MissionTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TextDBKey;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MissionTextDBKey;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -110,12 +110,12 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType = { "MissionType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionCue, MissionType), Z_Construct_UEnum_T4GameData_ET4GameMissionType, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_TextDBKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionTextDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ModuleRelativePath", "Classes/QuestFlow/T4QFTask_T4MissionCue.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_TextDBKey = { "TextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionCue, TextDBKey), Z_Construct_UScriptStruct_FT4TextDBKey, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_TextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_TextDBKey_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionTextDBKey = { "MissionTextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4QFTask_T4MissionCue, MissionTextDBKey), Z_Construct_UScriptStruct_FT4MissionTextDBKey, METADATA_PARAMS(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionTextDBKey_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_OverrideWorldSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionSpawnAsset,
@@ -123,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionRule_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_TextDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::NewProp_MissionTextDBKey,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4QFTask_T4MissionCue_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4QFTask_T4MissionCue>::IsAbstract,
@@ -152,7 +152,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFTask_T4MissionCue() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QFTask_T4MissionCue, 1189314859);
+	IMPLEMENT_CLASS(UT4QFTask_T4MissionCue, 2039097249);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4QFTask_T4MissionCue>()
 	{
 		return UT4QFTask_T4MissionCue::StaticClass();

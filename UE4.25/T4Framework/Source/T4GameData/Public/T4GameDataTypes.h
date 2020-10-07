@@ -93,6 +93,19 @@ enum class ET4GameStatCategory : uint8 // #114
 };
 
 UENUM()
+enum class ET4GameTextCategory : uint8 // #163
+{
+	Name,
+	World,
+	Quest,
+	Mission,
+
+	Dialogue,
+
+	None UMETA(Hidden),
+};
+
+UENUM()
 enum class ET4GameStatItemCategory : uint8 // #161
 {
 	Weapon,
@@ -101,7 +114,6 @@ enum class ET4GameStatItemCategory : uint8 // #161
 
 	None UMETA(Hidden),
 };
-
 
 UENUM()
 enum class ET4GameEnemyType : uint8 // #104

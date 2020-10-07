@@ -25,6 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameWorldSettings();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldDBKey();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4ContentMissionData();
 // End Cross Module References
@@ -101,13 +102,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Guid;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Description_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DescriptionTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Description;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DescriptionTextDBKey;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TitleTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TitleTextDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
@@ -217,21 +218,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_Guid_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Description_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4QuestTableRow.h" },
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Description = { "UI_Description", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, UI_Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Description_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_DescriptionTextDBKey = { "DescriptionTextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, DescriptionTextDBKey), Z_Construct_UScriptStruct_FT4QuestTextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Title_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_TitleTextDBKey_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4QuestTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Title_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_TitleTextDBKey = { "TitleTextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4QuestTableRow, TitleTextDBKey), Z_Construct_UScriptStruct_FT4QuestTextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_TitleTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_TitleTextDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -262,8 +263,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_OverrideWorldSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_WorldDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_Guid,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Description,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UI_Title,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_DescriptionTextDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_TitleTextDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4QuestTableRow_Statics::NewProp_Version,
 	};
@@ -295,7 +296,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4QuestTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4QuestTableRow_Hash() { return 73854494U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4QuestTableRow_Hash() { return 1059795922U; }
 class UScriptStruct* FT4ContentMissionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -314,10 +314,10 @@ class T4FRAMEWORK_API IT4EditorGameStatics
 public:
 	virtual ~IT4EditorGameStatics() {}
 
-	virtual bool DoMissionStart(const FName& InQuestDBKeyName) = 0; // #164
+	virtual bool DoQuestStart(const FName& InQuestDBKeyName) = 0; // #164
 
-	virtual bool DoContentStopAll() = 0; // #164
-	virtual bool DoContentCompleted(const FGuid& InQuestKey) = 0; // #164
+	virtual bool DoQuestStopAll() = 0; // #164
+	virtual bool DoQuestFinish(const FGuid& InQuestKey) = 0; // #164
 
 	virtual bool DoWorldTravel(const FName& InWorldDBKeyName) = 0; // #144
 

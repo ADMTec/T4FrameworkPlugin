@@ -16,12 +16,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_T4BuiltinGameInstance_h_15_SPARSE_DATA
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_T4BuiltinGameInstance_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execToggleQuickMenu);
+	DECLARE_FUNCTION(execToggleQuickMenu); \
+	DECLARE_FUNCTION(execReplayStop); \
+	DECLARE_FUNCTION(execReplayPlay); \
+	DECLARE_FUNCTION(execSetCharacterClassSelected); \
+	DECLARE_FUNCTION(execGetCharacterClassNameList); \
+	DECLARE_FUNCTION(execSetStartQuestSelected); \
+	DECLARE_FUNCTION(execGetStartQuestList);
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_T4BuiltinGameInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execToggleQuickMenu);
+	DECLARE_FUNCTION(execToggleQuickMenu); \
+	DECLARE_FUNCTION(execReplayStop); \
+	DECLARE_FUNCTION(execReplayPlay); \
+	DECLARE_FUNCTION(execSetCharacterClassSelected); \
+	DECLARE_FUNCTION(execGetCharacterClassNameList); \
+	DECLARE_FUNCTION(execSetStartQuestSelected); \
+	DECLARE_FUNCTION(execGetStartQuestList);
 
 
 #define HostProject_Plugins_T4Framework_Source_T4Gameplay_Classes_T4BuiltinGameInstance_h_15_INCLASS_NO_PURE_DECLS \

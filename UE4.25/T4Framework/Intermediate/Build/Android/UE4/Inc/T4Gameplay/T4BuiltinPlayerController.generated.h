@@ -67,6 +67,7 @@ struct FT4GamePacketCS_CmdWorldTimeSync;
 struct FT4GamePacketCS_CmdWorldTravel;
 struct FT4GamePacketCS_CmdQuestFinish;
 struct FT4GamePacketCS_CmdQuestStart;
+struct FT4GamePacketCS_CmdGameStart;
 struct FT4GamePacketCS_SkillTarget;
 struct FT4GamePacketCS_SkillCancel;
 struct FT4GamePacketCS_SkillCasting;
@@ -159,6 +160,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_CmdQuestFinish_Implementation(FT4GamePacketCS_CmdQuestFinish const& InPacket); \
 	virtual bool CS_RecvPacket_CmdQuestStart_Validate(FT4GamePacketCS_CmdQuestStart const& ); \
 	virtual void CS_RecvPacket_CmdQuestStart_Implementation(FT4GamePacketCS_CmdQuestStart const& InPacket); \
+	virtual bool CS_RecvPacket_CmdGameStart_Validate(FT4GamePacketCS_CmdGameStart const& ); \
+	virtual void CS_RecvPacket_CmdGameStart_Implementation(FT4GamePacketCS_CmdGameStart const& InPacket); \
 	virtual bool CS_RecvPacket_SkillTarget_Validate(FT4GamePacketCS_SkillTarget const& ); \
 	virtual void CS_RecvPacket_SkillTarget_Implementation(FT4GamePacketCS_SkillTarget const& InPacket); \
 	virtual bool CS_RecvPacket_SkillCancel_Validate(FT4GamePacketCS_SkillCancel const& ); \
@@ -247,6 +250,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTravel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdQuestFinish); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdQuestStart); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdGameStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillTarget); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCancel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCasting); \
@@ -335,6 +339,8 @@ struct FT4GamePacketCS_ReadyToPlay;
 	virtual void CS_RecvPacket_CmdQuestFinish_Implementation(FT4GamePacketCS_CmdQuestFinish const& InPacket); \
 	virtual bool CS_RecvPacket_CmdQuestStart_Validate(FT4GamePacketCS_CmdQuestStart const& ); \
 	virtual void CS_RecvPacket_CmdQuestStart_Implementation(FT4GamePacketCS_CmdQuestStart const& InPacket); \
+	virtual bool CS_RecvPacket_CmdGameStart_Validate(FT4GamePacketCS_CmdGameStart const& ); \
+	virtual void CS_RecvPacket_CmdGameStart_Implementation(FT4GamePacketCS_CmdGameStart const& InPacket); \
 	virtual bool CS_RecvPacket_SkillTarget_Validate(FT4GamePacketCS_SkillTarget const& ); \
 	virtual void CS_RecvPacket_SkillTarget_Implementation(FT4GamePacketCS_SkillTarget const& InPacket); \
 	virtual bool CS_RecvPacket_SkillCancel_Validate(FT4GamePacketCS_SkillCancel const& ); \
@@ -423,6 +429,7 @@ struct FT4GamePacketCS_ReadyToPlay;
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdWorldTravel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdQuestFinish); \
 	DECLARE_FUNCTION(execCS_RecvPacket_CmdQuestStart); \
+	DECLARE_FUNCTION(execCS_RecvPacket_CmdGameStart); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillTarget); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCancel); \
 	DECLARE_FUNCTION(execCS_RecvPacket_SkillCasting); \
@@ -451,6 +458,10 @@ struct FT4GamePacketCS_ReadyToPlay;
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdChangePlayer_Parms \
 	{ \
 		FT4GamePacketCS_CmdChangePlayer InPacket; \
+	}; \
+	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdGameStart_Parms \
+	{ \
+		FT4GamePacketCS_CmdGameStart InPacket; \
 	}; \
 	struct T4BuiltinPlayerController_eventCS_RecvPacket_CmdItemEnter_Parms \
 	{ \

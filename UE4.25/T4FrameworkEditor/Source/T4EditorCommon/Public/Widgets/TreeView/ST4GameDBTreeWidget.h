@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "T4GameDBTreeStructs.h"
 #include "T4GameData/Public/T4GameDBTypes.h"
-#include "T4GameData/Public/T4GameDBEditor.h"
 #include "Widgets/TreeView/ST4TreeViewWidget.h"
 
 /**

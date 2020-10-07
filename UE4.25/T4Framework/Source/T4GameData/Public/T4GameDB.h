@@ -64,10 +64,10 @@ struct T4GAMEDATA_API FT4GameDBRowBase
 #endif
 	const FT4TextTableRow* QueryTextTableRow() const; // #164
 
-	virtual const FString& GetUITitle() const = 0; // #164, #168
-
 #if WITH_EDITOR
 	ET4GameDBValidation GetResultValidation(const FT4GameDBKey& InDBKey);
+
+	virtual const FString GetTitleString() const = 0; // #163
 
 	// #118
 	virtual TSharedPtr<FStructOnScope> GetStructOnScope() = 0;

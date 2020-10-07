@@ -37,6 +37,8 @@ enum class ET4GamePacketCS : uint32
 	SkillTarget, // #116
 
 	// Test
+	CmdGameStart, // #161
+
 	CmdQuestStart, // #146
 	CmdQuestFinish, // #164
 

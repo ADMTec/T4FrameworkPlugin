@@ -48,6 +48,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Description_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Description;
+#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilityDBKey_D_MetaData[];
 #endif
@@ -102,10 +108,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PlayMode;
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_PlayMode_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
@@ -114,6 +116,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Version;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_EDITORONLY_DATA
+#endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
@@ -127,6 +131,15 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4SkillSetTableRow>();
 	}
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Description_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4SkillSetTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillSetTableRow, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Description_MetaData)) };
+#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_AbilityDBKey_D_MetaData[] = {
 		{ "Category", "Common" },
@@ -222,20 +235,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillSetTableRow.h" },
-		{ "ToolTip", "#164" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode = { "PlayMode", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillSetTableRow, PlayMode), Z_Construct_UEnum_T4GameData_ET4GameSkillSetPlayMode, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode_MetaData)) };
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UI_Title_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4SkillSetTableRow.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillSetTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UI_Title_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -253,6 +257,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillSetTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::PropPointers[] = {
+#if WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Description,
+#endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_AbilityDBKey_D,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_AbilityDBKey_C,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_AbilityDBKey_B,
@@ -267,7 +274,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_AttackDBKey_A,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_PlayMode_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UI_Title,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillSetTableRow_Statics::NewProp_Version,
 	};
@@ -299,7 +305,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillSetTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SkillSetTableRow_Hash() { return 3638997748U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SkillSetTableRow_Hash() { return 2689382003U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

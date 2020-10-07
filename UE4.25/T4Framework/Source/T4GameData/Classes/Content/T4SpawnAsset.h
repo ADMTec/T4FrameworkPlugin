@@ -30,6 +30,26 @@ private:
 	FT4SpawnVersion() {}
 };
 
+// #163
+USTRUCT()
+struct T4GAMEDATA_API FT4SpawnDefaultSettings
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4SpawnDefaultSettings()
+		: StartSpawnLocation(FVector::ZeroVector)
+		, StartSpawnRotation(FRotator::ZeroRotator)
+	{
+	}
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FVector StartSpawnLocation;
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FRotator StartSpawnRotation;
+};
+
 // #126
 USTRUCT()
 struct T4GAMEDATA_API FT4SpawnTestSettings
@@ -42,8 +62,6 @@ public:
 		: PlayerDBKeyName(NAME_None)
 		, WeaponDBKeyName(NAME_None)
 		, StanceName(NAME_None)
-		, SpawnLocation(FVector::ZeroVector)
-		, SpawnRotation(FRotator::ZeroRotator)
 #endif
 	{
 	}
@@ -57,12 +75,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FName StanceName;
-
-	UPROPERTY(EditAnywhere, Category = Editor)
-	FVector SpawnLocation;
-
-	UPROPERTY(EditAnywhere, Category = Editor)
-	FRotator SpawnRotation;
 #endif
 };
 
@@ -79,6 +91,9 @@ public:
 	void PostLoad() override;
 
 public:
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4SpawnDefaultSettings DefaultSettings; // #163
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	TArray<FT4SpawnPrefabData> SpawnPrefabArray;
 

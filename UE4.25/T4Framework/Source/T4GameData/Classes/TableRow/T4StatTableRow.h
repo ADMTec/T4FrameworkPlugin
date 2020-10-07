@@ -19,27 +19,27 @@ struct FT4StatPhysicalData
 
 public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "10000"))
-	float Health_Point; // #114 : 피, 체력
+	int32 Basic_HP; // #114 : 피, 체력
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1000"))
-	float Striking_Power; // #114 : 기본 공격력
+	int32 Striking_Power; // #114 : 기본 공격력
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
-	float Hit_Rate; // #114 : 명중률
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "Hit Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 Hit_Rate; // #114 : 명중률
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1000"))
-	float Defensive_Power; // #114 : 방어력
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0", ClampMax = "1000"))
+	int32 Defensive_Power; // #114 : 방어력
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
-	float Dodge_Rate; // #114 : 회피률
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "Dodge Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 Dodge_Rate; // #114 : 회피률
 
 public:
 	FT4StatPhysicalData()
-		: Health_Point(100.0f)
-		, Striking_Power(10.0f)
-		, Hit_Rate(0.0f)
-		, Defensive_Power(10.0f)
-		, Dodge_Rate(0.0f)
+		: Basic_HP(100)
+		, Striking_Power(10)
+		, Hit_Rate(0)
+		, Defensive_Power(10)
+		, Dodge_Rate(0)
 	{
 	}
 };
@@ -51,20 +51,24 @@ struct FT4StatOffenseData
 	GENERATED_USTRUCT_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1000"))
-	float Striking_Power; // #114 : 공격력
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0", ClampMax = "1000"))
+	int32 Striking_Power; // #114 : 공격력
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
-	float Hit_Rate; // #114 : 명중률
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "Hit Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 Hit_Rate; // #114 : 명중률
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
-	float CC_Rate; // #161 : Crowd Control
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "CC Knockback Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 CC_Knockback_Rate; // #161 : Crowd Control
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "CC Stun Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 CC_Stun_Rate; // #161 : Crowd Control
 
 public:
 	FT4StatOffenseData()
-		: Striking_Power(0.0f)
-		, Hit_Rate(0.0f)
-		, CC_Rate(0.0f)
+		: Striking_Power(0)
+		, Hit_Rate(0)
+		, CC_Knockback_Rate(0)
+		, CC_Stun_Rate(0)
 	{
 	}
 };
@@ -77,19 +81,19 @@ struct FT4StatDefenseData
 
 public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1000"))
-	float Defensive_Power; // #114 : 방어력
+	int32 Defensive_Power; // #114 : 방어력
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "0.0", ClampMax = "1.0"))
-	float Dodge_Rate; // #114 : 회피률
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (DisplayName = "Dodge Rate (%)", ClampMin = "0", ClampMax = "100"))
+	int32 Dodge_Rate; // #114 : 회피률
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (ClampMin = "-100", ClampMax = "100"))
-	float Add_HP; // #114 : 방어력
+	int32 Add_HP; // #114 : HP +-
 
 public:
 	FT4StatDefenseData()
-		: Defensive_Power(0.0f)
-		, Dodge_Rate(0.0f)
-		, Add_HP(0.0f)
+		: Defensive_Power(0)
+		, Dodge_Rate(0)
+		, Add_HP(0)
 	{
 	}
 };
@@ -109,9 +113,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4GameUID UID;
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Title; // #164
-
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameStatCategory StatCategory; // #114 : 사용처를 명시한다.
 
@@ -128,6 +129,11 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4StatDefenseData DefenseData; // #161 : Costume, Goods
+
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Editor)
+	FString Description;
+#endif
 
 public:
 	enum EVersion

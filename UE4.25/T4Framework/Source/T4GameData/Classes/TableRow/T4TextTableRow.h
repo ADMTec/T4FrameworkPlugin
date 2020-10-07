@@ -4,7 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4TableRowBase.h"
-#include "T4Engine/Public/T4EngineConstants.h"
+#include "T4GameDataTypes.h" // #163
 #include "T4TextTableRow.generated.h"
 
 /**
@@ -21,14 +21,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = Hide)
 	uint32 Version;
 
-	UPROPERTY(EditAnywhere, Category = Common)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Title; // #164
+	ET4GameTextCategory TextCategory; // #163 : 어디에서 사용되는지 명시적으로 지정
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Description; // #164
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FString SourceString; // #164
 
 public:
 	enum EVersion
@@ -42,6 +42,7 @@ public:
 
 	FT4TextTableRow()
 		: Version(EVersion::LatestVersion) // #135
+		, TextCategory(ET4GameTextCategory::Name)
 	{
 	}
 };

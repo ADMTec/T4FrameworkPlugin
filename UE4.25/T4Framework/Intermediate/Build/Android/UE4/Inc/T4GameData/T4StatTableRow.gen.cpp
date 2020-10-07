@@ -51,6 +51,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Description_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Description;
+#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefenseData_MetaData[];
 #endif
@@ -74,10 +80,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_StatCategory;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_StatCategory_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_UID;
@@ -86,6 +88,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Version;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_EDITORONLY_DATA
+#endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
@@ -97,6 +101,15 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StatTableRow>();
 	}
+#if WITH_EDITORONLY_DATA
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Description_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Description_MetaData)) };
+#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_DefenseData_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -137,20 +150,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
-		{ "ToolTip", "#164" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory = { "StatCategory", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, StatCategory), Z_Construct_UEnum_T4GameData_ET4GameStatCategory, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UI_Title_MetaData[] = {
-		{ "Category", "Common" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UI_Title_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -168,6 +172,9 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version = { "Version", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatTableRow, Version), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatTableRow_Statics::PropPointers[] = {
+#if WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Description,
+#endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_DefenseData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_OffenseData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_PhysicalData,
@@ -175,7 +182,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatItemCategory_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_StatCategory_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UI_Title,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatTableRow_Statics::NewProp_Version,
 	};
@@ -207,7 +213,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 3487588870U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatTableRow_Hash() { return 1447677945U; }
 class UScriptStruct* FT4StatDefenseData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -239,15 +245,15 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Add_HP_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Add_HP;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Add_HP;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Dodge_Rate_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Dodge_Rate;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Dodge_Rate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Defensive_Power_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Defensive_Power;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Defensive_Power;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -272,18 +278,19 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 		{ "ToolTip", "#114 : \xed\x9a\x8c\xed\x94\xbc\xeb\xa5\xa0" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP = { "Add_HP", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Add_HP), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP = { "Add_HP", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Add_HP), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "1.0" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xeb\xb0\xa9\xec\x96\xb4\xeb\xa0\xa5\n" },
+		{ "DisplayName", "Dodge Rate (%)" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xeb\xb0\xa9\xec\x96\xb4\xeb\xa0\xa5" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate = { "Dodge_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Dodge_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate = { "Dodge_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Dodge_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -292,7 +299,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power = { "Defensive_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Defensive_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power = { "Defensive_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatDefenseData, Defensive_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Defensive_Power_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Add_HP,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatDefenseData_Statics::NewProp_Dodge_Rate,
@@ -326,7 +333,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatDefenseData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatDefenseData_Hash() { return 3484237540U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatDefenseData_Hash() { return 3978064124U; }
 class UScriptStruct* FT4StatOffenseData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -356,17 +363,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatOffenseData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CC_Rate_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CC_Stun_Rate_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CC_Rate;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CC_Stun_Rate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CC_Knockback_Rate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CC_Knockback_Rate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Hit_Rate_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Hit_Rate;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Hit_Rate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Striking_Power_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Striking_Power;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Striking_Power;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -382,38 +393,53 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatOffenseData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4StatOffenseData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Rate_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Stun_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "1.0" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
+		{ "Comment", "// #161 : Crowd Control\n" },
+		{ "DisplayName", "CC Stun Rate (%)" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
+		{ "ToolTip", "#161 : Crowd Control" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Stun_Rate = { "CC_Stun_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, CC_Stun_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Stun_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Stun_Rate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Knockback_Rate_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xeb\xaa\x85\xec\xa4\x91\xeb\xa5\xa0\n" },
+		{ "DisplayName", "CC Knockback Rate (%)" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xeb\xaa\x85\xec\xa4\x91\xeb\xa5\xa0" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Rate = { "CC_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, CC_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Rate_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Knockback_Rate = { "CC_Knockback_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, CC_Knockback_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Knockback_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Knockback_Rate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "1.0" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xea\xb3\xb5\xea\xb2\xa9\xeb\xa0\xa5\n" },
+		{ "DisplayName", "Hit Rate (%)" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xea\xb3\xb5\xea\xb2\xa9\xeb\xa0\xa5" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate = { "Hit_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, Hit_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate = { "Hit_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, Hit_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ClampMax", "1000" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMin", "0" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power = { "Striking_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, Striking_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power = { "Striking_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatOffenseData, Striking_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Rate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Stun_Rate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_CC_Knockback_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Hit_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatOffenseData_Statics::NewProp_Striking_Power,
 	};
@@ -445,7 +471,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatOffenseData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatOffenseData_Hash() { return 988591018U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatOffenseData_Hash() { return 787513136U; }
 class UScriptStruct* FT4StatPhysicalData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -477,23 +503,23 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatPhysicalData
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Dodge_Rate_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Dodge_Rate;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Dodge_Rate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Defensive_Power_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Defensive_Power;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Defensive_Power;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Hit_Rate_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Hit_Rate;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Hit_Rate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Striking_Power_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Striking_Power;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Striking_Power;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_Point_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Basic_HP_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health_Point;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Basic_HP;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -511,36 +537,38 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatPhysicalData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "1.0" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xeb\xb0\xa9\xec\x96\xb4\xeb\xa0\xa5\n" },
+		{ "DisplayName", "Dodge Rate (%)" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xeb\xb0\xa9\xec\x96\xb4\xeb\xa0\xa5" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate = { "Dodge_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Dodge_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate = { "Dodge_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Dodge_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ClampMax", "1000" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xeb\xaa\x85\xec\xa4\x91\xeb\xa5\xa0\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xeb\xaa\x85\xec\xa4\x91\xeb\xa5\xa0" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power = { "Defensive_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Defensive_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power = { "Defensive_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Defensive_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ClampMax", "1.0" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "0" },
 		{ "Comment", "// #114 : \xea\xb8\xb0\xeb\xb3\xb8 \xea\xb3\xb5\xea\xb2\xa9\xeb\xa0\xa5\n" },
+		{ "DisplayName", "Hit Rate (%)" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 		{ "ToolTip", "#114 : \xea\xb8\xb0\xeb\xb3\xb8 \xea\xb3\xb5\xea\xb2\xa9\xeb\xa0\xa5" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate = { "Hit_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Hit_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate = { "Hit_Rate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Hit_Rate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -551,22 +579,22 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatPhysicalData
 		{ "ToolTip", "#114 : \xed\x94\xbc, \xec\xb2\xb4\xeb\xa0\xa5" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power = { "Striking_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Striking_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power = { "Striking_Power", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Striking_Power), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Health_Point_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Basic_HP_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ClampMax", "10000" },
 		{ "ClampMin", "0.0" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4StatTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Health_Point = { "Health_Point", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Health_Point), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Health_Point_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Health_Point_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Basic_HP = { "Basic_HP", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4StatPhysicalData, Basic_HP), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Basic_HP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Basic_HP_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Dodge_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Defensive_Power,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Hit_Rate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Striking_Power,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Health_Point,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::NewProp_Basic_HP,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4StatPhysicalData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
@@ -596,7 +624,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4StatPhysicalData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4StatPhysicalData_Hash() { return 1753125667U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4StatPhysicalData_Hash() { return 3908492326U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -2,6 +2,16 @@
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.57 : 2020.10.04
+  - #170 [기능추가] 스킬 시전 시 공격 거리내로 이동 후 공격 할 수 있는 Approach 기능 추가
+	- Paragon 관련 에셋 마이그레이션 필요
+  - #170 [기능개선] 스킬 시전 시 공격 거리 밖일 경우 시전자에게 Miss 데미지 플로터 출력
+  - #158 [기능개선] Content Editor, GameDB Stat 수정이 게임 플레이에 실시간으로 반영될 수 있도록 개선
+  - #158 [기능개선] Content Editor, GameDB TreeView 의 Column Width 저장/복구 기능 추가
+  - #161 [버그수정] Action Editor, 테스트용 플레이어 캐릭터의 이동 및 공격이 되지 않던 문제 수정
+  - #161 [버그수정] NPC Die 상태의 모델에 걸려 이동이 되지 않던 문제 수정
+  - #158 [버그수정] Player Actor 교체 후 재스폰 시 간헐적으로 모델이 화면에 출력되지 않던 문제 수정
+  - #158 [버그수정] Player Actor 교체 시 발생하는 크래시 수정 (CTRL + RClick)
 - v0.9.56 : 2020.10.03
   - #161 [기능추가] 스탠스 전환 시 무기 마운트 위치 변환 기능 추가 (Sworld 류 BackMount 지원)
   - #161 [기능추가] Floating Damage Text 추가

@@ -48,10 +48,10 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Title; // #164
+	FT4QuestTextDBKey TitleTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Description; // #164
+	FT4QuestTextDBKey DescriptionTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FGuid Guid;

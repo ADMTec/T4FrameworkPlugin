@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ClientObjectStructs() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TextDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4MissionTextDBKey();
 // End Cross Module References
 class UScriptStruct* FT4ClientObjectQuestInfo::StaticStruct()
 {
@@ -180,9 +180,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ClientObjectMissi
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StartTimeSec;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TextDBKey_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MissionTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TextDBKey;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MissionTextDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MissionUniqueID_MetaData[];
 #endif
@@ -209,12 +209,12 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ClientObjectMissi
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_StartTimeSec = { "StartTimeSec", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ClientObjectMissionInfo, StartTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_StartTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_StartTimeSec_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_TextDBKey_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionTextDBKey_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Private/MainFrame/Client/Object/T4ClientObjectStructs.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_TextDBKey = { "TextDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ClientObjectMissionInfo, TextDBKey), Z_Construct_UScriptStruct_FT4TextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_TextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_TextDBKey_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionTextDBKey = { "MissionTextDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ClientObjectMissionInfo, MissionTextDBKey), Z_Construct_UScriptStruct_FT4MissionTextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionTextDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionUniqueID_MetaData[] = {
 		{ "Category", "Default" },
@@ -224,7 +224,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ClientObjectMissi
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionUniqueID = { "MissionUniqueID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ClientObjectMissionInfo, MissionUniqueID), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionUniqueID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionUniqueID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_StartTimeSec,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_TextDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionTextDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::NewProp_MissionUniqueID,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Statics::ReturnStructParams = {
@@ -255,7 +255,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ClientObjectMissi
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Hash() { return 3751800206U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ClientObjectMissionInfo_Hash() { return 515366633U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

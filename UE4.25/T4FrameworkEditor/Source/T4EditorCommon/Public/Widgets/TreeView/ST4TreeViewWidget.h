@@ -171,7 +171,6 @@ protected:
 	FString ConfigStateKey; // #122
 
 	ESelectionMode::Type SelectionMode;
-	ET4TreeViewColumn TreeViewColumn;
 
 	bool bUpdating; // #71 : 자기 이벤트에 대한 업데이트 방지
 };

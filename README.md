@@ -1,4 +1,4 @@
-# T4FrameworkPlugin (v0.9.57)
+# T4FrameworkPlugin (v0.9.58)
 ### The Most Powerful MMORPG and Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
@@ -20,16 +20,14 @@
 - **업데이트**
   - **Milestone 7** (2020.07.06 ~ 2020.10.08)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.57** : 2020.10.04
-    - #170 [기능추가] 스킬 시전 시 공격 거리내로 이동 후 공격 할 수 있는 Approach 기능 추가
-	  - Paragon 관련 에셋 마이그레이션 필요
-	- #170 [기능개선] 스킬 시전 시 공격 거리 밖일 경우 시전자에게 Miss 데미지 플로터 출력
-	- #158 [기능개선] Content Editor, GameDB Stat 수정이 게임 플레이에 실시간으로 반영될 수 있도록 개선
-    - #158 [기능개선] Content Editor, GameDB TreeView 의 Column Width 저장/복구 기능 추가
-    - #161 [버그수정] Action Editor, 테스트용 플레이어 캐릭터의 이동 및 공격이 되지 않던 문제 수정
-    - #161 [버그수정] NPC Die 상태의 모델에 걸려 이동이 되지 않던 문제 수정
-	- #158 [버그수정] Player Actor 교체 후 재스폰 시 간헐적으로 모델이 화면에 출력되지 않던 문제 수정
-    - #158 [버그수정] Player Actor 교체 시 발생하는 크래시 수정 (CTRL + RClick)
+  - **v0.9.58** : 2020.10.07
+	- #163 [기능추가] Content Editor, Stat/Text GameDB 를 전용 에디터를 통해 최적화된 편집이 가능하도록 기능 추가
+    - #161 [기능추가] Content Editor, SpawnAsset 내 Player 의 시작 위치를 지정할 수 있는 메뉴 및 기능 추가
+	- #163 [기능개선] Content Editor, GameDB 에서 사용하는 모든 UI 스트링을 TextDB 를 사용하도록 수정
+	- #163 [버그수정] Content Editor, 동일 GameDBType 의 Item 선택 시 GameDBEditor (Stat/Text포함) 가 중복해서 오픈되는 문제 수정
+	- #170 [버그수정] Content Editor, Skill DB 에 Approach 기능 추가 후 이동 공격이 정상적으로 동작하지 않던 문제 수정
+	- #158 [버그수정] Content Editor, 뷰포트에서 플레이어 캐릭터를 교체 또는 재스폰 할 경우 간헐적으로 전투 플레이가 되지 않던 문제 수정
+    - #158 [버그수정] Content Editor, Weapon 류의 Item 선택한 모델이 Thumbnail Preview 에 출력되지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

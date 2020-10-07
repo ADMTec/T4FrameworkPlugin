@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeT4WorldTableRow() {}
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4MapEntityAsset_NoRegister();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
 // End Cross Module References
 class UScriptStruct* FT4WorldTableRow::StaticStruct()
@@ -60,13 +61,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldTableRow
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_WorldTimeTag;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Description_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DescriptionTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Description;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DescriptionTextDBKey;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UI_Title_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TitleTextDBKey_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UI_Title;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TitleTextDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UID_MetaData[];
 #endif
@@ -113,21 +114,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldTableRow
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_WorldTimeTag = { "WorldTimeTag", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldTableRow, WorldTimeTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_WorldTimeTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_WorldTimeTag_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Description_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WorldTableRow.h" },
 		{ "ToolTip", "#164" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Description = { "UI_Description", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldTableRow, UI_Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Description_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_DescriptionTextDBKey = { "DescriptionTextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldTableRow, DescriptionTextDBKey), Z_Construct_UScriptStruct_FT4QuestTextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_DescriptionTextDBKey_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Title_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_TitleTextDBKey_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WorldTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Title = { "UI_Title", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldTableRow, UI_Title), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Title_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Title_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_TitleTextDBKey = { "TitleTextDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WorldTableRow, TitleTextDBKey), Z_Construct_UScriptStruct_FT4QuestTextDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_TitleTextDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_TitleTextDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UID_MetaData[] = {
 		{ "Category", "Common" },
@@ -148,8 +149,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_EntityAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_WorldTimeScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_WorldTimeTag,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Description,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UI_Title,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_DescriptionTextDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_TitleTextDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WorldTableRow_Statics::NewProp_Version,
 	};
@@ -181,7 +182,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WorldTableRow_Hash() { return 2290410597U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WorldTableRow_Hash() { return 2576452042U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

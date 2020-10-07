@@ -24,7 +24,7 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4TextDBKey TextDBKey; // #164
+	FT4MissionTextDBKey MissionTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	ET4GameMissionType MissionType; // #164

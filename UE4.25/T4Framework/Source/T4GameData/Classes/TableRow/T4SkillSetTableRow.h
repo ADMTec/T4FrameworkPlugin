@@ -26,9 +26,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4GameUID UID;
 
-	UPROPERTY(EditAnywhere, Category = Common)
-	FString UI_Title; // #164
-
 	UPROPERTY(EditAnywhere, Category= Common)
 	ET4GameSkillSetPlayMode PlayMode; // #142
 
@@ -70,6 +67,11 @@ public:
 
 	UPROPERTY(EditAnywhere, Category= Common)
 	FT4SkillDBKey AbilityDBKey_D; // RMB
+
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Editor)
+	FString Description;
+#endif
 
 public:
 	enum EVersion

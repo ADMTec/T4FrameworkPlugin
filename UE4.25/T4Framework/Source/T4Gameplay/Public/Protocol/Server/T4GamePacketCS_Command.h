@@ -11,6 +11,8 @@
  */
  // #T4_ADD_PACKET_TAG_CS
 
+// ET4GamePacketCS::CmdGameStart // #161
+
 // ET4GamePacketCS::CmdQuestStart // #146
 // ET4GamePacketCS::CmdQuestFinish // #164
 
@@ -29,6 +31,34 @@
 
 // ET4GamePacketCS::CmdTeleport
 // ET4GamePacketCS::CmdBookmark // #140
+
+// #161
+USTRUCT()
+struct FT4GamePacketCS_CmdGameStart : public FT4GamePacketCS_Base
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4ObjectID SenderID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4QuestDBKey QuestDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4PlayerDBKey StartPlayerDBKey;
+
+public:
+	FT4GamePacketCS_CmdGameStart()
+		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdGameStart)
+	{
+	}
+
+	FString ToString() const override
+	{
+		return FString(TEXT("CS_Packet:CmdGameStart"));
+	}
+};
 
 USTRUCT()
 struct FT4GamePacketCS_CmdQuestStart : public FT4GamePacketCS_Base

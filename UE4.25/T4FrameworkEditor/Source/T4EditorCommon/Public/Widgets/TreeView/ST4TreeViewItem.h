@@ -10,15 +10,6 @@
 #include "Widgets/Views/STableViewBase.h"
 
 static const FName T4Editor_TreeViewColumnLabel = TEXT("Label");
-static const FName T4Editor_TreeViewColumnOne = TEXT("One");
-static const FName T4Editor_TreeViewColumnTwo = TEXT("Two");
-
-enum ET4TreeViewColumn
-{
-	TreeViewColumn_Label,
-	TreeViewColumn_One,
-	TreeViewColumn_Two,
-};
 
 /**
   * #122
@@ -44,10 +35,9 @@ public:
 	FName GetValueName() { return ValueName; }
 	bool Contains(const FString& InSearchText) const
 	{
-		if (LabelString.Contains(InSearchText) ||
-			ColumnOneString.Contains(InSearchText) ||
-			ColumnTwoString.Contains(InSearchText))
+		if (LabelString.Contains(InSearchText))
 		{
+			// TODO : ColumnStringMap
 			return true;
 		}
 		return false;
@@ -57,9 +47,8 @@ public:
 	void HandleDragLeave(const FDragDropEvent& DragDropEvent);
 	FReply HandleDrop(const FDragDropEvent& DragDropEvent);
 
-	FString GetLabelString() const { return LabelString; }
-	FString GetColumnOneString() const { return ColumnOneString; }
-	FString GetColumnTwoString() const { return ColumnTwoString; }
+	const FString& GetLabelString() const { return LabelString; }
+	FString GetColumnString(FName InColumnName) const; // #122, #163
 
 	/** Delegate for hooking up an inline editable text block to be notified that a rename is requested. */
 	DECLARE_DELEGATE(FOnRenameRequest);
@@ -73,8 +62,7 @@ public:
 	TArray<FT4TreeViewNodePtr> Children;
 
 	FString LabelString; // #122
-	FString ColumnOneString; // #122
-	FString ColumnTwoString; // #122
+	TMap<FName, FString> ColumnStringMap; // #122, #163
 
 	bool bFolder; // #122
 	bool bError; // #124
@@ -89,7 +77,6 @@ class T4EDITORCOMMON_API ST4TreeViewRow : public SMultiColumnTableRow<TSharedPtr
 public:
 	SLATE_BEGIN_ARGS(ST4TreeViewRow) { }
 		SLATE_ARGUMENT(TSharedPtr<FT4TreeViewNode>, Node)
-		SLATE_ARGUMENT(ET4TreeViewColumn, TreeViewColumn)
 	SLATE_END_ARGS()
 
 public:
@@ -121,7 +108,6 @@ protected:
 private:
 	TWeakPtr<ST4TreeViewWidget> WidgetWeakPtr;
 	TSharedPtr<FT4TreeViewNode> NodePtr;
-	ET4TreeViewColumn Column;
 
 	bool bIsDragDropObject;
 	bool bIsHoveredDragTarget;

@@ -36,10 +36,12 @@ public:
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
 
-	bool DoMissionStart(ET4LayerType InLayerType, const FT4GameDBKey& InQuestDBKey); // #146 : 월드 이동과 재스폰까지 처리
-	bool DoContentCompleted(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FGuid& InQuestKey); // #164
+	bool DoGameStart(ET4LayerType InLayerType, const FT4QuestDBKey& InQuestDBKey, const FT4PlayerDBKey& InStartPlayerDBKey); // #161
+
+	bool DoQuestStart(ET4LayerType InLayerType, const FT4QuestDBKey& InQuestDBKey); // #146 : 월드 이동과 재스폰까지 처리
+	bool DoQuestFinish(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FGuid& InQuestKey); // #164
 #if WITH_EDITOR
-	bool DoContentStopAll(ET4LayerType InLayerType);
+	bool DoQuestStopAll(ET4LayerType InLayerType);
 #endif
 
 	bool DoWorldTravel(ET4LayerType InLayerType, const FT4GameDBKey& InWorldDBKey); // #144

@@ -18,11 +18,8 @@ public:
 	SLATE_END_ARGS();
 
 	void Construct(const FArguments& InArgs, ET4GameDBType InGameDBType);
-	void Construct(
-		const FArguments& InArgs, 
-		ET4GameDBType InGameDBType,
-		ET4GameStatCategory InGameStatCategory
-	); // #114
+	void Construct(const FArguments& InArgs, ET4GameDBType InGameDBType, ET4GameStatCategory InGameStatCategory); // #114
+	void Construct(const FArguments& InArgs, ET4GameDBType InGameDBType, ET4GameTextCategory InGameTextCategory); // #163
 
 	ST4GameDBDropListWidget();
 	~ST4GameDBDropListWidget();
@@ -32,5 +29,6 @@ protected:
 
 private:
 	ET4GameDBType GameDBType;
-	ET4GameStatCategory GameStatCategory;
+	ET4GameStatCategory GameStatCategory; // #114
+	ET4GameTextCategory GameTextCategory; // #163
 };

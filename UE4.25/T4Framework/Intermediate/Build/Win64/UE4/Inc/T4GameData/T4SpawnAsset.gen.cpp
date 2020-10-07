@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4SpawnAsset() {}
 // Cross Module References
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnTestSettings();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnDefaultSettings();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
@@ -56,14 +57,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 		static void* NewStructOps();
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnRotation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnRotation;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnLocation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnLocation;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_StanceName;
@@ -92,20 +85,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 	}
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnRotation_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnRotation = { "SpawnRotation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnTestSettings, SpawnRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnRotation_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnLocation_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnTestSettings, SpawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnLocation_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_StanceName_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
@@ -127,8 +106,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_PlayerDBKeyName = { "PlayerDBKeyName", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnTestSettings, PlayerDBKeyName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_PlayerDBKeyName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_PlayerDBKeyName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnRotation,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_SpawnLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_StanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_WeaponDBKeyName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnTestSettings_Statics::NewProp_PlayerDBKeyName,
@@ -162,7 +139,104 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnTestSettings_Hash() { return 1401508033U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnTestSettings_Hash() { return 3069141095U; }
+class UScriptStruct* FT4SpawnDefaultSettings::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4SpawnDefaultSettings"), sizeof(FT4SpawnDefaultSettings), Get_Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4SpawnDefaultSettings>()
+{
+	return FT4SpawnDefaultSettings::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4SpawnDefaultSettings(FT4SpawnDefaultSettings::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4SpawnDefaultSettings"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnDefaultSettings
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnDefaultSettings()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4SpawnDefaultSettings")),new UScriptStruct::TCppStructOps<FT4SpawnDefaultSettings>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnDefaultSettings;
+	struct Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartSpawnRotation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartSpawnRotation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartSpawnLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_StartSpawnLocation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
+		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
+		{ "ToolTip", "#163" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4SpawnDefaultSettings>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnRotation_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnRotation = { "StartSpawnRotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnDefaultSettings, StartSpawnRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnRotation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnLocation_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnLocation = { "StartSpawnLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnDefaultSettings, StartSpawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnLocation_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::NewProp_StartSpawnLocation,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		nullptr,
+		&NewStructOps,
+		"T4SpawnDefaultSettings",
+		sizeof(FT4SpawnDefaultSettings),
+		alignof(FT4SpawnDefaultSettings),
+		Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnDefaultSettings()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4SpawnDefaultSettings"), sizeof(FT4SpawnDefaultSettings), Get_Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnDefaultSettings_Hash() { return 133682048U; }
 	void UT4SpawnAsset::StaticRegisterNativesUT4SpawnAsset()
 	{
 	}
@@ -200,6 +274,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_SpawnPrefabArray;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnPrefabArray_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultSettings_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DefaultSettings;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_EDITORONLY_DATA
 #endif // WITH_EDITORONLY_DATA
@@ -253,11 +331,20 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "Comment", "// #163\n" },
 		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
+		{ "ToolTip", "#163" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray = { "SpawnPrefabArray", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4SpawnAsset, SpawnPrefabArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray_Inner = { "SpawnPrefabArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4SpawnPrefabData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_DefaultSettings_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/Content/T4SpawnAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_DefaultSettings = { "DefaultSettings", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4SpawnAsset, DefaultSettings), Z_Construct_UScriptStruct_FT4SpawnDefaultSettings, METADATA_PARAMS(Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_DefaultSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_DefaultSettings_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4SpawnAsset_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_ThumbnailImage,
@@ -268,6 +355,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnObjectArray_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_SpawnPrefabArray_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4SpawnAsset_Statics::NewProp_DefaultSettings,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4SpawnAsset_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4SpawnAsset>::IsAbstract,
@@ -296,7 +384,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnTestSettings
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4SpawnAsset, 2994527649);
+	IMPLEMENT_CLASS(UT4SpawnAsset, 3563531636);
 	template<> T4GAMEDATA_API UClass* StaticClass<UT4SpawnAsset>()
 	{
 		return UT4SpawnAsset::StaticClass();

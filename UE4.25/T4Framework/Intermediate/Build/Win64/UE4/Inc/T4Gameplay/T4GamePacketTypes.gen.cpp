@@ -251,7 +251,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketCS_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketCS(ET4GamePacketCS_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketCS"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 3560362127U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 3166965965U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS()
 	{
 #if WITH_HOT_RELOAD
@@ -277,6 +277,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketCS::SkillCasting", (int64)ET4GamePacketCS::SkillCasting },
 				{ "ET4GamePacketCS::SkillCancel", (int64)ET4GamePacketCS::SkillCancel },
 				{ "ET4GamePacketCS::SkillTarget", (int64)ET4GamePacketCS::SkillTarget },
+				{ "ET4GamePacketCS::CmdGameStart", (int64)ET4GamePacketCS::CmdGameStart },
 				{ "ET4GamePacketCS::CmdQuestStart", (int64)ET4GamePacketCS::CmdQuestStart },
 				{ "ET4GamePacketCS::CmdQuestFinish", (int64)ET4GamePacketCS::CmdQuestFinish },
 				{ "ET4GamePacketCS::CmdWorldTravel", (int64)ET4GamePacketCS::CmdWorldTravel },
@@ -300,6 +301,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "CmdChangePlayer.Comment", "// #146\n" },
 				{ "CmdChangePlayer.Name", "ET4GamePacketCS::CmdChangePlayer" },
 				{ "CmdChangePlayer.ToolTip", "#146" },
+				{ "CmdGameStart.Comment", "// Test\n" },
+				{ "CmdGameStart.Name", "ET4GamePacketCS::CmdGameStart" },
+				{ "CmdGameStart.ToolTip", "Test" },
 				{ "CmdItemEnter.Comment", "// #31\n" },
 				{ "CmdItemEnter.Name", "ET4GamePacketCS::CmdItemEnter" },
 				{ "CmdItemEnter.ToolTip", "#31" },
@@ -313,9 +317,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "CmdQuestFinish.Comment", "// #146\n" },
 				{ "CmdQuestFinish.Name", "ET4GamePacketCS::CmdQuestFinish" },
 				{ "CmdQuestFinish.ToolTip", "#146" },
-				{ "CmdQuestStart.Comment", "// Test\n" },
+				{ "CmdQuestStart.Comment", "// #161\n" },
 				{ "CmdQuestStart.Name", "ET4GamePacketCS::CmdQuestStart" },
-				{ "CmdQuestStart.ToolTip", "Test" },
+				{ "CmdQuestStart.ToolTip", "#161" },
 				{ "CmdRespawn.Comment", "// #41\n" },
 				{ "CmdRespawn.Name", "ET4GamePacketCS::CmdRespawn" },
 				{ "CmdRespawn.ToolTip", "#41" },

@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinUserWidget() {}
 		0,
 		0,
 		0,
-		0x00A010A0u,
+		0x00B010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4BuiltinUserWidget_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4BuiltinUserWidget_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4BuiltinUserWidget()
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinUserWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BuiltinUserWidget, 2079082888);
+	IMPLEMENT_CLASS(UT4BuiltinUserWidget, 722264665);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4BuiltinUserWidget>()
 	{
 		return UT4BuiltinUserWidget::StaticClass();

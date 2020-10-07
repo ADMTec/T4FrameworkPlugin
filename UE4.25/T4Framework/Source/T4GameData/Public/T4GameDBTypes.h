@@ -113,7 +113,7 @@ public:
 };
 
 USTRUCT()
-struct FT4GameDBKey
+struct T4GAMEDATA_API FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -267,7 +267,7 @@ static const FT4GameDBKey T4Const_InvalidDBKey;
 
 // #161
 USTRUCT()
-struct FT4QuestDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4QuestDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -279,6 +279,11 @@ public:
 
 	FT4QuestDBKey(const FName& InRowName)
 		: FT4GameDBKey(ET4GameDBType::Quest, InRowName)
+	{
+	}
+
+	FT4QuestDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4GameDBKey(ET4GameDBType::Quest, InGameDBKey.RowName)
 	{
 	}
 
@@ -296,7 +301,7 @@ public:
 };
 
 USTRUCT()
-struct FT4WorldDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4WorldDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -325,7 +330,36 @@ public:
 };
 
 USTRUCT()
-struct FT4NPCDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4PlayerDBKey : public FT4GameDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4PlayerDBKey()
+		: FT4GameDBKey(ET4GameDBType::Player)
+	{
+	}
+
+	FT4PlayerDBKey(const FName& InRowName)
+		: FT4GameDBKey(ET4GameDBType::Player, InRowName)
+	{
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4PlayerDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4PlayerDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+USTRUCT()
+struct T4GAMEDATA_API FT4NPCDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -355,7 +389,7 @@ public:
 
 // #50
 USTRUCT()
-struct FT4SkillSetDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4SkillSetDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -385,7 +419,7 @@ public:
 };
 
 USTRUCT()
-struct FT4SkillDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4SkillDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -414,7 +448,7 @@ public:
 };
 
 USTRUCT()
-struct FT4EffectDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4EffectDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -445,7 +479,7 @@ public:
 
 // #50
 USTRUCT()
-struct FT4WeaponDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4WeaponDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -481,7 +515,7 @@ public:
 };
 
 USTRUCT()
-struct FT4CostumeDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4CostumeDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -516,9 +550,10 @@ public:
 	}
 };
 
-// #114
+// #163
+struct FT4StatTableRow;
 USTRUCT()
-struct FT4PlayerStatDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4StatDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -526,15 +561,41 @@ struct FT4PlayerStatDBKey : public FT4GameDBKey
 	ET4GameStatCategory StatCategory; // #114
 
 public:
-	FT4PlayerStatDBKey()
+	FT4StatDBKey()
 		: FT4GameDBKey(ET4GameDBType::Stat)
-		, StatCategory(ET4GameStatCategory::Player)
+		, StatCategory(ET4GameStatCategory::None)
+	{
+	}
+
+	FT4StatDBKey(ET4GameStatCategory InStatCategory)
+		: FT4GameDBKey(ET4GameDBType::Stat)
+		, StatCategory(InStatCategory)
+	{
+	}
+
+	FT4StatDBKey(const FName& InRowName, ET4GameStatCategory InStatCategory)
+		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
+		, StatCategory(InStatCategory)
+	{
+	}
+
+	const FT4StatTableRow* GetTableRowCached() const; // #163 : TODO Editor 는 RunTiem, Game 은 Cache 처리할 것!
+};
+
+// #114
+USTRUCT()
+struct T4GAMEDATA_API FT4PlayerStatDBKey : public FT4StatDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4PlayerStatDBKey()
+		: FT4StatDBKey(ET4GameStatCategory::Player)
 	{
 	}
 
 	FT4PlayerStatDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
-		, StatCategory(ET4GameStatCategory::Player)
+		: FT4StatDBKey(InRowName, ET4GameStatCategory::Player)
 	{
 	}
 
@@ -554,23 +615,18 @@ public:
 
 // #114
 USTRUCT()
-struct FT4NPCStatDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4NPCStatDBKey : public FT4StatDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(Transient)
-	ET4GameStatCategory StatCategory; // #114
-
 public:
 	FT4NPCStatDBKey()
-		: FT4GameDBKey(ET4GameDBType::Stat)
-		, StatCategory(ET4GameStatCategory::NPC)
+		: FT4StatDBKey(ET4GameStatCategory::NPC)
 	{
 	}
 
 	FT4NPCStatDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
-		, StatCategory(ET4GameStatCategory::NPC)
+		: FT4StatDBKey(InRowName, ET4GameStatCategory::NPC)
 	{
 	}
 
@@ -590,23 +646,18 @@ public:
 
 // #114
 USTRUCT()
-struct FT4ItemStatDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4ItemStatDBKey : public FT4StatDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(Transient)
-	ET4GameStatCategory StatCategory; // #114
-
 public:
 	FT4ItemStatDBKey()
-		: FT4GameDBKey(ET4GameDBType::Stat)
-		, StatCategory(ET4GameStatCategory::Item)
+		: FT4StatDBKey(ET4GameStatCategory::Item)
 	{
 	}
 
 	FT4ItemStatDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
-		, StatCategory(ET4GameStatCategory::Item)
+		: FT4StatDBKey(InRowName, ET4GameStatCategory::Item)
 	{
 	}
 
@@ -626,23 +677,18 @@ public:
 
 // #114
 USTRUCT()
-struct FT4SkillStatDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4SkillStatDBKey : public FT4StatDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(Transient)
-	ET4GameStatCategory StatCategory; // #114
-
 public:
 	FT4SkillStatDBKey()
-		: FT4GameDBKey(ET4GameDBType::Stat)
-		, StatCategory(ET4GameStatCategory::Skill)
+		: FT4StatDBKey(ET4GameStatCategory::Skill)
 	{
 	}
 
 	FT4SkillStatDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
-		, StatCategory(ET4GameStatCategory::Skill)
+		: FT4StatDBKey(InRowName, ET4GameStatCategory::Skill)
 	{
 	}
 
@@ -662,23 +708,18 @@ public:
 
 // #114
 USTRUCT()
-struct FT4EffectStatDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4EffectStatDBKey : public FT4StatDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(Transient)
-	ET4GameStatCategory StatCategory; // #114
-
 public:
 	FT4EffectStatDBKey()
-		: FT4GameDBKey(ET4GameDBType::Stat)
-		, StatCategory(ET4GameStatCategory::Effect)
+		: FT4StatDBKey(ET4GameStatCategory::Effect)
 	{
 	}
 
 	FT4EffectStatDBKey(const FName& InRowName)
-		: FT4GameDBKey(ET4GameDBType::Stat, InRowName)
-		, StatCategory(ET4GameStatCategory::Effect)
+		: FT4StatDBKey(InRowName, ET4GameStatCategory::Effect)
 	{
 	}
 
@@ -698,7 +739,7 @@ public:
 
 // #164
 USTRUCT()
-struct FT4RewardDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4RewardDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -733,37 +774,217 @@ public:
 	}
 };
 
-// #164
+// #163
 USTRUCT()
-struct FT4TextDBKey : public FT4GameDBKey
+struct T4GAMEDATA_API FT4TextDBKey : public FT4GameDBKey
 {
 	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(Transient)
+	ET4GameTextCategory TextCategory; // #163
 
 public:
 	FT4TextDBKey()
 		: FT4GameDBKey(ET4GameDBType::Text)
+		, TextCategory(ET4GameTextCategory::None)
 	{
 	}
 
-	FT4TextDBKey(const FName& InRowName)
+	FT4TextDBKey(ET4GameTextCategory InTextCategory)
+		: FT4GameDBKey(ET4GameDBType::Text)
+		, TextCategory(InTextCategory)
+	{
+	}
+
+	FT4TextDBKey(const FName& InRowName, ET4GameTextCategory InTextCategory)
 		: FT4GameDBKey(ET4GameDBType::Text, InRowName)
+		, TextCategory(InTextCategory)
 	{
 	}
 
-	FT4TextDBKey(const FT4GameDBKey& InGameDBKey)
-		: FT4GameDBKey(ET4GameDBType::Text, InGameDBKey.RowName)
+	const FString GetSourceString(const TCHAR* InDefaultString) const; // #163 : TODO Editor 는 RunTiem, Game 은 Cache 처리할 것!
+};
+
+// #163
+struct FT4TextTableRow;
+USTRUCT()
+struct T4GAMEDATA_API FT4NameTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4NameTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::Name)
+	{
+	}
+
+	FT4NameTextDBKey(const FName& InRowName)
+		: FT4TextDBKey(InRowName, ET4GameTextCategory::Name)
+	{
+	}
+
+	FT4NameTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::Name)
 	{
 		ensure(ET4GameDBType::Text == InGameDBKey.Type);
 	}
 
-	FORCEINLINE FT4GameDBKey operator=(const FT4TextDBKey& InRhs)
+	FORCEINLINE FT4GameDBKey operator=(const FT4NameTextDBKey& InRhs)
 	{
 		Type = InRhs.Type;
 		RowName = InRhs.RowName;
 		return *this;
 	}
 
-	FORCEINLINE FT4TextDBKey operator=(const FT4GameDBKey& InRhs)
+	FORCEINLINE FT4NameTextDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #163
+USTRUCT()
+struct T4GAMEDATA_API FT4WorldTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4WorldTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::World)
+	{
+	}
+
+	FT4WorldTextDBKey(const FName& InRowWorld)
+		: FT4TextDBKey(InRowWorld, ET4GameTextCategory::World)
+	{
+	}
+
+	FT4WorldTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::World)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4WorldTextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4WorldTextDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #163
+USTRUCT()
+struct T4GAMEDATA_API FT4QuestTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4QuestTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::Quest)
+	{
+	}
+
+	FT4QuestTextDBKey(const FName& InRowQuest)
+		: FT4TextDBKey(InRowQuest, ET4GameTextCategory::Quest)
+	{
+	}
+
+	FT4QuestTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::Quest)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4QuestTextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4QuestTextDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #164
+USTRUCT()
+struct T4GAMEDATA_API FT4MissionTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4MissionTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::Mission)
+	{
+	}
+
+	FT4MissionTextDBKey(const FName& InRowMission)
+		: FT4TextDBKey(InRowMission, ET4GameTextCategory::Mission)
+	{
+	}
+
+	FT4MissionTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::Mission)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4MissionTextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4MissionTextDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #163
+USTRUCT()
+struct T4GAMEDATA_API FT4DialogueTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4DialogueTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::Dialogue)
+	{
+	}
+
+	FT4DialogueTextDBKey(const FName& InRowDialogue)
+		: FT4TextDBKey(InRowDialogue, ET4GameTextCategory::Dialogue)
+	{
+	}
+
+	FT4DialogueTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::Dialogue)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4DialogueTextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4DialogueTextDBKey operator=(const FT4GameDBKey& InRhs)
 	{
 		RowName = InRhs.RowName;
 		return *this;

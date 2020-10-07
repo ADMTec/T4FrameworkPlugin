@@ -97,6 +97,9 @@ private:
 	void CS_RecvPacket_SkillTarget(const FT4GamePacketCS_SkillTarget& InPacket);
 
 	UFUNCTION(Reliable, server, WithValidation)
+	void CS_RecvPacket_CmdGameStart(const FT4GamePacketCS_CmdGameStart& InPacket); // #161
+
+	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_CmdQuestStart(const FT4GamePacketCS_CmdQuestStart& InPacket); // #146
 
 	UFUNCTION(Reliable, server, WithValidation)
