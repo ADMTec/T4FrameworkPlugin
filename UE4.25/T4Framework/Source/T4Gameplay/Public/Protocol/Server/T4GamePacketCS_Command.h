@@ -95,12 +95,16 @@ public:
 	FT4ObjectID SenderID;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	bool bFinishAll;
+	bool bCompleteThisStep;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	bool bStopAll;
 
 public:
 	FT4GamePacketCS_CmdQuestFinish()
 		: FT4GamePacketCS_Base(ET4GamePacketCS::CmdQuestFinish)
-		, bFinishAll(true)
+		, bCompleteThisStep(false)
+		, bStopAll(false)
 	{
 	}
 

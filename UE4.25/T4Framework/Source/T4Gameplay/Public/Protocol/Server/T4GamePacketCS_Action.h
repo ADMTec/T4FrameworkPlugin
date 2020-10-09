@@ -64,7 +64,7 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:AimSet"));
+		return FString(TEXT("CS_Packet:SkillCasting"));
 	}
 };
 
@@ -96,7 +96,7 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:AimClear"));
+		return FString(TEXT("CS_Packet:SkillCancel"));
 	}
 };
 
@@ -185,6 +185,6 @@ public:
 
 	FString ToString() const override
 	{
-		return FString(TEXT("CS_Packet:Attack"));
+		return FString(TEXT("CS_Packet:SkillTarget"));
 	}
 };

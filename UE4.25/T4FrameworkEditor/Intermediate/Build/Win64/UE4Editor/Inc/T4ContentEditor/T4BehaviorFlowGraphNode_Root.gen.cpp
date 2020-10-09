@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Root.h"
+#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Root.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode_Root() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraphNode_Root_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/** Root node of this Mission tree, holds Blackboard data */" },
-		{ "IncludePath", "SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Root.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Root.h" },
+		{ "IncludePath", "SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Root.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Root.h" },
 		{ "ToolTip", "Root node of this Mission tree, holds Blackboard data" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode_Root() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode_Root, 2910615168);
+	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode_Root, 49980658);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4BehaviorFlowGraphNode_Root>()
 	{
 		return UT4BehaviorFlowGraphNode_Root::StaticClass();

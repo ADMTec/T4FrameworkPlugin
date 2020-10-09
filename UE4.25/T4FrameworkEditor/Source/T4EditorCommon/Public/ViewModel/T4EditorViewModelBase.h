@@ -187,7 +187,9 @@ public:
 
 	void ServerMissionStart(const FT4GameDBKey& InGameDBKey); // #164
 	void ServerQuestStop(const FT4GameDBKey& InGameDBKey); // #164
+
 	void ServerQuestStopAll(); // #164
+	void ServerQuestCompleteThisStep(); // #163
 
 	void ServerChangeAnimSet(FName InAnimSetName); // #73, #114
 	void ServerChangeStance(FName InStanceName); // #106, #114

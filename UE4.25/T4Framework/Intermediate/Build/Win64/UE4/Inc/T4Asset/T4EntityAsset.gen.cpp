@@ -36,13 +36,12 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityAsset() {}
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityRenderingData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityPhysicalData();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityBoundType();
-	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityThumbnailData();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorTestAutomationData();
 // End Cross Module References
 class UScriptStruct* FT4EntityPlayTagData::StaticStruct()
@@ -1405,35 +1404,34 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPhysicalData
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4EntityPhysicalData_Hash() { return 474420252U; }
-class UScriptStruct* FT4EntityEditorThumbnailData::StaticStruct()
+class UScriptStruct* FT4EntityThumbnailData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityEditorThumbnailData"), sizeof(FT4EntityEditorThumbnailData), Get_Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Hash());
+		extern T4ASSET_API uint32 Get_Z_Construct_UScriptStruct_FT4EntityThumbnailData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EntityThumbnailData, Z_Construct_UPackage__Script_T4Asset(), TEXT("T4EntityThumbnailData"), sizeof(FT4EntityThumbnailData), Get_Z_Construct_UScriptStruct_FT4EntityThumbnailData_Hash());
 	}
 	return Singleton;
 }
-template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityEditorThumbnailData>()
+template<> T4ASSET_API UScriptStruct* StaticStruct<FT4EntityThumbnailData>()
 {
-	return FT4EntityEditorThumbnailData::StaticStruct();
+	return FT4EntityThumbnailData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityEditorThumbnailData(FT4EntityEditorThumbnailData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityEditorThumbnailData"), false, nullptr, nullptr);
-static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnailData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EntityThumbnailData(FT4EntityThumbnailData::StaticStruct, TEXT("/Script/T4Asset"), TEXT("T4EntityThumbnailData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityThumbnailData
 {
-	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnailData()
+	FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityThumbnailData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityEditorThumbnailData")),new UScriptStruct::TCppStructOps<FT4EntityEditorThumbnailData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EntityThumbnailData")),new UScriptStruct::TCppStructOps<FT4EntityThumbnailData>);
 	}
-} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnailData;
-	struct Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics
+} ScriptStruct_T4Asset_StaticRegisterNativesFT4EntityThumbnailData;
+	struct Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
-#if WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Location_MetaData[];
 #endif
@@ -1443,69 +1441,66 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnai
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #35\n */" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 		{ "ToolTip", "#35" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityEditorThumbnailData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EntityThumbnailData>();
 	}
-#if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Location_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Location_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityEditorThumbnailData, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Location_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityThumbnailData, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Location_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Location_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Rotation_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Rotation_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityEditorThumbnailData, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Rotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Rotation_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Location,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::NewProp_Rotation,
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityThumbnailData, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Rotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Rotation_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Location,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::NewProp_Rotation,
 	};
-#endif // WITH_EDITORONLY_DATA
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Asset,
 		nullptr,
 		&NewStructOps,
-		"T4EntityEditorThumbnailData",
-		sizeof(FT4EntityEditorThumbnailData),
-		alignof(FT4EntityEditorThumbnailData),
-		IF_WITH_EDITORONLY_DATA(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::PropPointers, nullptr),
-		IF_WITH_EDITORONLY_DATA(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::PropPointers), 0),
+		"T4EntityThumbnailData",
+		sizeof(FT4EntityThumbnailData),
+		alignof(FT4EntityThumbnailData),
+		Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000201),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData()
+	UScriptStruct* Z_Construct_UScriptStruct_FT4EntityThumbnailData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4EntityThumbnailData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityEditorThumbnailData"), sizeof(FT4EntityEditorThumbnailData), Get_Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EntityThumbnailData"), sizeof(FT4EntityThumbnailData), Get_Z_Construct_UScriptStruct_FT4EntityThumbnailData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EntityThumbnailData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData_Hash() { return 2766613254U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityThumbnailData_Hash() { return 3375507935U; }
 	void UT4EntityAsset::StaticRegisterNativesUT4EntityAsset()
 	{
 	}
@@ -1520,14 +1515,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnai
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_EDITORONLY_DATA
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailImage_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThumbnailImage;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailData_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailData;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TestAutomation_MetaData[];
 #endif
@@ -1559,21 +1546,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnai
 #endif
 #if WITH_EDITORONLY_DATA
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
-		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EntityAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailData_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "Comment", "// #100, #103\n" },
-		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
-		{ "ToolTip", "#100, #103" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailData = { "ThumbnailData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EntityAsset, ThumbnailData), Z_Construct_UScriptStruct_FT4EntityEditorThumbnailData, METADATA_PARAMS(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailData_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_TestAutomation_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Entity/T4EntityAsset.h" },
@@ -1590,8 +1562,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnai
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_PlayTagData = { "PlayTagData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EntityAsset, PlayTagData), Z_Construct_UScriptStruct_FT4EntityPlayTagData, METADATA_PARAMS(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_PlayTagData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_PlayTagData_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4EntityAsset_Statics::PropPointers[] = {
 #if WITH_EDITORONLY_DATA
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailImage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_ThumbnailData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_TestAutomation,
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EntityAsset_Statics::NewProp_PlayTagData,
@@ -1623,7 +1593,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityEditorThumbnai
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EntityAsset, 4107000653);
+	IMPLEMENT_CLASS(UT4EntityAsset, 277109670);
 	template<> T4ASSET_API UClass* StaticClass<UT4EntityAsset>()
 	{
 		return UT4EntityAsset::StaticClass();

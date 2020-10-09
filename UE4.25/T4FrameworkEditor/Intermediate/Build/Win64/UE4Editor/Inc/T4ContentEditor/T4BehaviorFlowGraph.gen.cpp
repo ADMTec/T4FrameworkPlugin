@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraph.h"
+#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/Graph/T4BehaviorFlowGraph.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -50,13 +50,13 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraph() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraph_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraph.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraph.h" },
+		{ "IncludePath", "SubEditor/BehaviorEditor/Graph/T4BehaviorFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Graph/T4BehaviorFlowGraph.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraph_Statics::NewProp_bIsUsingModCounter_MetaData[] = {
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Graph/T4BehaviorFlowGraph.h" },
 	};
 #endif
 	void Z_Construct_UClass_UT4BehaviorFlowGraph_Statics::NewProp_bIsUsingModCounter_SetBit(void* Obj)
@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraph() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraph_Statics::NewProp_ModCounter_MetaData[] = {
 		{ "Comment", "/** increased with every graph rebuild, used to refresh data from subtrees */" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Graph/T4BehaviorFlowGraph.h" },
 		{ "ToolTip", "increased with every graph rebuild, used to refresh data from subtrees" },
 	};
 #endif
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraph() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BehaviorFlowGraph, 758315054);
+	IMPLEMENT_CLASS(UT4BehaviorFlowGraph, 2702760728);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4BehaviorFlowGraph>()
 	{
 		return UT4BehaviorFlowGraph::StaticClass();

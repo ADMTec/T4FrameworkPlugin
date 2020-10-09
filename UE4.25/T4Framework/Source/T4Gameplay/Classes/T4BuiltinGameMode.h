@@ -15,7 +15,11 @@ class T4GAMEPLAY_API AT4BuiltinGameMode : public AT4GameModeBase
 {
 	GENERATED_UCLASS_BODY()
 
+public:
+	UFUNCTION(BlueprintCallable, Category = "InGame")
+	void OnDialogueClicked(); // #163
+
 protected:
-	void NotifyStartPlay() override; // #144
-	void NotifyStartToLeaveMap() override;
+	virtual void NotifyStartPlay() override; // #144
+	virtual void NotifyStartToLeaveMap() override;
 };

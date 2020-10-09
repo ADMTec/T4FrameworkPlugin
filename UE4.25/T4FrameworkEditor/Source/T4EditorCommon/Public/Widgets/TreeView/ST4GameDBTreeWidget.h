@@ -20,8 +20,6 @@ public:
 	SLATE_BEGIN_ARGS(ST4GameDBTreeWidget) {}
 		SLATE_ARGUMENT(bool, bAutoHeight) // #135
 		SLATE_ARGUMENT(int32, MaxHeight) // #135
-		SLATE_ARGUMENT(float, ColumnIDWidth) // #158
-		SLATE_ARGUMENT(float, ColumnInfoWidth) // #158
 		SLATE_EVENT(FT4OnSelected, OnSelected)
 		SLATE_EVENT(FT4OnDoubleClicked, OnDoubleClicked)
 		SLATE_EVENT(FT4OnAddItem, OnAddItem)
@@ -34,7 +32,11 @@ public:
 		SLATE_EVENT(FT4OnTreeExpanded, OnTreeExpanded) // #122
 	SLATE_END_ARGS();
 
-	void Construct(const FArguments& InArgs, ET4GameDBType InGameDBType);
+	void Construct(
+		const FArguments& InArgs, 
+		ET4GameDBType InGameDBType,
+		const FT4GameDBTreeColumnWidthInfo& InColumnWidthInfo // #158
+	);
 
 	ST4GameDBTreeWidget();
 	~ST4GameDBTreeWidget();
@@ -62,5 +64,5 @@ private:
 	ET4GameDBType GameDBType;
 
 	TSharedPtr<SHeaderRow> HeaderRowWidgetPtr;
-	FT4GameDBTreeColumnWidthInfo HeaderColumnWidthInfo; // #158
+	FT4GameDBTreeColumnWidthInfo ColumnWidthInfo; // #158
 };

@@ -36,6 +36,8 @@ enum class ET4GamePacketCS : uint32
 	SkillCancel, // #113, #116
 	SkillTarget, // #116
 
+	DialogueAnswer, // #163
+
 	// Test
 	CmdGameStart, // #161
 

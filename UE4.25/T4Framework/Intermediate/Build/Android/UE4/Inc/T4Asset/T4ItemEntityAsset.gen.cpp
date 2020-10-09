@@ -32,6 +32,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ItemEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ItemEntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ItemEntityAsset();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
+	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityThumbnailData();
 	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityImportSettingData();
 // End Cross Module References
 class UScriptStruct* FT4EditorTestItemData::StaticStruct()
@@ -482,6 +484,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemPhysicalDa
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EditorTestItemData;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailImage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThumbnailImage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailData;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DropMeshImportSettings_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DropMeshImportSettings;
@@ -526,6 +536,20 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemPhysicalDa
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_EditorTestItemData = { "EditorTestItemData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ItemEntityAsset, EditorTestItemData), Z_Construct_UScriptStruct_FT4EditorTestItemData, METADATA_PARAMS(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_EditorTestItemData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_EditorTestItemData_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
+		{ "Category", "Hide" },
+		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ItemEntityAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailData_MetaData[] = {
+		{ "Category", "Hide" },
+		{ "ModuleRelativePath", "Classes/Entity/T4ItemEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailData = { "ThumbnailData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ItemEntityAsset, ThumbnailData), Z_Construct_UScriptStruct_FT4EntityThumbnailData, METADATA_PARAMS(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailData_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_DropMeshImportSettings_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "DisplayName", "ImportSettings" },
@@ -561,6 +585,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemPhysicalDa
 #if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_EditorTestItemData,
 #endif // WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailImage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_ThumbnailData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_DropMeshImportSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_DropMeshRendering,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ItemEntityAsset_Statics::NewProp_DropMeshPhysical,
@@ -593,7 +619,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemPhysicalDa
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ItemEntityAsset, 539125970);
+	IMPLEMENT_CLASS(UT4ItemEntityAsset, 1610400234);
 	template<> T4ASSET_API UClass* StaticClass<UT4ItemEntityAsset>()
 	{
 		return UT4ItemEntityAsset::StaticClass();

@@ -46,8 +46,17 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEnemyType>();
 enum class ET4GameStatItemCategory : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameStatItemCategory>();
 
+#define FOREACH_ENUM_ET4GAMEDIALOGUESPEAKERTYPE(op) \
+	op(ET4GameDialogueSpeakerType::Player) \
+	op(ET4GameDialogueSpeakerType::NPC) \
+	op(ET4GameDialogueSpeakerType::None) 
+
+enum class ET4GameDialogueSpeakerType : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameDialogueSpeakerType>();
+
 #define FOREACH_ENUM_ET4GAMETEXTCATEGORY(op) \
 	op(ET4GameTextCategory::Name) \
+	op(ET4GameTextCategory::Title) \
 	op(ET4GameTextCategory::World) \
 	op(ET4GameTextCategory::Quest) \
 	op(ET4GameTextCategory::Mission) \
@@ -118,7 +127,7 @@ enum class ET4GameMissionType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameMissionType>();
 
 #define FOREACH_ENUM_ET4GAMEQUESTTARGET(op) \
-	op(ET4GameQuestTarget::Personal) 
+	op(ET4GameQuestTarget::All) 
 
 enum class ET4GameQuestTarget : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameQuestTarget>();

@@ -28,14 +28,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class ET4GameTargetParamType : uint8;
 template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GameTargetParamType>();
 
-#define FOREACH_ENUM_ET4GAMEQUESTRESULT(op) \
-	op(ET4GameQuestResult::Completed_By_QuestKey) \
-	op(ET4GameQuestResult::Completed_By_QuestDBKey) \
-	op(ET4GameQuestResult::Completed_All) \
-	op(ET4GameQuestResult::None) 
+#define FOREACH_ENUM_ET4GAMEDIALOGUERESULT(op) \
+	op(ET4GameDialogueResult::OK) \
+	op(ET4GameDialogueResult::Yes) \
+	op(ET4GameDialogueResult::NO) \
+	op(ET4GameDialogueResult::None) 
 
-enum class ET4GameQuestResult : uint8;
-template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GameQuestResult>();
+enum class ET4GameDialogueResult : uint8;
+template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GameDialogueResult>();
 
 #define FOREACH_ENUM_ET4CONTROLMODETYPE(op) \
 	op(ET4ControlModeType::TPS) \

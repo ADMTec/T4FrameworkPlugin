@@ -10,12 +10,14 @@
 struct FT4GameDBTreeColumnWidthInfo // #158
 {
 	FT4GameDBTreeColumnWidthInfo()
-		: IDWidth(180.0f)
-		, InfoWidth(300.0f)
+		: IDWidth(160.0f)
+		, UIDWidth(60.0f)
+		, TitleWidth(300.0f)
 	{
 	}
 	float IDWidth;
-	float InfoWidth;
+	float UIDWidth;
+	float TitleWidth;
 };
 
 struct FT4StatDBTreeColumnWidthInfo // #163

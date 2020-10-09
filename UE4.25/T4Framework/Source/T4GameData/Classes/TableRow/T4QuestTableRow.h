@@ -28,7 +28,7 @@ public:
 
 public:
 	FT4ContentMissionData()
-		: QuestTarget(ET4GameQuestTarget::Personal)
+		: QuestTarget(ET4GameQuestTarget::All)
 	{
 	}
 };
@@ -95,7 +95,7 @@ public:
 
 	FT4QuestTableRow()
 		: Version(EVersion::LatestVersion) // #135
-		, QuestTarget(ET4GameQuestTarget::Personal) // #164
+		, QuestTarget(ET4GameQuestTarget::All) // #164
 		, bUseMultipleMissions(false)
 		, QuestMissionType(ET4GameMissionType::None)
 		, QuestMissionRule(ET4GameMissionRule::None)

@@ -845,6 +845,43 @@ public:
 
 // #163
 USTRUCT()
+struct T4GAMEDATA_API FT4TitleTextDBKey : public FT4TextDBKey
+{
+	GENERATED_USTRUCT_BODY()
+
+public:
+	FT4TitleTextDBKey()
+		: FT4TextDBKey(ET4GameTextCategory::Title)
+	{
+	}
+
+	FT4TitleTextDBKey(const FName& InRowTitle)
+		: FT4TextDBKey(InRowTitle, ET4GameTextCategory::Title)
+	{
+	}
+
+	FT4TitleTextDBKey(const FT4GameDBKey& InGameDBKey)
+		: FT4TextDBKey(InGameDBKey.RowName, ET4GameTextCategory::Title)
+	{
+		ensure(ET4GameDBType::Text == InGameDBKey.Type);
+	}
+
+	FORCEINLINE FT4GameDBKey operator=(const FT4TitleTextDBKey& InRhs)
+	{
+		Type = InRhs.Type;
+		RowName = InRhs.RowName;
+		return *this;
+	}
+
+	FORCEINLINE FT4TitleTextDBKey operator=(const FT4GameDBKey& InRhs)
+	{
+		RowName = InRhs.RowName;
+		return *this;
+	}
+};
+
+// #163
+USTRUCT()
 struct T4GAMEDATA_API FT4WorldTextDBKey : public FT4TextDBKey
 {
 	GENERATED_USTRUCT_BODY()

@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4MissionTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WorldTextDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TitleTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NameTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameTextCategory();
@@ -531,6 +532,76 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WorldTextDBKey
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FT4WorldTextDBKey_Hash() { return 375181408U; }
+class UScriptStruct* FT4TitleTextDBKey::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4TitleTextDBKey_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4TitleTextDBKey, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4TitleTextDBKey"), sizeof(FT4TitleTextDBKey), Get_Z_Construct_UScriptStruct_FT4TitleTextDBKey_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4TitleTextDBKey>()
+{
+	return FT4TitleTextDBKey::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4TitleTextDBKey(FT4TitleTextDBKey::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4TitleTextDBKey"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4TitleTextDBKey
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4TitleTextDBKey()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4TitleTextDBKey")),new UScriptStruct::TCppStructOps<FT4TitleTextDBKey>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4TitleTextDBKey;
+	struct Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
+		{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
+		{ "ToolTip", "#163" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4TitleTextDBKey>();
+	}
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		Z_Construct_UScriptStruct_FT4TextDBKey,
+		&NewStructOps,
+		"T4TitleTextDBKey",
+		sizeof(FT4TitleTextDBKey),
+		alignof(FT4TitleTextDBKey),
+		nullptr,
+		0,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4TitleTextDBKey()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4TitleTextDBKey_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4TitleTextDBKey"), sizeof(FT4TitleTextDBKey), Get_Z_Construct_UScriptStruct_FT4TitleTextDBKey_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4TitleTextDBKey_Hash() { return 1222214266U; }
 class UScriptStruct* FT4NameTextDBKey::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GamePacketSC_Game_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_260_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_286_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_InventoryAdd_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_InventoryAdd>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_229_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_252_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueFinish_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -29,7 +29,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Inv
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_DialogueFinish>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_198_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Game_h_204_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_DialogueUpdate_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;

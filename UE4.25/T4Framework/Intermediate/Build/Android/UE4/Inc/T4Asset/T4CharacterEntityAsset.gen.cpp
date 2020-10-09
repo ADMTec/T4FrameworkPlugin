@@ -1972,7 +1972,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterPhysi
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 1417101824);
+	IMPLEMENT_CLASS(UT4CharacterEntityAsset, 3005435016);
 	template<> T4ASSET_API UClass* StaticClass<UT4CharacterEntityAsset>()
 	{
 		return UT4CharacterEntityAsset::StaticClass();

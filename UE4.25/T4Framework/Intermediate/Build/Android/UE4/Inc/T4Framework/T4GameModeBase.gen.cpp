@@ -17,9 +17,18 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4GameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameMode();
 	UPackage* Z_Construct_UPackage__Script_T4Framework();
+	SLATECORE_API UScriptStruct* Z_Construct_UScriptStruct_FSlateBrush();
 	UMG_API UEnum* Z_Construct_UEnum_UMG_ESlateVisibility();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AT4GameModeBase::execGetBrush)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_InKeyName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FSlateBrush*)Z_Param__Result=P_THIS->GetBrush(Z_Param_InKeyName);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AT4GameModeBase::execGetText)
 	{
 		P_GET_PROPERTY(FNameProperty,Z_Param_InKeyName);
@@ -40,10 +49,58 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 	{
 		UClass* Class = AT4GameModeBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetBrush", &AT4GameModeBase::execGetBrush },
 			{ "GetText", &AT4GameModeBase::execGetText },
 			{ "GetTextVisibility", &AT4GameModeBase::execGetTextVisibility },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics
+	{
+		struct T4GameModeBase_eventGetBrush_Parms
+		{
+			FName InKeyName;
+			FSlateBrush ReturnValue;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InKeyName;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GameModeBase_eventGetBrush_Parms, ReturnValue), Z_Construct_UScriptStruct_FSlateBrush, METADATA_PARAMS(Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_ReturnValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_ReturnValue_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_InKeyName = { "InKeyName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4GameModeBase_eventGetBrush_Parms, InKeyName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::NewProp_InKeyName,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::Function_MetaDataParams[] = {
+		{ "Category", "GameMode" },
+		{ "Comment", "// #164\n" },
+		{ "ModuleRelativePath", "Classes/T4GameModeBase.h" },
+		{ "ToolTip", "#164" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4GameModeBase, nullptr, "GetBrush", nullptr, nullptr, sizeof(T4GameModeBase_eventGetBrush_Parms), Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4GameModeBase_GetBrush()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4GameModeBase_GetBrush_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AT4GameModeBase_GetText_Statics
 	{
@@ -68,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GameModeBase_GetText_Statics::Function_MetaDataParams[] = {
-		{ "Category", "TextMap" },
+		{ "Category", "GameMode" },
 		{ "Comment", "// #164\n" },
 		{ "ModuleRelativePath", "Classes/T4GameModeBase.h" },
 		{ "ToolTip", "#164" },
@@ -110,7 +167,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4GameModeBase_GetTextVisibility_Statics::Function_MetaDataParams[] = {
-		{ "Category", "TextMap" },
+		{ "Category", "GameMode" },
 		{ "Comment", "// #164 : GameMode \xec\x99\xb8 \xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x9c\xbc\xeb\xa1\x9c \xec\x98\xae\xea\xb8\xb4\xeb\x8b\xa4. \xec\x9e\x84\xec\x8b\x9c \xec\x82\xac\xec\x9a\xa9 (TODO)\n" },
 		{ "ModuleRelativePath", "Classes/T4GameModeBase.h" },
 		{ "ToolTip", "#164 : GameMode \xec\x99\xb8 \xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x9c\xbc\xeb\xa1\x9c \xec\x98\xae\xea\xb8\xb4\xeb\x8b\xa4. \xec\x9e\x84\xec\x8b\x9c \xec\x82\xac\xec\x9a\xa9 (TODO)" },
@@ -152,8 +209,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Framework,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AT4GameModeBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AT4GameModeBase_GetText, "GetText" }, // 1818287238
-		{ &Z_Construct_UFunction_AT4GameModeBase_GetTextVisibility, "GetTextVisibility" }, // 168698692
+		{ &Z_Construct_UFunction_AT4GameModeBase_GetBrush, "GetBrush" }, // 3173821888
+		{ &Z_Construct_UFunction_AT4GameModeBase_GetText, "GetText" }, // 1539758329
+		{ &Z_Construct_UFunction_AT4GameModeBase_GetTextVisibility, "GetTextVisibility" }, // 522022675
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4GameModeBase_Statics::Class_MetaDataParams[] = {
@@ -206,7 +264,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4GameModeBase, 92340197);
+	IMPLEMENT_CLASS(AT4GameModeBase, 4293424283);
 	template<> T4FRAMEWORK_API UClass* StaticClass<AT4GameModeBase>()
 	{
 		return AT4GameModeBase::StaticClass();

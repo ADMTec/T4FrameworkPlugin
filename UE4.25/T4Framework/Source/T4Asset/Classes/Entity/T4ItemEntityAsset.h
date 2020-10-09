@@ -118,6 +118,15 @@ public:
 	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
 	//~ End UObject interface
 
+public:
+	void SetThumbnailImage(UTexture2D* InImage) override; // #163 : 에디터용에서 컨텐츠 용도로 변경
+	void SetThumbnailData(const FVector& InLocation, const FRotator& InRotation) // #163
+	{
+		ThumbnailData.Location = InLocation;
+		ThumbnailData.Rotation = InRotation;
+	}
+	const FT4EntityThumbnailData* GetThumbnailData() const { return &ThumbnailData; } // #163
+
 #if WITH_EDITOR
 	virtual bool IsSpawnable() override // #131
 	{
@@ -169,6 +178,12 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "ImportSettings"))
 	FT4EntityImportSettingData DropMeshImportSettings;
+
+	UPROPERTY(EditAnywhere, Category = Hide)
+	FT4EntityThumbnailData ThumbnailData;
+
+	UPROPERTY(EditAnywhere, Category = Hide)
+	UTexture2D* ThumbnailImage; // #163 : 에디터용에서 컨텐츠 용도로 변경
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor, meta = (DisplayName = "Test"))

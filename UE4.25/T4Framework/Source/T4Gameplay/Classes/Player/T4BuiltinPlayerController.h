@@ -7,6 +7,7 @@
 #include "Protocol/Server/T4GamePacketCS_Status.h"
 #include "Protocol/Server/T4GamePacketCS_Move.h"
 #include "Protocol/Server/T4GamePacketCS_Action.h"
+#include "Protocol/Server/T4GamePacketCS_Game.h" // #163
 #include "Protocol/Server/T4GamePacketCS_Command.h"
 
 #include "Protocol/Client/T4GamePacketSC_Action.h"
@@ -95,6 +96,9 @@ private:
 
 	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_SkillTarget(const FT4GamePacketCS_SkillTarget& InPacket);
+
+	UFUNCTION(Reliable, server, WithValidation)
+	void CS_RecvPacket_DialogueAnswer(const FT4GamePacketCS_DialogueAnswer& InPacket); // #163
 
 	UFUNCTION(Reliable, server, WithValidation)
 	void CS_RecvPacket_CmdGameStart(const FT4GamePacketCS_CmdGameStart& InPacket); // #161

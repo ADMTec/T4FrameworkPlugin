@@ -4,18 +4,17 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4GameData/Public/T4GameDataTypes.h"
-#include "T4GameData/Public/T4GameDataStructs.h"
 #include "T4GameData/Public/T4GameDBTypes.h"
 #include "BehaviorTree/BTTaskNode.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
-#include "T4QFTask_T4MissionCue.generated.h"
+#include "T4QFTask_T4MissionPlay.generated.h"
 
 /**
-  * #164
+  * #163
  */
 class UT4SpawnAsset;
 UCLASS(hidecategories = (Task))
-class T4GAMEPLAY_API UT4QFTask_T4MissionCue : public UBTTaskNode
+class T4GAMEPLAY_API UT4QFTask_T4MissionPlay : public UBTTaskNode
 {
 	GENERATED_UCLASS_BODY()
 
@@ -34,7 +33,4 @@ public:
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
 	TSoftObjectPtr<UT4SpawnAsset> MissionSpawnAsset;
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4GameWorldSettings OverrideWorldSettings;
 };

@@ -18,8 +18,43 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 	T4FRAMEWORK_API UClass* Z_Construct_UClass_AT4GameModeBase();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
 // End Cross Module References
+	DEFINE_FUNCTION(AT4BuiltinGameMode::execOnDialogueClicked)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnDialogueClicked();
+		P_NATIVE_END;
+	}
 	void AT4BuiltinGameMode::StaticRegisterNativesAT4BuiltinGameMode()
 	{
+		UClass* Class = AT4BuiltinGameMode::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnDialogueClicked", &AT4BuiltinGameMode::execOnDialogueClicked },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics::Function_MetaDataParams[] = {
+		{ "Category", "InGame" },
+		{ "ModuleRelativePath", "Classes/T4BuiltinGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinGameMode, nullptr, "OnDialogueClicked", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AT4BuiltinGameMode_NoRegister()
 	{
@@ -28,6 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 	struct Z_Construct_UClass_AT4BuiltinGameMode_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -37,6 +73,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 	UObject* (*const Z_Construct_UClass_AT4BuiltinGameMode_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AT4GameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AT4BuiltinGameMode_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AT4BuiltinGameMode_OnDialogueClicked, "OnDialogueClicked" }, // 1565434647
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AT4BuiltinGameMode_Statics::Class_MetaDataParams[] = {
@@ -56,11 +95,11 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009002ACu,
@@ -75,7 +114,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinGameMode, 1027556271);
+	IMPLEMENT_CLASS(AT4BuiltinGameMode, 1548136211);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinGameMode>()
 	{
 		return AT4BuiltinGameMode::StaticClass();

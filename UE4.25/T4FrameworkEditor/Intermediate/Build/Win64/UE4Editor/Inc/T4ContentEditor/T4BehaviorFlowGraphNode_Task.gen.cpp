@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Task.h"
+#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Task.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode_Task() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraphNode_Task_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Task.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode_Task.h" },
+		{ "IncludePath", "SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Task.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode_Task.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4BehaviorFlowGraphNode_Task_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode_Task() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode_Task, 2514649203);
+	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode_Task, 2688447397);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4BehaviorFlowGraphNode_Task>()
 	{
 		return UT4BehaviorFlowGraphNode_Task::StaticClass();

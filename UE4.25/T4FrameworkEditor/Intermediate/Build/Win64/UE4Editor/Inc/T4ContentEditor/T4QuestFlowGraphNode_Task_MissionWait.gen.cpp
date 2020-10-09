@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Task_MissionWait.h"
+#include "T4ContentEditor/Private/SubEditor/QuestEditor/Nodes/T4QuestFlowGraphNode_Task_MissionWait.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode_Task_MissionWait() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraphNode_Task_MissionWait_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Task_MissionWait.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraphNode_Task_MissionWait.h" },
+		{ "IncludePath", "SubEditor/QuestEditor/Nodes/T4QuestFlowGraphNode_Task_MissionWait.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Nodes/T4QuestFlowGraphNode_Task_MissionWait.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4QuestFlowGraphNode_Task_MissionWait_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraphNode_Task_MissionWait() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QuestFlowGraphNode_Task_MissionWait, 1252404694);
+	IMPLEMENT_CLASS(UT4QuestFlowGraphNode_Task_MissionWait, 222581341);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4QuestFlowGraphNode_Task_MissionWait>()
 	{
 		return UT4QuestFlowGraphNode_Task_MissionWait::StaticClass();

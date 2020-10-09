@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayTypes() {}
 // Cross Module References
 	T4GAMEPLAY_API UEnum* Z_Construct_UEnum_T4Gameplay_ET4GameTargetParamType();
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
-	T4GAMEPLAY_API UEnum* Z_Construct_UEnum_T4Gameplay_ET4GameQuestResult();
+	T4GAMEPLAY_API UEnum* Z_Construct_UEnum_T4Gameplay_ET4GameDialogueResult();
 	T4GAMEPLAY_API UEnum* Z_Construct_UEnum_T4Gameplay_ET4ControlModeType();
 // End Cross Module References
 	static UEnum* ET4GameTargetParamType_StaticEnum()
@@ -84,53 +84,53 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplayTypes() {}
 		}
 		return ReturnEnum;
 	}
-	static UEnum* ET4GameQuestResult_StaticEnum()
+	static UEnum* ET4GameDialogueResult_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
 		if (!Singleton)
 		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Gameplay_ET4GameQuestResult, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("ET4GameQuestResult"));
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Gameplay_ET4GameDialogueResult, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("ET4GameDialogueResult"));
 		}
 		return Singleton;
 	}
-	template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GameQuestResult>()
+	template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GameDialogueResult>()
 	{
-		return ET4GameQuestResult_StaticEnum();
+		return ET4GameDialogueResult_StaticEnum();
 	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameQuestResult(ET4GameQuestResult_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GameQuestResult"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GameQuestResult_Hash() { return 2373328426U; }
-	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GameQuestResult()
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameDialogueResult(ET4GameDialogueResult_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GameDialogueResult"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GameDialogueResult_Hash() { return 3557594494U; }
+	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GameDialogueResult()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameQuestResult"), 0, Get_Z_Construct_UEnum_T4Gameplay_ET4GameQuestResult_Hash(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameDialogueResult"), 0, Get_Z_Construct_UEnum_T4Gameplay_ET4GameDialogueResult_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameQuestResult::Completed_By_QuestKey", (int64)ET4GameQuestResult::Completed_By_QuestKey },
-				{ "ET4GameQuestResult::Completed_By_QuestDBKey", (int64)ET4GameQuestResult::Completed_By_QuestDBKey },
-				{ "ET4GameQuestResult::Completed_All", (int64)ET4GameQuestResult::Completed_All },
-				{ "ET4GameQuestResult::None", (int64)ET4GameQuestResult::None },
+				{ "ET4GameDialogueResult::OK", (int64)ET4GameDialogueResult::OK },
+				{ "ET4GameDialogueResult::Yes", (int64)ET4GameDialogueResult::Yes },
+				{ "ET4GameDialogueResult::NO", (int64)ET4GameDialogueResult::NO },
+				{ "ET4GameDialogueResult::None", (int64)ET4GameDialogueResult::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Comment", "// #164\n" },
-				{ "Completed_All.Name", "ET4GameQuestResult::Completed_All" },
-				{ "Completed_By_QuestDBKey.Name", "ET4GameQuestResult::Completed_By_QuestDBKey" },
-				{ "Completed_By_QuestKey.Name", "ET4GameQuestResult::Completed_By_QuestKey" },
+				{ "Comment", "// #163\n" },
 				{ "ModuleRelativePath", "Public/T4GameplayTypes.h" },
-				{ "None.Name", "ET4GameQuestResult::None" },
-				{ "ToolTip", "#164" },
+				{ "NO.Name", "ET4GameDialogueResult::NO" },
+				{ "None.Name", "ET4GameDialogueResult::None" },
+				{ "OK.Name", "ET4GameDialogueResult::OK" },
+				{ "ToolTip", "#163" },
+				{ "Yes.Name", "ET4GameDialogueResult::Yes" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_T4Gameplay,
 				nullptr,
-				"ET4GameQuestResult",
-				"ET4GameQuestResult",
+				"ET4GameDialogueResult",
+				"ET4GameDialogueResult",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

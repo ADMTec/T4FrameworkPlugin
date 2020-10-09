@@ -13,9 +13,11 @@
 UENUM()
 enum class ET4QFBranchConditionType : int8
 {
-	Race,
-	HP,
-	Level,
+	Race, // Mission
+	HP, // Mission
+	Level, // Mission
+
+	FirstMeet, // Dialogue
 
 	None,
 };

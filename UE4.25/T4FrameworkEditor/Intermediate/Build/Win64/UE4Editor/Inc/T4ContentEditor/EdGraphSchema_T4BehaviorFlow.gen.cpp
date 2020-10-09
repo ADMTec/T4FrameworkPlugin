@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/BehaviorFlow/EdGraphSchema_T4BehaviorFlow.h"
+#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/Graph/EdGraphSchema_T4BehaviorFlow.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -53,7 +53,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4BehaviorFlow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4BehaviorFlowSchemaAction_AutoArrange_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/** Action to auto arrange the graph */" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/EdGraphSchema_T4BehaviorFlow.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Graph/EdGraphSchema_T4BehaviorFlow.h" },
 		{ "ToolTip", "Action to auto arrange the graph" },
 	};
 #endif
@@ -89,7 +89,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4BehaviorFlow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4BehaviorFlowSchemaAction_AutoArrange_Hash() { return 3292303780U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4BehaviorFlowSchemaAction_AutoArrange_Hash() { return 1939721972U; }
 	void UT4EdGraphSchema_T4BehaviorFlow::StaticRegisterNativesUT4EdGraphSchema_T4BehaviorFlow()
 	{
 	}
@@ -112,8 +112,8 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4BehaviorFlow
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EdGraphSchema_T4BehaviorFlow_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/BehaviorEditor/BehaviorFlow/EdGraphSchema_T4BehaviorFlow.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/EdGraphSchema_T4BehaviorFlow.h" },
+		{ "IncludePath", "SubEditor/BehaviorEditor/Graph/EdGraphSchema_T4BehaviorFlow.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Graph/EdGraphSchema_T4BehaviorFlow.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EdGraphSchema_T4BehaviorFlow_Statics::StaticCppClassTypeInfo = {
@@ -143,7 +143,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4BehaviorFlow
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EdGraphSchema_T4BehaviorFlow, 3992222519);
+	IMPLEMENT_CLASS(UT4EdGraphSchema_T4BehaviorFlow, 2623658223);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4EdGraphSchema_T4BehaviorFlow>()
 	{
 		return UT4EdGraphSchema_T4BehaviorFlow::StaticClass();

@@ -7,4 +7,5 @@
 #include "T4GamePacketCS_Status.h"
 #include "T4GamePacketCS_Move.h"
 #include "T4GamePacketCS_Action.h"
+#include "T4GamePacketCS_Game.h" // #163
 #include "T4GamePacketCS_Command.h"

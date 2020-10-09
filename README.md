@@ -1,5 +1,5 @@
-# T4FrameworkPlugin (v0.9.58)
-### The Most Powerful MMORPG and Action RPG Framework for UE4
+# T4FrameworkPlugin (v0.9.91)
+### The Most Powerful MMO Action RPG Framework for UE4
 
 ![Epic_MegaGrants_Recipient](./T4Framework_Title.png)
 
@@ -10,7 +10,7 @@
     - 4.25 (Release Version : 4.25.3)
   - Windows, Android (Oculus Quest)
 - **라이선스**
-  - 베타 테스트 버전(v0.9.xx)을 배포중이며 무료로 사용하실 수 있습니다. (10/08일 까지...)
+  - 베타 테스트 버전(v0.9.xx)을 배포중이며 무료로 사용하실 수 있습니다. (10/11일 까지...)
   - 정식 버전 v1.0 의 경우는 Subscription license 가 필요합니다.
 - **실행준비**
   - Download : [GitHub/Tech4Labs/T4FrameworkPlugin](https://github.com/Tech4Labs/T4FrameworkPlugin)
@@ -18,16 +18,15 @@
   - Download : [GitHub/Tech4Labs/T4FrameworkExample](https://github.com/Tech4Labs/T4FrameworkExample)
     - Tutorial : [예제 설치 및 실행 (Install Example Project)](https://tech4labs.com/Tutorials/2_InstallExampleProject/)
 - **업데이트**
-  - **Milestone 7** (2020.07.06 ~ 2020.10.08)
+  - **Milestone 7** (2020.07.06 ~ 2020.10.11)
     - https://tech4labs.com/T4Framework_Milestone7_Achieved/
-  - **v0.9.58** : 2020.10.07
-	- #163 [기능추가] Content Editor, Stat/Text GameDB 를 전용 에디터를 통해 최적화된 편집이 가능하도록 기능 추가
-    - #161 [기능추가] Content Editor, SpawnAsset 내 Player 의 시작 위치를 지정할 수 있는 메뉴 및 기능 추가
-	- #163 [기능개선] Content Editor, GameDB 에서 사용하는 모든 UI 스트링을 TextDB 를 사용하도록 수정
-	- #163 [버그수정] Content Editor, 동일 GameDBType 의 Item 선택 시 GameDBEditor (Stat/Text포함) 가 중복해서 오픈되는 문제 수정
-	- #170 [버그수정] Content Editor, Skill DB 에 Approach 기능 추가 후 이동 공격이 정상적으로 동작하지 않던 문제 수정
-	- #158 [버그수정] Content Editor, 뷰포트에서 플레이어 캐릭터를 교체 또는 재스폰 할 경우 간헐적으로 전투 플레이가 되지 않던 문제 수정
-    - #158 [버그수정] Content Editor, Weapon 류의 Item 선택한 모델이 Thumbnail Preview 에 출력되지 않던 문제 수정
+  - **v0.9.91** : 2020.10.09
+    - #163 [기능추가] Quest Editor, Dialogue System 을 QuestFlow 를 통해 설정, 동작 할 수 있도록 기능 추가
+    - #163 [기능개선] Quest Editor, Mission Node 하위에 추가 Mission Node 를 사용할 수 있도록 기능 개선
+    - #163 [기능개선] Text/Stat DBEditor Search Filter 로 주요 Column 의 값을 검색할 수 있도록 기능 개선
+	- #163 [기능개선] Content Editor, 툴바에 진행중인 퀘스트를 완료할 수 있는 "Complete This Step" 옵션 추가
+	- #158 [기능개선] Content Editor, Game DB TreeView 에 UID Column 추가
+	- #163 [버그수정] QuestFlow Editor 에서 MissionCue 의 Title Text 가 출력되지 않던 문제 수정
   - 이전 업데이트
     - [Update History](./UpdateHistory.md)
 - **참고영상**

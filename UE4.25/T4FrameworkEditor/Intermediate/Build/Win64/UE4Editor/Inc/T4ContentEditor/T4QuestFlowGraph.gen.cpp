@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraph.h"
+#include "T4ContentEditor/Private/SubEditor/QuestEditor/Graph/T4QuestFlowGraph.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -50,13 +50,13 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraph() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraph_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraph.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraph.h" },
+		{ "IncludePath", "SubEditor/QuestEditor/Graph/T4QuestFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Graph/T4QuestFlowGraph.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraph_Statics::NewProp_bIsUsingModCounter_MetaData[] = {
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Graph/T4QuestFlowGraph.h" },
 	};
 #endif
 	void Z_Construct_UClass_UT4QuestFlowGraph_Statics::NewProp_bIsUsingModCounter_SetBit(void* Obj)
@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraph() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4QuestFlowGraph_Statics::NewProp_ModCounter_MetaData[] = {
 		{ "Comment", "/** increased with every graph rebuild, used to refresh data from subtrees */" },
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/T4QuestFlowGraph.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Graph/T4QuestFlowGraph.h" },
 		{ "ToolTip", "increased with every graph rebuild, used to refresh data from subtrees" },
 	};
 #endif
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QuestFlowGraph() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4QuestFlowGraph, 1636631398);
+	IMPLEMENT_CLASS(UT4QuestFlowGraph, 4277773440);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4QuestFlowGraph>()
 	{
 		return UT4QuestFlowGraph::StaticClass();

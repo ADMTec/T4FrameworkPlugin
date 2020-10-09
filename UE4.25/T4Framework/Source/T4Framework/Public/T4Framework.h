@@ -241,6 +241,9 @@ public:
 	virtual UT4GameObjectBase* GetPlayerClientObject() const = 0; // #114 : Only Client
 	virtual IT4PlayerController* GetPlayerController() const = 0;
 
+	virtual bool IsInputControlLocked() const = 0;
+	virtual void SetLockInputControl(bool bInLock) = 0; // #30
+
 	virtual bool IsHMDConnected() const = 0; // #153
 	virtual bool IsGamepadAttached() const = 0; // #151 : FSlateApplication::IsGamepadAttached or FSlateApplication::IsFakingTouchEvents
 
@@ -324,9 +327,6 @@ public:
 
 	virtual float GetGlboalTimeScale() const = 0; // #117
 	virtual void SetGlobalTimeScale(float InTimeScale) = 0; // #117
-
-	virtual bool IsInputControlLocked() const = 0;
-	virtual void SetLockInputControl(bool bInLock) = 0; // #30
 
 	virtual bool IsChangePlayerDisabled() const = 0;
 	virtual void SetDisableChangePlayer(bool bInDisable) = 0; // #72

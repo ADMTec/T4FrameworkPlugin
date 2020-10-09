@@ -24,6 +24,8 @@ public:
 	ST4GameDBDropListWidget();
 	~ST4GameDBDropListWidget();
 
+	ET4GameDBType GetGameDBType() const { return GameDBType; }
+
 protected:
 	void UpdateItemLists() override;
 

@@ -32,12 +32,25 @@ enum ET4GameHotKeyType // #116
 	HotKey_None,
 };
 
+#if 0
 UENUM()
 enum class ET4GameQuestResult : uint8 // #164
 {
 	Completed_By_QuestKey,
 	Completed_By_QuestDBKey,
 	Completed_All,
+
+	None,
+};
+#endif
+
+UENUM()
+enum class ET4GameDialogueResult : uint8 // #163
+{
+	OK,
+
+	Yes,
+	NO,
 
 	None,
 };

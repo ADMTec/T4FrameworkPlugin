@@ -1164,10 +1164,15 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQ
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bFinishAll_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bStopAll_MetaData[];
 #endif
-		static void NewProp_bFinishAll_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bFinishAll;
+		static void NewProp_bStopAll_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bStopAll;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCompleteThisStep_MetaData[];
+#endif
+		static void NewProp_bCompleteThisStep_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCompleteThisStep;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SenderID_MetaData[];
 #endif
@@ -1187,16 +1192,27 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQ
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4GamePacketCS_CmdQuestFinish>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll_SetBit(void* Obj)
 	{
-		((FT4GamePacketCS_CmdQuestFinish*)Obj)->bFinishAll = 1;
+		((FT4GamePacketCS_CmdQuestFinish*)Obj)->bStopAll = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll = { "bFinishAll", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketCS_CmdQuestFinish), &Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll = { "bStopAll", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketCS_CmdQuestFinish), &Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Server/T4GamePacketCS_Command.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep_SetBit(void* Obj)
+	{
+		((FT4GamePacketCS_CmdQuestFinish*)Obj)->bCompleteThisStep = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep = { "bCompleteThisStep", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4GamePacketCS_CmdQuestFinish), &Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData[] = {
 		{ "Category", "Default" },
@@ -1205,7 +1221,8 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQ
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID = { "SenderID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketCS_CmdQuestFinish, SenderID), Z_Construct_UScriptStruct_FT4ObjectID, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bFinishAll,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bStopAll,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_bCompleteThisStep,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::NewProp_SenderID,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Statics::ReturnStructParams = {
@@ -1236,7 +1253,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketCS_CmdQ
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash() { return 168422976U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketCS_CmdQuestFinish_Hash() { return 1497852829U; }
 class UScriptStruct* FT4GamePacketCS_CmdQuestStart::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

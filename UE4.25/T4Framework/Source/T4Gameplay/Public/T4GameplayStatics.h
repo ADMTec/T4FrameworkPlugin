@@ -42,6 +42,7 @@ public:
 	bool DoQuestFinish(ET4LayerType InLayerType, ET4GameQuestTarget InQuestTarget, const FGuid& InQuestKey); // #164
 #if WITH_EDITOR
 	bool DoQuestStopAll(ET4LayerType InLayerType);
+	bool DoQuestCompleteThisStep(ET4LayerType InLayerType); // #163
 #endif
 
 	bool DoWorldTravel(ET4LayerType InLayerType, const FT4GameDBKey& InWorldDBKey); // #144

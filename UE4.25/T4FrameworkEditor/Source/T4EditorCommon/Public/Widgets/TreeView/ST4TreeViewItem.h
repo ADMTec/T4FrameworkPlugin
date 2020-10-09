@@ -14,6 +14,17 @@ static const FName T4Editor_TreeViewColumnLabel = TEXT("Label");
 /**
   * #122
  */
+struct FT4ColumnStringInfo
+{
+	FT4ColumnStringInfo(const FString& InItemString, bool bInSearching)
+		: ColumnString(InItemString)
+		, bSearching(bInSearching)
+	{
+	}
+	FString ColumnString;
+	bool bSearching;
+};
+
 using FT4TreeViewNodePtr = TSharedPtr<class FT4TreeViewNode>;
 class T4EDITORCOMMON_API FT4TreeViewNode : public TSharedFromThis<FT4TreeViewNode>
 {
@@ -37,8 +48,18 @@ public:
 	{
 		if (LabelString.Contains(InSearchText))
 		{
-			// TODO : ColumnStringMap
 			return true;
+		}
+		for (TMap<FName, FT4ColumnStringInfo>::TConstIterator Itr(ColumnStringMap); Itr; ++Itr)
+		{
+			const FT4ColumnStringInfo& StringInfo = Itr.Value();
+			if (StringInfo.bSearching)
+			{
+				if (StringInfo.ColumnString.Contains(InSearchText))
+				{
+					return true;
+				}
+			}
 		}
 		return false;
 	}
@@ -62,7 +83,7 @@ public:
 	TArray<FT4TreeViewNodePtr> Children;
 
 	FString LabelString; // #122
-	TMap<FName, FString> ColumnStringMap; // #122, #163
+	TMap<FName, FT4ColumnStringInfo> ColumnStringMap; // #122, #163
 
 	bool bFolder; // #122
 	bool bError; // #124

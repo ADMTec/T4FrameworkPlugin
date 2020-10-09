@@ -14,26 +14,22 @@
   * #35
  */
 USTRUCT()
-struct T4ASSET_API FT4EntityEditorThumbnailData
+struct T4ASSET_API FT4EntityThumbnailData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
-	FT4EntityEditorThumbnailData()
-#if WITH_EDITORONLY_DATA
+	FT4EntityThumbnailData()
 		: Rotation(FRotator(0.0f, 180.0f, 0.0f))
 		, Location(FVector(500.0f, 0.0f, 110.0f))
-#endif
 	{
 	}
 
-#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FRotator Rotation;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FVector Location;
-#endif
 };
 
 USTRUCT()
@@ -349,6 +345,10 @@ public:
 	FString GetEntityDisplayName() const; // #87
 	const TCHAR* GetEntityTypeString() const; // #87
 
+	virtual void SetThumbnailImage(UTexture2D* InImage) {} // #163 : 에디터용에서 컨텐츠 용도로 변경
+	virtual void SetThumbnailData(const FVector& InLocation, const FRotator& InRotation) {} // #163
+	virtual const FT4EntityThumbnailData* GetThumbnailData() const { return nullptr; } // #163
+
 #if WITH_EDITOR
 	virtual bool IsSpawnable() { return false; } // #131
 
@@ -366,12 +366,6 @@ public:
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FT4EditorTestAutomationData TestAutomation; // #100, #103
-
-	UPROPERTY(EditAnywhere, Category = Editor)
-	FT4EntityEditorThumbnailData ThumbnailData;
-
-	UPROPERTY()
-	UTexture2D* ThumbnailImage; // Internal: The thumbnail image
 #endif
 
 private:

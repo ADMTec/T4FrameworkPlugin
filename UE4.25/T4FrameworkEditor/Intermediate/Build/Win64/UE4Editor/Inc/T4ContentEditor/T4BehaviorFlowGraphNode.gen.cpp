@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode.h"
+#include "T4ContentEditor/Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -51,14 +51,14 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraphNode_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode.h" },
+		{ "IncludePath", "SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraphNode_Statics::NewProp_bInjectedNode_MetaData[] = {
 		{ "Comment", "/** if set, this node was injected from subtree and shouldn't be edited */" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode.h" },
 		{ "ToolTip", "if set, this node was injected from subtree and shouldn't be edited" },
 	};
 #endif
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4BehaviorFlowGraphNode_Statics::NewProp_Services_MetaData[] = {
 		{ "Comment", "/** only some of Mission tree nodes support services */" },
-		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/BehaviorFlow/T4BehaviorFlowGraphNode.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/BehaviorEditor/Nodes/T4BehaviorFlowGraphNode.h" },
 		{ "ToolTip", "only some of Mission tree nodes support services" },
 	};
 #endif
@@ -108,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BehaviorFlowGraphNode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode, 798046256);
+	IMPLEMENT_CLASS(UT4BehaviorFlowGraphNode, 741322315);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4BehaviorFlowGraphNode>()
 	{
 		return UT4BehaviorFlowGraphNode::StaticClass();

@@ -317,6 +317,7 @@ public:
 	virtual bool DoQuestStart(const FName& InQuestDBKeyName) = 0; // #164
 
 	virtual bool DoQuestStopAll() = 0; // #164
+	virtual bool DoQuestCompleteThisStep() = 0; // #163
 	virtual bool DoQuestFinish(const FGuid& InQuestKey) = 0; // #164
 
 	virtual bool DoWorldTravel(const FName& InWorldDBKeyName) = 0; // #144

@@ -631,7 +631,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityPropPhysicalDa
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PropEntityAsset, 2698883980);
+	IMPLEMENT_CLASS(UT4PropEntityAsset, 3248238805);
 	template<> T4ASSET_API UClass* StaticClass<UT4PropEntityAsset>()
 	{
 		return UT4PropEntityAsset::StaticClass();

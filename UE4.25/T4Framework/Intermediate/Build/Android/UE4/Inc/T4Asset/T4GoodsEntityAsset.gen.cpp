@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GoodsEntityAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GoodsEntityAsset, 3558268120);
+	IMPLEMENT_CLASS(UT4GoodsEntityAsset, 4288423854);
 	template<> T4ASSET_API UClass* StaticClass<UT4GoodsEntityAsset>()
 	{
 		return UT4GoodsEntityAsset::StaticClass();

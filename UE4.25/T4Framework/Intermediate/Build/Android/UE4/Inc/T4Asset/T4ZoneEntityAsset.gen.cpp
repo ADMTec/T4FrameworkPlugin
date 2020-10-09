@@ -584,7 +584,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityZoneDebugData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ZoneEntityAsset, 3529475207);
+	IMPLEMENT_CLASS(UT4ZoneEntityAsset, 4071277646);
 	template<> T4ASSET_API UClass* StaticClass<UT4ZoneEntityAsset>()
 	{
 		return UT4ZoneEntityAsset::StaticClass();

@@ -31,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdTeleport();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTimeSync();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_CmdWorldTravel();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_DialogueAnswer();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_EquipItem();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_ExchangeItem();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4GamePacketCS_Jump();
@@ -637,6 +638,19 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		P_THIS->CS_RecvPacket_CmdGameStart_Implementation(Z_Param_InPacket);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_DialogueAnswer)
+	{
+		P_GET_STRUCT(FT4GamePacketCS_DialogueAnswer,Z_Param_InPacket);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->CS_RecvPacket_DialogueAnswer_Validate(Z_Param_InPacket))
+		{
+			RPC_ValidateFailed(TEXT("CS_RecvPacket_DialogueAnswer_Validate"));
+			return;
+		}
+		P_THIS->CS_RecvPacket_DialogueAnswer_Implementation(Z_Param_InPacket);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AT4BuiltinPlayerController::execCS_RecvPacket_SkillTarget)
 	{
 		P_GET_STRUCT(FT4GamePacketCS_SkillTarget,Z_Param_InPacket);
@@ -916,6 +930,13 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		T4BuiltinPlayerController_eventCS_RecvPacket_CmdWorldTravel_Parms Parms;
 		Parms.InPacket=InPacket;
 		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_CmdWorldTravel),&Parms);
+	}
+	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer = FName(TEXT("CS_RecvPacket_DialogueAnswer"));
+	void AT4BuiltinPlayerController::CS_RecvPacket_DialogueAnswer(FT4GamePacketCS_DialogueAnswer const& InPacket)
+	{
+		T4BuiltinPlayerController_eventCS_RecvPacket_DialogueAnswer_Parms Parms;
+		Parms.InPacket=InPacket;
+		ProcessEvent(FindFunctionChecked(NAME_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer),&Parms);
 	}
 	static FName NAME_AT4BuiltinPlayerController_CS_RecvPacket_EquipItem = FName(TEXT("CS_RecvPacket_EquipItem"));
 	void AT4BuiltinPlayerController::CS_RecvPacket_EquipItem(FT4GamePacketCS_EquipItem const& InPacket)
@@ -1355,6 +1376,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 			{ "CS_RecvPacket_CmdTeleport", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdTeleport },
 			{ "CS_RecvPacket_CmdWorldTimeSync", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdWorldTimeSync },
 			{ "CS_RecvPacket_CmdWorldTravel", &AT4BuiltinPlayerController::execCS_RecvPacket_CmdWorldTravel },
+			{ "CS_RecvPacket_DialogueAnswer", &AT4BuiltinPlayerController::execCS_RecvPacket_DialogueAnswer },
 			{ "CS_RecvPacket_EquipItem", &AT4BuiltinPlayerController::execCS_RecvPacket_EquipItem },
 			{ "CS_RecvPacket_ExchangeItem", &AT4BuiltinPlayerController::execCS_RecvPacket_ExchangeItem },
 			{ "CS_RecvPacket_Jump", &AT4BuiltinPlayerController::execCS_RecvPacket_Jump },
@@ -1551,7 +1573,9 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
 		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+		{ "ToolTip", "#163" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_CmdGameStart", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_CmdGameStart_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart_Statics::Function_MetaDataParams)) };
@@ -1937,6 +1961,42 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdWorldTravel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InPacket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InPacket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::NewProp_InPacket_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::NewProp_InPacket = { "InPacket", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(T4BuiltinPlayerController_eventCS_RecvPacket_DialogueAnswer_Parms, InPacket), Z_Construct_UScriptStruct_FT4GamePacketCS_DialogueAnswer, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::NewProp_InPacket_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::NewProp_InPacket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::NewProp_InPacket,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/Player/T4BuiltinPlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AT4BuiltinPlayerController, nullptr, "CS_RecvPacket_DialogueAnswer", nullptr, nullptr, sizeof(T4BuiltinPlayerController_eventCS_RecvPacket_DialogueAnswer_Parms), Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -4206,7 +4266,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_AnimSet, "CS_RecvPacket_AnimSet" }, // 1031288824
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdBookmark, "CS_RecvPacket_CmdBookmark" }, // 3692332218
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdChangePlayer, "CS_RecvPacket_CmdChangePlayer" }, // 1841975250
-		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart, "CS_RecvPacket_CmdGameStart" }, // 855826563
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdGameStart, "CS_RecvPacket_CmdGameStart" }, // 1490774605
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdItemEnter, "CS_RecvPacket_CmdItemEnter" }, // 1517377118
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdLeave, "CS_RecvPacket_CmdLeave" }, // 2245230882
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdNPCEnter, "CS_RecvPacket_CmdNPCEnter" }, // 2724010078
@@ -4217,6 +4277,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdTeleport, "CS_RecvPacket_CmdTeleport" }, // 3306950779
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdWorldTimeSync, "CS_RecvPacket_CmdWorldTimeSync" }, // 95428864
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_CmdWorldTravel, "CS_RecvPacket_CmdWorldTravel" }, // 1042421426
+		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_DialogueAnswer, "CS_RecvPacket_DialogueAnswer" }, // 1412880150
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_EquipItem, "CS_RecvPacket_EquipItem" }, // 620982398
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_ExchangeItem, "CS_RecvPacket_ExchangeItem" }, // 319479954
 		{ &Z_Construct_UFunction_AT4BuiltinPlayerController_CS_RecvPacket_Jump, "CS_RecvPacket_Jump" }, // 270335521
@@ -4314,7 +4375,7 @@ void EmptyLinkFunctionForGeneratedCodeT4BuiltinPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 3409700662);
+	IMPLEMENT_CLASS(AT4BuiltinPlayerController, 660390426);
 	template<> T4GAMEPLAY_API UClass* StaticClass<AT4BuiltinPlayerController>()
 	{
 		return AT4BuiltinPlayerController::StaticClass();

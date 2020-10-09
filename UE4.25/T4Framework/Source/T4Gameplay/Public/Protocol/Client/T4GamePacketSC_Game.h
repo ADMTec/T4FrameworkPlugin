@@ -168,7 +168,13 @@ struct FT4GamePacketSC_DialogueStart : public FT4GamePacketSC_Base // #163
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID ObjectID;
+	FGuid QuestUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid DialogueUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4TitleTextDBKey TitleTextDBKey;
 
 public:
 	FT4GamePacketSC_DialogueStart()
@@ -178,9 +184,9 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
-		if (!ObjectID.IsValid())
+		if (!DialogueUniqueID.IsValid())
 		{
-			OutMsg = TEXT("Invalid ObjectID");
+			OutMsg = TEXT("Invalid DialogueUniqueID");
 			return false;
 		}
 		return true;
@@ -199,7 +205,19 @@ struct FT4GamePacketSC_DialogueUpdate : public FT4GamePacketSC_Base // #163
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID ObjectID;
+	FGuid QuestUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid DialogueUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid DialogueCueUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4GameDBKey SpeakerDBKey;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FT4DialogueTextDBKey DialogueTextDBKey;
 
 public:
 	FT4GamePacketSC_DialogueUpdate()
@@ -209,9 +227,14 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
-		if (!ObjectID.IsValid())
+		if (!DialogueUniqueID.IsValid())
 		{
-			OutMsg = TEXT("Invalid ObjectID");
+			OutMsg = TEXT("Invalid DialogueUniqueID");
+			return false;
+		}
+		if (!DialogueCueUniqueID.IsValid())
+		{
+			OutMsg = TEXT("Invalid DialogueCueUniqueID");
 			return false;
 		}
 		return true;
@@ -230,7 +253,10 @@ struct FT4GamePacketSC_DialogueFinish : public FT4GamePacketSC_Base // #163
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	FT4ObjectID ObjectID;
+	FGuid QuestUniqueID;
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
+	FGuid DialogueUniqueID;
 
 public:
 	FT4GamePacketSC_DialogueFinish()
@@ -240,9 +266,9 @@ public:
 
 	bool Validate(FString& OutMsg) override
 	{
-		if (!ObjectID.IsValid())
+		if (!DialogueUniqueID.IsValid())
 		{
-			OutMsg = TEXT("Invalid ObjectID");
+			OutMsg = TEXT("Invalid DialogueUniqueID");
 			return false;
 		}
 		return true;

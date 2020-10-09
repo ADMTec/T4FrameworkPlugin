@@ -27,10 +27,10 @@ public:
 	FT4GameUID UID;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4QuestTextDBKey TitleTextDBKey; // #164
+	FT4WorldTextDBKey TitleTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FT4QuestTextDBKey DescriptionTextDBKey; // #164
+	FT4WorldTextDBKey DescriptionTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category= Common)
 	FName WorldTimeTag;

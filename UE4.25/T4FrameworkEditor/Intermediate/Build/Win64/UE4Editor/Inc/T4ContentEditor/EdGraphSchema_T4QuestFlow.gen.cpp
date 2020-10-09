@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4ContentEditor/Private/SubEditor/QuestEditor/QuestFlow/EdGraphSchema_T4QuestFlow.h"
+#include "T4ContentEditor/Private/SubEditor/QuestEditor/Graph/EdGraphSchema_T4QuestFlow.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -53,7 +53,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4QuestFlowSch
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4QuestFlowSchemaAction_AutoArrange_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/** Action to auto arrange the graph */" },
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/EdGraphSchema_T4QuestFlow.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Graph/EdGraphSchema_T4QuestFlow.h" },
 		{ "ToolTip", "Action to auto arrange the graph" },
 	};
 #endif
@@ -89,7 +89,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4QuestFlowSch
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4QuestFlowSchemaAction_AutoArrange_Hash() { return 1868554074U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4QuestFlowSchemaAction_AutoArrange_Hash() { return 2266834589U; }
 	void UT4EdGraphSchema_T4QuestFlow::StaticRegisterNativesUT4EdGraphSchema_T4QuestFlow()
 	{
 	}
@@ -112,8 +112,8 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4QuestFlowSch
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EdGraphSchema_T4QuestFlow_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "SubEditor/QuestEditor/QuestFlow/EdGraphSchema_T4QuestFlow.h" },
-		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/QuestFlow/EdGraphSchema_T4QuestFlow.h" },
+		{ "IncludePath", "SubEditor/QuestEditor/Graph/EdGraphSchema_T4QuestFlow.h" },
+		{ "ModuleRelativePath", "Private/SubEditor/QuestEditor/Graph/EdGraphSchema_T4QuestFlow.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4EdGraphSchema_T4QuestFlow_Statics::StaticCppClassTypeInfo = {
@@ -143,7 +143,7 @@ static struct FScriptStruct_T4ContentEditor_StaticRegisterNativesFT4QuestFlowSch
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EdGraphSchema_T4QuestFlow, 2834597284);
+	IMPLEMENT_CLASS(UT4EdGraphSchema_T4QuestFlow, 403222426);
 	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4EdGraphSchema_T4QuestFlow>()
 	{
 		return UT4EdGraphSchema_T4QuestFlow::StaticClass();

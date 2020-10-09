@@ -85,6 +85,7 @@ template<> T4GAMEPLAY_API UEnum* StaticEnum<ET4GamePacketSC>();
 	op(ET4GamePacketCS::SkillCasting) \
 	op(ET4GamePacketCS::SkillCancel) \
 	op(ET4GamePacketCS::SkillTarget) \
+	op(ET4GamePacketCS::DialogueAnswer) \
 	op(ET4GamePacketCS::CmdGameStart) \
 	op(ET4GamePacketCS::CmdQuestStart) \
 	op(ET4GamePacketCS::CmdQuestFinish) \

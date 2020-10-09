@@ -27,6 +27,8 @@ void EmptyLinkFunctionForGeneratedCodeT4MapEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4MapEntityAsset_NoRegister();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4MapEntityAsset();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
+	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityThumbnailData();
 // End Cross Module References
 class UScriptStruct* FT4EntityMapData::StaticStruct()
 {
@@ -473,6 +475,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp_MapThumbnailDatas;
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_MapThumbnailDatas_Key_KeyProp;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MapThumbnailDatas_ValueProp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailImage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThumbnailImage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailData;
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MapZoneDatas_MetaData[];
@@ -505,12 +515,27 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData[] = {
 		{ "Category", "Editor" },
+		{ "Comment", "// Internal: The thumbnail image\n" },
 		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
+		{ "ToolTip", "Internal: The thumbnail image" },
 	};
 #endif
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas = { "MapThumbnailDatas", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, MapThumbnailDatas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_MetaData)) };
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_Key_KeyProp = { "MapThumbnailDatas_Key", nullptr, (EPropertyFlags)0x0000000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_ValueProp = { "MapThumbnailDatas", nullptr, (EPropertyFlags)0x0000000800020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4MapThumbnailData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
+		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000800000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailData_MetaData[] = {
+		{ "Category", "Editor" },
+		{ "ModuleRelativePath", "Classes/Entity/T4MapEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailData = { "ThumbnailData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4MapEntityAsset, ThumbnailData), Z_Construct_UScriptStruct_FT4EntityThumbnailData, METADATA_PARAMS(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailData_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas_MetaData[] = {
@@ -532,6 +557,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapThumbnailDatas_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailImage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_ThumbnailData,
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4MapEntityAsset_Statics::NewProp_MapZoneDatas_Inner,
@@ -564,7 +591,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4MapThumbnailData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4MapEntityAsset, 3722389149);
+	IMPLEMENT_CLASS(UT4MapEntityAsset, 4128143513);
 	template<> T4ASSET_API UClass* StaticClass<UT4MapEntityAsset>()
 	{
 		return UT4MapEntityAsset::StaticClass();

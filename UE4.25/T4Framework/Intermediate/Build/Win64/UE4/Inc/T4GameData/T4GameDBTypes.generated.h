@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4GameDBTypes_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_961_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_998_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4DialogueTextDBKey_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4TextDBKey Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4DialogueTextDBKey>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_924_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_961_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4MissionTextDBKey_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4TextDBKey Super;
@@ -29,7 +29,7 @@ template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4DialogueTextDBKe
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4MissionTextDBKey>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_887_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_924_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4QuestTextDBKey_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4TextDBKey Super;
@@ -37,13 +37,21 @@ template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4MissionTextDBKey
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4QuestTextDBKey>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_850_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_887_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4WorldTextDBKey_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FT4TextDBKey Super;
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4WorldTextDBKey>();
+
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_850_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4TitleTextDBKey_Statics; \
+	static class UScriptStruct* StaticStruct(); \
+	typedef FT4TextDBKey Super;
+
+
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4TitleTextDBKey>();
 
 #define HostProject_Plugins_T4Framework_Source_T4GameData_Public_T4GameDBTypes_h_813_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4NameTextDBKey_Statics; \

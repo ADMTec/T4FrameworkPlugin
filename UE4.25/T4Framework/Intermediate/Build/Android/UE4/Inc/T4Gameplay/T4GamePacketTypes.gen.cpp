@@ -251,7 +251,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 		return ET4GamePacketCS_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GamePacketCS(ET4GamePacketCS_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4GamePacketCS"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 3166965965U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS_Hash() { return 1564251031U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4GamePacketCS()
 	{
 #if WITH_HOT_RELOAD
@@ -277,6 +277,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "ET4GamePacketCS::SkillCasting", (int64)ET4GamePacketCS::SkillCasting },
 				{ "ET4GamePacketCS::SkillCancel", (int64)ET4GamePacketCS::SkillCancel },
 				{ "ET4GamePacketCS::SkillTarget", (int64)ET4GamePacketCS::SkillTarget },
+				{ "ET4GamePacketCS::DialogueAnswer", (int64)ET4GamePacketCS::DialogueAnswer },
 				{ "ET4GamePacketCS::CmdGameStart", (int64)ET4GamePacketCS::CmdGameStart },
 				{ "ET4GamePacketCS::CmdQuestStart", (int64)ET4GamePacketCS::CmdQuestStart },
 				{ "ET4GamePacketCS::CmdQuestFinish", (int64)ET4GamePacketCS::CmdQuestFinish },
@@ -331,6 +332,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GamePacketTypes() {}
 				{ "CmdWorldTravel.Name", "ET4GamePacketCS::CmdWorldTravel" },
 				{ "CmdWorldTravel.ToolTip", "#164" },
 				{ "Comment", "/**\n  *\n */// WARN : Packet \xec\xb6\x94\xea\xb0\x80 \xec\x8b\x9c\xeb\x8a\x94 \xec\x95\x84\xeb\x9e\x98 \xed\x85\x8c\xea\xb7\xb8\xeb\xa5\xbc \xec\xb0\xbe\xec\x95\x84 \xec\xb6\x94\xea\xb0\x80\xeb\x90\x9c \xed\x8c\xa8\xed\x82\xb7\xec\x9d\x84 \xeb\xaa\xa8\xeb\x91\x90 \xea\xb5\xac\xed\x98\x84\xed\x95\xb4\xec\xa3\xbc\xec\x96\xb4\xec\x95\xbc \xed\x95\xa8!!\n// #T4_ADD_PACKET_TAG_CS\n" },
+				{ "DialogueAnswer.Comment", "// #116\n" },
+				{ "DialogueAnswer.Name", "ET4GamePacketCS::DialogueAnswer" },
+				{ "DialogueAnswer.ToolTip", "#116" },
 				{ "EquipItem.Comment", "// #106\n" },
 				{ "EquipItem.Name", "ET4GamePacketCS::EquipItem" },
 				{ "EquipItem.ToolTip", "#106" },

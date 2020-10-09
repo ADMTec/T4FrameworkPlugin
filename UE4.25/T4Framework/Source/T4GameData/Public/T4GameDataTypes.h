@@ -12,7 +12,7 @@
 UENUM(BlueprintType)
 enum class ET4GameQuestTarget : uint8 // #164
 {
-	Personal,
+	All,
 };
 
 UENUM(BlueprintType)
@@ -96,11 +96,22 @@ UENUM()
 enum class ET4GameTextCategory : uint8 // #163
 {
 	Name,
+	Title,
+
 	World,
 	Quest,
 	Mission,
 
 	Dialogue,
+
+	None UMETA(Hidden),
+};
+
+UENUM()
+enum class ET4GameDialogueSpeakerType : uint8 // #163
+{
+	Player,
+	NPC,
 
 	None UMETA(Hidden),
 };

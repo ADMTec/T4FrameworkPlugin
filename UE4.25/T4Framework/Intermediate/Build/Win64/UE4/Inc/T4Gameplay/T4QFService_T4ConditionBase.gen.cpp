@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeT4QFService_T4ConditionBase() {}
 		return ET4QFBranchConditionType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4QFBranchConditionType(ET4QFBranchConditionType_StaticEnum, TEXT("/Script/T4Gameplay"), TEXT("ET4QFBranchConditionType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4QFBranchConditionType_Hash() { return 385967369U; }
+	uint32 Get_Z_Construct_UEnum_T4Gameplay_ET4QFBranchConditionType_Hash() { return 18813440U; }
 	UEnum* Z_Construct_UEnum_T4Gameplay_ET4QFBranchConditionType()
 	{
 #if WITH_HOT_RELOAD
@@ -48,15 +48,25 @@ void EmptyLinkFunctionForGeneratedCodeT4QFService_T4ConditionBase() {}
 				{ "ET4QFBranchConditionType::Race", (int64)ET4QFBranchConditionType::Race },
 				{ "ET4QFBranchConditionType::HP", (int64)ET4QFBranchConditionType::HP },
 				{ "ET4QFBranchConditionType::Level", (int64)ET4QFBranchConditionType::Level },
+				{ "ET4QFBranchConditionType::FirstMeet", (int64)ET4QFBranchConditionType::FirstMeet },
 				{ "ET4QFBranchConditionType::None", (int64)ET4QFBranchConditionType::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "/**\n  * #168\n */" },
+				{ "FirstMeet.Comment", "// Mission\n" },
+				{ "FirstMeet.Name", "ET4QFBranchConditionType::FirstMeet" },
+				{ "FirstMeet.ToolTip", "Mission" },
+				{ "HP.Comment", "// Mission\n" },
 				{ "HP.Name", "ET4QFBranchConditionType::HP" },
+				{ "HP.ToolTip", "Mission" },
+				{ "Level.Comment", "// Mission\n" },
 				{ "Level.Name", "ET4QFBranchConditionType::Level" },
+				{ "Level.ToolTip", "Mission" },
 				{ "ModuleRelativePath", "Classes/QuestFlow/T4QFService_T4ConditionBase.h" },
+				{ "None.Comment", "// Dialogue\n" },
 				{ "None.Name", "ET4QFBranchConditionType::None" },
+				{ "None.ToolTip", "Dialogue" },
 				{ "Race.Name", "ET4QFBranchConditionType::Race" },
 				{ "ToolTip", "#168" },
 			};

@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ActorEntityAsset() {}
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActorEntityAsset();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4EntityAsset();
 	UPackage* Z_Construct_UPackage__Script_T4Asset();
+	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	T4ASSET_API UScriptStruct* Z_Construct_UScriptStruct_FT4EntityThumbnailData();
 // End Cross Module References
 	void UT4ActorEntityAsset::StaticRegisterNativesUT4ActorEntityAsset()
 	{
@@ -32,6 +34,15 @@ void EmptyLinkFunctionForGeneratedCodeT4ActorEntityAsset() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailImage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThumbnailImage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThumbnailData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ThumbnailData;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -49,6 +60,24 @@ void EmptyLinkFunctionForGeneratedCodeT4ActorEntityAsset() {}
 		{ "ToolTip", "#118" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailImage_MetaData[] = {
+		{ "Category", "Hide" },
+		{ "ModuleRelativePath", "Classes/Entity/T4ActorEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailImage = { "ThumbnailImage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActorEntityAsset, ThumbnailImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailImage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailImage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailData_MetaData[] = {
+		{ "Category", "Hide" },
+		{ "ModuleRelativePath", "Classes/Entity/T4ActorEntityAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailData = { "ThumbnailData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4ActorEntityAsset, ThumbnailData), Z_Construct_UScriptStruct_FT4EntityThumbnailData, METADATA_PARAMS(Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailData_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UT4ActorEntityAsset_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailImage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4ActorEntityAsset_Statics::NewProp_ThumbnailData,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ActorEntityAsset_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UT4ActorEntityAsset>::IsAbstract,
 	};
@@ -58,11 +87,11 @@ void EmptyLinkFunctionForGeneratedCodeT4ActorEntityAsset() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UT4ActorEntityAsset_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActorEntityAsset_Statics::PropPointers),
 		0,
 		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4ActorEntityAsset_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ActorEntityAsset_Statics::Class_MetaDataParams))
@@ -76,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActorEntityAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ActorEntityAsset, 964514770);
+	IMPLEMENT_CLASS(UT4ActorEntityAsset, 2489442492);
 	template<> T4ASSET_API UClass* StaticClass<UT4ActorEntityAsset>()
 	{
 		return UT4ActorEntityAsset::StaticClass();

@@ -150,6 +150,14 @@ public:
 	ET4EntityType GetEntityType() const override { return ET4EntityType::Map; }
 
 #if WITH_EDITOR
+	void SetThumbnailImage(UTexture2D* InImage) override; // #163 : 에디터용에서 컨텐츠 용도로 변경
+	void SetThumbnailData(const FVector& InLocation, const FRotator& InRotation) // #163
+	{
+		ThumbnailData.Location = InLocation;
+		ThumbnailData.Rotation = InRotation;
+	}
+	const FT4EntityThumbnailData* GetThumbnailData() const { return &ThumbnailData; } // #163
+
 	virtual bool IsSpawnable() override // #131
 	{
 		if (MapData.LevelAsset.IsNull())
@@ -168,6 +176,12 @@ public:
 	TArray<FT4EntityMapZoneData> MapZoneDatas; // #147 : WorldExplorer 에서 채운다. AT4MapZoneVolume 런타임 생성.
 
 #if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Editor)
+	FT4EntityThumbnailData ThumbnailData;
+
+	UPROPERTY()
+	UTexture2D* ThumbnailImage; // Internal: The thumbnail image
+
 	UPROPERTY(VisibleAnywhere, Category = Editor)
 	TMap<FName, FT4MapThumbnailData> MapThumbnailDatas; // #84, #104 : WorldExplorer Asset 의 Tile 을 MapEntity 로 이전!
 #endif

@@ -410,7 +410,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityItemWeaponMesh
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4WeaponEntityAsset, 1434861631);
+	IMPLEMENT_CLASS(UT4WeaponEntityAsset, 1660279532);
 	template<> T4ASSET_API UClass* StaticClass<UT4WeaponEntityAsset>()
 	{
 		return UT4WeaponEntityAsset::StaticClass();

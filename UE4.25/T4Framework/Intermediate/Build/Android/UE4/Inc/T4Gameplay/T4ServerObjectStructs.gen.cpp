@@ -18,8 +18,10 @@ void EmptyLinkFunctionForGeneratedCodeT4ServerObjectStructs() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameDBKey();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectMissionInfo();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4QuestDBKey();
+	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo();
 	T4GAMEPLAY_API UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectStat();
 // End Cross Module References
 class UScriptStruct* FT4ServerObjectStatus::StaticStruct()
@@ -328,6 +330,12 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectQuest
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveDialogueMap_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActiveDialogueMap;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveDialogueMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveDialogueMap_ValueProp;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveMissionMap_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActiveMissionMap;
@@ -360,6 +368,15 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectQuest
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ServerObjectQuestInfo>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap = { "ActiveDialogueMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectQuestInfo, ActiveDialogueMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_Key_KeyProp = { "ActiveDialogueMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_ValueProp = { "ActiveDialogueMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveMissionMap_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
@@ -390,6 +407,9 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectQuest
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_QuestUniqueID = { "QuestUniqueID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectQuestInfo, QuestUniqueID), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_QuestUniqueID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_QuestUniqueID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveDialogueMap_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveMissionMap,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveMissionMap_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Statics::NewProp_ActiveMissionMap_ValueProp,
@@ -425,7 +445,253 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectQuest
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Hash() { return 1795478679U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectQuestInfo_Hash() { return 1389070415U; }
+class UScriptStruct* FT4ServerObjectDialogueInfo::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4ServerObjectDialogueInfo"), sizeof(FT4ServerObjectDialogueInfo), Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4ServerObjectDialogueInfo>()
+{
+	return FT4ServerObjectDialogueInfo::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ServerObjectDialogueInfo(FT4ServerObjectDialogueInfo::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4ServerObjectDialogueInfo"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueInfo
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueInfo()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ServerObjectDialogueInfo")),new UScriptStruct::TCppStructOps<FT4ServerObjectDialogueInfo>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueInfo;
+	struct Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveDialogueCueMap_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActiveDialogueCueMap;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveDialogueCueMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActiveDialogueCueMap_ValueProp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCompleted_MetaData[];
+#endif
+		static void NewProp_bCompleted_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCompleted;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StartTimeSec;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DialogueUniqueID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DialogueUniqueID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#163" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ServerObjectDialogueInfo>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap = { "ActiveDialogueCueMap", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectDialogueInfo, ActiveDialogueCueMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_Key_KeyProp = { "ActiveDialogueCueMap_Key", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_ValueProp = { "ActiveDialogueCueMap", nullptr, (EPropertyFlags)0x0000000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted_SetBit(void* Obj)
+	{
+		((FT4ServerObjectDialogueInfo*)Obj)->bCompleted = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted = { "bCompleted", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ServerObjectDialogueInfo), &Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_StartTimeSec_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_StartTimeSec = { "StartTimeSec", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectDialogueInfo, StartTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_StartTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_StartTimeSec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_DialogueUniqueID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_DialogueUniqueID = { "DialogueUniqueID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectDialogueInfo, DialogueUniqueID), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_DialogueUniqueID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_DialogueUniqueID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_ActiveDialogueCueMap_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_bCompleted,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_StartTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::NewProp_DialogueUniqueID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		nullptr,
+		&NewStructOps,
+		"T4ServerObjectDialogueInfo",
+		sizeof(FT4ServerObjectDialogueInfo),
+		alignof(FT4ServerObjectDialogueInfo),
+		Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ServerObjectDialogueInfo"), sizeof(FT4ServerObjectDialogueInfo), Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueInfo_Hash() { return 2365282527U; }
+class UScriptStruct* FT4ServerObjectDialogueCueInfo::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEPLAY_API uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo, Z_Construct_UPackage__Script_T4Gameplay(), TEXT("T4ServerObjectDialogueCueInfo"), sizeof(FT4ServerObjectDialogueCueInfo), Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<FT4ServerObjectDialogueCueInfo>()
+{
+	return FT4ServerObjectDialogueCueInfo::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4ServerObjectDialogueCueInfo(FT4ServerObjectDialogueCueInfo::StaticStruct, TEXT("/Script/T4Gameplay"), TEXT("T4ServerObjectDialogueCueInfo"), false, nullptr, nullptr);
+static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueCueInfo
+{
+	FScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueCueInfo()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4ServerObjectDialogueCueInfo")),new UScriptStruct::TCppStructOps<FT4ServerObjectDialogueCueInfo>);
+	}
+} ScriptStruct_T4Gameplay_StaticRegisterNativesFT4ServerObjectDialogueCueInfo;
+	struct Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCompleted_MetaData[];
+#endif
+		static void NewProp_bCompleted_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCompleted;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_StartTimeSec;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DialogueCueUniqueID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DialogueCueUniqueID;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #163\n" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+		{ "ToolTip", "#163" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ServerObjectDialogueCueInfo>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted_SetBit(void* Obj)
+	{
+		((FT4ServerObjectDialogueCueInfo*)Obj)->bCompleted = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted = { "bCompleted", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ServerObjectDialogueCueInfo), &Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_StartTimeSec_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_StartTimeSec = { "StartTimeSec", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectDialogueCueInfo, StartTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_StartTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_StartTimeSec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_DialogueCueUniqueID_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Private/MainFrame/Server/Object/T4ServerObjectStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_DialogueCueUniqueID = { "DialogueCueUniqueID", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ServerObjectDialogueCueInfo, DialogueCueUniqueID), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_DialogueCueUniqueID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_DialogueCueUniqueID_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_bCompleted,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_StartTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::NewProp_DialogueCueUniqueID,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4Gameplay,
+		nullptr,
+		&NewStructOps,
+		"T4ServerObjectDialogueCueInfo",
+		sizeof(FT4ServerObjectDialogueCueInfo),
+		alignof(FT4ServerObjectDialogueCueInfo),
+		Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Gameplay();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4ServerObjectDialogueCueInfo"), sizeof(FT4ServerObjectDialogueCueInfo), Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4ServerObjectDialogueCueInfo_Hash() { return 3508304185U; }
 class UScriptStruct* FT4ServerObjectMissionInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
