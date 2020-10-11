@@ -28,7 +28,9 @@ enum class ET4AnimationLayer : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4AnimationLayer>();
 
 #define FOREACH_ENUM_ET4ANIMSETTEMPLATE(op) \
-	op(ET4AnimsetTemplate::Basic) \
+	op(ET4AnimsetTemplate::Basic_Simple) \
+	op(ET4AnimsetTemplate::Basic_Advanced) \
+	op(ET4AnimsetTemplate::Basic_Locomotion) \
 	op(ET4AnimsetTemplate::Paragon) \
 	op(ET4AnimsetTemplate::None) 
 

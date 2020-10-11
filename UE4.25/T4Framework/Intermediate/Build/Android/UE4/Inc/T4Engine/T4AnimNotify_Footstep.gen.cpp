@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Classes/AnimNotifies/T4AnimNotify_Footstep.h"
+#include "T4Engine/Classes/Animation/T4AnimNotify_Footstep.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -49,14 +49,14 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimNotify_Footstep() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimNotify_Footstep_Statics::Class_MetaDataParams[] = {
 		{ "DisplayName", "T4Footstep" },
 		{ "HideCategories", "Object Object" },
-		{ "IncludePath", "AnimNotifies/T4AnimNotify_Footstep.h" },
-		{ "ModuleRelativePath", "Classes/AnimNotifies/T4AnimNotify_Footstep.h" },
+		{ "IncludePath", "Animation/T4AnimNotify_Footstep.h" },
+		{ "ModuleRelativePath", "Classes/Animation/T4AnimNotify_Footstep.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimNotify_Footstep_Statics::NewProp_FootstepType_MetaData[] = {
 		{ "Category", "AnimNotify" },
-		{ "ModuleRelativePath", "Classes/AnimNotifies/T4AnimNotify_Footstep.h" },
+		{ "ModuleRelativePath", "Classes/Animation/T4AnimNotify_Footstep.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4AnimNotify_Footstep_Statics::NewProp_FootstepType = { "FootstepType", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimNotify_Footstep, FootstepType), Z_Construct_UEnum_T4Engine_ET4FootstepType, METADATA_PARAMS(Z_Construct_UClass_UT4AnimNotify_Footstep_Statics::NewProp_FootstepType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimNotify_Footstep_Statics::NewProp_FootstepType_MetaData)) };
@@ -92,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimNotify_Footstep() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimNotify_Footstep, 688081760);
+	IMPLEMENT_CLASS(UT4AnimNotify_Footstep, 2014646422);
 	template<> T4ENGINE_API UClass* StaticClass<UT4AnimNotify_Footstep>()
 	{
 		return UT4AnimNotify_Footstep::StaticClass();

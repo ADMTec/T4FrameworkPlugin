@@ -429,13 +429,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetSystemLayerDa
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
-#if WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSystemDataArray_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AnimSystemDataArray;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AnimSystemDataArray_Inner;
-#endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AdditiveAnimMontageAsset_MetaData[];
 #endif
@@ -445,8 +443,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetSystemLayerDa
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_SystemAnimMontageAsset;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_EDITORONLY_DATA
-#endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
@@ -460,16 +456,16 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetSystemLayerDa
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4AnimsetSystemLayerData>();
 	}
-#if WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_MetaData[] = {
 		{ "Category", "ClientOnly" },
+		{ "Comment", "// #138\n" },
 		{ "ModuleRelativePath", "Classes/Animset/T4AnimsetAsset.h" },
+		{ "ToolTip", "#138" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray = { "AnimSystemDataArray", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimsetSystemLayerData, AnimSystemDataArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_Inner = { "AnimSystemDataArray", nullptr, (EPropertyFlags)0x0000000800000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData, METADATA_PARAMS(nullptr, 0) };
-#endif // WITH_EDITORONLY_DATA
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray = { "AnimSystemDataArray", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimsetSystemLayerData, AnimSystemDataArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_Inner = { "AnimSystemDataArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AdditiveAnimMontageAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -487,10 +483,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetSystemLayerDa
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_SystemAnimMontageAsset = { "SystemAnimMontageAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimsetSystemLayerData, SystemAnimMontageAsset), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_SystemAnimMontageAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_SystemAnimMontageAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::PropPointers[] = {
-#if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AnimSystemDataArray_Inner,
-#endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_AdditiveAnimMontageAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Statics::NewProp_SystemAnimMontageAsset,
 	};
@@ -522,7 +516,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetSystemLayerDa
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Hash() { return 145427033U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetSystemLayerData_Hash() { return 688520604U; }
 class UScriptStruct* FT4AnimsetAnimSystemData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -558,6 +552,12 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSystemDat
 		static void NewProp_bEditorShowNotSetProperty_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bEditorShowNotSetProperty;
 #endif // WITH_EDITORONLY_DATA
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SystemParameterMap_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_SystemParameterMap;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_SystemParameterMap_Key_KeyProp;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SystemParameterMap_ValueProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimSequenceArray_MetaData[];
 #endif
@@ -597,6 +597,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSystemDat
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_bEditorShowNotSetProperty = { "bEditorShowNotSetProperty", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4AnimsetAnimSystemData), &Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_bEditorShowNotSetProperty_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_bEditorShowNotSetProperty_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_bEditorShowNotSetProperty_MetaData)) };
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Classes/Animset/T4AnimsetAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap = { "SystemParameterMap", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4AnimsetAnimSystemData, SystemParameterMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_Key_KeyProp = { "SystemParameterMap_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_ValueProp = { "SystemParameterMap", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_AnimSequenceArray_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Classes/Animset/T4AnimsetAsset.h" },
@@ -617,6 +626,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSystemDat
 #if WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_bEditorShowNotSetProperty,
 #endif // WITH_EDITORONLY_DATA
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_SystemParameterMap_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_AnimSequenceArray,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_AnimSequenceArray_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Statics::NewProp_StanceName,
@@ -649,7 +661,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4AnimsetAnimSystemDat
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Hash() { return 519948837U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4AnimsetAnimSystemData_Hash() { return 3033748815U; }
 class UScriptStruct* FT4AnimsetSkillLayerData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

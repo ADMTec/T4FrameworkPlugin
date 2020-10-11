@@ -53,6 +53,28 @@ template<> T4ASSET_API UEnum* StaticEnum<ET4EntityZoneType>();
 enum class ET4EntityReactionType : uint8;
 template<> T4ASSET_API UEnum* StaticEnum<ET4EntityReactionType>();
 
+#define FOREACH_ENUM_ET4ENTITYITEMANIMATIONCLASS(op) \
+	op(ET4EntityItemAnimationClass::Item_Basic) \
+	op(ET4EntityItemAnimationClass::None) 
+
+enum class ET4EntityItemAnimationClass : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4EntityItemAnimationClass>();
+
+#define FOREACH_ENUM_ET4ENTITYPROPANIMATIONCLASS(op) \
+	op(ET4EntityPropAnimationClass::Prop_Basic) \
+	op(ET4EntityPropAnimationClass::None) 
+
+enum class ET4EntityPropAnimationClass : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4EntityPropAnimationClass>();
+
+#define FOREACH_ENUM_ET4ENTITYCHARACTERANIMATIONCLASS(op) \
+	op(ET4EntityCharacterAnimationClass::Human_Basic) \
+	op(ET4EntityCharacterAnimationClass::Human_Paragon) \
+	op(ET4EntityCharacterAnimationClass::None) 
+
+enum class ET4EntityCharacterAnimationClass : uint8;
+template<> T4ASSET_API UEnum* StaticEnum<ET4EntityCharacterAnimationClass>();
+
 #define FOREACH_ENUM_ET4ENTITYCHARACTERMODULARTYPE(op) \
 	op(ET4EntityCharacterModularType::MasterPose) \
 	op(ET4EntityCharacterModularType::None) 

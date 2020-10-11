@@ -57,6 +57,8 @@ public:
 
 	bool CanFindInContentBrowser() const;
 
+	void HandleOnNewAsset();
+
 	void HandleOnSelectAsset(const FAssetData& AssetData);
 	void HandleOnDoubleClicked(const FAssetData& AssetData, bool bFromHistory);
 
@@ -78,6 +80,7 @@ protected:
 
 protected:
 	TSharedPtr<FUICommandList> Commands;
+	TSharedPtr<SWidget> AssetPickerPtr;
 
 	TSet<FName> AssetRegistryTagsToIgnore;
 

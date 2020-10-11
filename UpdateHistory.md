@@ -2,6 +2,13 @@
 ### The Most Powerful MMO Action RPG Framework for UE4
 
 > **Update History**
+- v0.9.91 : 2020.10.09
+  - #163 [기능추가] Quest Editor, Dialogue System 을 QuestFlow 를 통해 설정, 동작 할 수 있도록 기능 추가
+  - #163 [기능개선] Quest Editor, Mission Node 하위에 추가 Mission Node 를 사용할 수 있도록 기능 개선
+  - #163 [기능개선] Text/Stat DBEditor Search Filter 로 주요 Column 의 값을 검색할 수 있도록 기능 개선
+  - #163 [기능개선] Content Editor, 툴바에 진행중인 퀘스트를 완료할 수 있는 "Complete This Step" 옵션 추가
+  - #158 [기능개선] Content Editor, Game DB TreeView 에 UID Column 추가
+  - #163 [버그수정] QuestFlow Editor 에서 MissionCue 의 Title Text 가 출력되지 않던 문제 수정
 - v0.9.58 : 2020.10.07
   - #163 [기능추가] Content Editor, Stat/Text GameDB 를 전용 에디터를 통해 최적화된 편집이 가능하도록 기능 추가
   - #161 [기능추가] Content Editor, SpawnAsset 내 Player 의 시작 위치를 지정할 수 있는 메뉴 및 기능 추가

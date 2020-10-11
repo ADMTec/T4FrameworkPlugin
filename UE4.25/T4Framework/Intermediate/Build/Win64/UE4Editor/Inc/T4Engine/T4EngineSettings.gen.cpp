@@ -20,6 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FSoftObjectPath();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBase_NoRegister();
 // End Cross Module References
 	void UT4EngineSettings::StaticRegisterNativesUT4EngineSettings()
 	{
@@ -194,6 +196,22 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WorldTimeHoursPerDay_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_WorldTimeHoursPerDay;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PublicPropBasicAnimBlueprintClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PublicPropBasicAnimBlueprintClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PublicItemBasicAnimBlueprintClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PublicItemBasicAnimBlueprintClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PublicHumanParagonAnimBlueprintClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PublicHumanParagonAnimBlueprintClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PublicHumanBasicAnimBlueprintClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PublicHumanBasicAnimBlueprintClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaterialParameterOpacityName_MetaData[];
 #endif
@@ -541,12 +559,48 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData[] = {
 		{ "Category", "GeneralWorldSettting" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay = { "WorldTimeHoursPerDay", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, WorldTimeHoursPerDay), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicPropBasicAnimBlueprintClass_MetaData[] = {
+		{ "Category", "GeneralActorSettting" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicPropBasicAnimBlueprintClass = { "PublicPropBasicAnimBlueprintClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PublicPropBasicAnimBlueprintClass), Z_Construct_UClass_UT4AnimInstanceBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicPropBasicAnimBlueprintClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicPropBasicAnimBlueprintClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicItemBasicAnimBlueprintClass_MetaData[] = {
+		{ "Category", "GeneralActorSettting" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicItemBasicAnimBlueprintClass = { "PublicItemBasicAnimBlueprintClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PublicItemBasicAnimBlueprintClass), Z_Construct_UClass_UT4AnimInstanceBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicItemBasicAnimBlueprintClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicItemBasicAnimBlueprintClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanParagonAnimBlueprintClass_MetaData[] = {
+		{ "Category", "GeneralActorSettting" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanParagonAnimBlueprintClass = { "PublicHumanParagonAnimBlueprintClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PublicHumanParagonAnimBlueprintClass), Z_Construct_UClass_UT4AnimInstanceBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanParagonAnimBlueprintClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanParagonAnimBlueprintClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanBasicAnimBlueprintClass_MetaData[] = {
+		{ "Category", "GeneralActorSettting" },
 		{ "Comment", "// #78, #108\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4EngineSettings.h" },
 		{ "ToolTip", "#78, #108" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay = { "WorldTimeHoursPerDay", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, WorldTimeHoursPerDay), METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanBasicAnimBlueprintClass = { "PublicHumanBasicAnimBlueprintClass", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EngineSettings, PublicHumanBasicAnimBlueprintClass), Z_Construct_UClass_UT4AnimInstanceBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanBasicAnimBlueprintClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanBasicAnimBlueprintClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialParameterOpacityName_MetaData[] = {
 		{ "Category", "GeneralRenderingSettting" },
@@ -624,6 +678,10 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillPressedKeepTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_SkillComboKeepTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_WorldTimeHoursPerDay,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicPropBasicAnimBlueprintClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicItemBasicAnimBlueprintClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanParagonAnimBlueprintClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_PublicHumanBasicAnimBlueprintClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialParameterOpacityName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MPCGlobalOutlineColorName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EngineSettings_Statics::NewProp_MaterialPostProcessOutlinerPath,
@@ -656,7 +714,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EngineSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EngineSettings, 971105352);
+	IMPLEMENT_CLASS(UT4EngineSettings, 4142693311);
 	template<> T4ENGINE_API UClass* StaticClass<UT4EngineSettings>()
 	{
 		return UT4EngineSettings::StaticClass();

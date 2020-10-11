@@ -9,6 +9,7 @@
 /**
   * #40
  */
+class UT4AnimInstanceBase; // #158 : T4Engine 내부에서는 UT4AnimInstanceBaseImpl 사용. 외부 노출 Class
 class UMaterialInterface;
 UCLASS(config = T4Framework, meta = (DisplayName = "T4Engine"))
 class T4ENGINE_API UT4EngineSettings : public UDeveloperSettings
@@ -45,6 +46,18 @@ public:
 	UPROPERTY(config, EditAnywhere, Category = GeneralRenderingSettting)
 	FName MaterialParameterOpacityName; // #78, #108
 	
+	UPROPERTY(EditAnywhere, config, Category = GeneralActorSettting)
+	TSubclassOf<UT4AnimInstanceBase> PublicHumanBasicAnimBlueprintClass; // #158
+
+	UPROPERTY(EditAnywhere, config, Category = GeneralActorSettting)
+	TSubclassOf<UT4AnimInstanceBase> PublicHumanParagonAnimBlueprintClass; // #158
+
+	UPROPERTY(EditAnywhere, config, Category = GeneralActorSettting)
+	TSubclassOf<UT4AnimInstanceBase> PublicItemBasicAnimBlueprintClass; // #158
+
+	UPROPERTY(EditAnywhere, config, Category = GeneralActorSettting)
+	TSubclassOf<UT4AnimInstanceBase> PublicPropBasicAnimBlueprintClass; // #158
+
 	UPROPERTY(config, EditAnywhere, Category = GeneralWorldSettting)
 	int32 WorldTimeHoursPerDay; // #93
 

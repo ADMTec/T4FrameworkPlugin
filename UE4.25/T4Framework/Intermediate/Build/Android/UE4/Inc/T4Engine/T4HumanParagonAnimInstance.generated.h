@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesUT4HumanParagonAnimInstance(); \
 	friend struct Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics; \
 public: \
-	DECLARE_CLASS(UT4HumanParagonAnimInstance, UT4AnimInstanceBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
+	DECLARE_CLASS(UT4HumanParagonAnimInstance, UT4AnimInstanceBaseImpl, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
 	DECLARE_SERIALIZER(UT4HumanParagonAnimInstance)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesUT4HumanParagonAnimInstance(); \
 	friend struct Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics; \
 public: \
-	DECLARE_CLASS(UT4HumanParagonAnimInstance, UT4AnimInstanceBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
+	DECLARE_CLASS(UT4HumanParagonAnimInstance, UT4AnimInstanceBaseImpl, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
 	DECLARE_SERIALIZER(UT4HumanParagonAnimInstance)
 
 

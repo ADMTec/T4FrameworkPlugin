@@ -85,7 +85,7 @@ public:
 
 	bool OnDragAndDrop(FT4TreeViewNodePtr InParentNodePtr, const TArray<FT4TreeViewNodePtr>& InChildNodePtrs);
 
-	bool IsVerifyName(FName InRename, FText& OutErrorMessage) const;
+	bool IsVerifyRename(FName InRename, FText& OutErrorMessage) const;
 	bool OnRename(FT4TreeViewNodePtr InNodePtr, FName InRename);
 
 protected:

@@ -15,6 +15,8 @@ public:
 
 	virtual void RegisterCommands() override;
 
+	TSharedPtr<FUICommandInfo> Refresh; // #163
+
 	TSharedPtr<FUICommandInfo> ReloadPlayer; // #38
 	TSharedPtr<FUICommandInfo> RespawnPlayer; // #136
 	TSharedPtr<FUICommandInfo> SaveThumbnailImage;

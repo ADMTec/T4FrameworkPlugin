@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4EditorCommon/Private/Assets/Factories/T4ReplaySystemAssetFactory.h"
+#include "T4EditorCommon/Classes/Factories/T4ReplaySystemAssetFactory.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4ReplaySystemAssetFactory() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ReplaySystemAssetFactory_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #39\n */" },
-		{ "IncludePath", "Assets/Factories/T4ReplaySystemAssetFactory.h" },
-		{ "ModuleRelativePath", "Private/Assets/Factories/T4ReplaySystemAssetFactory.h" },
+		{ "IncludePath", "Factories/T4ReplaySystemAssetFactory.h" },
+		{ "ModuleRelativePath", "Classes/Factories/T4ReplaySystemAssetFactory.h" },
 		{ "ToolTip", "#39" },
 	};
 #endif
@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ReplaySystemAssetFactory() {}
 		0,
 		0,
 		0,
-		0x000000A0u,
+		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4ReplaySystemAssetFactory_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ReplaySystemAssetFactory_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4ReplaySystemAssetFactory()
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ReplaySystemAssetFactory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ReplaySystemAssetFactory, 3452553354);
+	IMPLEMENT_CLASS(UT4ReplaySystemAssetFactory, 3883456373);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4ReplaySystemAssetFactory>()
 	{
 		return UT4ReplaySystemAssetFactory::StaticClass();

@@ -1,0 +1,137 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef T4ENTITYEDITOR_T4AnimSetBasicLocomotionStateTemplate_generated_h
+#error "T4AnimSetBasicLocomotionStateTemplate.generated.h already included, missing '#pragma once' in T4AnimSetBasicLocomotionStateTemplate.h"
+#endif
+#define T4ENTITYEDITOR_T4AnimSetBasicLocomotionStateTemplate_generated_h
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_188_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateConstantData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateConstantData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_127_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateParameterData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateParameterData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_111_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateAimData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateAimData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_63_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateMovementAdvancedData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateMovementAdvancedData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_38_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateMovementData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateMovementData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_22_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicLocomotionStateIdleData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicLocomotionStateIdleData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetBasicLocomotionStateTemplate(); \
+	friend struct Z_Construct_UClass_UT4AnimSetBasicLocomotionStateTemplate_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetBasicLocomotionStateTemplate, UT4AnimSetLayerTemplateBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetBasicLocomotionStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetBasicLocomotionStateTemplate(); \
+	friend struct Z_Construct_UClass_UT4AnimSetBasicLocomotionStateTemplate_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetBasicLocomotionStateTemplate, UT4AnimSetLayerTemplateBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetBasicLocomotionStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetBasicLocomotionStateTemplate) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetBasicLocomotionStateTemplate); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetBasicLocomotionStateTemplate); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(UT4AnimSetBasicLocomotionStateTemplate&&); \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(const UT4AnimSetBasicLocomotionStateTemplate&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(UT4AnimSetBasicLocomotionStateTemplate&&); \
+	NO_API UT4AnimSetBasicLocomotionStateTemplate(const UT4AnimSetBasicLocomotionStateTemplate&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetBasicLocomotionStateTemplate); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetBasicLocomotionStateTemplate); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetBasicLocomotionStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_199_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h_202_ENHANCED_CONSTRUCTORS \
+static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class T4AnimSetBasicLocomotionStateTemplate."); \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4AnimSetBasicLocomotionStateTemplate>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Locomotion_T4AnimSetBasicLocomotionStateTemplate_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

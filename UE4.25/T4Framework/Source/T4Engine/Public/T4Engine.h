@@ -75,6 +75,8 @@ public:
 	virtual void UnregisterAnimState(const FName& InAnimStateName) = 0;
 	// ~#47
 
+	virtual float GetSystemParameter(const FName& InName, float InDefaultValue) = 0; // #158 : Animset SystemParameter 를 저장. 코드레벨에서 사용
+
 	virtual bool HasSection(ET4AnimationLayer InAnimationLayer, const FName& InSectionName) = 0;
 	virtual float GetDurationSec(ET4AnimationLayer InAnimationLayer, const FName& InSectionName) = 0;
 

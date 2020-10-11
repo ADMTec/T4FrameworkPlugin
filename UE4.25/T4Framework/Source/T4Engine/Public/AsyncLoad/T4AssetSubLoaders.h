@@ -38,15 +38,6 @@ public:
 	UMaterialInterface* GetMaterialInterface();
 };
 
-class T4ENGINE_API FT4AnimBlueprintClassLoader : public FT4AssetLoader
-{
-public:
-	explicit FT4AnimBlueprintClassLoader() {}
-	virtual ~FT4AnimBlueprintClassLoader() { Reset(); }
-
-	bool Process(USkeletalMeshComponent* InMeshComponent);
-};
-
 class T4ENGINE_API FT4AnimMontageLoader : public FT4AssetLoader
 {
 public:

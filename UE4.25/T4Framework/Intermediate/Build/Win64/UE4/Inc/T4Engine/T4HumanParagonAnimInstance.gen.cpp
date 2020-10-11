@@ -16,7 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 // Cross Module References
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4HumanParagonAnimInstance_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4HumanParagonAnimInstance();
-	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBase();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBaseImpl();
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4HumanStanceAnimVariables();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4IKAnimVariables();
@@ -57,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UT4HumanParagonAnimInstance_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UT4AnimInstanceBase,
+		(UObject* (*)())Z_Construct_UClass_UT4AnimInstanceBaseImpl,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
 	};
 #if WITH_METADATA
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeT4HumanParagonAnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4HumanParagonAnimInstance, 1487320994);
+	IMPLEMENT_CLASS(UT4HumanParagonAnimInstance, 210363299);
 	template<> T4ENGINE_API UClass* StaticClass<UT4HumanParagonAnimInstance>()
 	{
 		return UT4HumanParagonAnimInstance::StaticClass();

@@ -18,6 +18,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityZoneBrushType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityZoneType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityReactionType();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityItemAnimationClass();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityPropAnimationClass();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterAnimationClass();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterModularType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterMeshType();
 	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4EntityMeshType();
@@ -255,6 +258,173 @@ void EmptyLinkFunctionForGeneratedCodeT4EntityTypes() {}
 				nullptr,
 				"ET4EntityReactionType",
 				"ET4EntityReactionType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4EntityItemAnimationClass_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4EntityItemAnimationClass, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4EntityItemAnimationClass"));
+		}
+		return Singleton;
+	}
+	template<> T4ASSET_API UEnum* StaticEnum<ET4EntityItemAnimationClass>()
+	{
+		return ET4EntityItemAnimationClass_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityItemAnimationClass(ET4EntityItemAnimationClass_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityItemAnimationClass"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityItemAnimationClass_Hash() { return 956847940U; }
+	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityItemAnimationClass()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EntityItemAnimationClass"), 0, Get_Z_Construct_UEnum_T4Asset_ET4EntityItemAnimationClass_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4EntityItemAnimationClass::Item_Basic", (int64)ET4EntityItemAnimationClass::Item_Basic },
+				{ "ET4EntityItemAnimationClass::None", (int64)ET4EntityItemAnimationClass::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\n" },
+				{ "Item_Basic.Name", "ET4EntityItemAnimationClass::Item_Basic" },
+				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
+				{ "None.Hidden", "" },
+				{ "None.Name", "ET4EntityItemAnimationClass::None" },
+				{ "ToolTip", "#158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
+				nullptr,
+				"ET4EntityItemAnimationClass",
+				"ET4EntityItemAnimationClass",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4EntityPropAnimationClass_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4EntityPropAnimationClass, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4EntityPropAnimationClass"));
+		}
+		return Singleton;
+	}
+	template<> T4ASSET_API UEnum* StaticEnum<ET4EntityPropAnimationClass>()
+	{
+		return ET4EntityPropAnimationClass_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityPropAnimationClass(ET4EntityPropAnimationClass_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityPropAnimationClass"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityPropAnimationClass_Hash() { return 4221361141U; }
+	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityPropAnimationClass()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EntityPropAnimationClass"), 0, Get_Z_Construct_UEnum_T4Asset_ET4EntityPropAnimationClass_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4EntityPropAnimationClass::Prop_Basic", (int64)ET4EntityPropAnimationClass::Prop_Basic },
+				{ "ET4EntityPropAnimationClass::None", (int64)ET4EntityPropAnimationClass::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\n" },
+				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
+				{ "None.Hidden", "" },
+				{ "None.Name", "ET4EntityPropAnimationClass::None" },
+				{ "Prop_Basic.Name", "ET4EntityPropAnimationClass::Prop_Basic" },
+				{ "ToolTip", "#158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
+				nullptr,
+				"ET4EntityPropAnimationClass",
+				"ET4EntityPropAnimationClass",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4EntityCharacterAnimationClass_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Asset_ET4EntityCharacterAnimationClass, Z_Construct_UPackage__Script_T4Asset(), TEXT("ET4EntityCharacterAnimationClass"));
+		}
+		return Singleton;
+	}
+	template<> T4ASSET_API UEnum* StaticEnum<ET4EntityCharacterAnimationClass>()
+	{
+		return ET4EntityCharacterAnimationClass_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EntityCharacterAnimationClass(ET4EntityCharacterAnimationClass_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4EntityCharacterAnimationClass"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterAnimationClass_Hash() { return 2401534446U; }
+	UEnum* Z_Construct_UEnum_T4Asset_ET4EntityCharacterAnimationClass()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4Asset();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EntityCharacterAnimationClass"), 0, Get_Z_Construct_UEnum_T4Asset_ET4EntityCharacterAnimationClass_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4EntityCharacterAnimationClass::Human_Basic", (int64)ET4EntityCharacterAnimationClass::Human_Basic },
+				{ "ET4EntityCharacterAnimationClass::Human_Paragon", (int64)ET4EntityCharacterAnimationClass::Human_Paragon },
+				{ "ET4EntityCharacterAnimationClass::None", (int64)ET4EntityCharacterAnimationClass::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// #158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd\n" },
+				{ "Human_Basic.Name", "ET4EntityCharacterAnimationClass::Human_Basic" },
+				{ "Human_Paragon.Name", "ET4EntityCharacterAnimationClass::Human_Paragon" },
+				{ "ModuleRelativePath", "Public/Entity/T4EntityTypes.h" },
+				{ "None.Hidden", "" },
+				{ "None.Name", "ET4EntityCharacterAnimationClass::None" },
+				{ "ToolTip", "#158 : AnimBPAsset \xec\x97\x90\xec\x84\x9c Public Class \xeb\xa1\x9c \xeb\xb3\x80\xea\xb2\xbd" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4Asset,
+				nullptr,
+				"ET4EntityCharacterAnimationClass",
+				"ET4EntityCharacterAnimationClass",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

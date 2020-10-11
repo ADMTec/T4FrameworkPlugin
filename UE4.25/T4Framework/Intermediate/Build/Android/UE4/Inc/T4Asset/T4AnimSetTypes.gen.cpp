@@ -95,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimsetTypes() {}
 		return ET4AnimsetTemplate_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4AnimsetTemplate(ET4AnimsetTemplate_StaticEnum, TEXT("/Script/T4Asset"), TEXT("ET4AnimsetTemplate"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Asset_ET4AnimsetTemplate_Hash() { return 2487212903U; }
+	uint32 Get_Z_Construct_UEnum_T4Asset_ET4AnimsetTemplate_Hash() { return 3510954112U; }
 	UEnum* Z_Construct_UEnum_T4Asset_ET4AnimsetTemplate()
 	{
 #if WITH_HOT_RELOAD
@@ -107,15 +107,20 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimsetTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4AnimsetTemplate::Basic", (int64)ET4AnimsetTemplate::Basic },
+				{ "ET4AnimsetTemplate::Basic_Simple", (int64)ET4AnimsetTemplate::Basic_Simple },
+				{ "ET4AnimsetTemplate::Basic_Advanced", (int64)ET4AnimsetTemplate::Basic_Advanced },
+				{ "ET4AnimsetTemplate::Basic_Locomotion", (int64)ET4AnimsetTemplate::Basic_Locomotion },
 				{ "ET4AnimsetTemplate::Paragon", (int64)ET4AnimsetTemplate::Paragon },
 				{ "ET4AnimsetTemplate::None", (int64)ET4AnimsetTemplate::None },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Basic.Name", "ET4AnimsetTemplate::Basic" },
+				{ "Basic_Advanced.Name", "ET4AnimsetTemplate::Basic_Advanced" },
+				{ "Basic_Locomotion.Name", "ET4AnimsetTemplate::Basic_Locomotion" },
+				{ "Basic_Simple.Name", "ET4AnimsetTemplate::Basic_Simple" },
 				{ "Comment", "/**\n  * #131\n */// #131\n" },
 				{ "ModuleRelativePath", "Public/Animset/T4AnimsetTypes.h" },
+				{ "None.Hidden", "" },
 				{ "None.Name", "ET4AnimsetTemplate::None" },
 				{ "Paragon.Name", "ET4AnimsetTemplate::Paragon" },
 				{ "ToolTip", "#131\n // #131" },

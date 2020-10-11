@@ -83,15 +83,42 @@ public:
 };
 
 // #107
+class USkeleton;
+class UAnimMontage;
+class UAnimBlueprint;
 USTRUCT()
-struct T4ASSET_API FT4EntityWeaponAnimationData : public FT4EntityAnimationData
+struct T4ASSET_API FT4EntityWeaponAnimationData
 {
 	GENERATED_USTRUCT_BODY()
 
 public:
 	FT4EntityWeaponAnimationData()
+		: bUseAnimation(false)
+		, AnimClassType(ET4EntityItemAnimationClass::Item_Basic)
+		, bAnimMontageAutoGen(true)
 	{
 	}
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "bUseAnimation"))
+	bool bUseAnimation;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
+	TSoftObjectPtr<USkeleton> SkeletonAsset;
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
+	ET4EntityItemAnimationClass AnimClassType; // #158 : AnimBPAsset 에서 Public Class 로 변경
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
+	FT4EntityIdleAnimSequenceData IdleAnimSequenceData; // #142 : BS 에서 AnimSequence 로 변경
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation", DisplayName = "bAutoGen"))
+	bool bAnimMontageAutoGen; // #69
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation", DisplayName = "Anim Montage Asset"))
+	TSoftObjectPtr<UAnimMontage> AnimMontageAsset; // #69
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
+	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

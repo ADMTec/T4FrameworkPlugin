@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4EditorCommon/Private/Assets/Factories/T4PathSegmentAssetFactory.h"
+#include "T4EditorCommon/Classes/Factories/T4PathSegmentAssetFactory.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAssetFactory() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PathSegmentAssetFactory_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #155\n */" },
-		{ "IncludePath", "Assets/Factories/T4PathSegmentAssetFactory.h" },
-		{ "ModuleRelativePath", "Private/Assets/Factories/T4PathSegmentAssetFactory.h" },
+		{ "IncludePath", "Factories/T4PathSegmentAssetFactory.h" },
+		{ "ModuleRelativePath", "Classes/Factories/T4PathSegmentAssetFactory.h" },
 		{ "ToolTip", "#155" },
 	};
 #endif
@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAssetFactory() {}
 		0,
 		0,
 		0,
-		0x000000A0u,
+		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4PathSegmentAssetFactory_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PathSegmentAssetFactory_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4PathSegmentAssetFactory()
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PathSegmentAssetFactory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PathSegmentAssetFactory, 151755669);
+	IMPLEMENT_CLASS(UT4PathSegmentAssetFactory, 985787987);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4PathSegmentAssetFactory>()
 	{
 		return UT4PathSegmentAssetFactory::StaticClass();

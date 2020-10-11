@@ -171,6 +171,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	TMap<FName, float> SystemParameterMap; // #158
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(VisibleAnywhere, Category = Hide)
 	bool bEditorShowNotSetProperty;
@@ -194,10 +197,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UAnimMontage> AdditiveAnimMontageAsset; // #138
 
-#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TArray<FT4AnimsetAnimSystemData> AnimSystemDataArray;
-#endif
 };
 
 // #131

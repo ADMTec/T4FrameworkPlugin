@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4EditorCommon/Private/Assets/Factories/T4PostProcessAssetFactory.h"
+#include "T4EditorCommon/Classes/Factories/T4PostProcessAssetFactory.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4PostProcessAssetFactory() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4PostProcessAssetFactory_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #90\n */" },
-		{ "IncludePath", "Assets/Factories/T4PostProcessAssetFactory.h" },
-		{ "ModuleRelativePath", "Private/Assets/Factories/T4PostProcessAssetFactory.h" },
+		{ "IncludePath", "Factories/T4PostProcessAssetFactory.h" },
+		{ "ModuleRelativePath", "Classes/Factories/T4PostProcessAssetFactory.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PostProcessAssetFactory() {}
 		0,
 		0,
 		0,
-		0x000000A0u,
+		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4PostProcessAssetFactory_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4PostProcessAssetFactory_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4PostProcessAssetFactory()
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PostProcessAssetFactory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PostProcessAssetFactory, 2197250153);
+	IMPLEMENT_CLASS(UT4PostProcessAssetFactory, 2075884917);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4PostProcessAssetFactory>()
 	{
 		return UT4PostProcessAssetFactory::StaticClass();

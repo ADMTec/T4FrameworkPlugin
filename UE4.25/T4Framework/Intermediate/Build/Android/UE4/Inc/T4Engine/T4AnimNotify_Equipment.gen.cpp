@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4Engine/Classes/AnimNotifies/T4AnimNotify_Equipment.h"
+#include "T4Engine/Classes/Animation/T4AnimNotify_Equipment.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -49,14 +49,14 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimNotify_Equipment() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimNotify_Equipment_Statics::Class_MetaDataParams[] = {
 		{ "DisplayName", "T4Equipment" },
 		{ "HideCategories", "Object Object" },
-		{ "IncludePath", "AnimNotifies/T4AnimNotify_Equipment.h" },
-		{ "ModuleRelativePath", "Classes/AnimNotifies/T4AnimNotify_Equipment.h" },
+		{ "IncludePath", "Animation/T4AnimNotify_Equipment.h" },
+		{ "ModuleRelativePath", "Classes/Animation/T4AnimNotify_Equipment.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4AnimNotify_Equipment_Statics::NewProp_EquipmentType_MetaData[] = {
 		{ "Category", "AnimNotify" },
-		{ "ModuleRelativePath", "Classes/AnimNotifies/T4AnimNotify_Equipment.h" },
+		{ "ModuleRelativePath", "Classes/Animation/T4AnimNotify_Equipment.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4AnimNotify_Equipment_Statics::NewProp_EquipmentType = { "EquipmentType", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4AnimNotify_Equipment, EquipmentType), Z_Construct_UEnum_T4Engine_ET4EquipmentType, METADATA_PARAMS(Z_Construct_UClass_UT4AnimNotify_Equipment_Statics::NewProp_EquipmentType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4AnimNotify_Equipment_Statics::NewProp_EquipmentType_MetaData)) };
@@ -92,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeT4AnimNotify_Equipment() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4AnimNotify_Equipment, 868259106);
+	IMPLEMENT_CLASS(UT4AnimNotify_Equipment, 2673583775);
 	template<> T4ENGINE_API UClass* StaticClass<UT4AnimNotify_Equipment>()
 	{
 		return UT4AnimNotify_Equipment::StaticClass();

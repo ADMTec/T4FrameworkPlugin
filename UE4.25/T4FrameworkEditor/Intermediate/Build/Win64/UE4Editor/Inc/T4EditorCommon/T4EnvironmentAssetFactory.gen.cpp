@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4EditorCommon/Private/Assets/Factories/T4EnvironmentAssetFactory.h"
+#include "T4EditorCommon/Classes/Factories/T4EnvironmentAssetFactory.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EnvironmentAssetFactory_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #90\n */" },
-		{ "IncludePath", "Assets/Factories/T4EnvironmentAssetFactory.h" },
-		{ "ModuleRelativePath", "Private/Assets/Factories/T4EnvironmentAssetFactory.h" },
+		{ "IncludePath", "Factories/T4EnvironmentAssetFactory.h" },
+		{ "ModuleRelativePath", "Classes/Factories/T4EnvironmentAssetFactory.h" },
 		{ "ToolTip", "#90" },
 	};
 #endif
@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 		0,
 		0,
 		0,
-		0x000000A0u,
+		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UT4EnvironmentAssetFactory_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EnvironmentAssetFactory_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UT4EnvironmentAssetFactory()
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EnvironmentAssetFactory() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EnvironmentAssetFactory, 107335727);
+	IMPLEMENT_CLASS(UT4EnvironmentAssetFactory, 4036226010);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EnvironmentAssetFactory>()
 	{
 		return UT4EnvironmentAssetFactory::StaticClass();

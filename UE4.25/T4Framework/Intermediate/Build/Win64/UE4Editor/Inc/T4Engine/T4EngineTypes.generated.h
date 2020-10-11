@@ -13,14 +13,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4ENGINE_T4EngineTypes_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_422_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_421_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ObjectID_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4ENGINE_API UScriptStruct* StaticStruct<struct FT4ObjectID>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_309_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Engine_Public_T4EngineTypes_h_308_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4ActorID_Statics; \
 	T4ENGINE_API static class UScriptStruct* StaticStruct();
 

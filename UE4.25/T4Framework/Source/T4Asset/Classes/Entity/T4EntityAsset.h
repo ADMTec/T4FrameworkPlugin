@@ -41,7 +41,6 @@ public:
 	FT4EntityPhysicalData()
 		: bCollisionDisabled(false) // #118
 		, bUseOverlapEvents(false) // #47, #161
-		, BoundType(ET4EntityBoundType::Box) // #126
 		, BoundHeight(200.0f)
 		, BoundRadius(25.0f)
 
@@ -57,9 +56,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bUseOverlapEvents; // #47, #161
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	ET4EntityBoundType BoundType; // #126
 
 	UPROPERTY(EditAnywhere, Category = Common, meta = (ClampMin = "0.0", ClampMax = "1000"))
 	float BoundHeight; // #126
@@ -197,44 +193,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
 	TMap<FName, TSoftObjectPtr<UAnimSequence>> StanceIdleAnimSequnceAssets; // #142, #154 : FName = StanceName
-};
-
-// #126
-class USkeleton;
-class UAnimMontage;
-class UAnimBlueprint;
-USTRUCT()
-struct T4ASSET_API FT4EntityAnimationData
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	FT4EntityAnimationData()
-		: bUseAnimation(false)
-		, bAnimMontageAutoGen(true)
-	{
-	}
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (DisplayName = "bUseAnimation"))
-	bool bUseAnimation;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TSoftObjectPtr<USkeleton> SkeletonAsset;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TSoftObjectPtr<UAnimBlueprint> AnimBlueprintAsset;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	FT4EntityIdleAnimSequenceData IdleAnimSequenceData; // #142 : BS 에서 AnimSequence 로 변경
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation", DisplayName = "bAutoGen"))
-	bool bAnimMontageAutoGen; // #69
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation", DisplayName = "Anim Montage Asset"))
-	TSoftObjectPtr<UAnimMontage> AnimMontageAsset; // #69
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUseAnimation"))
-	TArray<FT4AnimsetAnimSequenceData> AnimSequenceArray;
 };
 
 // #74

@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeT4PropBasicAnimInstance() {}
 	UPackage* Z_Construct_UPackage__Script_T4Engine();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4PropBasicAnimInstance_NoRegister();
 	T4ENGINE_API UClass* Z_Construct_UClass_UT4PropBasicAnimInstance();
-	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBase();
+	T4ENGINE_API UClass* Z_Construct_UClass_UT4AnimInstanceBaseImpl();
 	T4ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FT4StateAnimVariables();
 // End Cross Module References
 class UScriptStruct* FT4PropStanceAnimVariables::StaticStruct()
@@ -135,7 +135,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4PropStanceAnimVaria
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UT4PropBasicAnimInstance_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UT4AnimInstanceBase,
+		(UObject* (*)())Z_Construct_UClass_UT4AnimInstanceBaseImpl,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Engine,
 	};
 #if WITH_METADATA
@@ -192,7 +192,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4PropStanceAnimVaria
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4PropBasicAnimInstance, 2157098856);
+	IMPLEMENT_CLASS(UT4PropBasicAnimInstance, 1873312990);
 	template<> T4ENGINE_API UClass* StaticClass<UT4PropBasicAnimInstance>()
 	{
 		return UT4PropBasicAnimInstance::StaticClass();

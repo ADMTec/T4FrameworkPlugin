@@ -1,0 +1,137 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef T4ENTITYEDITOR_T4AnimSetBasicAdvancedStateTemplate_generated_h
+#error "T4AnimSetBasicAdvancedStateTemplate.generated.h already included, missing '#pragma once' in T4AnimSetBasicAdvancedStateTemplate.h"
+#endif
+#define T4ENTITYEDITOR_T4AnimSetBasicAdvancedStateTemplate_generated_h
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_116_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateConstantData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateConstantData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_103_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateParameterData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateParameterData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_87_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateAimData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateAimData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_63_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateMovementAdvancedData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateMovementAdvancedData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_38_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateMovementData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateMovementData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_22_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4AnimSetBasicAdvancedStateIdleData_Statics; \
+	T4ENTITYEDITOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4ENTITYEDITOR_API UScriptStruct* StaticStruct<struct FT4AnimSetBasicAdvancedStateIdleData>();
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_SPARSE_DATA
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_RPC_WRAPPERS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetBasicAdvancedStateTemplate(); \
+	friend struct Z_Construct_UClass_UT4AnimSetBasicAdvancedStateTemplate_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetBasicAdvancedStateTemplate, UT4AnimSetLayerTemplateBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetBasicAdvancedStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_INCLASS \
+private: \
+	static void StaticRegisterNativesUT4AnimSetBasicAdvancedStateTemplate(); \
+	friend struct Z_Construct_UClass_UT4AnimSetBasicAdvancedStateTemplate_Statics; \
+public: \
+	DECLARE_CLASS(UT4AnimSetBasicAdvancedStateTemplate, UT4AnimSetLayerTemplateBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4EntityEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4AnimSetBasicAdvancedStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetBasicAdvancedStateTemplate) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetBasicAdvancedStateTemplate); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetBasicAdvancedStateTemplate); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(UT4AnimSetBasicAdvancedStateTemplate&&); \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(const UT4AnimSetBasicAdvancedStateTemplate&); \
+public:
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(UT4AnimSetBasicAdvancedStateTemplate&&); \
+	NO_API UT4AnimSetBasicAdvancedStateTemplate(const UT4AnimSetBasicAdvancedStateTemplate&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4AnimSetBasicAdvancedStateTemplate); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4AnimSetBasicAdvancedStateTemplate); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4AnimSetBasicAdvancedStateTemplate)
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_127_PROLOG
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_RPC_WRAPPERS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_INCLASS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_SPARSE_DATA \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h_130_ENHANCED_CONSTRUCTORS \
+static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class T4AnimSetBasicAdvancedStateTemplate."); \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> T4ENTITYEDITOR_API UClass* StaticClass<class UT4AnimSetBasicAdvancedStateTemplate>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID HostProject_Plugins_T4FrameworkEditor_Source_T4EntityEditor_Private_AnimTemplate_Basic_Advanced_T4AnimSetBasicAdvancedStateTemplate_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

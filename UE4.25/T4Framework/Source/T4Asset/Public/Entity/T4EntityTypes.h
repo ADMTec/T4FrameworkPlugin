@@ -67,6 +67,31 @@ enum class ET4EntityCharacterModularType : uint8 // #72
 };
 
 UENUM()
+enum class ET4EntityCharacterAnimationClass : uint8  // #158 : AnimBPAsset 에서 Public Class 로 변경
+{
+	Human_Basic,
+	Human_Paragon,
+
+	None UMETA(Hidden)
+};
+
+UENUM()
+enum class ET4EntityPropAnimationClass : uint8  // #158 : AnimBPAsset 에서 Public Class 로 변경
+{
+	Prop_Basic,
+
+	None UMETA(Hidden)
+};
+
+UENUM()
+enum class ET4EntityItemAnimationClass : uint8  // #158 : AnimBPAsset 에서 Public Class 로 변경
+{
+	Item_Basic,
+
+	None UMETA(Hidden)
+};
+
+UENUM()
 enum class ET4EntityReactionType : uint8 // #76
 {
 	Hit,

@@ -90,6 +90,9 @@ public:
 	void HandleOnSaveSelectedAssets(TArray<FAssetData> InObjects) const; // #73
 	bool HandleCanSaveSelectedAssets(TArray<FAssetData> InObjects) const; // #73
 
+	void HandleOnDuplicateSelectedAssets(TArray<FAssetData> InObjects) const; // #158
+	bool HandleCanDuplicateSelectedAssets(TArray<FAssetData> InObjects) const; // #158
+
 	void HandleOnUpdateThumbnailSelectedAsset(TArray<FAssetData> InObjects) const;
 	bool HandleCanUpdateThumbnailSelectedAsset(TArray<FAssetData> InObjects) const;
 

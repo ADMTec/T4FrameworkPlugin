@@ -11,10 +11,13 @@
 UENUM()
 enum class ET4AnimsetTemplate : uint8 // #131
 {
-	Basic,
+	Basic_Simple,
+	Basic_Advanced,
+	Basic_Locomotion,
+
 	Paragon,
 
-	None,
+	None UMETA(Hidden)
 };
 
 UENUM()

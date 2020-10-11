@@ -55,7 +55,6 @@ public:
 		, MoveRotationRateScale(1.2f)
 	{
 		bUseOverlapEvents = true; // #47, #161 : 캐릭터는 기본으로 켠다.
-		BoundType = ET4EntityBoundType::Capsule; // #126
 	}
 
 	// CustomizeCharacterEntityDetails
@@ -146,7 +145,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = Hide)
 	FT4EntityMaterialData OverrideMaterialData; // #80
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	UPROPERTY(EditAnywhere, Category = Hide) // #158 : 당장은 사용처가 없어서 노출하지 않는다.
 	TSoftObjectPtr<UPhysicsAsset> OverridePhysicsAsset; // #76 : Fullbody SK 라면 기본 세팅된 PhsycisAsset 을 그대로 사용하고, Override 할 경우만 재설정한다.
 };
 
@@ -528,7 +527,7 @@ public:
 	TSoftObjectPtr<USkeleton> SkeletonAsset; // #39
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TSoftObjectPtr<UAnimBlueprint> AnimBlueprintAsset;
+	ET4EntityCharacterAnimationClass AnimClassType; // #158 : AnimBPAsset 에서 Public Class 로 변경
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TEnumAsByte<ERootMotionMode::Type> AnimRootMotionMode; // #158

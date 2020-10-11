@@ -28,7 +28,7 @@ private: \
 	static void StaticRegisterNativesUT4PropBasicAnimInstance(); \
 	friend struct Z_Construct_UClass_UT4PropBasicAnimInstance_Statics; \
 public: \
-	DECLARE_CLASS(UT4PropBasicAnimInstance, UT4AnimInstanceBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
+	DECLARE_CLASS(UT4PropBasicAnimInstance, UT4AnimInstanceBaseImpl, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
 	DECLARE_SERIALIZER(UT4PropBasicAnimInstance)
 
 
@@ -37,7 +37,7 @@ private: \
 	static void StaticRegisterNativesUT4PropBasicAnimInstance(); \
 	friend struct Z_Construct_UClass_UT4PropBasicAnimInstance_Statics; \
 public: \
-	DECLARE_CLASS(UT4PropBasicAnimInstance, UT4AnimInstanceBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
+	DECLARE_CLASS(UT4PropBasicAnimInstance, UT4AnimInstanceBaseImpl, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/T4Engine"), NO_API) \
 	DECLARE_SERIALIZER(UT4PropBasicAnimInstance)
 
 
