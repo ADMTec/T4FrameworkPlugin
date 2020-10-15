@@ -15,7 +15,6 @@
 /**
   * http://api.unrealengine.com/KOR/Gameplay/DataDriven/
  */
-class UT4BehaviorFlowAsset;
 class UT4ActorEntityAsset;
 
 USTRUCT()
@@ -137,7 +136,7 @@ public:
 	FT4WeaponDBKey InitializeWeaponDBKey; // #50
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4BehaviorFlowAsset> BehaviorFlowAsset;
+	ET4GameNPCBehaviorType BehaviorType; // #158
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4NPCBehaviorData BehaviorData; // #50
@@ -146,7 +145,7 @@ public:
 	TSoftObjectPtr<UT4ActorEntityAsset> EntityAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName InitializeSkinName; // #135
+	FName FullbodySkinName; // #135
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4VisualReactionData ReactionData; // #161 
@@ -168,7 +167,8 @@ public:
 		, RaceName(NAME_None) // #104, #114
 		, InitializeAnimSetName(T4Const_DefaultAnimSetName) // #142
 		, InitializeStanceName(T4Const_DefaultStanceName) // #142
-		, InitializeSkinName(NAME_None) // #135
+		, BehaviorType(ET4GameNPCBehaviorType::HumanBasic) // #158
+		, FullbodySkinName(NAME_None) // #135
 	{
 	}
 };

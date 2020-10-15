@@ -928,9 +928,9 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorNPCDataInf
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InitializeAnimSetName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeSkinName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FullbodySkinName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_InitializeSkinName;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_FullbodySkinName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -962,16 +962,16 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorNPCDataInf
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeAnimSetName = { "InitializeAnimSetName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorNPCDataInfo, InitializeAnimSetName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeAnimSetName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeAnimSetName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeSkinName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_FullbodySkinName_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeSkinName = { "InitializeSkinName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorNPCDataInfo, InitializeSkinName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeSkinName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeSkinName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_FullbodySkinName = { "FullbodySkinName", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorNPCDataInfo, FullbodySkinName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_FullbodySkinName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_FullbodySkinName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeStanceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeAnimSetName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_InitializeSkinName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::NewProp_FullbodySkinName,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_T4Framework,
@@ -1001,7 +1001,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorNPCDataInf
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Hash() { return 920316111U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Hash() { return 3258830071U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

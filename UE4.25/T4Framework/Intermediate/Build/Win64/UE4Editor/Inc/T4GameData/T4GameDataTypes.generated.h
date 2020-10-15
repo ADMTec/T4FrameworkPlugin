@@ -111,6 +111,21 @@ template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameEffectType>();
 enum class ET4GameAttackType : uint8;
 template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameAttackType>();
 
+#define FOREACH_ENUM_ET4GAMEITEMBEHAVIORTYPE(op) \
+	op(ET4GameItemBehaviorType::None) 
+
+enum class ET4GameItemBehaviorType : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameItemBehaviorType>();
+
+#define FOREACH_ENUM_ET4GAMENPCBEHAVIORTYPE(op) \
+	op(ET4GameNPCBehaviorType::HumanBasic) \
+	op(ET4GameNPCBehaviorType::Prop) \
+	op(ET4GameNPCBehaviorType::Environment) \
+	op(ET4GameNPCBehaviorType::None) 
+
+enum class ET4GameNPCBehaviorType : uint8;
+template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameNPCBehaviorType>();
+
 #define FOREACH_ENUM_ET4GAMEMISSIONRULE(op) \
 	op(ET4GameMissionRule::Spawn_All) \
 	op(ET4GameMissionRule::Spawn_Target) \

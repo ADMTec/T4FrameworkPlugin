@@ -73,7 +73,7 @@ struct FT4EditorNPCDataInfo // #135
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = Common)
-	FName InitializeSkinName;
+	FName FullbodySkinName;
 
 	UPROPERTY(VisibleAnywhere, Category = Common)
 	FName InitializeAnimSetName; // #142

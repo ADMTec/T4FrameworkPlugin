@@ -59,6 +59,9 @@ public:
 
 	void HandleOnNewAsset();
 
+	void HandleOnDuplicateAssets(TArray<FAssetData> InObjects);
+	bool HandleCanDuplicateAsset(TArray<FAssetData> InObjects) const;
+
 	void HandleOnSelectAsset(const FAssetData& AssetData);
 	void HandleOnDoubleClicked(const FAssetData& AssetData, bool bFromHistory);
 

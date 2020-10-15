@@ -15,6 +15,7 @@
  */
 class UDataTable;
 class UTexture2D;
+class UT4BehaviorFlowAsset;
 UCLASS(config = T4Framework, meta = (DisplayName = "T4Gameplay"))
 class T4GAMEPLAY_API UT4GameplaySettings : public UDeveloperSettings
 {
@@ -86,10 +87,19 @@ public:
 	UPROPERTY(EditAnywhere, config, Category = "Gameplay Network")
 	float DefaultNetworkLatencySec; // #52
 
-	UPROPERTY(config, EditAnywhere, Category = "Bindings")
+	UPROPERTY(EditAnywhere, config, Category = "NPC AI")
+	TSoftObjectPtr<UT4BehaviorFlowAsset> NPCHumanBasicBehaviorFlowAsset; // #158
+
+	UPROPERTY(EditAnywhere, config, Category = "NPC AI")
+	TSoftObjectPtr<UT4BehaviorFlowAsset> NPCPropBehaviorFlowAsset; // #158
+
+	UPROPERTY(EditAnywhere, config, Category = "NPC AI")
+	TSoftObjectPtr<UT4BehaviorFlowAsset> NPCEnvironmentBehaviorFlowAsset; // #158
+
+	UPROPERTY(config, EditAnywhere, Category = "KeyBindings")
 	TArray<FInputActionKeyMapping> ActionMappings;
 
-	UPROPERTY(config, EditAnywhere, Category = "Bindings")
+	UPROPERTY(config, EditAnywhere, Category = "KeyBindings")
 	TArray<FInputAxisKeyMapping> AxisMappings;
 
 protected:

@@ -23,6 +23,8 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameFindTarget();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameAttackType();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameItemBehaviorType();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionRule();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameMissionType();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameQuestTarget();
@@ -595,6 +597,118 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDataTypes() {}
 				nullptr,
 				"ET4GameAttackType",
 				"ET4GameAttackType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4GameItemBehaviorType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameItemBehaviorType, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameItemBehaviorType"));
+		}
+		return Singleton;
+	}
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameItemBehaviorType>()
+	{
+		return ET4GameItemBehaviorType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameItemBehaviorType(ET4GameItemBehaviorType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameItemBehaviorType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameItemBehaviorType_Hash() { return 3886747161U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameItemBehaviorType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameItemBehaviorType"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameItemBehaviorType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameItemBehaviorType::None", (int64)ET4GameItemBehaviorType::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "Comment", "// #158\n" },
+				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
+				{ "None.Name", "ET4GameItemBehaviorType::None" },
+				{ "ToolTip", "#158" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
+				nullptr,
+				"ET4GameItemBehaviorType",
+				"ET4GameItemBehaviorType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* ET4GameNPCBehaviorType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType, Z_Construct_UPackage__Script_T4GameData(), TEXT("ET4GameNPCBehaviorType"));
+		}
+		return Singleton;
+	}
+	template<> T4GAMEDATA_API UEnum* StaticEnum<ET4GameNPCBehaviorType>()
+	{
+		return ET4GameNPCBehaviorType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameNPCBehaviorType(ET4GameNPCBehaviorType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameNPCBehaviorType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType_Hash() { return 2090128002U; }
+	UEnum* Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4GameNPCBehaviorType"), 0, Get_Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "ET4GameNPCBehaviorType::HumanBasic", (int64)ET4GameNPCBehaviorType::HumanBasic },
+				{ "ET4GameNPCBehaviorType::Prop", (int64)ET4GameNPCBehaviorType::Prop },
+				{ "ET4GameNPCBehaviorType::Environment", (int64)ET4GameNPCBehaviorType::Environment },
+				{ "ET4GameNPCBehaviorType::None", (int64)ET4GameNPCBehaviorType::None },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "Comment", "// #158\n" },
+				{ "Environment.Name", "ET4GameNPCBehaviorType::Environment" },
+				{ "HumanBasic.Name", "ET4GameNPCBehaviorType::HumanBasic" },
+				{ "ModuleRelativePath", "Public/T4GameDataTypes.h" },
+				{ "None.Name", "ET4GameNPCBehaviorType::None" },
+				{ "Prop.Name", "ET4GameNPCBehaviorType::Prop" },
+				{ "ToolTip", "#158" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_T4GameData,
+				nullptr,
+				"ET4GameNPCBehaviorType",
+				"ET4GameNPCBehaviorType",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,

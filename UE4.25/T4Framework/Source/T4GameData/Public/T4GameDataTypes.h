@@ -38,6 +38,23 @@ enum class ET4GameMissionRule : uint8 // #164
 };
 
 UENUM(BlueprintType)
+enum class ET4GameNPCBehaviorType : uint8 // #158
+{
+	HumanBasic,
+
+	Prop,
+	Environment,
+
+	None,
+};
+
+UENUM(BlueprintType)
+enum class ET4GameItemBehaviorType : uint8 // #158
+{
+	None,
+};
+
+UENUM(BlueprintType)
 enum class ET4GameAttackType : uint8 // #63
 {
 	Swing,

@@ -17,7 +17,6 @@
 class UT4BehaviorFlowAsset;
 class IT4WorldActor;
 class UT4ItemServerObject;
-class FT4BehaviorFlowAssetLoader;
 UCLASS()
 class T4GAMEPLAY_API AT4BuiltinItemAIController : public AT4AIControllerBase
 {
@@ -49,7 +48,7 @@ private:
 
 private:
 	ET4AIDataLoadState AIDataLoadState; // #50 // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
-	FT4BehaviorFlowAssetLoader* BehaviorFlowAssetLoader; // TODO : 이후 서버라면 Sync Load 하도록 처리할 것!
+	FT4NPCDBKey ItemDBKey;
 
 	/* Cached BT component */
 	UPROPERTY(transient)

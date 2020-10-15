@@ -197,8 +197,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4MovementType MovementType; // #132
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4AcceleratedMotion AcceleratedMotion; // #127
+	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4AcceleratedMotion AcceleratedMotion; // #127, #171 : C/S 동기화 문제로 우선 Uniform 만 지원하기 때문에 툴 메뉴에서도 제외
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.0", UIMin = "0.0", UIMax = "1.0"))
 	float AirborneFlightTimeRatio; // #132 : 정점에서 유지할 체공시간 비율
@@ -749,9 +749,6 @@ public:
 	FName ActionPoint; // 어딘가에 붙어야 할 경우. 예) 오른손...
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	TSoftObjectPtr<UT4ActionPackAsset> CastingActionPackAsset;
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UT4ActionPackAsset> HeadActionPackAsset;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
@@ -760,8 +757,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4MovementType ProjectileMotion; // #127
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	ET4AcceleratedMotion AcceleratedMotion; // #127
+	UPROPERTY(EditAnywhere, Category = Hide)
+	ET4AcceleratedMotion AcceleratedMotion; // #127, #171 : C/S 동기화 문제로 우선 Uniform 만 지원하기 때문에 툴 메뉴에서도 제외
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (ClampMin = "0.0", UIMin = "0.0", UIMax = "1000"))
 	float MaxHeight; // #127 : 포물선(Parabola) 에서 사용될 최대 높이
@@ -793,12 +790,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	float ProjectileLength; // #112 : Projectile 의 길이, 충돌 계산에서 Offset 으로 사용. (원점 에서의 길이)
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	float ThrowDelayTimeSec; // Play 이후 ActionPoint 에서 떨어지는 시간!
-
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	float CastingStopDelayTimeSec; // ThrowDelayTimeSec 이후 Casting ActionPack 가 삭제될 시간
-
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4ProjectileTestSettings TestSettings; // #132
@@ -819,8 +810,6 @@ public:
 		, bUseOscillate(false) // #127
 		, OscillateRange(0.0f) // #127
 		, ProjectileLength(50.0f) // #112
-		, ThrowDelayTimeSec(0.0f)
-		, CastingStopDelayTimeSec(0.2f)
 	{
 	}
 

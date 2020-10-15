@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 	UPackage* Z_Construct_UPackage__Script_T4Gameplay();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FInputAxisKeyMapping();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionKeyMapping();
+	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	T4GAMEPLAY_API UClass* Z_Construct_UClass_UT4BuiltinUserWidget_NoRegister();
@@ -50,6 +51,18 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ActionMappings;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ActionMappings_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NPCEnvironmentBehaviorFlowAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_NPCEnvironmentBehaviorFlowAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NPCPropBehaviorFlowAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_NPCPropBehaviorFlowAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NPCHumanBasicBehaviorFlowAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_NPCHumanBasicBehaviorFlowAsset;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultNetworkLatencySec_MetaData[];
 #endif
@@ -133,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_AxisMappings_MetaData[] = {
-		{ "Category", "Bindings" },
+		{ "Category", "KeyBindings" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 	};
 #endif
@@ -141,14 +154,41 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_AxisMappings_Inner = { "AxisMappings", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FInputAxisKeyMapping, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_MetaData[] = {
-		{ "Category", "Bindings" },
+		{ "Category", "KeyBindings" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings = { "ActionMappings", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, ActionMappings), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_Inner = { "ActionMappings", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FInputActionKeyMapping, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCEnvironmentBehaviorFlowAsset_MetaData[] = {
+		{ "Category", "NPC AI" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCEnvironmentBehaviorFlowAsset = { "NPCEnvironmentBehaviorFlowAsset", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, NPCEnvironmentBehaviorFlowAsset), Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCEnvironmentBehaviorFlowAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCEnvironmentBehaviorFlowAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCPropBehaviorFlowAsset_MetaData[] = {
+		{ "Category", "NPC AI" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCPropBehaviorFlowAsset = { "NPCPropBehaviorFlowAsset", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, NPCPropBehaviorFlowAsset), Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCPropBehaviorFlowAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCPropBehaviorFlowAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCHumanBasicBehaviorFlowAsset_MetaData[] = {
+		{ "Category", "NPC AI" },
 		{ "Comment", "// #52\n" },
 		{ "ModuleRelativePath", "Public/Settings/T4GameplaySettings.h" },
 		{ "ToolTip", "#52" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings = { "ActionMappings", nullptr, (EPropertyFlags)0x0010000000004001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, ActionMappings), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_Inner = { "ActionMappings", nullptr, (EPropertyFlags)0x0000000000004000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FInputActionKeyMapping, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCHumanBasicBehaviorFlowAsset = { "NPCHumanBasicBehaviorFlowAsset", nullptr, (EPropertyFlags)0x0014000000004001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4GameplaySettings, NPCHumanBasicBehaviorFlowAsset), Z_Construct_UClass_UT4BehaviorFlowAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCHumanBasicBehaviorFlowAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCHumanBasicBehaviorFlowAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec_MetaData[] = {
 		{ "Category", "Gameplay Network" },
@@ -292,6 +332,9 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_AxisMappings_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ActionMappings_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCEnvironmentBehaviorFlowAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCPropBehaviorFlowAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_NPCHumanBasicBehaviorFlowAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_DefaultNetworkLatencySec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlGamepadRightYAttenuation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4GameplaySettings_Statics::NewProp_ControlCameraPitchMaxAngle,
@@ -338,7 +381,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameplaySettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4GameplaySettings, 2185634972);
+	IMPLEMENT_CLASS(UT4GameplaySettings, 1945480736);
 	template<> T4GAMEPLAY_API UClass* StaticClass<UT4GameplaySettings>()
 	{
 		return UT4GameplaySettings::StaticClass();

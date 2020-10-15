@@ -18,10 +18,11 @@ struct FT4ItemTableRowBase : public FT4TableRowBase
 
 public:
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4BehaviorFlowAsset> BehaviorFlowAsset; // DropItem
+	ET4GameItemBehaviorType DropItemBehaviorType; // DropItem (TODO)
 
 public:
 	FT4ItemTableRowBase()
+		: DropItemBehaviorType(ET4GameItemBehaviorType::None) // TODO
 	{
 	}
 };
