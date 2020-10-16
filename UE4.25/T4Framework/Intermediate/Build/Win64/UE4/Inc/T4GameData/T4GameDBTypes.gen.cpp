@@ -170,7 +170,7 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		return ET4GameDBType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4GameDBType(ET4GameDBType_StaticEnum, TEXT("/Script/T4GameData"), TEXT("ET4GameDBType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameDBType_Hash() { return 653840064U; }
+	uint32 Get_Z_Construct_UEnum_T4GameData_ET4GameDBType_Hash() { return 1603556712U; }
 	UEnum* Z_Construct_UEnum_T4GameData_ET4GameDBType()
 	{
 #if WITH_HOT_RELOAD
@@ -182,7 +182,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4GameDBType::Master", (int64)ET4GameDBType::Master },
 				{ "ET4GameDBType::Quest", (int64)ET4GameDBType::Quest },
 				{ "ET4GameDBType::World", (int64)ET4GameDBType::World },
 				{ "ET4GameDBType::Player", (int64)ET4GameDBType::Player },
@@ -208,7 +207,6 @@ void EmptyLinkFunctionForGeneratedCodeT4GameDBTypes() {}
 				{ "Goods.Comment", "// #48\n" },
 				{ "Goods.Name", "ET4GameDBType::Goods" },
 				{ "Goods.ToolTip", "#48" },
-				{ "Master.Name", "ET4GameDBType::Master" },
 				{ "ModuleRelativePath", "Public/T4GameDBTypes.h" },
 				{ "NPC.Name", "ET4GameDBType::NPC" },
 				{ "Nums.Comment", "// #164\n" },

@@ -1276,6 +1276,10 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ObjectID
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_GameName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_Value;
@@ -1294,6 +1298,13 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ObjectID
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ObjectID>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_GameName_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_GameName = { "GameName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ObjectID, GameName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_GameName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_GameName_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/T4EngineTypes.h" },
@@ -1301,6 +1312,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ObjectID
 #endif
 	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ObjectID, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_Value_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ObjectID_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_GameName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ObjectID_Statics::NewProp_Value,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4ObjectID_Statics::ReturnStructParams = {
@@ -1331,7 +1343,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ObjectID
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ObjectID_Hash() { return 3631381196U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ObjectID_Hash() { return 1456865389U; }
 class UScriptStruct* FT4ActorID::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

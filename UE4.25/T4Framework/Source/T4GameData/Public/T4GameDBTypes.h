@@ -10,14 +10,13 @@
 /**
   * #48
  */
-static const FName T4Const_DefaultGameContentName = TEXT("Default"); // #135
+static const FName T4Const_DefaultGameName = TEXT("Default"); // #135
+static const FName T4Const_ActiveGameName = NAME_None; // #172 : 현재 활성화 된 DB Content Name
 
 // #T4_ADD_GAME_DATATABLE
 UENUM()
 enum class ET4GameDBType : uint8
 {
-	Master,
-
 	Quest, // #146
 
 	World,
@@ -223,34 +222,11 @@ public:
 		return RowName.ToString();
 	}
 
-	static const TCHAR* ToTypeString(ET4GameDBType InType)
-	{
-		static const TCHAR* GT4GameDBTypeStrings[] =
-		{
-			TEXT("Master"),
-			TEXT("Quest"), // #146
-			TEXT("World"),
-			TEXT("Player"),
-			TEXT("NPC"),
-			TEXT("Weapon"), // #37
-			TEXT("Costume"),
-			TEXT("Goods"), // #164
-			TEXT("SkillSet"), // #50
-			TEXT("Skill"),
-			TEXT("Effect"),
-			TEXT("Stat"), // #114
-			TEXT("Reward"), // #164
-			TEXT("Text"), // #164
-			TEXT("None"),
-		};
-		static_assert(UE_ARRAY_COUNT(GT4GameDBTypeStrings) == (uint8)(ET4GameDBType::Nums) + 1, "GameDBType doesn't match!");
-		check(uint8(InType) < UE_ARRAY_COUNT(GT4GameDBTypeStrings));
-		return GT4GameDBTypeStrings[uint8(InType)];
-	}
-
+	static const TCHAR* ToTypeString(ET4GameDBType InType);
+	
 	FORCEINLINE FString ToTypeString() const
 	{
-		return ToTypeString(Type);
+		return FT4GameDBKey::ToTypeString(Type);
 	}
 
 	FORCEINLINE FString ToString() const

@@ -2,6 +2,14 @@
 ### The Most Powerful MMO Action RPG Framework for UE4
 
 > **Update History**
+- **v0.9.95** : 2020.10.15
+  - #158 [기능개선] NPC GameDB 프로퍼티로 NPC별 BehaviorFlowAsset 을 직접 지정하던 것을 BehaviorType 설정하도록 수정
+  - #171 [기능개선] Action Editor, No Simulation 상태에서 마우스 좌클릭으로 편집중인 ActionPack 을 플레이 할 수 있도록 기능 추가
+  - #171 [기능개선] Entity Editor, ActionPackBrowser 에서 ActionPack 선택 후 마우스 우클릭으로 Duplicate 기능 추가
+  - #171 [버그수정] Action Editor, 캐릭터가 +X 축에 정렬되어 있을 경우 Rotation Action 에 의한 캐릭터 회전이 동작하지 않던 문제 수정
+  - #158 [버그수정] Action Editor, ActionPack Projectile Action 의 InitialRollAngle 옵션이 정상적으로 적용되지 않던 문제 수정 
+  - #158 [버그수정] Entity Editor, AnimSet 의 Animation TreeView 에서 우클릭 Item 선택이 다른 아이템을 편집하던 문제 수정
+  - #158 [버그수정] Entity Editor, Animset SystemLayer 의 Parameter 수정이 캐릭터에 즉시 반영되지 않던 문제 수정
 - v0.9.92 : 2020.10.11
   - #163 [기능개선] Content Editor, 상단 툴바에 현재 진행중인 퀘스트 스탭을 완료처리할 수 있는 기능 추가
   - #163 [기능개선] Quest Editor, 메인 툴바에 "Refresh" 버튼을 추가해 Graph 를 최신 정보로 일괄 업데이트 할 수 있도록 기능 추가

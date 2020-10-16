@@ -143,6 +143,8 @@ public:
 	bool GetTouchPosition(ETouchIndex::Type InFingerIndex, FVector2D& OutPosition) const override; // #151
 
 #if WITH_EDITOR
+	void EditorSetGameName(FName InGameName) override { OwnedObjectID.GameName = InGameName; } // #172 : ContentName 을 변경했을 경우 GameDB 변경 대응 (에디터만 사용)
+
 	// see UGameViewportClient::InputKey
 	bool EditorInputKey(FKey InKey, EInputEvent InEvent, float InAmountDepressed, bool bInGamepad) override; // #30
 

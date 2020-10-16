@@ -22,7 +22,10 @@ public:
 	uint32 Version;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	FName ContentName;
+	FName GameName;
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	FString Description;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> QuestTableAsset; // #146
@@ -63,9 +66,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	TSoftObjectPtr<UDataTable> TextTableAsset; // #164
 
-	UPROPERTY(EditAnywhere, Category = Hide)
-	FString UI_Title; // 빌드 오류로 인해 추가. 사용하지 않음
-
 public:
 	enum EVersion
 	{
@@ -78,7 +78,7 @@ public:
 
 	FT4MasterTableRow()
 		: Version(EVersion::LatestVersion) // #135
-		, ContentName(T4Const_DefaultGameContentName)
+		, GameName(T4Const_DefaultGameName)
 	{
 	}
 };

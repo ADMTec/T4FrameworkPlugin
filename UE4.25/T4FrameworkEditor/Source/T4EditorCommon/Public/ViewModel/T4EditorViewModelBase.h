@@ -32,6 +32,7 @@ class IT4WorldSystem; // #93
 class IT4PlayerController;
 class IT4EditorGameStatics; // #114
 class IT4Framework;
+class IT4GameDBInstance; // #172
 class UT4EditorEnvironmentController; // #94
 class UT4EditorPathSegmentController; // #155
 class UT4EditorReplaySystemController;
@@ -118,6 +119,7 @@ public:
 	FT4OnManipulatorEndTracking& GetOnManipulatorEndTracking() { return OnManipulatorEndTracking; } // #125
 	FT4OnManipulatorUpdating& GetOnManipulatorUpdating() { return OnManipulatorUpdating; } // #118
 
+	IT4GameDBInstance* GetGameDBInstance() const; // #172
 	IT4EditorGameStatics* GetEditorGameStatics() const;
 
 	virtual UT4EditorEnvironmentController* GetEditorEnvironmentController() const { return nullptr; } // #90, #94
@@ -165,6 +167,8 @@ public:
 	bool ServerPlayQuest(const FT4GameDBKey& InGameDBKey); // #164
 
 	virtual void ServerDespawnAll(bool bClearPlayerActor); // #68
+
+	FT4ObjectID GenerateNewObjectID(uint32 InReservedObjectID = T4Const_EmptyObjectID); // #172 : 중복되지 않는 서버에서 발급할 FT4ObjectID 와 ContentName 이 설정된 NewObjectID 발급
 
 	virtual bool ServerSpawnObject(const FT4GameDBKey& InGameDBKey, float InSpawnDistance = 0.0f); // #60, #126
 	bool ServerSpawnObject(

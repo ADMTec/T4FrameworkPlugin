@@ -54,7 +54,9 @@ protected:
 	void GetColumnData(const FT4GameDBRowBase* InDBRowBase, FT4TreeViewNodePtr OutItem);
 	TSharedPtr<SHeaderRow> GenerateHeaderWidget() override;
 
-	void HandleOnMakeConsoleCommand();
+	void HandleOnCopyToClipboard(); // #172
+	void HandleOnPasteFromClipboard(); // #172
+	bool HandleOnCanPasteFromClipboard(); // #172
 
 private:
 	TSharedPtr<SHeaderRow> HeaderRowWidgetPtr;

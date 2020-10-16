@@ -58,9 +58,6 @@ public:
 	FName ID;
 
 	UPROPERTY(VisibleAnywhere, Category = Editor)
-	FGuid Guid;
-
-	UPROPERTY(VisibleAnywhere, Category = Editor)
 	FName WorldTimeTag;
 	
 	UPROPERTY(EditAnywhere, Category = Editor)

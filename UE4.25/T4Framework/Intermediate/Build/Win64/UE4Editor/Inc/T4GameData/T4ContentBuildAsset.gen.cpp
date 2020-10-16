@@ -17,7 +17,6 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentBuildAsset() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4SpawnLayerData();
 	UPackage* Z_Construct_UPackage__Script_T4GameData();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4SpawnAsset_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FGuid();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentBuildAsset_NoRegister();
 	T4GAMEDATA_API UClass* Z_Construct_UClass_UT4ContentBuildAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
@@ -76,10 +75,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_WorldTimeTag;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Guid_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Guid;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ID_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ID;
@@ -137,13 +132,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag = { "WorldTimeTag", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, WorldTimeTag), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnLayerData, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID_MetaData[] = {
 		{ "Category", "Editor" },
 		{ "ModuleRelativePath", "Classes/Content/T4ContentBuildAsset.h" },
@@ -158,7 +146,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData
 #endif // WITH_EDITORONLY_DATA
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_SpawnAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_WorldTimeTag,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_Guid,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::NewProp_ID,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4SpawnLayerData_Statics::ReturnStructParams = {
@@ -189,7 +176,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnLayerData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash() { return 3494045101U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnLayerData_Hash() { return 3071848567U; }
 	void UT4ContentBuildAsset::StaticRegisterNativesUT4ContentBuildAsset()
 	{
 	}

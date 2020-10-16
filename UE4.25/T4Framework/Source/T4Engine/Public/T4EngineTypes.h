@@ -423,19 +423,25 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	uint32 Value;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	FName GameName; // #172 : 사용하는 Content 초기 생성시 기록! (WARN : Key 로는 사용하지 않는다)
+
 public:
 	FT4ObjectID()
 		: Value(T4Const_EmptyObjectID)
+		, GameName(NAME_None) // #172
 	{
 	}
 
 	FT4ObjectID(const uint32& InValue)
 		: Value(InValue)
+		, GameName(NAME_None) // #172
 	{
 	}
 
 	FT4ObjectID(const FT4ObjectID& InValue)
 		: Value(InValue.Value)
+		, GameName(NAME_None) // #172
 	{
 	}
 
@@ -467,6 +473,7 @@ public:
 	FORCEINLINE FT4ObjectID operator=(const FT4ObjectID& InRhs)
 	{
 		Value = InRhs.Value;
+		GameName = InRhs.GameName; // #172
 		return *this;
 	}
 

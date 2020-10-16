@@ -10,6 +10,7 @@
   * #114
  */
 class UWorld;
+class IT4GameDBInstance; // #172
 class IT4Framework;
 class IT4WorldActor;
 class IT4WorldSystem;
@@ -51,6 +52,9 @@ public:
 	void ResetControlActorID() { ControlActorID.Empty(); }
 
 #if WITH_EDITOR
+	// #172 : ContentName 을 변경했을 경우 GameDB 변경 대응 (에디터만 사용)
+	void EditorSetGameName(FName InGameName) { GameObjectID.GameName = InGameName; }
+
 	virtual const FString GetAIDebugString() const { return FString(); } // #114 : Only ServerObject
 	virtual const FColor GetDebugColor() const { return FColor::Green; } // #140
 #endif

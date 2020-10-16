@@ -68,6 +68,7 @@ struct T4GAMEDATA_API FT4GameDBRowBase
 	ET4GameDBValidation GetResultValidation(const FT4GameDBKey& InDBKey);
 
 	virtual const FString GetTitleString() const = 0; // #163
+	virtual FT4TableRowBase* GetTableRowBaseRaw() { return nullptr; } // #172
 
 	// #118
 	virtual TSharedPtr<FStructOnScope> GetStructOnScope() = 0;
@@ -95,15 +96,14 @@ struct T4GAMEDATA_API FT4GameDBRowBase
 };
 
 class UDataTable;
-class T4GAMEDATA_API IT4GameDBLibrary
+class T4GAMEDATA_API IT4GameDBInstance
 {
 public:
-	virtual ~IT4GameDBLibrary() {}
+	virtual ~IT4GameDBInstance() {}
 
-	virtual bool Initialize(const FSoftObjectPath& InMasterTablePath, const FName InGameContentSelected) = 0; // #135
-	virtual void Finalize() = 0; // #135
+	virtual FName GetContentName() const = 0; // #172
 
-	virtual bool IsInitialized() const = 0; // #135
+	virtual void SetActivate() = 0; // #172 : 이 콘텐츠를 메인 콘텐츠로...
 
 	virtual void Reload() = 0; // #125
 	virtual bool Refresh(ET4GameDBType InGameDBType) = 0; // #125
@@ -155,7 +155,7 @@ public:
 	virtual void SourceDataRenameTableRow(ET4GameDBType InGameDBType, const FName InOldRowName, const FName InNewRowName) = 0;
 	virtual FT4TableRowBase* SourceDataDuplicateTableRow(ET4GameDBType InGameDBType, const FName InSourceRowName, const FName InNewRowName) = 0;
 	virtual void SourceDataMoveTableRow(ET4GameDBType InGameDBType, const FName InTargetRowName, const FName InSourceRowName) = 0;
-	virtual void SourceDataRefreshTableRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
+	virtual void SourceDataFlushTableRow(const FT4GameDBKey& InGameDBKey) = 0; // GameData to RawData
 
 	virtual void EditorSetTreeExpansion(ET4GameDBType InGameDBType, const FName InRowName, bool bInExpand) = 0; // #122
 	virtual bool EditorIsTreeExpanded(ET4GameDBType InGameDBType, const FName InRowName) const = 0; // #122
@@ -163,4 +163,17 @@ public:
 #endif
 };
 
-T4GAMEDATA_API IT4GameDBLibrary* GetGameDBLibrary();
+namespace T4GameDB
+{
+	T4GAMEDATA_API FName GetActiveGameName();
+	T4GAMEDATA_API IT4GameDBInstance* GetInstance(const FName InDBContentName);
+
+#if WITH_EDITOR
+	struct T4GAMEDATA_API FT4MasterDBRow
+	{
+		FName GameName;
+		FString Description;
+	};
+	T4GAMEDATA_API bool GetMaterDBRows(TArray<FT4MasterDBRow>& OutMasterDBRows); // #172
+#endif
+}

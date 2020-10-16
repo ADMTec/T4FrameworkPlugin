@@ -150,6 +150,8 @@ public:
 	virtual bool GetTouchPosition(ETouchIndex::Type InFingerIndex, FVector2D& OutPosition) const = 0; // #151
 
 #if WITH_EDITOR
+	virtual void EditorSetGameName(FName InGameName) = 0; // #172 : ContentName 을 변경했을 경우 GameDB 변경 대응 (에디터만 사용)
+
 	virtual bool EditorInputKey(FKey InKey, EInputEvent InEvent, float InAmountDepressed, bool bInGamepad) = 0; // #30
 	virtual bool EditorInputAxis(FKey InKey, float InDelta, float InDeltaTime, int32 InNumSamples, bool bInGamepad) = 0; // #30
 
@@ -161,6 +163,7 @@ public:
 };
 
 // #42
+class IT4GameDBInstance; // #172 : T4GameData
 class T4FRAMEWORK_API IT4GameMainFrame
 {
 public:
@@ -177,6 +180,8 @@ public:
 
 	virtual void OnProcessPre(float InDeltaTime) = 0;
 	virtual void OnProcessPost(float InDeltaTime) = 0;
+
+	virtual IT4GameDBInstance* GetGameDBInstance() const = 0; // #172 : Framework 가 사용하는 GameDB 를 고정한다.
 
 	virtual void ChangePrevControlMode() = 0; // #151
 	virtual void ChangeNextControlMode() = 0; // #151
@@ -219,6 +224,7 @@ public:
 
 	virtual void RegisterGameMainFrame(IT4GameMainFrame* InLayerInstance) = 0; // #42
 	virtual IT4GameMainFrame* GetGameMainFrame() const = 0; // #42
+	virtual IT4GameDBInstance* GetGameDBInstance() const = 0; // #172 : Framework 가 사용하는 GameDB 를 고정한다.
 
 	virtual uint32 GetWorldTravelCount() const = 0; // #146
 
@@ -278,11 +284,7 @@ public:
 #if (!TECH4_CLIENT_ONLY_USED || WITH_SERVER_CODE) // #149 : 클라이언트에서 서버 로직을 돌리기 위한 처리 (T4FrameworkMinimal.h)
 	// Server
 	//
-	virtual FT4ObjectID GenerateObjectIDForServer() = 0; // #41
-
-#if WITH_EDITOR
-	virtual FT4ObjectID ReservedObjectIDForEditor() = 0; // #114 : 미리 잡아놓는다. (툴용)
-#endif
+	virtual uint32 GenerateServerUniqueID() = 0; // #41, #172 : 중복되지 않는 서버에서 발급할 FT4ObjectID 생성
 
 	virtual bool AddObjectController(const FT4ObjectID& InObjectID, IT4AIControllerBase* InAIController) = 0; // #31
 	virtual void RemoveObjectController(const FT4ObjectID& InObjectID) = 0; // #31
@@ -359,13 +361,14 @@ private:
 namespace T4Framework
 {
 	T4FRAMEWORK_API IT4Framework* CreateFramework(
-		ET4FrameworkType InFrameType,
-		const FT4WorldConstructionValues& InWorldConstructionValues // #87
+		const FT4FrameworkConstructionValues& InConstructionValues // #87, #172
 	);
 	T4FRAMEWORK_API void DestroyFramework(IT4Framework* InFramework);
 
 	T4FRAMEWORK_API bool HasFramework(ET4LayerType InLayerType);
 	T4FRAMEWORK_API IT4Framework* GetFramework(ET4LayerType InLayerType);
+
+	T4FRAMEWORK_API uint32 GetNumActiveFrameworks(); // #172
 
 	T4FRAMEWORK_API void NotifyFrameworkLaunch(const TCHAR* InName); // #148
 }

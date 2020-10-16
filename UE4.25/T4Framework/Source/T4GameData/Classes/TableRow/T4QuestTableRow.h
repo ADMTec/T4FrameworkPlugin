@@ -54,9 +54,6 @@ public:
 	FT4QuestTextDBKey DescriptionTextDBKey; // #164
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FGuid Guid;
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4WorldDBKey WorldDBKey;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)

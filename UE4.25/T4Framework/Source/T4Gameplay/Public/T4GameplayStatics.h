@@ -28,11 +28,16 @@ public:
 	IT4PlayerController* GetPlayerController(ET4LayerType InLayerType) const;
 	UT4GameClientObject* GetPlayerClientObject(ET4LayerType InLayerType) const;
 
-	float GeMaxMoveSpeedByStance(const FT4GameDBKey& InDBKey, FName InStanceName);
-	bool GetJumpProperties(const FT4GameDBKey& InDBKey, float& OutJumpMaxHeight, float& OutJumpHeightSpeed);
-	bool GetSkillSetInfo(const FT4SkillSetDBKey& InDBKey, FT4GameplaySkillSetInfo& OutSkillSetInfo);
-
-	bool MakeEquipWeaponActionCommand(const FT4WeaponDBKey& InDBKey, FT4EquipWeaponActionCommand* OutActionCommand); // #169
+	// #172 : TODO : GameObject 로 넣을 것! Object 의 Stat 에 따라 값이 틀려질 수 있음
+	float GeMaxMoveSpeedByStance(const FName InGameName, const FT4GameDBKey& InDBKey, FName InStanceName);
+	bool GetJumpProperties(const FName InGameName, const FT4GameDBKey& InDBKey, float& OutJumpMaxHeight, float& OutJumpHeightSpeed);
+	bool GetSkillSetInfo(const FName InGameName, const FT4SkillSetDBKey& InDBKey, FT4GameplaySkillSetInfo& OutSkillSetInfo);
+	bool MakeEquipWeaponActionCommand(
+		const FName InGameName, 
+		const FT4WeaponDBKey& InDBKey, 
+		FT4EquipWeaponActionCommand* OutActionCommand
+	); // #169
+	// ~#172
 
 	bool DoExecuteByUID(ET4LayerType InLayerType, const FT4GameUID& InGameUID); // #150
 

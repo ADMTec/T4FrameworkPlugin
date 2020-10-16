@@ -10,16 +10,6 @@
 /**
   * #151
  */
-struct FT4GameplayParameters // #158
-{
-	FT4GameplayParameters()
-		: ProjectGameContentName(NAME_None)
-	{
-	}
-	FSoftObjectPath ProjectGameMasterTablePath;
-	FName ProjectGameContentName;
-};
-
 class T4GAMEPLAY_API FT4GameplayAPI
 {
 public:
@@ -30,7 +20,7 @@ public:
 
 	bool IsInitialized() const { return bInitialized; }
 
-	void Initialize(const FT4GameplayParameters& InGameplayParameters); // #158
+	void Initialize(const FName InProjectGameName); // #158
 	void Finalize(); // #158
 
 	void ReplayPlay(ET4LayerType InLayerType, FName InPlayAssetName, FName InFolderName, bool bInPlayerPossessed, bool bInPlayRepeat); // #68
