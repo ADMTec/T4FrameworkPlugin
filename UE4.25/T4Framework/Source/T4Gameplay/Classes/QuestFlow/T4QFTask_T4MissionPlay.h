@@ -12,7 +12,7 @@
 /**
   * #163
  */
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 UCLASS(hidecategories = (Task))
 class T4GAMEPLAY_API UT4QFTask_T4MissionPlay : public UBTTaskNode
 {
@@ -32,5 +32,5 @@ public:
 	ET4GameMissionRule MissionRule; // #164
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4SpawnAsset> MissionSpawnAsset;
+	TSoftObjectPtr<UT4GameSpawnAsset> MissionSpawnAsset;
 };

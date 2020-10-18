@@ -12,7 +12,7 @@
 /**
   * #168, #163
  */
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 UCLASS()
 class T4GAMEPLAY_API UT4QFComposite_T4Mission : public UBTComposite_Sequence
 {
@@ -34,7 +34,7 @@ public:
 	ET4GameMissionRule MissionRule; // #164
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4SpawnAsset> MissionSpawnAsset;
+	TSoftObjectPtr<UT4GameSpawnAsset> MissionSpawnAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4GameWorldSettings OverrideWorldSettings;

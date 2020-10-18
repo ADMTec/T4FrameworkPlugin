@@ -394,6 +394,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RotationRateSpeed;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CoolTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CoolTimeSec;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DurationSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DurationSec;
@@ -509,6 +513,13 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_RotationRateSpeed = { "RotationRateSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillShapeData, RotationRateSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_RotationRateSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_RotationRateSpeed_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_CoolTimeSec_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_CoolTimeSec = { "CoolTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SkillShapeData, CoolTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_CoolTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_CoolTimeSec_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_DurationSec_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4SkillTableRow.h" },
@@ -608,6 +619,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_MoveAngleType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_MoveAngleType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_RotationRateSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_CoolTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_DelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4SkillShapeData_Statics::NewProp_bUseOverlapEvents,
@@ -646,7 +658,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SkillShapeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SkillShapeData_Hash() { return 4256423364U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SkillShapeData_Hash() { return 2193564160U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

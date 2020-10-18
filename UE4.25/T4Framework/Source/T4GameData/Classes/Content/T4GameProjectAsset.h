@@ -5,12 +5,12 @@
 #include "T4GameDataMinimal.h"
 #include "T4GameDBTypes.h"
 #include "Common/T4CommonAssetStructs.h" // #103
-#include "T4ContentBuildAsset.generated.h"
+#include "T4GameProjectAsset.generated.h"
 
 /**
   * #118
  */
-struct FT4ContentBuildVersion
+struct FT4GameProjectVersion
 {
 	enum Type
 	{
@@ -24,11 +24,11 @@ struct FT4ContentBuildVersion
 	T4GAMEDATA_API const static FGuid GUID;
 
 private:
-	FT4ContentBuildVersion() {}
+	FT4GameProjectVersion() {}
 };
 
-class UT4SpawnAsset;
-
+class UT4GameSpawnAsset;
+class UT4MapEntityAsset;
 USTRUCT()
 struct T4GAMEDATA_API FT4SpawnLayerData
 {
@@ -36,8 +36,9 @@ struct T4GAMEDATA_API FT4SpawnLayerData
 
 public:
 	FT4SpawnLayerData()
-		: WorldTimeTag(NAME_None)
+		: ID(NAME_None)
 #if WITH_EDITORONLY_DATA
+		, WorldTimeTag(NAME_None)
 		, ParentID(NAME_None) // #122
 		, FolderName(NAME_None) // #122
 #endif
@@ -57,13 +58,16 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Editor)
 	FName ID;
 
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(EditAnywhere, Category = Editor)
+	TSoftObjectPtr<UT4GameSpawnAsset> SpawnAsset;
+
 	UPROPERTY(VisibleAnywhere, Category = Editor)
 	FName WorldTimeTag;
 	
 	UPROPERTY(EditAnywhere, Category = Editor)
-	TSoftObjectPtr<UT4SpawnAsset> SpawnAsset;
+	TSoftObjectPtr<UT4MapEntityAsset> MapEntityAsset; // #140
 
-#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FString Description;
 
@@ -77,7 +81,7 @@ public:
 
 class UTexture2D;
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4GAMEDATA_API UT4ContentBuildAsset : public UObject
+class T4GAMEDATA_API UT4GameProjectAsset : public UObject
 {
 	GENERATED_UCLASS_BODY()
 
@@ -92,13 +96,13 @@ public:
 #endif // WITH_EDITOR
 
 public:
+#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
-	FT4WorldDBKey WorldDBKey;
+	FName ProjectGameName; // #172 : 이 Project 가 사용하는 GameDB
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	TArray<FT4SpawnLayerData> SpawnLayerArray;
 
-#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FT4EditorTestAutomationData TestAutomation; // #100, #103
 

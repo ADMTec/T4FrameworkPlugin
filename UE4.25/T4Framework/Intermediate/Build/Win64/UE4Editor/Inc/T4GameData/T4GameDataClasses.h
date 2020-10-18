@@ -8,12 +8,12 @@
 
 
 #include "T4GameData/Classes/Content/T4BehaviorFlowAsset.h"
-#include "T4GameData/Classes/Content/T4ContentBuildAsset.h"
+#include "T4GameData/Classes/Content/T4GameProjectAsset.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnCommonStructs.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnPrefabStructs.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnObjectStructs.h"
+#include "T4GameData/Classes/Content/T4GameSpawnAsset.h"
 #include "T4GameData/Classes/Content/T4QuestFlowAsset.h"
-#include "T4GameData/Classes/Content/T4SpawnCommonStructs.h"
-#include "T4GameData/Classes/Content/T4SpawnPrefabStructs.h"
-#include "T4GameData/Classes/Content/T4SpawnObjectStructs.h"
-#include "T4GameData/Classes/Content/T4SpawnAsset.h"
 #include "T4GameData/Classes/TableRow/T4TableRowBase.h"
 #include "T4GameData/Classes/TableRow/T4ItemTableRowBase.h"
 #include "T4GameData/Classes/TableRow/T4CostumeTableRow.h"

@@ -18,46 +18,46 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUT4ContentBuildThumbnailRenderer(); \
-	friend struct Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics; \
+	static void StaticRegisterNativesUT4GameProjectThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics; \
 public: \
-	DECLARE_CLASS(UT4ContentBuildThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4ContentEditor"), NO_API) \
-	DECLARE_SERIALIZER(UT4ContentBuildThumbnailRenderer)
+	DECLARE_CLASS(UT4GameProjectThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4ContentEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4GameProjectThumbnailRenderer)
 
 
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_INCLASS \
 private: \
-	static void StaticRegisterNativesUT4ContentBuildThumbnailRenderer(); \
-	friend struct Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics; \
+	static void StaticRegisterNativesUT4GameProjectThumbnailRenderer(); \
+	friend struct Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics; \
 public: \
-	DECLARE_CLASS(UT4ContentBuildThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4ContentEditor"), NO_API) \
-	DECLARE_SERIALIZER(UT4ContentBuildThumbnailRenderer)
+	DECLARE_CLASS(UT4GameProjectThumbnailRenderer, UT4EditorThumbnailRenderer, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/T4ContentEditor"), NO_API) \
+	DECLARE_SERIALIZER(UT4GameProjectThumbnailRenderer)
 
 
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UT4ContentBuildThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4ContentBuildThumbnailRenderer) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4ContentBuildThumbnailRenderer); \
-DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4ContentBuildThumbnailRenderer); \
+	NO_API UT4GameProjectThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4GameProjectThumbnailRenderer) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4GameProjectThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4GameProjectThumbnailRenderer); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UT4ContentBuildThumbnailRenderer(UT4ContentBuildThumbnailRenderer&&); \
-	NO_API UT4ContentBuildThumbnailRenderer(const UT4ContentBuildThumbnailRenderer&); \
+	NO_API UT4GameProjectThumbnailRenderer(UT4GameProjectThumbnailRenderer&&); \
+	NO_API UT4GameProjectThumbnailRenderer(const UT4GameProjectThumbnailRenderer&); \
 public:
 
 
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UT4ContentBuildThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+	NO_API UT4GameProjectThumbnailRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UT4ContentBuildThumbnailRenderer(UT4ContentBuildThumbnailRenderer&&); \
-	NO_API UT4ContentBuildThumbnailRenderer(const UT4ContentBuildThumbnailRenderer&); \
+	NO_API UT4GameProjectThumbnailRenderer(UT4GameProjectThumbnailRenderer&&); \
+	NO_API UT4GameProjectThumbnailRenderer(const UT4GameProjectThumbnailRenderer&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4ContentBuildThumbnailRenderer); \
-DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4ContentBuildThumbnailRenderer); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4ContentBuildThumbnailRenderer)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UT4GameProjectThumbnailRenderer); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UT4GameProjectThumbnailRenderer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UT4GameProjectThumbnailRenderer)
 
 
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_15_PRIVATE_PROPERTY_OFFSET
@@ -86,7 +86,7 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> T4CONTENTEDITOR_API UClass* StaticClass<class UT4ContentBuildThumbnailRenderer>();
+template<> T4CONTENTEDITOR_API UClass* StaticClass<class UT4GameProjectThumbnailRenderer>();
 
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_24_SPARSE_DATA
 #define HostProject_Plugins_T4FrameworkEditor_Source_T4ContentEditor_Private_Utility_T4ContentThumbnailRenderer_h_24_RPC_WRAPPERS

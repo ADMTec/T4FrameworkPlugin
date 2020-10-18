@@ -13,7 +13,7 @@
 class SHeaderRow;
 class ST4TreeViewRow;
 class FDragDropOperation;
-struct FT4GameDBRowBase;
+class FT4GameDBRowInstance;
 class T4EDITORCOMMON_API ST4TextDBTreeWidget : public ST4TreeViewWidget
 {
 public:
@@ -51,10 +51,12 @@ protected:
 
 	void AddExtensionMenuBuilder(FMenuBuilder& InMenuBuilder) override; // #120
 
-	void GetColumnData(const FT4GameDBRowBase* InDBRowBase, FT4TreeViewNodePtr OutItem);
+	void GetColumnData(const FT4GameDBRowInstance* InDBRowInstance, FT4TreeViewNodePtr OutItem);
 	TSharedPtr<SHeaderRow> GenerateHeaderWidget() override;
 
 	void HandleOnCopyToClipboard(); // #172
+	bool HandleOnCanCopyToClipboard(); // #172
+
 	void HandleOnPasteFromClipboard(); // #172
 	bool HandleOnCanPasteFromClipboard(); // #172
 

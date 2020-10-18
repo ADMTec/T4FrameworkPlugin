@@ -18,10 +18,10 @@ void EmptyLinkFunctionForGeneratedCodeT4NPCTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4TableRowBase();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4VisualReactionData();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActorEntityAsset_NoRegister();
-	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCBehaviorData();
-	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4WeaponDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCStatDBKey();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCBehaviorData();
+	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NPCLocomotionData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4CharacterShapeData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NameTextDBKey();
@@ -69,6 +69,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_EntityAsset;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeWeaponDBKey_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeWeaponDBKey;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeNPCStatDBKey_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeNPCStatDBKey;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorData_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BehaviorData;
@@ -77,14 +85,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_BehaviorType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_BehaviorType_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeWeaponDBKey_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeWeaponDBKey;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InitializeNPCStatDBKey_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InitializeNPCStatDBKey;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocomotionData_MetaData[];
 #endif
@@ -155,25 +155,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_EntityAsset = { "EntityAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, EntityAsset), Z_Construct_UClass_UT4ActorEntityAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_EntityAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_EntityAsset_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #158\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
-		{ "ToolTip", "#158" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData = { "BehaviorData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, BehaviorData), Z_Construct_UScriptStruct_FT4NPCBehaviorData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
-		{ "ToolTip", "#50" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType = { "BehaviorType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, BehaviorType), Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeWeaponDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #114 : \xea\xb8\xb0\xeb\xb3\xb8 Stat\n" },
@@ -185,12 +166,31 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "Comment", "// #50\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
+		{ "ToolTip", "#50" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey = { "InitializeNPCStatDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, InitializeNPCStatDBKey), Z_Construct_UScriptStruct_FT4NPCStatDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #158\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
+		{ "ToolTip", "#158" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData = { "BehaviorData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, BehaviorData), Z_Construct_UScriptStruct_FT4NPCBehaviorData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData[] = {
+		{ "Category", "ServerOnly" },
 		{ "Comment", "// #50, #108, #109\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4NPCTableRow.h" },
 		{ "ToolTip", "#50, #108, #109" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey = { "InitializeNPCStatDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, InitializeNPCStatDBKey), Z_Construct_UScriptStruct_FT4NPCStatDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType = { "BehaviorType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4NPCTableRow, BehaviorType), Z_Construct_UEnum_T4GameData_ET4GameNPCBehaviorType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData_MetaData[] = {
 		{ "Category", "Common" },
@@ -263,11 +263,11 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ReactionData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_FullbodySkinName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_EntityAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeWeaponDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_BehaviorType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeWeaponDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeNPCStatDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_LocomotionData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_ShapeData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4NPCTableRow_Statics::NewProp_InitializeStanceName,
@@ -305,7 +305,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4NPCTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 3827816636U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4NPCTableRow_Hash() { return 3347516821U; }
 class UScriptStruct* FT4NPCBehaviorData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

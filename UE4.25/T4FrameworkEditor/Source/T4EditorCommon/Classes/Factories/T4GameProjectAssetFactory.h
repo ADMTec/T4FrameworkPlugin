@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Factories/Factory.h"
-#include "T4ContentBuildAssetFactory.generated.h"
+#include "T4GameProjectAssetFactory.generated.h"
 
 /**
   * #118
  */
 UCLASS()
-class T4EDITORCOMMON_API UT4ContentBuildAssetFactory : public UFactory
+class T4EDITORCOMMON_API UT4GameProjectAssetFactory : public UFactory
 {
 	GENERATED_UCLASS_BODY()
 

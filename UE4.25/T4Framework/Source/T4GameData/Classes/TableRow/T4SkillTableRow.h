@@ -48,6 +48,9 @@ public:
 	float DurationSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	float CoolTimeSec;
+
+	UPROPERTY(EditAnywhere, Category = Common)
 	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 
 	UPROPERTY(EditAnywhere, Category = Common)
@@ -78,6 +81,7 @@ public:
 		, bUseOverlapEvents(false) // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
 		, DelayTimeSec(0.0f)
 		, DurationSec(0.0f)
+		, CoolTimeSec(0.0f)
 		, RotationRateSpeed(1.0f) // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 		, MoveAngleType(ET4MoveAngleType::None) // #135
 		, MoveMaxDistance(0.0f)

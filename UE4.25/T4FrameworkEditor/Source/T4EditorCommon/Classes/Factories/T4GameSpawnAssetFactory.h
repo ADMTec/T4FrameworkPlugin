@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Factories/Factory.h"
-#include "T4SpawnAssetFactory.generated.h"
+#include "T4GameSpawnAssetFactory.generated.h"
 
 /**
   * #118
  */
 UCLASS()
-class T4EDITORCOMMON_API UT4SpawnAssetFactory : public UFactory
+class T4EDITORCOMMON_API UT4GameSpawnAssetFactory : public UFactory
 {
 	GENERATED_UCLASS_BODY()
 

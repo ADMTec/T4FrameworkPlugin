@@ -4,14 +4,14 @@
 
 #include "T4GameDataMinimal.h"
 #include "Common/T4CommonAssetStructs.h" // #103
-#include "T4SpawnPrefabStructs.h" // #155
-#include "T4SpawnObjectStructs.h" // #155
-#include "T4SpawnAsset.generated.h"
+#include "Spawn/T4SpawnPrefabStructs.h" // #155
+#include "Spawn/T4SpawnObjectStructs.h" // #155
+#include "T4GameSpawnAsset.generated.h"
 
 /**
   * #118
  */
-struct FT4SpawnVersion
+struct FT4GameSpawnVersion
 {
 	enum Type
 	{
@@ -27,7 +27,7 @@ struct FT4SpawnVersion
 	T4GAMEDATA_API const static FGuid GUID;
 
 private:
-	FT4SpawnVersion() {}
+	FT4GameSpawnVersion() {}
 };
 
 // #163
@@ -79,9 +79,9 @@ public:
 };
 
 class UTexture2D;
-class UT4ContentBuildAsset;
+class UT4GameProjectAsset;
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")
-class T4GAMEDATA_API UT4SpawnAsset : public UObject
+class T4GAMEDATA_API UT4GameSpawnAsset : public UObject
 {
 	GENERATED_UCLASS_BODY()
 
@@ -102,7 +102,7 @@ public:
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = Editor, AssetRegistrySearchable)
-	TSoftObjectPtr<UT4ContentBuildAsset> ContentBuildAsset;
+	TSoftObjectPtr<UT4GameProjectAsset> GameProjectAsset;
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	FT4SpawnTestSettings TestSettings; // #126

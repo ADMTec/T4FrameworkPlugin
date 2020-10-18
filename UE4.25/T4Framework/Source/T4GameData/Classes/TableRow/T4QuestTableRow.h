@@ -10,7 +10,7 @@
 /**
   * #146
  */
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 
 // #164
 class UT4QuestFlowAsset;
@@ -75,7 +75,7 @@ public:
 	ET4GameMissionRule QuestMissionRule; // #164
 
 	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	TSoftObjectPtr<UT4SpawnAsset> QuestSpawnAsset;
+	TSoftObjectPtr<UT4GameSpawnAsset> QuestSpawnAsset;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4RewardDBKey RewardDBKey; // #168

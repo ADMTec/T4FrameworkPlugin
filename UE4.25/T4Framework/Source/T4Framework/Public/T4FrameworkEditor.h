@@ -308,7 +308,7 @@ public:
 struct FT4GameDBKey; //#164 : FT4GameDBKey 는 상위 모듈인 T4GameData, 전방 선언해준다. (Type Cast 가 툴작업에 어려움이 있었음)
 struct FT4EquipWeaponActionCommand; // #169
 
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 class T4FRAMEWORK_API IT4EditorGameStatics
 {
 public:
@@ -329,8 +329,8 @@ public:
 		const FT4ObjectID& InObjectID
 	) = 0; // #60
 
-	virtual bool DoSpawn(UT4SpawnAsset* InSpawnAsset) = 0; // #126
-	virtual bool DoSpawnBy(UT4SpawnAsset* InSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InObjectID) = 0; // #126
+	virtual bool DoSpawn(UT4GameSpawnAsset* InGameSpawnAsset) = 0; // #126
+	virtual bool DoSpawnBy(UT4GameSpawnAsset* InGameSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InObjectID) = 0; // #126
 
 	virtual bool DoDespawn(const FT4ObjectID& InObjectID) = 0; // #114
 	virtual bool DoDespawnAll(bool bClearPlayerActor) = 0; // #68

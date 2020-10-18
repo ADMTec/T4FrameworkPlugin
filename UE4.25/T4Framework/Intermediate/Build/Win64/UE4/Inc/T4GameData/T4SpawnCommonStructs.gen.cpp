@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4GameData/Classes/Content/T4SpawnCommonStructs.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnCommonStructs.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -72,7 +72,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnWaypointData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #155\n */" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnCommonStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnCommonStructs.h" },
 		{ "ToolTip", "#155" },
 	};
 #endif
@@ -82,7 +82,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnWaypointData
 	}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentData_MetaData[] = {
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnCommonStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnCommonStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentData = { "PathSegmentData", nullptr, (EPropertyFlags)0x0014000020000000, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnWaypointData, PathSegmentData_DEPRECATED), Z_Construct_UClass_UT4PathSegmentAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentData_MetaData)) };
@@ -90,7 +90,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnWaypointData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_LineColor_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnCommonStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnCommonStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_LineColor = { "LineColor", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnWaypointData, LineColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_LineColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_LineColor_MetaData)) };
@@ -98,14 +98,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnWaypointData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentAsset_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnCommonStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnCommonStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentAsset = { "PathSegmentAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnWaypointData, PathSegmentAsset), Z_Construct_UClass_UT4PathSegmentAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_PathSegmentAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_WaypointName_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnCommonStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnCommonStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_WaypointName = { "WaypointName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnWaypointData, WaypointName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_WaypointName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnWaypointData_Statics::NewProp_WaypointName_MetaData)) };
@@ -145,7 +145,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnWaypointData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnWaypointData_Hash() { return 1516660016U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnWaypointData_Hash() { return 2901692089U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -13,21 +13,21 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 // Cross Module References
-	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_NoRegister();
-	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4ContentBuildThumbnailRenderer();
+	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4GameProjectThumbnailRenderer_NoRegister();
+	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4GameProjectThumbnailRenderer();
 	T4EDITORCOMMON_API UClass* Z_Construct_UClass_UT4EditorThumbnailRenderer();
 	UPackage* Z_Construct_UPackage__Script_T4ContentEditor();
 	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer_NoRegister();
 	T4CONTENTEDITOR_API UClass* Z_Construct_UClass_UT4SpawnThumbnailRenderer();
 // End Cross Module References
-	void UT4ContentBuildThumbnailRenderer::StaticRegisterNativesUT4ContentBuildThumbnailRenderer()
+	void UT4GameProjectThumbnailRenderer::StaticRegisterNativesUT4GameProjectThumbnailRenderer()
 	{
 	}
-	UClass* Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_NoRegister()
+	UClass* Z_Construct_UClass_UT4GameProjectThumbnailRenderer_NoRegister()
 	{
-		return UT4ContentBuildThumbnailRenderer::StaticClass();
+		return UT4GameProjectThumbnailRenderer::StaticClass();
 	}
-	struct Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics
+	struct Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
@@ -36,22 +36,22 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
-	UObject* (*const Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::DependentSingletons[])() = {
+	UObject* (*const Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UT4EditorThumbnailRenderer,
 		(UObject* (*)())Z_Construct_UPackage__Script_T4ContentEditor,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::Class_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n  * \n */" },
 		{ "IncludePath", "Utility/T4ContentThumbnailRenderer.h" },
 		{ "ModuleRelativePath", "Private/Utility/T4ContentThumbnailRenderer.h" },
 	};
 #endif
-	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::StaticCppClassTypeInfo = {
-		TCppClassTypeTraits<UT4ContentBuildThumbnailRenderer>::IsAbstract,
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UT4GameProjectThumbnailRenderer>::IsAbstract,
 	};
-	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::ClassParams = {
-		&UT4ContentBuildThumbnailRenderer::StaticClass,
+	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::ClassParams = {
+		&UT4GameProjectThumbnailRenderer::StaticClass,
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
@@ -63,24 +63,24 @@ void EmptyLinkFunctionForGeneratedCodeT4ContentThumbnailRenderer() {}
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::Class_MetaDataParams))
 	};
-	UClass* Z_Construct_UClass_UT4ContentBuildThumbnailRenderer()
+	UClass* Z_Construct_UClass_UT4GameProjectThumbnailRenderer()
 	{
 		static UClass* OuterClass = nullptr;
 		if (!OuterClass)
 		{
-			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4ContentBuildThumbnailRenderer_Statics::ClassParams);
+			UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UT4GameProjectThumbnailRenderer_Statics::ClassParams);
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4ContentBuildThumbnailRenderer, 1366210208);
-	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4ContentBuildThumbnailRenderer>()
+	IMPLEMENT_CLASS(UT4GameProjectThumbnailRenderer, 3989945655);
+	template<> T4CONTENTEDITOR_API UClass* StaticClass<UT4GameProjectThumbnailRenderer>()
 	{
-		return UT4ContentBuildThumbnailRenderer::StaticClass();
+		return UT4GameProjectThumbnailRenderer::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4ContentBuildThumbnailRenderer(Z_Construct_UClass_UT4ContentBuildThumbnailRenderer, &UT4ContentBuildThumbnailRenderer::StaticClass, TEXT("/Script/T4ContentEditor"), TEXT("UT4ContentBuildThumbnailRenderer"), false, nullptr, nullptr, nullptr);
-	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4ContentBuildThumbnailRenderer);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UT4GameProjectThumbnailRenderer(Z_Construct_UClass_UT4GameProjectThumbnailRenderer, &UT4GameProjectThumbnailRenderer::StaticClass, TEXT("/Script/T4ContentEditor"), TEXT("UT4GameProjectThumbnailRenderer"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UT4GameProjectThumbnailRenderer);
 	void UT4SpawnThumbnailRenderer::StaticRegisterNativesUT4SpawnThumbnailRenderer()
 	{
 	}

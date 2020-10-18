@@ -72,6 +72,7 @@ protected:
 	void MinimapInitialize(); // #104
 	void MinimapTick(float InDeltaTime); // #104
 	void MinimapCleanup(); // #85
+	void MinimapReinitialize(UT4MapEntityAsset* InMapEntityAsset); // #172
 	void MinimapSetEntity(UT4MapEntityAsset* InMapEntityAsset); // #104
 
 protected:

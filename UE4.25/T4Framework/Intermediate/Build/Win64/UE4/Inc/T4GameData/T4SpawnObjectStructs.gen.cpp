@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4GameData/Classes/Content/T4SpawnObjectStructs.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnObjectStructs.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -95,7 +95,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #118\n */" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 		{ "ToolTip", "#118" },
 	};
 #endif
@@ -108,7 +108,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_FolderName_MetaData[] = {
 		{ "Category", "Hide" },
 		{ "Comment", "// #122\n" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 		{ "ToolTip", "#122" },
 	};
 #endif
@@ -116,21 +116,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ParentID_MetaData[] = {
 		{ "Category", "Hide" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ParentID = { "ParentID", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, ParentID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ParentID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ParentID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_DebugColor_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_DebugColor = { "DebugColor", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, DebugColor), Z_Construct_UScriptStruct_FColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_DebugColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_DebugColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Description_MetaData)) };
@@ -138,7 +138,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_WaypointDatas_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_WaypointDatas = { "WaypointDatas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, WaypointDatas), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_WaypointDatas_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_WaypointDatas_MetaData)) };
@@ -146,21 +146,21 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Transform_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Transform = { "Transform", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, Transform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Transform_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Transform_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_PrefabID_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_PrefabID = { "PrefabID", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, PrefabID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_PrefabID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_PrefabID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnObjectData, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_Guid_MetaData)) };
@@ -168,7 +168,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnObjectData_Statics::NewProp_ID_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// FT4SpawnObjectDetails::CustomizeDetails\n" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnObjectStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnObjectStructs.h" },
 		{ "ToolTip", "FT4SpawnObjectDetails::CustomizeDetails" },
 	};
 #endif
@@ -215,7 +215,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnObjectData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnObjectData_Hash() { return 2458750296U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnObjectData_Hash() { return 2911095809U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

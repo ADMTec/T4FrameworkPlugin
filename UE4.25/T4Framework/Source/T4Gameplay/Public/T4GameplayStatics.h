@@ -14,7 +14,7 @@
   * #151
  */
 struct FT4EquipWeaponActionCommand; // #169
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 class IT4PlayerController;
 class UT4GameClientObject;
 class T4GAMEPLAY_API FT4GameplayStatics
@@ -82,10 +82,10 @@ public:
 	); // #158
 
 #if WITH_EDITOR
-	bool DoSpawn(ET4LayerType InLayerType, UT4SpawnAsset* InSpawnAsset); // #126
+	bool DoSpawn(ET4LayerType InLayerType, UT4GameSpawnAsset* InGameSpawnAsset); // #126
 	bool DoSpawnBy(
 		ET4LayerType InLayerType,
-		UT4SpawnAsset* InSpawnAsset,
+		UT4GameSpawnAsset* InGameSpawnAsset,
 		const FName& InSpawnActorID,
 		const FT4ObjectID& InReservedObjectID
 	); // #126

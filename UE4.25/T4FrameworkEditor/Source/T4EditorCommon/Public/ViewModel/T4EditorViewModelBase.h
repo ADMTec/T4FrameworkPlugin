@@ -26,7 +26,7 @@ struct FT4ActionParameters;
 class UAnimSequence;
 class UT4ActionPackAsset;
 class UT4EntityAsset;
-class UT4SpawnAsset;
+class UT4GameSpawnAsset;
 class IT4WorldActor;
 class IT4WorldSystem; // #93
 class IT4PlayerController;
@@ -183,8 +183,8 @@ public:
 		const FVector& InLocation,
 		const FRotator& InRotation
 	); // #114
-	bool ServerSpawnObject(UT4SpawnAsset* InSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InReservedObjectID); // #126
-	bool ServerSpawnObject(UT4SpawnAsset* InSpawnAsset); // #126
+	bool ServerSpawnObject(UT4GameSpawnAsset* InGameSpawnAsset, const FName& InSpawnObjectID, const FT4ObjectID& InReservedObjectID); // #126
+	bool ServerSpawnObject(UT4GameSpawnAsset* InGameSpawnAsset); // #126
 
 	void ServerDespawnObject(const FT4ObjectID& InObjectID); // #118
 	void ServerDespawnObject(const FT4ObjectID& InObjectID, bool bInClientOnly); // #134

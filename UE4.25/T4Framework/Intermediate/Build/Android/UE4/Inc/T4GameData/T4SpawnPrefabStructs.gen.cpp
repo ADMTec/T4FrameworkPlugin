@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "T4GameData/Classes/Content/T4SpawnPrefabStructs.h"
+#include "T4GameData/Classes/Content/Spawn/T4SpawnPrefabStructs.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -80,7 +80,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewStructOps()
@@ -92,7 +92,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_FolderName_MetaData[] = {
 		{ "Category", "Hide" },
 		{ "Comment", "// #122\n" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "#122" },
 	};
 #endif
@@ -100,14 +100,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_ParentID_MetaData[] = {
 		{ "Category", "Hide" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_ParentID = { "ParentID", nullptr, (EPropertyFlags)0x0010000800020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnPrefabData, ParentID), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_ParentID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_ParentID_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_Description_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnPrefabData, Description), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_Description_MetaData)) };
@@ -115,14 +115,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_OverrideBehaviorData_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_OverrideBehaviorData = { "OverrideBehaviorData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnPrefabData, OverrideBehaviorData), Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_OverrideBehaviorData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_OverrideBehaviorData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_NPCDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_NPCDBKey = { "NPCDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnPrefabData, NPCDBKey), Z_Construct_UScriptStruct_FT4NPCDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_NPCDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_NPCDBKey_MetaData)) };
@@ -130,7 +130,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnPrefabData_Statics::NewProp_ID_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// FT4SpawnPrefabDetails::CustomizeDetails\n" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "FT4SpawnPrefabDetails::CustomizeDetails" },
 	};
 #endif
@@ -173,7 +173,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnPrefabData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnPrefabData_Hash() { return 4258196430U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnPrefabData_Hash() { return 813758767U; }
 class UScriptStruct* FT4SpawnOverrideBehaviorData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -282,7 +282,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::Struct_MetaDataParams[] = {
 		{ "Comment", "/**\n  * #118\n */// #114\n// #114\n" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "#118\n // #114\n// #114" },
 	};
 #endif
@@ -297,7 +297,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "ClampMin", "0.0" },
 		{ "Comment", "// #140\n" },
 		{ "editcondition", "bOverride_JumpRate" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
@@ -308,7 +308,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "ClampMax", "1.0" },
 		{ "ClampMin", "0.0" },
 		{ "editcondition", "bOverride_JumpRate" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_JumpRate = { "JumpRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, JumpRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_JumpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_JumpRate_MetaData)) };
@@ -318,7 +318,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "ClampMax", "1.0" },
 		{ "ClampMin", "0.0" },
 		{ "editcondition", "bOverride_RoamingRate" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RoamingRate = { "RoamingRate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, RoamingRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RoamingRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RoamingRate_MetaData)) };
@@ -326,7 +326,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RomaingRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "editcondition", "bOverride_RomaingRange" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RomaingRange = { "RomaingRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, RomaingRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RomaingRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_RomaingRange_MetaData)) };
@@ -334,7 +334,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "editcondition", "bOverride_SensoryRange" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange = { "SensoryRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, SensoryRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_SensoryRange_MetaData)) };
@@ -342,7 +342,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "editcondition", "bOverride_ActiveOrKeepAggroTimeSec" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec = { "ActiveOrKeepAggroTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4SpawnOverrideBehaviorData, ActiveOrKeepAggroTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_ActiveOrKeepAggroTimeSec_MetaData)) };
@@ -351,7 +351,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #104\n" },
 		{ "editcondition", "bOverride_Aggressive" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "#104" },
 	};
 #endif
@@ -365,7 +365,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// Properties\n" },
 		{ "editcondition", "bOverride_EnemyType" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "ToolTip", "Properties" },
 	};
 #endif
@@ -376,7 +376,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #140\n" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 		{ "ToolTip", "#140" },
 	};
@@ -390,7 +390,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_JumpRate_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -403,7 +403,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_RoamingRate_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -416,7 +416,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_RomaingRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -429,7 +429,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_SensoryRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -442,7 +442,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_ActiveOrKeepAggroTimeSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -455,7 +455,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Statics::NewProp_bOverride_Aggressive_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
@@ -469,7 +469,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// Override\n" },
 		{ "InlineEditConditionToggle", "" },
-		{ "ModuleRelativePath", "Classes/Content/T4SpawnPrefabStructs.h" },
+		{ "ModuleRelativePath", "Classes/Content/Spawn/T4SpawnPrefabStructs.h" },
 		{ "PinHiddenByDefault", "" },
 		{ "ToolTip", "Override" },
 	};
@@ -526,7 +526,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4SpawnOverrideBeha
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Hash() { return 2810198953U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4SpawnOverrideBehaviorData_Hash() { return 2159915524U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

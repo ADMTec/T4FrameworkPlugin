@@ -2,7 +2,11 @@
 ### The Most Powerful MMO Action RPG Framework for UE4
 
 > **Update History**
-- **v0.9.95** : 2020.10.15
+- v0.9.97 : 2020.10.17
+  - #172 [기능추가] 프레임워크 및 에디터 내 N종의 게임 콘텐츠 제작 기능 추가 (Multiple GameDB)
+  - #172 [기능추가] Content Editor, GameDB List 의 Item ContextMenu 를 통해 Copy&Paste 할 수 있도록 기능 추가
+  - #172 [버그수정] PC/NPC 의 기본 무기가 GameDB 에 존재하지 않을 경우 발생하던 크래시 수정
+- v0.9.95 : 2020.10.15
   - #158 [기능개선] NPC GameDB 프로퍼티로 NPC별 BehaviorFlowAsset 을 직접 지정하던 것을 BehaviorType 설정하도록 수정
   - #171 [기능개선] Action Editor, No Simulation 상태에서 마우스 좌클릭으로 편집중인 ActionPack 을 플레이 할 수 있도록 기능 추가
   - #171 [기능개선] Entity Editor, ActionPackBrowser 에서 ActionPack 선택 후 마우스 우클릭으로 Duplicate 기능 추가
