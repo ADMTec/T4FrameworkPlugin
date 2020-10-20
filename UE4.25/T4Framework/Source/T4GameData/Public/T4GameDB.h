@@ -30,6 +30,7 @@
 /**
   * #118
  */
+class IT4GameDBInstance;
 class FStructOnScope;
 class T4GAMEDATA_API FT4GameDBRowInstance
 {
@@ -73,6 +74,8 @@ public:
 
 	void UpdateRowName(FName InRowName) { RowName = InRowName; } // #172 : Rename
 
+	virtual void UpdateRawData(IT4GameDBInstance* InDBInstance) {} // #158 : Internal 로 감출 것!
+
 	virtual const FString GetTitleString() const = 0; // #163
 	virtual FT4TableRowBase* GetTableRowBaseRaw() = 0; // #172
 
@@ -108,7 +111,7 @@ class T4GAMEDATA_API IT4GameDBInstance
 public:
 	virtual ~IT4GameDBInstance() {}
 
-	virtual FName GetContentName() const = 0; // #172
+	virtual FName GetGameName() const = 0; // #172
 
 	virtual void SetActivate() = 0; // #172 : 이 콘텐츠를 메인 콘텐츠로...
 

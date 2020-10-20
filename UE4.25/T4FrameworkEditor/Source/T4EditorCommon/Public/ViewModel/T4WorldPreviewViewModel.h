@@ -76,7 +76,7 @@ public:
 	bool IsNPCAIEnabled() const { return bNPCAIDisabled; } // #142
 	void ToggleNPCAI(); // #114
 
-	void SetMapEntityAsset(UT4MapEntityAsset* InMapEntityAsset) { MapEntityAsset = InMapEntityAsset; } // #104
+	void SetMapEntityAsset(UT4MapEntityAsset* InMapEntityAsset) { MapEntityAssetOwner = InMapEntityAsset; } // #104
 
 	void SetCameraLookAt(const FVector& InLocation); // #85
 	void SetCameraLookAt(const FVector& InLocation, const FRotator& InRotator, float InDistance); // #85
@@ -110,8 +110,8 @@ private:
 	void UpdateManualLevelStreaming(UWorld* InPersistentWorld, float InDeltaTime); // #86
 
 private:
-	UT4MapEntityAsset* MapEntityAsset;
-	UT4EditorGameplayController* EditorGameplayController; // #60, #104
+	UT4MapEntityAsset* MapEntityAssetOwner;
+	UT4EditorGameplayController* EditorGameplayControllerOwner; // #60, #104
 
 	TArray<FName> VisibleSubLevelPackageNames;
 

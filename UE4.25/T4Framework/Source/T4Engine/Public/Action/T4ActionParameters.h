@@ -34,7 +34,8 @@ UENUM(Meta = (Bitflags))
 enum class ET4OverrideParamBits // #112
 {
 	DurationBit,
-	OffsetTimeBit, // #56
+	OffsetTimeBit, // #56 : Skill 시작 시점에서 Offset 시간이 지난 시점부터 플레이...
+	HitDelayTimeBit, // #158 : Skill 시작 시점에서 Hit 시간까지의 시간. 서버에서부터 가변값이 올 수 있어 참고 용도로 세팅한다.
 
 	MovementMaxHeightBit, // #135
 	MovementMaxHeightSpeedBit, // #140
@@ -129,7 +130,10 @@ public:
 	float DurectionSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float OffsetTimeSec; // #56
+	float OffsetTimeSec; // #56 : Skill 시작 시점에서 Offset 시간이 지난 시점부터 플레이...
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float HitDelayTimeSec; // // #158 : Skill 시작 시점에서 Hit 시간까지의 시간. 서버에서부터 가변값이 올 수 있어 참고 용도로 세팅한다.
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float MovementMaxHeight; // #135, #140
@@ -172,6 +176,7 @@ public:
 		: SetBits(0)
 		, DurectionSec(0.0f)
 		, OffsetTimeSec(0.0f) // #56
+		, HitDelayTimeSec(0.0f) // #158
 		, MovementMaxHeight(0.0f) // #135, #140
 		, MovementMaxHeightSpeed(0.0f) // #140
 		, MovementCollideLocation(FVector::ZeroVector) // #140
@@ -215,6 +220,7 @@ public:
 	bool bDirty; // #68
 
 #if WITH_EDITOR
+	bool bEditorPlay; // #158 : Action Editor 에서 플레이
 	bool bDebugPlay; // #58 : 디버깅용 모델로 대체!
 #endif
 
@@ -235,6 +241,7 @@ public:
 	FT4ActionParameters()
 		: bDirty(false)
 #if WITH_EDITOR
+		, bEditorPlay(false) // #158 : Action Editor 에서 플레이
 		, bDebugPlay(false) // #58 : 디버깅용 모델로 대체!
 #endif
 	{
@@ -338,6 +345,13 @@ public:
 	{
 		OverrideParams.OffsetTimeSec = InOffsetTimeSec;
 		OverrideParams.SetBits |= BIT_LEFTSHIFT(ET4OverrideParamBits::OffsetTimeBit); // #56
+		bDirty = true; // #68
+	}
+
+	FORCEINLINE void SetOverrideHitDelayTimeSec(float InHitDelayTimeSec)
+	{
+		OverrideParams.HitDelayTimeSec = InHitDelayTimeSec;
+		OverrideParams.SetBits |= BIT_LEFTSHIFT(ET4OverrideParamBits::HitDelayTimeBit); // #158
 		bDirty = true; // #68
 	}
 

@@ -4,11 +4,11 @@
 
 #include "T4GameplayMinimal.h"
 #include "T4GameplayTypes.h"
-#include "T4GameplayStructs.h"
 
 #include "T4Asset/Public/Entity/T4EntityKey.h" // #114
 #include "T4Engine/Public/T4EngineTypes.h"
 #include "T4GameData/Public/T4GameDBTypes.h" // #48
+#include "T4GameData/Public/T4GameDBUtils.h" // #158
 
 /**
   * #151
@@ -30,8 +30,6 @@ public:
 
 	// #172 : TODO : GameObject 로 넣을 것! Object 의 Stat 에 따라 값이 틀려질 수 있음
 	float GeMaxMoveSpeedByStance(const FName InGameName, const FT4GameDBKey& InDBKey, FName InStanceName);
-	bool GetJumpProperties(const FName InGameName, const FT4GameDBKey& InDBKey, float& OutJumpMaxHeight, float& OutJumpHeightSpeed);
-	bool GetSkillSetInfo(const FName InGameName, const FT4SkillSetDBKey& InDBKey, FT4GameplaySkillSetInfo& OutSkillSetInfo);
 	bool MakeEquipWeaponActionCommand(
 		const FName InGameName, 
 		const FT4WeaponDBKey& InDBKey, 

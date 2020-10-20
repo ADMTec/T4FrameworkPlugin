@@ -986,6 +986,10 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Skil
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_TargetType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_TargetType_Underlying;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillHitDelayTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SkillHitDelayTimeSec;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillDBKey_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SkillDBKey;
@@ -1093,11 +1097,20 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Skil
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType_MetaData[] = {
 		{ "Category", "Default" },
+		{ "Comment", "// #158 : HitDelay \xeb\x8a\x94 \xec\x9d\xb4\xed\x9b\x84 \xeb\xb2\x84\xed\x94\x84\xeb\x93\xb1\xec\x9c\xbc\xeb\xa1\x9c \xea\xb0\x80\xeb\xb3\x80\xec\x9d\xb4 \xeb\x90\xa0 \xec\x88\x98 \xec\x9e\x88\xec\x9d\x8c\xec\x9c\xbc\xeb\xa1\x9c \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c \xeb\x84\x98\xea\xb2\xa8\xec\xa4\x80\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Action.h" },
+		{ "ToolTip", "#158 : HitDelay \xeb\x8a\x94 \xec\x9d\xb4\xed\x9b\x84 \xeb\xb2\x84\xed\x94\x84\xeb\x93\xb1\xec\x9c\xbc\xeb\xa1\x9c \xea\xb0\x80\xeb\xb3\x80\xec\x9d\xb4 \xeb\x90\xa0 \xec\x88\x98 \xec\x9e\x88\xec\x9d\x8c\xec\x9c\xbc\xeb\xa1\x9c \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c \xeb\x84\x98\xea\xb2\xa8\xec\xa4\x80\xeb\x8b\xa4." },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType = { "TargetType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_SkillTarget, TargetType), Z_Construct_UEnum_T4Gameplay_ET4GameTargetParamType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillHitDelayTimeSec_MetaData[] = {
+		{ "Category", "Default" },
+		{ "ModuleRelativePath", "Public/Protocol/Client/T4GamePacketSC_Action.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillHitDelayTimeSec = { "SkillHitDelayTimeSec", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4GamePacketSC_SkillTarget, SkillHitDelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillHitDelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillHitDelayTimeSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillDBKey_MetaData[] = {
 		{ "Category", "Default" },
@@ -1124,6 +1137,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Skil
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetObjectID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_TargetType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillHitDelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_SkillDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Statics::NewProp_ObjectID,
 	};
@@ -1155,7 +1169,7 @@ static struct FScriptStruct_T4Gameplay_StaticRegisterNativesFT4GamePacketSC_Skil
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Hash() { return 2479392941U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4GamePacketSC_SkillTarget_Hash() { return 3850125347U; }
 class UScriptStruct* FT4GamePacketSC_SkillCancel::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

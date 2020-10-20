@@ -16,6 +16,33 @@
 class UT4ActionPackAsset;
 
 USTRUCT()
+struct FT4EffectShapeMovementData // #135
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	ET4MoveAngleType MoveAngleType; // #135
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	float MoveMaxDistance; // #140 : 최대거리 / 시간으로 MovementSpeed 를 구한다. XY
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	float MoveMaxHeight; // #135 : ET4GameAttackType Air
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
+
+public:
+	FT4EffectShapeMovementData()
+		: MoveAngleType(ET4MoveAngleType::None) // #135
+		, MoveMaxDistance(0.0f)
+		, MoveMaxHeight(0.0f) // #135
+		, MoveMaxHeightSpeed(0.0f) // #140
+	{
+	}
+};
+
+USTRUCT()
 struct FT4EffectShapeData // #135
 {
 	GENERATED_USTRUCT_BODY()
@@ -31,34 +58,25 @@ public:
 	float DurationSec;
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	ET4MoveAngleType MoveAngleType; // #135
+	float MinEffectRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MoveMaxDistance; // #140 : 최대거리 / 시간으로 MovementSpeed 를 구한다. XY
+	float MaxEffectRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MoveMaxHeight; // #135 : ET4GameAttackType Air
+	bool bUseMovement; // #135
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MinAreaRange; // #114 : ET4GameEffectType::Area
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	float MaxAreaRange; // #114 : ET4GameEffectType::Area
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseMovement"))
+	FT4EffectShapeMovementData MovementData; // #135
 
 public:
 	FT4EffectShapeData()
 		: EffectType(ET4GameEffectType::None)
 		, HitDelayTimeSec(0.0f)
 		, DurationSec(0.0f)
-		, MoveAngleType(ET4MoveAngleType::None) // #135
-		, MoveMaxDistance(0.0f)
-		, MoveMaxHeight(0.0f) // #135
-		, MoveMaxHeightSpeed(0.0f) // #140
-		, MinAreaRange(0.0f) // #114 : ET4GameEffectType::Area
-		, MaxAreaRange(0.0f) // #114 : ET4GameEffectType::Area
+		, MinEffectRange(0.0f) // #114 : ET4GameEffectType::Area
+		, MaxEffectRange(0.0f) // #114 : ET4GameEffectType::Area
+		, bUseMovement(false) // #135
 	{
 	}
 };

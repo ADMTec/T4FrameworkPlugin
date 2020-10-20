@@ -222,14 +222,14 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 #endif // WITH_EDITORONLY_DATA
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Statics::NewProp_PhysicsStopData_MetaData[] = {
-		{ "Category", "ClientOnly" },
+		{ "Category", "Hide" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Statics::NewProp_PhysicsStopData = { "PhysicsStopData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterReactionData, PhysicsStopData), Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStopData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Statics::NewProp_PhysicsStopData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Statics::NewProp_PhysicsStopData_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Statics::NewProp_PhysicsStartData_MetaData[] = {
-		{ "Category", "ClientOnly" },
+		{ "Category", "Hide" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
 	};
 #endif
@@ -303,7 +303,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Hash() { return 1485622769U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterReactionData_Hash() { return 3403907138U; }
 class UScriptStruct* FT4EntityCharacterReactionAnimationData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -607,9 +607,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 		static void NewProp_bSimulateBodiesBelow_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSimulateBodiesBelow;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MassOverrideInKg_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MassScale_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MassOverrideInKg;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MassScale;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CenterOfMass_MetaData[];
 #endif
@@ -670,13 +670,15 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_bSimulateBodiesBelow = { "bSimulateBodiesBelow", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EntityCharacterReactionPhysicsStartData), &Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_bSimulateBodiesBelow_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_bSimulateBodiesBelow_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_bSimulateBodiesBelow_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassOverrideInKg_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassScale_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bUsePhysicsStart" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+		{ "UIMax", "100.0" },
+		{ "UIMin", "0.1" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassOverrideInKg = { "MassOverrideInKg", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterReactionPhysicsStartData, MassOverrideInKg), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassOverrideInKg_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassOverrideInKg_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassScale = { "MassScale", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterReactionPhysicsStartData, MassScale), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassScale_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_CenterOfMass_MetaData[] = {
 		{ "Category", "ClientOnly" },
@@ -690,6 +692,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 		{ "Category", "ClientOnly" },
 		{ "EditCondition", "bUsePhysicsStart" },
 		{ "ModuleRelativePath", "Classes/Entity/T4CharacterEntityAsset.h" },
+		{ "UIMax", "100.0" },
+		{ "UIMin", "0.0" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_ImpulsePower = { "ImpulsePower", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EntityCharacterReactionPhysicsStartData, ImpulsePower), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_ImpulsePower_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_ImpulsePower_MetaData)) };
@@ -731,7 +735,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_BlendData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_bSimulateBodiesBelow,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassOverrideInKg,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_MassScale,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_CenterOfMass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_ImpulsePower,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Statics::NewProp_ImpulseSubActionPoint,
@@ -767,7 +771,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4EntityCharacterReact
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Hash() { return 4248821U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EntityCharacterReactionPhysicsStartData_Hash() { return 1490681575U; }
 class UScriptStruct* FT4EntityCharacterReactionPhysicsBlendData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

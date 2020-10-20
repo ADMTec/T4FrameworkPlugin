@@ -62,20 +62,10 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 		static void NewProp_bOverrideSkillData_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverrideSkillData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bSandbagOneHitDie_MetaData[];
-#endif
-		static void NewProp_bSandbagOneHitDie_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSandbagOneHitDie;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SandbagRole_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_SandbagRole;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_SandbagRole_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bNPCAIDisabled_MetaData[];
-#endif
-		static void NewProp_bNPCAIDisabled_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bNPCAIDisabled;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NPCEntityAsset_MetaData[];
 #endif
@@ -156,9 +146,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData_MetaData[] = {
 		{ "Category", "Default" },
-		{ "Comment", "// #76\n" },
+		{ "Comment", "// #63\n" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorGameplayController.h" },
-		{ "ToolTip", "#76" },
+		{ "ToolTip", "#63" },
 	};
 #endif
 	void Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData_SetBit(void* Obj)
@@ -167,39 +157,15 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData = { "bOverrideSkillData", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorGameplayController), &Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie_MetaData[] = {
-		{ "Category", "Default" },
-		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Public/Helper/T4EditorGameplayController.h" },
-		{ "ToolTip", "#63" },
-	};
-#endif
-	void Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie_SetBit(void* Obj)
-	{
-		((UT4EditorGameplayController*)Obj)->bSandbagOneHitDie = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie = { "bSandbagOneHitDie", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorGameplayController), &Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_MetaData[] = {
-		{ "Category", "Default" },
-		{ "ModuleRelativePath", "Public/Helper/T4EditorGameplayController.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole = { "SandbagRole", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorGameplayController, SandbagRole), Z_Construct_UEnum_T4Framework_ET4EditorPlayRole, METADATA_PARAMS(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled_MetaData[] = {
 		{ "Category", "Default" },
 		{ "Comment", "// #76\n" },
 		{ "ModuleRelativePath", "Public/Helper/T4EditorGameplayController.h" },
 		{ "ToolTip", "#76" },
 	};
 #endif
-	void Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled_SetBit(void* Obj)
-	{
-		((UT4EditorGameplayController*)Obj)->bNPCAIDisabled = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled = { "bNPCAIDisabled", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UT4EditorGameplayController), &Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole = { "SandbagRole", nullptr, (EPropertyFlags)0x0010000000002001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UT4EditorGameplayController, SandbagRole), Z_Construct_UEnum_T4Framework_ET4EditorPlayRole, METADATA_PARAMS(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_NPCEntityAsset_MetaData[] = {
 		{ "Category", "Default" },
@@ -246,10 +212,8 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SkillContentNameIDSelected,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideEffectData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bOverrideSkillData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bSandbagOneHitDie,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_SandbagRole_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_bNPCAIDisabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_NPCEntityAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_NPCContentNameIDSelected,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UT4EditorGameplayController_Statics::NewProp_DefaultMoveSpeed,
@@ -283,7 +247,7 @@ void EmptyLinkFunctionForGeneratedCodeT4EditorGameplayController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UT4EditorGameplayController, 860657979);
+	IMPLEMENT_CLASS(UT4EditorGameplayController, 3821583644);
 	template<> T4EDITORCOMMON_API UClass* StaticClass<UT4EditorGameplayController>()
 	{
 		return UT4EditorGameplayController::StaticClass();

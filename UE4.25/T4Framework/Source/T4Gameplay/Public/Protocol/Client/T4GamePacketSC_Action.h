@@ -121,6 +121,9 @@ public:
 	FT4GameDBKey SkillDBKey;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
+	float SkillHitDelayTimeSec; // #158 : HitDelay 는 이후 버프등으로 가변이 될 수 있음으로 서버에서 넘겨준다.
+
+	UPROPERTY(VisibleAnywhere, Category = Default)
 	ET4GameTargetParamType TargetType; // #112
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
@@ -153,6 +156,7 @@ public:
 public:
 	FT4GamePacketSC_SkillTarget()
 		: FT4GamePacketSC_Base(ET4GamePacketSC::SkillTarget)
+		, SkillHitDelayTimeSec(0.0f) // #158 
 		, TargetType(ET4GameTargetParamType::None) // #112
 		, TargetHitBone(NAME_None) // #112
 		, TargetLocation(FVector::ZeroVector)

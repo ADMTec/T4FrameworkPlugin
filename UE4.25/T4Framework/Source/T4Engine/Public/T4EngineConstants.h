@@ -9,6 +9,8 @@
 /**
   * #39, #90
  */
+static const float T4Const_DefaultAgentRadius = 50.0f; // #158 : Action Editor 등의 공격 판정등에도 영향이 있다! (주의)
+
 static const uint32 T4Const_MirroringStartActorID = 1000000; // #140
 
 static const float T4Const_DefaultLineTraceMaxDistance = 100000.0f;

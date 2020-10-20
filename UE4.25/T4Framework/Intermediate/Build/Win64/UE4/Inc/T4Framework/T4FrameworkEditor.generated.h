@@ -13,21 +13,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4FRAMEWORK_T4FrameworkEditor_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_183_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_166_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics; \
 	T4FRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4FRAMEWORK_API UScriptStruct* StaticStruct<struct FT4EditorEffectDataInfo>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_88_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_60_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics; \
 	T4FRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4FRAMEWORK_API UScriptStruct* StaticStruct<struct FT4EditorSkillDataInfo>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_72_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Framework_Public_T4FrameworkEditor_h_44_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4EditorNPCDataInfo_Statics; \
 	T4FRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -46,29 +46,6 @@ template<> T4FRAMEWORK_API UScriptStruct* StaticStruct<struct FT4EditorNPCDataIn
 
 enum class ET4EditorFindTarget : uint8;
 template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorFindTarget>();
-
-#define FOREACH_ENUM_ET4EDITOREFFECTTYPE(op) \
-	op(ET4EditorEffectType::Direct) \
-	op(ET4EditorEffectType::Area) \
-	op(ET4EditorEffectType::Knockback) \
-	op(ET4EditorEffectType::Airborne) \
-	op(ET4EditorEffectType::Stun) \
-	op(ET4EditorEffectType::Mis) \
-	op(ET4EditorEffectType::None) 
-
-enum class ET4EditorEffectType : uint8;
-template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorEffectType>();
-
-#define FOREACH_ENUM_ET4EDITORATTACKTYPE(op) \
-	op(ET4EditorAttackType::Swing) \
-	op(ET4EditorAttackType::Throw) \
-	op(ET4EditorAttackType::Launch) \
-	op(ET4EditorAttackType::Air) \
-	op(ET4EditorAttackType::Dash) \
-	op(ET4EditorAttackType::None) 
-
-enum class ET4EditorAttackType : uint8;
-template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorAttackType>();
 
 #define FOREACH_ENUM_ET4EDITORPLAYROLE(op) \
 	op(ET4EditorPlayRole::Attacker) \

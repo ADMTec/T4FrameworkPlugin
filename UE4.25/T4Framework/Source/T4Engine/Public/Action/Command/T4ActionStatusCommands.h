@@ -486,11 +486,15 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	ET4EntityReactionType ReactionType;
 
+	UPROPERTY(Transient)
+	bool bEditorPlay; // #158 : Action Editor 에서 플레이 할 경우, 원복 처리
+
 public:
 	FT4ReactionStopActionCommand()
 		: FT4ActionCommandBase(StaticActionType())
 		, ReactionName(NAME_None)
 		, ReactionType(ET4EntityReactionType::None)
+		, bEditorPlay(false) // #158 : Action Editor 에서 플레이 할 경우, 원복 처리
 	{
 	}
 

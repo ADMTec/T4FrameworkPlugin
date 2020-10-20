@@ -1675,9 +1675,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionActionData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_bUseRotation_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// hit : Left (\xec\xa2\x8c\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c)\n" },
+		{ "Comment", "// hit : Right (\xec\xa2\x8c\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c)\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
-		{ "ToolTip", "hit : Left (\xec\xa2\x8c\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c)" },
+		{ "ToolTip", "hit : Right (\xec\xa2\x8c\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c)" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_bUseRotation_SetBit(void* Obj)
@@ -1688,34 +1688,36 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionActionData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_D_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// hit : Right (\xec\x9a\xb0\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c), knockback : Up (\xea\xb3\xb5\xec\xa4\x91\xec\x9c\xbc\xeb\xa1\x9c)\n" },
+		{ "Comment", "// hit : Left (\xec\x9a\xb0\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c), knockback : Up (\xea\xb3\xb5\xec\xa4\x91\xec\x9c\xbc\xeb\xa1\x9c)\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
-		{ "ToolTip", "hit : Right (\xec\x9a\xb0\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c), knockback : Up (\xea\xb3\xb5\xec\xa4\x91\xec\x9c\xbc\xeb\xa1\x9c)" },
+		{ "ToolTip", "hit : Left (\xec\x9a\xb0\xec\xb8\xa1\xec\x9c\xbc\xeb\xa1\x9c), knockback : Up (\xea\xb3\xb5\xec\xa4\x91\xec\x9c\xbc\xeb\xa1\x9c)" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_D = { "ReactionName_D", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionActionData, ReactionName_D), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_D_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_D_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_C_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// hit : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)\n" },
+		{ "Comment", "// hit : Back (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
-		{ "ToolTip", "hit : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)" },
+		{ "ToolTip", "hit : Back (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Front (\xec\x95\x9e\xec\x9c\xbc\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_C = { "ReactionName_C", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionActionData, ReactionName_C), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_C_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_C_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_B_MetaData[] = {
 		{ "Category", "ClientOnly" },
-		{ "Comment", "// hit : Back (\xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Back (\xeb\x92\xa4\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)\n" },
+		{ "Comment", "// hit : Front (\xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Back (\xeb\x92\xa4\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
-		{ "ToolTip", "hit : Back (\xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Back (\xeb\x92\xa4\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)" },
+		{ "ToolTip", "hit : Front (\xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb8\xec\x9e\x84), knockback : Back (\xeb\x92\xa4\xeb\xa1\x9c \xeb\xb0\x80\xeb\xa6\xbc)" },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_B = { "ReactionName_B", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionActionData, ReactionName_B), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_B_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_B_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_A_MetaData[] = {
 		{ "Category", "ClientOnly" },
+		{ "Comment", "// WARN : Hit \xeb\x8a\x94 \xeb\x95\x8c\xeb\x8a\x94 \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4\xeb\x8b\xa4. \xec\x95\x9e\xec\x97\x90\xec\x84\x9c \xeb\x95\x8c\xeb\xa6\xac\xeb\xa9\xb4 \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0\xeb\x8a\x94 \xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb4\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
+		{ "ToolTip", "WARN : Hit \xeb\x8a\x94 \xeb\x95\x8c\xeb\x8a\x94 \xeb\xb0\xa9\xed\x96\xa5\xec\x9d\xb4 \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4\xeb\x8b\xa4. \xec\x95\x9e\xec\x97\x90\xec\x84\x9c \xeb\x95\x8c\xeb\xa6\xac\xeb\xa9\xb4 \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0\xeb\x8a\x94 \xeb\x92\xa4\xeb\xa1\x9c \xea\xb8\xb0\xec\x9a\xb4\xeb\x8b\xa4." },
 	};
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_A = { "ReactionName_A", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionActionData, ReactionName_A), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_A_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionActionData_Statics::NewProp_ReactionName_A_MetaData)) };
@@ -1769,7 +1771,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionActionData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionActionData_Hash() { return 3904225384U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionActionData_Hash() { return 3692265467U; }
 class UScriptStruct* FT4ReactionTestSettings::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1802,7 +1804,8 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionTestSettings
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bTestReverseRotation_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_bTestReverseRotation;
+		static void NewProp_bTestReverseRotation_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bTestReverseRotation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #endif // WITH_EDITORONLY_DATA
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
@@ -1825,7 +1828,11 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionTestSettings
 		{ "ModuleRelativePath", "Public/ActionPack/T4ActionPackDatas.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation = { "bTestReverseRotation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionTestSettings, bTestReverseRotation), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_SetBit(void* Obj)
+	{
+		((FT4ReactionTestSettings*)Obj)->bTestReverseRotation = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation = { "bTestReverseRotation", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ReactionTestSettings), &Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ReactionTestSettings_Statics::NewProp_bTestReverseRotation,
 	};
@@ -1858,7 +1865,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ReactionTestSettings
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionTestSettings_Hash() { return 1405253262U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionTestSettings_Hash() { return 3764291561U; }
 class UScriptStruct* FT4ProjectileActionData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

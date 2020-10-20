@@ -26,34 +26,6 @@ enum class ET4EditorPlayRole : uint8
 };
 
 UENUM()
-enum class ET4EditorAttackType : uint8 // #63
-{
-	Swing,
-	Throw,
-	Launch, // #135, 특수, 발사체와 반동이 함께 있음 (TODO : 적당한 이름이 있다면 수정할 것)
-
-	Air, // #135 : Jump Attack
-	Dash, // #135
-
-	None,
-};
-
-UENUM()
-enum class ET4EditorEffectType : uint8 // #68
-{
-	Direct,
-	Area,
-
-	Knockback, // CC
-	Airborne, // CC
-	Stun, // CC
-
-	Mis, // #135, #142
-
-	None UMETA(Hidden),
-};
-
-UENUM()
 enum class ET4EditorFindTarget : uint8 // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
 {
 	All,
@@ -94,7 +66,7 @@ public:
 	FName Name;
 
 	UPROPERTY(VisibleAnywhere, Category = Common)
-	ET4EditorAttackType AttackType; // #63
+	FName AttackType; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	bool bMoveable;
@@ -109,31 +81,40 @@ public:
 	bool bApproach; // #170
 
 	UPROPERTY(EditAnywhere, Category = Common)
+	bool bUseOverlapEvents;  // #135 : Overlap Event 에 의한 판정 사용. ActionPack 에 Overlap Event Action 이 설치되어야 함. false 일 경우 HitTime 기반 랜덤 처리
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "!bUseOverlapEvents"))
 	float DelayTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float DurationSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4MoveAngleType MoveAngleType; // #135
+	float CoolTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxDistance; // #140
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxHeight; // #140
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxHeightSpeed; // #140
+	ET4EditorFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float ProjectileSpeed; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
+	bool bUseMovement; // #158
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bUseMovement"))
+	ET4MoveAngleType MoveAngleType; // #135
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bUseMovement"))
+	float MoveMaxDistance; // #140
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bUseMovement"))
+	float MoveMaxHeight; // #140
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bUseMovement"))
+	float MoveMaxHeightSpeed; // #140
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4EditorFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
+	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bCasting", ClampMin = "-45.0", ClampMax = "45.0"))
 	float AimingPitchAngle; // #127
@@ -159,21 +140,23 @@ public:
 	void Reset()
 	{
 		Name = NAME_None;
-		AttackType = ET4EditorAttackType::Swing;
+		AttackType = NAME_None;
 		bMoveable = false;
 		bLockOn = false; // #113
 		bCasting = false; // #113
 		bApproach = false; // #170
+		bUseOverlapEvents = false;
 		DelayTimeSec = 0.0f;
 		DurationSec = 0.0f;;
+		FindTargetType = ET4EditorFindTarget::All; // #117
+		ProjectileSpeed = 0.0f; // #63
+		bUseMovement = false;
 		MoveAngleType = ET4MoveAngleType::None; // #135
 		MoveMaxDistance = 0.0f; // #140
 		MoveMaxHeight = 0.0f; // #140
 		MoveMaxHeightSpeed = 0.0f; // #140
-		ProjectileSpeed = 0.0f; // #63
 		AimingPitchAngle = 0.0f; // #127
 		RotationRateSpeed = 1.0f; // #113
-		FindTargetType = ET4EditorFindTarget::All; // #117
 	}
 };
 
@@ -189,7 +172,7 @@ public:
 	FName Name;
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
-	ET4EditorEffectType EffectType;
+	FName EffectType;
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float HitDelayTimeSec;
@@ -197,23 +180,26 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	float DurationSec;
 
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MinEffectRange; // #114 : ET4GameEffectType::Area
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MaxEffectRange; // #114 : ET4GameEffectType::Area
+
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	bool bUseMovement; // #158
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseMovement"))
 	ET4MoveAngleType MoveAngleType; // #135
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseMovement"))
 	float MoveMaxDistance; // #140 : 최대거리 / 시간으로 MovementSpeed 를 구한다. XY
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseMovement"))
 	float MoveMaxHeight; // #135 : ET4GameAttackType Air
 
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	UPROPERTY(EditAnywhere, Category = ServerOnly, meta = (EditCondition = "bUseMovement"))
 	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MinAreaRange; // #114 : ET4GameEffectType::Area
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MaxAreaRange; // #114 : ET4GameEffectType::Area
 
 	UPROPERTY(VisibleAnywhere, Category = Default)
 	FName ChainEffectDBKey;
@@ -230,15 +216,16 @@ public:
 	void Reset()
 	{
 		Name = NAME_None;
-		EffectType = ET4EditorEffectType::None;
+		EffectType = NAME_None;
 		HitDelayTimeSec = 0.0f;
 		DurationSec = 0.0f;
+		MinEffectRange = 0.0f; // #114 : ET4GameEffectType::Area
+		MaxEffectRange = 0.0f; // #114 : ET4GameEffectType::Area
+		bUseMovement = false; // #158
 		MoveAngleType = ET4MoveAngleType::None; // #135
 		MoveMaxDistance = 0.0f;
 		MoveMaxHeight = 0.0f; // #135
 		MoveMaxHeightSpeed = 0.0f; // #140
-		MinAreaRange = 0.0f; // #114 : ET4GameEffectType::Area
-		MaxAreaRange = 0.0f; // #114 : ET4GameEffectType::Area
 		ChainEffectDBKey = NAME_None;
 	}
 };
@@ -362,7 +349,7 @@ public:
 	virtual ~IT4EditorGameplayHandler() {}
 
 	virtual bool IsSimulating() const = 0; // #102
-	virtual bool IsSettingsUsed() const = 0; // #104 : conti 에서만 true, world 에서는 false, 아래 옵션 사용 여부
+	virtual bool IsUsePlaySettings() const = 0; // #104 : Action Editor 에서만 true, world 에서는 false, 아래 옵션 사용 여부
 
 	virtual float GetDefaultMoveSpeed() const = 0; // #114
 
@@ -370,7 +357,6 @@ public:
 	virtual void SetDisableNPCAI(bool bInDisable) = 0; // #161
 
 	virtual bool IsSandbagAttackable() const = 0;
-	virtual bool IsSandbagOneHitDie() const = 0; // #76
 
 	virtual bool IsOverrideSkillData() const = 0; // #63
 	virtual bool IsOverrideEffectData() const = 0; // #68
@@ -381,7 +367,7 @@ public:
 	virtual const FT4EditorSkillDataInfo& GetOverrideSkillDataInfo() const = 0;
 	virtual const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const = 0;
 
-	virtual const FSoftObjectPath& GetOverrideActionPackPath() const = 0;
+	virtual const FSoftObjectPath& GetEditActionPackPath() const = 0; // #158 : Action Editor 에서 편집중인 ActionPack
 };
 
 // #135, #140

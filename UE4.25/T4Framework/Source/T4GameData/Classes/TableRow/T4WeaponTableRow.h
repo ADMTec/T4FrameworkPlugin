@@ -47,16 +47,16 @@ public:
 	FT4NameTextDBKey NameTextDBKey; // #164, #163
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float MinAttackRange; // #135 : 이 거리 안이면 Approach 에서 뒤로 이동 후 다시 공격하도록 처리하기 위해 추가
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MaxAttackRange; // #50
-
-	UPROPERTY(EditAnywhere, Category = Common)
 	FT4SkillSetDBKey DefaultSkillSetDBKey; // #50, #106 : Key = Stance
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	TMap<FName, FT4SkillSetDBKey> StanceSkillSetDBKey; // #50, #106, #154 : Key = Stance
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MinAttackRange; // #135 : 이 거리 안이면 Approach 에서 뒤로 이동 후 다시 공격하도록 처리하기 위해 추가
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MaxAttackRange; // #50
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4ItemStatDBKey ItemStatDBKey; // #114 : 기본 Stat

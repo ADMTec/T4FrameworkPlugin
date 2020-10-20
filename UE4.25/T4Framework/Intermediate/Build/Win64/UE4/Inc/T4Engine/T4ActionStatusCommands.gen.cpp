@@ -64,6 +64,11 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ReactionStopActionC
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bEditorPlay_MetaData[];
+#endif
+		static void NewProp_bEditorPlay_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bEditorPlay;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReactionType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ReactionType;
@@ -87,6 +92,16 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ReactionStopActionC
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4ReactionStopActionCommand>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Action/Command/T4ActionStatusCommands.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay_SetBit(void* Obj)
+	{
+		((FT4ReactionStopActionCommand*)Obj)->bEditorPlay = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay = { "bEditorPlay", nullptr, (EPropertyFlags)0x0010000000002000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ReactionStopActionCommand), &Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionType_MetaData[] = {
 		{ "Category", "Common" },
 		{ "ModuleRelativePath", "Public/Action/Command/T4ActionStatusCommands.h" },
@@ -102,6 +117,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ReactionStopActionC
 #endif
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionName = { "ReactionName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ReactionStopActionCommand, ReactionName), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_bEditorPlay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Statics::NewProp_ReactionName,
@@ -134,7 +150,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ReactionStopActionC
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Hash() { return 1314167986U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ReactionStopActionCommand_Hash() { return 2711309615U; }
 class UScriptStruct* FT4ResurrectActionCommand::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

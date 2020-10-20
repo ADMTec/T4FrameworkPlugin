@@ -75,6 +75,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ItemStatDBKey;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAttackRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAttackRange;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAttackRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAttackRange;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StanceSkillSetDBKey_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp_StanceSkillSetDBKey;
@@ -84,14 +92,6 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultSkillSetDBKey_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DefaultSkillSetDBKey;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAttackRange_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAttackRange;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAttackRange_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAttackRange;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NameTextDBKey_MetaData[];
 #endif
@@ -162,12 +162,30 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "Comment", "// #50\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
+		{ "ToolTip", "#50" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey = { "ItemStatDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, ItemStatDBKey), Z_Construct_UScriptStruct_FT4ItemStatDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #135 : \xec\x9d\xb4 \xea\xb1\xb0\xeb\xa6\xac \xec\x95\x88\xec\x9d\xb4\xeb\xa9\xb4 Approach \xec\x97\x90\xec\x84\x9c \xeb\x92\xa4\xeb\xa1\x9c \xec\x9d\xb4\xeb\x8f\x99 \xed\x9b\x84 \xeb\x8b\xa4\xec\x8b\x9c \xea\xb3\xb5\xea\xb2\xa9\xed\x95\x98\xeb\x8f\x84\xeb\xa1\x9d \xec\xb2\x98\xeb\xa6\xac\xed\x95\x98\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 \xec\xb6\x94\xea\xb0\x80\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
+		{ "ToolTip", "#135 : \xec\x9d\xb4 \xea\xb1\xb0\xeb\xa6\xac \xec\x95\x88\xec\x9d\xb4\xeb\xa9\xb4 Approach \xec\x97\x90\xec\x84\x9c \xeb\x92\xa4\xeb\xa1\x9c \xec\x9d\xb4\xeb\x8f\x99 \xed\x9b\x84 \xeb\x8b\xa4\xec\x8b\x9c \xea\xb3\xb5\xea\xb2\xa9\xed\x95\x98\xeb\x8f\x84\xeb\xa1\x9d \xec\xb2\x98\xeb\xa6\xac\xed\x95\x98\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 \xec\xb6\x94\xea\xb0\x80" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange = { "MaxAttackRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, MaxAttackRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #50, #106, #154 : Key = Stance\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
 		{ "ToolTip", "#50, #106, #154 : Key = Stance" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey = { "ItemStatDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, ItemStatDBKey), Z_Construct_UScriptStruct_FT4ItemStatDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange = { "MinAttackRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, MinAttackRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey_MetaData[] = {
 		{ "Category", "Common" },
@@ -182,30 +200,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #50\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
-		{ "ToolTip", "#50" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey = { "DefaultSkillSetDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, DefaultSkillSetDBKey), Z_Construct_UScriptStruct_FT4SkillSetDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #135 : \xec\x9d\xb4 \xea\xb1\xb0\xeb\xa6\xac \xec\x95\x88\xec\x9d\xb4\xeb\xa9\xb4 Approach \xec\x97\x90\xec\x84\x9c \xeb\x92\xa4\xeb\xa1\x9c \xec\x9d\xb4\xeb\x8f\x99 \xed\x9b\x84 \xeb\x8b\xa4\xec\x8b\x9c \xea\xb3\xb5\xea\xb2\xa9\xed\x95\x98\xeb\x8f\x84\xeb\xa1\x9d \xec\xb2\x98\xeb\xa6\xac\xed\x95\x98\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 \xec\xb6\x94\xea\xb0\x80\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
-		{ "ToolTip", "#135 : \xec\x9d\xb4 \xea\xb1\xb0\xeb\xa6\xac \xec\x95\x88\xec\x9d\xb4\xeb\xa9\xb4 Approach \xec\x97\x90\xec\x84\x9c \xeb\x92\xa4\xeb\xa1\x9c \xec\x9d\xb4\xeb\x8f\x99 \xed\x9b\x84 \xeb\x8b\xa4\xec\x8b\x9c \xea\xb3\xb5\xea\xb2\xa9\xed\x95\x98\xeb\x8f\x84\xeb\xa1\x9d \xec\xb2\x98\xeb\xa6\xac\xed\x95\x98\xea\xb8\xb0 \xec\x9c\x84\xed\x95\xb4 \xec\xb6\x94\xea\xb0\x80" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange = { "MaxAttackRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, MaxAttackRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData[] = {
-		{ "Category", "Common" },
 		{ "Comment", "// #164, #163\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4WeaponTableRow.h" },
 		{ "ToolTip", "#164, #163" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange = { "MinAttackRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, MinAttackRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey = { "DefaultSkillSetDBKey", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4WeaponTableRow, DefaultSkillSetDBKey), Z_Construct_UScriptStruct_FT4SkillSetDBKey, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_NameTextDBKey_MetaData[] = {
 		{ "Category", "Common" },
@@ -236,12 +236,12 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_bDontUseMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_InitializeEffectDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_ItemStatDBKey,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_StanceSkillSetDBKey_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_DefaultSkillSetDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MaxAttackRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_MinAttackRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_NameTextDBKey,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_UID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4WeaponTableRow_Statics::NewProp_Version,
@@ -274,7 +274,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4WeaponTableRow
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 1753777307U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4WeaponTableRow_Hash() { return 2906036789U; }
 class UScriptStruct* FT4WeaponEquipData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

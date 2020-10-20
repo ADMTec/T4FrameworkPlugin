@@ -96,20 +96,10 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		static void NewProp_bOverrideSkillData_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverrideSkillData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bSandbagOneHitDie_MetaData[];
-#endif
-		static void NewProp_bSandbagOneHitDie_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSandbagOneHitDie;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bSandbagRoleAttacker_MetaData[];
 #endif
 		static void NewProp_bSandbagRoleAttacker_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSandbagRoleAttacker;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bNPCAIDisabled_MetaData[];
-#endif
-		static void NewProp_bNPCAIDisabled_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bNPCAIDisabled;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SandbagNameID_MetaData[];
 #endif
@@ -189,9 +179,9 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_MetaData[] = {
 		{ "Category", "Editor" },
-		{ "Comment", "// #76\n" },
+		{ "Comment", "// #63\n" },
 		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
-		{ "ToolTip", "#76" },
+		{ "ToolTip", "#63" },
 	};
 #endif
 	void Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_SetBit(void* Obj)
@@ -199,19 +189,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		((FT4ActionTestSettings*)Obj)->bOverrideSkillData = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData = { "bOverrideSkillData", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ActionTestSettings), &Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
-		{ "ToolTip", "#63" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_SetBit(void* Obj)
-	{
-		((FT4ActionTestSettings*)Obj)->bSandbagOneHitDie = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie = { "bSandbagOneHitDie", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ActionTestSettings), &Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker_MetaData[] = {
 		{ "Category", "Editor" },
@@ -225,19 +202,6 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		((FT4ActionTestSettings*)Obj)->bSandbagRoleAttacker = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker = { "bSandbagRoleAttacker", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ActionTestSettings), &Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled_MetaData[] = {
-		{ "Category", "Editor" },
-		{ "Comment", "// #60\n" },
-		{ "ModuleRelativePath", "Classes/ActionPack/T4ActionPackAsset.h" },
-		{ "ToolTip", "#60" },
-	};
-#endif
-	void Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled_SetBit(void* Obj)
-	{
-		((FT4ActionTestSettings*)Obj)->bNPCAIDisabled = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled = { "bNPCAIDisabled", nullptr, (EPropertyFlags)0x0010000800000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4ActionTestSettings), &Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SandbagNameID_MetaData[] = {
 		{ "Category", "Editor" },
@@ -289,9 +253,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SkillDataNameID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideEffectData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bOverrideSkillData,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagOneHitDie,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bSandbagRoleAttacker,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_bNPCAIDisabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_SandbagNameID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_WeaponNameID,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionTestSettings_Statics::NewProp_StanceSelected,
@@ -327,7 +289,7 @@ static struct FScriptStruct_T4Asset_StaticRegisterNativesFT4ActionTestSettings
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionTestSettings_Hash() { return 699276775U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionTestSettings_Hash() { return 1093496980U; }
 class UScriptStruct* FT4ActionCompositeData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

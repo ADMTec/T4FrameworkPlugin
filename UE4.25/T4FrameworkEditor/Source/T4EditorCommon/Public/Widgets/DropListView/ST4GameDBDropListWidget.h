@@ -13,6 +13,7 @@ class T4EDITORCOMMON_API ST4GameDBDropListWidget : public ST4DropListViewWidget
 {
 public:
 	SLATE_BEGIN_ARGS(ST4GameDBDropListWidget) {}
+		SLATE_ARGUMENT(bool, bInitializeRefresh) // #58, #158 : OnRefresh 를 외부에서 호출하는 것으로 변경되며. 호출이 불가능할 경우를 대비한 옵션
 		SLATE_ARGUMENT(TSharedPtr<IPropertyHandle>, PropertyHandle) // #88 : DetailView 를 통해 Object Dirty 가 됨으로 사용 유의 (즉, 테스트 했는데 Asset Dirty 가 됨)
 		SLATE_EVENT(FT4OnSelected, OnSelected)
 	SLATE_END_ARGS();

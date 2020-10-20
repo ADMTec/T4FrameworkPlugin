@@ -350,6 +350,14 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionDat
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResurrectActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_ResurrectActionPackAsset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DieActionPackAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_DieActionPackAsset;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AirborneActionPackAsset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_AirborneActionPackAsset;
@@ -380,6 +388,20 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionDat
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4VisualReactionData>();
 	}
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_ResurrectActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_ResurrectActionPackAsset = { "ResurrectActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, ResurrectActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_ResurrectActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_ResurrectActionPackAsset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_DieActionPackAsset_MetaData[] = {
+		{ "Category", "ClientOnly" },
+		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_DieActionPackAsset = { "DieActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, DieActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_DieActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_DieActionPackAsset_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset_MetaData[] = {
 		{ "Category", "ClientOnly" },
 		{ "ModuleRelativePath", "Public/T4GameDataStructs.h" },
@@ -408,6 +430,8 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionDat
 #endif
 	const UE4CodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset = { "HitActionPackAsset", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4VisualReactionData, HitActionPackAsset), Z_Construct_UClass_UT4ActionPackAsset_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_HitActionPackAsset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_ResurrectActionPackAsset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_DieActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_AirborneActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_StunActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4VisualReactionData_Statics::NewProp_KnockbackActionPackAsset,
@@ -441,7 +465,7 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4VisualReactionDat
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash() { return 1989002469U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4VisualReactionData_Hash() { return 4098269611U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

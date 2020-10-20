@@ -844,7 +844,7 @@ public:
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	float bTestReverseRotation; // #135 : 테스트시 이동 방향과 애니메이션을 달리하고 싶을 경우 체크!
+	bool bTestReverseRotation; // #135 : 테스트시 이동 방향과 애니메이션을 달리하고 싶을 경우 체크!
 #endif
 };
 
@@ -859,17 +859,19 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	ET4EntityReactionType ReactionType;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName ReactionName_A; // hit : Back (뒤로 기울임), knockback : Back (뒤로 밀림)
+	// WARN : Hit 는 때는 방향이 이름이다. 앞에서 때리면 캐릭터는 뒤로 기운다.
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName ReactionName_B; // hit : Front (앞으로 기울임), knockback : Front (앞으로 밀림)
+	FName ReactionName_A; // hit : Front (뒤로 기울임), knockback : Back (뒤로 밀림)
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName ReactionName_C; // hit : Right (우측으로), knockback : Up (공중으로)
+	FName ReactionName_B; // hit : Back (앞으로 기울임), knockback : Front (앞으로 밀림)
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
-	FName ReactionName_D; // hit : Left (좌측으로)
+	FName ReactionName_C; // hit : Left (우측으로), knockback : Up (공중으로)
+
+	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	FName ReactionName_D; // hit : Right (좌측으로)
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	bool bUseRotation; // #132 : Shoot 방향으로 회전 사용 여부

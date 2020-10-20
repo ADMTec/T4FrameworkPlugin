@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEDATA_T4SkillTableRow_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_115_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_133_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4SkillTableRow_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4TableRowBase Super;
@@ -21,19 +21,26 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4SkillTableRow>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_99_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_117_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4SkillVisualData_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4SkillVisualData>();
 
-#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_23_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_50_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4SkillShapeData_Statics; \
 	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
 
 
 template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4SkillShapeData>();
+
+#define HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h_23_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FT4SkillShapeMovementData_Statics; \
+	T4GAMEDATA_API static class UScriptStruct* StaticStruct();
+
+
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<struct FT4SkillShapeMovementData>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID HostProject_Plugins_T4Framework_Source_T4GameData_Classes_TableRow_T4SkillTableRow_h

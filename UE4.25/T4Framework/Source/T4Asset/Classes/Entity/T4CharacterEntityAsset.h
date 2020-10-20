@@ -287,7 +287,7 @@ public:
 		, ImpulseSubActionPoint(NAME_None)
 		, ImpulsePower(0.0f)
 		, CenterOfMass(FVector::ZeroVector)
-		, MassOverrideInKg(100.0f)
+		, MassScale(1.0f)
 		, bSimulateBodiesBelow(false)
 	{
 	}
@@ -304,14 +304,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart"))
 	FName ImpulseSubActionPoint;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart"))
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart", UIMin = "0.0", UIMax = "100.0"))
 	float ImpulsePower;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart"))
 	FVector CenterOfMass;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart"))
-	float MassOverrideInKg;
+	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart", UIMin = "0.1", UIMax = "100.0"))
+	float MassScale;
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly, meta = (EditCondition = "bUsePhysicsStart"))
 	bool bSimulateBodiesBelow;
@@ -412,10 +412,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	FT4EntityCharacterReactionAnimationData AnimationData;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	FT4EntityCharacterReactionPhysicsStartData PhysicsStartData;
 
-	UPROPERTY(EditAnywhere, Category = ClientOnly)
+	UPROPERTY(EditAnywhere, Category = Hide)
 	FT4EntityCharacterReactionPhysicsStopData PhysicsStopData;
 
 #if WITH_EDITORONLY_DATA
@@ -435,7 +435,7 @@ public:
 	}
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	TArray<FT4EntityCharacterReactionData> ReactionDatas; // #124;
+	TArray<FT4EntityCharacterReactionData> ReactionDatas; // #124; // WARN : Hit 는 때는 방향이 이름이다. 앞에서 때리면 캐릭터는 뒤로 기운다.
 };
 
 UCLASS(ClassGroup = T4Framework, Category = "T4Framework")

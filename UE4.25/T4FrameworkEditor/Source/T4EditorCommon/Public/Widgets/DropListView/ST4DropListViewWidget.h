@@ -90,6 +90,7 @@ protected:
 	FString NoNameDescription; // #58 : None 대신 출력할 Description
 
 	bool bItemSorting; // #92
+	bool bInitializeRefresh; // #58, #158 : OnRefresh 를 외부에서 호출하는 것으로 변경되며. 호출이 불가능할 경우를 대비한 옵션
 
 	TSharedPtr<SComboButton> ElementButton;
 

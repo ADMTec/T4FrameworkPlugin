@@ -4,6 +4,7 @@
 
 #include "T4GameDataMinimal.h"
 #include "T4GameDBTypes.h"
+#include "T4Engine/Public/T4EngineConstants.h"
 #include "T4GameDataStructs.generated.h"
 
 /**
@@ -27,6 +28,12 @@ public:
 
 	UPROPERTY(EditAnywhere, Category= ClientOnly)
 	TSoftObjectPtr<UT4ActionPackAsset> AirborneActionPackAsset;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> DieActionPackAsset;
+
+	UPROPERTY(EditAnywhere, Category= ClientOnly)
+	TSoftObjectPtr<UT4ActionPackAsset> ResurrectActionPackAsset;
 };
 
 USTRUCT()
@@ -40,7 +47,7 @@ public:
 
 public:
 	FT4CharacterShapeData()
-		: AgentRadius(50.0f) // #114
+		: AgentRadius(T4Const_DefaultAgentRadius) // #114
 	{
 	}
 };

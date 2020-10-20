@@ -15,8 +15,6 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkEditor() {}
 // Cross Module References
 	T4FRAMEWORK_API UEnum* Z_Construct_UEnum_T4Framework_ET4EditorFindTarget();
 	UPackage* Z_Construct_UPackage__Script_T4Framework();
-	T4FRAMEWORK_API UEnum* Z_Construct_UEnum_T4Framework_ET4EditorEffectType();
-	T4FRAMEWORK_API UEnum* Z_Construct_UEnum_T4Framework_ET4EditorAttackType();
 	T4FRAMEWORK_API UEnum* Z_Construct_UEnum_T4Framework_ET4EditorPlayRole();
 	T4FRAMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FT4EditorEffectDataInfo();
 	T4ASSET_API UClass* Z_Construct_UClass_UT4ActionPackAsset_NoRegister();
@@ -72,147 +70,6 @@ void EmptyLinkFunctionForGeneratedCodeT4FrameworkEditor() {}
 				nullptr,
 				"ET4EditorFindTarget",
 				"ET4EditorFindTarget",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* ET4EditorEffectType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Framework_ET4EditorEffectType, Z_Construct_UPackage__Script_T4Framework(), TEXT("ET4EditorEffectType"));
-		}
-		return Singleton;
-	}
-	template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorEffectType>()
-	{
-		return ET4EditorEffectType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EditorEffectType(ET4EditorEffectType_StaticEnum, TEXT("/Script/T4Framework"), TEXT("ET4EditorEffectType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Framework_ET4EditorEffectType_Hash() { return 2591750503U; }
-	UEnum* Z_Construct_UEnum_T4Framework_ET4EditorEffectType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Framework();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EditorEffectType"), 0, Get_Z_Construct_UEnum_T4Framework_ET4EditorEffectType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4EditorEffectType::Direct", (int64)ET4EditorEffectType::Direct },
-				{ "ET4EditorEffectType::Area", (int64)ET4EditorEffectType::Area },
-				{ "ET4EditorEffectType::Knockback", (int64)ET4EditorEffectType::Knockback },
-				{ "ET4EditorEffectType::Airborne", (int64)ET4EditorEffectType::Airborne },
-				{ "ET4EditorEffectType::Stun", (int64)ET4EditorEffectType::Stun },
-				{ "ET4EditorEffectType::Mis", (int64)ET4EditorEffectType::Mis },
-				{ "ET4EditorEffectType::None", (int64)ET4EditorEffectType::None },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Airborne.Comment", "// CC\n" },
-				{ "Airborne.Name", "ET4EditorEffectType::Airborne" },
-				{ "Airborne.ToolTip", "CC" },
-				{ "Area.Name", "ET4EditorEffectType::Area" },
-				{ "Comment", "// #68\n" },
-				{ "Direct.Name", "ET4EditorEffectType::Direct" },
-				{ "Knockback.Name", "ET4EditorEffectType::Knockback" },
-				{ "Mis.Comment", "// CC\n" },
-				{ "Mis.Name", "ET4EditorEffectType::Mis" },
-				{ "Mis.ToolTip", "CC" },
-				{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-				{ "None.Comment", "// #135, #142\n" },
-				{ "None.Hidden", "" },
-				{ "None.Name", "ET4EditorEffectType::None" },
-				{ "None.ToolTip", "#135, #142" },
-				{ "Stun.Comment", "// CC\n" },
-				{ "Stun.Name", "ET4EditorEffectType::Stun" },
-				{ "Stun.ToolTip", "CC" },
-				{ "ToolTip", "#68" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4Framework,
-				nullptr,
-				"ET4EditorEffectType",
-				"ET4EditorEffectType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* ET4EditorAttackType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_T4Framework_ET4EditorAttackType, Z_Construct_UPackage__Script_T4Framework(), TEXT("ET4EditorAttackType"));
-		}
-		return Singleton;
-	}
-	template<> T4FRAMEWORK_API UEnum* StaticEnum<ET4EditorAttackType>()
-	{
-		return ET4EditorAttackType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4EditorAttackType(ET4EditorAttackType_StaticEnum, TEXT("/Script/T4Framework"), TEXT("ET4EditorAttackType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Framework_ET4EditorAttackType_Hash() { return 2309144417U; }
-	UEnum* Z_Construct_UEnum_T4Framework_ET4EditorAttackType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_T4Framework();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ET4EditorAttackType"), 0, Get_Z_Construct_UEnum_T4Framework_ET4EditorAttackType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ET4EditorAttackType::Swing", (int64)ET4EditorAttackType::Swing },
-				{ "ET4EditorAttackType::Throw", (int64)ET4EditorAttackType::Throw },
-				{ "ET4EditorAttackType::Launch", (int64)ET4EditorAttackType::Launch },
-				{ "ET4EditorAttackType::Air", (int64)ET4EditorAttackType::Air },
-				{ "ET4EditorAttackType::Dash", (int64)ET4EditorAttackType::Dash },
-				{ "ET4EditorAttackType::None", (int64)ET4EditorAttackType::None },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Air.Comment", "// #135, \xed\x8a\xb9\xec\x88\x98, \xeb\xb0\x9c\xec\x82\xac\xec\xb2\xb4\xec\x99\x80 \xeb\xb0\x98\xeb\x8f\x99\xec\x9d\xb4 \xed\x95\xa8\xea\xbb\x98 \xec\x9e\x88\xec\x9d\x8c (TODO : \xec\xa0\x81\xeb\x8b\xb9\xed\x95\x9c \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4 \xec\x9e\x88\xeb\x8b\xa4\xeb\xa9\xb4 \xec\x88\x98\xec\xa0\x95\xed\x95\xa0 \xea\xb2\x83)\n" },
-				{ "Air.Name", "ET4EditorAttackType::Air" },
-				{ "Air.ToolTip", "#135, \xed\x8a\xb9\xec\x88\x98, \xeb\xb0\x9c\xec\x82\xac\xec\xb2\xb4\xec\x99\x80 \xeb\xb0\x98\xeb\x8f\x99\xec\x9d\xb4 \xed\x95\xa8\xea\xbb\x98 \xec\x9e\x88\xec\x9d\x8c (TODO : \xec\xa0\x81\xeb\x8b\xb9\xed\x95\x9c \xec\x9d\xb4\xeb\xa6\x84\xec\x9d\xb4 \xec\x9e\x88\xeb\x8b\xa4\xeb\xa9\xb4 \xec\x88\x98\xec\xa0\x95\xed\x95\xa0 \xea\xb2\x83)" },
-				{ "Comment", "// #63\n" },
-				{ "Dash.Comment", "// #135 : Jump Attack\n" },
-				{ "Dash.Name", "ET4EditorAttackType::Dash" },
-				{ "Dash.ToolTip", "#135 : Jump Attack" },
-				{ "Launch.Name", "ET4EditorAttackType::Launch" },
-				{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-				{ "None.Comment", "// #135\n" },
-				{ "None.Name", "ET4EditorAttackType::None" },
-				{ "None.ToolTip", "#135" },
-				{ "Swing.Name", "ET4EditorAttackType::Swing" },
-				{ "Throw.Name", "ET4EditorAttackType::Throw" },
-				{ "ToolTip", "#63" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_T4Framework,
-				nullptr,
-				"ET4EditorAttackType",
-				"ET4EditorAttackType",
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -318,14 +175,6 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_ChainEffectDBKey;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAreaRange_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAreaRange;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAreaRange_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAreaRange;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeightSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxHeightSpeed;
@@ -343,6 +192,19 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MoveAngleType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MoveAngleType_Underlying;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseMovement_MetaData[];
+#endif
+		static void NewProp_bUseMovement_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxEffectRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxEffectRange;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinEffectRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinEffectRange;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DurationSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DurationSec;
@@ -353,8 +215,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EffectType_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_EffectType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_EffectType_Underlying;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_EffectType;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Name_MetaData[];
 #endif
@@ -381,34 +242,17 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey_MetaData[] = {
 		{ "Category", "Default" },
-		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey = { "ChainEffectDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, ChainEffectDBKey), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxAreaRange_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxAreaRange = { "MaxAreaRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, MaxAreaRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxAreaRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxAreaRange_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinAreaRange_MetaData[] = {
-		{ "Category", "Common" },
 		{ "Comment", "// #140 : \xeb\x86\x92\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84 (\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84\xeb\xa1\x9c \xec\xb5\x9c\xeb\x8c\x80 \xeb\x86\x92\xec\x9d\xb4\xea\xb9\x8c\xec\xa7\x80 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb5\xac\xed\x95\xb4\xec\x84\x9c \xed\x8f\xac\xeb\xac\xbc\xec\x84\xa0 \xea\xb3\xb5\xec\x8b\x9d \xec\xb2\x98\xeb\xa6\xac)\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#140 : \xeb\x86\x92\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84 (\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84\xeb\xa1\x9c \xec\xb5\x9c\xeb\x8c\x80 \xeb\x86\x92\xec\x9d\xb4\xea\xb9\x8c\xec\xa7\x80 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb5\xac\xed\x95\xb4\xec\x84\x9c \xed\x8f\xac\xeb\xac\xbc\xec\x84\xa0 \xea\xb3\xb5\xec\x8b\x9d \xec\xb2\x98\xeb\xa6\xac)" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinAreaRange = { "MinAreaRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, MinAreaRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinAreaRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinAreaRange_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey = { "ChainEffectDBKey", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, ChainEffectDBKey), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxHeightSpeed_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #135 : ET4GameAttackType Air\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#135 : ET4GameAttackType Air" },
 	};
@@ -418,6 +262,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxHeight_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY" },
 	};
@@ -427,6 +272,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxDistance_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #135\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#135" },
 	};
@@ -435,11 +281,43 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType_MetaData[] = {
 		{ "Category", "ServerOnly" },
+		{ "Comment", "// #158\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#158" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType = { "MoveAngleType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, MoveAngleType), Z_Construct_UEnum_T4Asset_ET4MoveAngleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement_SetBit(void* Obj)
+	{
+		((FT4EditorEffectDataInfo*)Obj)->bUseMovement = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement = { "bUseMovement", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorEffectDataInfo), &Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxEffectRange_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxEffectRange = { "MaxEffectRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, MaxEffectRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxEffectRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxEffectRange_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinEffectRange_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinEffectRange = { "MinEffectRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, MinEffectRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinEffectRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinEffectRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_DurationSec_MetaData[] = {
 		{ "Category", "Common" },
@@ -460,8 +338,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType = { "EffectType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, EffectType), Z_Construct_UEnum_T4Framework_ET4EditorEffectType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType = { "EffectType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorEffectDataInfo, EffectType), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "Default" },
@@ -474,17 +351,17 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_OverrideActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_ChainEffectDBKey,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxAreaRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinAreaRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxHeightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveMaxDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MoveAngleType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_bUseMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MaxEffectRange,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_MinEffectRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_HitDelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_EffectType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::NewProp_Name,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Statics::ReturnStructParams = {
@@ -515,7 +392,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorEffectData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Hash() { return 2355864505U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorEffectDataInfo_Hash() { return 3485635197U; }
 class UScriptStruct* FT4EditorSkillDataInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -565,18 +442,9 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimingPitchAngle;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FindTargetType_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_FindTargetType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_FindTargetType_Underlying;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RotationRateSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RotationRateSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileSpeed;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeightSpeed_MetaData[];
 #endif
@@ -595,6 +463,24 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MoveAngleType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MoveAngleType_Underlying;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseMovement_MetaData[];
+#endif
+		static void NewProp_bUseMovement_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FindTargetType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_FindTargetType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_FindTargetType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CoolTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CoolTimeSec;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DurationSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DurationSec;
@@ -602,6 +488,11 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DelayTimeSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DelayTimeSec;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseOverlapEvents_MetaData[];
+#endif
+		static void NewProp_bUseOverlapEvents_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseOverlapEvents;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bApproach_MetaData[];
 #endif
@@ -625,8 +516,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackType_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_AttackType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_AttackType_Underlying;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AttackType;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Name_MetaData[];
 #endif
@@ -682,45 +572,27 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		{ "Category", "ClientOnly" },
 		{ "ClampMax", "45.0" },
 		{ "ClampMin", "-45.0" },
-		{ "Comment", "// #117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)\n" },
-		{ "EditCondition", "bCasting" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle = { "AimingPitchAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AimingPitchAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData[] = {
-		{ "Category", "Common" },
 		{ "Comment", "// #112, #113 : \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0 InPlaceRotationRate * Speed (1 \xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 \xea\xb8\xb0\xeb\xb3\xb8\xea\xb0\x92 \xec\x82\xac\xec\x9a\xa9)\n" },
+		{ "EditCondition", "bCasting" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#112, #113 : \xec\xba\x90\xeb\xa6\xad\xed\x84\xb0 InPlaceRotationRate * Speed (1 \xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 \xea\xb8\xb0\xeb\xb3\xb8\xea\xb0\x92 \xec\x82\xac\xec\x9a\xa9)" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType = { "FindTargetType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, FindTargetType), Z_Construct_UEnum_T4Framework_ET4EditorFindTarget, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle = { "AimingPitchAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AimingPitchAngle), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData[] = {
-		{ "Category", "Common" },
-		{ "Comment", "// #63\n" },
-		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
-		{ "ToolTip", "#63" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed = { "RotationRateSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, RotationRateSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #140\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#140" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed = { "ProjectileSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, ProjectileSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed = { "RotationRateSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, RotationRateSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeightSpeed_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #140\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#140" },
 	};
@@ -730,6 +602,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeight_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #140\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#140" },
 	};
@@ -739,6 +612,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxDistance_MetaData[] = {
 		{ "Category", "Common" },
 		{ "Comment", "// #135\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#135" },
 	};
@@ -747,11 +621,51 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #158\n" },
+		{ "EditCondition", "bUseMovement" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#158" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType = { "MoveAngleType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, MoveAngleType), Z_Construct_UEnum_T4Asset_ET4MoveAngleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #63\n" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#63" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bUseMovement = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement = { "bUseMovement", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)\n" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#117 : \xea\xb3\xb5\xea\xb0\x9d \xeb\x8c\x80\xec\x83\x81\xec\x9d\x84 \xec\xb0\xbe\xec\x9d\x84 \xea\xb2\xbd\xec\x9a\xb0\xec\x97\x90 \xeb\x8c\x80\xed\x95\x9c \xec\x98\xb5\xec\x85\x98 (TODO : Tribe or Enemy)" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed = { "ProjectileSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, ProjectileSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType = { "FindTargetType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, FindTargetType), Z_Construct_UEnum_T4Framework_ET4EditorFindTarget, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CoolTimeSec_MetaData[] = {
+		{ "Category", "Common" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CoolTimeSec = { "CoolTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, CoolTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CoolTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CoolTimeSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DurationSec_MetaData[] = {
 		{ "Category", "Common" },
@@ -762,12 +676,26 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData[] = {
 		{ "Category", "Common" },
+		{ "Comment", "// #135 : Overlap Event \xec\x97\x90 \xec\x9d\x98\xed\x95\x9c \xed\x8c\x90\xec\xa0\x95 \xec\x82\xac\xec\x9a\xa9. ActionPack \xec\x97\x90 Overlap Event Action \xec\x9d\xb4 \xec\x84\xa4\xec\xb9\x98\xeb\x90\x98\xec\x96\xb4\xec\x95\xbc \xed\x95\xa8. false \xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 HitTime \xea\xb8\xb0\xeb\xb0\x98 \xeb\x9e\x9c\xeb\x8d\xa4 \xec\xb2\x98\xeb\xa6\xac\n" },
+		{ "EditCondition", "!bUseOverlapEvents" },
+		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
+		{ "ToolTip", "#135 : Overlap Event \xec\x97\x90 \xec\x9d\x98\xed\x95\x9c \xed\x8c\x90\xec\xa0\x95 \xec\x82\xac\xec\x9a\xa9. ActionPack \xec\x97\x90 Overlap Event Action \xec\x9d\xb4 \xec\x84\xa4\xec\xb9\x98\xeb\x90\x98\xec\x96\xb4\xec\x95\xbc \xed\x95\xa8. false \xec\x9d\xbc \xea\xb2\xbd\xec\x9a\xb0 HitTime \xea\xb8\xb0\xeb\xb0\x98 \xeb\x9e\x9c\xeb\x8d\xa4 \xec\xb2\x98\xeb\xa6\xac" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec = { "DelayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, DelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents_MetaData[] = {
+		{ "Category", "Common" },
 		{ "Comment", "// #170\n" },
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 		{ "ToolTip", "#170" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec = { "DelayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, DelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents_SetBit(void* Obj)
+	{
+		((FT4EditorSkillDataInfo*)Obj)->bUseOverlapEvents = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents = { "bUseOverlapEvents", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EditorSkillDataInfo), &Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach_MetaData[] = {
 		{ "Category", "Common" },
@@ -826,8 +754,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		{ "ModuleRelativePath", "Public/T4FrameworkEditor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType = { "AttackType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AttackType), Z_Construct_UEnum_T4Framework_ET4EditorAttackType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType = { "AttackType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EditorSkillDataInfo, AttackType), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_Name_MetaData[] = {
 		{ "Category", "Common" },
@@ -843,23 +770,25 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CastingActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_UsingActionPackAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AimingPitchAngle,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_RotationRateSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveMaxDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_MoveAngleType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_ProjectileSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_FindTargetType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_CoolTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_DelayTimeSec,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bUseOverlapEvents,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bApproach,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bCasting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bLockOn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_bMoveable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_AttackType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::NewProp_Name,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Statics::ReturnStructParams = {
@@ -890,7 +819,7 @@ static struct FScriptStruct_T4Framework_StaticRegisterNativesFT4EditorSkillDataI
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Hash() { return 2012793134U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EditorSkillDataInfo_Hash() { return 1151717225U; }
 class UScriptStruct* FT4EditorNPCDataInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

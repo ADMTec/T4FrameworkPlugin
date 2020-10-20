@@ -210,13 +210,7 @@ public:
 	FName SandbagNameID; // #60
 
 	UPROPERTY(EditAnywhere, Category = Editor)
-	bool bNPCAIDisabled; // #60
-
-	UPROPERTY(EditAnywhere, Category = Editor)
 	bool bSandbagRoleAttacker; // #63
-
-	UPROPERTY(EditAnywhere, Category = Editor)
-	bool bSandbagOneHitDie; // #76
 
 	UPROPERTY(EditAnywhere, Category = Editor)
 	bool bOverrideSkillData; // #63
@@ -243,9 +237,7 @@ public:
 		, StanceSelected(NAME_None) // #106
 		, WeaponNameID(NAME_None) // #60
 		, SandbagNameID(NAME_None) // #60
-		, bNPCAIDisabled(true) // #60
 		, bSandbagRoleAttacker(false) // #63
-		, bSandbagOneHitDie(false) // #76
 		, bOverrideSkillData(false) // #63
 		, bOverrideEffectData(false) // #68
 		, SkillDataNameID(NAME_None) // #60

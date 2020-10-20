@@ -18,6 +18,33 @@
 class UT4ActionPackAsset;
 
 USTRUCT()
+struct FT4SkillShapeMovementData // #135
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	ET4MoveAngleType MoveAngleType; // #135
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MoveMaxDistance; // #140 : 최대거리 / 시간으로 MovementSpeed 를 구한다. XY
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MoveMaxHeight; // #135 : ET4GameAttackType Air
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
+
+public:
+	FT4SkillShapeMovementData()
+		: MoveAngleType(ET4MoveAngleType::None) // #135
+		, MoveMaxDistance(0.0f)
+		, MoveMaxHeight(0.0f) // #135
+		, MoveMaxHeightSpeed(0.0f) // #140
+	{
+	}
+};
+
+USTRUCT()
 struct FT4SkillShapeData // #108, #114
 {
 	GENERATED_USTRUCT_BODY()
@@ -51,25 +78,19 @@ public:
 	float CoolTimeSec;
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	ET4MoveAngleType MoveAngleType; // #135
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxDistance; // #140 : 최대거리 / 시간으로 MovementSpeed 를 구한다. XY
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxHeight; // #135 : ET4GameAttackType Air
-
-	UPROPERTY(EditAnywhere, Category = Common)
-	float MoveMaxHeightSpeed; // #140 : 높이 속도 (이 속도로 최대 높이까지 시간을 구해서 포물선 공식 처리)
+	ET4GameFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
 
 	UPROPERTY(EditAnywhere, Category = Common)
 	float ProjectileSpeed; // #63
 
 	UPROPERTY(EditAnywhere, Category = Common)
-	ET4GameFindTarget FindTargetType; // #117 : 공객 대상을 찾을 경우에 대한 옵션 (TODO : Tribe or Enemy)
+	bool bUseMovement; // #135
+
+	UPROPERTY(EditAnywhere, Category = Common, meta = (EditCondition = "bUseMovement"))
+	FT4SkillShapeMovementData MovementData; // #135
+
+	UPROPERTY(EditAnywhere, Category = Common)
+	float RotationRateSpeed; // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 
 public:
 	FT4SkillShapeData()
@@ -82,13 +103,10 @@ public:
 		, DelayTimeSec(0.0f)
 		, DurationSec(0.0f)
 		, CoolTimeSec(0.0f)
-		, RotationRateSpeed(1.0f) // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
-		, MoveAngleType(ET4MoveAngleType::None) // #135
-		, MoveMaxDistance(0.0f)
-		, MoveMaxHeight(0.0f) // #135
-		, MoveMaxHeightSpeed(0.0f) // #140
-		, ProjectileSpeed(0.0f) // #63
 		, FindTargetType(ET4GameFindTarget::All)
+		, ProjectileSpeed(0.0f) // #63
+		, bUseMovement(false)
+		, RotationRateSpeed(1.0f) // #112, #113 : 캐릭터 InPlaceRotationRate * Speed (1 일 경우 기본값 사용)
 	{
 	}
 };

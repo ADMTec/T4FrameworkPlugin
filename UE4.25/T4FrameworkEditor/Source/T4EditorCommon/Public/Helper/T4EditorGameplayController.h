@@ -10,6 +10,7 @@
 /**
   * #60
  */
+struct FT4ActionTestSettings;
 class UT4EntityAsset;
 UCLASS()
 class T4EDITORCOMMON_API UT4EditorGameplayController : public UObject, public IT4EditorGameplayHandler
@@ -23,7 +24,7 @@ public:
 public:
 	// IT4EditorGameplayHandler
 	bool IsSimulating() const override { return bSimulating; } // #102
-	bool IsSettingsUsed() const override { return bSettingsUsed; } // #104 : Action 에서만 true, 기타는 False. 즉 Override 를 사용하지 않음
+	bool IsUsePlaySettings() const override { return bSettingsUsed; } // #104 : Action 에서만 true, 기타는 False. 즉 Override 를 사용하지 않음
 
 	float GetDefaultMoveSpeed() const override { return DefaultMoveSpeed; } // #114
 
@@ -31,7 +32,6 @@ public:
 	void SetDisableNPCAI(bool bInDisable) override { bNPCAIDisabled = bInDisable; } // #161
 
 	bool IsSandbagAttackable() const override { return (SandbagRole == ET4EditorPlayRole::Attacker) ? true : false; }
-	bool IsSandbagOneHitDie() const override { return bSandbagOneHitDie; } // #76
 
 	bool IsOverrideSkillData() const override { return bOverrideSkillData; } // #63
 	bool IsOverrideEffectData() const override { return bOverrideEffectData; } // #68
@@ -41,7 +41,7 @@ public:
 
 	const FT4EditorSkillDataInfo& GetOverrideSkillDataInfo() const override { return SkillDataInfo; }
 	const FT4EditorEffectDataInfo& GetOverrideEffectDataInfo() const override { return EffectDataInfo; }
-	const FSoftObjectPath& GetOverrideActionPackPath() const override;
+	const FSoftObjectPath& GetEditActionPackPath() const override;
 
 public:
 	void SetLayerType(ET4LayerType InLayerType) { LayerType = InLayerType; } // #60
@@ -64,6 +64,9 @@ public:
 	bool LoadSkillDataFromGameDB(); // #164
 	bool LoadEffectDataFromGameDB(); // #164
 
+	void LoadFrom(const FT4ActionTestSettings* InActionTestSettings); // #158
+	void SaveTo(FT4ActionTestSettings* OutActionTestSettings); // #158
+
 public:
 	// #T4_ADD_EDITOR_PLAY_TAG
 
@@ -83,13 +86,7 @@ public:
 	TSoftObjectPtr<UT4EntityAsset> NPCEntityAsset; // #76
 
 	UPROPERTY(EditAnywhere, Category = Default, Transient)
-	bool bNPCAIDisabled;
-
-	UPROPERTY(EditAnywhere, Category = Default, Transient)
 	ET4EditorPlayRole SandbagRole; // #63
-
-	UPROPERTY(EditAnywhere, Category = Default, Transient)
-	bool bSandbagOneHitDie; // #76
 
 	UPROPERTY(EditAnywhere, Category = Default, Transient)
 	bool bOverrideSkillData; // #63 : 사용중인 Conti 를 덮어 씌울 것인가
@@ -115,6 +112,7 @@ private:
 	ET4LayerType LayerType; // #60
 	bool bSimulating; // #102
 	bool bSettingsUsed; // #104 : conti 에서만 true, world 에서는 false
+	bool bNPCAIDisabled;
 	FT4ActionParameters ContiParameter;
 	FT4OnEditorGameplayControllerChanged OnEditorGameplayControllerChanged;
 };

@@ -22,8 +22,9 @@ void EmptyLinkFunctionForGeneratedCodeT4EffectTableRow() {}
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectShapeData();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4NameTextDBKey();
 	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4GameUID();
-	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4MoveAngleType();
+	T4GAMEDATA_API UScriptStruct* Z_Construct_UScriptStruct_FT4EffectShapeMovementData();
 	T4GAMEDATA_API UEnum* Z_Construct_UEnum_T4GameData_ET4GameEffectType();
+	T4ASSET_API UEnum* Z_Construct_UEnum_T4Asset_ET4MoveAngleType();
 // End Cross Module References
 class UScriptStruct* FT4EffectTableRow::StaticStruct()
 {
@@ -219,30 +220,22 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAreaRange_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementData_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAreaRange;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MovementData;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAreaRange_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseMovement_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAreaRange;
+		static void NewProp_bUseMovement_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseMovement;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeightSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxEffectRange_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxHeightSpeed;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxEffectRange;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeight_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinEffectRange_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxHeight;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxDistance_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxDistance;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveAngleType_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MoveAngleType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MoveAngleType_Underlying;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinEffectRange;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DurationSec_MetaData[];
 #endif
@@ -271,58 +264,44 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EffectShapeData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MovementData_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #135\n" },
+		{ "EditCondition", "bUseMovement" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+		{ "ToolTip", "#135" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MovementData = { "MovementData", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MovementData), Z_Construct_UScriptStruct_FT4EffectShapeMovementData, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MovementData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MovementData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
 		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange = { "MaxAreaRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MaxAreaRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange_MetaData)) };
+	void Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement_SetBit(void* Obj)
+	{
+		((FT4EffectShapeData*)Obj)->bUseMovement = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement = { "bUseMovement", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FT4EffectShapeData), &Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinAreaRange_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxEffectRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
-		{ "Comment", "// #140 : \xeb\x86\x92\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84 (\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84\xeb\xa1\x9c \xec\xb5\x9c\xeb\x8c\x80 \xeb\x86\x92\xec\x9d\xb4\xea\xb9\x8c\xec\xa7\x80 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb5\xac\xed\x95\xb4\xec\x84\x9c \xed\x8f\xac\xeb\xac\xbc\xec\x84\xa0 \xea\xb3\xb5\xec\x8b\x9d \xec\xb2\x98\xeb\xa6\xac)\n" },
+		{ "Comment", "// #114 : ET4GameEffectType::Area\n" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
-		{ "ToolTip", "#140 : \xeb\x86\x92\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84 (\xec\x9d\xb4 \xec\x86\x8d\xeb\x8f\x84\xeb\xa1\x9c \xec\xb5\x9c\xeb\x8c\x80 \xeb\x86\x92\xec\x9d\xb4\xea\xb9\x8c\xec\xa7\x80 \xec\x8b\x9c\xea\xb0\x84\xec\x9d\x84 \xea\xb5\xac\xed\x95\xb4\xec\x84\x9c \xed\x8f\xac\xeb\xac\xbc\xec\x84\xa0 \xea\xb3\xb5\xec\x8b\x9d \xec\xb2\x98\xeb\xa6\xac)" },
+		{ "ToolTip", "#114 : ET4GameEffectType::Area" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinAreaRange = { "MinAreaRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MinAreaRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinAreaRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinAreaRange_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxEffectRange = { "MaxEffectRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MaxEffectRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxEffectRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxEffectRange_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeightSpeed_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #135 : ET4GameAttackType Air\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
-		{ "ToolTip", "#135 : ET4GameAttackType Air" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeightSpeed = { "MoveMaxHeightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MoveMaxHeightSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeightSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeight_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
-		{ "ToolTip", "#140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeight = { "MoveMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MoveMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeight_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxDistance_MetaData[] = {
-		{ "Category", "ServerOnly" },
-		{ "Comment", "// #135\n" },
-		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
-		{ "ToolTip", "#135" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxDistance = { "MoveMaxDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MoveMaxDistance), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxDistance_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinEffectRange_MetaData[] = {
 		{ "Category", "ServerOnly" },
 		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType = { "MoveAngleType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MoveAngleType), Z_Construct_UEnum_T4Asset_ET4MoveAngleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinEffectRange = { "MinEffectRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, MinEffectRange), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinEffectRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinEffectRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_DurationSec_MetaData[] = {
 		{ "Category", "ServerOnly" },
@@ -348,13 +327,10 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_EffectType = { "EffectType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeData, EffectType), Z_Construct_UEnum_T4GameData_ET4GameEffectType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_EffectType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_EffectType_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_EffectType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxAreaRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinAreaRange,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeightSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveMaxDistance,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MoveAngleType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MovementData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_bUseMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MaxEffectRange,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_MinEffectRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_DurationSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_HitDelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeData_Statics::NewProp_EffectType,
@@ -388,7 +364,137 @@ static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeData_Hash() { return 3036975565U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeData_Hash() { return 894337383U; }
+class UScriptStruct* FT4EffectShapeMovementData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern T4GAMEDATA_API uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FT4EffectShapeMovementData, Z_Construct_UPackage__Script_T4GameData(), TEXT("T4EffectShapeMovementData"), sizeof(FT4EffectShapeMovementData), Get_Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Hash());
+	}
+	return Singleton;
+}
+template<> T4GAMEDATA_API UScriptStruct* StaticStruct<FT4EffectShapeMovementData>()
+{
+	return FT4EffectShapeMovementData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FT4EffectShapeMovementData(FT4EffectShapeMovementData::StaticStruct, TEXT("/Script/T4GameData"), TEXT("T4EffectShapeMovementData"), false, nullptr, nullptr);
+static struct FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeMovementData
+{
+	FScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeMovementData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("T4EffectShapeMovementData")),new UScriptStruct::TCppStructOps<FT4EffectShapeMovementData>);
+	}
+} ScriptStruct_T4GameData_StaticRegisterNativesFT4EffectShapeMovementData;
+	struct Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeightSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxHeightSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxHeight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveMaxDistance_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveMaxDistance;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveAngleType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MoveAngleType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MoveAngleType_Underlying;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::Struct_MetaDataParams[] = {
+		{ "Comment", "// #135\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+		{ "ToolTip", "#135" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FT4EffectShapeMovementData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeightSpeed_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #135 : ET4GameAttackType Air\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+		{ "ToolTip", "#135 : ET4GameAttackType Air" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeightSpeed = { "MoveMaxHeightSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeMovementData, MoveMaxHeightSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeightSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeightSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeight_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+		{ "ToolTip", "#140 : \xec\xb5\x9c\xeb\x8c\x80\xea\xb1\xb0\xeb\xa6\xac / \xec\x8b\x9c\xea\xb0\x84\xec\x9c\xbc\xeb\xa1\x9c MovementSpeed \xeb\xa5\xbc \xea\xb5\xac\xed\x95\x9c\xeb\x8b\xa4. XY" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeight = { "MoveMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeMovementData, MoveMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxDistance_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "Comment", "// #135\n" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+		{ "ToolTip", "#135" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxDistance = { "MoveMaxDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeMovementData, MoveMaxDistance), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxDistance_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType_MetaData[] = {
+		{ "Category", "ServerOnly" },
+		{ "ModuleRelativePath", "Classes/TableRow/T4EffectTableRow.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType = { "MoveAngleType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4EffectShapeMovementData, MoveAngleType), Z_Construct_UEnum_T4Asset_ET4MoveAngleType, METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeightSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveMaxDistance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::NewProp_MoveAngleType_Underlying,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_T4GameData,
+		nullptr,
+		&NewStructOps,
+		"T4EffectShapeMovementData",
+		sizeof(FT4EffectShapeMovementData),
+		alignof(FT4EffectShapeMovementData),
+		Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FT4EffectShapeMovementData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_T4GameData();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("T4EffectShapeMovementData"), sizeof(FT4EffectShapeMovementData), Get_Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FT4EffectShapeMovementData_Hash() { return 426193091U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define T4GAMEPLAY_T4GamePacketSC_Action_generated_h
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_508_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_512_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectStun_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectStun>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_471_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_475_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectAirborne_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -29,7 +29,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Eff
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectAirborne>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_406_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_410_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectKnockback_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -37,7 +37,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Eff
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectKnockback>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_368_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_372_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectArea_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -45,7 +45,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Eff
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectArea>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_323_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_327_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectHit_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -53,7 +53,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Eff
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectHit>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_286_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_290_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectDebuff_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;
@@ -61,7 +61,7 @@ template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_Eff
 
 template<> T4GAMEPLAY_API UScriptStruct* StaticStruct<struct FT4GamePacketSC_EffectDebuff>();
 
-#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_248_GENERATED_BODY \
+#define HostProject_Plugins_T4Framework_Source_T4Gameplay_Public_Protocol_Client_T4GamePacketSC_Action_h_252_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FT4GamePacketSC_EffectBuff_Statics; \
 	T4GAMEPLAY_API static class UScriptStruct* StaticStruct(); \
 	typedef FT4GamePacketSC_Base Super;

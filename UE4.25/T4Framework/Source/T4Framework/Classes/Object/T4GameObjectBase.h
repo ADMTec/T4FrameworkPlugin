@@ -10,6 +10,7 @@
   * #114
  */
 class UWorld;
+class IT4EditorGameplayHandler; // #158
 class IT4GameDBInstance; // #172
 class IT4Framework;
 class IT4WorldActor;
@@ -77,6 +78,11 @@ protected:
 		const float InHeightRange, // Range = +-, 0.0f = infinity
 		TArray<IT4WorldActor*>& OutActors
 	); // #114
+
+	bool IsUseEditorGameplayHandler() const;
+#if WITH_EDITOR
+	IT4EditorGameplayHandler* GetEditorGameplayHandler() const; // #60
+#endif
 
 private:
 	ET4LayerType LayerType;

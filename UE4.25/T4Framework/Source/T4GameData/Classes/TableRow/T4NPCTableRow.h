@@ -129,17 +129,17 @@ public:
 	UPROPERTY(EditAnywhere, Category = Common)
 	FT4NPCLocomotionData LocomotionData; // #50, #108, #109
 
-	UPROPERTY(EditAnywhere, Category= ServerOnly)
-	ET4GameNPCBehaviorType BehaviorType; // #158
-
-	UPROPERTY(EditAnywhere, Category = ServerOnly)
-	FT4NPCBehaviorData BehaviorData; // #50
-
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4NPCStatDBKey InitializeNPCStatDBKey; // #114 : 기본 Stat
 
 	UPROPERTY(EditAnywhere, Category = ServerOnly)
 	FT4WeaponDBKey InitializeWeaponDBKey; // #50
+
+	UPROPERTY(EditAnywhere, Category= ServerOnly)
+	ET4GameNPCBehaviorType BehaviorType; // #158
+
+	UPROPERTY(EditAnywhere, Category = ServerOnly)
+	FT4NPCBehaviorData BehaviorData; // #50
 
 	UPROPERTY(EditAnywhere, Category = ClientOnly)
 	TSoftObjectPtr<UT4ActorEntityAsset> EntityAsset;

@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeT4Engine_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xA02C4D83,
+				0xBF3CA9DE,
 				0xE12CD20A,
 				METADATA_PARAMS(nullptr, 0)
 			};

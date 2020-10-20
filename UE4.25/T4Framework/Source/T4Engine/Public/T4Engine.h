@@ -223,6 +223,7 @@ public:
 	virtual bool IsAiming() const = 0; // #113
 	virtual bool IsSpecialMoves() const = 0; // #135
 	virtual bool IsLockOn() const = 0; // #33
+	virtual bool IsDead() const = 0; // #158
 
 	virtual bool HasAnimSetByName(const FName InAnimSetName) const = 0; // #142
 	virtual bool HasPlayingAnimState(const FName& InAnimStateName) const = 0; // #47

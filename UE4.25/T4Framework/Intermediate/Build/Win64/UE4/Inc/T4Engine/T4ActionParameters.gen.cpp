@@ -98,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 		return ET4OverrideParamBits_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ET4OverrideParamBits(ET4OverrideParamBits_StaticEnum, TEXT("/Script/T4Engine"), TEXT("ET4OverrideParamBits"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_T4Engine_ET4OverrideParamBits_Hash() { return 3645660042U; }
+	uint32 Get_Z_Construct_UEnum_T4Engine_ET4OverrideParamBits_Hash() { return 199457394U; }
 	UEnum* Z_Construct_UEnum_T4Engine_ET4OverrideParamBits()
 	{
 #if WITH_HOT_RELOAD
@@ -112,6 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ET4OverrideParamBits::DurationBit", (int64)ET4OverrideParamBits::DurationBit },
 				{ "ET4OverrideParamBits::OffsetTimeBit", (int64)ET4OverrideParamBits::OffsetTimeBit },
+				{ "ET4OverrideParamBits::HitDelayTimeBit", (int64)ET4OverrideParamBits::HitDelayTimeBit },
 				{ "ET4OverrideParamBits::MovementMaxHeightBit", (int64)ET4OverrideParamBits::MovementMaxHeightBit },
 				{ "ET4OverrideParamBits::MovementMaxHeightSpeedBit", (int64)ET4OverrideParamBits::MovementMaxHeightSpeedBit },
 				{ "ET4OverrideParamBits::MovementCollideLocationBit", (int64)ET4OverrideParamBits::MovementCollideLocationBit },
@@ -135,6 +136,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 				{ "Bitflags", "" },
 				{ "Comment", "// #112\n" },
 				{ "DurationBit.Name", "ET4OverrideParamBits::DurationBit" },
+				{ "HitDelayTimeBit.Comment", "// #56 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Offset \xec\x8b\x9c\xea\xb0\x84\xec\x9d\xb4 \xec\xa7\x80\xeb\x82\x9c \xec\x8b\x9c\xec\xa0\x90\xeb\xb6\x80\xed\x84\xb0 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4...\n" },
+				{ "HitDelayTimeBit.Name", "ET4OverrideParamBits::HitDelayTimeBit" },
+				{ "HitDelayTimeBit.ToolTip", "#56 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Offset \xec\x8b\x9c\xea\xb0\x84\xec\x9d\xb4 \xec\xa7\x80\xeb\x82\x9c \xec\x8b\x9c\xec\xa0\x90\xeb\xb6\x80\xed\x84\xb0 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4..." },
 				{ "LocalOrWorldLocationBit.Comment", "// #112 : Projectile \xec\x9a\xa9 AttachTransformRuleBit \xec\x82\xac\xec\x9a\xa9\n" },
 				{ "LocalOrWorldLocationBit.Name", "ET4OverrideParamBits::LocalOrWorldLocationBit" },
 				{ "LocalOrWorldLocationBit.ToolTip", "#112 : Projectile \xec\x9a\xa9 AttachTransformRuleBit \xec\x82\xac\xec\x9a\xa9" },
@@ -151,9 +155,9 @@ void EmptyLinkFunctionForGeneratedCodeT4ActionParameters() {}
 				{ "MovementCollideTimeSecBit.Comment", "// #140\n" },
 				{ "MovementCollideTimeSecBit.Name", "ET4OverrideParamBits::MovementCollideTimeSecBit" },
 				{ "MovementCollideTimeSecBit.ToolTip", "#140" },
-				{ "MovementMaxHeightBit.Comment", "// #56\n" },
+				{ "MovementMaxHeightBit.Comment", "// #158 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Hit \xec\x8b\x9c\xea\xb0\x84\xea\xb9\x8c\xec\xa7\x80\xec\x9d\x98 \xec\x8b\x9c\xea\xb0\x84. \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c\xeb\xb6\x80\xed\x84\xb0 \xea\xb0\x80\xeb\xb3\x80\xea\xb0\x92\xec\x9d\xb4 \xec\x98\xac \xec\x88\x98 \xec\x9e\x88\xec\x96\xb4 \xec\xb0\xb8\xea\xb3\xa0 \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x84\xb8\xed\x8c\x85\xed\x95\x9c\xeb\x8b\xa4.\n" },
 				{ "MovementMaxHeightBit.Name", "ET4OverrideParamBits::MovementMaxHeightBit" },
-				{ "MovementMaxHeightBit.ToolTip", "#56" },
+				{ "MovementMaxHeightBit.ToolTip", "#158 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Hit \xec\x8b\x9c\xea\xb0\x84\xea\xb9\x8c\xec\xa7\x80\xec\x9d\x98 \xec\x8b\x9c\xea\xb0\x84. \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c\xeb\xb6\x80\xed\x84\xb0 \xea\xb0\x80\xeb\xb3\x80\xea\xb0\x92\xec\x9d\xb4 \xec\x98\xac \xec\x88\x98 \xec\x9e\x88\xec\x96\xb4 \xec\xb0\xb8\xea\xb3\xa0 \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x84\xb8\xed\x8c\x85\xed\x95\x9c\xeb\x8b\xa4." },
 				{ "MovementMaxHeightSpeedBit.Comment", "// #135\n" },
 				{ "MovementMaxHeightSpeedBit.Name", "ET4OverrideParamBits::MovementMaxHeightSpeedBit" },
 				{ "MovementMaxHeightSpeedBit.ToolTip", "#135" },
@@ -714,6 +718,10 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionOverrideParam
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementMaxHeight;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HitDelayTimeSec_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HitDelayTimeSec;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OffsetTimeSec_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_OffsetTimeSec;
@@ -845,12 +853,21 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionOverrideParam
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeight_MetaData[] = {
 		{ "Category", "Common" },
-		{ "Comment", "// #56\n" },
+		{ "Comment", "// // #158 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Hit \xec\x8b\x9c\xea\xb0\x84\xea\xb9\x8c\xec\xa7\x80\xec\x9d\x98 \xec\x8b\x9c\xea\xb0\x84. \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c\xeb\xb6\x80\xed\x84\xb0 \xea\xb0\x80\xeb\xb3\x80\xea\xb0\x92\xec\x9d\xb4 \xec\x98\xac \xec\x88\x98 \xec\x9e\x88\xec\x96\xb4 \xec\xb0\xb8\xea\xb3\xa0 \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x84\xb8\xed\x8c\x85\xed\x95\x9c\xeb\x8b\xa4.\n" },
 		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
-		{ "ToolTip", "#56" },
+		{ "ToolTip", "#158 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Hit \xec\x8b\x9c\xea\xb0\x84\xea\xb9\x8c\xec\xa7\x80\xec\x9d\x98 \xec\x8b\x9c\xea\xb0\x84. \xec\x84\x9c\xeb\xb2\x84\xec\x97\x90\xec\x84\x9c\xeb\xb6\x80\xed\x84\xb0 \xea\xb0\x80\xeb\xb3\x80\xea\xb0\x92\xec\x9d\xb4 \xec\x98\xac \xec\x88\x98 \xec\x9e\x88\xec\x96\xb4 \xec\xb0\xb8\xea\xb3\xa0 \xec\x9a\xa9\xeb\x8f\x84\xeb\xa1\x9c \xec\x84\xb8\xed\x8c\x85\xed\x95\x9c\xeb\x8b\xa4." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeight = { "MovementMaxHeight", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionOverrideParameters, MovementMaxHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_HitDelayTimeSec_MetaData[] = {
+		{ "Category", "Common" },
+		{ "Comment", "// #56 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Offset \xec\x8b\x9c\xea\xb0\x84\xec\x9d\xb4 \xec\xa7\x80\xeb\x82\x9c \xec\x8b\x9c\xec\xa0\x90\xeb\xb6\x80\xed\x84\xb0 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4...\n" },
+		{ "ModuleRelativePath", "Public/Action/T4ActionParameters.h" },
+		{ "ToolTip", "#56 : Skill \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c\xec\xa0\x90\xec\x97\x90\xec\x84\x9c Offset \xec\x8b\x9c\xea\xb0\x84\xec\x9d\xb4 \xec\xa7\x80\xeb\x82\x9c \xec\x8b\x9c\xec\xa0\x90\xeb\xb6\x80\xed\x84\xb0 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4..." },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_HitDelayTimeSec = { "HitDelayTimeSec", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FT4ActionOverrideParameters, HitDelayTimeSec), METADATA_PARAMS(Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_HitDelayTimeSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_HitDelayTimeSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_OffsetTimeSec_MetaData[] = {
 		{ "Category", "Common" },
@@ -889,6 +906,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionOverrideParam
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementCollideLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeightSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_MovementMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_HitDelayTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_OffsetTimeSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_DurectionSec,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Statics::NewProp_SetBits,
@@ -921,7 +939,7 @@ static struct FScriptStruct_T4Engine_StaticRegisterNativesFT4ActionOverrideParam
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Hash() { return 1075146608U; }
+	uint32 Get_Z_Construct_UScriptStruct_FT4ActionOverrideParameters_Hash() { return 125044244U; }
 class UScriptStruct* FT4ActionTargetParameters::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
